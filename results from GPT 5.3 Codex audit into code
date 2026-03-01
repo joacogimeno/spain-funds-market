@@ -1,0 +1,385 @@
+GPT-5 Codex Audit Report
+Project: /Users/joaco/Spain funds market
+Date: 2026-02-13
+Scope: Full audit of parsers, transformers, generated JSON outputs, and dashboard tab wiring.
+
+======================================================================
+1) Executive Summary
+======================================================================
+
+I identified critical logic errors that materially affect headline numbers and downstream narratives:
+
+- Missing month ingestion (2025-02) in core INVERCO time series.
+- Incorrect AUM bridge attribution (flows vs market effect).
+- Wrong YoY baseline in Market Overview.
+- Broken gestora movers in Monthly Report (empty sections caused by wrong field name).
+- CNMV fee parser context bug for compartment rows (TER/category/investors mis-assigned).
+- CNMV Depositaria/Fee aggregation undercounts caused by "first class per fund" simplification.
+- Total rows leaking into competitive rankings and opportunity tiers.
+- Hardcoded domestic AUM in CNMV foreign analysis.
+
+These issues propagate to multiple tabs and can mislead decisions.
+
+======================================================================
+2) High Priority Findings (P1)
+======================================================================
+
+P1-01: Missing 2025-02 in INVERCO time-series parsing
+Files:
+- /Users/joaco/Spain funds market/pipeline/parsers/spanish_csv.py:81
+
+Issue:
+- Date parser accepts only DD-MM-YYYY.
+- File 2502_01-PatrimFondosEuro.csv uses DD/MM/YYYY on the latest row block.
+- Result: 2025-02 is dropped for patrimonio/participes/num_fondos in core monthly series.
+
+Observed impact:
+- market_overview.monthly_aum has 24 months instead of 25.
+- category_evolution.monthly also misses 2025-02.
+
+Recommendation:
+- Update regex to support both '-' and '/' separators.
+- Add parser test fixtures with both date styles.
+- Add a post-parse continuity check (no month gaps unless explicitly expected).
+
+
+P1-02: AUM bridge attribution is wrong when month gaps exist
+Files:
+- /Users/joaco/Spain funds market/pipeline/transformers/market_overview.py:153-159
+
+Issue:
+- For month gaps, delta covers multiple months but only one month of flows is subtracted.
+- This overstates "market effect" and understates flows.
+
+Observed impact (current vs reconciled with 2025-02 included):
+- Current output: flows 54.65B, market 50.83B.
+- Reconciled: flows 58.72B, market 46.76B.
+- Misattribution magnitude: ~4.07B.
+
+Recommendation:
+- Ensure full monthly continuity first (fix parser).
+- Compute bridge on contiguous months only.
+- If gaps remain, either:
+  - aggregate flows for all missing months, or
+  - mark period invalid and exclude from decomposition.
+
+
+P1-03: YoY KPI compares against wrong month
+Files:
+- /Users/joaco/Spain funds market/pipeline/transformers/market_overview.py:98
+
+Issue:
+- Uses positional index (-13) rather than exact month lookup.
+- With missing 2025-02, 2026-01 compares to 2024-12, not 2025-01.
+
+Observed impact:
+- Reported YoY: ~14.7%.
+- Correct 2026-01 vs 2025-01 YoY: ~12.3%.
+
+Direct verification from raw INVERCO files:
+- Source file (latest): /Users/joaco/Spain funds market/Data/informacion publica fondos inversion-310126 (1)/Datos Generales/2601_01-PatrimFondosEuro.csv
+  - 31-01-2026 Total patrimonio = 457.675.021,47 kEUR = 457.675B EUR
+  - 31-12-2024 Total patrimonio = 399.002.214,87 kEUR = 399.002B EUR
+  - The same file shows "Variación 12 meses (%)" total = 12,29 (which is not 14,7).
+- Source file (Jan-2025 snapshot): /Users/joaco/Spain funds market/Data/informacion publica fondos inversion-310125/Datos Generales/2501_01-PatrimFondosEuro.csv
+  - 31-01-2025 Total patrimonio = 407.567.435,33 kEUR = 407.567B EUR
+
+Computed checks:
+- True YoY (Jan-2026 vs Jan-2025) = (457.675 - 407.567) / 407.567 = +12.29%
+- Dashboard value +14.7% corresponds to Jan-2026 vs Dec-2024, not YoY.
+
+Recommendation:
+- Compute YoY by explicit date key: YYYY-MM minus 12 months.
+- If prior month missing, surface null/insufficient-data instead of fallback to wrong row.
+
+
+P1-04: Monthly Report gestora movers are broken (always empty)
+Files:
+- /Users/joaco/Spain funds market/pipeline/transformers/monthly_report.py:193, 197
+
+Issue:
+- Code reads ge.get('total_aum'), but parser emits total_patrimonio.
+- curr_g_aum and prev_g_aum become 0, then filtered out.
+
+Observed impact:
+- monthly_report.gestora_movers_top = []
+- monthly_report.gestora_movers_bottom = []
+- monthly_report.inversis.gestora = null
+
+Recommendation:
+- Replace total_aum references with total_patrimonio fallback logic.
+- Reuse shared helper used in gestora_rankings transformer:
+  - aum = total_patrimonio or sum(category columns).
+- Add sanity test: top/bottom movers non-empty when source rows exist.
+
+
+P1-05: CNMV fee parser mis-assigns TER/vocacion/investors for compartment rows
+Files:
+- /Users/joaco/Spain funds market/pipeline/parsers/cnmv_fees.py:81-88
+
+Issue:
+- Context updates only when col3 (fund name) is populated.
+- In A2.2, many compartment rows have col3 empty but col4 + own TER/vocacion/investors populated.
+- Parser propagates prior row values into those rows.
+
+Observed impact:
+- 343 ISIN classes affected.
+- Includes 193 Inversis classes.
+- Category, TER, and investor analytics are corrupted for those classes.
+
+Recommendation:
+- Extend context logic:
+  - If col3 present: new fund context.
+  - Else if col4 present and row has own metrics: refresh context for compartment row.
+- Unit tests using A2.2 samples with umbrella/compartment blocks.
+- Add reconciliation check: parsed row TER/vocacion must match source row when provided.
+
+
+P1-06: CNMV AUM undercount from "first class per fund" aggregation
+Files:
+- /Users/joaco/Spain funds market/pipeline/transformers/cnmv_depositaria.py:103-111
+- /Users/joaco/Spain funds market/pipeline/transformers/cnmv_fees.py:50-57
+
+Issue:
+- Dedup key is fund_name and first class only.
+- Drops remaining classes and collapses compartments.
+
+Observed impact:
+- Current totals: 310.638B total AUM, 7.592B Inversis.
+- Correct class-sum/fund+compartment totals: 444.649B total AUM, 12.293B Inversis.
+- Universe count compression:
+  - 1,680 fund+compartment entities becomes 1,450 fund_name rows.
+  - Inversis 350 entities / 531 classes compressed to ~196 rows.
+
+Recommendation:
+- Decide and enforce one explicit grain per metric:
+  - Class-level (ISIN), or
+  - Fund+compartment (gestora, fund_name, compartimento).
+- Never sum AUM from first-class snapshots.
+- Add reconciliation outputs:
+  - class sum,
+  - fund+comp sum,
+  - first-class sum (for diagnostic only).
+
+======================================================================
+3) Medium Priority Findings (P2)
+======================================================================
+
+P2-01: Totals row leaked into group ranking and opportunity tiers
+Files:
+- /Users/joaco/Spain funds market/pipeline/parsers/ranking_grupos.py:25
+
+Issue:
+- Parser does not exclude "TOTALES".
+
+Observed impact:
+- group_rankings includes a synthetic "TOTALES" group.
+- insights tiering includes "TOTALES" as a target (Tier 2 in current output).
+- monthly_report group movers include "TOTALES".
+
+Recommendation:
+- Exclude rows where normalized name starts with TOTAL/TOTALES.
+- Add schema-level filter in downstream transformers as defensive fallback.
+
+
+P2-02: "Total general" leaked into gestora flow ranking
+Files:
+- /Users/joaco/Spain funds market/pipeline/parsers/ranking_suscripciones.py:28
+
+Issue:
+- Current filter catches only uppercase TOTAL* start.
+- "Total general" survives and appears as top gestora by flows.
+
+Observed impact:
+- fund_flows.gestora_ranking rank #1 is "Total general" (aggregate row), not a real gestora.
+
+Recommendation:
+- Normalize to uppercase/trim and filter any total variants:
+  - TOTAL, TOTALES, TOTAL GENERAL, etc.
+- Add whitelist rule: gestora rows should not contain "total".
+
+
+P2-03: Hardcoded domestic AUM in CNMV foreign module
+Files:
+- /Users/joaco/Spain funds market/pipeline/transformers/cnmv_foreign.py:106
+
+Issue:
+- domestic_aum_bn = 410 is hardcoded.
+- foreign share % becomes stale/inconsistent as INVERCO monthly data updates.
+
+Recommendation:
+- Pull domestic AUM dynamically from market_overview latest month.
+- Keep unit conventions aligned (bn EUR).
+- If unavailable, show null + explicit warning in output (not silent hardcode).
+
+
+P2-04: Documentation/labels mismatch on date ranges
+Files:
+- /Users/joaco/Spain funds market/src/App.tsx:206
+- /Users/joaco/Spain funds market/src/tabs/MarketOverview.tsx:59
+
+Issue:
+- UI text states Jan 2024-Jan 2026 while some generated series still have hidden gaps.
+- This can look complete while calculations rely on discontinuous data.
+
+Recommendation:
+- Surface completeness diagnostics in JSON:
+  - expected months,
+  - parsed months,
+  - missing months list.
+- Show a subtle banner if gaps exist.
+
+======================================================================
+4) Lower Priority Findings / Quality Risks (P3)
+======================================================================
+
+P3-01: Hardcoded narrative percentages in UI text can drift from data
+Files:
+- /Users/joaco/Spain funds market/src/tabs/GestoraRankings.tsx:219
+- /Users/joaco/Spain funds market/pipeline/transformers/insights.py:73-79
+
+Issue:
+- Narrative values and strategic statements are static strings.
+- They can become outdated after each pipeline refresh.
+
+Recommendation:
+- Generate narrative from current computed metrics.
+- Keep static commentary only when clearly labeled as qualitative hypothesis.
+
+
+P3-02: Duplicate ISIN appears in fund_details output
+Files:
+- /Users/joaco/Spain funds market/src/data/fund_details.json (generated)
+
+Issue:
+- One ISIN appears twice with class variants embedded in name text.
+- Not necessarily wrong if source file repeats, but can affect explorer assumptions.
+
+Recommendation:
+- Define intended grain in fund explorer:
+  - ISIN-level unique rows, or
+  - class rows.
+- If ISIN-level, deduplicate explicitly with deterministic merge rules.
+
+======================================================================
+5) Recommended Fix Plan (for Claude)
+======================================================================
+
+Step 1: Parser hardening (highest priority)
+- Update spanish_csv date parsing for '-' and '/'.
+- Fix cnmv_fees parser context for compartment rows.
+- Exclude totals rows robustly in ranking_grupos and ranking_suscripciones.
+
+Step 2: Aggregation correctness
+- Replace first-class dedup AUM logic in CNMV transformers with class-sum or fund+compartment aggregation.
+- Align monthly_report gestora mover logic with total_patrimonio field.
+- Remove hardcoded domestic AUM; wire to latest domestic series.
+
+Step 3: Validation rails
+- Add reconciliation checks generated each run:
+  - months continuity,
+  - AUM bridges sum consistency,
+  - CNMV class/fund/comp totals,
+  - no TOTAL rows in entity rankings.
+- Fail pipeline (or emit warning flag) when checks fail.
+
+Step 4: UI transparency
+- Surface "data completeness" status in dashboard.
+- Regenerate narrative text from computed data where possible.
+
+======================================================================
+6) Acceptance Tests (post-fix)
+======================================================================
+
+1. Month continuity
+- market_overview monthly_aum should contain 25 points from 2024-01 to 2026-01 with no gaps.
+
+2. Market bridge reconciliation
+- total_aum_change == total_flows + total_market (within rounding tolerance).
+
+3. YoY correctness
+- 2026-01 YoY baseline must be 2025-01 (not position-based proxy).
+
+4. Monthly report movers
+- gestora_movers_top and bottom are non-empty and include major houses.
+- inversis.gestora is populated when source has Inversis row.
+
+5. CNMV fee parser integrity
+- Random sample of compartment rows from A2.2: parsed TER/vocacion/investors match source row.
+
+6. CNMV AUM reconciliation
+- total_aum_bn aligns with class-sum/fund+compartment method (~444.649B on current dataset).
+- Inversis aligns with ~12.293B, 25 gestoras, 350 fund+compartment entities, 531 classes.
+
+7. Totals row hygiene
+- No "TOTALES" / "Total general" entities in group/gestora rankings used for benchmarking.
+
+======================================================================
+7) Notes for Claude Execution
+======================================================================
+
+- Keep existing dashboard UX intact; patch pipeline logic first.
+- Regenerate all JSON outputs after fixes with pipeline/run_pipeline.py.
+- Provide before/after diff table for all headline metrics:
+  - Market Overview KPIs
+  - Monthly Report headline + movers
+  - CNMV Fees summary
+  - CNMV Depositaria summary
+  - CNMV Foreign domestic vs foreign share
+
+======================================================================
+8) Addendum: Growth-Rate and Attribution Verification
+======================================================================
+
+This addendum reflects an extra targeted validation pass specifically on growth rates and
+the Market Overview "flows vs market effect" decomposition.
+
+8.1 Total AUM growth labels (Market Overview)
+- Current displayed:
+  - Total AUM: 457.7B EUR (correct)
+  - YoY: +14.7% (incorrect baseline)
+- Verified from raw INVERCO:
+  - Jan 31, 2026: 457.675B EUR
+  - Jan 31, 2025: 407.567B EUR
+  - Dec 31, 2024: 399.002B EUR
+- Correct YoY (Jan-2026 vs Jan-2025): +12.29%
+- Current +14.7% corresponds to Jan-2026 vs Dec-2024, not YoY.
+
+8.2 Similar baseline error in CategoryAnalysis growth rates
+- category_evolution growth uses positional -13 entry and inherits the same missing-month distortion.
+- Result: growth rates are overstated/shifted vs true Jan-to-Jan.
+- Examples (current output vs corrected Jan-2026 vs Jan-2025):
+  - RF Euro CP: +53.3% vs +46.9% (diff +6.4pp)
+  - RV Nacional: +41.3% vs +34.9% (diff +6.4pp)
+  - RF Mixta Euro: +30.2% vs +24.5% (diff +5.7pp)
+  - Fondos Índice: +11.5% vs +5.9% (diff +5.6pp)
+  - RV Mixta Euro: +0.8% vs -1.6% (sign flips)
+
+8.3 Market Overview split: Net Flows vs Market Effect
+- Current output summary:
+  - Total AUM change: +105.48B
+  - Net flows: +54.65B (51.8%)
+  - Market effect: +50.83B (48.2%)
+- Corrected reconciliation with full monthly continuity (including 2025-02):
+  - Total AUM change: +105.48B (same)
+  - Net flows: +58.72B (55.7%)
+  - Market effect: +46.76B (44.3%)
+- Misattribution magnitude:
+  - Flows understated by ~4.07B
+  - Market effect overstated by ~4.07B
+- Root cause:
+  - 2025-02 missing in parsed patrimonio monthly series.
+  - 2025-03 delta is computed against 2025-01 while subtracting only 2025-03 flows.
+
+8.4 Monthly Report MoM growth check (sanity)
+- Monthly Report headline MoM change is consistent:
+  - Jan-2026 vs Dec-2025 = +1.51% (matches raw INVERCO values).
+- So the major growth issue is primarily in YoY and category-growth baselines, not MoM.
+
+8.5 Recommended remediation for growth metrics
+- Replace position-based growth references (e.g., -13) with explicit date-key matching.
+- Enforce continuity checks and list missing months in output.
+- If prior-year month is missing, set YoY to null/flag instead of using fallback row.
+- Recompute bridge only on contiguous month pairs or aggregate missing-month flows explicitly.
+
+End of report.
