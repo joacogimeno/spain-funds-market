@@ -259,7 +259,8 @@ export default function Opportunities() {
                 <Cell fill="#f59e0b" fillOpacity={0.8} />
               </Pie>
               <Tooltip formatter={(v: number | undefined) => [`\u20AC${v ?? 0}B`, '']}
-                contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }} />
+                contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
             </PieChart>
           </ResponsiveContainer>
@@ -280,7 +281,8 @@ export default function Opportunities() {
               <XAxis type="number" tick={{ fontSize: 10, fill: '#8888a0' }} />
               <YAxis dataKey="name" type="category" tick={{ fontSize: 11, fill: '#8888a0' }} width={95} />
               <Tooltip formatter={(v: number | undefined) => [v ?? 0, 'IICs']}
-                contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }} />
+                contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }} />
               <Bar dataKey="count" name="Number of IICs" radius={[0, 4, 4, 0]}>
                 {(countries as Array<{ name: string; count: number }>).filter(c => c.count > 0).map((_, i) => (
                   <Cell key={i} fill={CHART_COLORS[i % CHART_COLORS.length]} fillOpacity={0.8} />

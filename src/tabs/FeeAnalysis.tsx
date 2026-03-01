@@ -152,7 +152,8 @@ export default function FeeAnalysis() {
                   tickFormatter={(v: number) => `${v}%`} />
                 <YAxis dataKey="category" type="category" tick={{ fontSize: 11, fill: '#8888a0' }} width={135} />
                 <Tooltip formatter={(v: number | undefined) => [`${(v ?? 0).toFixed(3)}%`, 'Median TER']}
-                  contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }} />
+                  contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                  labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }} />
                 <Bar dataKey="median_ter" name="Median TER" radius={[0, 4, 4, 0]}>
                   {catByTer.map((entry, i) => (
                     <Cell key={i} fill={entry.median_ter > 0.35 ? '#ef4444' : entry.median_ter > 0.2 ? '#f59e0b' : '#10b981'} fillOpacity={0.8} />
@@ -226,6 +227,7 @@ export default function FeeAnalysis() {
                 <Tooltip
                   formatter={(v: number | undefined, name?: string) => [`${(v ?? 0).toFixed(3)}%`, name ?? '']}
                   contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                  labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
                 />
                 <Bar dataKey="avg_ter" name="Avg TER" radius={[0, 4, 4, 0]}>
                   {topGestoras.map((g, i) => (

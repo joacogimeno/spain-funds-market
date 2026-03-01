@@ -144,6 +144,7 @@ export default function Depositaria() {
               <Tooltip
                 formatter={(v: number | undefined) => [`\u20AC${(v ?? 0).toFixed(1)}B`, 'AUM']}
                 contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
               />
             </PieChart>
           </ResponsiveContainer>
@@ -165,6 +166,7 @@ export default function Depositaria() {
               <Tooltip
                 formatter={(v: number | undefined) => [`${((v ?? 0) * 100).toFixed(1)} bps`, 'Avg Fee']}
                 contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
               />
               <Bar dataKey="avg_fee" name="Avg Depositary Fee" radius={[0, 4, 4, 0]}>
                 {[...(fee_by_depositario as Array<{ is_inversis: boolean; avg_fee: number }>)]
@@ -235,6 +237,7 @@ function ByDepositarioView({ depoFilter, setDepoFilter }: { depoFilter: string; 
             <Tooltip
               formatter={(v: number | undefined) => [`\u20AC${(v ?? 0).toFixed(1)}B`, 'AUM']}
               contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+              labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
             />
             <Bar dataKey="aum_bn" name="AUM" radius={[0, 4, 4, 0]}
               onClick={(_: unknown, idx: number) => {
