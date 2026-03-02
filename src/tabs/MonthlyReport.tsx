@@ -203,8 +203,8 @@ export default function MonthlyReport() {
               )}
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#8888a0', fontFamily: "'JetBrains Mono', monospace" }}>
-              <span>Flows: {((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%</span>
-              <span>Market: {((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%</span>
+              <span>Flows: {headline.aum_delta_bn !== 0 ? `${((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%` : 'n/a'}</span>
+              <span>Market: {headline.aum_delta_bn !== 0 ? `${((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%` : 'n/a'}</span>
             </div>
 
             {/* Flow details */}
@@ -215,7 +215,7 @@ export default function MonthlyReport() {
                   {'\u20AC'}{headline.total_subs_bn.toFixed(1)}B
                 </div>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#555570' }}>
-                  prev: {'\u20AC'}{headline.prev_subs_bn.toFixed(1)}B ({headline.total_subs_bn > headline.prev_subs_bn ? '+' : ''}{((headline.total_subs_bn - headline.prev_subs_bn) / headline.prev_subs_bn * 100).toFixed(1)}%)
+                  prev: {'\u20AC'}{headline.prev_subs_bn.toFixed(1)}B ({headline.prev_subs_bn !== 0 ? `${headline.total_subs_bn > headline.prev_subs_bn ? '+' : ''}${((headline.total_subs_bn - headline.prev_subs_bn) / headline.prev_subs_bn * 100).toFixed(1)}%` : 'n/a'})
                 </div>
               </div>
               <div style={{ background: '#0a0a0f', borderRadius: 6, padding: '10px 14px', border: '1px solid #2a2a3a' }}>
@@ -224,7 +224,7 @@ export default function MonthlyReport() {
                   {'\u20AC'}{headline.total_redemp_bn.toFixed(1)}B
                 </div>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#555570' }}>
-                  prev: {'\u20AC'}{headline.prev_redemp_bn.toFixed(1)}B ({headline.total_redemp_bn > headline.prev_redemp_bn ? '+' : ''}{((headline.total_redemp_bn - headline.prev_redemp_bn) / headline.prev_redemp_bn * 100).toFixed(1)}%)
+                  prev: {'\u20AC'}{headline.prev_redemp_bn.toFixed(1)}B ({headline.prev_redemp_bn !== 0 ? `${headline.total_redemp_bn > headline.prev_redemp_bn ? '+' : ''}${((headline.total_redemp_bn - headline.prev_redemp_bn) / headline.prev_redemp_bn * 100).toFixed(1)}%` : 'n/a'})
                 </div>
               </div>
             </div>
@@ -453,48 +453,34 @@ export default function MonthlyReport() {
         </div>
       </div>
 
-      {/* Inversis Spotlight */}
-      {(inversis.group || inversis.gestora) && (
+      {/* Inversis Gestión Spotlight — Banca March group removed (Euroclear acquisition Aug 2026) */}
+      {inversis.gestora && (
         <div style={{ background: '#d4203015', border: '1px solid #d4203040', borderRadius: 12, padding: 24 }}>
-          <SectionHeader title="Inversis — Monthly Snapshot" source="INVERCO — RkGrupos + RKGestoras" />
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
-            {inversis.group && (
-              <div>
-                <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Banca March Group</div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 20, fontWeight: 700, color: '#e8e8f0' }}>
-                  {'\u20AC'}{inversis.group.aum_bn.toFixed(1)}B
-                </div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13 }}>
-                  <TrendBadge value={inversis.group.var_1m} />
-                  <span style={{ color: '#555570', marginLeft: 8, fontSize: 11 }}>MoM</span>
-                </div>
+          <SectionHeader title="Inversis Gestión — Monthly Snapshot" source="INVERCO — RKGestoras" />
+          <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+            <div>
+              <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Inversis Gestión AUM</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 24, fontWeight: 700, color: '#e8e8f0' }}>
+                {'\u20AC'}{inversis.gestora.curr_aum_bn.toFixed(3)}B
               </div>
-            )}
-            {inversis.gestora && (
-              <div>
-                <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Inversis Gestion</div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 20, fontWeight: 700, color: '#e8e8f0' }}>
-                  {'\u20AC'}{inversis.gestora.curr_aum_bn.toFixed(3)}B
-                </div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13 }}>
-                  <DeltaCell value={inversis.gestora.delta_bn} suffix="B" decimals={3} />
-                  <span style={{ color: '#555570', marginLeft: 8, fontSize: 11 }}>
-                    ({inversis.gestora.delta_pct != null ? `${inversis.gestora.delta_pct > 0 ? '+' : ''}${inversis.gestora.delta_pct.toFixed(1)}%` : '-'})
-                  </span>
-                </div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, marginTop: 4 }}>
+                <DeltaCell value={inversis.gestora.delta_bn} suffix="B" decimals={3} />
+                <span style={{ color: '#555570', marginLeft: 8, fontSize: 11 }}>
+                  MoM ({inversis.gestora.delta_pct != null
+                    ? `${inversis.gestora.delta_pct > 0 ? '+' : ''}${inversis.gestora.delta_pct.toFixed(1)}%`
+                    : '-'})
+                </span>
               </div>
-            )}
-            {inversis.group && (
-              <div>
-                <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Group 1Y Growth</div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 20, fontWeight: 700 }}>
-                  <TrendBadge value={inversis.group.var_1y} />
-                </div>
-                <div style={{ fontSize: 11, color: '#555570', marginTop: 4 }}>
-                  {inversis.group.num_isin} ISINs
-                </div>
-              </div>
-            )}
+            </div>
+            <div style={{
+              padding: '8px 14px', borderRadius: 8,
+              background: '#f59e0b10', border: '1px solid #f59e0b30',
+              fontSize: 11, color: '#f59e0b', maxWidth: 420, lineHeight: 1.5,
+            }}>
+              <strong>Note:</strong> Inversis exits the Banca March group upon Euroclear acquisition (expected Aug 2026).
+              The Banca March group AUM view has been removed from this report.
+              See the <em>Banca March</em> tab for intragroup depositary relationship analysis.
+            </div>
           </div>
         </div>
       )}
@@ -502,8 +488,8 @@ export default function MonthlyReport() {
       {/* Summary Insight */}
       <InsightCard title={`${monthLabel} — Executive Summary`} color="#3b82f6">
         The Spanish fund market {headline.aum_delta_bn > 0 ? 'grew' : 'contracted'} by <strong>{'\u20AC'}{Math.abs(headline.aum_delta_bn).toFixed(1)}B</strong> ({headline.aum_delta_pct > 0 ? '+' : ''}{headline.aum_delta_pct.toFixed(2)}%) to reach <strong>{'\u20AC'}{headline.total_aum_bn.toFixed(1)}B</strong>.
-        {' '}Market appreciation contributed <strong>{'\u20AC'}{headline.market_effect_bn.toFixed(1)}B</strong> ({((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)
-        {' '}while net investor flows added <strong>{'\u20AC'}{headline.net_flows_bn.toFixed(1)}B</strong> ({((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%).
+        {' '}Market appreciation contributed <strong>{'\u20AC'}{headline.market_effect_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}
+        {' '}while net investor flows added <strong>{'\u20AC'}{headline.net_flows_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}.
         {' '}Flows doubled vs {prevLabel} ({'\u20AC'}{headline.prev_net_flows_bn.toFixed(1)}B), with <strong>{category_flows[0]?.category}</strong> leading
         {' '}at {'\u20AC'}{category_flows[0]?.net.toFixed(2)}B. The market added <strong>{headline.inv_delta.toLocaleString()}</strong> new investors,
         {' '}reaching {headline.investors.toLocaleString()} total.

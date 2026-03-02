@@ -1,6 +1,7 @@
 """Parse CNMV Estadisticas Anexo A2.2 — individual fund fees and expenses."""
 import os
 import openpyxl
+from ..config import find_cnmv_file
 
 
 # Vocación inversora code -> readable category name
@@ -38,9 +39,9 @@ def parse_cnmv_fees(cnmv_dir):
       depositary_fee (%),
       discount_max (%), discount_min (%)
     """
-    filepath = os.path.join(cnmv_dir, 'Estadisticas_IIC_2025_3T_Anexo.xlsx')
-    if not os.path.exists(filepath):
-        print(f"  Warning: {filepath} not found")
+    filepath, _ = find_cnmv_file(cnmv_dir, 'Anexo')
+    if filepath is None:
+        print(f"  Warning: No CNMV Anexo file found in {cnmv_dir}")
         return []
 
     wb = openpyxl.load_workbook(filepath, data_only=True)

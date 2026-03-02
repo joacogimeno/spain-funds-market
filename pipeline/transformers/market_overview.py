@@ -192,7 +192,7 @@ def build_market_overview():
             'total_investors': int(latest_participes),
             'total_funds': int(latest_funds),
             'monthly_net_flows_bn': round(total_net, 2),
-            'yoy_growth_pct': round(yoy_growth, 1) if yoy_growth else None,
+            'yoy_growth_pct': round(yoy_growth, 1) if yoy_growth is not None else None,
             'latest_date': latest_patrim.get('date', ''),
         },
         'monthly_aum': monthly_history,

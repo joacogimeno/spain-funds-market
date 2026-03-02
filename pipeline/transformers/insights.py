@@ -86,18 +86,19 @@ def build_insights():
         "Consolidation reducing number of potential clients",
     ]
 
-    # Inversis positioning metrics
-    inversis_data = None
+    # Inversis positioning metrics — reference Inversis Gestión standalone
+    # (Banca March group removed: Inversis exits Banca March upon Euroclear acquisition Aug 2026)
+    inversis_gest_data = None
     for g in groups:
-        if 'BANCA MARCH' in g.get('name', '').upper():
-            inversis_data = g
+        if 'INVERSIS' in g.get('name', '').upper() and 'BANCA MARCH' not in g.get('name', '').upper():
+            inversis_gest_data = g
             break
 
     market_avg_growth = sum(g.get('var_1y', 0) for g in groups if g.get('var_1y')) / max(1, len([g for g in groups if g.get('var_1y')]))
 
     positioning = {
-        'inversis_group_aum': round(inversis_data['patrimonio'] / 1_000_000, 3) if inversis_data else None,
-        'inversis_growth': inversis_data.get('var_1y') if inversis_data else None,
+        'inversis_gestora_aum': round(inversis_gest_data['patrimonio'] / 1_000_000, 3) if inversis_gest_data else None,
+        'inversis_growth': inversis_gest_data.get('var_1y') if inversis_gest_data else None,
         'market_avg_growth': round(market_avg_growth, 1),
         'radar': [
             {'metric': 'AUM Scale', 'inversis': 25, 'market_avg': 50, 'top_peer': 90},

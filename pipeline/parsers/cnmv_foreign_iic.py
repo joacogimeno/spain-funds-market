@@ -1,25 +1,47 @@
 """Parse CNMV Estadisticas File 3, Cuadro 7.1-7.3 — foreign IICs sold in Spain."""
 import os
+import re
 import openpyxl
+from ..config import find_cnmv_file
+
+
+def _build_quarters(year, q, n=5):
+    """Generate the last n quarter labels ending at year-Qq."""
+    result = []
+    for _ in range(n):
+        result.insert(0, f'{year}-Q{q}')
+        q -= 1
+        if q == 0:
+            q, year = 4, year - 1
+    return result
 
 
 def parse_cnmv_foreign_iic(cnmv_dir):
     """Parse Cuadro 7.1 for foreign IIC summary data.
 
     Returns dict with:
+      - quarters: list of 5 quarter labels (oldest to latest)
       - summary: number/accounts/volume for funds, societies, total (5 quarters)
       - countries: number of IICs by country of origin (5 quarters)
       - distribution_volume: IIC count and volume by size bracket (Cuadro 7.2)
       - distribution_accounts: IIC count and accounts by account bracket (Cuadro 7.3)
     """
-    filepath = os.path.join(cnmv_dir, 'Estadisticas_IIC_2025_3T_3.xlsx')
-    if not os.path.exists(filepath):
-        print(f"  Warning: {filepath} not found")
+    filepath, quarter_label = find_cnmv_file(cnmv_dir, '3')
+    if filepath is None:
+        print(f"  Warning: No CNMV File 3 found in {cnmv_dir}")
         return {}
+
+    # Derive the 5-quarter window from the detected file
+    m = re.search(r'(\d{4})_(\d)T', os.path.basename(filepath))
+    if m:
+        quarters = _build_quarters(int(m.group(1)), int(m.group(2)))
+    else:
+        quarters = ['2024-Q3', '2024-Q4', '2025-Q1', '2025-Q2', '2025-Q3']
 
     wb = openpyxl.load_workbook(filepath, data_only=True)
 
     result = {
+        'quarters': quarters,
         'summary': _parse_cuadro_71(wb),
         'distribution_volume': _parse_cuadro_72(wb),
         'distribution_accounts': _parse_cuadro_73(wb),
@@ -29,8 +51,7 @@ def parse_cnmv_foreign_iic(cnmv_dir):
     return result
 
 
-# Column mapping: quarters in order
-QUARTERS = ['2024-Q3', '2024-Q4', '2025-Q1', '2025-Q2', '2025-Q3']
+# Column mapping: columns B-F in the spreadsheet correspond to the 5 quarters
 QUARTER_COLS = [2, 3, 4, 5, 6]  # B through F
 PCT_COLS = {'qoq': 8, 'yoy': 9, 'ytd': 10}  # H, I, J
 

@@ -1,8 +1,8 @@
 """Transform CNMV foreign IIC data into cnmv_foreign.json for the dashboard."""
 import os
-from ..parsers.cnmv_foreign_iic import parse_cnmv_foreign_iic, QUARTERS
+from ..parsers.cnmv_foreign_iic import parse_cnmv_foreign_iic
 from ..parsers.patrimonio import parse_patrimonio
-from ..config import DATA_DIR, get_snapshot_folders
+from ..config import DATA_DIR, get_snapshot_folders, find_cnmv_file
 
 
 def build_cnmv_foreign():
@@ -23,12 +23,13 @@ def build_cnmv_foreign():
     if not raw:
         return {}
 
+    quarters = raw['quarters']
     summary_data = raw['summary']
     dist_vol = raw['distribution_volume']
 
     # Quarterly trend
     quarterly_trend = []
-    for i, q in enumerate(QUARTERS):
+    for i, q in enumerate(quarters):
         num_iic = _val(summary_data['num_iic']['total']['values'], i)
         accounts = _val(summary_data['accounts']['total']['values'], i)
         volume_k = _val(summary_data['volume_k']['total']['values'], i)
@@ -56,7 +57,7 @@ def build_cnmv_foreign():
         'ytd_growth_pct': latest_volume['pct'].get('ytd'),
         'qoq_growth_pct': latest_volume['pct'].get('qoq'),
         'accounts_yoy_pct': latest_accounts['pct'].get('yoy'),
-        'date': '2025-Q3',
+        'date': quarters[-1] if quarters else 'unknown',
     }
 
     # Type breakdown (fondos vs sociedades)

@@ -1,7 +1,7 @@
 """Transform CNMV fee data into cnmv_fees.json for the Fee Analysis dashboard."""
 import os
 from ..parsers.cnmv_fees import parse_cnmv_fees
-from ..config import DATA_DIR
+from ..config import DATA_DIR, find_cnmv_file
 
 
 def build_cnmv_fees():
@@ -21,6 +21,8 @@ def build_cnmv_fees():
     }
     """
     cnmv_dir = os.path.join(DATA_DIR, 'CNMV Estadisticas')
+    _, cnmv_date = find_cnmv_file(cnmv_dir, 'Anexo')
+    cnmv_date = cnmv_date or 'unknown'
     records = parse_cnmv_fees(cnmv_dir)
     if not records:
         return {}
@@ -168,7 +170,7 @@ def build_cnmv_fees():
         'avg_ter': _avg(all_ters),
         'median_ter': _median(all_ters),
         'avg_mgmt_fee': _avg(all_mgmt),
-        'date': '2025-Q3',
+        'date': cnmv_date,
     }
 
     return {

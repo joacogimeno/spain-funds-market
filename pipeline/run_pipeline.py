@@ -21,6 +21,7 @@ from pipeline.transformers.monthly_report import build_monthly_report
 from pipeline.transformers.cnmv_fees import build_cnmv_fees
 from pipeline.transformers.cnmv_foreign import build_cnmv_foreign
 from pipeline.transformers.cnmv_depositaria import build_cnmv_depositaria
+from pipeline.transformers.banca_march import build_banca_march
 
 
 def write_json(data, filename):
@@ -60,9 +61,15 @@ def main():
         ("CNMV Fee Analysis", build_cnmv_fees, "cnmv_fees.json"),
         ("CNMV Foreign IICs", build_cnmv_foreign, "cnmv_foreign.json"),
         ("CNMV Depositaría", build_cnmv_depositaria, "cnmv_depositaria.json"),
+        ("Banca March Analysis", build_banca_march, "banca_march.json"),
     ]
 
+    fail_fast = '--fail-fast' in sys.argv or os.environ.get('CI') == '1'
+    if fail_fast:
+        print("  [fail-fast mode: stale outputs removed on error, pipeline aborts]\n")
+
     total_start = time.time()
+    failed = []
     for name, builder, filename in transforms:
         print(f"\n[{name}]")
         start = time.time()
@@ -72,13 +79,24 @@ def main():
             elapsed = time.time() - start
             print(f"  Done in {elapsed:.1f}s")
         except Exception as e:
-            print(f"  ERROR: {e}")
             import traceback
+            print(f"  ERROR: {e}")
             traceback.print_exc()
+            # Remove stale output so frontend never reads partial/old data
+            stale = os.path.join(OUTPUT_DIR, filename)
+            if os.path.exists(stale):
+                os.remove(stale)
+                print(f"  Removed stale {filename}")
+            failed.append(name)
+            if fail_fast:
+                sys.exit(1)
 
     total_elapsed = time.time() - total_start
     print(f"\n{'=' * 60}")
-    print(f"Pipeline complete in {total_elapsed:.1f}s")
+    if failed:
+        print(f"Pipeline finished with {len(failed)} error(s): {', '.join(failed)}")
+    else:
+        print(f"Pipeline complete in {total_elapsed:.1f}s")
     print(f"Output directory: {OUTPUT_DIR}")
     print(f"{'=' * 60}")
 

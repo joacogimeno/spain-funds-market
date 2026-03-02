@@ -1,6 +1,7 @@
 """Parse CNMV Estadisticas Anexo A1.1 — fund→gestora→depositario→grupo registry."""
 import os
 import openpyxl
+from ..config import find_cnmv_file
 
 
 def parse_cnmv_registry(cnmv_dir):
@@ -9,9 +10,9 @@ def parse_cnmv_registry(cnmv_dir):
     Returns list of dicts, one per share class, with:
       fund_name, compartimento, share_class, isin, gestora, depositario, grupo
     """
-    filepath = os.path.join(cnmv_dir, 'Estadisticas_IIC_2025_3T_Anexo.xlsx')
-    if not os.path.exists(filepath):
-        print(f"  Warning: {filepath} not found")
+    filepath, _ = find_cnmv_file(cnmv_dir, 'Anexo')
+    if filepath is None:
+        print(f"  Warning: No CNMV Anexo file found in {cnmv_dir}")
         return []
 
     wb = openpyxl.load_workbook(filepath, data_only=True)

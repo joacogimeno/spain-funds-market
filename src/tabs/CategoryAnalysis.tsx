@@ -19,6 +19,19 @@ function getGrowthColor(v: number | null): string {
   return '#ef4444';
 }
 
+type TreemapItem = { category: string; aum_bn: number; yoy_growth: number | null };
+
+function catGrowth(cat: string): string {
+  const item = (treemap as TreemapItem[]).find(c => c.category === cat);
+  if (item?.yoy_growth == null) return 'N/A';
+  return `${item.yoy_growth > 0 ? '+' : ''}${item.yoy_growth.toFixed(1)}%`;
+}
+
+function catAum(cat: string): string {
+  const item = (treemap as TreemapItem[]).find(c => c.category === cat);
+  return item?.aum_bn != null ? `\u20AC${item.aum_bn.toFixed(1)}B` : 'N/A';
+}
+
 export default function CategoryAnalysis() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -119,9 +132,9 @@ export default function CategoryAnalysis() {
 
       <InsightCard title="Structural Shift" color="#8b5cf6">
         The Spanish fund landscape is undergoing a structural transformation. <strong>Fixed income</strong> categories
-        (RF Euro CP +53.3%) have surged on the rate environment, while <strong>guaranteed funds</strong> continue
-        their secular decline (-28.2% RF, -33.1% RV). Monetarios nearly tripled since 2022.
-        International fund wrappers now represent the largest single allocation at <strong>{'\u20AC'}140.5B</strong>.
+        (RF Euro CP {catGrowth('RF Euro CP')}) have surged on the rate environment, while <strong>guaranteed funds</strong> continue
+        their secular decline ({catGrowth('Garantizados RF')} RF, {catGrowth('Garantizados RV')} RV).
+        International fund wrappers now represent the largest single allocation at <strong>{catAum('Internacional')}</strong>.
       </InsightCard>
     </div>
   );

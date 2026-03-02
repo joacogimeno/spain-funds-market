@@ -10,8 +10,18 @@ import data from '../data/cnmv_depositaria.json';
 const {
   summary, depositario_stats, gestora_depositario, fund_detail,
   opportunity_targets, market_share_chart, fee_by_depositario,
+  inversis_by_gestora, qualitative_analysis,
   depositarios, gestoras, categories,
-} = data;
+} = data as typeof data & {
+  inversis_by_gestora: Array<{
+    gestora: string; gestora_short: string; classes: number; funds: number;
+    aum_m: number; avg_fee_bps: number; weighted_fee_bps: number;
+    est_annual_rev_k: number; is_march: boolean;
+  }>;
+  qualitative_analysis: Array<{
+    type: string; severity: string; title: string; body: string;
+  }>;
+};
 
 type View = 'depositario' | 'gestora' | 'fund';
 
@@ -59,6 +69,13 @@ export default function Depositaria() {
           deltaPositive={true}
           subtitle={`Avg depo fee: ${(summary.inversis_avg_fee * 100).toFixed(1)} bps`}
         />
+        {(summary as Record<string, unknown>).inversis_est_annual_rev_m != null && (
+          <KpiCard
+            title="Est. Annual Rev."
+            value={`\u20AC${((summary as Record<string, unknown>).inversis_est_annual_rev_m as number).toFixed(2)}M`}
+            subtitle="Depositary fee income (est.)"
+          />
+        )}
       </div>
 
       {/* View Toggle + Filters */}
@@ -189,7 +206,164 @@ export default function Depositaria() {
         <GestoraScatter />
       </div>
 
-      {/* === SECTION B: OPPORTUNITY === */}
+      {/* === SECTION B: INVERSIS CLIENT REVENUE DETAIL === */}
+      {inversis_by_gestora && inversis_by_gestora.length > 0 && (
+        <div style={{ borderTop: '2px solid #10b98130', paddingTop: 24, marginTop: 8 }}>
+          <div style={{
+            fontSize: 18, fontWeight: 700, color: '#e8e8f0',
+            fontFamily: "'Outfit', sans-serif", marginBottom: 16,
+            display: 'flex', alignItems: 'center', gap: 10,
+          }}>
+            <span style={{ display: 'inline-block', width: 4, height: 20, borderRadius: 2, background: '#10b981' }} />
+            Inversis Depositary Book — Client Revenue Detail
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            {/* Revenue bar by gestora */}
+            <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
+              <SectionHeader title="Estimated Annual Deposit Fee Revenue by Gestora" source="inversis_depositary_insights_2025Q3.xlsx" />
+              <ResponsiveContainer width="100%" height={400}>
+                <BarChart
+                  data={[...inversis_by_gestora].sort((a, b) => b.est_annual_rev_k - a.est_annual_rev_k)}
+                  layout="vertical" margin={{ ...CHART_MARGIN, left: 210 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
+                  <XAxis type="number" tick={{ fontSize: 10, fill: '#8888a0' }}
+                    tickFormatter={(v: number) => v >= 1000 ? `\u20AC${(v/1000).toFixed(1)}M` : `\u20AC${v.toFixed(0)}K`} />
+                  <YAxis dataKey="gestora_short" type="category" tick={{ fontSize: 9, fill: '#8888a0' }} width={205} />
+                  <Tooltip
+                    formatter={(v: number | undefined) => [`\u20AC${(v ?? 0) >= 1000 ? ((v ?? 0)/1000).toFixed(2)+'M' : (v ?? 0).toFixed(0)+'K'}`, 'Est. Annual Rev.']}
+                    contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
+                    labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
+                  />
+                  <Bar dataKey="est_annual_rev_k" radius={[0, 4, 4, 0]}>
+                    {[...inversis_by_gestora].sort((a, b) => b.est_annual_rev_k - a.est_annual_rev_k).map((entry, i) => (
+                      <Cell key={i}
+                        fill={entry.is_march ? '#f59e0b' : '#10b981'}
+                        fillOpacity={0.85}
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+
+            {/* Weighted fee vs AUM scatter */}
+            <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
+              <SectionHeader title="AUM vs Weighted Deposit Fee Rate (Inversis Book)" source="inversis_depositary_insights_2025Q3.xlsx" />
+              <ResponsiveContainer width="100%" height={400}>
+                <ScatterChart margin={CHART_MARGIN}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
+                  <XAxis dataKey="aum_m" name="AUM" type="number"
+                    tick={{ fontSize: 10, fill: '#8888a0' }}
+                    tickFormatter={(v: number) => v >= 1000 ? `\u20AC${(v/1000).toFixed(1)}B` : `\u20AC${v.toFixed(0)}M`}
+                    label={{ value: 'AUM', position: 'insideBottom', offset: -5, style: { fontSize: 11, fill: '#555570' } }}
+                  />
+                  <YAxis dataKey="weighted_fee_bps" name="Wtd Fee" type="number"
+                    tick={{ fontSize: 10, fill: '#8888a0' }}
+                    tickFormatter={(v: number) => `${v.toFixed(1)} bps`}
+                    label={{ value: 'Weighted Fee (bps)', angle: -90, position: 'insideLeft', style: { fontSize: 11, fill: '#555570' } }}
+                  />
+                  <Tooltip content={({ payload }) => {
+                    if (!payload?.length) return null;
+                    const d = payload[0].payload as typeof inversis_by_gestora[0];
+                    return (
+                      <div style={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8, padding: '8px 12px', maxWidth: 280 }}>
+                        <div style={{ fontSize: 12, fontWeight: 600, color: d.is_march ? '#f59e0b' : '#10b981', marginBottom: 4 }}>
+                          {d.gestora_short}
+                        </div>
+                        <div style={{ fontSize: 10, color: '#8888a0' }}>
+                          AUM: \u20AC{d.aum_m >= 1000 ? (d.aum_m/1000).toFixed(2)+'B' : d.aum_m.toFixed(0)+'M'} | Wtd Fee: {d.weighted_fee_bps.toFixed(2)} bps
+                        </div>
+                        <div style={{ fontSize: 10, color: '#555570' }}>
+                          Est. Rev: \u20AC{d.est_annual_rev_k >= 1000 ? (d.est_annual_rev_k/1000).toFixed(2)+'M' : d.est_annual_rev_k.toFixed(0)+'K'}/yr
+                        </div>
+                      </div>
+                    );
+                  }} />
+                  <Scatter
+                    data={inversis_by_gestora.filter(d => !d.is_march)}
+                    name="Other clients" fill="#10b981" fillOpacity={0.75}
+                  />
+                  <Scatter
+                    data={inversis_by_gestora.filter(d => d.is_march)}
+                    name="March AM (intragroup)" fill="#f59e0b" fillOpacity={0.9}
+                  />
+                  <Legend wrapperStyle={{ fontSize: 11 }} />
+                </ScatterChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Client Revenue Table */}
+          <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24, marginTop: 16 }}>
+            <SectionHeader title="Inversis Client Fee Detail" source="inversis_depositary_insights_2025Q3.xlsx — Q3 2025" />
+            <DataTable
+              data={inversis_by_gestora}
+              columns={[
+                { key: 'gestora_short', label: 'Gestora', format: (v: unknown) => {
+                  const s = String(v);
+                  return s.length > 38 ? s.slice(0, 36) + '..' : s;
+                }},
+                { key: 'funds', label: 'Funds', align: 'right' as const },
+                { key: 'classes', label: 'Classes', align: 'right' as const },
+                { key: 'aum_m', label: 'AUM', align: 'right' as const,
+                  format: (v: unknown) => {
+                    const m = Number(v);
+                    return m >= 1000 ? `\u20AC${(m/1000).toFixed(2)}B` : `\u20AC${m.toFixed(0)}M`;
+                  }},
+                { key: 'avg_fee_bps', label: 'Avg Fee (non-zero)', align: 'right' as const,
+                  format: (v: unknown) => Number(v) > 0 ? `${Number(v).toFixed(2)} bps` : '\u2014' },
+                { key: 'weighted_fee_bps', label: 'Wtd Fee (all AUM)', align: 'right' as const,
+                  format: (v: unknown, row?: Record<string, unknown>) => {
+                    const bps = Number(v);
+                    const isMarch = Boolean(row?.is_march);
+                    return (
+                      <span style={{ color: isMarch ? '#f59e0b' : bps < 5 ? '#ef4444' : '#e8e8f0', fontWeight: isMarch ? 700 : 400 }}>
+                        {bps.toFixed(2)} bps
+                      </span>
+                    );
+                  }},
+                { key: 'est_annual_rev_k', label: 'Est. Annual Rev.', align: 'right' as const,
+                  format: (v: unknown) => {
+                    const k = Number(v);
+                    return k >= 1000 ? `\u20AC${(k/1000).toFixed(2)}M` : `\u20AC${k.toFixed(0)}K`;
+                  }},
+              ]}
+              defaultSort="est_annual_rev_k"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* === SECTION C: QUALITATIVE ANALYSIS === */}
+      {qualitative_analysis && qualitative_analysis.length > 0 && (
+        <div style={{ borderTop: '2px solid #3b82f630', paddingTop: 24, marginTop: 8 }}>
+          <div style={{
+            fontSize: 18, fontWeight: 700, color: '#e8e8f0',
+            fontFamily: "'Outfit', sans-serif", marginBottom: 16,
+            display: 'flex', alignItems: 'center', gap: 10,
+          }}>
+            <span style={{ display: 'inline-block', width: 4, height: 20, borderRadius: 2, background: '#3b82f6' }} />
+            Qualitative Analysis
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            {qualitative_analysis.map((insight, i) => {
+              const colorMap: Record<string, string> = {
+                info: '#3b82f6', opportunity: '#10b981', medium: '#f59e0b', high: '#ef4444',
+              };
+              const color = colorMap[insight.severity] || '#3b82f6';
+              return (
+                <InsightCard key={i} title={insight.title} color={color}>
+                  {insight.body}
+                </InsightCard>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* === SECTION D: OPPORTUNITY === */}
       <div style={{
         borderTop: '2px solid #d4203040', paddingTop: 24, marginTop: 8,
       }}>

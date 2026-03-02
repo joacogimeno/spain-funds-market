@@ -1,4 +1,5 @@
 import os
+import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "Data")
@@ -34,6 +35,29 @@ def get_snapshot_folders():
         seen_dates[label] = path
     return sorted(seen_dates.items())
 
+def find_cnmv_file(cnmv_dir, suffix):
+    """Find the latest CNMV estadisticas file with the given suffix.
+
+    Pattern: Estadisticas_IIC_{YYYY}_{Q}T_{suffix}.xlsx
+    Returns (filepath, 'YYYY-QN') or (None, None) if none found.
+    """
+    pat = re.compile(
+        r'^Estadisticas_IIC_(\d{4})_(\d)T_' + re.escape(suffix) + r'\.xlsx$',
+        re.IGNORECASE,
+    )
+    best = None
+    for name in os.listdir(cnmv_dir):
+        m = pat.match(name)
+        if m:
+            key = (int(m.group(1)), int(m.group(2)))
+            if best is None or key > best[0]:
+                best = (key, os.path.join(cnmv_dir, name))
+    if best is None:
+        return None, None
+    y, q = best[0]
+    return best[1], f'{y}-Q{q}'
+
+
 # Category name mappings (normalize across files)
 CATEGORY_MAP = {
     "Monetarios": "Monetarios",
@@ -50,6 +74,7 @@ CATEGORY_MAP = {
     "De garantía parcial": "Garantía parcial",
     "Gestión pasiva": "Gestión pasiva",
     "Retorno Absoluto": "Retorno Absoluto",
+    "Retorno absoluto": "Retorno Absoluto",
     "Fondos Indice": "Fondos Índice",
     "Fondos Índice": "Fondos Índice",
     "Fondo Indice": "Fondos Índice",

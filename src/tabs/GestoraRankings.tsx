@@ -27,6 +27,11 @@ const typeLabels: Record<string, string> = {
 export default function GestoraRankings() {
   const [showGroups, setShowGroups] = useState(false);
 
+  const fmtYoY = (name: string) => {
+    const g = (gestoras as Array<{name: string; yoy_growth: number | null}>).find(g => g.name.includes(name));
+    return g?.yoy_growth != null ? ` (+${g.yoy_growth.toFixed(1)}%)` : '';
+  };
+
   const concentrationData = [
     { name: 'Top 3', value: concentration.top3_pct, color: '#3b82f6' },
     { name: 'Top 4-5', value: +(concentration.top5_pct - concentration.top3_pct).toFixed(1), color: '#6366f1' },
@@ -218,8 +223,8 @@ export default function GestoraRankings() {
 
       <InsightCard title="Competitive Landscape" color="#10b981">
         The top 3 banks (CaixaBank, Santander, BBVA) hold <strong>{concentration.top3_pct}%</strong> of the market
-        but tend to grow below average. Independent gestoras like <strong>Mediolanum (+41.6%)</strong>,
-        <strong> Dunas (+54.4%)</strong>, and <strong>Cobas (+48.8%)</strong> are the fastest growers.
+        but tend to grow below average. Independent gestoras like <strong>Mediolanum{fmtYoY('Mediolanum')}</strong>,
+        <strong> Dunas{fmtYoY('Dunas')}</strong>, and <strong>Cobas{fmtYoY('Cobas')}</strong> are among the fastest growers.
         Banca March ranks #{inversis.group?.rank} with {'\u20AC'}{inversis.group?.aum_bn.toFixed(1)}B.
       </InsightCard>
     </div>

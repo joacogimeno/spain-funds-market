@@ -153,9 +153,9 @@ export default function Opportunities() {
           </ResponsiveContainer>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, justifyContent: 'center' }}>
             <div style={{ padding: 16, background: '#0a0a0f', borderRadius: 8, border: '1px solid #2a2a3a' }}>
-              <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Banca March Group AUM</div>
+              <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 4 }}>Inversis Gestión AUM</div>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 28, fontWeight: 700, color: '#d42030' }}>
-                {positioning.inversis_group_aum ? `\u20AC${positioning.inversis_group_aum.toFixed(1)}B` : 'N/A'}
+                {positioning.inversis_gestora_aum != null ? `\u20AC${(positioning.inversis_gestora_aum as number).toFixed(1)}B` : 'N/A'}
               </div>
             </div>
             <div style={{ padding: 16, background: '#0a0a0f', borderRadius: 8, border: '1px solid #2a2a3a' }}>
