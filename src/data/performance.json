@@ -1,0 +1,5987 @@
+{
+  "heatmap": [
+    {
+      "category": "RV Nacional",
+      "month": 2.93,
+      "ytd": 6.8,
+      "1y": 40.99,
+      "3y": 24.56,
+      "5y": 18.09,
+      "10y": 10.07,
+      "aum_bn": 3.89
+    },
+    {
+      "category": "RV Intl Japón",
+      "month": 10.36,
+      "ytd": 15.49,
+      "1y": 37.4,
+      "3y": 21.79,
+      "5y": 12.24,
+      "10y": 10.66,
+      "aum_bn": 1.555
+    },
+    {
+      "category": "RV Intl Emergentes",
+      "month": 6.74,
+      "ytd": 14.83,
+      "1y": 34.03,
+      "3y": 17.08,
+      "5y": 6.26,
+      "10y": 8.42,
+      "aum_bn": 5.714
+    },
+    {
+      "category": "RV Euro Resto",
+      "month": 3.41,
+      "ytd": 6.44,
+      "1y": 18.49,
+      "3y": 13.41,
+      "5y": 10.42,
+      "10y": 7.2,
+      "aum_bn": 4.906
+    },
+    {
+      "category": "RV Intl Europa",
+      "month": 3.75,
+      "ytd": 7.02,
+      "1y": 18.3,
+      "3y": 12.2,
+      "5y": 11.74,
+      "10y": 7.39,
+      "aum_bn": 10.354
+    },
+    {
+      "category": "Fondos Índice",
+      "month": 1.28,
+      "ytd": 3.29,
+      "1y": 17.5,
+      "3y": 20.23,
+      "5y": 0.0,
+      "10y": 0.0,
+      "aum_bn": 7.473
+    },
+    {
+      "category": "RV Intl Resto",
+      "month": 2.45,
+      "ytd": 5.48,
+      "1y": 13.26,
+      "3y": 13.57,
+      "5y": 9.55,
+      "10y": 8.44,
+      "aum_bn": 30.95
+    },
+    {
+      "category": "RV Mixta Euro",
+      "month": 1.16,
+      "ytd": 3.32,
+      "1y": 8.92,
+      "3y": 7.79,
+      "5y": 4.75,
+      "10y": 3.53,
+      "aum_bn": 0.807
+    },
+    {
+      "category": "FIL",
+      "month": -0.14,
+      "ytd": 0.87,
+      "1y": 6.54,
+      "3y": 5.3,
+      "5y": 3.82,
+      "10y": 4.67,
+      "aum_bn": 4.248
+    },
+    {
+      "category": "Globales",
+      "month": 1.33,
+      "ytd": 2.76,
+      "1y": 6.46,
+      "3y": 7.15,
+      "5y": 3.56,
+      "10y": 3.06,
+      "aum_bn": 63.979
+    },
+    {
+      "category": "RV Mixta Internacional",
+      "month": 1.07,
+      "ytd": 2.13,
+      "1y": 5.71,
+      "3y": 6.93,
+      "5y": 3.37,
+      "10y": 2.92,
+      "aum_bn": 25.648
+    },
+    {
+      "category": "Garantizados RV",
+      "month": 0.62,
+      "ytd": 1.2,
+      "1y": 4.56,
+      "3y": 4.41,
+      "5y": 1.75,
+      "10y": 1.4,
+      "aum_bn": 1.915
+    },
+    {
+      "category": "Retorno Absoluto",
+      "month": 0.31,
+      "ytd": 0.89,
+      "1y": 4.18,
+      "3y": 4.91,
+      "5y": 2.62,
+      "10y": 1.62,
+      "aum_bn": 9.652
+    },
+    {
+      "category": "Hedge Funds",
+      "month": 0.0,
+      "ytd": 0.0,
+      "1y": 4.09,
+      "3y": 6.58,
+      "5y": 3.3,
+      "10y": 1.26,
+      "aum_bn": 0.818
+    },
+    {
+      "category": "RV Intl EEUU",
+      "month": -0.88,
+      "ytd": -0.71,
+      "1y": 3.02,
+      "3y": 15.25,
+      "5y": 11.07,
+      "10y": 11.74,
+      "aum_bn": 17.487
+    },
+    {
+      "category": "RF Mixta Internacional",
+      "month": 0.63,
+      "ytd": 1.3,
+      "1y": 3.01,
+      "3y": 4.71,
+      "5y": 1.74,
+      "10y": 1.31,
+      "aum_bn": 22.616
+    },
+    {
+      "category": "RF Mixta Euro",
+      "month": 0.34,
+      "ytd": 0.77,
+      "1y": 2.69,
+      "3y": 4.34,
+      "5y": 1.36,
+      "10y": 0.93,
+      "aum_bn": 21.388
+    },
+    {
+      "category": "RF Euro LP",
+      "month": 0.45,
+      "ytd": 0.94,
+      "1y": 2.65,
+      "3y": 3.79,
+      "5y": 0.58,
+      "10y": 0.73,
+      "aum_bn": 80.546
+    },
+    {
+      "category": "RF Euro CP",
+      "month": 0.13,
+      "ytd": 0.33,
+      "1y": 1.96,
+      "3y": 2.86,
+      "5y": 1.48,
+      "10y": 0.69,
+      "aum_bn": 83.542
+    },
+    {
+      "category": "Objetivo Rentabilidad",
+      "month": 0.15,
+      "ytd": 0.32,
+      "1y": 1.78,
+      "3y": 2.79,
+      "5y": 0.0,
+      "10y": 0.0,
+      "aum_bn": 18.623
+    },
+    {
+      "category": "Monetarios",
+      "month": 0.12,
+      "ytd": 0.28,
+      "1y": 1.77,
+      "3y": 2.66,
+      "5y": 1.47,
+      "10y": 0.64,
+      "aum_bn": 24.1
+    },
+    {
+      "category": "Garantizados RF",
+      "month": 0.21,
+      "ytd": 0.42,
+      "1y": 1.71,
+      "3y": 2.65,
+      "5y": -0.22,
+      "10y": 0.43,
+      "aum_bn": 4.558
+    },
+    {
+      "category": "RF Internacional",
+      "month": 0.62,
+      "ytd": 0.94,
+      "1y": 1.1,
+      "3y": 3.44,
+      "5y": 0.88,
+      "10y": 0.72,
+      "aum_bn": 20.339
+    }
+  ],
+  "scatter": [
+    {
+      "category": "RV Nacional",
+      "return_1y": 40.99,
+      "return_3y": 24.56,
+      "aum_bn": 3.89
+    },
+    {
+      "category": "RV Intl Japón",
+      "return_1y": 37.4,
+      "return_3y": 21.79,
+      "aum_bn": 1.555
+    },
+    {
+      "category": "RV Intl Emergentes",
+      "return_1y": 34.03,
+      "return_3y": 17.08,
+      "aum_bn": 5.714
+    },
+    {
+      "category": "RV Euro Resto",
+      "return_1y": 18.49,
+      "return_3y": 13.41,
+      "aum_bn": 4.906
+    },
+    {
+      "category": "RV Intl Europa",
+      "return_1y": 18.3,
+      "return_3y": 12.2,
+      "aum_bn": 10.354
+    },
+    {
+      "category": "Fondos Índice",
+      "return_1y": 17.5,
+      "return_3y": 20.23,
+      "aum_bn": 7.473
+    },
+    {
+      "category": "RV Intl Resto",
+      "return_1y": 13.26,
+      "return_3y": 13.57,
+      "aum_bn": 30.95
+    },
+    {
+      "category": "RV Mixta Euro",
+      "return_1y": 8.92,
+      "return_3y": 7.79,
+      "aum_bn": 0.807
+    },
+    {
+      "category": "FIL",
+      "return_1y": 6.54,
+      "return_3y": 5.3,
+      "aum_bn": 4.248
+    },
+    {
+      "category": "Globales",
+      "return_1y": 6.46,
+      "return_3y": 7.15,
+      "aum_bn": 63.979
+    },
+    {
+      "category": "RV Mixta Internacional",
+      "return_1y": 5.71,
+      "return_3y": 6.93,
+      "aum_bn": 25.648
+    },
+    {
+      "category": "Garantizados RV",
+      "return_1y": 4.56,
+      "return_3y": 4.41,
+      "aum_bn": 1.915
+    },
+    {
+      "category": "Retorno Absoluto",
+      "return_1y": 4.18,
+      "return_3y": 4.91,
+      "aum_bn": 9.652
+    },
+    {
+      "category": "Hedge Funds",
+      "return_1y": 4.09,
+      "return_3y": 6.58,
+      "aum_bn": 0.818
+    },
+    {
+      "category": "RV Intl EEUU",
+      "return_1y": 3.02,
+      "return_3y": 15.25,
+      "aum_bn": 17.487
+    },
+    {
+      "category": "RF Mixta Internacional",
+      "return_1y": 3.01,
+      "return_3y": 4.71,
+      "aum_bn": 22.616
+    },
+    {
+      "category": "RF Mixta Euro",
+      "return_1y": 2.69,
+      "return_3y": 4.34,
+      "aum_bn": 21.388
+    },
+    {
+      "category": "RF Euro LP",
+      "return_1y": 2.65,
+      "return_3y": 3.79,
+      "aum_bn": 80.546
+    },
+    {
+      "category": "RF Euro CP",
+      "return_1y": 1.96,
+      "return_3y": 2.86,
+      "aum_bn": 83.542
+    },
+    {
+      "category": "Objetivo Rentabilidad",
+      "return_1y": 1.78,
+      "return_3y": 2.79,
+      "aum_bn": 18.623
+    },
+    {
+      "category": "Monetarios",
+      "return_1y": 1.77,
+      "return_3y": 2.66,
+      "aum_bn": 24.1
+    },
+    {
+      "category": "Garantizados RF",
+      "return_1y": 1.71,
+      "return_3y": 2.65,
+      "aum_bn": 4.558
+    },
+    {
+      "category": "RF Internacional",
+      "return_1y": 1.1,
+      "return_3y": 3.44,
+      "aum_bn": 20.339
+    }
+  ],
+  "monthly": [
+    {
+      "date": "2024-01",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.29,
+          "return_ytd": 0.29,
+          "return_1y": 2.94,
+          "return_3y": 0.72,
+          "return_5y": 0.41,
+          "return_10y": 0.16,
+          "patrimonio_bn": 11.652
+        },
+        "RF Euro CP": {
+          "return_month": 0.28,
+          "return_ytd": 0.28,
+          "return_1y": 3.06,
+          "return_3y": 0.59,
+          "return_5y": 0.39,
+          "return_10y": 0.19,
+          "patrimonio_bn": 38.097
+        },
+        "RF Euro LP": {
+          "return_month": 0.1,
+          "return_ytd": 0.1,
+          "return_1y": 3.88,
+          "return_3y": -1.35,
+          "return_5y": -0.09,
+          "return_10y": 0.56,
+          "patrimonio_bn": 66.739
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.36,
+          "return_ytd": 0.36,
+          "return_1y": 4.45,
+          "return_3y": -0.3,
+          "return_5y": 0.2,
+          "return_10y": 0.39,
+          "patrimonio_bn": 10.167
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.6,
+          "return_ytd": 0.6,
+          "return_1y": 7.45,
+          "return_3y": 2.88,
+          "return_5y": 2.77,
+          "return_10y": 2.01,
+          "patrimonio_bn": 0.837
+        },
+        "RV Nacional": {
+          "return_month": -0.83,
+          "return_ytd": -0.83,
+          "return_1y": 10.53,
+          "return_3y": 10.56,
+          "return_5y": 3.69,
+          "return_10y": 3.03,
+          "patrimonio_bn": 2.929
+        },
+        "RF Internacional": {
+          "return_month": 0.46,
+          "return_ytd": 0.46,
+          "return_1y": 3.22,
+          "return_3y": -0.78,
+          "return_5y": 0.28,
+          "return_10y": 1.0,
+          "patrimonio_bn": 15.506
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.51,
+          "return_ytd": 0.51,
+          "return_1y": 4.24,
+          "return_3y": -0.12,
+          "return_5y": 0.68,
+          "return_10y": 0.51,
+          "patrimonio_bn": 21.431
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.77,
+          "return_ytd": 0.77,
+          "return_1y": 5.86,
+          "return_3y": 1.16,
+          "return_5y": 1.95,
+          "return_10y": 1.62,
+          "patrimonio_bn": 23.316
+        },
+        "RV Euro Resto": {
+          "return_month": 1.11,
+          "return_ytd": 1.11,
+          "return_1y": 8.71,
+          "return_3y": 7.84,
+          "return_5y": 5.55,
+          "return_10y": 3.9,
+          "patrimonio_bn": 3.376
+        },
+        "RV Intl Europa": {
+          "return_month": 0.77,
+          "return_ytd": 0.77,
+          "return_1y": 7.42,
+          "return_3y": 10.02,
+          "return_5y": 7.02,
+          "return_10y": 4.97,
+          "patrimonio_bn": 7.419
+        },
+        "RV Intl EEUU": {
+          "return_month": 3.11,
+          "return_ytd": 3.11,
+          "return_1y": 19.72,
+          "return_3y": 10.91,
+          "return_5y": 12.32,
+          "return_10y": 10.97,
+          "patrimonio_bn": 14.215
+        },
+        "RV Intl Japón": {
+          "return_month": 5.27,
+          "return_ytd": 5.27,
+          "return_1y": 21.42,
+          "return_3y": 7.26,
+          "return_5y": 8.74,
+          "return_10y": 7.63,
+          "patrimonio_bn": 1.069
+        },
+        "RV Intl Emergentes": {
+          "return_month": -2.32,
+          "return_ytd": -2.32,
+          "return_1y": -1.84,
+          "return_3y": -4.56,
+          "return_5y": 1.34,
+          "return_10y": 3.26,
+          "patrimonio_bn": 2.761
+        },
+        "RV Intl Resto": {
+          "return_month": 1.29,
+          "return_ytd": 1.29,
+          "return_1y": 10.34,
+          "return_3y": 7.1,
+          "return_5y": 7.72,
+          "return_10y": 6.33,
+          "patrimonio_bn": 24.013
+        },
+        "Globales": {
+          "return_month": 0.63,
+          "return_ytd": 0.63,
+          "return_1y": 5.28,
+          "return_3y": 1.18,
+          "return_5y": 1.78,
+          "return_10y": 1.96,
+          "patrimonio_bn": 57.666
+        },
+        "Garantizados RF": {
+          "return_month": 0.09,
+          "return_ytd": 0.09,
+          "return_1y": 2.48,
+          "return_3y": -2.06,
+          "return_5y": -0.35,
+          "return_10y": 0.17,
+          "patrimonio_bn": 7.849
+        },
+        "Garantizados RV": {
+          "return_month": 0.26,
+          "return_ytd": 0.26,
+          "return_1y": 3.33,
+          "return_3y": -0.28,
+          "return_5y": 0.49,
+          "return_10y": 0.72,
+          "patrimonio_bn": 5.039
+        },
+        "Garantía parcial": {
+          "return_month": 0.24,
+          "return_ytd": 0.24,
+          "return_1y": 1.43,
+          "return_3y": 0.24,
+          "return_5y": 0.02,
+          "return_10y": 0.69,
+          "patrimonio_bn": 0.006
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.49,
+          "return_ytd": 0.49,
+          "return_1y": 3.81,
+          "return_3y": 1.03,
+          "return_5y": 1.31,
+          "return_10y": 0.68,
+          "patrimonio_bn": 6.711
+        },
+        "Fondos Índice": {
+          "return_month": 2.27,
+          "return_ytd": 2.27,
+          "return_1y": 17.69,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 5.894
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.21,
+          "return_ytd": 0.21,
+          "return_1y": 2.66,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.387
+        },
+        "FIL": {
+          "return_month": -2.88,
+          "return_ytd": -2.88,
+          "return_1y": 1.11,
+          "return_3y": 1.9,
+          "return_5y": 2.42,
+          "return_10y": 3.43,
+          "patrimonio_bn": 3.348
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 8.42,
+          "return_3y": 2.08,
+          "return_5y": 0.78,
+          "return_10y": 0.31,
+          "patrimonio_bn": 0.771
+        }
+      }
+    },
+    {
+      "date": "2024-02",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.29,
+          "return_ytd": 0.58,
+          "return_1y": 3.09,
+          "return_3y": 0.83,
+          "return_5y": 0.47,
+          "return_10y": 0.19,
+          "patrimonio_bn": 13.011
+        },
+        "RF Euro CP": {
+          "return_month": 0.22,
+          "return_ytd": 0.5,
+          "return_1y": 3.2,
+          "return_3y": 0.68,
+          "return_5y": 0.41,
+          "return_10y": 0.2,
+          "patrimonio_bn": 39.173
+        },
+        "RF Euro LP": {
+          "return_month": -0.52,
+          "return_ytd": -0.42,
+          "return_1y": 4.19,
+          "return_3y": -1.39,
+          "return_5y": -0.23,
+          "return_10y": 0.42,
+          "patrimonio_bn": 67.198
+        },
+        "RF Mixta Euro": {
+          "return_month": -0.06,
+          "return_ytd": 0.3,
+          "return_1y": 5.03,
+          "return_3y": -0.36,
+          "return_5y": 0.08,
+          "return_10y": 0.29,
+          "patrimonio_bn": 10.581
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.64,
+          "return_ytd": 1.25,
+          "return_1y": 7.49,
+          "return_3y": 2.68,
+          "return_5y": 2.6,
+          "return_10y": 1.9,
+          "patrimonio_bn": 0.839
+        },
+        "RV Nacional": {
+          "return_month": -1.61,
+          "return_ytd": -2.42,
+          "return_1y": 5.8,
+          "return_3y": 7.93,
+          "return_5y": 2.97,
+          "return_10y": 2.64,
+          "patrimonio_bn": 2.774
+        },
+        "RF Internacional": {
+          "return_month": -0.69,
+          "return_ytd": -0.24,
+          "return_1y": 3.34,
+          "return_3y": -0.83,
+          "return_5y": 0.04,
+          "return_10y": 0.9,
+          "patrimonio_bn": 15.923
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.07,
+          "return_ytd": 0.58,
+          "return_1y": 4.98,
+          "return_3y": -0.12,
+          "return_5y": 0.57,
+          "return_10y": 0.45,
+          "patrimonio_bn": 21.126
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.92,
+          "return_ytd": 1.69,
+          "return_1y": 7.47,
+          "return_3y": 1.23,
+          "return_5y": 1.89,
+          "return_10y": 1.46,
+          "patrimonio_bn": 23.417
+        },
+        "RV Euro Resto": {
+          "return_month": 1.96,
+          "return_ytd": 3.09,
+          "return_1y": 9.1,
+          "return_3y": 7.08,
+          "return_5y": 5.34,
+          "return_10y": 3.66,
+          "patrimonio_bn": 3.459
+        },
+        "RV Intl Europa": {
+          "return_month": 0.26,
+          "return_ytd": 1.04,
+          "return_1y": 5.56,
+          "return_3y": 9.19,
+          "return_5y": 6.41,
+          "return_10y": 4.64,
+          "patrimonio_bn": 7.415
+        },
+        "RV Intl EEUU": {
+          "return_month": 5.05,
+          "return_ytd": 8.32,
+          "return_1y": 25.65,
+          "return_3y": 11.54,
+          "return_5y": 12.68,
+          "return_10y": 11.23,
+          "patrimonio_bn": 15.108
+        },
+        "RV Intl Japón": {
+          "return_month": 4.41,
+          "return_ytd": 9.91,
+          "return_1y": 27.52,
+          "return_3y": 7.94,
+          "return_5y": 9.2,
+          "return_10y": 8.34,
+          "patrimonio_bn": 1.147
+        },
+        "RV Intl Emergentes": {
+          "return_month": 4.79,
+          "return_ytd": 2.36,
+          "return_1y": 7.44,
+          "return_3y": -3.2,
+          "return_5y": 2.07,
+          "return_10y": 3.59,
+          "patrimonio_bn": 2.909
+        },
+        "RV Intl Resto": {
+          "return_month": 3.04,
+          "return_ytd": 4.37,
+          "return_1y": 13.73,
+          "return_3y": 7.0,
+          "return_5y": 7.76,
+          "return_10y": 6.16,
+          "patrimonio_bn": 24.514
+        },
+        "Globales": {
+          "return_month": 0.83,
+          "return_ytd": 1.47,
+          "return_1y": 7.19,
+          "return_3y": 1.24,
+          "return_5y": 1.74,
+          "return_10y": 1.88,
+          "patrimonio_bn": 57.416
+        },
+        "Garantizados RF": {
+          "return_month": -0.29,
+          "return_ytd": -0.2,
+          "return_1y": 2.95,
+          "return_3y": -2.0,
+          "return_5y": -0.41,
+          "return_10y": 0.11,
+          "patrimonio_bn": 7.361
+        },
+        "Garantizados RV": {
+          "return_month": 0.1,
+          "return_ytd": 0.36,
+          "return_1y": 3.86,
+          "return_3y": -0.17,
+          "return_5y": 0.49,
+          "return_10y": 0.67,
+          "patrimonio_bn": 4.671
+        },
+        "Garantía parcial": {
+          "return_month": 0.23,
+          "return_ytd": 0.47,
+          "return_1y": 1.35,
+          "return_3y": 0.05,
+          "return_5y": -0.1,
+          "return_10y": 0.62,
+          "patrimonio_bn": 0.005
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.34,
+          "return_ytd": 0.83,
+          "return_1y": 4.58,
+          "return_3y": 1.02,
+          "return_5y": 1.26,
+          "return_10y": 0.64,
+          "patrimonio_bn": 6.627
+        },
+        "Fondos Índice": {
+          "return_month": 3.35,
+          "return_ytd": 5.69,
+          "return_1y": 20.09,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.026
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.03,
+          "return_ytd": 0.24,
+          "return_1y": 3.23,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.861
+        },
+        "FIL": {
+          "return_month": 0.54,
+          "return_ytd": -2.36,
+          "return_1y": 1.14,
+          "return_3y": 1.48,
+          "return_5y": 2.31,
+          "return_10y": 3.37,
+          "patrimonio_bn": 3.376
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 8.42,
+          "return_3y": 1.74,
+          "return_5y": 1.07,
+          "return_10y": 0.64,
+          "patrimonio_bn": 0.813
+        }
+      }
+    },
+    {
+      "date": "2024-03",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.3,
+          "return_ytd": 0.88,
+          "return_1y": 3.25,
+          "return_3y": 0.94,
+          "return_5y": 0.52,
+          "return_10y": 0.21,
+          "patrimonio_bn": 14.551
+        },
+        "RF Euro CP": {
+          "return_month": 0.31,
+          "return_ytd": 0.81,
+          "return_1y": 3.29,
+          "return_3y": 0.77,
+          "return_5y": 0.45,
+          "return_10y": 0.21,
+          "patrimonio_bn": 40.309
+        },
+        "RF Euro LP": {
+          "return_month": 0.61,
+          "return_ytd": 0.19,
+          "return_1y": 3.87,
+          "return_3y": -1.27,
+          "return_5y": -0.2,
+          "return_10y": 0.43,
+          "patrimonio_bn": 68.294
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.94,
+          "return_ytd": 1.24,
+          "return_1y": 5.73,
+          "return_3y": -0.38,
+          "return_5y": 0.18,
+          "return_10y": 0.32,
+          "patrimonio_bn": 10.584
+        },
+        "RV Mixta Euro": {
+          "return_month": 2.24,
+          "return_ytd": 3.52,
+          "return_1y": 9.22,
+          "return_3y": 2.61,
+          "return_5y": 2.94,
+          "return_10y": 2.0,
+          "patrimonio_bn": 0.853
+        },
+        "RV Nacional": {
+          "return_month": 8.48,
+          "return_ytd": 5.85,
+          "return_1y": 18.58,
+          "return_3y": 8.92,
+          "return_5y": 4.89,
+          "return_10y": 3.22,
+          "patrimonio_bn": 2.939
+        },
+        "RF Internacional": {
+          "return_month": 0.72,
+          "return_ytd": 0.48,
+          "return_1y": 3.23,
+          "return_3y": -0.75,
+          "return_5y": 0.05,
+          "return_10y": 0.94,
+          "patrimonio_bn": 16.097
+        },
+        "RF Mixta Internacional": {
+          "return_month": 1.16,
+          "return_ytd": 1.75,
+          "return_1y": 5.81,
+          "return_3y": -0.06,
+          "return_5y": 0.68,
+          "return_10y": 0.53,
+          "patrimonio_bn": 21.061
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.76,
+          "return_ytd": 3.49,
+          "return_1y": 8.97,
+          "return_3y": 1.17,
+          "return_5y": 2.08,
+          "return_10y": 1.68,
+          "patrimonio_bn": 23.397
+        },
+        "RV Euro Resto": {
+          "return_month": 4.16,
+          "return_ytd": 7.38,
+          "return_1y": 13.6,
+          "return_3y": 6.41,
+          "return_5y": 6.08,
+          "return_10y": 4.02,
+          "patrimonio_bn": 3.575
+        },
+        "RV Intl Europa": {
+          "return_month": 4.09,
+          "return_ytd": 5.16,
+          "return_1y": 10.99,
+          "return_3y": 8.38,
+          "return_5y": 6.99,
+          "return_10y": 5.07,
+          "patrimonio_bn": 7.662
+        },
+        "RV Intl EEUU": {
+          "return_month": 3.42,
+          "return_ytd": 12.02,
+          "return_1y": 28.4,
+          "return_3y": 11.19,
+          "return_5y": 13.04,
+          "return_10y": 11.5,
+          "patrimonio_bn": 15.617
+        },
+        "RV Intl Japón": {
+          "return_month": 3.18,
+          "return_ytd": 13.41,
+          "return_1y": 28.45,
+          "return_3y": 7.68,
+          "return_5y": 9.7,
+          "return_10y": 8.66,
+          "patrimonio_bn": 1.164
+        },
+        "RV Intl Emergentes": {
+          "return_month": 2.7,
+          "return_ytd": 5.12,
+          "return_1y": 9.89,
+          "return_3y": -2.71,
+          "return_5y": 2.11,
+          "return_10y": 3.68,
+          "patrimonio_bn": 3.026
+        },
+        "RV Intl Resto": {
+          "return_month": 3.84,
+          "return_ytd": 8.37,
+          "return_1y": 17.81,
+          "return_3y": 6.92,
+          "return_5y": 8.35,
+          "return_10y": 6.61,
+          "patrimonio_bn": 25.406
+        },
+        "Globales": {
+          "return_month": 1.83,
+          "return_ytd": 3.33,
+          "return_1y": 8.62,
+          "return_3y": 1.2,
+          "return_5y": 1.94,
+          "return_10y": 2.06,
+          "patrimonio_bn": 58.566
+        },
+        "Garantizados RF": {
+          "return_month": 0.32,
+          "return_ytd": 0.12,
+          "return_1y": 2.29,
+          "return_3y": -2.0,
+          "return_5y": -0.52,
+          "return_10y": 0.1,
+          "patrimonio_bn": 7.351
+        },
+        "Garantizados RV": {
+          "return_month": 0.72,
+          "return_ytd": 1.08,
+          "return_1y": 3.62,
+          "return_3y": -0.09,
+          "return_5y": 0.52,
+          "return_10y": 0.7,
+          "patrimonio_bn": 4.644
+        },
+        "Garantía parcial": {
+          "return_month": 0.24,
+          "return_ytd": 0.72,
+          "return_1y": 1.53,
+          "return_3y": -0.46,
+          "return_5y": -0.18,
+          "return_10y": 0.48,
+          "patrimonio_bn": 0.005
+        },
+        "Retorno Absoluto": {
+          "return_month": 1.09,
+          "return_ytd": 1.92,
+          "return_1y": 5.46,
+          "return_3y": 1.18,
+          "return_5y": 1.4,
+          "return_10y": 0.74,
+          "patrimonio_bn": 6.695
+        },
+        "Fondos Índice": {
+          "return_month": 5.44,
+          "return_ytd": 11.44,
+          "return_1y": 25.81,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.388
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.32,
+          "return_ytd": 0.56,
+          "return_1y": 2.83,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 22.329
+        },
+        "FIL": {
+          "return_month": 1.52,
+          "return_ytd": -0.88,
+          "return_1y": 2.94,
+          "return_3y": 1.21,
+          "return_5y": 2.5,
+          "return_10y": 3.21,
+          "patrimonio_bn": 3.424
+        },
+        "Hedge Funds": {
+          "return_month": 1.95,
+          "return_ytd": 1.95,
+          "return_1y": 8.46,
+          "return_3y": 2.38,
+          "return_5y": 1.29,
+          "return_10y": 0.51,
+          "patrimonio_bn": 0.816
+        }
+      }
+    },
+    {
+      "date": "2024-04",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.27,
+          "return_ytd": 1.15,
+          "return_1y": 3.32,
+          "return_3y": 1.03,
+          "return_5y": 0.57,
+          "return_10y": 0.24,
+          "patrimonio_bn": 15.957
+        },
+        "RF Euro CP": {
+          "return_month": 0.23,
+          "return_ytd": 1.05,
+          "return_1y": 3.31,
+          "return_3y": 0.85,
+          "return_5y": 0.47,
+          "return_10y": 0.23,
+          "patrimonio_bn": 41.848
+        },
+        "RF Euro LP": {
+          "return_month": -0.37,
+          "return_ytd": -0.18,
+          "return_1y": 3.25,
+          "return_3y": -1.36,
+          "return_5y": -0.34,
+          "return_10y": 0.32,
+          "patrimonio_bn": 69.011
+        },
+        "RF Mixta Euro": {
+          "return_month": -0.4,
+          "return_ytd": 0.83,
+          "return_1y": 4.99,
+          "return_3y": -0.59,
+          "return_5y": -0.05,
+          "return_10y": 0.23,
+          "patrimonio_bn": 11.295
+        },
+        "RV Mixta Euro": {
+          "return_month": -1.25,
+          "return_ytd": 2.22,
+          "return_1y": 7.26,
+          "return_3y": 1.98,
+          "return_5y": 2.32,
+          "return_10y": 1.82,
+          "patrimonio_bn": 0.84
+        },
+        "RV Nacional": {
+          "return_month": 0.24,
+          "return_ytd": 6.11,
+          "return_1y": 18.02,
+          "return_3y": 8.46,
+          "return_5y": 4.24,
+          "return_10y": 3.2,
+          "patrimonio_bn": 2.886
+        },
+        "RF Internacional": {
+          "return_month": -0.8,
+          "return_ytd": -0.32,
+          "return_1y": 2.37,
+          "return_3y": -0.94,
+          "return_5y": -0.22,
+          "return_10y": 0.84,
+          "patrimonio_bn": 15.689
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.89,
+          "return_ytd": 0.84,
+          "return_1y": 4.65,
+          "return_3y": -0.48,
+          "return_5y": 0.37,
+          "return_10y": 0.44,
+          "patrimonio_bn": 20.591
+        },
+        "RV Mixta Internacional": {
+          "return_month": -1.21,
+          "return_ytd": 2.23,
+          "return_1y": 7.39,
+          "return_3y": 0.45,
+          "return_5y": 1.57,
+          "return_10y": 1.5,
+          "patrimonio_bn": 22.941
+        },
+        "RV Euro Resto": {
+          "return_month": -1.38,
+          "return_ytd": 5.9,
+          "return_1y": 10.55,
+          "return_3y": 5.14,
+          "return_5y": 4.89,
+          "return_10y": 3.83,
+          "patrimonio_bn": 3.5
+        },
+        "RV Intl Europa": {
+          "return_month": -0.26,
+          "return_ytd": 4.89,
+          "return_1y": 8.83,
+          "return_3y": 7.76,
+          "return_5y": 6.34,
+          "return_10y": 5.01,
+          "patrimonio_bn": 7.715
+        },
+        "RV Intl EEUU": {
+          "return_month": -3.61,
+          "return_ytd": 7.98,
+          "return_1y": 24.39,
+          "return_3y": 8.44,
+          "return_5y": 11.47,
+          "return_10y": 11.13,
+          "patrimonio_bn": 15.021
+        },
+        "RV Intl Japón": {
+          "return_month": -4.62,
+          "return_ytd": 8.17,
+          "return_1y": 22.0,
+          "return_3y": 7.26,
+          "return_5y": 8.1,
+          "return_10y": 8.64,
+          "patrimonio_bn": 1.115
+        },
+        "RV Intl Emergentes": {
+          "return_month": 0.99,
+          "return_ytd": 6.16,
+          "return_1y": 12.86,
+          "return_3y": -2.33,
+          "return_5y": 1.89,
+          "return_10y": 3.77,
+          "patrimonio_bn": 3.029
+        },
+        "RV Intl Resto": {
+          "return_month": -1.82,
+          "return_ytd": 6.4,
+          "return_1y": 15.91,
+          "return_3y": 5.53,
+          "return_5y": 7.15,
+          "return_10y": 6.27,
+          "patrimonio_bn": 24.858
+        },
+        "Globales": {
+          "return_month": -1.21,
+          "return_ytd": 2.08,
+          "return_1y": 7.27,
+          "return_3y": 0.48,
+          "return_5y": 1.48,
+          "return_10y": 1.84,
+          "patrimonio_bn": 57.151
+        },
+        "Garantizados RF": {
+          "return_month": -0.04,
+          "return_ytd": 0.07,
+          "return_1y": 2.24,
+          "return_3y": -1.94,
+          "return_5y": -0.61,
+          "return_10y": 0.08,
+          "patrimonio_bn": 7.201
+        },
+        "Garantizados RV": {
+          "return_month": -0.1,
+          "return_ytd": 0.98,
+          "return_1y": 3.36,
+          "return_3y": -0.08,
+          "return_5y": 0.38,
+          "return_10y": 0.65,
+          "patrimonio_bn": 4.475
+        },
+        "Garantía parcial": {
+          "return_month": 0.23,
+          "return_ytd": 0.95,
+          "return_1y": 1.7,
+          "return_3y": -0.57,
+          "return_5y": -0.39,
+          "return_10y": 0.48,
+          "patrimonio_bn": 0.005
+        },
+        "Retorno Absoluto": {
+          "return_month": -0.52,
+          "return_ytd": 1.39,
+          "return_1y": 4.64,
+          "return_3y": 0.81,
+          "return_5y": 1.2,
+          "return_10y": 0.68,
+          "patrimonio_bn": 6.688
+        },
+        "Fondos Índice": {
+          "return_month": -2.27,
+          "return_ytd": 8.91,
+          "return_1y": 21.87,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.114
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.15,
+          "return_ytd": 0.71,
+          "return_1y": 2.84,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 22.025
+        },
+        "FIL": {
+          "return_month": -0.09,
+          "return_ytd": -0.97,
+          "return_1y": 2.71,
+          "return_3y": 0.59,
+          "return_5y": 1.94,
+          "return_10y": 3.18,
+          "patrimonio_bn": 3.412
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 1.95,
+          "return_1y": 8.46,
+          "return_3y": 2.42,
+          "return_5y": 1.3,
+          "return_10y": 0.9,
+          "patrimonio_bn": 0.811
+        }
+      }
+    },
+    {
+      "date": "2024-05",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.29,
+          "return_ytd": 1.45,
+          "return_1y": 3.43,
+          "return_3y": 1.15,
+          "return_5y": 0.64,
+          "return_10y": 0.26,
+          "patrimonio_bn": 17.247
+        },
+        "RF Euro CP": {
+          "return_month": 0.29,
+          "return_ytd": 1.34,
+          "return_1y": 3.4,
+          "return_3y": 0.96,
+          "return_5y": 0.55,
+          "return_10y": 0.25,
+          "patrimonio_bn": 45.894
+        },
+        "RF Euro LP": {
+          "return_month": 0.21,
+          "return_ytd": 0.02,
+          "return_1y": 3.24,
+          "return_3y": -1.27,
+          "return_5y": -0.28,
+          "return_10y": 0.32,
+          "patrimonio_bn": 67.551
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.43,
+          "return_ytd": 1.26,
+          "return_1y": 5.25,
+          "return_3y": -0.51,
+          "return_5y": 0.24,
+          "return_10y": 0.2,
+          "patrimonio_bn": 12.039
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.58,
+          "return_ytd": 3.84,
+          "return_1y": 9.47,
+          "return_3y": 2.25,
+          "return_5y": 3.21,
+          "return_10y": 1.8,
+          "patrimonio_bn": 0.833
+        },
+        "RV Nacional": {
+          "return_month": 5.4,
+          "return_ytd": 11.83,
+          "return_1y": 25.52,
+          "return_3y": 9.3,
+          "return_5y": 6.68,
+          "return_10y": 3.48,
+          "patrimonio_bn": 2.842
+        },
+        "RF Internacional": {
+          "return_month": 0.26,
+          "return_ytd": -0.06,
+          "return_1y": 2.36,
+          "return_3y": -0.79,
+          "return_5y": -0.15,
+          "return_10y": 0.77,
+          "patrimonio_bn": 15.314
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.64,
+          "return_ytd": 1.48,
+          "return_1y": 5.23,
+          "return_3y": -0.3,
+          "return_5y": 0.68,
+          "return_10y": 0.43,
+          "patrimonio_bn": 20.446
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.86,
+          "return_ytd": 3.11,
+          "return_1y": 8.04,
+          "return_3y": 0.66,
+          "return_5y": 2.14,
+          "return_10y": 1.5,
+          "patrimonio_bn": 23.183
+        },
+        "RV Euro Resto": {
+          "return_month": 3.37,
+          "return_ytd": 9.47,
+          "return_1y": 16.75,
+          "return_3y": 5.47,
+          "return_5y": 6.85,
+          "return_10y": 3.94,
+          "patrimonio_bn": 3.59
+        },
+        "RV Intl Europa": {
+          "return_month": 2.96,
+          "return_ytd": 8.0,
+          "return_1y": 15.24,
+          "return_3y": 7.98,
+          "return_5y": 8.35,
+          "return_10y": 5.02,
+          "patrimonio_bn": 8.187
+        },
+        "RV Intl EEUU": {
+          "return_month": 3.34,
+          "return_ytd": 11.58,
+          "return_1y": 24.27,
+          "return_3y": 10.0,
+          "return_5y": 13.71,
+          "return_10y": 11.14,
+          "patrimonio_bn": 15.617
+        },
+        "RV Intl Japón": {
+          "return_month": 0.24,
+          "return_ytd": 8.43,
+          "return_1y": 15.96,
+          "return_3y": 7.43,
+          "return_5y": 9.29,
+          "return_10y": 8.1,
+          "patrimonio_bn": 1.154
+        },
+        "RV Intl Emergentes": {
+          "return_month": -0.18,
+          "return_ytd": 5.97,
+          "return_1y": 11.05,
+          "return_3y": -2.85,
+          "return_5y": 3.05,
+          "return_10y": 3.31,
+          "patrimonio_bn": 2.962
+        },
+        "RV Intl Resto": {
+          "return_month": 2.81,
+          "return_ytd": 9.39,
+          "return_1y": 17.97,
+          "return_3y": 6.14,
+          "return_5y": 9.26,
+          "return_10y": 6.44,
+          "patrimonio_bn": 25.589
+        },
+        "Globales": {
+          "return_month": 0.85,
+          "return_ytd": 2.94,
+          "return_1y": 7.86,
+          "return_3y": 0.75,
+          "return_5y": 2.13,
+          "return_10y": 1.85,
+          "patrimonio_bn": 57.053
+        },
+        "Garantizados RF": {
+          "return_month": 0.13,
+          "return_ytd": 0.2,
+          "return_1y": 2.07,
+          "return_3y": -1.91,
+          "return_5y": -0.67,
+          "return_10y": 0.08,
+          "patrimonio_bn": 7.171
+        },
+        "Garantizados RV": {
+          "return_month": 0.45,
+          "return_ytd": 1.43,
+          "return_1y": 3.75,
+          "return_3y": 0.01,
+          "return_5y": 0.5,
+          "return_10y": 0.63,
+          "patrimonio_bn": 4.4
+        },
+        "Garantía parcial": {
+          "return_month": 0.0,
+          "return_ytd": 0.98,
+          "return_1y": 2.23,
+          "return_3y": -0.85,
+          "return_5y": -0.07,
+          "return_10y": 0.24,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.64,
+          "return_ytd": 2.03,
+          "return_1y": 5.48,
+          "return_3y": 0.96,
+          "return_5y": 1.5,
+          "return_10y": 0.69,
+          "patrimonio_bn": 6.72
+        },
+        "Fondos Índice": {
+          "return_month": 3.53,
+          "return_ytd": 12.75,
+          "return_1y": 25.58,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.326
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.27,
+          "return_ytd": 0.98,
+          "return_1y": 2.92,
+          "return_3y": 0.0,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.538
+        },
+        "FIL": {
+          "return_month": 1.54,
+          "return_ytd": 0.55,
+          "return_1y": 4.29,
+          "return_3y": 0.48,
+          "return_5y": 3.07,
+          "return_10y": 3.18,
+          "patrimonio_bn": 3.437
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 1.95,
+          "return_1y": 8.46,
+          "return_3y": 2.18,
+          "return_5y": 1.3,
+          "return_10y": 0.52,
+          "patrimonio_bn": 0.811
+        }
+      }
+    },
+    {
+      "date": "2024-06",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.26,
+          "return_ytd": 1.71,
+          "return_1y": 3.5,
+          "return_3y": 1.2,
+          "return_5y": 0.68,
+          "return_10y": 0.27,
+          "patrimonio_bn": 18.443
+        },
+        "RF Euro CP": {
+          "return_month": 0.29,
+          "return_ytd": 1.64,
+          "return_1y": 3.58,
+          "return_3y": 1.05,
+          "return_5y": 0.58,
+          "return_10y": 0.27,
+          "patrimonio_bn": 46.676
+        },
+        "RF Euro LP": {
+          "return_month": 0.41,
+          "return_ytd": 0.43,
+          "return_1y": 4.13,
+          "return_3y": -1.2,
+          "return_5y": -0.36,
+          "return_10y": 0.29,
+          "patrimonio_bn": 67.814
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.39,
+          "return_ytd": 1.66,
+          "return_1y": 5.47,
+          "return_3y": -0.5,
+          "return_5y": 0.12,
+          "return_10y": 0.2,
+          "patrimonio_bn": 12.661
+        },
+        "RV Mixta Euro": {
+          "return_month": -0.65,
+          "return_ytd": 3.17,
+          "return_1y": 7.07,
+          "return_3y": 1.87,
+          "return_5y": 2.63,
+          "return_10y": 1.69,
+          "patrimonio_bn": 0.823
+        },
+        "RV Nacional": {
+          "return_month": -3.5,
+          "return_ytd": 7.92,
+          "return_1y": 15.24,
+          "return_3y": 8.57,
+          "return_5y": 5.4,
+          "return_10y": 3.07,
+          "patrimonio_bn": 2.739
+        },
+        "RF Internacional": {
+          "return_month": 0.87,
+          "return_ytd": 0.81,
+          "return_1y": 4.1,
+          "return_3y": -0.85,
+          "return_5y": -0.12,
+          "return_10y": 0.84,
+          "patrimonio_bn": 15.505
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.81,
+          "return_ytd": 2.31,
+          "return_1y": 5.86,
+          "return_3y": -0.27,
+          "return_5y": 0.63,
+          "return_10y": 0.48,
+          "patrimonio_bn": 20.339
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.09,
+          "return_ytd": 4.24,
+          "return_1y": 7.99,
+          "return_3y": 0.64,
+          "return_5y": 2.02,
+          "return_10y": 1.58,
+          "patrimonio_bn": 23.413
+        },
+        "RV Euro Resto": {
+          "return_month": -2.24,
+          "return_ytd": 7.02,
+          "return_1y": 10.68,
+          "return_3y": 4.5,
+          "return_5y": 5.51,
+          "return_10y": 3.79,
+          "patrimonio_bn": 3.498
+        },
+        "RV Intl Europa": {
+          "return_month": -1.92,
+          "return_ytd": 5.93,
+          "return_1y": 9.8,
+          "return_3y": 6.79,
+          "return_5y": 6.92,
+          "return_10y": 4.91,
+          "patrimonio_bn": 8.011
+        },
+        "RV Intl EEUU": {
+          "return_month": 4.55,
+          "return_ytd": 16.65,
+          "return_1y": 24.86,
+          "return_3y": 10.14,
+          "return_5y": 13.56,
+          "return_10y": 11.46,
+          "patrimonio_bn": 16.427
+        },
+        "RV Intl Japón": {
+          "return_month": 1.75,
+          "return_ytd": 10.33,
+          "return_1y": 14.18,
+          "return_3y": 7.52,
+          "return_5y": 9.15,
+          "return_10y": 7.85,
+          "patrimonio_bn": 1.172
+        },
+        "RV Intl Emergentes": {
+          "return_month": 5.42,
+          "return_ytd": 11.71,
+          "return_1y": 13.93,
+          "return_3y": -2.11,
+          "return_5y": 3.21,
+          "return_10y": 3.65,
+          "patrimonio_bn": 3.122
+        },
+        "RV Intl Resto": {
+          "return_month": 1.78,
+          "return_ytd": 11.33,
+          "return_1y": 16.83,
+          "return_3y": 5.66,
+          "return_5y": 8.79,
+          "return_10y": 6.62,
+          "patrimonio_bn": 26.06
+        },
+        "Globales": {
+          "return_month": 1.23,
+          "return_ytd": 4.21,
+          "return_1y": 8.1,
+          "return_3y": 0.73,
+          "return_5y": 1.94,
+          "return_10y": 1.99,
+          "patrimonio_bn": 57.278
+        },
+        "Garantizados RF": {
+          "return_month": 0.32,
+          "return_ytd": 0.53,
+          "return_1y": 2.92,
+          "return_3y": -1.83,
+          "return_5y": -0.85,
+          "return_10y": 0.07,
+          "patrimonio_bn": 7.004
+        },
+        "Garantizados RV": {
+          "return_month": 0.11,
+          "return_ytd": 1.54,
+          "return_1y": 3.95,
+          "return_3y": 0.06,
+          "return_5y": 0.31,
+          "return_10y": 0.6,
+          "patrimonio_bn": 4.372
+        },
+        "Garantía parcial": {
+          "return_month": 0.0,
+          "return_ytd": 0.95,
+          "return_1y": 1.57,
+          "return_3y": -0.84,
+          "return_5y": -0.32,
+          "return_10y": 0.17,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.46,
+          "return_ytd": 2.51,
+          "return_1y": 5.61,
+          "return_3y": 0.96,
+          "return_5y": 1.41,
+          "return_10y": 0.72,
+          "patrimonio_bn": 6.788
+        },
+        "Fondos Índice": {
+          "return_month": 0.96,
+          "return_ytd": 13.83,
+          "return_1y": 20.81,
+          "return_3y": 11.06,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.415
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.29,
+          "return_ytd": 1.28,
+          "return_1y": 3.49,
+          "return_3y": -0.95,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.18
+        },
+        "FIL": {
+          "return_month": 0.14,
+          "return_ytd": 0.69,
+          "return_1y": 3.48,
+          "return_3y": 0.1,
+          "return_5y": 2.69,
+          "return_10y": 3.12,
+          "patrimonio_bn": 3.441
+        },
+        "Hedge Funds": {
+          "return_month": 1.82,
+          "return_ytd": 3.81,
+          "return_1y": 8.27,
+          "return_3y": 2.42,
+          "return_5y": 2.02,
+          "return_10y": 0.67,
+          "patrimonio_bn": 0.809
+        }
+      }
+    },
+    {
+      "date": "2024-07",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.29,
+          "return_ytd": 2.01,
+          "return_1y": 3.52,
+          "return_3y": 1.33,
+          "return_5y": 0.73,
+          "return_10y": 0.3,
+          "patrimonio_bn": 19.272
+        },
+        "RF Euro CP": {
+          "return_month": 0.38,
+          "return_ytd": 2.02,
+          "return_1y": 3.62,
+          "return_3y": 1.17,
+          "return_5y": 0.62,
+          "return_10y": 0.3,
+          "patrimonio_bn": 48.274
+        },
+        "RF Euro LP": {
+          "return_month": 1.11,
+          "return_ytd": 1.55,
+          "return_1y": 4.69,
+          "return_3y": -1.02,
+          "return_5y": -0.25,
+          "return_10y": 0.37,
+          "patrimonio_bn": 68.926
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.91,
+          "return_ytd": 2.58,
+          "return_1y": 5.51,
+          "return_3y": -0.33,
+          "return_5y": 0.24,
+          "return_10y": 0.3,
+          "patrimonio_bn": 13.3
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.98,
+          "return_ytd": 4.18,
+          "return_1y": 6.87,
+          "return_3y": 1.96,
+          "return_5y": 2.8,
+          "return_10y": 1.9,
+          "patrimonio_bn": 0.828
+        },
+        "RV Nacional": {
+          "return_month": 1.67,
+          "return_ytd": 9.72,
+          "return_1y": 14.16,
+          "return_3y": 9.52,
+          "return_5y": 6.11,
+          "return_10y": 3.48,
+          "patrimonio_bn": 2.771
+        },
+        "RF Internacional": {
+          "return_month": 1.24,
+          "return_ytd": 2.06,
+          "return_1y": 5.08,
+          "return_3y": -0.56,
+          "return_5y": -0.07,
+          "return_10y": 0.92,
+          "patrimonio_bn": 15.908
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.92,
+          "return_ytd": 3.25,
+          "return_1y": 6.02,
+          "return_3y": -0.06,
+          "return_5y": 0.69,
+          "return_10y": 0.59,
+          "patrimonio_bn": 20.462
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.84,
+          "return_ytd": 5.11,
+          "return_1y": 7.62,
+          "return_3y": 0.78,
+          "return_5y": 2.04,
+          "return_10y": 1.71,
+          "patrimonio_bn": 23.618
+        },
+        "RV Euro Resto": {
+          "return_month": 0.7,
+          "return_ytd": 7.77,
+          "return_1y": 9.21,
+          "return_3y": 4.4,
+          "return_5y": 5.79,
+          "return_10y": 4.22,
+          "patrimonio_bn": 3.514
+        },
+        "RV Intl Europa": {
+          "return_month": 1.53,
+          "return_ytd": 7.55,
+          "return_1y": 9.03,
+          "return_3y": 7.2,
+          "return_5y": 7.32,
+          "return_10y": 5.27,
+          "patrimonio_bn": 8.148
+        },
+        "RV Intl EEUU": {
+          "return_month": 0.31,
+          "return_ytd": 17.01,
+          "return_1y": 22.06,
+          "return_3y": 9.51,
+          "return_5y": 12.89,
+          "return_10y": 11.5,
+          "patrimonio_bn": 16.553
+        },
+        "RV Intl Japón": {
+          "return_month": 3.32,
+          "return_ytd": 14.0,
+          "return_1y": 16.56,
+          "return_3y": 9.39,
+          "return_5y": 9.64,
+          "return_10y": 7.93,
+          "patrimonio_bn": 1.208
+        },
+        "RV Intl Emergentes": {
+          "return_month": -1.55,
+          "return_ytd": 9.97,
+          "return_1y": 7.95,
+          "return_3y": -0.66,
+          "return_5y": 2.65,
+          "return_10y": 3.19,
+          "patrimonio_bn": 3.075
+        },
+        "RV Intl Resto": {
+          "return_month": 0.32,
+          "return_ytd": 11.68,
+          "return_1y": 13.66,
+          "return_3y": 5.76,
+          "return_5y": 8.6,
+          "return_10y": 6.77,
+          "patrimonio_bn": 26.224
+        },
+        "Globales": {
+          "return_month": 0.86,
+          "return_ytd": 5.11,
+          "return_1y": 7.63,
+          "return_3y": 0.91,
+          "return_5y": 1.95,
+          "return_10y": 2.16,
+          "patrimonio_bn": 57.419
+        },
+        "Garantizados RF": {
+          "return_month": 0.64,
+          "return_ytd": 1.17,
+          "return_1y": 3.22,
+          "return_3y": -1.74,
+          "return_5y": -0.89,
+          "return_10y": 0.11,
+          "patrimonio_bn": 6.891
+        },
+        "Garantizados RV": {
+          "return_month": 0.53,
+          "return_ytd": 2.07,
+          "return_1y": 4.04,
+          "return_3y": 0.15,
+          "return_5y": 0.27,
+          "return_10y": 0.68,
+          "patrimonio_bn": 4.256
+        },
+        "Garantía parcial": {
+          "return_month": null,
+          "return_ytd": 0.95,
+          "return_1y": 1.4,
+          "return_3y": -0.91,
+          "return_5y": -0.27,
+          "return_10y": 0.29,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.82,
+          "return_ytd": 3.34,
+          "return_1y": 5.92,
+          "return_3y": 1.16,
+          "return_5y": 1.49,
+          "return_10y": 0.81,
+          "patrimonio_bn": 6.886
+        },
+        "Fondos Índice": {
+          "return_month": 0.58,
+          "return_ytd": 14.5,
+          "return_1y": 19.18,
+          "return_3y": 11.01,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.488
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.46,
+          "return_ytd": 1.75,
+          "return_1y": 3.54,
+          "return_3y": -0.89,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.272
+        },
+        "FIL": {
+          "return_month": 0.68,
+          "return_ytd": 1.38,
+          "return_1y": 3.07,
+          "return_3y": 0.53,
+          "return_5y": 2.97,
+          "return_10y": 3.24,
+          "patrimonio_bn": 3.481
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 3.81,
+          "return_1y": 8.27,
+          "return_3y": 2.41,
+          "return_5y": 1.9,
+          "return_10y": 0.74,
+          "patrimonio_bn": 0.809
+        }
+      }
+    },
+    {
+      "date": "2024-08",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.28,
+          "return_ytd": 2.29,
+          "return_1y": 3.52,
+          "return_3y": 1.41,
+          "return_5y": 0.79,
+          "return_10y": 0.32,
+          "patrimonio_bn": 19.878
+        },
+        "RF Euro CP": {
+          "return_month": 0.31,
+          "return_ytd": 2.34,
+          "return_1y": 3.63,
+          "return_3y": 1.29,
+          "return_5y": 0.7,
+          "return_10y": 0.32,
+          "patrimonio_bn": 49.086
+        },
+        "RF Euro LP": {
+          "return_month": 0.41,
+          "return_ytd": 1.96,
+          "return_1y": 4.8,
+          "return_3y": -0.82,
+          "return_5y": -0.25,
+          "return_10y": 0.33,
+          "patrimonio_bn": 69.699
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.48,
+          "return_ytd": 3.07,
+          "return_1y": 6.18,
+          "return_3y": -0.27,
+          "return_5y": 0.34,
+          "return_10y": 0.29,
+          "patrimonio_bn": 13.634
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.25,
+          "return_ytd": 5.48,
+          "return_1y": 9.52,
+          "return_3y": 2.02,
+          "return_5y": 3.15,
+          "return_10y": 1.96,
+          "patrimonio_bn": 0.836
+        },
+        "RV Nacional": {
+          "return_month": 1.74,
+          "return_ytd": 11.63,
+          "return_1y": 17.42,
+          "return_3y": 9.58,
+          "return_5y": 7.22,
+          "return_10y": 3.69,
+          "patrimonio_bn": 2.811
+        },
+        "RF Internacional": {
+          "return_month": 0.39,
+          "return_ytd": 2.45,
+          "return_1y": 5.36,
+          "return_3y": -0.47,
+          "return_5y": -0.05,
+          "return_10y": 0.87,
+          "patrimonio_bn": 16.064
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.46,
+          "return_ytd": 3.72,
+          "return_1y": 6.77,
+          "return_3y": -0.04,
+          "return_5y": 0.8,
+          "return_10y": 0.57,
+          "patrimonio_bn": 20.509
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.49,
+          "return_ytd": 5.62,
+          "return_1y": 8.94,
+          "return_3y": 0.6,
+          "return_5y": 2.22,
+          "return_10y": 1.63,
+          "patrimonio_bn": 23.682
+        },
+        "RV Euro Resto": {
+          "return_month": 1.09,
+          "return_ytd": 8.94,
+          "return_1y": 13.65,
+          "return_3y": 3.96,
+          "return_5y": 6.52,
+          "return_10y": 4.23,
+          "patrimonio_bn": 3.557
+        },
+        "RV Intl Europa": {
+          "return_month": 0.8,
+          "return_ytd": 8.42,
+          "return_1y": 12.25,
+          "return_3y": 6.78,
+          "return_5y": 7.94,
+          "return_10y": 5.21,
+          "patrimonio_bn": 8.188
+        },
+        "RV Intl EEUU": {
+          "return_month": 0.06,
+          "return_ytd": 17.08,
+          "return_1y": 22.92,
+          "return_3y": 8.52,
+          "return_5y": 13.45,
+          "return_10y": 11.01,
+          "patrimonio_bn": 16.59
+        },
+        "RV Intl Japón": {
+          "return_month": -0.66,
+          "return_ytd": 13.25,
+          "return_1y": 18.65,
+          "return_3y": 8.02,
+          "return_5y": 9.9,
+          "return_10y": 7.96,
+          "patrimonio_bn": 1.199
+        },
+        "RV Intl Emergentes": {
+          "return_month": -0.59,
+          "return_ytd": 9.33,
+          "return_1y": 13.32,
+          "return_3y": -1.7,
+          "return_5y": 3.33,
+          "return_10y": 2.74,
+          "patrimonio_bn": 3.053
+        },
+        "RV Intl Resto": {
+          "return_month": -0.04,
+          "return_ytd": 11.64,
+          "return_1y": 15.69,
+          "return_3y": 4.96,
+          "return_5y": 9.08,
+          "return_10y": 6.59,
+          "patrimonio_bn": 26.217
+        },
+        "Globales": {
+          "return_month": 0.33,
+          "return_ytd": 5.45,
+          "return_1y": 8.74,
+          "return_3y": 0.69,
+          "return_5y": 2.19,
+          "return_10y": 2.1,
+          "patrimonio_bn": 57.375
+        },
+        "Garantizados RF": {
+          "return_month": 0.4,
+          "return_ytd": 1.57,
+          "return_1y": 3.29,
+          "return_3y": -1.56,
+          "return_5y": -0.96,
+          "return_10y": 0.13,
+          "patrimonio_bn": 6.806
+        },
+        "Garantizados RV": {
+          "return_month": 0.44,
+          "return_ytd": 2.52,
+          "return_1y": 4.46,
+          "return_3y": 0.29,
+          "return_5y": 0.26,
+          "return_10y": 0.69,
+          "patrimonio_bn": 4.253
+        },
+        "Garantía parcial": {
+          "return_month": null,
+          "return_ytd": 0.95,
+          "return_1y": 1.8,
+          "return_3y": -1.06,
+          "return_5y": -0.27,
+          "return_10y": 0.23,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.56,
+          "return_ytd": 3.92,
+          "return_1y": 6.54,
+          "return_3y": 1.23,
+          "return_5y": 1.62,
+          "return_10y": 0.83,
+          "patrimonio_bn": 6.961
+        },
+        "Fondos Índice": {
+          "return_month": 1.44,
+          "return_ytd": 16.15,
+          "return_1y": 22.65,
+          "return_3y": 10.67,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.566
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.32,
+          "return_ytd": 2.08,
+          "return_1y": 3.61,
+          "return_3y": -0.8,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.244
+        },
+        "FIL": {
+          "return_month": 0.59,
+          "return_ytd": 1.98,
+          "return_1y": 4.29,
+          "return_3y": 0.28,
+          "return_5y": 3.75,
+          "return_10y": 3.35,
+          "patrimonio_bn": 3.561
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 3.81,
+          "return_1y": 8.27,
+          "return_3y": 2.59,
+          "return_5y": 1.93,
+          "return_10y": 0.67,
+          "patrimonio_bn": 0.809
+        }
+      }
+    },
+    {
+      "date": "2024-09",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.29,
+          "return_ytd": 2.58,
+          "return_1y": 3.55,
+          "return_3y": 1.55,
+          "return_5y": 0.85,
+          "return_10y": 0.35,
+          "patrimonio_bn": 20.526
+        },
+        "RF Euro CP": {
+          "return_month": 0.35,
+          "return_ytd": 2.7,
+          "return_1y": 3.78,
+          "return_3y": 1.42,
+          "return_5y": 0.78,
+          "return_10y": 0.35,
+          "patrimonio_bn": 50.529
+        },
+        "RF Euro LP": {
+          "return_month": 0.83,
+          "return_ytd": 2.81,
+          "return_1y": 6.2,
+          "return_3y": -0.45,
+          "return_5y": -0.05,
+          "return_10y": 0.4,
+          "patrimonio_bn": 70.779
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.74,
+          "return_ytd": 3.84,
+          "return_1y": 7.73,
+          "return_3y": 0.18,
+          "return_5y": 0.44,
+          "return_10y": 0.34,
+          "patrimonio_bn": 14.132
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.39,
+          "return_ytd": 5.89,
+          "return_1y": 12.31,
+          "return_3y": 2.78,
+          "return_5y": 2.96,
+          "return_10y": 1.92,
+          "patrimonio_bn": 0.822
+        },
+        "RV Nacional": {
+          "return_month": 2.67,
+          "return_ytd": 14.62,
+          "return_1y": 22.13,
+          "return_3y": 10.57,
+          "return_5y": 7.17,
+          "return_10y": 3.96,
+          "patrimonio_bn": 2.839
+        },
+        "RF Internacional": {
+          "return_month": 0.81,
+          "return_ytd": 3.28,
+          "return_1y": 7.09,
+          "return_3y": -0.2,
+          "return_5y": 0.09,
+          "return_10y": 0.87,
+          "patrimonio_bn": 16.567
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.89,
+          "return_ytd": 4.64,
+          "return_1y": 8.66,
+          "return_3y": 0.48,
+          "return_5y": 0.91,
+          "return_10y": 0.65,
+          "patrimonio_bn": 20.614
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.95,
+          "return_ytd": 6.62,
+          "return_1y": 11.56,
+          "return_3y": 1.4,
+          "return_5y": 2.29,
+          "return_10y": 1.72,
+          "patrimonio_bn": 23.863
+        },
+        "RV Euro Resto": {
+          "return_month": 0.73,
+          "return_ytd": 9.73,
+          "return_1y": 17.52,
+          "return_3y": 5.2,
+          "return_5y": 5.99,
+          "return_10y": 4.22,
+          "patrimonio_bn": 3.568
+        },
+        "RV Intl Europa": {
+          "return_month": 0.14,
+          "return_ytd": 8.57,
+          "return_1y": 13.71,
+          "return_3y": 7.57,
+          "return_5y": 7.29,
+          "return_10y": 5.16,
+          "patrimonio_bn": 8.146
+        },
+        "RV Intl EEUU": {
+          "return_month": 1.41,
+          "return_ytd": 18.73,
+          "return_1y": 28.48,
+          "return_3y": 10.25,
+          "return_5y": 13.25,
+          "return_10y": 11.12,
+          "patrimonio_bn": 16.835
+        },
+        "RV Intl Japón": {
+          "return_month": -1.09,
+          "return_ytd": 12.01,
+          "return_1y": 17.48,
+          "return_3y": 5.99,
+          "return_5y": 8.65,
+          "return_10y": 7.49,
+          "patrimonio_bn": 1.179
+        },
+        "RV Intl Emergentes": {
+          "return_month": 4.8,
+          "return_ytd": 14.57,
+          "return_1y": 19.38,
+          "return_3y": 0.58,
+          "return_5y": 3.81,
+          "return_10y": 3.66,
+          "patrimonio_bn": 3.196
+        },
+        "RV Intl Resto": {
+          "return_month": 0.63,
+          "return_ytd": 12.35,
+          "return_1y": 18.89,
+          "return_3y": 5.85,
+          "return_5y": 8.74,
+          "return_10y": 6.86,
+          "patrimonio_bn": 26.344
+        },
+        "Globales": {
+          "return_month": 1.16,
+          "return_ytd": 6.67,
+          "return_1y": 11.53,
+          "return_3y": 1.51,
+          "return_5y": 2.26,
+          "return_10y": 2.32,
+          "patrimonio_bn": 57.736
+        },
+        "Garantizados RF": {
+          "return_month": 0.54,
+          "return_ytd": 2.12,
+          "return_1y": 4.08,
+          "return_3y": -1.31,
+          "return_5y": -0.82,
+          "return_10y": 0.19,
+          "patrimonio_bn": 6.794
+        },
+        "Garantizados RV": {
+          "return_month": 0.51,
+          "return_ytd": 3.04,
+          "return_1y": 5.39,
+          "return_3y": 0.56,
+          "return_5y": 0.33,
+          "return_10y": 0.71,
+          "patrimonio_bn": 4.075
+        },
+        "Garantía parcial": {
+          "return_month": null,
+          "return_ytd": 0.95,
+          "return_1y": 1.87,
+          "return_3y": -0.73,
+          "return_5y": -0.41,
+          "return_10y": 0.19,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.52,
+          "return_ytd": 4.46,
+          "return_1y": 7.58,
+          "return_3y": 1.57,
+          "return_5y": 1.72,
+          "return_10y": 0.89,
+          "patrimonio_bn": 7.056
+        },
+        "Fondos Índice": {
+          "return_month": 1.92,
+          "return_ytd": 18.37,
+          "return_1y": 27.85,
+          "return_3y": 12.24,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.707
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.41,
+          "return_ytd": 2.49,
+          "return_1y": 4.09,
+          "return_3y": -0.54,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.292
+        },
+        "FIL": {
+          "return_month": 0.79,
+          "return_ytd": 2.79,
+          "return_1y": 5.6,
+          "return_3y": 0.92,
+          "return_5y": 3.62,
+          "return_10y": 3.6,
+          "patrimonio_bn": 3.468
+        },
+        "Hedge Funds": {
+          "return_month": 1.79,
+          "return_ytd": 5.67,
+          "return_1y": 8.2,
+          "return_3y": 3.43,
+          "return_5y": 2.19,
+          "return_10y": 0.82,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2024-10",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.27,
+          "return_ytd": 2.86,
+          "return_1y": 3.51,
+          "return_3y": 1.66,
+          "return_5y": 0.91,
+          "return_10y": 0.38,
+          "patrimonio_bn": 21.301
+        },
+        "RF Euro CP": {
+          "return_month": 0.23,
+          "return_ytd": 2.93,
+          "return_1y": 3.69,
+          "return_3y": 1.54,
+          "return_5y": 0.84,
+          "return_10y": 0.37,
+          "patrimonio_bn": 51.942
+        },
+        "RF Euro LP": {
+          "return_month": -0.21,
+          "return_ytd": 2.59,
+          "return_1y": 5.47,
+          "return_3y": -0.36,
+          "return_5y": -0.05,
+          "return_10y": 0.38,
+          "patrimonio_bn": 71.551
+        },
+        "RF Mixta Euro": {
+          "return_month": -0.14,
+          "return_ytd": 3.69,
+          "return_1y": 7.73,
+          "return_3y": 0.1,
+          "return_5y": 0.42,
+          "return_10y": 0.37,
+          "patrimonio_bn": 14.722
+        },
+        "RV Mixta Euro": {
+          "return_month": -2.7,
+          "return_ytd": 3.04,
+          "return_1y": 11.43,
+          "return_3y": 1.39,
+          "return_5y": 2.34,
+          "return_10y": 1.81,
+          "patrimonio_bn": 0.801
+        },
+        "RV Nacional": {
+          "return_month": -1.85,
+          "return_ytd": 12.5,
+          "return_1y": 24.83,
+          "return_3y": 9.11,
+          "return_5y": 6.37,
+          "return_10y": 4.09,
+          "patrimonio_bn": 2.761
+        },
+        "RF Internacional": {
+          "return_month": -0.28,
+          "return_ytd": 2.99,
+          "return_1y": 7.19,
+          "return_3y": -0.18,
+          "return_5y": 0.14,
+          "return_10y": 0.8,
+          "patrimonio_bn": 17.163
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.59,
+          "return_ytd": 4.02,
+          "return_1y": 8.65,
+          "return_3y": 0.15,
+          "return_5y": 0.81,
+          "return_10y": 0.62,
+          "patrimonio_bn": 20.38
+        },
+        "RV Mixta Internacional": {
+          "return_month": -0.75,
+          "return_ytd": 5.83,
+          "return_1y": 12.34,
+          "return_3y": 0.66,
+          "return_5y": 2.12,
+          "return_10y": 1.69,
+          "patrimonio_bn": 23.677
+        },
+        "RV Euro Resto": {
+          "return_month": -3.45,
+          "return_ytd": 5.94,
+          "return_1y": 17.94,
+          "return_3y": 2.72,
+          "return_5y": 5.02,
+          "return_10y": 4.23,
+          "patrimonio_bn": 3.453
+        },
+        "RV Intl Europa": {
+          "return_month": -2.8,
+          "return_ytd": 5.53,
+          "return_1y": 15.11,
+          "return_3y": 5.16,
+          "return_5y": 6.49,
+          "return_10y": 5.07,
+          "patrimonio_bn": 8.034
+        },
+        "RV Intl EEUU": {
+          "return_month": 1.2,
+          "return_ytd": 20.16,
+          "return_1y": 33.16,
+          "return_3y": 8.25,
+          "return_5y": 13.35,
+          "return_10y": 10.99,
+          "patrimonio_bn": 17.066
+        },
+        "RV Intl Japón": {
+          "return_month": -1.9,
+          "return_ytd": 9.89,
+          "return_1y": 20.26,
+          "return_3y": 6.24,
+          "return_5y": 7.48,
+          "return_10y": 7.24,
+          "patrimonio_bn": 0.964
+        },
+        "RV Intl Emergentes": {
+          "return_month": -1.58,
+          "return_ytd": 12.76,
+          "return_1y": 22.34,
+          "return_3y": -0.34,
+          "return_5y": 3.19,
+          "return_10y": 3.37,
+          "patrimonio_bn": 3.26
+        },
+        "RV Intl Resto": {
+          "return_month": -1.03,
+          "return_ytd": 11.2,
+          "return_1y": 22.78,
+          "return_3y": 4.17,
+          "return_5y": 8.28,
+          "return_10y": 6.83,
+          "patrimonio_bn": 25.933
+        },
+        "Globales": {
+          "return_month": -0.97,
+          "return_ytd": 5.64,
+          "return_1y": 11.93,
+          "return_3y": 0.77,
+          "return_5y": 2.06,
+          "return_10y": 2.29,
+          "patrimonio_bn": 56.623
+        },
+        "Garantizados RF": {
+          "return_month": 0.0,
+          "return_ytd": 2.12,
+          "return_1y": 3.59,
+          "return_3y": -1.1,
+          "return_5y": -0.74,
+          "return_10y": 0.21,
+          "patrimonio_bn": 6.984
+        },
+        "Garantizados RV": {
+          "return_month": 0.05,
+          "return_ytd": 3.1,
+          "return_1y": 5.17,
+          "return_3y": 0.63,
+          "return_5y": 0.39,
+          "return_10y": 0.81,
+          "patrimonio_bn": 3.979
+        },
+        "Garantía parcial": {
+          "return_month": null,
+          "return_ytd": 1.0,
+          "return_1y": 1.5,
+          "return_3y": -1.5,
+          "return_5y": -0.5,
+          "return_10y": 0.4,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": -0.06,
+          "return_ytd": 4.4,
+          "return_1y": 7.94,
+          "return_3y": 1.37,
+          "return_5y": 1.72,
+          "return_10y": 0.91,
+          "patrimonio_bn": 7.116
+        },
+        "Fondos Índice": {
+          "return_month": -1.04,
+          "return_ytd": 17.14,
+          "return_1y": 30.0,
+          "return_3y": 9.96,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.457
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.14,
+          "return_ytd": 2.64,
+          "return_1y": 3.85,
+          "return_3y": -0.51,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 21.204
+        },
+        "FIL": {
+          "return_month": -0.49,
+          "return_ytd": 2.29,
+          "return_1y": 6.48,
+          "return_3y": 0.59,
+          "return_5y": 3.4,
+          "return_10y": 3.77,
+          "patrimonio_bn": 3.52
+        },
+        "Hedge Funds": {
+          "return_month": 0.01,
+          "return_ytd": 5.68,
+          "return_1y": 8.21,
+          "return_3y": 3.09,
+          "return_5y": 2.26,
+          "return_10y": 0.86,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2024-11",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.23,
+          "return_ytd": 3.09,
+          "return_1y": 3.41,
+          "return_3y": 1.75,
+          "return_5y": 0.97,
+          "return_10y": 0.4,
+          "patrimonio_bn": 22.189
+        },
+        "RF Euro CP": {
+          "return_month": 0.32,
+          "return_ytd": 3.26,
+          "return_1y": 3.65,
+          "return_3y": 1.68,
+          "return_5y": 0.92,
+          "return_10y": 0.4,
+          "patrimonio_bn": 53.246
+        },
+        "RF Euro LP": {
+          "return_month": 0.96,
+          "return_ytd": 3.57,
+          "return_1y": 5.18,
+          "return_3y": -0.09,
+          "return_5y": 0.2,
+          "return_10y": 0.44,
+          "patrimonio_bn": 72.528
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.88,
+          "return_ytd": 4.6,
+          "return_1y": 6.57,
+          "return_3y": 0.5,
+          "return_5y": 0.56,
+          "return_10y": 0.39,
+          "patrimonio_bn": 15.323
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.69,
+          "return_ytd": 3.75,
+          "return_1y": 6.67,
+          "return_3y": 2.04,
+          "return_5y": 2.29,
+          "return_10y": 1.68,
+          "patrimonio_bn": 0.801
+        },
+        "RV Nacional": {
+          "return_month": -0.19,
+          "return_ytd": 12.29,
+          "return_1y": 13.63,
+          "return_3y": 11.79,
+          "return_5y": 5.78,
+          "return_10y": 3.78,
+          "patrimonio_bn": 2.683
+        },
+        "RF Internacional": {
+          "return_month": 1.58,
+          "return_ytd": 4.62,
+          "return_1y": 6.77,
+          "return_3y": 0.25,
+          "return_5y": 0.41,
+          "return_10y": 0.93,
+          "patrimonio_bn": 17.937
+        },
+        "RF Mixta Internacional": {
+          "return_month": 1.64,
+          "return_ytd": 5.73,
+          "return_1y": 7.92,
+          "return_3y": 0.83,
+          "return_5y": 1.05,
+          "return_10y": 0.72,
+          "patrimonio_bn": 19.944
+        },
+        "RV Mixta Internacional": {
+          "return_month": 2.26,
+          "return_ytd": 8.22,
+          "return_1y": 11.01,
+          "return_3y": 1.71,
+          "return_5y": 2.38,
+          "return_10y": 1.76,
+          "patrimonio_bn": 24.017
+        },
+        "RV Euro Resto": {
+          "return_month": 0.05,
+          "return_ytd": 6.0,
+          "return_1y": 9.63,
+          "return_3y": 4.08,
+          "return_5y": 4.46,
+          "return_10y": 3.88,
+          "patrimonio_bn": 3.48
+        },
+        "RV Intl Europa": {
+          "return_month": 0.48,
+          "return_ytd": 6.04,
+          "return_1y": 9.62,
+          "return_3y": 6.66,
+          "return_5y": 6.02,
+          "return_10y": 4.8,
+          "patrimonio_bn": 8.025
+        },
+        "RV Intl EEUU": {
+          "return_month": 8.04,
+          "return_ytd": 29.82,
+          "return_1y": 34.8,
+          "return_3y": 10.9,
+          "return_5y": 14.16,
+          "return_10y": 11.54,
+          "patrimonio_bn": 19.161
+        },
+        "RV Intl Japón": {
+          "return_month": 2.81,
+          "return_ytd": 12.98,
+          "return_1y": 15.61,
+          "return_3y": 7.33,
+          "return_5y": 7.6,
+          "return_10y": 7.25,
+          "patrimonio_bn": 1.021
+        },
+        "RV Intl Emergentes": {
+          "return_month": -0.78,
+          "return_ytd": 11.88,
+          "return_1y": 15.77,
+          "return_3y": 0.26,
+          "return_5y": 2.91,
+          "return_10y": 3.36,
+          "patrimonio_bn": 3.328
+        },
+        "RV Intl Resto": {
+          "return_month": 4.36,
+          "return_ytd": 16.04,
+          "return_1y": 20.89,
+          "return_3y": 6.26,
+          "return_5y": 8.47,
+          "return_10y": 6.98,
+          "patrimonio_bn": 27.079
+        },
+        "Globales": {
+          "return_month": 2.53,
+          "return_ytd": 8.31,
+          "return_1y": 11.1,
+          "return_3y": 1.74,
+          "return_5y": 2.37,
+          "return_10y": 2.38,
+          "patrimonio_bn": 57.823
+        },
+        "Garantizados RF": {
+          "return_month": 0.46,
+          "return_ytd": 2.59,
+          "return_1y": 3.5,
+          "return_3y": -1.16,
+          "return_5y": -0.53,
+          "return_10y": 0.24,
+          "patrimonio_bn": 6.618
+        },
+        "Garantizados RV": {
+          "return_month": 0.4,
+          "return_ytd": 3.5,
+          "return_1y": 4.4,
+          "return_3y": 0.71,
+          "return_5y": 0.55,
+          "return_10y": 0.75,
+          "patrimonio_bn": 3.482
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.9,
+          "return_ytd": 5.34,
+          "return_1y": 6.94,
+          "return_3y": 1.8,
+          "return_5y": 1.81,
+          "return_10y": 0.95,
+          "patrimonio_bn": 7.258
+        },
+        "Fondos Índice": {
+          "return_month": 4.0,
+          "return_ytd": 21.82,
+          "return_1y": 25.07,
+          "return_3y": 12.4,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.96
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.38,
+          "return_ytd": 3.02,
+          "return_1y": 3.67,
+          "return_3y": -0.34,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.951
+        },
+        "FIL": {
+          "return_month": 1.25,
+          "return_ytd": 3.56,
+          "return_1y": 5.41,
+          "return_3y": 1.51,
+          "return_5y": 3.24,
+          "return_10y": 3.71,
+          "patrimonio_bn": 3.567
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 5.69,
+          "return_1y": 8.21,
+          "return_3y": 2.97,
+          "return_5y": 2.36,
+          "return_10y": 0.71,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2024-12",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.22,
+          "return_ytd": 3.31,
+          "return_1y": 3.31,
+          "return_3y": 1.84,
+          "return_5y": 1.02,
+          "return_10y": 0.42,
+          "patrimonio_bn": 22.845
+        },
+        "RF Euro CP": {
+          "return_month": 0.2,
+          "return_ytd": 3.46,
+          "return_1y": 3.46,
+          "return_3y": 1.73,
+          "return_5y": 0.95,
+          "return_10y": 0.42,
+          "patrimonio_bn": 54.227
+        },
+        "RF Euro LP": {
+          "return_month": -0.16,
+          "return_ytd": 3.41,
+          "return_1y": 3.41,
+          "return_3y": -0.11,
+          "return_5y": 0.17,
+          "return_10y": 0.38,
+          "patrimonio_bn": 73.032
+        },
+        "RF Mixta Euro": {
+          "return_month": -0.04,
+          "return_ytd": 4.55,
+          "return_1y": 4.55,
+          "return_3y": 0.31,
+          "return_5y": 0.5,
+          "return_10y": 0.42,
+          "patrimonio_bn": 15.816
+        },
+        "RV Mixta Euro": {
+          "return_month": -0.32,
+          "return_ytd": 3.42,
+          "return_1y": 3.42,
+          "return_3y": 1.36,
+          "return_5y": 2.08,
+          "return_10y": 1.76,
+          "patrimonio_bn": 0.792
+        },
+        "RV Nacional": {
+          "return_month": -0.15,
+          "return_ytd": 12.12,
+          "return_1y": 12.12,
+          "return_3y": 9.74,
+          "return_5y": 5.37,
+          "return_10y": 4.09,
+          "patrimonio_bn": 2.645
+        },
+        "RF Internacional": {
+          "return_month": -0.09,
+          "return_ytd": 4.52,
+          "return_1y": 4.52,
+          "return_3y": 0.2,
+          "return_5y": 0.4,
+          "return_10y": 0.86,
+          "patrimonio_bn": 18.213
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.24,
+          "return_ytd": 5.48,
+          "return_1y": 5.48,
+          "return_3y": 0.51,
+          "return_5y": 0.95,
+          "return_10y": 0.69,
+          "patrimonio_bn": 19.911
+        },
+        "RV Mixta Internacional": {
+          "return_month": -0.59,
+          "return_ytd": 7.58,
+          "return_1y": 7.58,
+          "return_3y": 1.01,
+          "return_5y": 2.13,
+          "return_10y": 1.73,
+          "patrimonio_bn": 23.947
+        },
+        "RV Euro Resto": {
+          "return_month": 0.74,
+          "return_ytd": 6.78,
+          "return_1y": 6.78,
+          "return_3y": 2.73,
+          "return_5y": 4.31,
+          "return_10y": 4.22,
+          "patrimonio_bn": 3.428
+        },
+        "RV Intl Europa": {
+          "return_month": -0.77,
+          "return_ytd": 5.22,
+          "return_1y": 5.22,
+          "return_3y": 4.44,
+          "return_5y": 5.46,
+          "return_10y": 4.8,
+          "patrimonio_bn": 7.57
+        },
+        "RV Intl EEUU": {
+          "return_month": -1.85,
+          "return_ytd": 27.42,
+          "return_1y": 27.42,
+          "return_3y": 8.84,
+          "return_5y": 13.4,
+          "return_10y": 11.17,
+          "patrimonio_bn": 18.719
+        },
+        "RV Intl Japón": {
+          "return_month": 1.65,
+          "return_ytd": 14.85,
+          "return_1y": 14.85,
+          "return_3y": 7.1,
+          "return_5y": 7.74,
+          "return_10y": 7.41,
+          "patrimonio_bn": 1.036
+        },
+        "RV Intl Emergentes": {
+          "return_month": 0.46,
+          "return_ytd": 12.4,
+          "return_1y": 12.4,
+          "return_3y": -0.34,
+          "return_5y": 1.98,
+          "return_10y": 3.69,
+          "patrimonio_bn": 3.362
+        },
+        "RV Intl Resto": {
+          "return_month": -0.35,
+          "return_ytd": 15.63,
+          "return_1y": 15.63,
+          "return_3y": 5.16,
+          "return_5y": 7.8,
+          "return_10y": 6.9,
+          "patrimonio_bn": 27.032
+        },
+        "Globales": {
+          "return_month": -0.76,
+          "return_ytd": 7.49,
+          "return_1y": 7.49,
+          "return_3y": 1.0,
+          "return_5y": 2.0,
+          "return_10y": 2.35,
+          "patrimonio_bn": 57.237
+        },
+        "Garantizados RF": {
+          "return_month": 0.11,
+          "return_ytd": 2.7,
+          "return_1y": 2.7,
+          "return_3y": -0.97,
+          "return_5y": -0.5,
+          "return_10y": 0.25,
+          "patrimonio_bn": 6.54
+        },
+        "Garantizados RV": {
+          "return_month": 0.22,
+          "return_ytd": 3.73,
+          "return_1y": 3.73,
+          "return_3y": 0.79,
+          "return_5y": 0.59,
+          "return_10y": 0.82,
+          "patrimonio_bn": 3.387
+        },
+        "Garantía parcial": {
+          "return_month": null,
+          "return_ytd": 0.95,
+          "return_1y": 0.95,
+          "return_3y": -1.68,
+          "return_5y": -0.65,
+          "return_10y": 0.32,
+          "patrimonio_bn": 0.0
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.07,
+          "return_ytd": 5.41,
+          "return_1y": 5.41,
+          "return_3y": 1.56,
+          "return_5y": 1.74,
+          "return_10y": 0.96,
+          "patrimonio_bn": 7.232
+        },
+        "Fondos Índice": {
+          "return_month": -0.15,
+          "return_ytd": 21.64,
+          "return_1y": 21.64,
+          "return_3y": 10.61,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.774
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.17,
+          "return_ytd": 3.2,
+          "return_1y": 3.2,
+          "return_3y": -0.37,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.894
+        },
+        "FIL": {
+          "return_month": 0.16,
+          "return_ytd": 3.73,
+          "return_1y": 3.73,
+          "return_3y": 1.31,
+          "return_5y": 2.8,
+          "return_10y": 3.75,
+          "patrimonio_bn": 3.565
+        },
+        "Hedge Funds": {
+          "return_month": 1.52,
+          "return_ytd": 7.29,
+          "return_1y": 7.29,
+          "return_3y": 3.46,
+          "return_5y": 2.67,
+          "return_10y": 0.87,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2025-01",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.22,
+          "return_ytd": 0.22,
+          "return_1y": 3.24,
+          "return_3y": 1.93,
+          "return_5y": 1.06,
+          "return_10y": 0.44,
+          "patrimonio_bn": 23.034
+        },
+        "RF Euro CP": {
+          "return_month": 0.24,
+          "return_ytd": 0.24,
+          "return_1y": 3.42,
+          "return_3y": 1.85,
+          "return_5y": 0.99,
+          "return_10y": 0.44,
+          "patrimonio_bn": 56.575
+        },
+        "RF Euro LP": {
+          "return_month": 0.25,
+          "return_ytd": 0.25,
+          "return_1y": 3.57,
+          "return_3y": 0.19,
+          "return_5y": 0.12,
+          "return_10y": 0.34,
+          "patrimonio_bn": 74.105
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.65,
+          "return_ytd": 0.65,
+          "return_1y": 4.86,
+          "return_3y": 0.99,
+          "return_5y": 0.62,
+          "return_10y": 0.34,
+          "patrimonio_bn": 16.535
+        },
+        "RV Mixta Euro": {
+          "return_month": 3.35,
+          "return_ytd": 3.35,
+          "return_1y": 6.24,
+          "return_3y": 3.13,
+          "return_5y": 2.88,
+          "return_10y": 1.76,
+          "patrimonio_bn": 0.811
+        },
+        "RV Nacional": {
+          "return_month": 6.44,
+          "return_ytd": 6.44,
+          "return_1y": 20.34,
+          "return_3y": 12.59,
+          "return_5y": 7.51,
+          "return_10y": 4.35,
+          "patrimonio_bn": 2.771
+        },
+        "RF Internacional": {
+          "return_month": 0.31,
+          "return_ytd": 0.31,
+          "return_1y": 4.37,
+          "return_3y": 0.52,
+          "return_5y": 0.27,
+          "return_10y": 0.53,
+          "patrimonio_bn": 18.513
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.91,
+          "return_ytd": 0.91,
+          "return_1y": 5.89,
+          "return_3y": 1.34,
+          "return_5y": 1.07,
+          "return_10y": 0.67,
+          "patrimonio_bn": 20.078
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.76,
+          "return_ytd": 1.76,
+          "return_1y": 8.64,
+          "return_3y": 2.54,
+          "return_5y": 2.5,
+          "return_10y": 1.81,
+          "patrimonio_bn": 24.464
+        },
+        "RV Euro Resto": {
+          "return_month": 6.13,
+          "return_ytd": 6.13,
+          "return_1y": 12.09,
+          "return_3y": 6.1,
+          "return_5y": 6.15,
+          "return_10y": 4.22,
+          "patrimonio_bn": 3.498
+        },
+        "RV Intl Europa": {
+          "return_month": 5.6,
+          "return_ytd": 5.6,
+          "return_1y": 10.27,
+          "return_3y": 6.77,
+          "return_5y": 6.93,
+          "return_10y": 4.65,
+          "patrimonio_bn": 7.932
+        },
+        "RV Intl EEUU": {
+          "return_month": 2.42,
+          "return_ytd": 2.42,
+          "return_1y": 26.58,
+          "return_3y": 11.68,
+          "return_5y": 13.92,
+          "return_10y": 11.37,
+          "patrimonio_bn": 19.578
+        },
+        "RV Intl Japón": {
+          "return_month": 1.05,
+          "return_ytd": 1.05,
+          "return_1y": 10.24,
+          "return_3y": 9.37,
+          "return_5y": 8.33,
+          "return_10y": 7.0,
+          "patrimonio_bn": 1.049
+        },
+        "RV Intl Emergentes": {
+          "return_month": 1.59,
+          "return_ytd": 1.59,
+          "return_1y": 16.89,
+          "return_3y": 0.64,
+          "return_5y": 3.06,
+          "return_10y": 3.33,
+          "patrimonio_bn": 3.349
+        },
+        "RV Intl Resto": {
+          "return_month": 3.41,
+          "return_ytd": 3.41,
+          "return_1y": 18.05,
+          "return_3y": 8.07,
+          "return_5y": 9.14,
+          "return_10y": 6.79,
+          "patrimonio_bn": 28.132
+        },
+        "Globales": {
+          "return_month": 1.83,
+          "return_ytd": 1.83,
+          "return_1y": 8.76,
+          "return_3y": 2.55,
+          "return_5y": 2.47,
+          "return_10y": 2.19,
+          "patrimonio_bn": 58.242
+        },
+        "Garantizados RF": {
+          "return_month": 0.14,
+          "return_ytd": 0.14,
+          "return_1y": 2.75,
+          "return_3y": -0.72,
+          "return_5y": -0.6,
+          "return_10y": 0.25,
+          "patrimonio_bn": 6.308
+        },
+        "Garantizados RV": {
+          "return_month": 0.75,
+          "return_ytd": 0.75,
+          "return_1y": 4.24,
+          "return_3y": 1.18,
+          "return_5y": 0.67,
+          "return_10y": 0.76,
+          "patrimonio_bn": 3.175
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.9,
+          "return_ytd": 0.9,
+          "return_1y": 5.83,
+          "return_3y": 2.26,
+          "return_5y": 1.89,
+          "return_10y": 0.93,
+          "patrimonio_bn": 7.324
+        },
+        "Fondos Índice": {
+          "return_month": 4.78,
+          "return_ytd": 4.78,
+          "return_1y": 24.63,
+          "return_3y": 13.56,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.128
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.17,
+          "return_ytd": 0.17,
+          "return_1y": 3.16,
+          "return_3y": -0.13,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.565
+        },
+        "FIL": {
+          "return_month": 1.2,
+          "return_ytd": 1.2,
+          "return_1y": 4.23,
+          "return_3y": 2.45,
+          "return_5y": 3.41,
+          "return_10y": 3.48,
+          "patrimonio_bn": 3.604
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 7.29,
+          "return_3y": 3.48,
+          "return_5y": 2.59,
+          "return_10y": 0.75,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2025-02",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.18,
+          "return_ytd": 0.4,
+          "return_1y": 3.13,
+          "return_3y": 2.02,
+          "return_5y": 1.11,
+          "return_10y": 0.46,
+          "patrimonio_bn": 23.222
+        },
+        "RF Euro CP": {
+          "return_month": 0.22,
+          "return_ytd": 0.46,
+          "return_1y": 3.42,
+          "return_3y": 2.02,
+          "return_5y": 1.07,
+          "return_10y": 0.44,
+          "patrimonio_bn": 58.949
+        },
+        "RF Euro LP": {
+          "return_month": 0.43,
+          "return_ytd": 0.68,
+          "return_1y": 4.55,
+          "return_3y": 0.74,
+          "return_5y": 0.27,
+          "return_10y": 0.29,
+          "patrimonio_bn": 75.885
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.39,
+          "return_ytd": 1.04,
+          "return_1y": 5.33,
+          "return_3y": 1.62,
+          "return_5y": 1.03,
+          "return_10y": 0.23,
+          "patrimonio_bn": 17.168
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.32,
+          "return_ytd": 4.72,
+          "return_1y": 6.96,
+          "return_3y": 4.39,
+          "return_5y": 3.91,
+          "return_10y": 1.49,
+          "patrimonio_bn": 0.81
+        },
+        "RV Nacional": {
+          "return_month": 5.92,
+          "return_ytd": 12.74,
+          "return_1y": 29.55,
+          "return_3y": 15.0,
+          "return_5y": 10.43,
+          "return_10y": 4.2,
+          "patrimonio_bn": 2.939
+        },
+        "RF Internacional": {
+          "return_month": 0.81,
+          "return_ytd": 1.12,
+          "return_1y": 5.94,
+          "return_3y": 1.22,
+          "return_5y": 0.43,
+          "return_10y": 0.54,
+          "patrimonio_bn": 18.994
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.34,
+          "return_ytd": 1.25,
+          "return_1y": 6.18,
+          "return_3y": 1.95,
+          "return_5y": 1.44,
+          "return_10y": 0.56,
+          "patrimonio_bn": 20.237
+        },
+        "RV Mixta Internacional": {
+          "return_month": -0.02,
+          "return_ytd": 1.74,
+          "return_1y": 7.62,
+          "return_3y": 3.2,
+          "return_5y": 3.19,
+          "return_10y": 1.51,
+          "patrimonio_bn": 24.695
+        },
+        "RV Euro Resto": {
+          "return_month": 2.65,
+          "return_ytd": 8.94,
+          "return_1y": 12.84,
+          "return_3y": 8.78,
+          "return_5y": 8.51,
+          "return_10y": 3.75,
+          "patrimonio_bn": 3.593
+        },
+        "RV Intl Europa": {
+          "return_month": 2.84,
+          "return_ytd": 8.61,
+          "return_1y": 13.11,
+          "return_3y": 8.75,
+          "return_5y": 9.44,
+          "return_10y": 4.26,
+          "patrimonio_bn": 7.986
+        },
+        "RV Intl EEUU": {
+          "return_month": -1.86,
+          "return_ytd": 0.52,
+          "return_1y": 18.25,
+          "return_3y": 12.16,
+          "return_5y": 15.37,
+          "return_10y": 10.5,
+          "patrimonio_bn": 19.167
+        },
+        "RV Intl Japón": {
+          "return_month": -2.36,
+          "return_ytd": -1.33,
+          "return_1y": 3.1,
+          "return_3y": 8.74,
+          "return_5y": 9.98,
+          "return_10y": 6.04,
+          "patrimonio_bn": 1.025
+        },
+        "RV Intl Emergentes": {
+          "return_month": -0.1,
+          "return_ytd": 1.49,
+          "return_1y": 11.44,
+          "return_3y": 2.37,
+          "return_5y": 4.11,
+          "return_10y": 2.99,
+          "patrimonio_bn": 3.371
+        },
+        "RV Intl Resto": {
+          "return_month": -0.74,
+          "return_ytd": 2.65,
+          "return_1y": 13.72,
+          "return_3y": 8.55,
+          "return_5y": 10.73,
+          "return_10y": 6.02,
+          "patrimonio_bn": 28.212
+        },
+        "Globales": {
+          "return_month": -0.06,
+          "return_ytd": 1.77,
+          "return_1y": 7.8,
+          "return_3y": 3.17,
+          "return_5y": 3.32,
+          "return_10y": 1.81,
+          "patrimonio_bn": 58.088
+        },
+        "Garantizados RF": {
+          "return_month": 0.24,
+          "return_ytd": 0.37,
+          "return_1y": 3.29,
+          "return_3y": -0.36,
+          "return_5y": -0.5,
+          "return_10y": 0.24,
+          "patrimonio_bn": 6.009
+        },
+        "Garantizados RV": {
+          "return_month": 0.66,
+          "return_ytd": 1.41,
+          "return_1y": 4.82,
+          "return_3y": 1.66,
+          "return_5y": 0.93,
+          "return_10y": 0.64,
+          "patrimonio_bn": 3.146
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.47,
+          "return_ytd": 1.37,
+          "return_1y": 5.98,
+          "return_3y": 2.7,
+          "return_5y": 2.3,
+          "return_10y": 0.89,
+          "patrimonio_bn": 7.487
+        },
+        "Fondos Índice": {
+          "return_month": 2.14,
+          "return_ytd": 7.02,
+          "return_1y": 23.17,
+          "return_3y": 15.64,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.211
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.23,
+          "return_ytd": 0.4,
+          "return_1y": 3.37,
+          "return_3y": 0.28,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.031
+        },
+        "FIL": {
+          "return_month": 0.79,
+          "return_ytd": 2.0,
+          "return_1y": 8.36,
+          "return_3y": 3.3,
+          "return_5y": 4.6,
+          "return_10y": 3.1,
+          "patrimonio_bn": 3.477
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 7.29,
+          "return_3y": 3.48,
+          "return_5y": 2.44,
+          "return_10y": 0.63,
+          "patrimonio_bn": 0.798
+        }
+      }
+    },
+    {
+      "date": "2025-03",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.18,
+          "return_ytd": 0.57,
+          "return_1y": 3.0,
+          "return_3y": 2.09,
+          "return_5y": 1.23,
+          "return_10y": 0.47,
+          "patrimonio_bn": 23.824
+        },
+        "RF Euro CP": {
+          "return_month": 0.17,
+          "return_ytd": 0.63,
+          "return_1y": 3.28,
+          "return_3y": 2.12,
+          "return_5y": 1.5,
+          "return_10y": 0.46,
+          "patrimonio_bn": 60.8
+        },
+        "RF Euro LP": {
+          "return_month": -0.32,
+          "return_ytd": 0.36,
+          "return_1y": 3.58,
+          "return_3y": 0.89,
+          "return_5y": 0.84,
+          "return_10y": 0.24,
+          "patrimonio_bn": 76.761
+        },
+        "RF Mixta Euro": {
+          "return_month": -0.44,
+          "return_ytd": 0.6,
+          "return_1y": 3.89,
+          "return_3y": 1.57,
+          "return_5y": 2.07,
+          "return_10y": 0.13,
+          "patrimonio_bn": 17.361
+        },
+        "RV Mixta Euro": {
+          "return_month": -2.67,
+          "return_ytd": 1.93,
+          "return_1y": 1.83,
+          "return_3y": 3.47,
+          "return_5y": 5.33,
+          "return_10y": 1.05,
+          "patrimonio_bn": 0.721
+        },
+        "RV Nacional": {
+          "return_month": 0.12,
+          "return_ytd": 12.88,
+          "return_1y": 19.57,
+          "return_3y": 15.13,
+          "return_5y": 16.16,
+          "return_10y": 3.84,
+          "patrimonio_bn": 2.966
+        },
+        "RF Internacional": {
+          "return_month": -1.18,
+          "return_ytd": -0.07,
+          "return_1y": 3.94,
+          "return_3y": 1.01,
+          "return_5y": 1.17,
+          "return_10y": 0.27,
+          "patrimonio_bn": 18.898
+        },
+        "RF Mixta Internacional": {
+          "return_month": -1.77,
+          "return_ytd": -0.54,
+          "return_1y": 3.11,
+          "return_3y": 1.42,
+          "return_5y": 2.26,
+          "return_10y": 0.33,
+          "patrimonio_bn": 19.753
+        },
+        "RV Mixta Internacional": {
+          "return_month": -2.85,
+          "return_ytd": -1.16,
+          "return_1y": 2.75,
+          "return_3y": 2.1,
+          "return_5y": 4.25,
+          "return_10y": 1.15,
+          "patrimonio_bn": 23.917
+        },
+        "RV Euro Resto": {
+          "return_month": -2.85,
+          "return_ytd": 5.83,
+          "return_1y": 5.25,
+          "return_3y": 7.66,
+          "return_5y": 12.05,
+          "return_10y": 3.18,
+          "patrimonio_bn": 3.507
+        },
+        "RV Intl Europa": {
+          "return_month": -2.9,
+          "return_ytd": 5.46,
+          "return_1y": 5.52,
+          "return_3y": 7.27,
+          "return_5y": 12.59,
+          "return_10y": 3.78,
+          "patrimonio_bn": 7.817
+        },
+        "RV Intl EEUU": {
+          "return_month": -8.98,
+          "return_ytd": -8.51,
+          "return_1y": 4.07,
+          "return_3y": 7.25,
+          "return_5y": 16.23,
+          "return_10y": 9.37,
+          "patrimonio_bn": 17.263
+        },
+        "RV Intl Japón": {
+          "return_month": -4.73,
+          "return_ytd": -6.0,
+          "return_1y": -4.81,
+          "return_3y": 6.67,
+          "return_5y": 10.95,
+          "return_10y": 5.14,
+          "patrimonio_bn": 0.987
+        },
+        "RV Intl Emergentes": {
+          "return_month": -2.75,
+          "return_ytd": -1.31,
+          "return_1y": 5.52,
+          "return_3y": 1.77,
+          "return_5y": 7.45,
+          "return_10y": 2.49,
+          "patrimonio_bn": 3.291
+        },
+        "RV Intl Resto": {
+          "return_month": -6.6,
+          "return_ytd": -4.13,
+          "return_1y": 2.29,
+          "return_3y": 5.15,
+          "return_5y": 12.97,
+          "return_10y": 5.03,
+          "patrimonio_bn": 25.901
+        },
+        "Globales": {
+          "return_month": -2.82,
+          "return_ytd": -1.11,
+          "return_1y": 2.88,
+          "return_3y": 2.01,
+          "return_5y": 4.38,
+          "return_10y": 1.39,
+          "patrimonio_bn": 56.04
+        },
+        "Garantizados RF": {
+          "return_month": 0.19,
+          "return_ytd": 0.56,
+          "return_1y": 3.16,
+          "return_3y": 0.08,
+          "return_5y": -0.11,
+          "return_10y": 0.26,
+          "patrimonio_bn": 5.983
+        },
+        "Garantizados RV": {
+          "return_month": -0.07,
+          "return_ytd": 1.34,
+          "return_1y": 4.01,
+          "return_3y": 1.84,
+          "return_5y": 1.23,
+          "return_10y": 0.56,
+          "patrimonio_bn": 3.135
+        },
+        "Retorno Absoluto": {
+          "return_month": -0.58,
+          "return_ytd": 0.78,
+          "return_1y": 4.23,
+          "return_3y": 2.46,
+          "return_5y": 3.56,
+          "return_10y": 0.8,
+          "patrimonio_bn": 7.59
+        },
+        "Fondos Índice": {
+          "return_month": -5.28,
+          "return_ytd": 1.37,
+          "return_1y": 10.66,
+          "return_3y": 12.74,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.791
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.18,
+          "return_ytd": 0.58,
+          "return_1y": 3.22,
+          "return_3y": 0.56,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.0
+        },
+        "FIL": {
+          "return_month": -0.9,
+          "return_ytd": 1.08,
+          "return_1y": 5.77,
+          "return_3y": 3.11,
+          "return_5y": 7.68,
+          "return_10y": 2.76,
+          "patrimonio_bn": 3.682
+        },
+        "Hedge Funds": {
+          "return_month": 1.62,
+          "return_ytd": 1.62,
+          "return_1y": 6.95,
+          "return_3y": 4.44,
+          "return_5y": 2.73,
+          "return_10y": 0.71,
+          "patrimonio_bn": 0.79
+        }
+      }
+    },
+    {
+      "date": "2025-04",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.19,
+          "return_ytd": 0.76,
+          "return_1y": 2.92,
+          "return_3y": 2.19,
+          "return_5y": 1.24,
+          "return_10y": 0.49,
+          "patrimonio_bn": 24.509
+        },
+        "RF Euro CP": {
+          "return_month": 0.26,
+          "return_ytd": 0.9,
+          "return_1y": 3.31,
+          "return_3y": 2.28,
+          "return_5y": 1.44,
+          "return_10y": 0.49,
+          "patrimonio_bn": 62.866
+        },
+        "RF Euro LP": {
+          "return_month": 0.76,
+          "return_ytd": 1.12,
+          "return_1y": 4.76,
+          "return_3y": 1.63,
+          "return_5y": 0.77,
+          "return_10y": 0.37,
+          "patrimonio_bn": 78.255
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.34,
+          "return_ytd": 0.94,
+          "return_1y": 4.67,
+          "return_3y": 2.15,
+          "return_5y": 1.79,
+          "return_10y": 0.24,
+          "patrimonio_bn": 16.766
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.08,
+          "return_ytd": 2.01,
+          "return_1y": 3.2,
+          "return_3y": 4.24,
+          "return_5y": 4.59,
+          "return_10y": 1.14,
+          "patrimonio_bn": 0.721
+        },
+        "RV Nacional": {
+          "return_month": 1.96,
+          "return_ytd": 15.08,
+          "return_1y": 21.61,
+          "return_3y": 15.21,
+          "return_5y": 15.46,
+          "return_10y": 4.12,
+          "patrimonio_bn": 3.001
+        },
+        "RF Internacional": {
+          "return_month": 0.05,
+          "return_ytd": -0.03,
+          "return_1y": 4.83,
+          "return_3y": 1.38,
+          "return_5y": 0.77,
+          "return_10y": 0.41,
+          "patrimonio_bn": 18.699
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.18,
+          "return_ytd": -0.72,
+          "return_1y": 3.85,
+          "return_3y": 1.84,
+          "return_5y": 1.75,
+          "return_10y": 0.34,
+          "patrimonio_bn": 19.305
+        },
+        "RV Mixta Internacional": {
+          "return_month": -0.7,
+          "return_ytd": -1.85,
+          "return_1y": 3.29,
+          "return_3y": 2.52,
+          "return_5y": 3.37,
+          "return_10y": 1.11,
+          "patrimonio_bn": 22.341
+        },
+        "RV Euro Resto": {
+          "return_month": 0.25,
+          "return_ytd": 6.1,
+          "return_1y": 6.98,
+          "return_3y": 8.2,
+          "return_5y": 10.83,
+          "return_10y": 3.3,
+          "patrimonio_bn": 3.646
+        },
+        "RV Intl Europa": {
+          "return_month": -0.55,
+          "return_ytd": 4.87,
+          "return_1y": 5.21,
+          "return_3y": 6.97,
+          "return_5y": 11.16,
+          "return_10y": 3.76,
+          "patrimonio_bn": 7.889
+        },
+        "RV Intl EEUU": {
+          "return_month": -4.47,
+          "return_ytd": -12.6,
+          "return_1y": 3.14,
+          "return_3y": 7.54,
+          "return_5y": 12.26,
+          "return_10y": 9.09,
+          "patrimonio_bn": 16.296
+        },
+        "RV Intl Japón": {
+          "return_month": 0.2,
+          "return_ytd": -5.81,
+          "return_1y": 0.01,
+          "return_3y": 8.3,
+          "return_5y": 9.22,
+          "return_10y": 5.08,
+          "patrimonio_bn": 0.993
+        },
+        "RV Intl Emergentes": {
+          "return_month": -2.95,
+          "return_ytd": -4.22,
+          "return_1y": 1.41,
+          "return_3y": 1.67,
+          "return_5y": 5.03,
+          "return_10y": 1.85,
+          "patrimonio_bn": 3.453
+        },
+        "RV Intl Resto": {
+          "return_month": -3.4,
+          "return_ytd": -7.39,
+          "return_1y": 0.65,
+          "return_3y": 4.83,
+          "return_5y": 9.98,
+          "return_10y": 4.73,
+          "patrimonio_bn": 24.853
+        },
+        "Globales": {
+          "return_month": -0.82,
+          "return_ytd": -1.91,
+          "return_1y": 3.28,
+          "return_3y": 2.2,
+          "return_5y": 3.42,
+          "return_10y": 1.34,
+          "patrimonio_bn": 57.152
+        },
+        "Garantizados RF": {
+          "return_month": 0.41,
+          "return_ytd": 0.97,
+          "return_1y": 3.62,
+          "return_3y": 0.65,
+          "return_5y": -0.05,
+          "return_10y": 0.3,
+          "patrimonio_bn": 5.837
+        },
+        "Garantizados RV": {
+          "return_month": 0.37,
+          "return_ytd": 1.72,
+          "return_1y": 4.49,
+          "return_3y": 2.26,
+          "return_5y": 1.31,
+          "return_10y": 0.64,
+          "patrimonio_bn": 3.063
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.31,
+          "return_ytd": 1.1,
+          "return_1y": 5.1,
+          "return_3y": 2.8,
+          "return_5y": 3.13,
+          "return_10y": 0.86,
+          "patrimonio_bn": 7.67
+        },
+        "Fondos Índice": {
+          "return_month": -1.25,
+          "return_ytd": 0.11,
+          "return_1y": 11.82,
+          "return_3y": 13.2,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.661
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.36,
+          "return_ytd": 0.94,
+          "return_1y": 3.44,
+          "return_3y": 1.03,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 20.121
+        },
+        "FIL": {
+          "return_month": 0.06,
+          "return_ytd": 1.14,
+          "return_1y": 5.93,
+          "return_3y": 3.42,
+          "return_5y": 6.44,
+          "return_10y": 2.84,
+          "patrimonio_bn": 3.827
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 1.62,
+          "return_1y": 6.95,
+          "return_3y": 4.44,
+          "return_5y": 3.22,
+          "return_10y": 0.71,
+          "patrimonio_bn": 0.79
+        }
+      }
+    },
+    {
+      "date": "2025-05",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.16,
+          "return_ytd": 0.93,
+          "return_1y": 2.78,
+          "return_3y": 2.27,
+          "return_5y": 1.24,
+          "return_10y": 0.51,
+          "patrimonio_bn": 24.465
+        },
+        "RF Euro CP": {
+          "return_month": 0.19,
+          "return_ytd": 1.08,
+          "return_1y": 3.2,
+          "return_3y": 2.39,
+          "return_5y": 1.42,
+          "return_10y": 0.51,
+          "patrimonio_bn": 66.229
+        },
+        "RF Euro LP": {
+          "return_month": 0.29,
+          "return_ytd": 1.41,
+          "return_1y": 4.84,
+          "return_3y": 1.94,
+          "return_5y": 0.71,
+          "return_10y": 0.48,
+          "patrimonio_bn": 78.646
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.56,
+          "return_ytd": 1.51,
+          "return_1y": 4.81,
+          "return_3y": 2.59,
+          "return_5y": 1.74,
+          "return_10y": 0.33,
+          "patrimonio_bn": 17.285
+        },
+        "RV Mixta Euro": {
+          "return_month": 3.16,
+          "return_ytd": 5.24,
+          "return_1y": 4.8,
+          "return_3y": 5.33,
+          "return_5y": 4.82,
+          "return_10y": 1.5,
+          "patrimonio_bn": 0.74
+        },
+        "RV Nacional": {
+          "return_month": 7.69,
+          "return_ytd": 23.93,
+          "return_1y": 24.26,
+          "return_3y": 16.74,
+          "return_5y": 16.93,
+          "return_10y": 4.98,
+          "patrimonio_bn": 3.222
+        },
+        "RF Internacional": {
+          "return_month": 0.15,
+          "return_ytd": 0.12,
+          "return_1y": 4.71,
+          "return_3y": 1.7,
+          "return_5y": 0.65,
+          "return_10y": 0.37,
+          "patrimonio_bn": 18.422
+        },
+        "RF Mixta Internacional": {
+          "return_month": 1.07,
+          "return_ytd": 0.34,
+          "return_1y": 4.3,
+          "return_3y": 2.45,
+          "return_5y": 1.77,
+          "return_10y": 0.46,
+          "patrimonio_bn": 19.529
+        },
+        "RV Mixta Internacional": {
+          "return_month": 2.39,
+          "return_ytd": 0.5,
+          "return_1y": 4.85,
+          "return_3y": 3.69,
+          "return_5y": 3.59,
+          "return_10y": 1.32,
+          "patrimonio_bn": 22.937
+        },
+        "RV Euro Resto": {
+          "return_month": 5.7,
+          "return_ytd": 12.14,
+          "return_1y": 9.39,
+          "return_3y": 9.93,
+          "return_5y": 11.14,
+          "return_10y": 3.8,
+          "patrimonio_bn": 3.811
+        },
+        "RV Intl Europa": {
+          "return_month": 5.04,
+          "return_ytd": 10.16,
+          "return_1y": 7.33,
+          "return_3y": 8.55,
+          "return_5y": 11.64,
+          "return_10y": 4.08,
+          "patrimonio_bn": 8.41
+        },
+        "RV Intl EEUU": {
+          "return_month": 6.41,
+          "return_ytd": -7.0,
+          "return_1y": 6.21,
+          "return_3y": 10.66,
+          "return_5y": 12.79,
+          "return_10y": 9.5,
+          "patrimonio_bn": 17.211
+        },
+        "RV Intl Japón": {
+          "return_month": 5.2,
+          "return_ytd": -0.91,
+          "return_1y": 4.95,
+          "return_3y": 9.58,
+          "return_5y": 9.1,
+          "return_10y": 5.24,
+          "patrimonio_bn": 1.051
+        },
+        "RV Intl Emergentes": {
+          "return_month": 4.66,
+          "return_ytd": 0.25,
+          "return_1y": 6.33,
+          "return_3y": 3.53,
+          "return_5y": 5.9,
+          "return_10y": 2.43,
+          "patrimonio_bn": 3.835
+        },
+        "RV Intl Resto": {
+          "return_month": 5.91,
+          "return_ytd": -1.91,
+          "return_1y": 3.69,
+          "return_3y": 7.31,
+          "return_5y": 10.51,
+          "return_10y": 5.19,
+          "patrimonio_bn": 26.301
+        },
+        "Globales": {
+          "return_month": 2.32,
+          "return_ytd": 0.37,
+          "return_1y": 4.79,
+          "return_3y": 3.39,
+          "return_5y": 3.68,
+          "return_10y": 1.53,
+          "patrimonio_bn": 58.3
+        },
+        "Garantizados RF": {
+          "return_month": 0.06,
+          "return_ytd": 1.03,
+          "return_1y": 3.54,
+          "return_3y": 0.85,
+          "return_5y": -0.2,
+          "return_10y": 0.32,
+          "patrimonio_bn": 5.602
+        },
+        "Garantizados RV": {
+          "return_month": 0.68,
+          "return_ytd": 2.4,
+          "return_1y": 4.73,
+          "return_3y": 2.61,
+          "return_5y": 1.32,
+          "return_10y": 0.76,
+          "patrimonio_bn": 2.66
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.9,
+          "return_ytd": 2.01,
+          "return_1y": 5.38,
+          "return_3y": 3.33,
+          "return_5y": 3.04,
+          "return_10y": 0.97,
+          "patrimonio_bn": 7.929
+        },
+        "Fondos Índice": {
+          "return_month": 5.87,
+          "return_ytd": 5.98,
+          "return_1y": 14.34,
+          "return_3y": 15.2,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.013
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.11,
+          "return_ytd": 1.05,
+          "return_1y": 3.27,
+          "return_3y": 1.38,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.974
+        },
+        "FIL": {
+          "return_month": 2.13,
+          "return_ytd": 3.29,
+          "return_1y": 6.55,
+          "return_3y": 4.12,
+          "return_5y": 6.28,
+          "return_10y": 3.03,
+          "patrimonio_bn": 3.879
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 1.62,
+          "return_1y": 6.95,
+          "return_3y": 4.44,
+          "return_5y": 4.99,
+          "return_10y": 0.67,
+          "patrimonio_bn": 0.79
+        }
+      }
+    },
+    {
+      "date": "2025-06",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.15,
+          "return_ytd": 1.07,
+          "return_1y": 2.67,
+          "return_3y": 2.38,
+          "return_5y": 1.25,
+          "return_10y": 0.53,
+          "patrimonio_bn": 24.366
+        },
+        "RF Euro CP": {
+          "return_month": 0.16,
+          "return_ytd": 1.25,
+          "return_1y": 3.06,
+          "return_3y": 2.6,
+          "return_5y": 1.37,
+          "return_10y": 0.56,
+          "patrimonio_bn": 69.586
+        },
+        "RF Euro LP": {
+          "return_month": 0.11,
+          "return_ytd": 1.52,
+          "return_1y": 4.53,
+          "return_3y": 2.52,
+          "return_5y": 0.58,
+          "return_10y": 0.63,
+          "patrimonio_bn": 79.16
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.17,
+          "return_ytd": 1.68,
+          "return_1y": 4.58,
+          "return_3y": 3.65,
+          "return_5y": 1.57,
+          "return_10y": 0.5,
+          "patrimonio_bn": 18.007
+        },
+        "RV Mixta Euro": {
+          "return_month": -0.33,
+          "return_ytd": 4.89,
+          "return_1y": 5.15,
+          "return_3y": 7.24,
+          "return_5y": 4.34,
+          "return_10y": 1.76,
+          "patrimonio_bn": 0.733
+        },
+        "RV Nacional": {
+          "return_month": -0.23,
+          "return_ytd": 23.65,
+          "return_1y": 28.46,
+          "return_3y": 19.71,
+          "return_5y": 16.51,
+          "return_10y": 5.35,
+          "patrimonio_bn": 3.202
+        },
+        "RF Internacional": {
+          "return_month": -0.06,
+          "return_ytd": 0.06,
+          "return_1y": 3.75,
+          "return_3y": 2.31,
+          "return_5y": 0.51,
+          "return_10y": 0.49,
+          "patrimonio_bn": 17.558
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.18,
+          "return_ytd": 0.52,
+          "return_1y": 3.64,
+          "return_3y": 3.42,
+          "return_5y": 1.66,
+          "return_10y": 0.62,
+          "patrimonio_bn": 19.56
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.42,
+          "return_ytd": 0.92,
+          "return_1y": 4.16,
+          "return_3y": 5.26,
+          "return_5y": 3.41,
+          "return_10y": 1.59,
+          "patrimonio_bn": 22.969
+        },
+        "RV Euro Resto": {
+          "return_month": -0.31,
+          "return_ytd": 11.8,
+          "return_1y": 11.55,
+          "return_3y": 13.24,
+          "return_5y": 10.22,
+          "return_10y": 4.16,
+          "patrimonio_bn": 3.75
+        },
+        "RV Intl Europa": {
+          "return_month": -1.01,
+          "return_ytd": 9.05,
+          "return_1y": 8.33,
+          "return_3y": 11.33,
+          "return_5y": 10.6,
+          "return_10y": 4.41,
+          "patrimonio_bn": 8.103
+        },
+        "RV Intl EEUU": {
+          "return_month": 2.01,
+          "return_ytd": -5.12,
+          "return_1y": 3.64,
+          "return_3y": 13.94,
+          "return_5y": 12.93,
+          "return_10y": 10.08,
+          "patrimonio_bn": 17.468
+        },
+        "RV Intl Japón": {
+          "return_month": 1.6,
+          "return_ytd": 0.67,
+          "return_1y": 4.79,
+          "return_3y": 12.63,
+          "return_5y": 9.4,
+          "return_10y": 5.65,
+          "patrimonio_bn": 1.065
+        },
+        "RV Intl Emergentes": {
+          "return_month": 2.86,
+          "return_ytd": 3.11,
+          "return_1y": 3.75,
+          "return_3y": 6.28,
+          "return_5y": 5.18,
+          "return_10y": 3.16,
+          "patrimonio_bn": 3.938
+        },
+        "RV Intl Resto": {
+          "return_month": 0.86,
+          "return_ytd": -1.07,
+          "return_1y": 2.76,
+          "return_3y": 10.36,
+          "return_5y": 10.19,
+          "return_10y": 5.68,
+          "patrimonio_bn": 26.522
+        },
+        "Globales": {
+          "return_month": 0.48,
+          "return_ytd": 0.85,
+          "return_1y": 4.01,
+          "return_3y": 4.66,
+          "return_5y": 3.57,
+          "return_10y": 1.77,
+          "patrimonio_bn": 58.339
+        },
+        "Garantizados RF": {
+          "return_month": 0.07,
+          "return_ytd": 1.1,
+          "return_1y": 3.28,
+          "return_3y": 1.08,
+          "return_5y": -0.26,
+          "return_10y": 0.38,
+          "patrimonio_bn": 5.512
+        },
+        "Garantizados RV": {
+          "return_month": -0.04,
+          "return_ytd": 2.36,
+          "return_1y": 4.57,
+          "return_3y": 2.88,
+          "return_5y": 1.19,
+          "return_10y": 0.93,
+          "patrimonio_bn": 2.635
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.49,
+          "return_ytd": 2.51,
+          "return_1y": 5.42,
+          "return_3y": 4.2,
+          "return_5y": 2.97,
+          "return_10y": 1.12,
+          "patrimonio_bn": 8.128
+        },
+        "Fondos Índice": {
+          "return_month": 0.29,
+          "return_ytd": 6.29,
+          "return_1y": 13.58,
+          "return_3y": 18.38,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 6.768
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.11,
+          "return_ytd": 1.16,
+          "return_1y": 3.09,
+          "return_3y": 1.99,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.174
+        },
+        "FIL": {
+          "return_month": 0.53,
+          "return_ytd": 3.84,
+          "return_1y": 6.97,
+          "return_3y": 5.47,
+          "return_5y": 6.01,
+          "return_10y": 3.39,
+          "patrimonio_bn": 3.851
+        },
+        "Hedge Funds": {
+          "return_month": 1.1,
+          "return_ytd": 2.74,
+          "return_1y": 6.19,
+          "return_3y": 4.82,
+          "return_5y": 4.79,
+          "return_10y": 0.86,
+          "patrimonio_bn": 0.786
+        }
+      }
+    },
+    {
+      "date": "2025-07",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.15,
+          "return_ytd": 1.22,
+          "return_1y": 2.52,
+          "return_3y": 2.43,
+          "return_5y": 1.26,
+          "return_10y": 0.54,
+          "patrimonio_bn": 24.45
+        },
+        "RF Euro CP": {
+          "return_month": 0.16,
+          "return_ytd": 1.4,
+          "return_1y": 2.84,
+          "return_3y": 2.56,
+          "return_5y": 1.35,
+          "return_10y": 0.56,
+          "patrimonio_bn": 74.372
+        },
+        "RF Euro LP": {
+          "return_month": 0.21,
+          "return_ytd": 1.73,
+          "return_1y": 3.6,
+          "return_3y": 1.9,
+          "return_5y": 0.47,
+          "return_10y": 0.55,
+          "patrimonio_bn": 77.437
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.33,
+          "return_ytd": 2.02,
+          "return_1y": 3.98,
+          "return_3y": 2.89,
+          "return_5y": 1.55,
+          "return_10y": 0.4,
+          "patrimonio_bn": 18.277
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.29,
+          "return_ytd": 5.2,
+          "return_1y": 4.43,
+          "return_3y": 5.49,
+          "return_5y": 4.36,
+          "return_10y": 1.52,
+          "patrimonio_bn": 0.739
+        },
+        "RV Nacional": {
+          "return_month": 3.13,
+          "return_ytd": 27.52,
+          "return_1y": 30.31,
+          "return_3y": 20.59,
+          "return_5y": 18.09,
+          "return_10y": 5.32,
+          "patrimonio_bn": 3.288
+        },
+        "RF Internacional": {
+          "return_month": 0.47,
+          "return_ytd": 0.53,
+          "return_1y": 2.96,
+          "return_3y": 1.56,
+          "return_5y": 0.62,
+          "return_10y": 0.44,
+          "patrimonio_bn": 18.531
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.74,
+          "return_ytd": 1.27,
+          "return_1y": 3.46,
+          "return_3y": 2.73,
+          "return_5y": 1.69,
+          "return_10y": 0.62,
+          "patrimonio_bn": 19.724
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.26,
+          "return_ytd": 2.19,
+          "return_1y": 4.59,
+          "return_3y": 4.23,
+          "return_5y": 3.51,
+          "return_10y": 1.59,
+          "patrimonio_bn": 23.291
+        },
+        "RV Euro Resto": {
+          "return_month": 0.79,
+          "return_ytd": 12.68,
+          "return_1y": 11.65,
+          "return_3y": 11.23,
+          "return_5y": 10.72,
+          "return_10y": 3.82,
+          "patrimonio_bn": 3.777
+        },
+        "RV Intl Europa": {
+          "return_month": 0.94,
+          "return_ytd": 10.07,
+          "return_1y": 7.69,
+          "return_3y": 9.47,
+          "return_5y": 11.01,
+          "return_10y": 4.12,
+          "patrimonio_bn": 8.056
+        },
+        "RV Intl EEUU": {
+          "return_month": 5.04,
+          "return_ytd": -0.35,
+          "return_1y": 8.52,
+          "return_3y": 11.92,
+          "return_5y": 13.55,
+          "return_10y": 10.36,
+          "patrimonio_bn": 17.715
+        },
+        "RV Intl Japón": {
+          "return_month": 1.25,
+          "return_ytd": 1.94,
+          "return_1y": 2.69,
+          "return_3y": 10.15,
+          "return_5y": 10.7,
+          "return_10y": 5.65,
+          "patrimonio_bn": 1.07
+        },
+        "RV Intl Emergentes": {
+          "return_month": 2.83,
+          "return_ytd": 6.03,
+          "return_1y": 8.36,
+          "return_3y": 6.15,
+          "return_5y": 4.85,
+          "return_10y": 3.95,
+          "patrimonio_bn": 4.04
+        },
+        "RV Intl Resto": {
+          "return_month": 3.4,
+          "return_ytd": 2.29,
+          "return_1y": 5.91,
+          "return_3y": 8.79,
+          "return_5y": 10.97,
+          "return_10y": 5.79,
+          "patrimonio_bn": 27.275
+        },
+        "Globales": {
+          "return_month": 1.16,
+          "return_ytd": 2.01,
+          "return_1y": 4.32,
+          "return_3y": 3.93,
+          "return_5y": 3.65,
+          "return_10y": 1.78,
+          "patrimonio_bn": 58.767
+        },
+        "Garantizados RF": {
+          "return_month": 0.01,
+          "return_ytd": 1.11,
+          "return_1y": 2.64,
+          "return_3y": 0.57,
+          "return_5y": -0.36,
+          "return_10y": 0.34,
+          "patrimonio_bn": 5.643
+        },
+        "Garantizados RV": {
+          "return_month": 0.28,
+          "return_ytd": 2.64,
+          "return_1y": 4.31,
+          "return_3y": 2.59,
+          "return_5y": 1.2,
+          "return_10y": 0.79,
+          "patrimonio_bn": 2.66
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.42,
+          "return_ytd": 2.94,
+          "return_1y": 5.0,
+          "return_3y": 3.86,
+          "return_5y": 2.89,
+          "return_10y": 1.11,
+          "patrimonio_bn": 8.609
+        },
+        "Fondos Índice": {
+          "return_month": 3.39,
+          "return_ytd": 9.89,
+          "return_1y": 16.75,
+          "return_3y": 16.79,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.108
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.08,
+          "return_ytd": 1.25,
+          "return_1y": 2.7,
+          "return_3y": 1.54,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.413
+        },
+        "FIL": {
+          "return_month": 1.27,
+          "return_ytd": 5.16,
+          "return_1y": 7.6,
+          "return_3y": 5.02,
+          "return_5y": 6.28,
+          "return_10y": 3.38,
+          "patrimonio_bn": 4.15
+        },
+        "Hedge Funds": {
+          "return_month": -0.0,
+          "return_ytd": 2.74,
+          "return_1y": 6.19,
+          "return_3y": 6.1,
+          "return_5y": 4.79,
+          "return_10y": 0.79,
+          "patrimonio_bn": 0.786
+        }
+      }
+    },
+    {
+      "date": "2025-08",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.13,
+          "return_ytd": 1.35,
+          "return_1y": 2.36,
+          "return_3y": 2.51,
+          "return_5y": 1.28,
+          "return_10y": 0.55,
+          "patrimonio_bn": 24.579
+        },
+        "RF Euro CP": {
+          "return_month": 0.13,
+          "return_ytd": 1.54,
+          "return_1y": 2.66,
+          "return_3y": 2.68,
+          "return_5y": 1.35,
+          "return_10y": 0.58,
+          "patrimonio_bn": 76.042
+        },
+        "RF Euro LP": {
+          "return_month": 0.08,
+          "return_ytd": 1.82,
+          "return_1y": 3.27,
+          "return_3y": 2.7,
+          "return_5y": 0.45,
+          "return_10y": 0.61,
+          "patrimonio_bn": 77.803
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.09,
+          "return_ytd": 2.11,
+          "return_1y": 3.58,
+          "return_3y": 3.6,
+          "return_5y": 1.44,
+          "return_10y": 0.6,
+          "patrimonio_bn": 18.533
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.54,
+          "return_ytd": 5.76,
+          "return_1y": 3.69,
+          "return_3y": 7.13,
+          "return_5y": 4.2,
+          "return_10y": 2.06,
+          "patrimonio_bn": 0.744
+        },
+        "RV Nacional": {
+          "return_month": 2.47,
+          "return_ytd": 30.67,
+          "return_1y": 31.24,
+          "return_3y": 22.89,
+          "return_5y": 18.38,
+          "return_10y": 6.34,
+          "patrimonio_bn": 3.377
+        },
+        "RF Internacional": {
+          "return_month": 0.03,
+          "return_ytd": 0.56,
+          "return_1y": 2.58,
+          "return_3y": 2.13,
+          "return_5y": 0.67,
+          "return_10y": 0.55,
+          "patrimonio_bn": 18.8
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.1,
+          "return_ytd": 1.37,
+          "return_1y": 3.09,
+          "return_3y": 3.34,
+          "return_5y": 1.57,
+          "return_10y": 0.8,
+          "patrimonio_bn": 19.692
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.11,
+          "return_ytd": 2.31,
+          "return_1y": 4.2,
+          "return_3y": 5.04,
+          "return_5y": 3.19,
+          "return_10y": 2.01,
+          "patrimonio_bn": 23.278
+        },
+        "RV Euro Resto": {
+          "return_month": 0.47,
+          "return_ytd": 13.21,
+          "return_1y": 10.97,
+          "return_3y": 13.39,
+          "return_5y": 10.2,
+          "return_10y": 4.72,
+          "patrimonio_bn": 3.878
+        },
+        "RV Intl Europa": {
+          "return_month": 1.2,
+          "return_ytd": 11.39,
+          "return_1y": 8.11,
+          "return_3y": 11.38,
+          "return_5y": 10.69,
+          "return_10y": 5.1,
+          "patrimonio_bn": 8.128
+        },
+        "RV Intl EEUU": {
+          "return_month": -0.47,
+          "return_ytd": -0.81,
+          "return_1y": 7.95,
+          "return_3y": 12.71,
+          "return_5y": 12.11,
+          "return_10y": 11.14,
+          "patrimonio_bn": 17.665
+        },
+        "RV Intl Japón": {
+          "return_month": 3.35,
+          "return_ytd": 5.35,
+          "return_1y": 6.83,
+          "return_3y": 11.38,
+          "return_5y": 10.35,
+          "return_10y": 6.81,
+          "patrimonio_bn": 1.107
+        },
+        "RV Intl Emergentes": {
+          "return_month": 0.32,
+          "return_ytd": 6.37,
+          "return_1y": 9.35,
+          "return_3y": 5.91,
+          "return_5y": 4.65,
+          "return_10y": 5.13,
+          "patrimonio_bn": 4.05
+        },
+        "RV Intl Resto": {
+          "return_month": 0.67,
+          "return_ytd": 2.98,
+          "return_1y": 6.66,
+          "return_3y": 10.11,
+          "return_5y": 10.15,
+          "return_10y": 6.57,
+          "patrimonio_bn": 27.475
+        },
+        "Globales": {
+          "return_month": 0.25,
+          "return_ytd": 2.27,
+          "return_1y": 4.24,
+          "return_3y": 4.55,
+          "return_5y": 3.42,
+          "return_10y": 2.14,
+          "patrimonio_bn": 58.918
+        },
+        "Garantizados RF": {
+          "return_month": 0.14,
+          "return_ytd": 1.25,
+          "return_1y": 2.38,
+          "return_3y": 1.3,
+          "return_5y": -0.31,
+          "return_10y": 0.37,
+          "patrimonio_bn": 5.405
+        },
+        "Garantizados RV": {
+          "return_month": 0.29,
+          "return_ytd": 2.94,
+          "return_1y": 4.16,
+          "return_3y": 3.23,
+          "return_5y": 1.26,
+          "return_10y": 1.04,
+          "patrimonio_bn": 2.598
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.1,
+          "return_ytd": 3.04,
+          "return_1y": 4.51,
+          "return_3y": 4.08,
+          "return_5y": 2.71,
+          "return_10y": 1.23,
+          "patrimonio_bn": 8.711
+        },
+        "Fondos Índice": {
+          "return_month": 1.21,
+          "return_ytd": 11.23,
+          "return_1y": 16.49,
+          "return_3y": 18.72,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.128
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.12,
+          "return_ytd": 1.37,
+          "return_1y": 2.49,
+          "return_3y": 2.17,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.321
+        },
+        "FIL": {
+          "return_month": 0.26,
+          "return_ytd": 5.43,
+          "return_1y": 7.24,
+          "return_3y": 5.51,
+          "return_5y": 5.85,
+          "return_10y": 3.81,
+          "patrimonio_bn": 4.221
+        },
+        "Hedge Funds": {
+          "return_month": -0.0,
+          "return_ytd": 2.74,
+          "return_1y": 6.19,
+          "return_3y": 6.1,
+          "return_5y": 4.27,
+          "return_10y": 0.89,
+          "patrimonio_bn": 0.821
+        }
+      }
+    },
+    {
+      "date": "2025-09",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.13,
+          "return_ytd": 1.49,
+          "return_1y": 2.21,
+          "return_3y": 2.62,
+          "return_5y": 1.31,
+          "return_10y": 0.57,
+          "patrimonio_bn": 24.153
+        },
+        "RF Euro CP": {
+          "return_month": 0.14,
+          "return_ytd": 1.68,
+          "return_1y": 2.44,
+          "return_3y": 2.87,
+          "return_5y": 1.37,
+          "return_10y": 0.62,
+          "patrimonio_bn": 76.387
+        },
+        "RF Euro LP": {
+          "return_month": 0.2,
+          "return_ytd": 2.02,
+          "return_1y": 2.61,
+          "return_3y": 3.43,
+          "return_5y": 0.45,
+          "return_10y": 0.65,
+          "patrimonio_bn": 79.542
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.28,
+          "return_ytd": 2.39,
+          "return_1y": 3.1,
+          "return_3y": 4.64,
+          "return_5y": 1.55,
+          "return_10y": 0.72,
+          "patrimonio_bn": 18.928
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.36,
+          "return_ytd": 7.2,
+          "return_1y": 4.69,
+          "return_3y": 9.56,
+          "return_5y": 4.7,
+          "return_10y": 2.5,
+          "patrimonio_bn": 0.748
+        },
+        "RV Nacional": {
+          "return_month": 2.83,
+          "return_ytd": 34.37,
+          "return_1y": 31.45,
+          "return_3y": 27.13,
+          "return_5y": 19.52,
+          "return_10y": 7.39,
+          "patrimonio_bn": 3.504
+        },
+        "RF Internacional": {
+          "return_month": 0.3,
+          "return_ytd": 0.86,
+          "return_1y": 2.07,
+          "return_3y": 3.11,
+          "return_5y": 0.67,
+          "return_10y": 0.65,
+          "patrimonio_bn": 19.083
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.64,
+          "return_ytd": 2.02,
+          "return_1y": 2.84,
+          "return_3y": 4.51,
+          "return_5y": 1.74,
+          "return_10y": 0.98,
+          "patrimonio_bn": 19.926
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.13,
+          "return_ytd": 3.46,
+          "return_1y": 4.38,
+          "return_3y": 6.88,
+          "return_5y": 3.54,
+          "return_10y": 2.36,
+          "patrimonio_bn": 23.516
+        },
+        "RV Euro Resto": {
+          "return_month": 2.09,
+          "return_ytd": 15.58,
+          "return_1y": 12.47,
+          "return_3y": 16.87,
+          "return_5y": 11.06,
+          "return_10y": 5.51,
+          "patrimonio_bn": 3.946
+        },
+        "RV Intl Europa": {
+          "return_month": 0.82,
+          "return_ytd": 12.31,
+          "return_1y": 8.84,
+          "return_3y": 14.14,
+          "return_5y": 11.33,
+          "return_10y": 5.62,
+          "patrimonio_bn": 8.223
+        },
+        "RV Intl EEUU": {
+          "return_month": 3.16,
+          "return_ytd": 2.32,
+          "return_1y": 9.81,
+          "return_3y": 16.46,
+          "return_5y": 13.4,
+          "return_10y": 11.8,
+          "patrimonio_bn": 17.559
+        },
+        "RV Intl Japón": {
+          "return_month": 3.38,
+          "return_ytd": 8.91,
+          "return_1y": 11.66,
+          "return_3y": 16.03,
+          "return_5y": 10.84,
+          "return_10y": 7.97,
+          "patrimonio_bn": 1.123
+        },
+        "RV Intl Emergentes": {
+          "return_month": 6.47,
+          "return_ytd": 13.24,
+          "return_1y": 11.09,
+          "return_3y": 11.25,
+          "return_5y": 6.01,
+          "return_10y": 6.06,
+          "patrimonio_bn": 4.522
+        },
+        "RV Intl Resto": {
+          "return_month": 2.42,
+          "return_ytd": 5.48,
+          "return_1y": 8.56,
+          "return_3y": 13.62,
+          "return_5y": 11.07,
+          "return_10y": 7.29,
+          "patrimonio_bn": 28.1
+        },
+        "Globales": {
+          "return_month": 1.26,
+          "return_ytd": 3.56,
+          "return_1y": 4.35,
+          "return_3y": 6.09,
+          "return_5y": 3.82,
+          "return_10y": 2.48,
+          "patrimonio_bn": 59.66
+        },
+        "Garantizados RF": {
+          "return_month": 0.08,
+          "return_ytd": 1.33,
+          "return_1y": 1.91,
+          "return_3y": 1.9,
+          "return_5y": -0.38,
+          "return_10y": 0.37,
+          "patrimonio_bn": 5.345
+        },
+        "Garantizados RV": {
+          "return_month": 0.49,
+          "return_ytd": 3.45,
+          "return_1y": 4.14,
+          "return_3y": 3.87,
+          "return_5y": 1.32,
+          "return_10y": 1.16,
+          "patrimonio_bn": 2.538
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.43,
+          "return_ytd": 3.49,
+          "return_1y": 4.42,
+          "return_3y": 4.74,
+          "return_5y": 2.86,
+          "return_10y": 1.34,
+          "patrimonio_bn": 8.825
+        },
+        "Fondos Índice": {
+          "return_month": 3.36,
+          "return_ytd": 14.96,
+          "return_1y": 18.14,
+          "return_3y": 22.83,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.371
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.11,
+          "return_ytd": 1.48,
+          "return_1y": 2.18,
+          "return_3y": 2.75,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.241
+        },
+        "FIL": {
+          "return_month": 0.59,
+          "return_ytd": 6.05,
+          "return_1y": 7.01,
+          "return_3y": 6.83,
+          "return_5y": 6.14,
+          "return_10y": 4.29,
+          "patrimonio_bn": 4.262
+        },
+        "Hedge Funds": {
+          "return_month": 0.19,
+          "return_ytd": 2.94,
+          "return_1y": 4.52,
+          "return_3y": 6.16,
+          "return_5y": 4.09,
+          "return_10y": 1.01,
+          "patrimonio_bn": 0.818
+        }
+      }
+    },
+    {
+      "date": "2025-10",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.14,
+          "return_ytd": 1.63,
+          "return_1y": 2.08,
+          "return_3y": 2.68,
+          "return_5y": 1.34,
+          "return_10y": 0.58,
+          "patrimonio_bn": 23.562
+        },
+        "RF Euro CP": {
+          "return_month": 0.17,
+          "return_ytd": 1.85,
+          "return_1y": 2.38,
+          "return_3y": 2.91,
+          "return_5y": 1.38,
+          "return_10y": 0.61,
+          "patrimonio_bn": 77.217
+        },
+        "RF Euro LP": {
+          "return_month": 0.44,
+          "return_ytd": 2.47,
+          "return_1y": 3.29,
+          "return_3y": 3.54,
+          "return_5y": 0.46,
+          "return_10y": 0.61,
+          "patrimonio_bn": 81.052
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.39,
+          "return_ytd": 2.79,
+          "return_1y": 3.65,
+          "return_3y": 4.47,
+          "return_5y": 1.73,
+          "return_10y": 0.58,
+          "patrimonio_bn": 19.58
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.56,
+          "return_ytd": 8.87,
+          "return_1y": 9.27,
+          "return_3y": 9.03,
+          "return_5y": 5.5,
+          "return_10y": 2.16,
+          "patrimonio_bn": 0.758
+        },
+        "RV Nacional": {
+          "return_month": 3.6,
+          "return_ytd": 39.21,
+          "return_1y": 38.75,
+          "return_3y": 25.52,
+          "return_5y": 21.44,
+          "return_10y": 6.94,
+          "patrimonio_bn": 3.639
+        },
+        "RF Internacional": {
+          "return_month": 0.59,
+          "return_ytd": 1.45,
+          "return_1y": 2.95,
+          "return_3y": 3.41,
+          "return_5y": 0.73,
+          "return_10y": 0.57,
+          "patrimonio_bn": 19.401
+        },
+        "RF Mixta Internacional": {
+          "return_month": 1.01,
+          "return_ytd": 3.05,
+          "return_1y": 4.49,
+          "return_3y": 4.64,
+          "return_5y": 2.02,
+          "return_10y": 0.92,
+          "patrimonio_bn": 20.621
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.61,
+          "return_ytd": 5.13,
+          "return_1y": 6.87,
+          "return_3y": 6.8,
+          "return_5y": 4.06,
+          "return_10y": 2.15,
+          "patrimonio_bn": 24.213
+        },
+        "RV Euro Resto": {
+          "return_month": 2.25,
+          "return_ytd": 18.17,
+          "return_1y": 19.11,
+          "return_3y": 15.06,
+          "return_5y": 12.96,
+          "return_10y": 4.83,
+          "patrimonio_bn": 4.099
+        },
+        "RV Intl Europa": {
+          "return_month": 2.26,
+          "return_ytd": 14.84,
+          "return_1y": 14.51,
+          "return_3y": 12.52,
+          "return_5y": 13.01,
+          "return_10y": 5.1,
+          "patrimonio_bn": 8.743
+        },
+        "RV Intl EEUU": {
+          "return_month": 3.52,
+          "return_ytd": 5.93,
+          "return_1y": 12.34,
+          "return_3y": 15.48,
+          "return_5y": 14.56,
+          "return_10y": 11.19,
+          "patrimonio_bn": 17.865
+        },
+        "RV Intl Japón": {
+          "return_month": 9.61,
+          "return_ytd": 19.37,
+          "return_1y": 24.76,
+          "return_3y": 18.64,
+          "return_5y": 12.76,
+          "return_10y": 7.84,
+          "patrimonio_bn": 1.142
+        },
+        "RV Intl Emergentes": {
+          "return_month": 5.5,
+          "return_ytd": 19.47,
+          "return_1y": 19.08,
+          "return_3y": 13.82,
+          "return_5y": 6.82,
+          "return_10y": 5.82,
+          "patrimonio_bn": 4.799
+        },
+        "RV Intl Resto": {
+          "return_month": 3.63,
+          "return_ytd": 9.31,
+          "return_1y": 13.67,
+          "return_3y": 12.95,
+          "return_5y": 12.42,
+          "return_10y": 6.9,
+          "patrimonio_bn": 29.195
+        },
+        "Globales": {
+          "return_month": 1.67,
+          "return_ytd": 5.29,
+          "return_1y": 7.13,
+          "return_3y": 6.31,
+          "return_5y": 4.31,
+          "return_10y": 2.3,
+          "patrimonio_bn": 60.877
+        },
+        "Garantizados RF": {
+          "return_month": 0.19,
+          "return_ytd": 1.52,
+          "return_1y": 2.1,
+          "return_3y": 1.93,
+          "return_5y": -0.41,
+          "return_10y": 0.37,
+          "patrimonio_bn": 5.364
+        },
+        "Garantizados RV": {
+          "return_month": 0.65,
+          "return_ytd": 4.12,
+          "return_1y": 4.77,
+          "return_3y": 3.88,
+          "return_5y": 1.43,
+          "return_10y": 1.01,
+          "patrimonio_bn": 2.491
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.56,
+          "return_ytd": 4.06,
+          "return_1y": 5.07,
+          "return_3y": 4.77,
+          "return_5y": 2.99,
+          "return_10y": 1.3,
+          "patrimonio_bn": 9.044
+        },
+        "Fondos Índice": {
+          "return_month": 3.55,
+          "return_ytd": 19.05,
+          "return_1y": 23.62,
+          "return_3y": 21.21,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.548
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.18,
+          "return_ytd": 1.66,
+          "return_1y": 2.22,
+          "return_3y": 2.72,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.406
+        },
+        "FIL": {
+          "return_month": 0.62,
+          "return_ytd": 6.7,
+          "return_1y": 8.2,
+          "return_3y": 6.23,
+          "return_5y": 6.61,
+          "return_10y": 3.77,
+          "patrimonio_bn": 4.307
+        },
+        "Hedge Funds": {
+          "return_month": -0.0,
+          "return_ytd": 2.94,
+          "return_1y": 4.5,
+          "return_3y": 6.16,
+          "return_5y": 4.09,
+          "return_10y": 1.01,
+          "patrimonio_bn": 0.818
+        }
+      }
+    },
+    {
+      "date": "2025-11",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.13,
+          "return_ytd": 1.76,
+          "return_1y": 1.98,
+          "return_3y": 2.67,
+          "return_5y": 1.36,
+          "return_10y": 0.59,
+          "patrimonio_bn": 24.588
+        },
+        "RF Euro CP": {
+          "return_month": 0.11,
+          "return_ytd": 1.96,
+          "return_1y": 2.17,
+          "return_3y": 2.84,
+          "return_5y": 1.37,
+          "return_10y": 0.62,
+          "patrimonio_bn": 77.827
+        },
+        "RF Euro LP": {
+          "return_month": -0.0,
+          "return_ytd": 2.47,
+          "return_1y": 2.3,
+          "return_3y": 3.18,
+          "return_5y": 0.32,
+          "return_10y": 0.56,
+          "patrimonio_bn": 81.917
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.0,
+          "return_ytd": 2.79,
+          "return_1y": 2.75,
+          "return_3y": 3.93,
+          "return_5y": 1.22,
+          "return_10y": 0.54,
+          "patrimonio_bn": 19.999
+        },
+        "RV Mixta Euro": {
+          "return_month": 0.04,
+          "return_ytd": 8.92,
+          "return_1y": 8.57,
+          "return_3y": 7.3,
+          "return_5y": 4.14,
+          "return_10y": 2.05,
+          "patrimonio_bn": 0.763
+        },
+        "RV Nacional": {
+          "return_month": 1.61,
+          "return_ytd": 41.46,
+          "return_1y": 41.25,
+          "return_3y": 24.21,
+          "return_5y": 16.91,
+          "return_10y": 6.98,
+          "patrimonio_bn": 3.461
+        },
+        "RF Internacional": {
+          "return_month": 0.02,
+          "return_ytd": 1.47,
+          "return_1y": 1.37,
+          "return_3y": 2.99,
+          "return_5y": 0.57,
+          "return_10y": 0.47,
+          "patrimonio_bn": 19.556
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.03,
+          "return_ytd": 3.01,
+          "return_1y": 2.77,
+          "return_3y": 4.18,
+          "return_5y": 1.56,
+          "return_10y": 0.86,
+          "patrimonio_bn": 20.962
+        },
+        "RV Mixta Internacional": {
+          "return_month": -0.04,
+          "return_ytd": 5.09,
+          "return_1y": 4.46,
+          "return_3y": 6.02,
+          "return_5y": 3.23,
+          "return_10y": 2.04,
+          "patrimonio_bn": 24.215
+        },
+        "RV Euro Resto": {
+          "return_month": 0.02,
+          "return_ytd": 18.2,
+          "return_1y": 19.08,
+          "return_3y": 12.44,
+          "return_5y": 9.5,
+          "return_10y": 4.6,
+          "patrimonio_bn": 4.376
+        },
+        "RV Intl Europa": {
+          "return_month": 1.55,
+          "return_ytd": 16.62,
+          "return_1y": 15.72,
+          "return_3y": 10.82,
+          "return_5y": 10.48,
+          "return_10y": 5.01,
+          "patrimonio_bn": 8.972
+        },
+        "RV Intl EEUU": {
+          "return_month": -0.63,
+          "return_ytd": 5.26,
+          "return_1y": 3.32,
+          "return_3y": 14.68,
+          "return_5y": 12.5,
+          "return_10y": 10.84,
+          "patrimonio_bn": 17.809
+        },
+        "RV Intl Japón": {
+          "return_month": -1.26,
+          "return_ytd": 17.87,
+          "return_1y": 19.82,
+          "return_3y": 16.07,
+          "return_5y": 10.1,
+          "return_10y": 7.36,
+          "patrimonio_bn": 1.259
+        },
+        "RV Intl Emergentes": {
+          "return_month": -2.05,
+          "return_ytd": 17.02,
+          "return_1y": 17.56,
+          "return_3y": 10.12,
+          "return_5y": 5.01,
+          "return_10y": 5.49,
+          "patrimonio_bn": 4.733
+        },
+        "RV Intl Resto": {
+          "return_month": 0.21,
+          "return_ytd": 9.54,
+          "return_1y": 9.15,
+          "return_3y": 11.62,
+          "return_5y": 9.91,
+          "return_10y": 6.63,
+          "patrimonio_bn": 28.976
+        },
+        "Globales": {
+          "return_month": -0.12,
+          "return_ytd": 5.16,
+          "return_1y": 4.36,
+          "return_3y": 5.81,
+          "return_5y": 3.38,
+          "return_10y": 2.18,
+          "patrimonio_bn": 61.19
+        },
+        "Garantizados RF": {
+          "return_month": 0.09,
+          "return_ytd": 1.62,
+          "return_1y": 1.73,
+          "return_3y": 1.99,
+          "return_5y": -0.43,
+          "return_10y": 0.37,
+          "patrimonio_bn": 4.996
+        },
+        "Garantizados RV": {
+          "return_month": 0.19,
+          "return_ytd": 4.32,
+          "return_1y": 4.55,
+          "return_3y": 3.69,
+          "return_5y": 1.33,
+          "return_10y": 0.97,
+          "patrimonio_bn": 2.318
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.21,
+          "return_ytd": 4.28,
+          "return_1y": 4.35,
+          "return_3y": 4.56,
+          "return_5y": 2.55,
+          "return_10y": 1.3,
+          "patrimonio_bn": 9.22
+        },
+        "Fondos Índice": {
+          "return_month": 0.59,
+          "return_ytd": 19.75,
+          "return_1y": 19.58,
+          "return_3y": 19.64,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.49
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.1,
+          "return_ytd": 1.76,
+          "return_1y": 1.94,
+          "return_3y": 2.46,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 19.013
+        },
+        "FIL": {
+          "return_month": 0.43,
+          "return_ytd": 7.16,
+          "return_1y": 7.33,
+          "return_3y": 5.83,
+          "return_5y": 4.71,
+          "return_10y": 3.65,
+          "patrimonio_bn": 4.288
+        },
+        "Hedge Funds": {
+          "return_month": 0.02,
+          "return_ytd": 2.95,
+          "return_1y": 4.52,
+          "return_3y": 6.17,
+          "return_5y": 4.17,
+          "return_10y": 0.99,
+          "patrimonio_bn": 0.818
+        }
+      }
+    },
+    {
+      "date": "2025-12",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.13,
+          "return_ytd": 1.89,
+          "return_1y": 1.89,
+          "return_3y": 2.67,
+          "return_5y": 1.4,
+          "return_10y": 0.61,
+          "patrimonio_bn": 24.601
+        },
+        "RF Euro CP": {
+          "return_month": 0.14,
+          "return_ytd": 2.1,
+          "return_1y": 2.1,
+          "return_3y": 2.85,
+          "return_5y": 1.4,
+          "return_10y": 0.64,
+          "patrimonio_bn": 78.276
+        },
+        "RF Euro LP": {
+          "return_month": -0.08,
+          "return_ytd": 2.39,
+          "return_1y": 2.39,
+          "return_3y": 3.56,
+          "return_5y": 0.27,
+          "return_10y": 0.61,
+          "patrimonio_bn": 82.379
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.18,
+          "return_ytd": 2.97,
+          "return_1y": 2.97,
+          "return_3y": 4.47,
+          "return_5y": 1.17,
+          "return_10y": 0.69,
+          "patrimonio_bn": 20.305
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.35,
+          "return_ytd": 10.39,
+          "return_1y": 10.39,
+          "return_3y": 8.83,
+          "return_5y": 4.21,
+          "return_10y": 2.59,
+          "patrimonio_bn": 0.783
+        },
+        "RV Nacional": {
+          "return_month": 5.22,
+          "return_ytd": 48.84,
+          "return_1y": 48.84,
+          "return_3y": 26.52,
+          "return_5y": 17.18,
+          "return_10y": 8.16,
+          "patrimonio_bn": 3.578
+        },
+        "RF Internacional": {
+          "return_month": -0.19,
+          "return_ytd": 1.28,
+          "return_1y": 1.28,
+          "return_3y": 3.32,
+          "return_5y": 0.56,
+          "return_10y": 0.58,
+          "patrimonio_bn": 19.576
+        },
+        "RF Mixta Internacional": {
+          "return_month": -0.05,
+          "return_ytd": 2.96,
+          "return_1y": 2.96,
+          "return_3y": 4.74,
+          "return_5y": 1.44,
+          "return_10y": 0.97,
+          "patrimonio_bn": 21.274
+        },
+        "RV Mixta Internacional": {
+          "return_month": 0.21,
+          "return_ytd": 5.3,
+          "return_1y": 5.3,
+          "return_3y": 7.04,
+          "return_5y": 3.03,
+          "return_10y": 2.29,
+          "patrimonio_bn": 24.264
+        },
+        "RV Euro Resto": {
+          "return_month": 2.6,
+          "return_ytd": 21.28,
+          "return_1y": 21.28,
+          "return_3y": 14.66,
+          "return_5y": 9.6,
+          "return_10y": 5.44,
+          "patrimonio_bn": 4.402
+        },
+        "RV Intl Europa": {
+          "return_month": 2.95,
+          "return_ytd": 20.06,
+          "return_1y": 20.06,
+          "return_3y": 13.05,
+          "return_5y": 10.6,
+          "return_10y": 5.79,
+          "patrimonio_bn": 9.301
+        },
+        "RV Intl EEUU": {
+          "return_month": -0.92,
+          "return_ytd": 4.29,
+          "return_1y": 4.29,
+          "return_3y": 17.48,
+          "return_5y": 11.81,
+          "return_10y": 11.1,
+          "patrimonio_bn": 17.557
+        },
+        "RV Intl Japón": {
+          "return_month": -0.42,
+          "return_ytd": 17.38,
+          "return_1y": 17.38,
+          "return_3y": 17.67,
+          "return_5y": 9.75,
+          "return_10y": 7.69,
+          "patrimonio_bn": 1.314
+        },
+        "RV Intl Emergentes": {
+          "return_month": 1.23,
+          "return_ytd": 18.46,
+          "return_1y": 18.46,
+          "return_3y": 12.54,
+          "return_5y": 4.13,
+          "return_10y": 6.1,
+          "patrimonio_bn": 4.845
+        },
+        "RV Intl Resto": {
+          "return_month": 0.62,
+          "return_ytd": 10.21,
+          "return_1y": 10.21,
+          "return_3y": 13.88,
+          "return_5y": 9.31,
+          "return_10y": 7.11,
+          "patrimonio_bn": 29.161
+        },
+        "Globales": {
+          "return_month": 0.26,
+          "return_ytd": 5.44,
+          "return_1y": 5.44,
+          "return_3y": 6.7,
+          "return_5y": 3.14,
+          "return_10y": 2.42,
+          "patrimonio_bn": 61.491
+        },
+        "Garantizados RF": {
+          "return_month": 0.04,
+          "return_ytd": 1.66,
+          "return_1y": 1.66,
+          "return_3y": 2.42,
+          "return_5y": -0.45,
+          "return_10y": 0.39,
+          "patrimonio_bn": 4.944
+        },
+        "Garantizados RV": {
+          "return_month": 0.44,
+          "return_ytd": 4.78,
+          "return_1y": 4.78,
+          "return_3y": 4.23,
+          "return_5y": 1.41,
+          "return_10y": 1.17,
+          "patrimonio_bn": 2.244
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.39,
+          "return_ytd": 4.69,
+          "return_1y": 4.69,
+          "return_3y": 4.9,
+          "return_5y": 2.49,
+          "return_10y": 1.41,
+          "patrimonio_bn": 9.358
+        },
+        "Fondos Índice": {
+          "return_month": 1.67,
+          "return_ytd": 21.75,
+          "return_1y": 21.75,
+          "return_3y": 22.41,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.463
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.1,
+          "return_ytd": 1.86,
+          "return_1y": 1.86,
+          "return_3y": 2.77,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 18.674
+        },
+        "FIL": {
+          "return_month": 0.53,
+          "return_ytd": 7.72,
+          "return_1y": 7.72,
+          "return_3y": 6.35,
+          "return_5y": 4.2,
+          "return_10y": 3.96,
+          "patrimonio_bn": 4.286
+        },
+        "Hedge Funds": {
+          "return_month": 1.1,
+          "return_ytd": 4.09,
+          "return_1y": 4.09,
+          "return_3y": 6.57,
+          "return_5y": 3.45,
+          "return_10y": 1.12,
+          "patrimonio_bn": 0.812
+        }
+      }
+    },
+    {
+      "date": "2026-01",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.15,
+          "return_ytd": 0.15,
+          "return_1y": 1.83,
+          "return_3y": 2.67,
+          "return_5y": 1.44,
+          "return_10y": 0.63,
+          "patrimonio_bn": 24.538
+        },
+        "RF Euro CP": {
+          "return_month": 0.19,
+          "return_ytd": 0.19,
+          "return_1y": 2.05,
+          "return_3y": 2.84,
+          "return_5y": 1.44,
+          "return_10y": 0.67,
+          "patrimonio_bn": 83.121
+        },
+        "RF Euro LP": {
+          "return_month": 0.49,
+          "return_ytd": 0.49,
+          "return_1y": 2.62,
+          "return_3y": 3.36,
+          "return_5y": 0.4,
+          "return_10y": 0.65,
+          "patrimonio_bn": 79.702
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.43,
+          "return_ytd": 0.43,
+          "return_1y": 2.75,
+          "return_3y": 4.02,
+          "return_5y": 1.32,
+          "return_10y": 0.85,
+          "patrimonio_bn": 20.592
+        },
+        "RV Mixta Euro": {
+          "return_month": 2.14,
+          "return_ytd": 2.14,
+          "return_1y": 9.1,
+          "return_3y": 7.59,
+          "return_5y": 4.76,
+          "return_10y": 3.24,
+          "patrimonio_bn": 0.798
+        },
+        "RV Nacional": {
+          "return_month": 3.75,
+          "return_ytd": 3.75,
+          "return_1y": 45.08,
+          "return_3y": 24.5,
+          "return_5y": 18.73,
+          "return_10y": 9.46,
+          "patrimonio_bn": 3.737
+        },
+        "RF Internacional": {
+          "return_month": 0.32,
+          "return_ytd": 0.32,
+          "return_1y": 1.29,
+          "return_3y": 2.95,
+          "return_5y": 0.64,
+          "return_10y": 0.64,
+          "patrimonio_bn": 19.626
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.66,
+          "return_ytd": 0.66,
+          "return_1y": 2.71,
+          "return_3y": 4.27,
+          "return_5y": 1.62,
+          "return_10y": 1.2,
+          "patrimonio_bn": 22.124
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.05,
+          "return_ytd": 1.05,
+          "return_1y": 4.56,
+          "return_3y": 6.34,
+          "return_5y": 3.29,
+          "return_10y": 2.73,
+          "patrimonio_bn": 24.893
+        },
+        "RV Euro Resto": {
+          "return_month": 2.93,
+          "return_ytd": 2.93,
+          "return_1y": 17.62,
+          "return_3y": 12.75,
+          "return_5y": 10.58,
+          "return_10y": 6.53,
+          "patrimonio_bn": 4.698
+        },
+        "RV Intl Europa": {
+          "return_month": 3.14,
+          "return_ytd": 3.14,
+          "return_1y": 17.27,
+          "return_3y": 11.58,
+          "return_5y": 11.48,
+          "return_10y": 6.81,
+          "patrimonio_bn": 9.689
+        },
+        "RV Intl EEUU": {
+          "return_month": 0.17,
+          "return_ytd": 0.17,
+          "return_1y": 2.0,
+          "return_3y": 15.62,
+          "return_5y": 11.98,
+          "return_10y": 11.79,
+          "patrimonio_bn": 17.553
+        },
+        "RV Intl Japón": {
+          "return_month": 4.65,
+          "return_ytd": 4.65,
+          "return_1y": 21.57,
+          "return_3y": 17.62,
+          "return_5y": 10.58,
+          "return_10y": 8.96,
+          "patrimonio_bn": 1.385
+        },
+        "RV Intl Emergentes": {
+          "return_month": 7.58,
+          "return_ytd": 7.58,
+          "return_1y": 25.45,
+          "return_3y": 12.91,
+          "return_5y": 4.97,
+          "return_10y": 7.62,
+          "patrimonio_bn": 5.252
+        },
+        "RV Intl Resto": {
+          "return_month": 2.96,
+          "return_ytd": 2.96,
+          "return_1y": 9.73,
+          "return_3y": 12.65,
+          "return_5y": 9.74,
+          "return_10y": 8.14,
+          "patrimonio_bn": 30.224
+        },
+        "Globales": {
+          "return_month": 1.41,
+          "return_ytd": 1.41,
+          "return_1y": 5.01,
+          "return_3y": 6.33,
+          "return_5y": 3.42,
+          "return_10y": 2.86,
+          "patrimonio_bn": 62.726
+        },
+        "Garantizados RF": {
+          "return_month": 0.21,
+          "return_ytd": 0.21,
+          "return_1y": 1.74,
+          "return_3y": 2.32,
+          "return_5y": -0.36,
+          "return_10y": 0.4,
+          "patrimonio_bn": 4.529
+        },
+        "Garantizados RV": {
+          "return_month": 0.58,
+          "return_ytd": 0.58,
+          "return_1y": 4.6,
+          "return_3y": 4.06,
+          "return_5y": 1.58,
+          "return_10y": 1.29,
+          "patrimonio_bn": 2.125
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.58,
+          "return_ytd": 0.58,
+          "return_1y": 4.36,
+          "return_3y": 4.66,
+          "return_5y": 2.63,
+          "return_10y": 1.56,
+          "patrimonio_bn": 9.516
+        },
+        "Fondos Índice": {
+          "return_month": 1.98,
+          "return_ytd": 1.98,
+          "return_1y": 18.5,
+          "return_3y": 20.23,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.552
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.17,
+          "return_ytd": 0.17,
+          "return_1y": 1.86,
+          "return_3y": 2.56,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 18.236
+        },
+        "FIL": {
+          "return_month": 1.01,
+          "return_ytd": 1.01,
+          "return_1y": 7.53,
+          "return_3y": 5.53,
+          "return_5y": 4.22,
+          "return_10y": 4.59,
+          "patrimonio_bn": 4.239
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 4.09,
+          "return_3y": 6.58,
+          "return_5y": 3.5,
+          "return_10y": 1.13,
+          "patrimonio_bn": 0.818
+        }
+      }
+    },
+    {
+      "date": "2026-02",
+      "categories": {
+        "Monetarios": {
+          "return_month": 0.12,
+          "return_ytd": 0.28,
+          "return_1y": 1.77,
+          "return_3y": 2.66,
+          "return_5y": 1.47,
+          "return_10y": 0.64,
+          "patrimonio_bn": 24.1
+        },
+        "RF Euro CP": {
+          "return_month": 0.13,
+          "return_ytd": 0.33,
+          "return_1y": 1.96,
+          "return_3y": 2.86,
+          "return_5y": 1.48,
+          "return_10y": 0.69,
+          "patrimonio_bn": 83.542
+        },
+        "RF Euro LP": {
+          "return_month": 0.45,
+          "return_ytd": 0.94,
+          "return_1y": 2.65,
+          "return_3y": 3.79,
+          "return_5y": 0.58,
+          "return_10y": 0.73,
+          "patrimonio_bn": 80.546
+        },
+        "RF Mixta Euro": {
+          "return_month": 0.34,
+          "return_ytd": 0.77,
+          "return_1y": 2.69,
+          "return_3y": 4.34,
+          "return_5y": 1.36,
+          "return_10y": 0.93,
+          "patrimonio_bn": 21.388
+        },
+        "RV Mixta Euro": {
+          "return_month": 1.16,
+          "return_ytd": 3.32,
+          "return_1y": 8.92,
+          "return_3y": 7.79,
+          "return_5y": 4.75,
+          "return_10y": 3.53,
+          "patrimonio_bn": 0.807
+        },
+        "RV Nacional": {
+          "return_month": 2.93,
+          "return_ytd": 6.8,
+          "return_1y": 40.99,
+          "return_3y": 24.56,
+          "return_5y": 18.09,
+          "return_10y": 10.07,
+          "patrimonio_bn": 3.89
+        },
+        "RF Internacional": {
+          "return_month": 0.62,
+          "return_ytd": 0.94,
+          "return_1y": 1.1,
+          "return_3y": 3.44,
+          "return_5y": 0.88,
+          "return_10y": 0.72,
+          "patrimonio_bn": 20.339
+        },
+        "RF Mixta Internacional": {
+          "return_month": 0.63,
+          "return_ytd": 1.3,
+          "return_1y": 3.01,
+          "return_3y": 4.71,
+          "return_5y": 1.74,
+          "return_10y": 1.31,
+          "patrimonio_bn": 22.616
+        },
+        "RV Mixta Internacional": {
+          "return_month": 1.07,
+          "return_ytd": 2.13,
+          "return_1y": 5.71,
+          "return_3y": 6.93,
+          "return_5y": 3.37,
+          "return_10y": 2.92,
+          "patrimonio_bn": 25.648
+        },
+        "RV Euro Resto": {
+          "return_month": 3.41,
+          "return_ytd": 6.44,
+          "return_1y": 18.49,
+          "return_3y": 13.41,
+          "return_5y": 10.42,
+          "return_10y": 7.2,
+          "patrimonio_bn": 4.906
+        },
+        "RV Intl Europa": {
+          "return_month": 3.75,
+          "return_ytd": 7.02,
+          "return_1y": 18.3,
+          "return_3y": 12.2,
+          "return_5y": 11.74,
+          "return_10y": 7.39,
+          "patrimonio_bn": 10.354
+        },
+        "RV Intl EEUU": {
+          "return_month": -0.88,
+          "return_ytd": -0.71,
+          "return_1y": 3.02,
+          "return_3y": 15.25,
+          "return_5y": 11.07,
+          "return_10y": 11.74,
+          "patrimonio_bn": 17.487
+        },
+        "RV Intl Japón": {
+          "return_month": 10.36,
+          "return_ytd": 15.49,
+          "return_1y": 37.4,
+          "return_3y": 21.79,
+          "return_5y": 12.24,
+          "return_10y": 10.66,
+          "patrimonio_bn": 1.555
+        },
+        "RV Intl Emergentes": {
+          "return_month": 6.74,
+          "return_ytd": 14.83,
+          "return_1y": 34.03,
+          "return_3y": 17.08,
+          "return_5y": 6.26,
+          "return_10y": 8.42,
+          "patrimonio_bn": 5.714
+        },
+        "RV Intl Resto": {
+          "return_month": 2.45,
+          "return_ytd": 5.48,
+          "return_1y": 13.26,
+          "return_3y": 13.57,
+          "return_5y": 9.55,
+          "return_10y": 8.44,
+          "patrimonio_bn": 30.95
+        },
+        "Globales": {
+          "return_month": 1.33,
+          "return_ytd": 2.76,
+          "return_1y": 6.46,
+          "return_3y": 7.15,
+          "return_5y": 3.56,
+          "return_10y": 3.06,
+          "patrimonio_bn": 63.979
+        },
+        "Garantizados RF": {
+          "return_month": 0.21,
+          "return_ytd": 0.42,
+          "return_1y": 1.71,
+          "return_3y": 2.65,
+          "return_5y": -0.22,
+          "return_10y": 0.43,
+          "patrimonio_bn": 4.558
+        },
+        "Garantizados RV": {
+          "return_month": 0.62,
+          "return_ytd": 1.2,
+          "return_1y": 4.56,
+          "return_3y": 4.41,
+          "return_5y": 1.75,
+          "return_10y": 1.4,
+          "patrimonio_bn": 1.915
+        },
+        "Retorno Absoluto": {
+          "return_month": 0.31,
+          "return_ytd": 0.89,
+          "return_1y": 4.18,
+          "return_3y": 4.91,
+          "return_5y": 2.62,
+          "return_10y": 1.62,
+          "patrimonio_bn": 9.652
+        },
+        "Fondos Índice": {
+          "return_month": 1.28,
+          "return_ytd": 3.29,
+          "return_1y": 17.5,
+          "return_3y": 20.23,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 7.473
+        },
+        "Objetivo Rentabilidad": {
+          "return_month": 0.15,
+          "return_ytd": 0.32,
+          "return_1y": 1.78,
+          "return_3y": 2.79,
+          "return_5y": 0.0,
+          "return_10y": 0.0,
+          "patrimonio_bn": 18.623
+        },
+        "FIL": {
+          "return_month": -0.14,
+          "return_ytd": 0.87,
+          "return_1y": 6.54,
+          "return_3y": 5.3,
+          "return_5y": 3.82,
+          "return_10y": 4.67,
+          "patrimonio_bn": 4.248
+        },
+        "Hedge Funds": {
+          "return_month": 0.0,
+          "return_ytd": 0.0,
+          "return_1y": 4.09,
+          "return_3y": 6.58,
+          "return_5y": 3.3,
+          "return_10y": 1.26,
+          "patrimonio_bn": 0.818
+        }
+      }
+    }
+  ]
+}

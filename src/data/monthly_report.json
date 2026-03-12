@@ -1,0 +1,1474 @@
+{
+  "report_month": "2026-02",
+  "prev_month": "2026-01",
+  "headline": {
+    "total_aum_bn": 465.11,
+    "prev_aum_bn": 457.68,
+    "aum_delta_bn": 7.44,
+    "aum_delta_pct": 1.62,
+    "net_flows_bn": 3.66,
+    "prev_net_flows_bn": 2.22,
+    "market_effect_bn": 3.78,
+    "total_subs_bn": 18.53,
+    "total_redemp_bn": 14.87,
+    "prev_subs_bn": 17.56,
+    "prev_redemp_bn": 15.34,
+    "investors": 0,
+    "prev_investors": 17968234.0,
+    "inv_delta": -17968234.0,
+    "inv_delta_pct": -100.0,
+    "funds": 3329.0,
+    "prev_funds": 3331.0,
+    "funds_delta": -2.0
+  },
+  "category_changes": [
+    {
+      "category": "Internacional",
+      "curr_aum_bn": 144.636,
+      "prev_aum_bn": 140.503,
+      "delta_bn": 4.133,
+      "delta_pct": 2.94
+    },
+    {
+      "category": "Globales",
+      "curr_aum_bn": 63.979,
+      "prev_aum_bn": 62.726,
+      "delta_bn": 1.253,
+      "delta_pct": 2.0
+    },
+    {
+      "category": "RF Euro LP",
+      "curr_aum_bn": 80.546,
+      "prev_aum_bn": 79.702,
+      "delta_bn": 0.844,
+      "delta_pct": 1.06
+    },
+    {
+      "category": "RF Mixta Euro",
+      "curr_aum_bn": 21.388,
+      "prev_aum_bn": 20.592,
+      "delta_bn": 0.796,
+      "delta_pct": 3.87
+    },
+    {
+      "category": "RF Euro CP",
+      "curr_aum_bn": 83.542,
+      "prev_aum_bn": 83.121,
+      "delta_bn": 0.421,
+      "delta_pct": 0.51
+    },
+    {
+      "category": "Objetivo Rentabilidad",
+      "curr_aum_bn": 18.623,
+      "prev_aum_bn": 18.236,
+      "delta_bn": 0.387,
+      "delta_pct": 2.12
+    },
+    {
+      "category": "RV Nacional",
+      "curr_aum_bn": 3.89,
+      "prev_aum_bn": 3.737,
+      "delta_bn": 0.153,
+      "delta_pct": 4.09
+    },
+    {
+      "category": "Retorno Absoluto",
+      "curr_aum_bn": 9.652,
+      "prev_aum_bn": 9.516,
+      "delta_bn": 0.136,
+      "delta_pct": 1.43
+    },
+    {
+      "category": "Garantizados RF",
+      "curr_aum_bn": 4.558,
+      "prev_aum_bn": 4.529,
+      "delta_bn": 0.029,
+      "delta_pct": 0.64
+    },
+    {
+      "category": "RV Mixta Euro",
+      "curr_aum_bn": 0.807,
+      "prev_aum_bn": 0.798,
+      "delta_bn": 0.009,
+      "delta_pct": 1.13
+    },
+    {
+      "category": "Fondos Índice",
+      "curr_aum_bn": 7.473,
+      "prev_aum_bn": 7.552,
+      "delta_bn": -0.079,
+      "delta_pct": -1.05
+    },
+    {
+      "category": "Garantizados RV",
+      "curr_aum_bn": 1.915,
+      "prev_aum_bn": 2.125,
+      "delta_bn": -0.21,
+      "delta_pct": -9.88
+    },
+    {
+      "category": "Monetarios",
+      "curr_aum_bn": 24.1,
+      "prev_aum_bn": 24.538,
+      "delta_bn": -0.438,
+      "delta_pct": -1.78
+    }
+  ],
+  "category_flows": [
+    {
+      "category": "RF Mixta Euro",
+      "net": 0.728,
+      "subs": 0.989,
+      "redemp": 0.261,
+      "prev_net": 0.158,
+      "net_change": 0.57
+    },
+    {
+      "category": "RF Internacional",
+      "net": 0.59,
+      "subs": 1.278,
+      "redemp": 0.688,
+      "prev_net": 0.605,
+      "net_change": -0.015
+    },
+    {
+      "category": "RF Euro LP",
+      "net": 0.487,
+      "subs": 3.003,
+      "redemp": 2.515,
+      "prev_net": 0.534,
+      "net_change": -0.047
+    },
+    {
+      "category": "Globales",
+      "net": 0.423,
+      "subs": 1.435,
+      "redemp": 1.012,
+      "prev_net": 0.292,
+      "net_change": 0.131
+    },
+    {
+      "category": "RV Mixta Internacional",
+      "net": 0.398,
+      "subs": 0.889,
+      "redemp": 0.491,
+      "prev_net": 0.273,
+      "net_change": 0.125
+    },
+    {
+      "category": "RF Mixta Internacional",
+      "net": 0.357,
+      "subs": 0.83,
+      "redemp": 0.474,
+      "prev_net": 0.191,
+      "net_change": 0.166
+    },
+    {
+      "category": "RV Intl Europa",
+      "net": 0.294,
+      "subs": 0.446,
+      "redemp": 0.152,
+      "prev_net": 0.102,
+      "net_change": 0.192
+    },
+    {
+      "category": "RF Euro CP",
+      "net": 0.28,
+      "subs": 4.67,
+      "redemp": 4.389,
+      "prev_net": 0.923,
+      "net_change": -0.643
+    },
+    {
+      "category": "RV Intl Resto",
+      "net": 0.167,
+      "subs": 0.798,
+      "redemp": 0.631,
+      "prev_net": 0.146,
+      "net_change": 0.021
+    },
+    {
+      "category": "Objetivo Rentabilidad",
+      "net": 0.153,
+      "subs": 1.252,
+      "redemp": 1.098,
+      "prev_net": -0.469,
+      "net_change": 0.622
+    },
+    {
+      "category": "Retorno Absoluto",
+      "net": 0.109,
+      "subs": 0.325,
+      "redemp": 0.216,
+      "prev_net": 0.104,
+      "net_change": 0.005
+    },
+    {
+      "category": "RV Intl Emergentes",
+      "net": 0.106,
+      "subs": 0.157,
+      "redemp": 0.051,
+      "prev_net": 0.038,
+      "net_change": 0.068
+    },
+    {
+      "category": "RV Intl EEUU",
+      "net": 0.092,
+      "subs": 0.394,
+      "redemp": 0.301,
+      "prev_net": -0.032,
+      "net_change": 0.124
+    },
+    {
+      "category": "RV Euro Resto",
+      "net": 0.049,
+      "subs": 0.122,
+      "redemp": 0.073,
+      "prev_net": 0.02,
+      "net_change": 0.029
+    },
+    {
+      "category": "RV Nacional",
+      "net": 0.043,
+      "subs": 0.144,
+      "redemp": 0.101,
+      "prev_net": 0.025,
+      "net_change": 0.018
+    },
+    {
+      "category": "RV Intl Japón",
+      "net": 0.026,
+      "subs": 0.04,
+      "redemp": 0.014,
+      "prev_net": 0.011,
+      "net_change": 0.015
+    },
+    {
+      "category": "Garantizados RF",
+      "net": 0.02,
+      "subs": 0.046,
+      "redemp": 0.027,
+      "prev_net": -0.423,
+      "net_change": 0.443
+    },
+    {
+      "category": "RV Mixta Euro",
+      "net": -0.0,
+      "subs": 0.004,
+      "redemp": 0.004,
+      "prev_net": -0.001,
+      "net_change": 0.001
+    },
+    {
+      "category": "Hedge Funds",
+      "net": 0.0,
+      "subs": 0.0,
+      "redemp": 0.0,
+      "prev_net": 0.0,
+      "net_change": 0.0
+    },
+    {
+      "category": "FIL",
+      "net": -0.004,
+      "subs": 0.035,
+      "redemp": 0.04,
+      "prev_net": 0.017,
+      "net_change": -0.021
+    },
+    {
+      "category": "Garantizados RV",
+      "net": -0.016,
+      "subs": 0.02,
+      "redemp": 0.036,
+      "prev_net": -0.132,
+      "net_change": 0.116
+    },
+    {
+      "category": "Fondos Índice",
+      "net": -0.172,
+      "subs": 0.234,
+      "redemp": 0.406,
+      "prev_net": -0.064,
+      "net_change": -0.108
+    },
+    {
+      "category": "Monetarios",
+      "net": -0.467,
+      "subs": 1.422,
+      "redemp": 1.889,
+      "prev_net": -0.101,
+      "net_change": -0.366
+    }
+  ],
+  "performance": [
+    {
+      "category": "RV Intl Japón",
+      "return_month": 10.36,
+      "return_ytd": 15.49,
+      "return_1y": 37.4,
+      "prev_return_month": 4.65
+    },
+    {
+      "category": "RV Intl Emergentes",
+      "return_month": 6.74,
+      "return_ytd": 14.83,
+      "return_1y": 34.03,
+      "prev_return_month": 7.58
+    },
+    {
+      "category": "RV Intl Europa",
+      "return_month": 3.75,
+      "return_ytd": 7.02,
+      "return_1y": 18.3,
+      "prev_return_month": 3.14
+    },
+    {
+      "category": "RV Euro Resto",
+      "return_month": 3.41,
+      "return_ytd": 6.44,
+      "return_1y": 18.49,
+      "prev_return_month": 2.93
+    },
+    {
+      "category": "RV Nacional",
+      "return_month": 2.93,
+      "return_ytd": 6.8,
+      "return_1y": 40.99,
+      "prev_return_month": 3.75
+    },
+    {
+      "category": "RV Intl Resto",
+      "return_month": 2.45,
+      "return_ytd": 5.48,
+      "return_1y": 13.26,
+      "prev_return_month": 2.96
+    },
+    {
+      "category": "Globales",
+      "return_month": 1.33,
+      "return_ytd": 2.76,
+      "return_1y": 6.46,
+      "prev_return_month": 1.41
+    },
+    {
+      "category": "Fondos Índice",
+      "return_month": 1.28,
+      "return_ytd": 3.29,
+      "return_1y": 17.5,
+      "prev_return_month": 1.98
+    },
+    {
+      "category": "RV Mixta Euro",
+      "return_month": 1.16,
+      "return_ytd": 3.32,
+      "return_1y": 8.92,
+      "prev_return_month": 2.14
+    },
+    {
+      "category": "RV Mixta Internacional",
+      "return_month": 1.07,
+      "return_ytd": 2.13,
+      "return_1y": 5.71,
+      "prev_return_month": 1.05
+    },
+    {
+      "category": "RF Mixta Internacional",
+      "return_month": 0.63,
+      "return_ytd": 1.3,
+      "return_1y": 3.01,
+      "prev_return_month": 0.66
+    },
+    {
+      "category": "RF Internacional",
+      "return_month": 0.62,
+      "return_ytd": 0.94,
+      "return_1y": 1.1,
+      "prev_return_month": 0.32
+    },
+    {
+      "category": "Garantizados RV",
+      "return_month": 0.62,
+      "return_ytd": 1.2,
+      "return_1y": 4.56,
+      "prev_return_month": 0.58
+    },
+    {
+      "category": "RF Euro LP",
+      "return_month": 0.45,
+      "return_ytd": 0.94,
+      "return_1y": 2.65,
+      "prev_return_month": 0.49
+    },
+    {
+      "category": "RF Mixta Euro",
+      "return_month": 0.34,
+      "return_ytd": 0.77,
+      "return_1y": 2.69,
+      "prev_return_month": 0.43
+    },
+    {
+      "category": "Retorno Absoluto",
+      "return_month": 0.31,
+      "return_ytd": 0.89,
+      "return_1y": 4.18,
+      "prev_return_month": 0.58
+    },
+    {
+      "category": "Garantizados RF",
+      "return_month": 0.21,
+      "return_ytd": 0.42,
+      "return_1y": 1.71,
+      "prev_return_month": 0.21
+    },
+    {
+      "category": "Objetivo Rentabilidad",
+      "return_month": 0.15,
+      "return_ytd": 0.32,
+      "return_1y": 1.78,
+      "prev_return_month": 0.17
+    },
+    {
+      "category": "RF Euro CP",
+      "return_month": 0.13,
+      "return_ytd": 0.33,
+      "return_1y": 1.96,
+      "prev_return_month": 0.19
+    },
+    {
+      "category": "Monetarios",
+      "return_month": 0.12,
+      "return_ytd": 0.28,
+      "return_1y": 1.77,
+      "prev_return_month": 0.15
+    },
+    {
+      "category": "FIL",
+      "return_month": -0.14,
+      "return_ytd": 0.87,
+      "return_1y": 6.54,
+      "prev_return_month": 1.01
+    },
+    {
+      "category": "RV Intl EEUU",
+      "return_month": -0.88,
+      "return_ytd": -0.71,
+      "return_1y": 3.02,
+      "prev_return_month": 0.17
+    },
+    {
+      "category": "Hedge Funds",
+      "return_month": 0.0,
+      "return_ytd": 0.0,
+      "return_1y": 4.09,
+      "prev_return_month": 0.0
+    }
+  ],
+  "group_movers": [
+    {
+      "name": "MIRALTA",
+      "aum_bn": 0.056,
+      "var_1m": 14.7,
+      "var_ytd": 27.21,
+      "var_1y": 56.15,
+      "num_isin": 11
+    },
+    {
+      "name": "AMISTRA",
+      "aum_bn": 0.028,
+      "var_1m": 13.75,
+      "var_ytd": 13.75,
+      "var_1y": 25.34,
+      "num_isin": 2
+    },
+    {
+      "name": "AZVALOR",
+      "aum_bn": 3.58,
+      "var_1m": 11.56,
+      "var_ytd": 25.6,
+      "var_1y": 56.44,
+      "num_isin": 5
+    },
+    {
+      "name": "COBAS AM",
+      "aum_bn": 2.847,
+      "var_1m": 9.16,
+      "var_ytd": 19.61,
+      "var_1y": 58.88,
+      "num_isin": 21
+    },
+    {
+      "name": "MAGALLANES VALUE INVESTORS",
+      "aum_bn": 2.071,
+      "var_1m": 6.42,
+      "var_ytd": 10.85,
+      "var_1y": 53.25,
+      "num_isin": 12
+    },
+    {
+      "name": "SASSOLA PARTNERS",
+      "aum_bn": 0.128,
+      "var_1m": 5.73,
+      "var_ytd": 7.37,
+      "var_1y": 24.32,
+      "num_isin": 6
+    },
+    {
+      "name": "PROFIT",
+      "aum_bn": 0.53,
+      "var_1m": 5.53,
+      "var_ytd": 10.04,
+      "var_1y": 22.19,
+      "num_isin": 3
+    },
+    {
+      "name": "SINGULAR",
+      "aum_bn": 1.4,
+      "var_1m": 4.6,
+      "var_ytd": 8.02,
+      "var_1y": 50.57,
+      "num_isin": 50
+    },
+    {
+      "name": "CBNK BANCO DE COLECTIVOS, S.A.",
+      "aum_bn": 0.748,
+      "var_1m": 4.32,
+      "var_ytd": 6.38,
+      "var_1y": 35.3,
+      "num_isin": 34
+    },
+    {
+      "name": "CREAND WM",
+      "aum_bn": 0.538,
+      "var_1m": 4.07,
+      "var_ytd": 7.54,
+      "var_1y": 35.45,
+      "num_isin": 56
+    },
+    {
+      "name": "TREA CAPITAL PARTNERS. SV. S. A",
+      "aum_bn": 5.761,
+      "var_1m": 4.0,
+      "var_ytd": 5.15,
+      "var_1y": 22.41,
+      "num_isin": 19
+    },
+    {
+      "name": "OLEA",
+      "aum_bn": 0.14,
+      "var_1m": 3.58,
+      "var_ytd": 7.49,
+      "var_1y": 50.21,
+      "num_isin": 1
+    },
+    {
+      "name": "ANDBANK",
+      "aum_bn": 3.776,
+      "var_1m": 2.96,
+      "var_ytd": 5.48,
+      "var_1y": 42.52,
+      "num_isin": 225
+    },
+    {
+      "name": "UNICAJA",
+      "aum_bn": 13.784,
+      "var_1m": 2.83,
+      "var_ytd": 5.86,
+      "var_1y": 25.24,
+      "num_isin": 103
+    },
+    {
+      "name": "TRESSIS",
+      "aum_bn": 1.044,
+      "var_1m": 2.58,
+      "var_ytd": 5.45,
+      "var_1y": 16.44,
+      "num_isin": 37
+    },
+    {
+      "name": "MEDIOLANUM",
+      "aum_bn": 4.127,
+      "var_1m": 2.53,
+      "var_ytd": 4.59,
+      "var_1y": 38.27,
+      "num_isin": 24
+    },
+    {
+      "name": "LABORAL KUTXA",
+      "aum_bn": 7.543,
+      "var_1m": 2.51,
+      "var_ytd": 5.07,
+      "var_1y": 22.47,
+      "num_isin": 44
+    },
+    {
+      "name": "SANTA LUCIA",
+      "aum_bn": 1.423,
+      "var_1m": 2.5,
+      "var_ytd": 3.28,
+      "var_1y": 10.25,
+      "num_isin": 66
+    },
+    {
+      "name": "PANZA",
+      "aum_bn": 0.225,
+      "var_1m": 2.5,
+      "var_ytd": 4.3,
+      "var_1y": 9.83,
+      "num_isin": 7
+    },
+    {
+      "name": "CAJA RURAL",
+      "aum_bn": 12.443,
+      "var_1m": 2.46,
+      "var_ytd": 4.97,
+      "var_1y": 19.53,
+      "num_isin": 80
+    },
+    {
+      "name": "GESIURIS",
+      "aum_bn": 0.561,
+      "var_1m": 2.41,
+      "var_ytd": 4.79,
+      "var_1y": 33.29,
+      "num_isin": 47
+    },
+    {
+      "name": "KUTXABANK",
+      "aum_bn": 34.402,
+      "var_1m": 2.39,
+      "var_ytd": 3.95,
+      "var_1y": 13.69,
+      "num_isin": 101
+    },
+    {
+      "name": "BANKINTER",
+      "aum_bn": 19.836,
+      "var_1m": 2.34,
+      "var_ytd": 3.65,
+      "var_1y": 23.54,
+      "num_isin": 157
+    },
+    {
+      "name": "DEUTSCHE BANK",
+      "aum_bn": 1.993,
+      "var_1m": 2.34,
+      "var_ytd": 5.73,
+      "var_1y": 28.9,
+      "num_isin": 16
+    },
+    {
+      "name": "UNIVERSE",
+      "aum_bn": 0.11,
+      "var_1m": 2.27,
+      "var_ytd": 6.32,
+      "var_1y": 49.94,
+      "num_isin": 5
+    },
+    {
+      "name": "SOLVENTIS",
+      "aum_bn": 0.256,
+      "var_1m": 2.16,
+      "var_ytd": 3.56,
+      "var_1y": 15.07,
+      "num_isin": 35
+    },
+    {
+      "name": "BESTINVER",
+      "aum_bn": 5.559,
+      "var_1m": 2.12,
+      "var_ytd": 3.98,
+      "var_1y": 9.25,
+      "num_isin": 40
+    },
+    {
+      "name": "WELCOME ASSET MANAGEMENT SPAIN, S. L.",
+      "aum_bn": 0.183,
+      "var_1m": 2.12,
+      "var_ytd": 3.26,
+      "var_1y": 11.62,
+      "num_isin": 7
+    },
+    {
+      "name": "ABANCA",
+      "aum_bn": 6.843,
+      "var_1m": 1.69,
+      "var_ytd": 2.71,
+      "var_1y": 20.47,
+      "num_isin": 31
+    },
+    {
+      "name": "SANTANDER",
+      "aum_bn": 67.616,
+      "var_1m": 1.67,
+      "var_ytd": 2.7,
+      "var_1y": 7.42,
+      "num_isin": 226
+    },
+    {
+      "name": "TOTALES",
+      "aum_bn": 465.11,
+      "var_1m": 1.62,
+      "var_ytd": 3.15,
+      "var_1y": 12.75,
+      "num_isin": 3329
+    },
+    {
+      "name": "CATALANA OCCIDENTE",
+      "aum_bn": 1.33,
+      "var_1m": 1.61,
+      "var_ytd": 3.8,
+      "var_1y": 22.66,
+      "num_isin": 8
+    },
+    {
+      "name": "GVC GAESCO",
+      "aum_bn": 1.606,
+      "var_1m": 1.59,
+      "var_ytd": 3.44,
+      "var_1y": 16.73,
+      "num_isin": 168
+    },
+    {
+      "name": "GESBUSA",
+      "aum_bn": 0.105,
+      "var_1m": 1.55,
+      "var_ytd": 4.07,
+      "var_1y": 20.87,
+      "num_isin": 3
+    },
+    {
+      "name": "ARQUIA",
+      "aum_bn": 0.641,
+      "var_1m": 1.51,
+      "var_ytd": 2.75,
+      "var_1y": 20.02,
+      "num_isin": 39
+    },
+    {
+      "name": "RENTA 4  BANCO",
+      "aum_bn": 6.219,
+      "var_1m": 1.46,
+      "var_ytd": 3.69,
+      "var_1y": 21.29,
+      "num_isin": 137
+    },
+    {
+      "name": "MAPFRE",
+      "aum_bn": 4.442,
+      "var_1m": 1.34,
+      "var_ytd": 2.38,
+      "var_1y": 18.94,
+      "num_isin": 51
+    },
+    {
+      "name": "TELEFONICA",
+      "aum_bn": 0.332,
+      "var_1m": 1.3,
+      "var_ytd": -0.07,
+      "var_1y": -1.68,
+      "num_isin": 13
+    },
+    {
+      "name": "CAIXABANK",
+      "aum_bn": 107.774,
+      "var_1m": 1.18,
+      "var_ytd": 2.44,
+      "var_1y": 10.65,
+      "num_isin": 293
+    },
+    {
+      "name": "IBERCAJA",
+      "aum_bn": 29.44,
+      "var_1m": 1.18,
+      "var_ytd": 2.23,
+      "var_1y": 9.61,
+      "num_isin": 123
+    },
+    {
+      "name": "CREDIT AGRICOLE",
+      "aum_bn": 19.675,
+      "var_1m": 1.15,
+      "var_ytd": 2.48,
+      "var_1y": 4.93,
+      "num_isin": 209
+    },
+    {
+      "name": "LORETO MUTUA",
+      "aum_bn": 0.382,
+      "var_1m": 1.13,
+      "var_ytd": 2.86,
+      "var_1y": 7.94,
+      "num_isin": 7
+    },
+    {
+      "name": "METAGESTION",
+      "aum_bn": 0.107,
+      "var_1m": 1.08,
+      "var_ytd": 0.86,
+      "var_1y": 1.04,
+      "num_isin": 8
+    },
+    {
+      "name": "AFI INVERSIONES GLOBALES",
+      "aum_bn": 0.151,
+      "var_1m": 1.02,
+      "var_ytd": 3.23,
+      "var_1y": 12.85,
+      "num_isin": 11
+    },
+    {
+      "name": "ABANTE",
+      "aum_bn": 4.421,
+      "var_1m": 0.99,
+      "var_ytd": 1.64,
+      "var_1y": 16.26,
+      "num_isin": 43
+    },
+    {
+      "name": "INTERMONEY",
+      "aum_bn": 0.15,
+      "var_1m": 0.93,
+      "var_ytd": 1.29,
+      "var_1y": -14.28,
+      "num_isin": 15
+    },
+    {
+      "name": "BBVA",
+      "aum_bn": 59.938,
+      "var_1m": 0.84,
+      "var_ytd": 2.27,
+      "var_1y": 7.38,
+      "num_isin": 106
+    },
+    {
+      "name": "GESTEFIN",
+      "aum_bn": 0.029,
+      "var_1m": 0.69,
+      "var_ytd": 2.83,
+      "var_1y": 2.69,
+      "num_isin": 1
+    },
+    {
+      "name": "DUNAS CAPITAL",
+      "aum_bn": 3.045,
+      "var_1m": 0.68,
+      "var_ytd": 1.59,
+      "var_1y": 32.29,
+      "num_isin": 22
+    },
+    {
+      "name": "GALA CAPITAL",
+      "aum_bn": 0.054,
+      "var_1m": 0.66,
+      "var_ytd": -0.44,
+      "var_1y": 0.98,
+      "num_isin": 8
+    },
+    {
+      "name": "CAJA INGENIEROS",
+      "aum_bn": 1.736,
+      "var_1m": 0.52,
+      "var_ytd": 2.29,
+      "var_1y": 17.48,
+      "num_isin": 26
+    },
+    {
+      "name": "UBS",
+      "aum_bn": 0.814,
+      "var_1m": 0.19,
+      "var_ytd": 0.91,
+      "var_1y": 8.73,
+      "num_isin": 17
+    },
+    {
+      "name": "ATL 12 CAPITAL PATRIMONIO",
+      "aum_bn": 0.723,
+      "var_1m": 0.07,
+      "var_ytd": 0.96,
+      "var_1y": 15.44,
+      "num_isin": 40
+    },
+    {
+      "name": "CARTESIO",
+      "aum_bn": 0.739,
+      "var_1m": 0.0,
+      "var_ytd": 16.73,
+      "var_1y": 29.12,
+      "num_isin": 2
+    },
+    {
+      "name": "ALTAMAR PRIVATE EQUITY",
+      "aum_bn": 0.679,
+      "var_1m": 0.0,
+      "var_ytd": 0.9,
+      "var_1y": 6.51,
+      "num_isin": 17
+    },
+    {
+      "name": "ARCANO",
+      "aum_bn": 0.502,
+      "var_1m": 0.0,
+      "var_ytd": 0.67,
+      "var_1y": -3.31,
+      "num_isin": 45
+    },
+    {
+      "name": "ACACIA INVERSION",
+      "aum_bn": 0.43,
+      "var_1m": 0.0,
+      "var_ytd": 10.17,
+      "var_1y": 13.03,
+      "num_isin": 19
+    },
+    {
+      "name": "A & G",
+      "aum_bn": 0.34,
+      "var_1m": 0.0,
+      "var_ytd": 11.55,
+      "var_1y": 15.4,
+      "num_isin": 12
+    },
+    {
+      "name": "HOROS",
+      "aum_bn": 0.335,
+      "var_1m": 0.0,
+      "var_ytd": 42.15,
+      "var_1y": 133.64,
+      "num_isin": 4
+    },
+    {
+      "name": "ATTITUDE",
+      "aum_bn": 0.3,
+      "var_1m": 0.0,
+      "var_ytd": 12.2,
+      "var_1y": 14.11,
+      "num_isin": 5
+    },
+    {
+      "name": "DUX INVERSORES CAPITAL AV",
+      "aum_bn": 0.26,
+      "var_1m": 0.0,
+      "var_ytd": 10.16,
+      "var_1y": -41.07,
+      "num_isin": 18
+    },
+    {
+      "name": "B&H CAPITAL",
+      "aum_bn": 0.207,
+      "var_1m": 0.0,
+      "var_ytd": 19.39,
+      "var_1y": 23.39,
+      "num_isin": 4
+    },
+    {
+      "name": "ABACO CAPITAL",
+      "aum_bn": 0.196,
+      "var_1m": 0.0,
+      "var_ytd": 19.3,
+      "var_1y": 25.34,
+      "num_isin": 9
+    },
+    {
+      "name": "ALANTRA PARTNERS",
+      "aum_bn": 0.181,
+      "var_1m": 0.0,
+      "var_ytd": -1.91,
+      "var_1y": -24.89,
+      "num_isin": 19
+    },
+    {
+      "name": "OMEGA",
+      "aum_bn": 0.168,
+      "var_1m": 0.0,
+      "var_ytd": -7.38,
+      "var_1y": 34.92,
+      "num_isin": 4
+    },
+    {
+      "name": "SILVER ALPHA",
+      "aum_bn": 0.161,
+      "var_1m": 0.0,
+      "var_ytd": 10.13,
+      "var_1y": 9.99,
+      "num_isin": 4
+    },
+    {
+      "name": "GINVEST",
+      "aum_bn": 0.157,
+      "var_1m": 0.0,
+      "var_ytd": 5.21,
+      "var_1y": 9.25,
+      "num_isin": 5
+    },
+    {
+      "name": "PATRIVALOR",
+      "aum_bn": 0.146,
+      "var_1m": 0.0,
+      "var_ytd": 13.43,
+      "var_1y": 9.43,
+      "num_isin": 2
+    },
+    {
+      "name": "VALENTUM",
+      "aum_bn": 0.135,
+      "var_1m": 0.0,
+      "var_ytd": 11.31,
+      "var_1y": 21.05,
+      "num_isin": 5
+    },
+    {
+      "name": "JULIUS BAER",
+      "aum_bn": 0.135,
+      "var_1m": 0.0,
+      "var_ytd": 4.58,
+      "var_1y": -1.78,
+      "num_isin": 5
+    },
+    {
+      "name": "MCH",
+      "aum_bn": 0.086,
+      "var_1m": 0.0,
+      "var_ytd": -0.94,
+      "var_1y": -7.94,
+      "num_isin": 9
+    },
+    {
+      "name": "IMPACT BRIDGE",
+      "aum_bn": 0.065,
+      "var_1m": 0.0,
+      "var_ytd": 2.15,
+      "var_1y": 16.46,
+      "num_isin": 5
+    },
+    {
+      "name": "ACTINVER",
+      "aum_bn": 0.049,
+      "var_1m": 0.0,
+      "var_ytd": 31.25,
+      "var_1y": 48.62,
+      "num_isin": 2
+    },
+    {
+      "name": "MACROFLOW",
+      "aum_bn": 0.049,
+      "var_1m": 0.0,
+      "var_ytd": 0.0,
+      "var_1y": 0.0,
+      "num_isin": 1
+    },
+    {
+      "name": "ALTAN CAPITAL",
+      "aum_bn": 0.047,
+      "var_1m": 0.0,
+      "var_ytd": -11.39,
+      "var_1y": -33.76,
+      "num_isin": 3
+    },
+    {
+      "name": "FINLETIC",
+      "aum_bn": 0.046,
+      "var_1m": 0.0,
+      "var_ytd": -13.71,
+      "var_1y": -11.76,
+      "num_isin": 1
+    },
+    {
+      "name": "TALENTA",
+      "aum_bn": 0.039,
+      "var_1m": 0.0,
+      "var_ytd": 14.75,
+      "var_1y": 16.07,
+      "num_isin": 5
+    },
+    {
+      "name": "CORPORACION FINANCIERA AZUAGA",
+      "aum_bn": 0.035,
+      "var_1m": 0.0,
+      "var_ytd": -28.03,
+      "var_1y": -28.9,
+      "num_isin": 7
+    },
+    {
+      "name": "ROLNIK CAPITAL OWNERS",
+      "aum_bn": 0.034,
+      "var_1m": 0.0,
+      "var_ytd": 7.16,
+      "var_1y": 16.74,
+      "num_isin": 4
+    },
+    {
+      "name": "MUZA",
+      "aum_bn": 0.031,
+      "var_1m": 0.0,
+      "var_ytd": 26.87,
+      "var_1y": 34.7,
+      "num_isin": 1
+    },
+    {
+      "name": "EBN BCO. NEGO",
+      "aum_bn": 0.029,
+      "var_1m": 0.0,
+      "var_ytd": 40.7,
+      "var_1y": 28.67,
+      "num_isin": 17
+    },
+    {
+      "name": "TESYS",
+      "aum_bn": 0.025,
+      "var_1m": 0.0,
+      "var_ytd": 18.38,
+      "var_1y": 0.0,
+      "num_isin": 3
+    },
+    {
+      "name": "NAO",
+      "aum_bn": 0.023,
+      "var_1m": 0.0,
+      "var_ytd": 4.07,
+      "var_1y": 16.82,
+      "num_isin": 3
+    },
+    {
+      "name": "ACCI",
+      "aum_bn": 0.02,
+      "var_1m": 0.0,
+      "var_ytd": 0.7,
+      "var_1y": 1.58,
+      "num_isin": 10
+    },
+    {
+      "name": "VARIANZA GESTION",
+      "aum_bn": 0.02,
+      "var_1m": 0.0,
+      "var_ytd": 8.73,
+      "var_1y": 19.54,
+      "num_isin": 1
+    },
+    {
+      "name": "AUGUSTUS CAPITAL",
+      "aum_bn": 0.007,
+      "var_1m": 0.0,
+      "var_ytd": 8.52,
+      "var_1y": 17.3,
+      "num_isin": 1
+    },
+    {
+      "name": "DIAGONAL ASSET SGIIC",
+      "aum_bn": 0.004,
+      "var_1m": 0.0,
+      "var_ytd": 8.33,
+      "var_1y": 1285.97,
+      "num_isin": 1
+    },
+    {
+      "name": "CRESCENTA",
+      "aum_bn": 0.0,
+      "var_1m": 0.0,
+      "var_ytd": 0.0,
+      "var_1y": 0.0,
+      "num_isin": 7
+    },
+    {
+      "name": "MUTUA MADRILEÑA",
+      "aum_bn": 13.075,
+      "var_1m": -0.49,
+      "var_ytd": -2.65,
+      "var_1y": 10.68,
+      "num_isin": 143
+    },
+    {
+      "name": "GESINTER",
+      "aum_bn": 0.035,
+      "var_1m": -1.01,
+      "var_ytd": -0.45,
+      "var_1y": 17.15,
+      "num_isin": 4
+    },
+    {
+      "name": "BANCA MARCH",
+      "aum_bn": 3.654,
+      "var_1m": -1.1,
+      "var_ytd": -2.03,
+      "var_1y": 5.46,
+      "num_isin": 103
+    }
+  ],
+  "gestora_movers_top": [
+    {
+      "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
+      "curr_aum_bn": 4.442,
+      "prev_aum_bn": 0,
+      "delta_bn": 4.442,
+      "delta_pct": null
+    },
+    {
+      "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
+      "curr_aum_bn": 107.774,
+      "prev_aum_bn": 106.522,
+      "delta_bn": 1.252,
+      "delta_pct": 1.18
+    },
+    {
+      "name": "Santander Asset Management, S.A.,SGIIC",
+      "curr_aum_bn": 67.475,
+      "prev_aum_bn": 66.365,
+      "delta_bn": 1.11,
+      "delta_pct": 1.67
+    },
+    {
+      "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A",
+      "curr_aum_bn": 0.748,
+      "prev_aum_bn": 0,
+      "delta_bn": 0.748,
+      "delta_pct": null
+    },
+    {
+      "name": "KUTXABANK GESTION, S.G.I.I.C., S.A.U.",
+      "curr_aum_bn": 28.004,
+      "prev_aum_bn": 27.29,
+      "delta_bn": 0.714,
+      "delta_pct": 2.62
+    },
+    {
+      "name": "BBVA Asset Management SA SGIIC",
+      "curr_aum_bn": 59.938,
+      "prev_aum_bn": 59.437,
+      "delta_bn": 0.501,
+      "delta_pct": 0.84
+    },
+    {
+      "name": "BANKINTER GESTION DE ACTIVOS SGIIC",
+      "curr_aum_bn": 19.836,
+      "prev_aum_bn": 19.382,
+      "delta_bn": 0.454,
+      "delta_pct": 2.34
+    },
+    {
+      "name": "UNICAJA ASSET MANAGEMENT, SGIIC, SA",
+      "curr_aum_bn": 13.784,
+      "prev_aum_bn": 13.405,
+      "delta_bn": 0.379,
+      "delta_pct": 2.83
+    },
+    {
+      "name": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
+      "curr_aum_bn": 3.58,
+      "prev_aum_bn": 3.209,
+      "delta_bn": 0.371,
+      "delta_pct": 11.56
+    },
+    {
+      "name": "IBERCAJA GESTIÓN, S.A.U.",
+      "curr_aum_bn": 29.44,
+      "prev_aum_bn": 29.096,
+      "delta_bn": 0.343,
+      "delta_pct": 1.18
+    },
+    {
+      "name": "GESCOOPERATIVO SA SG IIC",
+      "curr_aum_bn": 12.443,
+      "prev_aum_bn": 12.144,
+      "delta_bn": 0.299,
+      "delta_pct": 2.46
+    },
+    {
+      "name": "Cobas Asset Management S.G.I.I.C. S.A.",
+      "curr_aum_bn": 2.847,
+      "prev_aum_bn": 2.608,
+      "delta_bn": 0.239,
+      "delta_pct": 9.16
+    },
+    {
+      "name": "TREA ASSET MANAGEMENT SGIIC SA",
+      "curr_aum_bn": 5.761,
+      "prev_aum_bn": 5.539,
+      "delta_bn": 0.222,
+      "delta_pct": 4.0
+    },
+    {
+      "name": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
+      "curr_aum_bn": 7.543,
+      "prev_aum_bn": 7.359,
+      "delta_bn": 0.185,
+      "delta_pct": 2.51
+    },
+    {
+      "name": "SABADELL ASSET MANAGEMENT, S.A.,S.G.I.I.C., S.U.",
+      "curr_aum_bn": 15.372,
+      "prev_aum_bn": 15.216,
+      "delta_bn": 0.157,
+      "delta_pct": 1.03
+    }
+  ],
+  "gestora_movers_bottom": [
+    {
+      "name": "MUTUACTIVOS SGIIC  S.A.U.",
+      "curr_aum_bn": 11.89,
+      "prev_aum_bn": 11.935,
+      "delta_bn": -0.045,
+      "delta_pct": -0.38
+    },
+    {
+      "name": "MARCH ASSET MANAGEMENT S.G.I.I.C., S.A.U.",
+      "curr_aum_bn": 2.707,
+      "prev_aum_bn": 2.739,
+      "delta_bn": -0.032,
+      "delta_pct": -1.16
+    },
+    {
+      "name": "EDM Gestión, S.A. SGIIC",
+      "curr_aum_bn": 1.186,
+      "prev_aum_bn": 1.205,
+      "delta_bn": -0.02,
+      "delta_pct": -1.63
+    },
+    {
+      "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+      "curr_aum_bn": 0.947,
+      "prev_aum_bn": 0.956,
+      "delta_bn": -0.009,
+      "delta_pct": -0.94
+    },
+    {
+      "name": "ALANTRA MULTI ASSET, SGIIC, S.A.",
+      "curr_aum_bn": 0.134,
+      "prev_aum_bn": 0.134,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "JULIUS BAER GESTION, SGIIC, S.A.",
+      "curr_aum_bn": 0.135,
+      "prev_aum_bn": 0.135,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "VALENTUM ASSET MANAGEMENT, SGIIC, S.A.",
+      "curr_aum_bn": 0.135,
+      "prev_aum_bn": 0.135,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "PATRIVALOR, SGIIC, S.A.",
+      "curr_aum_bn": 0.146,
+      "prev_aum_bn": 0.146,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "GINVEST ASSET MANAGEMENT, SGIIC, S.A.",
+      "curr_aum_bn": 0.157,
+      "prev_aum_bn": 0.157,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "SILVER ALPHA ASSET MANAGEMENT SGIIC, S.A.",
+      "curr_aum_bn": 0.161,
+      "prev_aum_bn": 0.161,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "OMEGA GESTION DE INVERSIONES, SGIIC, S.A.",
+      "curr_aum_bn": 0.168,
+      "prev_aum_bn": 0.168,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "ABACO CAPITAL, SGIIC, S.A.",
+      "curr_aum_bn": 0.196,
+      "prev_aum_bn": 0.196,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "BUY & HOLD CAPITAL, SGIIC, S.A.",
+      "curr_aum_bn": 0.207,
+      "prev_aum_bn": 0.207,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "WELZIA MANAGEMENT S.G.I.I.C., S.A.U.",
+      "curr_aum_bn": 0.259,
+      "prev_aum_bn": 0.259,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    },
+    {
+      "name": "DUX INVERSORES, SGIIC, S.A.",
+      "curr_aum_bn": 0.26,
+      "prev_aum_bn": 0.26,
+      "delta_bn": 0.0,
+      "delta_pct": 0.0
+    }
+  ],
+  "inversis": {
+    "group": {
+      "name": "BANCA MARCH",
+      "aum_bn": 3.654,
+      "var_1m": -1.1,
+      "var_ytd": -2.03,
+      "var_1y": 5.46,
+      "num_isin": 103
+    },
+    "gestora": {
+      "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+      "curr_aum_bn": 0.947,
+      "prev_aum_bn": 0.956,
+      "delta_bn": -0.009,
+      "delta_pct": -0.94
+    }
+  },
+  "highlights": [
+    {
+      "type": "headline",
+      "icon": "chart",
+      "text": "The Spanish fund market grew by €7.4B (+1.6%) to reach €465.1B in 2026-02."
+    },
+    {
+      "type": "attribution",
+      "icon": "flows",
+      "text": "Growth driven by €3.8B market appreciation and €3.7B net investor flows."
+    },
+    {
+      "type": "flows",
+      "icon": "trend",
+      "text": "Net flows increased by €1.4B vs 2026-01 (€3.7B vs €2.2B)."
+    },
+    {
+      "type": "category",
+      "icon": "up",
+      "text": "Biggest category gainer: Internacional (+€4.1B, +2.9%)."
+    },
+    {
+      "type": "category",
+      "icon": "down",
+      "text": "Biggest category decliner: Monetarios (€-0.4B, -1.8%)."
+    },
+    {
+      "type": "performance",
+      "icon": "star",
+      "text": "Best monthly return: RV Intl Japón at +10.36%."
+    },
+    {
+      "type": "flows",
+      "icon": "inflow",
+      "text": "Top flow attractor: RF Mixta Euro with €0.73B net inflows."
+    },
+    {
+      "type": "investors",
+      "icon": "people",
+      "text": "The market lost 17,968,234 investors this month."
+    },
+    {
+      "type": "group",
+      "icon": "building",
+      "text": "Fastest growing group: MIRALTA (+14.7% MoM, €0.1B AUM)."
+    }
+  ]
+}

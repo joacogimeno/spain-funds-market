@@ -30,7 +30,7 @@ function TierCard({ title, color, groups, description }: {
         fontFamily: "'Outfit', sans-serif", textTransform: 'uppercase', letterSpacing: '0.05em',
       }}>{title}</div>
       <div style={{ fontSize: 11, color: '#555570', marginBottom: 16 }}>{description}</div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, maxHeight: 480, overflowY: 'auto' }}>
         {groups.map(g => (
           <div key={g.name} style={{
             display: 'flex', alignItems: 'center', gap: 12, padding: '8px 12px',
@@ -79,22 +79,22 @@ export default function Opportunities() {
         <SectionHeader title="Client Targeting Tiers" source="INVERCO — RkGrupos analysis" />
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
           <TierCard
-            title="Tier 1 — High Growth Independents"
-            color="#10b981"
-            groups={client_tiers.tier1_high_growth.slice(0, 8)}
-            description="Groups growing >20% YoY with >€1B AUM — prime targets for custody/platform services"
+            title="Tier 1 — Large Players"
+            color="#d42030"
+            groups={client_tiers.tier1_large_players}
+            description="Groups with >€20B AUM — market leaders; high-value long-term relationships"
           />
           <TierCard
-            title="Tier 2 — Growing Regionals"
+            title="Tier 2 — Mid-Size"
             color="#3b82f6"
-            groups={client_tiers.tier2_growing_regionals.slice(0, 8)}
-            description="Groups growing 10-20% YoY with >€2B AUM — expanding institutions needing infrastructure"
+            groups={client_tiers.tier2_midsize}
+            description="Groups with €3–20B AUM — established institutions with complex custody and platform needs"
           />
           <TierCard
-            title="Tier 3 — Established Managers"
-            color="#f59e0b"
-            groups={client_tiers.tier3_established.slice(0, 8)}
-            description="Stable groups >€3B AUM — relationship-driven, value quality and reliability"
+            title="Tier 3 — High Growth Independents"
+            color="#10b981"
+            groups={client_tiers.tier3_high_growth}
+            description="Groups growing >20% YoY outside Tier 1/2 — fast-scaling independents needing robust infrastructure"
           />
         </div>
       </div>
@@ -172,8 +172,9 @@ export default function Opportunities() {
             </div>
             <InsightCard title="Strategic Edge" color="#d42030">
               Inversis scores highest on <strong>Technology</strong> and <strong>Independence</strong> axes —
-              key differentiators for attracting independent gestoras. The opportunity is to convert
-              Tier 1 high-growth independents that need robust custody and distribution infrastructure.
+              key differentiators for attracting independent gestoras. Priority targets are
+              Tier 3 high-growth independents needing custody infrastructure, with Tier 2
+              mid-size institutions as the core revenue opportunity.
             </InsightCard>
           </div>
         </div>

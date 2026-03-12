@@ -23,6 +23,8 @@ def build_insights():
     for g in groups:
         if not g.get('patrimonio') or g['patrimonio'] == 0:
             continue
+        if g.get('name', '').upper() in ('TOTALES', 'TOTAL'):
+            continue
         aum_bn = g['patrimonio'] / 1_000_000
         var = g.get('var_1y')
         if var is None:
@@ -50,10 +52,16 @@ def build_insights():
     growing.sort(key=lambda x: x['var_1y'], reverse=True)
     declining.sort(key=lambda x: x['var_1y'])
 
-    # Client targeting tiers
-    tier1 = [g for g in high_growth if g['aum_bn'] > 1]
-    tier2 = [g for g in growing if g['aum_bn'] > 2]
-    tier3 = [g for g in stable if g['aum_bn'] > 3]
+    # Client targeting tiers — size-based (all groups eligible for Tier 2 & 3)
+    all_entries = high_growth + growing + stable + declining
+    all_by_aum = sorted(all_entries, key=lambda x: -x['aum_bn'])
+
+    tier1 = [g for g in all_by_aum if g['aum_bn'] >= 20]                        # Largest >€20B
+    tier2 = [g for g in all_by_aum if 3 <= g['aum_bn'] < 20]                    # Mid-size €3–20B
+    tier3 = sorted(                                                               # High growth independents €0.2–3B
+        [g for g in all_entries if 0.2 <= g['aum_bn'] < 3],
+        key=lambda x: -x['var_1y'],
+    )
 
     # Market opportunity analysis
     latest_flows = parse_suscripciones(latest_folder)
@@ -112,9 +120,9 @@ def build_insights():
 
     return {
         'client_tiers': {
-            'tier1_high_growth': tier1,
-            'tier2_growing_regionals': tier2,
-            'tier3_established': tier3,
+            'tier1_large_players': tier1,
+            'tier2_midsize': tier2,
+            'tier3_high_growth': tier3,
         },
         'market_opportunity': {
             'growth_sectors': growth_sectors,

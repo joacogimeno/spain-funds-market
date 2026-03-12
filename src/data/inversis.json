@@ -1,0 +1,1438 @@
+{
+  "date": "2025-Q3",
+  "depositary": {
+    "aum_bn": 12.29,
+    "class_count": 531,
+    "fund_count": 195,
+    "gestora_count": 25,
+    "market_share_pct": 2.8,
+    "rank_aum": 6,
+    "rank_gestoras": 2,
+    "wtd_fee_bps": 6.14,
+    "est_annual_rev_m": 7.55,
+    "by_gestora": [
+      {
+        "gestora": "MARCH ASSET MANAGEMENT, S.G.I.I.C., S.A.U.",
+        "gestora_short": "MARCH ASSET MANAGEMENT",
+        "classes": 40,
+        "funds": 18,
+        "aum_m": 2852.9,
+        "wtd_fee_bps": 3.25,
+        "est_rev_k": 926.6,
+        "investors": 32050
+      },
+      {
+        "gestora": "ANDBANK WEALTH MANAGEMENT, SGIIC, S.A.U.",
+        "gestora_short": "ANDBANK WEALTH MANAGEMENT",
+        "classes": 182,
+        "funds": 51,
+        "aum_m": 2648.7,
+        "wtd_fee_bps": 6.83,
+        "est_rev_k": 1809.2,
+        "investors": 94998
+      },
+      {
+        "gestora": "EDM GESTION, SOCIEDAD ANONIMA, S.G.I.I.C.",
+        "gestora_short": "EDM GESTION",
+        "classes": 18,
+        "funds": 10,
+        "aum_m": 1273.8,
+        "wtd_fee_bps": 6.59,
+        "est_rev_k": 839.9,
+        "investors": 9555
+      },
+      {
+        "gestora": "TRESSIS GESTION, S.G.I.I.C., S.A.",
+        "gestora_short": "TRESSIS GESTION",
+        "classes": 35,
+        "funds": 11,
+        "aum_m": 934.0,
+        "wtd_fee_bps": 7.44,
+        "est_rev_k": 694.8,
+        "investors": 12310
+      },
+      {
+        "gestora": "INVERSIS GESTIÓN, S.A., SGIIC",
+        "gestora_short": "INVERSIS GESTIÓN",
+        "classes": 66,
+        "funds": 29,
+        "aum_m": 917.5,
+        "wtd_fee_bps": 8.81,
+        "est_rev_k": 808.2,
+        "investors": 15610
+      },
+      {
+        "gestora": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A.",
+        "gestora_short": "CBNK GESTION DE ACTIVOS",
+        "classes": 33,
+        "funds": 14,
+        "aum_m": 674.6,
+        "wtd_fee_bps": 6.9,
+        "est_rev_k": 465.4,
+        "investors": 10261
+      },
+      {
+        "gestora": "GESCONSULT, S.A., S.G.I.I.C.",
+        "gestora_short": "GESCONSULT",
+        "classes": 15,
+        "funds": 5,
+        "aum_m": 580.6,
+        "wtd_fee_bps": 5.41,
+        "est_rev_k": 314.1,
+        "investors": 7360
+      },
+      {
+        "gestora": "GESALCALA, S.A., S.G.I.I.C.",
+        "gestora_short": "GESALCALA",
+        "classes": 51,
+        "funds": 11,
+        "aum_m": 403.7,
+        "wtd_fee_bps": 3.8,
+        "est_rev_k": 153.4,
+        "investors": 7863
+      },
+      {
+        "gestora": "FONDITEL GESTION, SGIIC, SA",
+        "gestora_short": "FONDITEL GESTION",
+        "classes": 13,
+        "funds": 6,
+        "aum_m": 335.8,
+        "wtd_fee_bps": 8.85,
+        "est_rev_k": 297.1,
+        "investors": 966
+      },
+      {
+        "gestora": "BUY & HOLD CAPITAL, SGIIC, S.A.",
+        "gestora_short": "BUY & HOLD CAPITAL",
+        "classes": 4,
+        "funds": 4,
+        "aum_m": 191.0,
+        "wtd_fee_bps": 5.0,
+        "est_rev_k": 95.5,
+        "investors": 5843
+      },
+      {
+        "gestora": "WELCOME ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "WELCOME ASSET MANAGEMENT",
+        "classes": 7,
+        "funds": 3,
+        "aum_m": 180.0,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 144.0,
+        "investors": 1507
+      },
+      {
+        "gestora": "ABANTE ASESORES GESTION, SGIIC, S.A.",
+        "gestora_short": "ABANTE ASESORES GESTION",
+        "classes": 2,
+        "funds": 2,
+        "aum_m": 167.9,
+        "wtd_fee_bps": 10.0,
+        "est_rev_k": 167.9,
+        "investors": 4880
+      },
+      {
+        "gestora": "GINVEST ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "GINVEST ASSET MANAGEMENT",
+        "classes": 5,
+        "funds": 1,
+        "aum_m": 155.9,
+        "wtd_fee_bps": 7.76,
+        "est_rev_k": 120.9,
+        "investors": 1671
+      },
+      {
+        "gestora": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
+        "gestora_short": "INTERMONEY GESTION",
+        "classes": 15,
+        "funds": 7,
+        "aum_m": 154.1,
+        "wtd_fee_bps": 6.8,
+        "est_rev_k": 104.8,
+        "investors": 1464
+      },
+      {
+        "gestora": "MUTUACTIVOS, S.A., S.G.I.I.C.",
+        "gestora_short": "MUTUACTIVOS",
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 131.8,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 105.5,
+        "investors": 3514
+      },
+      {
+        "gestora": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
+        "gestora_short": "RENTA 4 GESTORA",
+        "classes": 4,
+        "funds": 2,
+        "aum_m": 126.6,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 101.3,
+        "investors": 327
+      },
+      {
+        "gestora": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
+        "gestora_short": "OLEA GESTION DE ACTIVOS",
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 112.0,
+        "wtd_fee_bps": 5.0,
+        "est_rev_k": 56.0,
+        "investors": 1952
+      },
+      {
+        "gestora": "SASSOLA PARTNERS, SGIIC, S.A.",
+        "gestora_short": "SASSOLA PARTNERS",
+        "classes": 6,
+        "funds": 3,
+        "aum_m": 109.3,
+        "wtd_fee_bps": 7.0,
+        "est_rev_k": 76.5,
+        "investors": 549
+      },
+      {
+        "gestora": "METAGESTION, S.A., SGIIC",
+        "gestora_short": "METAGESTION",
+        "classes": 7,
+        "funds": 5,
+        "aum_m": 104.9,
+        "wtd_fee_bps": 6.57,
+        "est_rev_k": 68.9,
+        "investors": 4610
+      },
+      {
+        "gestora": "FINLETIC CAPITAL SGIIC SA.",
+        "gestora_short": "FINLETIC CAPITAL",
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 56.5,
+        "wtd_fee_bps": 9.0,
+        "est_rev_k": 50.9,
+        "investors": 124
+      },
+      {
+        "gestora": "WELZIA MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "WELZIA MANAGEMENT",
+        "classes": 6,
+        "funds": 3,
+        "aum_m": 52.7,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 42.2,
+        "investors": 522
+      },
+      {
+        "gestora": "ANTA ASSET MANAGEMENT SGIIC, SOCIEDAD ANÓNIMA",
+        "gestora_short": "ANTA ASSET MANAGEMENT",
+        "classes": 10,
+        "funds": 4,
+        "aum_m": 48.2,
+        "wtd_fee_bps": 7.61,
+        "est_rev_k": 36.7,
+        "investors": 308
+      },
+      {
+        "gestora": "ALTERNA INVERSIONES Y VALORES, S.G.I.I.C., S.A.",
+        "gestora_short": "ALTERNA INVERSIONES Y VALORES",
+        "classes": 2,
+        "funds": 1,
+        "aum_m": 42.7,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 34.1,
+        "investors": 237
+      },
+      {
+        "gestora": "AMISTRA, SGIIC, S.A.",
+        "gestora_short": "AMISTRA",
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 24.3,
+        "wtd_fee_bps": 10.0,
+        "est_rev_k": 24.3,
+        "investors": 146
+      },
+      {
+        "gestora": "ACCI CAPITAL INVESTMENTS, SGIIC, S.A.",
+        "gestora_short": "ACCI CAPITAL INVESTMENTS",
+        "classes": 6,
+        "funds": 1,
+        "aum_m": 13.9,
+        "wtd_fee_bps": 8.0,
+        "est_rev_k": 11.1,
+        "investors": 13
+      }
+    ],
+    "by_group": [
+      {
+        "group": "BANCA MARCH",
+        "gestoras": 2,
+        "classes": 106,
+        "funds": 47,
+        "aum_m": 3770.5,
+        "est_rev_k": 1734.8
+      },
+      {
+        "group": "ANDBANK",
+        "gestoras": 2,
+        "classes": 197,
+        "funds": 56,
+        "aum_m": 3229.2,
+        "est_rev_k": 2123.2
+      },
+      {
+        "group": "MUTUA MADRILEÑA",
+        "gestoras": 2,
+        "classes": 19,
+        "funds": 11,
+        "aum_m": 1405.7,
+        "est_rev_k": 945.3
+      },
+      {
+        "group": "MORA BANC GRUP, S.A.",
+        "gestoras": 1,
+        "classes": 35,
+        "funds": 11,
+        "aum_m": 934.0,
+        "est_rev_k": 694.8
+      },
+      {
+        "group": "CBNK BANCO DE COLECTIVOS, S.A.",
+        "gestoras": 1,
+        "classes": 33,
+        "funds": 14,
+        "aum_m": 674.6,
+        "est_rev_k": 465.4
+      },
+      {
+        "group": "CREDIT ANDORRÁ",
+        "gestoras": 1,
+        "classes": 51,
+        "funds": 11,
+        "aum_m": 403.7,
+        "est_rev_k": 153.4
+      },
+      {
+        "group": "TELEFONICA, S.A.",
+        "gestoras": 1,
+        "classes": 13,
+        "funds": 6,
+        "aum_m": 335.8,
+        "est_rev_k": 297.1
+      },
+      {
+        "group": "ABANTE ASESORES",
+        "gestoras": 2,
+        "classes": 8,
+        "funds": 5,
+        "aum_m": 220.6,
+        "est_rev_k": 210.1
+      },
+      {
+        "group": "BUY & HOLD CAPITAL",
+        "gestoras": 1,
+        "classes": 4,
+        "funds": 4,
+        "aum_m": 191.0,
+        "est_rev_k": 95.5
+      },
+      {
+        "group": "WELCOME ASSET MANAGEMENT SPAIN, S.L.",
+        "gestoras": 1,
+        "classes": 7,
+        "funds": 3,
+        "aum_m": 180.0,
+        "est_rev_k": 144.0
+      },
+      {
+        "group": "GINVEST",
+        "gestoras": 1,
+        "classes": 5,
+        "funds": 1,
+        "aum_m": 155.9,
+        "est_rev_k": 120.9
+      },
+      {
+        "group": "CORRETAJE E INFORMACION MONETARIA Y DE DIVISAS, AV, SA",
+        "gestoras": 1,
+        "classes": 15,
+        "funds": 7,
+        "aum_m": 154.1,
+        "est_rev_k": 104.8
+      },
+      {
+        "group": "RENTA 4 BANCO",
+        "gestoras": 1,
+        "classes": 4,
+        "funds": 2,
+        "aum_m": 126.6,
+        "est_rev_k": 101.3
+      },
+      {
+        "group": "OLEA GESTION DE ACTIVOS SGIIC",
+        "gestoras": 1,
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 112.0,
+        "est_rev_k": 56.0
+      },
+      {
+        "group": "SASSOLA PARTNERS",
+        "gestoras": 1,
+        "classes": 6,
+        "funds": 3,
+        "aum_m": 109.3,
+        "est_rev_k": 76.5
+      },
+      {
+        "group": "METAGESTION",
+        "gestoras": 1,
+        "classes": 7,
+        "funds": 5,
+        "aum_m": 104.9,
+        "est_rev_k": 68.9
+      },
+      {
+        "group": "FINLETIC",
+        "gestoras": 1,
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 56.5,
+        "est_rev_k": 50.9
+      },
+      {
+        "group": "CORPORACION FINANCIERA AZUAGA",
+        "gestoras": 1,
+        "classes": 10,
+        "funds": 4,
+        "aum_m": 48.2,
+        "est_rev_k": 36.7
+      },
+      {
+        "group": "ACTINVER",
+        "gestoras": 1,
+        "classes": 2,
+        "funds": 1,
+        "aum_m": 42.7,
+        "est_rev_k": 34.1
+      },
+      {
+        "group": "AMISTRA",
+        "gestoras": 1,
+        "classes": 1,
+        "funds": 1,
+        "aum_m": 24.3,
+        "est_rev_k": 24.3
+      },
+      {
+        "group": "ACCI CAPITAL INVESTMENTS",
+        "gestoras": 1,
+        "classes": 6,
+        "funds": 1,
+        "aum_m": 13.9,
+        "est_rev_k": 11.1
+      }
+    ],
+    "market_ranking": [
+      {
+        "rank": 1,
+        "depositario": "CECABANK, S.A.",
+        "depositario_short": "CECABANK",
+        "aum_bn": 198.97,
+        "market_share_pct": 44.7,
+        "fund_count": 355,
+        "class_count": 785,
+        "is_inversis": false
+      },
+      {
+        "rank": 2,
+        "depositario": "CACEIS BANK SPAIN S.A.",
+        "depositario_short": "CACEIS BANK SPAIN",
+        "aum_bn": 86.63,
+        "market_share_pct": 19.5,
+        "fund_count": 254,
+        "class_count": 492,
+        "is_inversis": false
+      },
+      {
+        "rank": 3,
+        "depositario": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+        "depositario_short": "BANCO BILBAO VIZCAYA ARGENTARIA",
+        "aum_bn": 58.83,
+        "market_share_pct": 13.2,
+        "fund_count": 91,
+        "class_count": 104,
+        "is_inversis": false
+      },
+      {
+        "rank": 4,
+        "depositario": "BNP PARIBAS S.A., SUCURSAL EN ESPAÑA",
+        "depositario_short": "BNP PARIBAS",
+        "aum_bn": 32.03,
+        "market_share_pct": 7.2,
+        "fund_count": 162,
+        "class_count": 487,
+        "is_inversis": false
+      },
+      {
+        "rank": 5,
+        "depositario": "BANKINTER, S.A.",
+        "depositario_short": "BANKINTER",
+        "aum_bn": 24.02,
+        "market_share_pct": 5.4,
+        "fund_count": 141,
+        "class_count": 279,
+        "is_inversis": false
+      },
+      {
+        "rank": 6,
+        "depositario": "BANCO INVERSIS, S.A.",
+        "depositario_short": "BANCO INVERSIS",
+        "aum_bn": 12.29,
+        "market_share_pct": 2.8,
+        "fund_count": 195,
+        "class_count": 531,
+        "is_inversis": true
+      },
+      {
+        "rank": 7,
+        "depositario": "BANCO COOPERATIVO ESPAÑOL, S.A.",
+        "depositario_short": "BANCO COOPERATIVO ESPAÑOL",
+        "aum_bn": 11.47,
+        "market_share_pct": 2.6,
+        "fund_count": 57,
+        "class_count": 82,
+        "is_inversis": false
+      },
+      {
+        "rank": 8,
+        "depositario": "CAJA LABORAL POPULAR COOP. DE CREDITO",
+        "depositario_short": "CAJA LABORAL POPULAR COOP. DE CREDITO",
+        "aum_bn": 6.88,
+        "market_share_pct": 1.5,
+        "fund_count": 40,
+        "class_count": 46,
+        "is_inversis": false
+      },
+      {
+        "rank": 9,
+        "depositario": "RENTA 4 BANCO, S.A.",
+        "depositario_short": "RENTA 4 BANCO",
+        "aum_bn": 5.23,
+        "market_share_pct": 1.2,
+        "fund_count": 64,
+        "class_count": 113,
+        "is_inversis": false
+      },
+      {
+        "rank": 10,
+        "depositario": "BANCO MEDIOLANUM, S.A.",
+        "depositario_short": "BANCO MEDIOLANUM",
+        "aum_bn": 3.59,
+        "market_share_pct": 0.8,
+        "fund_count": 6,
+        "class_count": 24,
+        "is_inversis": false
+      },
+      {
+        "rank": 11,
+        "depositario": "CAIXA DE CREDIT DELS ENGINYERS- CAJA DE CREDITO DE LOS INGENIEROS,  S. COOP. DE CREDITO",
+        "depositario_short": "CAIXA DE CREDIT DELS ENGINYERS- CAJA DE CREDITO DE LOS INGENIEROS",
+        "aum_bn": 1.64,
+        "market_share_pct": 0.4,
+        "fund_count": 15,
+        "class_count": 26,
+        "is_inversis": false
+      },
+      {
+        "rank": 12,
+        "depositario": "SINGULAR BANK, S.A.",
+        "depositario_short": "SINGULAR BANK",
+        "aum_bn": 1.49,
+        "market_share_pct": 0.3,
+        "fund_count": 29,
+        "class_count": 62,
+        "is_inversis": false
+      },
+      {
+        "rank": 13,
+        "depositario": "UBS AG, SUCURSAL EN ESPAÑA",
+        "depositario_short": "UBS AG",
+        "aum_bn": 0.98,
+        "market_share_pct": 0.2,
+        "fund_count": 14,
+        "class_count": 29,
+        "is_inversis": false
+      },
+      {
+        "rank": 14,
+        "depositario": "ARQUIA BANK, S.A.",
+        "depositario_short": "ARQUIA BANK",
+        "aum_bn": 0.6,
+        "market_share_pct": 0.1,
+        "fund_count": 17,
+        "class_count": 41,
+        "is_inversis": false
+      }
+    ]
+  },
+  "gestora": {
+    "name": "INVERSIS GESTIÓN, S.A., SGIIC",
+    "aum_bn": 0.947,
+    "growth_1y": 5.15,
+    "growth_ytd": -0.94,
+    "fund_count": 29,
+    "class_count": 66,
+    "fee_bps_paid": 8.81,
+    "est_rev_k": 808.2,
+    "aum_series": [
+      {
+        "label": "2024-01",
+        "aum_bn": 0.762
+      },
+      {
+        "label": "2024-02",
+        "aum_bn": 0.784
+      },
+      {
+        "label": "2024-03",
+        "aum_bn": 0.806
+      },
+      {
+        "label": "2024-04",
+        "aum_bn": 0.805
+      },
+      {
+        "label": "2024-05",
+        "aum_bn": 0.813
+      },
+      {
+        "label": "2024-06",
+        "aum_bn": 0.819
+      },
+      {
+        "label": "2024-07",
+        "aum_bn": 0.815
+      },
+      {
+        "label": "2024-08",
+        "aum_bn": 0.823
+      },
+      {
+        "label": "2024-09",
+        "aum_bn": 0.829
+      },
+      {
+        "label": "2024-10",
+        "aum_bn": 0.839
+      },
+      {
+        "label": "2024-11",
+        "aum_bn": 0.87
+      },
+      {
+        "label": "2024-12",
+        "aum_bn": 0.879
+      },
+      {
+        "label": "2025-01",
+        "aum_bn": 0.904
+      },
+      {
+        "label": "2025-02",
+        "aum_bn": 0.9
+      },
+      {
+        "label": "2025-03",
+        "aum_bn": 0.88
+      },
+      {
+        "label": "2025-04",
+        "aum_bn": 0.889
+      },
+      {
+        "label": "2025-05",
+        "aum_bn": 0.915
+      },
+      {
+        "label": "2025-06",
+        "aum_bn": 0.916
+      },
+      {
+        "label": "2025-07",
+        "aum_bn": 0.916
+      },
+      {
+        "label": "2025-08",
+        "aum_bn": 0.912
+      },
+      {
+        "label": "2025-09",
+        "aum_bn": 0.918
+      },
+      {
+        "label": "2025-10",
+        "aum_bn": 0.929
+      },
+      {
+        "label": "2025-11",
+        "aum_bn": 0.927
+      },
+      {
+        "label": "2025-12",
+        "aum_bn": 0.956
+      },
+      {
+        "label": "2026-01",
+        "aum_bn": 0.956
+      },
+      {
+        "label": "2026-02",
+        "aum_bn": 0.947
+      }
+    ]
+  },
+  "sicav": {
+    "total_market_aum_bn": 21.59,
+    "total_market_count": 481,
+    "total_shareholders": 95158,
+    "inversis_gestora_aum_m": 21.6,
+    "inversis_gestora_count": 4,
+    "market_ranking": [
+      {
+        "rank": 1,
+        "group": "SANTANDER",
+        "gestora": "SANTANDER AM",
+        "aum_m": 3816.3,
+        "count": 114,
+        "shareholders": 25490
+      },
+      {
+        "rank": 2,
+        "group": "BANCA MARCH",
+        "gestora": "",
+        "aum_m": 2395.7,
+        "count": 13,
+        "shareholders": 12173
+      },
+      {
+        "rank": 3,
+        "group": "BANKINTER",
+        "gestora": "BANKINTER GESTIÓN",
+        "aum_m": 2215.3,
+        "count": 87,
+        "shareholders": 11103
+      },
+      {
+        "rank": 4,
+        "group": "PACTIO",
+        "gestora": "PACTIO GESTIÓN",
+        "aum_m": 1750.5,
+        "count": 2,
+        "shareholders": 1097
+      },
+      {
+        "rank": 5,
+        "group": "ANDBANK",
+        "gestora": "",
+        "aum_m": 1493.1,
+        "count": 63,
+        "shareholders": 7645
+      },
+      {
+        "rank": 6,
+        "group": "UBS",
+        "gestora": "UBS WM",
+        "aum_m": 1385.3,
+        "count": 20,
+        "shareholders": 2453
+      },
+      {
+        "rank": 7,
+        "group": "RENTA 4",
+        "gestora": "RENTA 4 GESTORA",
+        "aum_m": 1136.6,
+        "count": 38,
+        "shareholders": 4096
+      },
+      {
+        "rank": 8,
+        "group": "CREAND WM",
+        "gestora": "CREAND AM",
+        "aum_m": 975.7,
+        "count": 15,
+        "shareholders": 2989
+      },
+      {
+        "rank": 9,
+        "group": "BCO. SABADELL",
+        "gestora": "URQUIJO GESTIÓN",
+        "aum_m": 948.8,
+        "count": 11,
+        "shareholders": 2696
+      },
+      {
+        "rank": 10,
+        "group": "BBVA",
+        "gestora": "BBVA AM",
+        "aum_m": 789.1,
+        "count": 4,
+        "shareholders": 5941
+      },
+      {
+        "rank": 11,
+        "group": "MAGALLANES",
+        "gestora": "MAGALLANES VALUE INVES.",
+        "aum_m": 642.2,
+        "count": 1,
+        "shareholders": 286
+      },
+      {
+        "rank": 12,
+        "group": "ARBARIN SICAV",
+        "gestora": "",
+        "aum_m": 376.1,
+        "count": 1,
+        "shareholders": 236
+      },
+      {
+        "rank": 13,
+        "group": "CREDIT AGRICOLE",
+        "gestora": "AMUNDI",
+        "aum_m": 360.0,
+        "count": 13,
+        "shareholders": 2061
+      },
+      {
+        "rank": 14,
+        "group": "SINGULAR BANK",
+        "gestora": "SINGULAR AM",
+        "aum_m": 344.7,
+        "count": 12,
+        "shareholders": 1579
+      },
+      {
+        "rank": 15,
+        "group": "MUZA",
+        "gestora": "MUZA GESTIÓN DE ACTIVOS",
+        "aum_m": 314.9,
+        "count": 1,
+        "shareholders": 258
+      },
+      {
+        "rank": 16,
+        "group": "MUTUA MADRILEÑA",
+        "gestora": "",
+        "aum_m": 266.9,
+        "count": 7,
+        "shareholders": 710
+      },
+      {
+        "rank": 17,
+        "group": "GESIURIS",
+        "gestora": "GESIURIS AM",
+        "aum_m": 241.6,
+        "count": 12,
+        "shareholders": 4609
+      },
+      {
+        "rank": 18,
+        "group": "AUSTRAL CAPITAL",
+        "gestora": "",
+        "aum_m": 220.6,
+        "count": 1,
+        "shareholders": 42
+      },
+      {
+        "rank": 19,
+        "group": "ABANTE",
+        "gestora": "",
+        "aum_m": 215.9,
+        "count": 11,
+        "shareholders": 1681
+      },
+      {
+        "rank": 20,
+        "group": "ASESORES Y GESTORES",
+        "gestora": "A&G FONDOS",
+        "aum_m": 217.8,
+        "count": 5,
+        "shareholders": 635
+      },
+      {
+        "rank": 21,
+        "group": "AURIGA",
+        "gestora": "QUADRIGA AM",
+        "aum_m": 190.6,
+        "count": 5,
+        "shareholders": 623
+      },
+      {
+        "rank": 22,
+        "group": "UNICAJA",
+        "gestora": "UNICAJA AM",
+        "aum_m": 152.5,
+        "count": 3,
+        "shareholders": 432
+      },
+      {
+        "rank": 23,
+        "group": "DIAGONAL ASSET SGIIC",
+        "gestora": "DIAGONAL AM",
+        "aum_m": 149.4,
+        "count": 5,
+        "shareholders": 791
+      },
+      {
+        "rank": 24,
+        "group": "INVERSIONES NAIRA SICAV",
+        "gestora": "",
+        "aum_m": 142.5,
+        "count": 1,
+        "shareholders": 170
+      },
+      {
+        "rank": 25,
+        "group": "AUGUSTUS",
+        "gestora": "AUGUSTUS CAPITAL AM",
+        "aum_m": 121.5,
+        "count": 1,
+        "shareholders": 540
+      },
+      {
+        "rank": 26,
+        "group": "CAIXABANK",
+        "gestora": "CAIXABANK AM",
+        "aum_m": 107.0,
+        "count": 9,
+        "shareholders": 937
+      },
+      {
+        "rank": 27,
+        "group": "TALENTA",
+        "gestora": "TALENTA GESTION",
+        "aum_m": 90.2,
+        "count": 2,
+        "shareholders": 202
+      },
+      {
+        "rank": 28,
+        "group": "GVC GAESCO",
+        "gestora": "GAESCO GESTIÓN",
+        "aum_m": 82.6,
+        "count": 5,
+        "shareholders": 868
+      },
+      {
+        "rank": 29,
+        "group": "RENTA INSULAR CANARIA SICAV",
+        "gestora": "",
+        "aum_m": 65.1,
+        "count": 1,
+        "shareholders": 173
+      },
+      {
+        "rank": 30,
+        "group": "JULIUS BAER",
+        "gestora": "JULIUS BAER",
+        "aum_m": 56.4,
+        "count": 1,
+        "shareholders": 511
+      }
+    ]
+  },
+  "market_context": {
+    "total_depositario_aum_bn": 444.6,
+    "total_depositarios": 14,
+    "inv_avg_fee_bps": 7.6,
+    "mkt_dep_fee_p25_bps": 7.22,
+    "mkt_dep_fee_p50_bps": 7.79,
+    "mkt_dep_fee_p75_bps": 9.27
+  },
+  "opportunity": {
+    "addressable_aum_bn": 36.2,
+    "target_gestoras_count": 47,
+    "potential_revenue_m": 4.7,
+    "targets": [
+      {
+        "gestora": "TREA ASSET MANAGEMENT S.G.I.I.C., S.A.",
+        "gestora_short": "TREA ASSET MANAGEMENT S.G.I.I.C.",
+        "current_depositario": "CECABANK",
+        "grupo": "TREA CAPITAL PARTNERS. SV. S.A.",
+        "aum_m": 5247.4,
+        "fund_count": 16,
+        "avg_fee_bps": 6.67,
+        "potential_rev_k": 3500.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "BESTINVER GESTION, S.A., S.G.I.I.C.",
+        "gestora_short": "BESTINVER GESTION",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "BESTINVER",
+        "aum_m": 4961.9,
+        "fund_count": 18,
+        "avg_fee_bps": 3.44,
+        "potential_rev_k": 1707.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "MAPFRE ASSET MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "MAPFRE",
+        "aum_m": 3634.7,
+        "fund_count": 29,
+        "avg_fee_bps": 5.14,
+        "potential_rev_k": 1868.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "DUNAS CAPITAL ASSET MANAGEMENT S.G.I.I.C., S.A.",
+        "gestora_short": "DUNAS CAPITAL ASSET MANAGEMENT S.G.I.I.C.",
+        "current_depositario": "CECABANK",
+        "grupo": "DUNAS CAPITAL ESPAÑA",
+        "aum_m": 2965.5,
+        "fund_count": 5,
+        "avg_fee_bps": 5.6,
+        "potential_rev_k": 1661.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "AZVALOR ASSET MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "AZVALOR",
+        "aum_m": 2555.3,
+        "fund_count": 5,
+        "avg_fee_bps": 3.8,
+        "potential_rev_k": 971.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "COBAS ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "COBAS ASSET MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "SANTA COMBA GESTIÓN",
+        "aum_m": 2084.9,
+        "fund_count": 5,
+        "avg_fee_bps": 2.6,
+        "potential_rev_k": 542.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "DEUTSCHE WEALTH MANAGEMENT SGIIC, S.A.",
+        "gestora_short": "DEUTSCHE WEALTH MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "DEUTSCHE BANK",
+        "aum_m": 1808.1,
+        "fund_count": 6,
+        "avg_fee_bps": 4.0,
+        "potential_rev_k": 723.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
+        "gestora_short": "MAGALLANES VALUE INVESTORS",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "MAGALLANES VALUE INVESTORS",
+        "aum_m": 1692.8,
+        "fund_count": 3,
+        "avg_fee_bps": 4.0,
+        "potential_rev_k": 677.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GVC GAESCO GESTIÓN, SGIIC, S.A.",
+        "gestora_short": "GVC GAESCO GESTIÓN",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "GVC GAESCO",
+        "aum_m": 1476.7,
+        "fund_count": 44,
+        "avg_fee_bps": 7.82,
+        "potential_rev_k": 1155.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "SANTA LUCIA ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "SANTA LUCIA ASSET MANAGEMENT",
+        "current_depositario": "CECABANK",
+        "grupo": "SANTALUCIA",
+        "aum_m": 1341.1,
+        "fund_count": 20,
+        "avg_fee_bps": 4.7,
+        "potential_rev_k": 630.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GRUPO CATALANA OCCIDENTE GESTION DE ACTIVOS, S.A., SGIIC",
+        "gestora_short": "GRUPO CATALANA OCCIDENTE GESTION DE ACTIVOS",
+        "current_depositario": "BANCO BILBAO VIZCAYA ARGENTARIA",
+        "grupo": "CATALANA OCCIDENTE",
+        "aum_m": 1202.7,
+        "fund_count": 8,
+        "avg_fee_bps": 3.5,
+        "potential_rev_k": 421.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
+        "gestora_short": "UBS WEALTH MANAGEMENT",
+        "current_depositario": "UBS AG",
+        "grupo": "UBS",
+        "aum_m": 831.2,
+        "fund_count": 9,
+        "avg_fee_bps": 7.89,
+        "potential_rev_k": 656.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
+        "gestora_short": "ATL 12 CAPITAL GESTION S.G.I.I.C",
+        "current_depositario": "BANKINTER",
+        "grupo": "ATL 12 CAPITAL PATRIMONIO, S.L.",
+        "aum_m": 702.1,
+        "fund_count": 16,
+        "avg_fee_bps": 9.43,
+        "potential_rev_k": 662.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "CARTESIO INVERSIONES, SGIIC, S.A.",
+        "gestora_short": "CARTESIO INVERSIONES",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "CARTESIO INVERSIONES",
+        "aum_m": 684.4,
+        "fund_count": 2,
+        "avg_fee_bps": 5.0,
+        "potential_rev_k": 342.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ARQUIGEST, S.A., S.G.I.I.C.",
+        "gestora_short": "ARQUIGEST",
+        "current_depositario": "ARQUIA BANK",
+        "grupo": "ARQUIA",
+        "aum_m": 604.2,
+        "fund_count": 17,
+        "avg_fee_bps": 15.2,
+        "potential_rev_k": 918.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GESPROFIT, S.A., S.G.I.I.C.",
+        "gestora_short": "GESPROFIT",
+        "current_depositario": "CECABANK",
+        "grupo": "GESPROFIT, SA, SGIIC",
+        "aum_m": 465.4,
+        "fund_count": 3,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 326.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GESIURIS ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "GESIURIS ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "GESIURIS, S.A., S.G.I.I.C.",
+        "aum_m": 458.3,
+        "fund_count": 27,
+        "avg_fee_bps": 7.01,
+        "potential_rev_k": 321.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ACACIA INVERSION, SGIIC, S.A.",
+        "gestora_short": "ACACIA INVERSION",
+        "current_depositario": "BANKINTER",
+        "grupo": "ACACIA INVERSION",
+        "aum_m": 405.1,
+        "fund_count": 7,
+        "avg_fee_bps": 10.0,
+        "potential_rev_k": 405.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "LORETO INVERSIONES, SGIIC, SA",
+        "gestora_short": "LORETO INVERSIONES",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "LORETO MUTUA",
+        "aum_m": 360.7,
+        "fund_count": 4,
+        "avg_fee_bps": 5.75,
+        "potential_rev_k": 207.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "A&G FONDOS, SGIIC, SA",
+        "gestora_short": "A&G FONDOS",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "A&G",
+        "aum_m": 303.4,
+        "fund_count": 6,
+        "avg_fee_bps": 7.33,
+        "potential_rev_k": 222.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "HOROS ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "HOROS ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "HOROS ASSET MANAGEMENT",
+        "aum_m": 235.8,
+        "fund_count": 2,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 165.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "DUX INVERSORES, SGIIC, S.A.",
+        "gestora_short": "DUX INVERSORES",
+        "current_depositario": "BANKINTER",
+        "grupo": "ABANTE ASESORES",
+        "aum_m": 231.5,
+        "fund_count": 8,
+        "avg_fee_bps": 9.6,
+        "potential_rev_k": 222.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "PANZA CAPITAL, SGIIC, S.A.",
+        "gestora_short": "PANZA CAPITAL",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "PANZA CAPITAL SGIIC",
+        "aum_m": 210.1,
+        "fund_count": 4,
+        "avg_fee_bps": 3.5,
+        "potential_rev_k": 74.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "SOLVENTIS S.G.I.I.C., S.A.",
+        "gestora_short": "SOLVENTIS S.G.I.I.C.",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "SOLVENTIS",
+        "aum_m": 188.3,
+        "fund_count": 11,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 132.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ABACO CAPITAL, SGIIC, S.A.",
+        "gestora_short": "ABACO CAPITAL",
+        "current_depositario": "SINGULAR BANK",
+        "grupo": "ABACO CAPITAL",
+        "aum_m": 175.4,
+        "fund_count": 3,
+        "avg_fee_bps": 8.0,
+        "potential_rev_k": 140.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "SILVER ALPHA ASSET MANAGEMENT SGIIC, S.A.",
+        "gestora_short": "SILVER ALPHA ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "SILVER ALPHA",
+        "aum_m": 154.5,
+        "fund_count": 3,
+        "avg_fee_bps": 7.67,
+        "potential_rev_k": 119.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
+        "gestora_short": "AFI INVERSIONES GLOBALES",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "AFI INVERSIONES GLOBALES",
+        "aum_m": 143.3,
+        "fund_count": 2,
+        "avg_fee_bps": 9.0,
+        "potential_rev_k": 129.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "PATRIVALOR, SGIIC, S.A.",
+        "gestora_short": "PATRIVALOR",
+        "current_depositario": "CECABANK",
+        "grupo": "PATRIVALOR",
+        "aum_m": 139.2,
+        "fund_count": 2,
+        "avg_fee_bps": 7.5,
+        "potential_rev_k": 104.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "JULIUS BAER GESTION, SGIIC, S.A.",
+        "gestora_short": "JULIUS BAER GESTION",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "JULIUS BAER",
+        "aum_m": 131.9,
+        "fund_count": 2,
+        "avg_fee_bps": 6.0,
+        "potential_rev_k": 79.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "VALENTUM ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "VALENTUM ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "VALENTUM",
+        "aum_m": 127.0,
+        "fund_count": 2,
+        "avg_fee_bps": 6.0,
+        "potential_rev_k": 76.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ATTITUDE GESTION, SGIIC, S.A.",
+        "gestora_short": "ATTITUDE GESTION",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "ATTITUDE GESTION",
+        "aum_m": 118.3,
+        "fund_count": 3,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 83.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GESBUSA, S.A., S.G.I.I.C.",
+        "gestora_short": "GESBUSA",
+        "current_depositario": "UBS AG",
+        "grupo": "GESBUSA",
+        "aum_m": 94.1,
+        "fund_count": 3,
+        "avg_fee_bps": 12.0,
+        "potential_rev_k": 113.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MARKET PORTFOLIO ASSET MANAGEMENT, S.G.I.I.C., S.A.",
+        "gestora_short": "MARKET PORTFOLIO ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "UNIVERSE",
+        "aum_m": 90.7,
+        "fund_count": 4,
+        "avg_fee_bps": 5.5,
+        "potential_rev_k": 50.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "ARCANO CAPITAL, SGIIC, S.A.",
+        "gestora_short": "ARCANO CAPITAL",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "ARCANO",
+        "aum_m": 59.9,
+        "fund_count": 1,
+        "avg_fee_bps": 6.0,
+        "potential_rev_k": 36.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "TALENTA GESTION , SGIIC, S.A.",
+        "gestora_short": "TALENTA GESTION",
+        "current_depositario": "UBS AG",
+        "grupo": "TALENTA GESTION SGIIC SA",
+        "aum_m": 37.8,
+        "fund_count": 1,
+        "avg_fee_bps": 5.0,
+        "potential_rev_k": 19.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "BRIGHTGATE CAPITAL, S.G.I.I.C., S.A.",
+        "gestora_short": "BRIGHTGATE CAPITAL",
+        "current_depositario": "UBS AG",
+        "grupo": "BRIGHTGATE CAPITAL",
+        "aum_m": 33.3,
+        "fund_count": 2,
+        "avg_fee_bps": 9.0,
+        "potential_rev_k": 30.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "BEKA ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "BEKA ASSET MANAGEMENT",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "BEKA FINANCIAL MARKETS HOLDINGS, S.L.",
+        "aum_m": 30.8,
+        "fund_count": 2,
+        "avg_fee_bps": 9.0,
+        "potential_rev_k": 28.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GESINTER, S.G.I.I.C., S.A.",
+        "gestora_short": "GESINTER",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "GESINTER, S.G.I.I.C., S.A.",
+        "aum_m": 28.4,
+        "fund_count": 3,
+        "avg_fee_bps": 10.0,
+        "potential_rev_k": 28.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MDEF GESTEFIN, S.A.U., SGIIC  (SOCIEDAD UNIPERSONAL)",
+        "gestora_short": "MDEF GESTEFIN",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "GESTEFIN, SA, SGIIC",
+        "aum_m": 27.8,
+        "fund_count": 1,
+        "avg_fee_bps": 6.0,
+        "potential_rev_k": 17.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MUZA GESTIÓN DE ACTIVOS, SGIIC, S.A.",
+        "gestora_short": "MUZA GESTIÓN DE ACTIVOS",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "MUZA",
+        "aum_m": 26.4,
+        "fund_count": 1,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 19.0,
+        "is_captive": false
+      }
+    ]
+  },
+  "positioning": {
+    "radar": [
+      {
+        "metric": "AUM Scale",
+        "inversis": 25,
+        "market_avg": 50,
+        "top_peer": 90
+      },
+      {
+        "metric": "Growth Rate",
+        "inversis": 35,
+        "market_avg": 50,
+        "top_peer": 85
+      },
+      {
+        "metric": "Fund Diversity",
+        "inversis": 60,
+        "market_avg": 50,
+        "top_peer": 80
+      },
+      {
+        "metric": "Client Reach",
+        "inversis": 40,
+        "market_avg": 50,
+        "top_peer": 95
+      },
+      {
+        "metric": "Technology",
+        "inversis": 75,
+        "market_avg": 50,
+        "top_peer": 70
+      },
+      {
+        "metric": "Independence",
+        "inversis": 80,
+        "market_avg": 40,
+        "top_peer": 90
+      }
+    ]
+  }
+}

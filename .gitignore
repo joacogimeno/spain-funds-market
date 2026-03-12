@@ -3,6 +3,6 @@ dist/
 .DS_Store
 *.xlsx
 *.pdf
-Data/
+/Data/
 __pycache__/
 *.pyc

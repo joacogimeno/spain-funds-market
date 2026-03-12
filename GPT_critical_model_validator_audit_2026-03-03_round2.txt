@@ -1,0 +1,250 @@
+CRITICAL MODEL VALIDATOR AUDIT (ROUND 2)
+Project: /Users/joaco/Spain funds market
+Date: 2026-03-03
+Auditor: GPT-5 Codex
+
+=================================================================
+1) Scope and Validation Method
+=================================================================
+This round validates Claude's post-fix codebase end-to-end:
+- Pipeline logic (parsers + transformers)
+- Frontend analytical integrity (tab formulas, narrative claims, KPI wiring)
+- Source-to-output reconciliation against raw INVERCO/CNMV files
+
+Executed checks:
+- npm run pipeline  (PASS)
+- npm run build     (PASS)
+- python3 -m compileall pipeline (PASS)
+
+Raw-data reconciliations executed:
+- INVERCO Jan-2026 YoY baseline check (Jan-2026 vs Jan-2025)
+- AUM bridge split validation (flows vs market effect)
+- CNMV A2.2 class/fund/fund+compartment counts and AUM totals
+- CNMV A1.1↔A2.2 join coverage checks
+- Banca March 0-bps and shortfall math verification
+
+=================================================================
+2) Executive Conclusion
+=================================================================
+Status: PARTIALLY REMEDIATED.
+
+Major quantitative fixes are now correct (notably YoY and AUM bridge in Market Overview, and Banca March shortfall magnitude). However, several material analytical integrity issues remain, including total-row contamination in group analytics, unresolved grain ambiguity in CNMV fund counts, hardcoded/stale narrative claims in key tabs, and robustness defects that can break under small source-data changes.
+
+Decision-grade use: acceptable for directional monitoring, but still not suitable for high-stakes decisioning without the remaining fixes below.
+
+=================================================================
+3) What Is Correct Now (Validated)
+=================================================================
+A) Market Overview YoY is fixed
+- Output now reports 12.3% YoY.
+- Raw check: Jan-2026 total AUM 457.675B vs Jan-2025 407.567B => +12.29%.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/data/market_overview.json (kpis.yoy_growth_pct = 12.3)
+  - /Users/joaco/Spain funds market/pipeline/transformers/market_overview.py:95-104 (date-key lookup)
+
+B) AUM growth decomposition is fixed
+- Output: total +105.48B = +58.72B flows +46.76B market effect.
+- No month gaps in monthly series (25 continuous points from 2024-01 to 2026-01).
+- Evidence:
+  - /Users/joaco/Spain funds market/src/data/market_overview.json (aum_bridge_summary)
+  - /Users/joaco/Spain funds market/pipeline/parsers/spanish_csv.py:80-81 (DD-MM and DD/MM support)
+
+C) Banca March shortfall order-of-magnitude bug is fixed
+- March AM implicit shortfall now ~1,244.7k (was ~100x too high before).
+- Formula uses bps/10,000 conversion.
+- Evidence:
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:325
+  - /Users/joaco/Spain funds market/src/data/banca_march.json (peer_comparison for March AM)
+
+D) CNMV universe AUM totals now reconcile at class-sum level
+- A2.2 classes: 3,101
+- A2.2 total AUM: 444.649B
+- Output summaries now align to ~444.6B.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/data/cnmv_fees.json (summary.total_aum_bn)
+  - /Users/joaco/Spain funds market/src/data/cnmv_depositaria.json (summary.total_aum_bn)
+
+=================================================================
+4) Remaining Findings (Prioritized)
+=================================================================
+
+[HIGH-01] Total row contamination still pollutes group/opportunity analytics
+- Issue:
+  - "TOTALES" is still treated as a real group in parsed rankings.
+  - It leaks into Monthly Report movers and Opportunities targeting tiers.
+- Impact:
+  - Distorts rankings and can surface non-client aggregate rows as "targets".
+- Evidence:
+  - Parser lacks filter: /Users/joaco/Spain funds market/pipeline/parsers/ranking_grupos.py:23-50
+  - Contaminated outputs:
+    - /Users/joaco/Spain funds market/src/data/group_rankings.json (name="TOTALES")
+    - /Users/joaco/Spain funds market/src/data/monthly_report.json (group_movers includes TOTALES)
+    - /Users/joaco/Spain funds market/src/data/insights.json (client_tiers.tier2 includes TOTALES)
+- Recommendation:
+  - Exclude TOTAL/TOTALES/Total general variants in parser and keep downstream defensive filters.
+
+
+[HIGH-02] CNMV Depositaría still uses ambiguous grain for "fund" counts
+- Issue:
+  - Aggregation key is fund_name only, not fund+compartment or class.
+  - Summary "total_funds" (1450) includes zero-AUM artifacts from join misses and does not match A2.2 fund_name count (1440).
+- Impact:
+  - Reported fund counts can be misinterpreted and are inconsistent across tabs/datasets.
+- Evidence:
+  - Aggregation key: /Users/joaco/Spain funds market/pipeline/transformers/cnmv_depositaria.py:236
+  - Summary count from that grain: /Users/joaco/Spain funds market/pipeline/transformers/cnmv_depositaria.py:451
+  - Output mismatch:
+    - /Users/joaco/Spain funds market/src/data/cnmv_depositaria.json (summary.total_funds = 1450)
+    - /Users/joaco/Spain funds market/src/data/cnmv_fees.json (summary.total_funds = 1440)
+- Recommendation:
+  - Publish explicit parallel counts by grain: class, fund_name, fund+compartment.
+  - Exclude zero-AUM rows from headline counts or display gross/net side-by-side.
+
+
+[HIGH-03] Banca March/Depositaría narratives still contain hardcoded, non-parameterized claims
+- Issue:
+  - Multiple statements are static prose assertions ("sole outlier", fixed counts like "8 zero-fee ISINs", "all 6 meaningful") and can drift as data refreshes.
+- Impact:
+  - Narrative can become wrong while charts remain correct, undermining trust.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/tabs/BancaMarch.tsx:782-783, 891, 913-915
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:205-209
+  - /Users/joaco/Spain funds market/pipeline/transformers/insights.py:73-87 (static structural shifts/threats)
+- Recommendation:
+  - Derive all numeric narrative fragments directly from output metrics.
+  - Separate measured facts from analyst hypotheses with explicit labeling.
+
+
+[MEDIUM-04] Banca March transformer has latent crash paths when peer data is missing
+- Issue:
+  - andbank_gest can be None, but code dereferences andbank_gest.get(...) in f-strings.
+- Impact:
+  - Pipeline can fail on future snapshots where peer naming changes.
+- Evidence:
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:384
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:452
+- Recommendation:
+  - Guard all optional peer dereferences and provide safe fallback text.
+
+
+[MEDIUM-05] Category YoY growth still uses positional index instead of date-key lookup
+- Issue:
+  - category_evolution uses monthly[-13] rather than explicit same-month-last-year by date.
+- Impact:
+  - Any future gap/duplication can silently corrupt growth rates.
+- Evidence:
+  - /Users/joaco/Spain funds market/pipeline/transformers/category_evolution.py:35
+- Recommendation:
+  - Mirror market_overview approach: compute yoy_date and lookup by key.
+
+
+[MEDIUM-06] Frontend tab order requirement remains unmet
+- Issue:
+  - Dashboard still defaults to Monthly Report first, not Market Overview first.
+- Impact:
+  - Requirement mismatch and inconsistent presentation baseline.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/App.tsx:15-17
+- Recommendation:
+  - Reorder tabs and set default active to Market Overview.
+
+
+[MEDIUM-07] Fee-analysis scatter still includes sub-€5M funds despite requested visual filter
+- Issue:
+  - fee_vs_size generation and rendering include very small AUM funds.
+- Impact:
+  - Visual compression/noise persists in TER vs Size interpretation.
+- Evidence:
+  - No >€5M filter in transformer: /Users/joaco/Spain funds market/pipeline/transformers/cnmv_fees.py:132-145
+  - No >€5M filter in chart: /Users/joaco/Spain funds market/src/tabs/FeeAnalysis.tsx:166-213
+- Recommendation:
+  - Apply hard filter at data build and/or chart level (patrimonio_m > 5).
+
+
+[LOW-08] CNMV fee parser still mishandles explicit zero investors in one edge case
+- Issue:
+  - Compartment context updates investors only when row_inv is truthy, so 0 is ignored.
+- Impact:
+  - Minor investor-count inaccuracy in specific rows.
+- Evidence:
+  - Condition: /Users/joaco/Spain funds market/pipeline/parsers/cnmv_fees.py:100
+  - Reconciliation found one mismatch (ISIN ES0131462147).
+- Recommendation:
+  - Replace truthy check with explicit None check.
+
+
+[LOW-09] KPI display hides valid 0.0% YoY in Market Overview
+- Issue:
+  - UI uses truthy check for yoy delta display.
+- Impact:
+  - Legitimate zero-growth state would render as missing.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/tabs/MarketOverview.tsx:35
+- Recommendation:
+  - Use explicit null check (value !== null && value !== undefined).
+
+
+[LOW-10] Sign formatting bug in CNMV Foreign KPI deltas
+- Issue:
+  - UI prepends '+' unconditionally when metric exists.
+- Impact:
+  - Negative values would render incorrectly (e.g., "+-2.1%").
+- Evidence:
+  - /Users/joaco/Spain funds market/src/tabs/Opportunities.tsx:201,208,215
+- Recommendation:
+  - Use sign-aware formatter shared across KPIs.
+
+
+[LOW-11] Formula label in Banca March shortfall chart is dimensionally incomplete
+- Issue:
+  - UI source string omits /10,000 conversion factor.
+- Impact:
+  - Reviewers can misread units and challenge result validity.
+- Evidence:
+  - /Users/joaco/Spain funds market/src/tabs/BancaMarch.tsx:358
+- Recommendation:
+  - Label formula explicitly: (median_bps - client_bps) / 10,000 × AUM_kEUR.
+
+
+[LOW-12] Static quarter/file references remain in Banca March module/UI
+- Issue:
+  - Source strings and INSIGHTS filename embed Q3-2025 assumptions.
+- Impact:
+  - Temporal staleness risk and inconsistent metadata in future quarters.
+- Evidence:
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:20
+  - /Users/joaco/Spain funds market/pipeline/transformers/banca_march.py:191
+  - /Users/joaco/Spain funds market/src/tabs/BancaMarch.tsx:358
+- Recommendation:
+  - Parameterize snapshot metadata and emit date/source fields from pipeline.
+
+=================================================================
+5) Focused Validation Notes (Banca March)
+=================================================================
+- Raw CNMV A2.2 (latest file: Estadisticas_IIC_2025_3T_Anexo.xlsx) confirms 8 zero-fee ISINs with positive AUM in M/MCP/RFECP; 6 belong to Banca March.
+- Banca March weighted-rate gap and uplift math is now internally consistent:
+  - March AM weighted fee: 3.25 bps
+  - Inversis book median: 7.61 bps
+  - Uplift vs median: ~€1,244.5K
+- Remaining problem is primarily governance/robustness of narrative and edge-case handling, not core arithmetic.
+
+=================================================================
+6) Recommended Remediation Sequence
+=================================================================
+Phase 1 (must-fix for integrity)
+1. Remove total-row contamination (HIGH-01).
+2. Resolve and document CNMV grain ambiguity in summaries (HIGH-02).
+3. Replace/parameterize hardcoded narrative assertions (HIGH-03).
+
+Phase 2 (stability + maintainability)
+4. Harden Banca March peer optionality (MEDIUM-04).
+5. Move category YoY to date-key logic (MEDIUM-05).
+6. Apply the pending UX/visual requirement updates (MEDIUM-06, MEDIUM-07).
+
+Phase 3 (quality polish)
+7. Fix investor-zero edge case and sign/null display defects (LOW-08/09/10/11/12).
+
+=================================================================
+7) Final Validator Verdict
+=================================================================
+Claude's fixes materially improved numerical correctness in core KPIs and Banca March fee math. However, this codebase still fails a strict model-validator standard due to unresolved analytical contamination (TOTAL rows), remaining grain ambiguity in CNMV fund counts, and hardcoded narrative logic that can silently drift from data.

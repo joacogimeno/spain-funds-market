@@ -1,0 +1,1219 @@
+{
+  "groups": [
+    {
+      "rank": 1,
+      "name": "CAIXABANK",
+      "aum_bn": 107.774,
+      "num_isin": 293,
+      "var_1y": 10.65,
+      "var_6m": 8.05,
+      "var_3m": 4.19,
+      "var_1m": 1.18,
+      "var_ytd": 2.44,
+      "gestoras": []
+    },
+    {
+      "rank": 2,
+      "name": "SANTANDER",
+      "aum_bn": 67.616,
+      "num_isin": 226,
+      "var_1y": 7.42,
+      "var_6m": 6.07,
+      "var_3m": 3.26,
+      "var_1m": 1.67,
+      "var_ytd": 2.7,
+      "gestoras": [
+        {
+          "name": "Santander Asset Management, S.A.,SGIIC",
+          "aum_bn": 67.475,
+          "var_1y": 7.51
+        },
+        {
+          "name": "SANTANDER ALTERNATIVE INVESTMENTS, SGIIC, S.A.U.",
+          "aum_bn": 0.141,
+          "var_1y": -23.78
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "BBVA",
+      "aum_bn": 59.938,
+      "num_isin": 106,
+      "var_1y": 7.38,
+      "var_6m": 6.27,
+      "var_3m": 3.28,
+      "var_1m": 0.84,
+      "var_ytd": 2.27,
+      "gestoras": []
+    },
+    {
+      "rank": 4,
+      "name": "KUTXABANK",
+      "aum_bn": 34.402,
+      "num_isin": 101,
+      "var_1y": 13.69,
+      "var_6m": 9.12,
+      "var_3m": 4.74,
+      "var_1m": 2.39,
+      "var_ytd": 3.95,
+      "gestoras": [
+        {
+          "name": "KUTXABANK GESTION, S.G.I.I.C., S.A.U.",
+          "aum_bn": 28.004,
+          "var_1y": 13.39
+        },
+        {
+          "name": "GIIC FINECO S.G.I.I.C., S.A.U.",
+          "aum_bn": 6.398,
+          "var_1y": 15.01
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "IBERCAJA",
+      "aum_bn": 29.44,
+      "num_isin": 123,
+      "var_1y": 9.61,
+      "var_6m": 5.49,
+      "var_3m": 2.85,
+      "var_1m": 1.18,
+      "var_ytd": 2.23,
+      "gestoras": []
+    },
+    {
+      "rank": 6,
+      "name": "CREDIT AGRICOLE",
+      "aum_bn": 19.675,
+      "num_isin": 209,
+      "var_1y": 4.93,
+      "var_6m": 4.7,
+      "var_3m": 1.72,
+      "var_1m": 1.15,
+      "var_ytd": 2.48,
+      "gestoras": [
+        {
+          "name": "SABADELL ASSET MANAGEMENT, S.A.,S.G.I.I.C., S.U.",
+          "aum_bn": 15.372,
+          "var_1y": 3.74
+        },
+        {
+          "name": "AMUNDI IBERIA, SGIIC, S.A.",
+          "aum_bn": 4.302,
+          "var_1y": 9.41
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "BANKINTER",
+      "aum_bn": 19.836,
+      "num_isin": 157,
+      "var_1y": 23.54,
+      "var_6m": 12.16,
+      "var_3m": 6.0,
+      "var_1m": 2.34,
+      "var_ytd": 3.65,
+      "gestoras": []
+    },
+    {
+      "rank": 8,
+      "name": "UNICAJA",
+      "aum_bn": 13.784,
+      "num_isin": 103,
+      "var_1y": 25.24,
+      "var_6m": 12.99,
+      "var_3m": 8.23,
+      "var_1m": 2.83,
+      "var_ytd": 5.86,
+      "gestoras": []
+    },
+    {
+      "rank": 9,
+      "name": "MUTUA MADRILEÑA",
+      "aum_bn": 13.075,
+      "num_isin": 143,
+      "var_1y": 10.68,
+      "var_6m": 2.59,
+      "var_3m": -2.13,
+      "var_1m": -0.49,
+      "var_ytd": -2.65,
+      "gestoras": [
+        {
+          "name": "MUTUACTIVOS SGIIC  S.A.U.",
+          "aum_bn": 11.89,
+          "var_1y": 10.88
+        },
+        {
+          "name": "EDM Gestión, S.A. SGIIC",
+          "aum_bn": 1.186,
+          "var_1y": 8.75
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "CAJA RURAL",
+      "aum_bn": 12.443,
+      "num_isin": 80,
+      "var_1y": 19.53,
+      "var_6m": 10.71,
+      "var_3m": 5.96,
+      "var_1m": 2.46,
+      "var_ytd": 4.97,
+      "gestoras": []
+    },
+    {
+      "rank": 11,
+      "name": "LABORAL KUTXA",
+      "aum_bn": 7.543,
+      "num_isin": 44,
+      "var_1y": 22.47,
+      "var_6m": 11.28,
+      "var_3m": 7.52,
+      "var_1m": 2.51,
+      "var_ytd": 5.07,
+      "gestoras": []
+    },
+    {
+      "rank": 12,
+      "name": "ABANCA",
+      "aum_bn": 6.843,
+      "num_isin": 31,
+      "var_1y": 20.47,
+      "var_6m": 6.34,
+      "var_3m": 1.16,
+      "var_1m": 1.69,
+      "var_ytd": 2.71,
+      "gestoras": []
+    },
+    {
+      "rank": 13,
+      "name": "RENTA 4  BANCO",
+      "aum_bn": 6.219,
+      "num_isin": 137,
+      "var_1y": 21.29,
+      "var_6m": 8.47,
+      "var_3m": 4.04,
+      "var_1m": 1.46,
+      "var_ytd": 3.69,
+      "gestoras": []
+    },
+    {
+      "rank": 14,
+      "name": "TREA CAPITAL PARTNERS. SV. S. A",
+      "aum_bn": 5.761,
+      "num_isin": 19,
+      "var_1y": 22.41,
+      "var_6m": 14.93,
+      "var_3m": 5.47,
+      "var_1m": 4.0,
+      "var_ytd": 5.15,
+      "gestoras": []
+    },
+    {
+      "rank": 15,
+      "name": "BESTINVER",
+      "aum_bn": 5.559,
+      "num_isin": 40,
+      "var_1y": 9.25,
+      "var_6m": 10.26,
+      "var_3m": 6.34,
+      "var_1m": 2.12,
+      "var_ytd": 3.98,
+      "gestoras": []
+    },
+    {
+      "rank": 16,
+      "name": "MAPFRE",
+      "aum_bn": 4.442,
+      "num_isin": 51,
+      "var_1y": 18.94,
+      "var_6m": 8.49,
+      "var_3m": 2.77,
+      "var_1m": 1.34,
+      "var_ytd": 2.38,
+      "gestoras": []
+    },
+    {
+      "rank": 17,
+      "name": "ABANTE",
+      "aum_bn": 4.421,
+      "num_isin": 43,
+      "var_1y": 16.26,
+      "var_6m": 6.03,
+      "var_3m": 2.68,
+      "var_1m": 0.99,
+      "var_ytd": 1.64,
+      "gestoras": [
+        {
+          "name": "ABANTE ASESORES GESTIÓN SGIIC S.A.",
+          "aum_bn": 4.161,
+          "var_1y": 17.57
+        },
+        {
+          "name": "WELZIA MANAGEMENT S.G.I.I.C., S.A.",
+          "aum_bn": 0.259,
+          "var_1y": -1.27
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "MEDIOLANUM",
+      "aum_bn": 4.127,
+      "num_isin": 24,
+      "var_1y": 38.27,
+      "var_6m": 18.39,
+      "var_3m": 9.8,
+      "var_1m": 2.53,
+      "var_ytd": 4.59,
+      "gestoras": []
+    },
+    {
+      "rank": 19,
+      "name": "ANDBANK",
+      "aum_bn": 3.776,
+      "num_isin": 225,
+      "var_1y": 42.52,
+      "var_6m": 34.9,
+      "var_3m": 2.92,
+      "var_1m": 2.96,
+      "var_ytd": 5.48,
+      "gestoras": [
+        {
+          "name": "ANDBANK WEALTH MANAGEMENT,SGIIC,SAU",
+          "aum_bn": 3.016,
+          "var_1y": 15.17
+        },
+        {
+          "name": "GESCONSULT S.A., S.G.I.I.C.",
+          "aum_bn": 0.722,
+          "var_1y": 98.52
+        },
+        {
+          "name": "ACTYUS PRIVATE EQUITY SGIIC, S.A.",
+          "aum_bn": 0.038,
+          "var_1y": 24.38
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "BANCA MARCH",
+      "aum_bn": 3.654,
+      "num_isin": 103,
+      "var_1y": 5.46,
+      "var_6m": -1.01,
+      "var_3m": -3.57,
+      "var_1m": -1.1,
+      "var_ytd": -2.03,
+      "gestoras": [
+        {
+          "name": "MARCH ASSET MANAGEMENT S.G.I.I.C., S.A.U.",
+          "aum_bn": 2.707,
+          "var_1y": 5.57
+        },
+        {
+          "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+          "aum_bn": 0.947,
+          "var_1y": 5.15
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "name": "AZVALOR",
+      "aum_bn": 3.58,
+      "num_isin": 5,
+      "var_1y": 56.44,
+      "var_6m": 51.32,
+      "var_3m": 33.59,
+      "var_1m": 11.56,
+      "var_ytd": 25.6,
+      "gestoras": []
+    },
+    {
+      "rank": 22,
+      "name": "DUNAS CAPITAL",
+      "aum_bn": 3.045,
+      "num_isin": 22,
+      "var_1y": 32.29,
+      "var_6m": 8.84,
+      "var_3m": 3.58,
+      "var_1m": 0.68,
+      "var_ytd": 1.59,
+      "gestoras": []
+    },
+    {
+      "rank": 23,
+      "name": "COBAS AM",
+      "aum_bn": 2.847,
+      "num_isin": 21,
+      "var_1y": 58.88,
+      "var_6m": 41.25,
+      "var_3m": 29.28,
+      "var_1m": 9.16,
+      "var_ytd": 19.61,
+      "gestoras": []
+    },
+    {
+      "rank": 24,
+      "name": "MAGALLANES VALUE INVESTORS",
+      "aum_bn": 2.071,
+      "num_isin": 12,
+      "var_1y": 53.25,
+      "var_6m": 26.67,
+      "var_3m": 19.5,
+      "var_1m": 6.42,
+      "var_ytd": 10.85,
+      "gestoras": []
+    },
+    {
+      "rank": 25,
+      "name": "DEUTSCHE BANK",
+      "aum_bn": 1.993,
+      "num_isin": 16,
+      "var_1y": 28.9,
+      "var_6m": 13.94,
+      "var_3m": 6.73,
+      "var_1m": 2.34,
+      "var_ytd": 5.73,
+      "gestoras": []
+    },
+    {
+      "rank": 26,
+      "name": "CAJA INGENIEROS",
+      "aum_bn": 1.736,
+      "num_isin": 26,
+      "var_1y": 17.48,
+      "var_6m": 8.34,
+      "var_3m": 4.65,
+      "var_1m": 0.52,
+      "var_ytd": 2.29,
+      "gestoras": []
+    },
+    {
+      "rank": 27,
+      "name": "GVC GAESCO",
+      "aum_bn": 1.606,
+      "num_isin": 168,
+      "var_1y": 16.73,
+      "var_6m": 19.55,
+      "var_3m": 7.94,
+      "var_1m": 1.59,
+      "var_ytd": 3.44,
+      "gestoras": []
+    },
+    {
+      "rank": 28,
+      "name": "SANTA LUCIA",
+      "aum_bn": 1.423,
+      "num_isin": 66,
+      "var_1y": 10.25,
+      "var_6m": 9.64,
+      "var_3m": 5.15,
+      "var_1m": 2.5,
+      "var_ytd": 3.28,
+      "gestoras": []
+    },
+    {
+      "rank": 29,
+      "name": "SINGULAR",
+      "aum_bn": 1.4,
+      "num_isin": 50,
+      "var_1y": 50.57,
+      "var_6m": 24.4,
+      "var_3m": 12.22,
+      "var_1m": 4.6,
+      "var_ytd": 8.02,
+      "gestoras": []
+    },
+    {
+      "rank": 30,
+      "name": "CATALANA OCCIDENTE",
+      "aum_bn": 1.33,
+      "num_isin": 8,
+      "var_1y": 22.66,
+      "var_6m": 15.52,
+      "var_3m": 6.3,
+      "var_1m": 1.61,
+      "var_ytd": 3.8,
+      "gestoras": []
+    },
+    {
+      "rank": 31,
+      "name": "TRESSIS",
+      "aum_bn": 1.044,
+      "num_isin": 37,
+      "var_1y": 16.44,
+      "var_6m": 12.06,
+      "var_3m": 8.5,
+      "var_1m": 2.58,
+      "var_ytd": 5.45,
+      "gestoras": []
+    },
+    {
+      "rank": 32,
+      "name": "UBS",
+      "aum_bn": 0.814,
+      "num_isin": 17,
+      "var_1y": 8.73,
+      "var_6m": 1.03,
+      "var_3m": 0.51,
+      "var_1m": 0.19,
+      "var_ytd": 0.91,
+      "gestoras": []
+    },
+    {
+      "rank": 33,
+      "name": "CBNK BANCO DE COLECTIVOS, S.A.",
+      "aum_bn": 0.748,
+      "num_isin": 34,
+      "var_1y": 35.3,
+      "var_6m": 17.54,
+      "var_3m": 13.5,
+      "var_1m": 4.32,
+      "var_ytd": 6.38,
+      "gestoras": []
+    },
+    {
+      "rank": 34,
+      "name": "CARTESIO",
+      "aum_bn": 0.739,
+      "num_isin": 2,
+      "var_1y": 29.12,
+      "var_6m": 19.44,
+      "var_3m": 16.73,
+      "var_1m": 0.0,
+      "var_ytd": 16.73,
+      "gestoras": []
+    },
+    {
+      "rank": 35,
+      "name": "ATL 12 CAPITAL PATRIMONIO",
+      "aum_bn": 0.723,
+      "num_isin": 40,
+      "var_1y": 15.44,
+      "var_6m": 5.85,
+      "var_3m": 2.44,
+      "var_1m": 0.07,
+      "var_ytd": 0.96,
+      "gestoras": []
+    },
+    {
+      "rank": 36,
+      "name": "ALTAMAR PRIVATE EQUITY",
+      "aum_bn": 0.679,
+      "num_isin": 17,
+      "var_1y": 6.51,
+      "var_6m": 6.51,
+      "var_3m": 0.9,
+      "var_1m": 0.0,
+      "var_ytd": 0.9,
+      "gestoras": []
+    },
+    {
+      "rank": 37,
+      "name": "ARQUIA",
+      "aum_bn": 0.641,
+      "num_isin": 39,
+      "var_1y": 20.02,
+      "var_6m": 9.93,
+      "var_3m": 4.01,
+      "var_1m": 1.51,
+      "var_ytd": 2.75,
+      "gestoras": []
+    },
+    {
+      "rank": 38,
+      "name": "GESIURIS",
+      "aum_bn": 0.561,
+      "num_isin": 47,
+      "var_1y": 33.29,
+      "var_6m": 8.6,
+      "var_3m": 5.38,
+      "var_1m": 2.41,
+      "var_ytd": 4.79,
+      "gestoras": []
+    },
+    {
+      "rank": 39,
+      "name": "CREAND WM",
+      "aum_bn": 0.538,
+      "num_isin": 56,
+      "var_1y": 35.45,
+      "var_6m": 18.95,
+      "var_3m": 11.11,
+      "var_1m": 4.07,
+      "var_ytd": 7.54,
+      "gestoras": []
+    },
+    {
+      "rank": 40,
+      "name": "PROFIT",
+      "aum_bn": 0.53,
+      "num_isin": 3,
+      "var_1y": 22.19,
+      "var_6m": 18.87,
+      "var_3m": 13.36,
+      "var_1m": 5.53,
+      "var_ytd": 10.04,
+      "gestoras": []
+    },
+    {
+      "rank": 41,
+      "name": "ARCANO",
+      "aum_bn": 0.502,
+      "num_isin": 45,
+      "var_1y": -3.31,
+      "var_6m": -4.59,
+      "var_3m": 0.67,
+      "var_1m": 0.0,
+      "var_ytd": 0.67,
+      "gestoras": []
+    },
+    {
+      "rank": 42,
+      "name": "ACACIA INVERSION",
+      "aum_bn": 0.43,
+      "num_isin": 19,
+      "var_1y": 13.03,
+      "var_6m": 10.95,
+      "var_3m": 10.17,
+      "var_1m": 0.0,
+      "var_ytd": 10.17,
+      "gestoras": []
+    },
+    {
+      "rank": 43,
+      "name": "LORETO MUTUA",
+      "aum_bn": 0.382,
+      "num_isin": 7,
+      "var_1y": 7.94,
+      "var_6m": 12.83,
+      "var_3m": 4.55,
+      "var_1m": 1.13,
+      "var_ytd": 2.86,
+      "gestoras": []
+    },
+    {
+      "rank": 44,
+      "name": "A & G",
+      "aum_bn": 0.34,
+      "num_isin": 12,
+      "var_1y": 15.4,
+      "var_6m": 15.83,
+      "var_3m": 11.55,
+      "var_1m": 0.0,
+      "var_ytd": 11.55,
+      "gestoras": []
+    },
+    {
+      "rank": 45,
+      "name": "HOROS",
+      "aum_bn": 0.335,
+      "num_isin": 4,
+      "var_1y": 133.64,
+      "var_6m": 96.7,
+      "var_3m": 42.15,
+      "var_1m": 0.0,
+      "var_ytd": 42.15,
+      "gestoras": []
+    },
+    {
+      "rank": 46,
+      "name": "TELEFONICA",
+      "aum_bn": 0.332,
+      "num_isin": 13,
+      "var_1y": -1.68,
+      "var_6m": 0.18,
+      "var_3m": -0.83,
+      "var_1m": 1.3,
+      "var_ytd": -0.07,
+      "gestoras": []
+    },
+    {
+      "rank": 47,
+      "name": "ATTITUDE",
+      "aum_bn": 0.3,
+      "num_isin": 5,
+      "var_1y": 14.11,
+      "var_6m": 12.08,
+      "var_3m": 12.2,
+      "var_1m": 0.0,
+      "var_ytd": 12.2,
+      "gestoras": []
+    },
+    {
+      "rank": 48,
+      "name": "DUX INVERSORES CAPITAL AV",
+      "aum_bn": 0.26,
+      "num_isin": 18,
+      "var_1y": -41.07,
+      "var_6m": 11.53,
+      "var_3m": 10.16,
+      "var_1m": 0.0,
+      "var_ytd": 10.16,
+      "gestoras": []
+    },
+    {
+      "rank": 49,
+      "name": "SOLVENTIS",
+      "aum_bn": 0.256,
+      "num_isin": 35,
+      "var_1y": 15.07,
+      "var_6m": 6.99,
+      "var_3m": 18.91,
+      "var_1m": 2.16,
+      "var_ytd": 3.56,
+      "gestoras": []
+    },
+    {
+      "rank": 50,
+      "name": "PANZA",
+      "aum_bn": 0.225,
+      "num_isin": 7,
+      "var_1y": 9.83,
+      "var_6m": 5.81,
+      "var_3m": 6.07,
+      "var_1m": 2.5,
+      "var_ytd": 4.3,
+      "gestoras": []
+    },
+    {
+      "rank": 51,
+      "name": "B&H CAPITAL",
+      "aum_bn": 0.207,
+      "num_isin": 4,
+      "var_1y": 23.39,
+      "var_6m": 21.66,
+      "var_3m": 19.39,
+      "var_1m": 0.0,
+      "var_ytd": 19.39,
+      "gestoras": []
+    },
+    {
+      "rank": 52,
+      "name": "ABACO CAPITAL",
+      "aum_bn": 0.196,
+      "num_isin": 9,
+      "var_1y": 25.34,
+      "var_6m": 24.27,
+      "var_3m": 19.3,
+      "var_1m": 0.0,
+      "var_ytd": 19.3,
+      "gestoras": []
+    },
+    {
+      "rank": 53,
+      "name": "WELCOME ASSET MANAGEMENT SPAIN, S. L.",
+      "aum_bn": 0.183,
+      "num_isin": 7,
+      "var_1y": 11.62,
+      "var_6m": 5.7,
+      "var_3m": 3.12,
+      "var_1m": 2.12,
+      "var_ytd": 3.26,
+      "gestoras": []
+    },
+    {
+      "rank": 54,
+      "name": "ALANTRA PARTNERS",
+      "aum_bn": 0.181,
+      "num_isin": 19,
+      "var_1y": -24.89,
+      "var_6m": -11.06,
+      "var_3m": -5.64,
+      "var_1m": 0.0,
+      "var_ytd": -1.91,
+      "gestoras": [
+        {
+          "name": "ALANTRA MULTI ASSET, SGIIC, S.A.",
+          "aum_bn": 0.134,
+          "var_1y": -21.33
+        },
+        {
+          "name": "ALANTRA EQMC ASSET MANAGEMENT, SGIIC, S.A.",
+          "aum_bn": 0.048,
+          "var_1y": -33.37
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "name": "OMEGA",
+      "aum_bn": 0.168,
+      "num_isin": 4,
+      "var_1y": 34.92,
+      "var_6m": 34.92,
+      "var_3m": -7.38,
+      "var_1m": 0.0,
+      "var_ytd": -7.38,
+      "gestoras": []
+    },
+    {
+      "rank": 56,
+      "name": "SILVER ALPHA",
+      "aum_bn": 0.161,
+      "num_isin": 4,
+      "var_1y": 9.99,
+      "var_6m": 9.1,
+      "var_3m": 10.13,
+      "var_1m": 0.0,
+      "var_ytd": 10.13,
+      "gestoras": []
+    },
+    {
+      "rank": 57,
+      "name": "GINVEST",
+      "aum_bn": 0.157,
+      "num_isin": 5,
+      "var_1y": 9.25,
+      "var_6m": 8.16,
+      "var_3m": 5.21,
+      "var_1m": 0.0,
+      "var_ytd": 5.21,
+      "gestoras": []
+    },
+    {
+      "rank": 58,
+      "name": "AFI INVERSIONES GLOBALES",
+      "aum_bn": 0.151,
+      "num_isin": 11,
+      "var_1y": 12.85,
+      "var_6m": 8.38,
+      "var_3m": 4.53,
+      "var_1m": 1.02,
+      "var_ytd": 3.23,
+      "gestoras": []
+    },
+    {
+      "rank": 59,
+      "name": "INTERMONEY",
+      "aum_bn": 0.15,
+      "num_isin": 15,
+      "var_1y": -14.28,
+      "var_6m": -11.42,
+      "var_3m": 0.73,
+      "var_1m": 0.93,
+      "var_ytd": 1.29,
+      "gestoras": []
+    },
+    {
+      "rank": 60,
+      "name": "PATRIVALOR",
+      "aum_bn": 0.146,
+      "num_isin": 2,
+      "var_1y": 9.43,
+      "var_6m": 17.16,
+      "var_3m": 13.43,
+      "var_1m": 0.0,
+      "var_ytd": 13.43,
+      "gestoras": []
+    },
+    {
+      "rank": 61,
+      "name": "OLEA",
+      "aum_bn": 0.14,
+      "num_isin": 1,
+      "var_1y": 50.21,
+      "var_6m": 34.04,
+      "var_3m": 17.23,
+      "var_1m": 3.58,
+      "var_ytd": 7.49,
+      "gestoras": []
+    },
+    {
+      "rank": 62,
+      "name": "VALENTUM",
+      "aum_bn": 0.135,
+      "num_isin": 5,
+      "var_1y": 21.05,
+      "var_6m": 16.87,
+      "var_3m": 11.31,
+      "var_1m": 0.0,
+      "var_ytd": 11.31,
+      "gestoras": []
+    },
+    {
+      "rank": 63,
+      "name": "JULIUS BAER",
+      "aum_bn": 0.135,
+      "num_isin": 5,
+      "var_1y": -1.78,
+      "var_6m": 3.68,
+      "var_3m": 4.58,
+      "var_1m": 0.0,
+      "var_ytd": 4.58,
+      "gestoras": []
+    },
+    {
+      "rank": 64,
+      "name": "SASSOLA PARTNERS",
+      "aum_bn": 0.128,
+      "num_isin": 6,
+      "var_1y": 24.32,
+      "var_6m": 18.71,
+      "var_3m": 8.4,
+      "var_1m": 5.73,
+      "var_ytd": 7.37,
+      "gestoras": []
+    },
+    {
+      "rank": 65,
+      "name": "UNIVERSE",
+      "aum_bn": 0.11,
+      "num_isin": 5,
+      "var_1y": 49.94,
+      "var_6m": 30.91,
+      "var_3m": 8.95,
+      "var_1m": 2.27,
+      "var_ytd": 6.32,
+      "gestoras": []
+    },
+    {
+      "rank": 66,
+      "name": "METAGESTION",
+      "aum_bn": 0.107,
+      "num_isin": 8,
+      "var_1y": 1.04,
+      "var_6m": 2.93,
+      "var_3m": 1.17,
+      "var_1m": 1.08,
+      "var_ytd": 0.86,
+      "gestoras": []
+    },
+    {
+      "rank": 67,
+      "name": "GESBUSA",
+      "aum_bn": 0.105,
+      "num_isin": 3,
+      "var_1y": 20.87,
+      "var_6m": 15.54,
+      "var_3m": 18.15,
+      "var_1m": 1.55,
+      "var_ytd": 4.07,
+      "gestoras": []
+    },
+    {
+      "rank": 68,
+      "name": "MCH",
+      "aum_bn": 0.086,
+      "num_isin": 9,
+      "var_1y": -7.94,
+      "var_6m": -7.94,
+      "var_3m": -0.94,
+      "var_1m": 0.0,
+      "var_ytd": -0.94,
+      "gestoras": []
+    },
+    {
+      "rank": 69,
+      "name": "IMPACT BRIDGE",
+      "aum_bn": 0.065,
+      "num_isin": 5,
+      "var_1y": 16.46,
+      "var_6m": 16.46,
+      "var_3m": 2.15,
+      "var_1m": 0.0,
+      "var_ytd": 2.15,
+      "gestoras": []
+    },
+    {
+      "rank": 70,
+      "name": "MIRALTA",
+      "aum_bn": 0.056,
+      "num_isin": 11,
+      "var_1y": 56.15,
+      "var_6m": 32.27,
+      "var_3m": 26.14,
+      "var_1m": 14.7,
+      "var_ytd": 27.21,
+      "gestoras": []
+    },
+    {
+      "rank": 71,
+      "name": "GALA CAPITAL",
+      "aum_bn": 0.054,
+      "num_isin": 8,
+      "var_1y": 0.98,
+      "var_6m": -2.82,
+      "var_3m": -1.65,
+      "var_1m": 0.66,
+      "var_ytd": -0.44,
+      "gestoras": []
+    },
+    {
+      "rank": 72,
+      "name": "ACTINVER",
+      "aum_bn": 0.049,
+      "num_isin": 2,
+      "var_1y": 48.62,
+      "var_6m": 26.04,
+      "var_3m": 31.25,
+      "var_1m": 0.0,
+      "var_ytd": 31.25,
+      "gestoras": []
+    },
+    {
+      "rank": 73,
+      "name": "MACROFLOW",
+      "aum_bn": 0.049,
+      "num_isin": 1,
+      "var_1y": 0.0,
+      "var_6m": 0.0,
+      "var_3m": 0.0,
+      "var_1m": 0.0,
+      "var_ytd": 0.0,
+      "gestoras": []
+    },
+    {
+      "rank": 74,
+      "name": "ALTAN CAPITAL",
+      "aum_bn": 0.047,
+      "num_isin": 3,
+      "var_1y": -33.76,
+      "var_6m": -20.82,
+      "var_3m": -11.39,
+      "var_1m": 0.0,
+      "var_ytd": -11.39,
+      "gestoras": []
+    },
+    {
+      "rank": 75,
+      "name": "FINLETIC",
+      "aum_bn": 0.046,
+      "num_isin": 1,
+      "var_1y": -11.76,
+      "var_6m": -10.3,
+      "var_3m": -13.71,
+      "var_1m": 0.0,
+      "var_ytd": -13.71,
+      "gestoras": []
+    },
+    {
+      "rank": 76,
+      "name": "TALENTA",
+      "aum_bn": 0.039,
+      "num_isin": 5,
+      "var_1y": 16.07,
+      "var_6m": 15.52,
+      "var_3m": 14.75,
+      "var_1m": 0.0,
+      "var_ytd": 14.75,
+      "gestoras": []
+    },
+    {
+      "rank": 77,
+      "name": "GESINTER",
+      "aum_bn": 0.035,
+      "num_isin": 4,
+      "var_1y": 17.15,
+      "var_6m": 6.47,
+      "var_3m": 0.19,
+      "var_1m": -1.01,
+      "var_ytd": -0.45,
+      "gestoras": []
+    },
+    {
+      "rank": 78,
+      "name": "CORPORACION FINANCIERA AZUAGA",
+      "aum_bn": 0.035,
+      "num_isin": 7,
+      "var_1y": -28.9,
+      "var_6m": -29.08,
+      "var_3m": -28.03,
+      "var_1m": 0.0,
+      "var_ytd": -28.03,
+      "gestoras": []
+    },
+    {
+      "rank": 79,
+      "name": "ROLNIK CAPITAL OWNERS",
+      "aum_bn": 0.034,
+      "num_isin": 4,
+      "var_1y": 16.74,
+      "var_6m": 14.78,
+      "var_3m": 7.16,
+      "var_1m": 0.0,
+      "var_ytd": 7.16,
+      "gestoras": []
+    },
+    {
+      "rank": 80,
+      "name": "MUZA",
+      "aum_bn": 0.031,
+      "num_isin": 1,
+      "var_1y": 34.7,
+      "var_6m": 29.67,
+      "var_3m": 26.87,
+      "var_1m": 0.0,
+      "var_ytd": 26.87,
+      "gestoras": []
+    },
+    {
+      "rank": 81,
+      "name": "GESTEFIN",
+      "aum_bn": 0.029,
+      "num_isin": 1,
+      "var_1y": 2.69,
+      "var_6m": 5.06,
+      "var_3m": 3.84,
+      "var_1m": 0.69,
+      "var_ytd": 2.83,
+      "gestoras": []
+    },
+    {
+      "rank": 82,
+      "name": "EBN BCO. NEGO",
+      "aum_bn": 0.029,
+      "num_isin": 17,
+      "var_1y": 28.67,
+      "var_6m": 28.67,
+      "var_3m": 40.7,
+      "var_1m": 0.0,
+      "var_ytd": 40.7,
+      "gestoras": []
+    },
+    {
+      "rank": 83,
+      "name": "AMISTRA",
+      "aum_bn": 0.028,
+      "num_isin": 2,
+      "var_1y": 25.34,
+      "var_6m": 18.3,
+      "var_3m": 13.37,
+      "var_1m": 13.75,
+      "var_ytd": 13.75,
+      "gestoras": []
+    },
+    {
+      "rank": 84,
+      "name": "TESYS",
+      "aum_bn": 0.025,
+      "num_isin": 3,
+      "var_1y": 0.0,
+      "var_6m": 0.0,
+      "var_3m": 0.0,
+      "var_1m": 0.0,
+      "var_ytd": 18.38,
+      "gestoras": []
+    },
+    {
+      "rank": 85,
+      "name": "NAO",
+      "aum_bn": 0.023,
+      "num_isin": 3,
+      "var_1y": 16.82,
+      "var_6m": 4.42,
+      "var_3m": 4.07,
+      "var_1m": 0.0,
+      "var_ytd": 4.07,
+      "gestoras": []
+    },
+    {
+      "rank": 86,
+      "name": "ACCI",
+      "aum_bn": 0.02,
+      "num_isin": 10,
+      "var_1y": 1.58,
+      "var_6m": 0.76,
+      "var_3m": 0.7,
+      "var_1m": 0.0,
+      "var_ytd": 0.7,
+      "gestoras": []
+    },
+    {
+      "rank": 87,
+      "name": "VARIANZA GESTION",
+      "aum_bn": 0.02,
+      "num_isin": 1,
+      "var_1y": 19.54,
+      "var_6m": 14.67,
+      "var_3m": 8.73,
+      "var_1m": 0.0,
+      "var_ytd": 8.73,
+      "gestoras": []
+    },
+    {
+      "rank": 88,
+      "name": "AUGUSTUS CAPITAL",
+      "aum_bn": 0.007,
+      "num_isin": 1,
+      "var_1y": 17.3,
+      "var_6m": 13.13,
+      "var_3m": 8.52,
+      "var_1m": 0.0,
+      "var_ytd": 8.52,
+      "gestoras": []
+    },
+    {
+      "rank": 89,
+      "name": "DIAGONAL ASSET SGIIC",
+      "aum_bn": 0.004,
+      "num_isin": 1,
+      "var_1y": 1285.97,
+      "var_6m": 21.96,
+      "var_3m": 8.33,
+      "var_1m": 0.0,
+      "var_ytd": 8.33,
+      "gestoras": []
+    },
+    {
+      "rank": 90,
+      "name": "CRESCENTA",
+      "aum_bn": 0.0,
+      "num_isin": 7,
+      "var_1y": 0.0,
+      "var_6m": 0.0,
+      "var_3m": 0.0,
+      "var_1m": 0.0,
+      "var_ytd": 0.0,
+      "gestoras": []
+    },
+    {
+      "rank": null,
+      "name": "TOTALES",
+      "aum_bn": 465.11,
+      "num_isin": 3329,
+      "var_1y": 12.75,
+      "var_6m": 8.37,
+      "var_3m": 4.35,
+      "var_1m": 1.62,
+      "var_ytd": 3.15,
+      "gestoras": []
+    }
+  ],
+  "inversis": {
+    "group": {
+      "rank": 20,
+      "name": "BANCA MARCH",
+      "aum_bn": 3.654,
+      "num_isin": 103,
+      "var_1y": 5.46,
+      "var_6m": -1.01,
+      "var_3m": -3.57,
+      "var_1m": -1.1,
+      "var_ytd": -2.03,
+      "gestoras": [
+        {
+          "name": "MARCH ASSET MANAGEMENT S.G.I.I.C., S.A.U.",
+          "aum_bn": 2.707,
+          "var_1y": 5.57
+        },
+        {
+          "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+          "aum_bn": 0.947,
+          "var_1y": 5.15
+        }
+      ]
+    },
+    "gestora": {
+      "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+      "aum_bn": 0.947,
+      "var_1y": 5.15
+    }
+  }
+}

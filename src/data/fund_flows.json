@@ -1,0 +1,7105 @@
+{
+  "monthly": [
+    {
+      "date": "2024-01",
+      "total_subs": 12.442,
+      "total_redemp": 10.099,
+      "total_net": 2.343,
+      "categories": {
+        "Monetarios": {
+          "net": 1.127,
+          "subs": 1.795,
+          "redemp": 0.668
+        },
+        "RF Euro CP": {
+          "net": 1.925,
+          "subs": 3.931,
+          "redemp": 2.005
+        },
+        "RF Euro LP": {
+          "net": 0.297,
+          "subs": 2.32,
+          "redemp": 2.023
+        },
+        "RF Mixta Euro": {
+          "net": 0.054,
+          "subs": 0.219,
+          "redemp": 0.165
+        },
+        "RV Mixta Euro": {
+          "net": -0.002,
+          "subs": 0.007,
+          "redemp": 0.009
+        },
+        "RV Nacional": {
+          "net": -0.147,
+          "subs": 0.052,
+          "redemp": 0.199
+        },
+        "RF Internacional": {
+          "net": 0.46,
+          "subs": 0.775,
+          "redemp": 0.315
+        },
+        "RF Mixta Internacional": {
+          "net": -0.418,
+          "subs": 0.218,
+          "redemp": 0.636
+        },
+        "RV Mixta Internacional": {
+          "net": -0.243,
+          "subs": 0.27,
+          "redemp": 0.513
+        },
+        "RV Euro Resto": {
+          "net": -0.031,
+          "subs": 0.038,
+          "redemp": 0.069
+        },
+        "RV Intl Europa": {
+          "net": -0.018,
+          "subs": 0.121,
+          "redemp": 0.139
+        },
+        "RV Intl EEUU": {
+          "net": -0.207,
+          "subs": 0.172,
+          "redemp": 0.379
+        },
+        "RV Intl Japón": {
+          "net": -0.017,
+          "subs": 0.013,
+          "redemp": 0.03
+        },
+        "RV Intl Emergentes": {
+          "net": -0.027,
+          "subs": 0.032,
+          "redemp": 0.059
+        },
+        "RV Intl Resto": {
+          "net": -0.18,
+          "subs": 0.428,
+          "redemp": 0.608
+        },
+        "Globales": {
+          "net": -0.859,
+          "subs": 0.495,
+          "redemp": 1.354
+        },
+        "Garantizados RF": {
+          "net": -0.065,
+          "subs": 0.065,
+          "redemp": 0.13
+        },
+        "Garantizados RV": {
+          "net": -0.125,
+          "subs": 0.16,
+          "redemp": 0.285
+        },
+        "Garantía parcial": {
+          "net": -0.001,
+          "subs": 0.0,
+          "redemp": 0.001
+        },
+        "Retorno Absoluto": {
+          "net": 0.012,
+          "subs": 0.16,
+          "redemp": 0.148
+        },
+        "Fondos Índice": {
+          "net": 0.115,
+          "subs": 0.202,
+          "redemp": 0.087
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.712,
+          "subs": 0.963,
+          "redemp": 0.251
+        },
+        "FIL": {
+          "net": -0.018,
+          "subs": 0.007,
+          "redemp": 0.025
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-02",
+      "total_subs": 14.09,
+      "total_redemp": 11.853,
+      "total_net": 2.237,
+      "categories": {
+        "Monetarios": {
+          "net": 1.324,
+          "subs": 2.235,
+          "redemp": 0.911
+        },
+        "RF Euro CP": {
+          "net": 1.257,
+          "subs": 3.303,
+          "redemp": 2.046
+        },
+        "RF Euro LP": {
+          "net": 0.534,
+          "subs": 2.491,
+          "redemp": 1.957
+        },
+        "RF Mixta Euro": {
+          "net": 0.419,
+          "subs": 0.676,
+          "redemp": 0.257
+        },
+        "RV Mixta Euro": {
+          "net": -0.002,
+          "subs": 0.006,
+          "redemp": 0.008
+        },
+        "RV Nacional": {
+          "net": -0.108,
+          "subs": 0.043,
+          "redemp": 0.151
+        },
+        "RF Internacional": {
+          "net": 0.503,
+          "subs": 0.83,
+          "redemp": 0.327
+        },
+        "RF Mixta Internacional": {
+          "net": -0.325,
+          "subs": 0.228,
+          "redemp": 0.553
+        },
+        "RV Mixta Internacional": {
+          "net": -0.115,
+          "subs": 0.37,
+          "redemp": 0.485
+        },
+        "RV Euro Resto": {
+          "net": 0.028,
+          "subs": 0.224,
+          "redemp": 0.197
+        },
+        "RV Intl Europa": {
+          "net": -0.031,
+          "subs": 0.163,
+          "redemp": 0.193
+        },
+        "RV Intl EEUU": {
+          "net": 0.173,
+          "subs": 0.507,
+          "redemp": 0.335
+        },
+        "RV Intl Japón": {
+          "net": 0.032,
+          "subs": 0.067,
+          "redemp": 0.035
+        },
+        "RV Intl Emergentes": {
+          "net": 0.016,
+          "subs": 0.068,
+          "redemp": 0.052
+        },
+        "RV Intl Resto": {
+          "net": -0.132,
+          "subs": 1.006,
+          "redemp": 1.139
+        },
+        "Globales": {
+          "net": -0.792,
+          "subs": 0.57,
+          "redemp": 1.363
+        },
+        "Garantizados RF": {
+          "net": -0.369,
+          "subs": 0.052,
+          "redemp": 0.421
+        },
+        "Garantizados RV": {
+          "net": -0.171,
+          "subs": 0.002,
+          "redemp": 0.173
+        },
+        "Garantía parcial": {
+          "net": -0.001,
+          "subs": 0.0,
+          "redemp": 0.001
+        },
+        "Retorno Absoluto": {
+          "net": -0.105,
+          "subs": 0.164,
+          "redemp": 0.269
+        },
+        "Fondos Índice": {
+          "net": -0.057,
+          "subs": 0.172,
+          "redemp": 0.229
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.169,
+          "subs": 0.879,
+          "redemp": 0.71
+        },
+        "FIL": {
+          "net": -0.008,
+          "subs": 0.034,
+          "redemp": 0.043
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-03",
+      "total_subs": 12.055,
+      "total_redemp": 9.376,
+      "total_net": 2.679,
+      "categories": {
+        "Monetarios": {
+          "net": 1.498,
+          "subs": 2.291,
+          "redemp": 0.792
+        },
+        "RF Euro CP": {
+          "net": 1.012,
+          "subs": 3.144,
+          "redemp": 2.132
+        },
+        "RF Euro LP": {
+          "net": 0.684,
+          "subs": 2.238,
+          "redemp": 1.554
+        },
+        "RF Mixta Euro": {
+          "net": 0.245,
+          "subs": 0.452,
+          "redemp": 0.208
+        },
+        "RV Mixta Euro": {
+          "net": -0.007,
+          "subs": 0.002,
+          "redemp": 0.009
+        },
+        "RV Nacional": {
+          "net": -0.06,
+          "subs": 0.034,
+          "redemp": 0.094
+        },
+        "RF Internacional": {
+          "net": 0.054,
+          "subs": 0.458,
+          "redemp": 0.404
+        },
+        "RF Mixta Internacional": {
+          "net": -0.306,
+          "subs": 0.225,
+          "redemp": 0.531
+        },
+        "RV Mixta Internacional": {
+          "net": -0.107,
+          "subs": 0.324,
+          "redemp": 0.432
+        },
+        "RV Euro Resto": {
+          "net": -0.046,
+          "subs": 0.047,
+          "redemp": 0.093
+        },
+        "RV Intl Europa": {
+          "net": -0.049,
+          "subs": 0.099,
+          "redemp": 0.148
+        },
+        "RV Intl EEUU": {
+          "net": -0.007,
+          "subs": 0.259,
+          "redemp": 0.266
+        },
+        "RV Intl Japón": {
+          "net": -0.018,
+          "subs": 0.019,
+          "redemp": 0.037
+        },
+        "RV Intl Emergentes": {
+          "net": 0.037,
+          "subs": 0.085,
+          "redemp": 0.048
+        },
+        "RV Intl Resto": {
+          "net": -0.009,
+          "subs": 0.593,
+          "redemp": 0.602
+        },
+        "Globales": {
+          "net": -0.582,
+          "subs": 0.587,
+          "redemp": 1.169
+        },
+        "Garantizados RF": {
+          "net": -0.033,
+          "subs": 0.097,
+          "redemp": 0.13
+        },
+        "Garantizados RV": {
+          "net": -0.06,
+          "subs": 0.002,
+          "redemp": 0.062
+        },
+        "Garantía parcial": {
+          "net": -0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": -0.003,
+          "subs": 0.117,
+          "redemp": 0.12
+        },
+        "Fondos Índice": {
+          "net": 0.038,
+          "subs": 0.179,
+          "redemp": 0.141
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.398,
+          "subs": 0.781,
+          "redemp": 0.383
+        },
+        "FIL": {
+          "net": 0.002,
+          "subs": 0.022,
+          "redemp": 0.021
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-04",
+      "total_subs": 13.086,
+      "total_redemp": 10.963,
+      "total_net": 2.123,
+      "categories": {
+        "Monetarios": {
+          "net": 1.365,
+          "subs": 2.211,
+          "redemp": 0.845
+        },
+        "RF Euro CP": {
+          "net": 1.471,
+          "subs": 3.529,
+          "redemp": 2.058
+        },
+        "RF Euro LP": {
+          "net": 0.869,
+          "subs": 2.321,
+          "redemp": 1.452
+        },
+        "RF Mixta Euro": {
+          "net": 0.764,
+          "subs": 1.039,
+          "redemp": 0.275
+        },
+        "RV Mixta Euro": {
+          "net": -0.003,
+          "subs": 0.003,
+          "redemp": 0.006
+        },
+        "RV Nacional": {
+          "net": -0.059,
+          "subs": 0.056,
+          "redemp": 0.115
+        },
+        "RF Internacional": {
+          "net": -0.276,
+          "subs": 0.577,
+          "redemp": 0.853
+        },
+        "RF Mixta Internacional": {
+          "net": -0.28,
+          "subs": 0.226,
+          "redemp": 0.506
+        },
+        "RV Mixta Internacional": {
+          "net": -0.174,
+          "subs": 0.307,
+          "redemp": 0.481
+        },
+        "RV Euro Resto": {
+          "net": -0.025,
+          "subs": 0.042,
+          "redemp": 0.067
+        },
+        "RV Intl Europa": {
+          "net": 0.081,
+          "subs": 0.232,
+          "redemp": 0.151
+        },
+        "RV Intl EEUU": {
+          "net": -0.031,
+          "subs": 0.258,
+          "redemp": 0.289
+        },
+        "RV Intl Japón": {
+          "net": 0.004,
+          "subs": 0.028,
+          "redemp": 0.024
+        },
+        "RV Intl Emergentes": {
+          "net": -0.026,
+          "subs": 0.04,
+          "redemp": 0.066
+        },
+        "RV Intl Resto": {
+          "net": -0.096,
+          "subs": 0.529,
+          "redemp": 0.625
+        },
+        "Globales": {
+          "net": -0.716,
+          "subs": 0.554,
+          "redemp": 1.27
+        },
+        "Garantizados RF": {
+          "net": -0.234,
+          "subs": 0.029,
+          "redemp": 0.263
+        },
+        "Garantizados RV": {
+          "net": -0.165,
+          "subs": 0.008,
+          "redemp": 0.174
+        },
+        "Garantía parcial": {
+          "net": -0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.034,
+          "subs": 0.145,
+          "redemp": 0.11
+        },
+        "Fondos Índice": {
+          "net": -0.129,
+          "subs": 0.149,
+          "redemp": 0.278
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.247,
+          "subs": 0.788,
+          "redemp": 1.035
+        },
+        "FIL": {
+          "net": -0.005,
+          "subs": 0.013,
+          "redemp": 0.018
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-05",
+      "total_subs": 14.344,
+      "total_redemp": 12.328,
+      "total_net": 2.017,
+      "categories": {
+        "Monetarios": {
+          "net": 1.242,
+          "subs": 2.248,
+          "redemp": 1.006
+        },
+        "RF Euro CP": {
+          "net": 1.575,
+          "subs": 3.742,
+          "redemp": 2.166
+        },
+        "RF Euro LP": {
+          "net": 0.394,
+          "subs": 2.138,
+          "redemp": 1.744
+        },
+        "RF Mixta Euro": {
+          "net": 0.694,
+          "subs": 0.929,
+          "redemp": 0.235
+        },
+        "RV Mixta Euro": {
+          "net": -0.013,
+          "subs": 0.002,
+          "redemp": 0.015
+        },
+        "RV Nacional": {
+          "net": -0.199,
+          "subs": 0.05,
+          "redemp": 0.25
+        },
+        "RF Internacional": {
+          "net": -0.419,
+          "subs": 0.467,
+          "redemp": 0.885
+        },
+        "RF Mixta Internacional": {
+          "net": -0.288,
+          "subs": 0.216,
+          "redemp": 0.504
+        },
+        "RV Mixta Internacional": {
+          "net": -0.013,
+          "subs": 0.46,
+          "redemp": 0.473
+        },
+        "RV Euro Resto": {
+          "net": -0.025,
+          "subs": 0.152,
+          "redemp": 0.178
+        },
+        "RV Intl Europa": {
+          "net": 0.244,
+          "subs": 0.37,
+          "redemp": 0.126
+        },
+        "RV Intl EEUU": {
+          "net": 0.096,
+          "subs": 0.326,
+          "redemp": 0.23
+        },
+        "RV Intl Japón": {
+          "net": 0.036,
+          "subs": 0.05,
+          "redemp": 0.014
+        },
+        "RV Intl Emergentes": {
+          "net": -0.063,
+          "subs": 0.04,
+          "redemp": 0.104
+        },
+        "RV Intl Resto": {
+          "net": 0.038,
+          "subs": 0.546,
+          "redemp": 0.507
+        },
+        "Globales": {
+          "net": -0.59,
+          "subs": 0.563,
+          "redemp": 1.153
+        },
+        "Garantizados RF": {
+          "net": -0.039,
+          "subs": 0.086,
+          "redemp": 0.125
+        },
+        "Garantizados RV": {
+          "net": -0.094,
+          "subs": 0.017,
+          "redemp": 0.112
+        },
+        "Garantía parcial": {
+          "net": -0.005,
+          "subs": 0.0,
+          "redemp": 0.005
+        },
+        "Retorno Absoluto": {
+          "net": -0.009,
+          "subs": 0.122,
+          "redemp": 0.131
+        },
+        "Fondos Índice": {
+          "net": -0.003,
+          "subs": 0.14,
+          "redemp": 0.143
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.55,
+          "subs": 1.653,
+          "redemp": 2.202
+        },
+        "FIL": {
+          "net": 0.007,
+          "subs": 0.026,
+          "redemp": 0.019
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-06",
+      "total_subs": 14.186,
+      "total_redemp": 12.967,
+      "total_net": 1.219,
+      "categories": {
+        "Monetarios": {
+          "net": 1.149,
+          "subs": 2.218,
+          "redemp": 1.069
+        },
+        "RF Euro CP": {
+          "net": 0.624,
+          "subs": 3.422,
+          "redemp": 2.798
+        },
+        "RF Euro LP": {
+          "net": 0.014,
+          "subs": 3.457,
+          "redemp": 3.442
+        },
+        "RF Mixta Euro": {
+          "net": 0.573,
+          "subs": 0.809,
+          "redemp": 0.236
+        },
+        "RV Mixta Euro": {
+          "net": -0.005,
+          "subs": 0.004,
+          "redemp": 0.008
+        },
+        "RV Nacional": {
+          "net": 0.014,
+          "subs": 0.184,
+          "redemp": 0.17
+        },
+        "RF Internacional": {
+          "net": 0.051,
+          "subs": 0.337,
+          "redemp": 0.286
+        },
+        "RF Mixta Internacional": {
+          "net": -0.254,
+          "subs": 0.173,
+          "redemp": 0.427
+        },
+        "RV Mixta Internacional": {
+          "net": -0.022,
+          "subs": 0.375,
+          "redemp": 0.397
+        },
+        "RV Euro Resto": {
+          "net": -0.011,
+          "subs": 0.082,
+          "redemp": 0.092
+        },
+        "RV Intl Europa": {
+          "net": -0.016,
+          "subs": 0.098,
+          "redemp": 0.114
+        },
+        "RV Intl EEUU": {
+          "net": 0.104,
+          "subs": 0.328,
+          "redemp": 0.224
+        },
+        "RV Intl Japón": {
+          "net": -0.002,
+          "subs": 0.017,
+          "redemp": 0.019
+        },
+        "RV Intl Emergentes": {
+          "net": 0.001,
+          "subs": 0.039,
+          "redemp": 0.038
+        },
+        "RV Intl Resto": {
+          "net": 0.022,
+          "subs": 0.48,
+          "redemp": 0.458
+        },
+        "Globales": {
+          "net": -0.439,
+          "subs": 0.617,
+          "redemp": 1.056
+        },
+        "Garantizados RF": {
+          "net": -0.19,
+          "subs": 0.038,
+          "redemp": 0.228
+        },
+        "Garantizados RV": {
+          "net": -0.033,
+          "subs": 0.018,
+          "redemp": 0.051
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.036,
+          "subs": 0.145,
+          "redemp": 0.109
+        },
+        "Fondos Índice": {
+          "net": 0.033,
+          "subs": 0.185,
+          "redemp": 0.152
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.42,
+          "subs": 1.12,
+          "redemp": 1.54
+        },
+        "FIL": {
+          "net": -0.013,
+          "subs": 0.04,
+          "redemp": 0.053
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-07",
+      "total_subs": 13.474,
+      "total_redemp": 10.729,
+      "total_net": 2.745,
+      "categories": {
+        "Monetarios": {
+          "net": 0.773,
+          "subs": 1.755,
+          "redemp": 0.982
+        },
+        "RF Euro CP": {
+          "net": 1.8,
+          "subs": 4.338,
+          "redemp": 2.538
+        },
+        "RF Euro LP": {
+          "net": -0.34,
+          "subs": 2.084,
+          "redemp": 2.424
+        },
+        "RF Mixta Euro": {
+          "net": 0.52,
+          "subs": 0.722,
+          "redemp": 0.203
+        },
+        "RV Mixta Euro": {
+          "net": -0.003,
+          "subs": 0.003,
+          "redemp": 0.006
+        },
+        "RV Nacional": {
+          "net": -0.013,
+          "subs": 0.054,
+          "redemp": 0.067
+        },
+        "RF Internacional": {
+          "net": 0.202,
+          "subs": 0.522,
+          "redemp": 0.32
+        },
+        "RF Mixta Internacional": {
+          "net": -0.066,
+          "subs": 0.305,
+          "redemp": 0.372
+        },
+        "RV Mixta Internacional": {
+          "net": 0.008,
+          "subs": 0.36,
+          "redemp": 0.352
+        },
+        "RV Euro Resto": {
+          "net": -0.007,
+          "subs": 0.066,
+          "redemp": 0.074
+        },
+        "RV Intl Europa": {
+          "net": 0.017,
+          "subs": 0.128,
+          "redemp": 0.111
+        },
+        "RV Intl EEUU": {
+          "net": 0.073,
+          "subs": 0.304,
+          "redemp": 0.231
+        },
+        "RV Intl Japón": {
+          "net": -0.003,
+          "subs": 0.018,
+          "redemp": 0.021
+        },
+        "RV Intl Emergentes": {
+          "net": 0.001,
+          "subs": 0.036,
+          "redemp": 0.035
+        },
+        "RV Intl Resto": {
+          "net": 0.092,
+          "subs": 0.517,
+          "redemp": 0.425
+        },
+        "Globales": {
+          "net": -0.329,
+          "subs": 0.565,
+          "redemp": 0.894
+        },
+        "Garantizados RF": {
+          "net": 0.08,
+          "subs": 0.131,
+          "redemp": 0.051
+        },
+        "Garantizados RV": {
+          "net": -0.139,
+          "subs": 0.023,
+          "redemp": 0.162
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.046,
+          "subs": 0.154,
+          "redemp": 0.108
+        },
+        "Fondos Índice": {
+          "net": 0.036,
+          "subs": 0.134,
+          "redemp": 0.098
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.01,
+          "subs": 1.207,
+          "redemp": 1.218
+        },
+        "FIL": {
+          "net": 0.01,
+          "subs": 0.05,
+          "redemp": 0.039
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-08",
+      "total_subs": 6.705,
+      "total_redemp": 5.18,
+      "total_net": 1.525,
+      "categories": {
+        "Monetarios": {
+          "net": 0.552,
+          "subs": 1.05,
+          "redemp": 0.498
+        },
+        "RF Euro CP": {
+          "net": 0.652,
+          "subs": 1.656,
+          "redemp": 1.004
+        },
+        "RF Euro LP": {
+          "net": 0.485,
+          "subs": 1.089,
+          "redemp": 0.604
+        },
+        "RF Mixta Euro": {
+          "net": 0.27,
+          "subs": 0.366,
+          "redemp": 0.096
+        },
+        "RV Mixta Euro": {
+          "net": -0.0,
+          "subs": 0.003,
+          "redemp": 0.004
+        },
+        "RV Nacional": {
+          "net": -0.009,
+          "subs": 0.044,
+          "redemp": 0.053
+        },
+        "RF Internacional": {
+          "net": 0.083,
+          "subs": 0.228,
+          "redemp": 0.145
+        },
+        "RF Mixta Internacional": {
+          "net": -0.047,
+          "subs": 0.15,
+          "redemp": 0.197
+        },
+        "RV Mixta Internacional": {
+          "net": -0.053,
+          "subs": 0.165,
+          "redemp": 0.218
+        },
+        "RV Euro Resto": {
+          "net": 0.005,
+          "subs": 0.043,
+          "redemp": 0.038
+        },
+        "RV Intl Europa": {
+          "net": -0.023,
+          "subs": 0.059,
+          "redemp": 0.082
+        },
+        "RV Intl EEUU": {
+          "net": 0.03,
+          "subs": 0.183,
+          "redemp": 0.153
+        },
+        "RV Intl Japón": {
+          "net": -0.001,
+          "subs": 0.011,
+          "redemp": 0.012
+        },
+        "RV Intl Emergentes": {
+          "net": -0.004,
+          "subs": 0.019,
+          "redemp": 0.023
+        },
+        "RV Intl Resto": {
+          "net": 0.013,
+          "subs": 0.288,
+          "redemp": 0.276
+        },
+        "Globales": {
+          "net": -0.224,
+          "subs": 0.576,
+          "redemp": 0.8
+        },
+        "Garantizados RF": {
+          "net": -0.112,
+          "subs": 0.057,
+          "redemp": 0.169
+        },
+        "Garantizados RV": {
+          "net": -0.022,
+          "subs": 0.008,
+          "redemp": 0.03
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.037,
+          "subs": 0.098,
+          "redemp": 0.061
+        },
+        "Fondos Índice": {
+          "net": -0.007,
+          "subs": 0.091,
+          "redemp": 0.098
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.097,
+          "subs": 0.506,
+          "redemp": 0.603
+        },
+        "FIL": {
+          "net": -0.002,
+          "subs": 0.013,
+          "redemp": 0.016
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-09",
+      "total_subs": 12.267,
+      "total_redemp": 9.927,
+      "total_net": 2.34,
+      "categories": {
+        "Monetarios": {
+          "net": 0.591,
+          "subs": 1.457,
+          "redemp": 0.867
+        },
+        "RF Euro CP": {
+          "net": 1.273,
+          "subs": 3.443,
+          "redemp": 2.171
+        },
+        "RF Euro LP": {
+          "net": 0.512,
+          "subs": 2.174,
+          "redemp": 1.662
+        },
+        "RF Mixta Euro": {
+          "net": 0.4,
+          "subs": 0.6,
+          "redemp": 0.2
+        },
+        "RV Mixta Euro": {
+          "net": -0.008,
+          "subs": 0.002,
+          "redemp": 0.011
+        },
+        "RV Nacional": {
+          "net": -0.046,
+          "subs": 0.039,
+          "redemp": 0.085
+        },
+        "RF Internacional": {
+          "net": 0.366,
+          "subs": 0.617,
+          "redemp": 0.251
+        },
+        "RF Mixta Internacional": {
+          "net": -0.077,
+          "subs": 0.226,
+          "redemp": 0.302
+        },
+        "RV Mixta Internacional": {
+          "net": -0.047,
+          "subs": 0.257,
+          "redemp": 0.305
+        },
+        "RV Euro Resto": {
+          "net": -0.013,
+          "subs": 0.033,
+          "redemp": 0.047
+        },
+        "RV Intl Europa": {
+          "net": -0.051,
+          "subs": 0.069,
+          "redemp": 0.121
+        },
+        "RV Intl EEUU": {
+          "net": 0.011,
+          "subs": 0.198,
+          "redemp": 0.187
+        },
+        "RV Intl Japón": {
+          "net": -0.007,
+          "subs": 0.01,
+          "redemp": 0.017
+        },
+        "RV Intl Emergentes": {
+          "net": -0.001,
+          "subs": 0.027,
+          "redemp": 0.027
+        },
+        "RV Intl Resto": {
+          "net": -0.057,
+          "subs": 0.291,
+          "redemp": 0.348
+        },
+        "Globales": {
+          "net": -0.308,
+          "subs": 0.445,
+          "redemp": 0.752
+        },
+        "Garantizados RF": {
+          "net": -0.049,
+          "subs": 0.005,
+          "redemp": 0.053
+        },
+        "Garantizados RV": {
+          "net": -0.199,
+          "subs": 0.003,
+          "redemp": 0.202
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.059,
+          "subs": 0.146,
+          "redemp": 0.087
+        },
+        "Fondos Índice": {
+          "net": 0.016,
+          "subs": 0.096,
+          "redemp": 0.08
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.029,
+          "subs": 2.106,
+          "redemp": 2.136
+        },
+        "FIL": {
+          "net": 0.004,
+          "subs": 0.023,
+          "redemp": 0.018
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-10",
+      "total_subs": 16.503,
+      "total_redemp": 12.238,
+      "total_net": 4.265,
+      "categories": {
+        "Monetarios": {
+          "net": 0.719,
+          "subs": 2.003,
+          "redemp": 1.284
+        },
+        "RF Euro CP": {
+          "net": 1.282,
+          "subs": 4.436,
+          "redemp": 3.155
+        },
+        "RF Euro LP": {
+          "net": 1.066,
+          "subs": 3.168,
+          "redemp": 2.102
+        },
+        "RF Mixta Euro": {
+          "net": 0.641,
+          "subs": 0.878,
+          "redemp": 0.237
+        },
+        "RV Mixta Euro": {
+          "net": -0.004,
+          "subs": 0.005,
+          "redemp": 0.009
+        },
+        "RV Nacional": {
+          "net": -0.026,
+          "subs": 0.07,
+          "redemp": 0.095
+        },
+        "RF Internacional": {
+          "net": 0.632,
+          "subs": 0.942,
+          "redemp": 0.31
+        },
+        "RF Mixta Internacional": {
+          "net": -0.114,
+          "subs": 0.34,
+          "redemp": 0.454
+        },
+        "RV Mixta Internacional": {
+          "net": -0.04,
+          "subs": 0.434,
+          "redemp": 0.475
+        },
+        "RV Euro Resto": {
+          "net": 0.009,
+          "subs": 0.077,
+          "redemp": 0.068
+        },
+        "RV Intl Europa": {
+          "net": 0.126,
+          "subs": 0.292,
+          "redemp": 0.166
+        },
+        "RV Intl EEUU": {
+          "net": 0.033,
+          "subs": 0.386,
+          "redemp": 0.353
+        },
+        "RV Intl Japón": {
+          "net": -0.192,
+          "subs": 0.014,
+          "redemp": 0.207
+        },
+        "RV Intl Emergentes": {
+          "net": 0.119,
+          "subs": 0.162,
+          "redemp": 0.043
+        },
+        "RV Intl Resto": {
+          "net": -0.128,
+          "subs": 0.428,
+          "redemp": 0.556
+        },
+        "Globales": {
+          "net": -0.566,
+          "subs": 0.7,
+          "redemp": 1.266
+        },
+        "Garantizados RF": {
+          "net": 0.019,
+          "subs": 0.187,
+          "redemp": 0.169
+        },
+        "Garantizados RV": {
+          "net": -0.098,
+          "subs": 0.001,
+          "redemp": 0.099
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.068,
+          "subs": 0.197,
+          "redemp": 0.129
+        },
+        "Fondos Índice": {
+          "net": 0.836,
+          "subs": 1.006,
+          "redemp": 0.17
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.118,
+          "subs": 0.749,
+          "redemp": 0.867
+        },
+        "FIL": {
+          "net": 0.002,
+          "subs": 0.029,
+          "redemp": 0.026
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-11",
+      "total_subs": 17.799,
+      "total_redemp": 16.667,
+      "total_net": 1.132,
+      "categories": {
+        "Monetarios": {
+          "net": 0.839,
+          "subs": 2.24,
+          "redemp": 1.401
+        },
+        "RF Euro CP": {
+          "net": 1.176,
+          "subs": 4.054,
+          "redemp": 2.878
+        },
+        "RF Euro LP": {
+          "net": 0.225,
+          "subs": 3.94,
+          "redemp": 3.716
+        },
+        "RF Mixta Euro": {
+          "net": 0.515,
+          "subs": 0.72,
+          "redemp": 0.206
+        },
+        "RV Mixta Euro": {
+          "net": -0.004,
+          "subs": 0.002,
+          "redemp": 0.006
+        },
+        "RV Nacional": {
+          "net": -0.072,
+          "subs": 0.063,
+          "redemp": 0.135
+        },
+        "RF Internacional": {
+          "net": 0.501,
+          "subs": 0.873,
+          "redemp": 0.373
+        },
+        "RF Mixta Internacional": {
+          "net": -0.764,
+          "subs": 0.318,
+          "redemp": 1.082
+        },
+        "RV Mixta Internacional": {
+          "net": -0.24,
+          "subs": 0.542,
+          "redemp": 0.782
+        },
+        "RV Euro Resto": {
+          "net": -0.013,
+          "subs": 0.07,
+          "redemp": 0.084
+        },
+        "RV Intl Europa": {
+          "net": -0.009,
+          "subs": 0.215,
+          "redemp": 0.224
+        },
+        "RV Intl EEUU": {
+          "net": 0.713,
+          "subs": 0.955,
+          "redemp": 0.241
+        },
+        "RV Intl Japón": {
+          "net": 0.03,
+          "subs": 0.048,
+          "redemp": 0.018
+        },
+        "RV Intl Emergentes": {
+          "net": 0.094,
+          "subs": 0.164,
+          "redemp": 0.07
+        },
+        "RV Intl Resto": {
+          "net": 0.043,
+          "subs": 0.538,
+          "redemp": 0.495
+        },
+        "Globales": {
+          "net": -0.211,
+          "subs": 0.908,
+          "redemp": 1.119
+        },
+        "Garantizados RF": {
+          "net": -0.174,
+          "subs": 0.047,
+          "redemp": 0.222
+        },
+        "Garantizados RV": {
+          "net": -0.511,
+          "subs": 0.02,
+          "redemp": 0.532
+        },
+        "Garantía parcial": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        },
+        "Retorno Absoluto": {
+          "net": 0.078,
+          "subs": 0.191,
+          "redemp": 0.113
+        },
+        "Fondos Índice": {
+          "net": -0.753,
+          "subs": 0.72,
+          "redemp": 1.473
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.332,
+          "subs": 1.122,
+          "redemp": 1.454
+        },
+        "FIL": {
+          "net": 0.002,
+          "subs": 0.048,
+          "redemp": 0.045
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2024-12",
+      "total_subs": 14.07,
+      "total_redemp": 12.214,
+      "total_net": 1.856,
+      "categories": {
+        "Monetarios": {
+          "net": 0.607,
+          "subs": 1.786,
+          "redemp": 1.179
+        },
+        "RF Euro CP": {
+          "net": 0.873,
+          "subs": 4.165,
+          "redemp": 3.292
+        },
+        "RF Euro LP": {
+          "net": 0.619,
+          "subs": 2.536,
+          "redemp": 1.917
+        },
+        "RF Mixta Euro": {
+          "net": 0.481,
+          "subs": 0.806,
+          "redemp": 0.325
+        },
+        "RV Mixta Euro": {
+          "net": -0.005,
+          "subs": 0.07,
+          "redemp": 0.075
+        },
+        "RV Nacional": {
+          "net": -0.034,
+          "subs": 0.043,
+          "redemp": 0.077
+        },
+        "RF Internacional": {
+          "net": 0.296,
+          "subs": 0.634,
+          "redemp": 0.338
+        },
+        "RF Mixta Internacional": {
+          "net": 0.016,
+          "subs": 0.33,
+          "redemp": 0.315
+        },
+        "RV Mixta Internacional": {
+          "net": 0.062,
+          "subs": 0.469,
+          "redemp": 0.407
+        },
+        "RV Euro Resto": {
+          "net": -0.063,
+          "subs": 0.05,
+          "redemp": 0.113
+        },
+        "RV Intl Europa": {
+          "net": -0.402,
+          "subs": 0.105,
+          "redemp": 0.507
+        },
+        "RV Intl EEUU": {
+          "net": -0.048,
+          "subs": 0.431,
+          "redemp": 0.48
+        },
+        "RV Intl Japón": {
+          "net": -0.003,
+          "subs": 0.01,
+          "redemp": 0.013
+        },
+        "RV Intl Emergentes": {
+          "net": 0.019,
+          "subs": 0.048,
+          "redemp": 0.029
+        },
+        "RV Intl Resto": {
+          "net": 0.067,
+          "subs": 0.62,
+          "redemp": 0.553
+        },
+        "Globales": {
+          "net": -0.145,
+          "subs": 1.036,
+          "redemp": 1.181
+        },
+        "Garantizados RF": {
+          "net": -0.085,
+          "subs": 0.039,
+          "redemp": 0.124
+        },
+        "Garantizados RV": {
+          "net": -0.083,
+          "subs": 0.046,
+          "redemp": 0.129
+        },
+        "Retorno Absoluto": {
+          "net": -0.042,
+          "subs": 0.16,
+          "redemp": 0.202
+        },
+        "Fondos Índice": {
+          "net": -0.174,
+          "subs": 0.178,
+          "redemp": 0.352
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.091,
+          "subs": 0.463,
+          "redemp": 0.554
+        },
+        "FIL": {
+          "net": -0.009,
+          "subs": 0.043,
+          "redemp": 0.052
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-01",
+      "total_subs": 15.946,
+      "total_redemp": 12.382,
+      "total_net": 3.564,
+      "categories": {
+        "Monetarios": {
+          "net": 0.139,
+          "subs": 1.602,
+          "redemp": 1.463
+        },
+        "RF Euro CP": {
+          "net": 2.186,
+          "subs": 5.439,
+          "redemp": 3.253
+        },
+        "RF Euro LP": {
+          "net": 0.88,
+          "subs": 2.864,
+          "redemp": 1.984
+        },
+        "RF Mixta Euro": {
+          "net": 0.61,
+          "subs": 0.8,
+          "redemp": 0.19
+        },
+        "RV Mixta Euro": {
+          "net": -0.004,
+          "subs": 0.003,
+          "redemp": 0.007
+        },
+        "RV Nacional": {
+          "net": -0.043,
+          "subs": 0.047,
+          "redemp": 0.09
+        },
+        "RF Internacional": {
+          "net": 0.237,
+          "subs": 0.665,
+          "redemp": 0.428
+        },
+        "RF Mixta Internacional": {
+          "net": -0.011,
+          "subs": 0.331,
+          "redemp": 0.342
+        },
+        "RV Mixta Internacional": {
+          "net": 0.089,
+          "subs": 0.477,
+          "redemp": 0.388
+        },
+        "RV Euro Resto": {
+          "net": -0.137,
+          "subs": 0.066,
+          "redemp": 0.202
+        },
+        "RV Intl Europa": {
+          "net": -0.06,
+          "subs": 0.11,
+          "redemp": 0.17
+        },
+        "RV Intl EEUU": {
+          "net": 0.408,
+          "subs": 0.693,
+          "redemp": 0.285
+        },
+        "RV Intl Japón": {
+          "net": 0.002,
+          "subs": 0.015,
+          "redemp": 0.013
+        },
+        "RV Intl Emergentes": {
+          "net": -0.065,
+          "subs": 0.037,
+          "redemp": 0.102
+        },
+        "RV Intl Resto": {
+          "net": 0.175,
+          "subs": 0.641,
+          "redemp": 0.466
+        },
+        "Globales": {
+          "net": -0.041,
+          "subs": 0.904,
+          "redemp": 0.945
+        },
+        "Garantizados RF": {
+          "net": -0.24,
+          "subs": 0.001,
+          "redemp": 0.241
+        },
+        "Garantizados RV": {
+          "net": -0.235,
+          "subs": 0.105,
+          "redemp": 0.34
+        },
+        "Retorno Absoluto": {
+          "net": 0.027,
+          "subs": 0.185,
+          "redemp": 0.157
+        },
+        "Fondos Índice": {
+          "net": 0.031,
+          "subs": 0.269,
+          "redemp": 0.237
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.364,
+          "subs": 0.672,
+          "redemp": 1.036
+        },
+        "FIL": {
+          "net": -0.02,
+          "subs": 0.02,
+          "redemp": 0.041
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-02",
+      "total_subs": 20.308,
+      "total_redemp": 16.235,
+      "total_net": 4.072,
+      "categories": {
+        "Monetarios": {
+          "net": 0.147,
+          "subs": 1.802,
+          "redemp": 1.655
+        },
+        "RF Euro CP": {
+          "net": 2.258,
+          "subs": 5.817,
+          "redemp": 3.559
+        },
+        "RF Euro LP": {
+          "net": 1.468,
+          "subs": 4.233,
+          "redemp": 2.765
+        },
+        "RF Mixta Euro": {
+          "net": 0.568,
+          "subs": 0.833,
+          "redemp": 0.265
+        },
+        "RV Mixta Euro": {
+          "net": -0.008,
+          "subs": 0.004,
+          "redemp": 0.012
+        },
+        "RV Nacional": {
+          "net": 0.005,
+          "subs": 0.068,
+          "redemp": 0.063
+        },
+        "RF Internacional": {
+          "net": 0.327,
+          "subs": 0.727,
+          "redemp": 0.4
+        },
+        "RF Mixta Internacional": {
+          "net": 0.089,
+          "subs": 0.446,
+          "redemp": 0.357
+        },
+        "RV Mixta Internacional": {
+          "net": 0.23,
+          "subs": 0.69,
+          "redemp": 0.46
+        },
+        "RV Euro Resto": {
+          "net": 0.003,
+          "subs": 0.086,
+          "redemp": 0.082
+        },
+        "RV Intl Europa": {
+          "net": -0.167,
+          "subs": 0.161,
+          "redemp": 0.327
+        },
+        "RV Intl EEUU": {
+          "net": -0.048,
+          "subs": 0.534,
+          "redemp": 0.582
+        },
+        "RV Intl Japón": {
+          "net": 0.001,
+          "subs": 0.019,
+          "redemp": 0.018
+        },
+        "RV Intl Emergentes": {
+          "net": 0.028,
+          "subs": 0.086,
+          "redemp": 0.059
+        },
+        "RV Intl Resto": {
+          "net": 0.179,
+          "subs": 0.677,
+          "redemp": 0.499
+        },
+        "Globales": {
+          "net": -0.12,
+          "subs": 2.09,
+          "redemp": 2.21
+        },
+        "Garantizados RF": {
+          "net": -0.313,
+          "subs": 0.2,
+          "redemp": 0.513
+        },
+        "Garantizados RV": {
+          "net": -0.05,
+          "subs": 0.06,
+          "redemp": 0.11
+        },
+        "Retorno Absoluto": {
+          "net": 0.13,
+          "subs": 0.263,
+          "redemp": 0.132
+        },
+        "Fondos Índice": {
+          "net": -0.057,
+          "subs": 0.28,
+          "redemp": 0.338
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.581,
+          "subs": 1.21,
+          "redemp": 1.79
+        },
+        "FIL": {
+          "net": -0.016,
+          "subs": 0.021,
+          "redemp": 0.037
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-03",
+      "total_subs": 18.655,
+      "total_redemp": 15.732,
+      "total_net": 2.922,
+      "categories": {
+        "Monetarios": {
+          "net": 0.561,
+          "subs": 1.956,
+          "redemp": 1.396
+        },
+        "RF Euro CP": {
+          "net": 1.748,
+          "subs": 4.932,
+          "redemp": 3.184
+        },
+        "RF Euro LP": {
+          "net": 1.115,
+          "subs": 3.396,
+          "redemp": 2.281
+        },
+        "RF Mixta Euro": {
+          "net": 0.273,
+          "subs": 0.711,
+          "redemp": 0.437
+        },
+        "RV Mixta Euro": {
+          "net": -0.064,
+          "subs": 0.004,
+          "redemp": 0.068
+        },
+        "RV Nacional": {
+          "net": 0.009,
+          "subs": 0.095,
+          "redemp": 0.086
+        },
+        "RF Internacional": {
+          "net": 0.127,
+          "subs": 0.667,
+          "redemp": 0.54
+        },
+        "RF Mixta Internacional": {
+          "net": -0.133,
+          "subs": 0.291,
+          "redemp": 0.425
+        },
+        "RV Mixta Internacional": {
+          "net": -0.081,
+          "subs": 0.399,
+          "redemp": 0.48
+        },
+        "RV Euro Resto": {
+          "net": 0.019,
+          "subs": 0.126,
+          "redemp": 0.107
+        },
+        "RV Intl Europa": {
+          "net": 0.067,
+          "subs": 0.192,
+          "redemp": 0.125
+        },
+        "RV Intl EEUU": {
+          "net": -0.225,
+          "subs": 0.608,
+          "redemp": 0.834
+        },
+        "RV Intl Japón": {
+          "net": 0.011,
+          "subs": 0.026,
+          "redemp": 0.016
+        },
+        "RV Intl Emergentes": {
+          "net": 0.013,
+          "subs": 0.063,
+          "redemp": 0.051
+        },
+        "RV Intl Resto": {
+          "net": -0.423,
+          "subs": 0.494,
+          "redemp": 0.916
+        },
+        "Globales": {
+          "net": -0.398,
+          "subs": 0.913,
+          "redemp": 1.311
+        },
+        "Garantizados RF": {
+          "net": -0.038,
+          "subs": 0.064,
+          "redemp": 0.102
+        },
+        "Garantizados RV": {
+          "net": -0.009,
+          "subs": 0.013,
+          "redemp": 0.022
+        },
+        "Retorno Absoluto": {
+          "net": 0.15,
+          "subs": 0.408,
+          "redemp": 0.259
+        },
+        "Fondos Índice": {
+          "net": 0.036,
+          "subs": 0.244,
+          "redemp": 0.208
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.069,
+          "subs": 2.78,
+          "redemp": 2.848
+        },
+        "FIL": {
+          "net": 0.244,
+          "subs": 0.271,
+          "redemp": 0.027
+        },
+        "Hedge Funds": {
+          "net": -0.01,
+          "subs": 0.0,
+          "redemp": 0.01
+        }
+      }
+    },
+    {
+      "date": "2025-04",
+      "total_subs": 15.985,
+      "total_redemp": 13.627,
+      "total_net": 2.358,
+      "categories": {
+        "Monetarios": {
+          "net": 0.639,
+          "subs": 1.773,
+          "redemp": 1.134
+        },
+        "RF Euro CP": {
+          "net": 1.902,
+          "subs": 4.976,
+          "redemp": 3.074
+        },
+        "RF Euro LP": {
+          "net": 0.863,
+          "subs": 3.421,
+          "redemp": 2.559
+        },
+        "RF Mixta Euro": {
+          "net": 0.237,
+          "subs": 0.483,
+          "redemp": 0.246
+        },
+        "RV Mixta Euro": {
+          "net": -0.001,
+          "subs": 0.007,
+          "redemp": 0.008
+        },
+        "RV Nacional": {
+          "net": -0.007,
+          "subs": 0.085,
+          "redemp": 0.092
+        },
+        "RF Internacional": {
+          "net": -0.185,
+          "subs": 0.929,
+          "redemp": 1.114
+        },
+        "RF Mixta Internacional": {
+          "net": -0.337,
+          "subs": 0.46,
+          "redemp": 0.797
+        },
+        "RV Mixta Internacional": {
+          "net": -0.331,
+          "subs": 0.277,
+          "redemp": 0.608
+        },
+        "RV Euro Resto": {
+          "net": 0.025,
+          "subs": 0.099,
+          "redemp": 0.074
+        },
+        "RV Intl Europa": {
+          "net": 0.078,
+          "subs": 0.212,
+          "redemp": 0.134
+        },
+        "RV Intl EEUU": {
+          "net": -0.195,
+          "subs": 0.384,
+          "redemp": 0.58
+        },
+        "RV Intl Japón": {
+          "net": 0.004,
+          "subs": 0.016,
+          "redemp": 0.012
+        },
+        "RV Intl Emergentes": {
+          "net": 0.245,
+          "subs": 0.29,
+          "redemp": 0.045
+        },
+        "RV Intl Resto": {
+          "net": -0.05,
+          "subs": 0.568,
+          "redemp": 0.618
+        },
+        "Globales": {
+          "net": -0.453,
+          "subs": 0.912,
+          "redemp": 1.365
+        },
+        "Garantizados RF": {
+          "net": -0.156,
+          "subs": 0.121,
+          "redemp": 0.277
+        },
+        "Garantizados RV": {
+          "net": -0.083,
+          "subs": 0.008,
+          "redemp": 0.091
+        },
+        "Retorno Absoluto": {
+          "net": 0.056,
+          "subs": 0.229,
+          "redemp": 0.173
+        },
+        "Fondos Índice": {
+          "net": -0.034,
+          "subs": 0.188,
+          "redemp": 0.222
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.102,
+          "subs": 0.484,
+          "redemp": 0.382
+        },
+        "FIL": {
+          "net": 0.037,
+          "subs": 0.06,
+          "redemp": 0.023
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-05",
+      "total_subs": 16.719,
+      "total_redemp": 13.903,
+      "total_net": 2.816,
+      "categories": {
+        "Monetarios": {
+          "net": -0.083,
+          "subs": 1.5,
+          "redemp": 1.583
+        },
+        "RF Euro CP": {
+          "net": 3.856,
+          "subs": 6.441,
+          "redemp": 2.585
+        },
+        "RF Euro LP": {
+          "net": -0.454,
+          "subs": 3.011,
+          "redemp": 3.465
+        },
+        "RF Mixta Euro": {
+          "net": 0.423,
+          "subs": 0.59,
+          "redemp": 0.167
+        },
+        "RV Mixta Euro": {
+          "net": -0.003,
+          "subs": 0.002,
+          "redemp": 0.005
+        },
+        "RV Nacional": {
+          "net": -0.008,
+          "subs": 0.076,
+          "redemp": 0.083
+        },
+        "RF Internacional": {
+          "net": -0.304,
+          "subs": 0.695,
+          "redemp": 0.999
+        },
+        "RF Mixta Internacional": {
+          "net": 0.024,
+          "subs": 0.317,
+          "redemp": 0.293
+        },
+        "RV Mixta Internacional": {
+          "net": 0.061,
+          "subs": 0.419,
+          "redemp": 0.358
+        },
+        "RV Euro Resto": {
+          "net": -0.037,
+          "subs": 0.065,
+          "redemp": 0.101
+        },
+        "RV Intl Europa": {
+          "net": 0.125,
+          "subs": 0.24,
+          "redemp": 0.115
+        },
+        "RV Intl EEUU": {
+          "net": -0.124,
+          "subs": 0.272,
+          "redemp": 0.396
+        },
+        "RV Intl Japón": {
+          "net": 0.007,
+          "subs": 0.019,
+          "redemp": 0.013
+        },
+        "RV Intl Emergentes": {
+          "net": 0.222,
+          "subs": 0.273,
+          "redemp": 0.051
+        },
+        "RV Intl Resto": {
+          "net": 0.004,
+          "subs": 0.476,
+          "redemp": 0.472
+        },
+        "Globales": {
+          "net": -0.194,
+          "subs": 0.712,
+          "redemp": 0.906
+        },
+        "Garantizados RF": {
+          "net": -0.237,
+          "subs": 0.052,
+          "redemp": 0.29
+        },
+        "Garantizados RV": {
+          "net": -0.421,
+          "subs": 0.005,
+          "redemp": 0.426
+        },
+        "Retorno Absoluto": {
+          "net": 0.167,
+          "subs": 0.264,
+          "redemp": 0.098
+        },
+        "Fondos Índice": {
+          "net": -0.038,
+          "subs": 0.183,
+          "redemp": 0.221
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.168,
+          "subs": 1.065,
+          "redemp": 1.234
+        },
+        "FIL": {
+          "net": -0.001,
+          "subs": 0.042,
+          "redemp": 0.043
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-06",
+      "total_subs": 14.875,
+      "total_redemp": 13.269,
+      "total_net": 1.606,
+      "categories": {
+        "Monetarios": {
+          "net": -0.135,
+          "subs": 1.491,
+          "redemp": 1.626
+        },
+        "RF Euro CP": {
+          "net": 2.014,
+          "subs": 4.975,
+          "redemp": 2.961
+        },
+        "RF Euro LP": {
+          "net": 0.528,
+          "subs": 2.802,
+          "redemp": 2.273
+        },
+        "RF Mixta Euro": {
+          "net": 0.692,
+          "subs": 0.922,
+          "redemp": 0.23
+        },
+        "RV Mixta Euro": {
+          "net": -0.005,
+          "subs": 0.003,
+          "redemp": 0.008
+        },
+        "RV Nacional": {
+          "net": -0.012,
+          "subs": 0.078,
+          "redemp": 0.09
+        },
+        "RF Internacional": {
+          "net": 0.277,
+          "subs": 0.683,
+          "redemp": 0.406
+        },
+        "RF Mixta Internacional": {
+          "net": -0.001,
+          "subs": 0.312,
+          "redemp": 0.313
+        },
+        "RV Mixta Internacional": {
+          "net": -0.056,
+          "subs": 0.312,
+          "redemp": 0.368
+        },
+        "RV Euro Resto": {
+          "net": -0.049,
+          "subs": 0.049,
+          "redemp": 0.099
+        },
+        "RV Intl Europa": {
+          "net": -0.016,
+          "subs": 0.111,
+          "redemp": 0.127
+        },
+        "RV Intl EEUU": {
+          "net": -0.087,
+          "subs": 0.229,
+          "redemp": 0.316
+        },
+        "RV Intl Japón": {
+          "net": -0.003,
+          "subs": 0.008,
+          "redemp": 0.01
+        },
+        "RV Intl Emergentes": {
+          "net": -0.006,
+          "subs": 0.034,
+          "redemp": 0.04
+        },
+        "RV Intl Resto": {
+          "net": -0.203,
+          "subs": 0.39,
+          "redemp": 0.593
+        },
+        "Globales": {
+          "net": -0.238,
+          "subs": 1.333,
+          "redemp": 1.57
+        },
+        "Garantizados RF": {
+          "net": -0.095,
+          "subs": 0.198,
+          "redemp": 0.293
+        },
+        "Garantizados RV": {
+          "net": -0.024,
+          "subs": 0.047,
+          "redemp": 0.071
+        },
+        "Retorno Absoluto": {
+          "net": 0.16,
+          "subs": 0.264,
+          "redemp": 0.104
+        },
+        "Fondos Índice": {
+          "net": -0.265,
+          "subs": 0.142,
+          "redemp": 0.407
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.822,
+          "subs": 0.453,
+          "redemp": 1.275
+        },
+        "FIL": {
+          "net": -0.044,
+          "subs": 0.04,
+          "redemp": 0.084
+        },
+        "Hedge Funds": {
+          "net": -0.006,
+          "subs": 0.0,
+          "redemp": 0.006
+        }
+      }
+    },
+    {
+      "date": "2025-07",
+      "total_subs": 18.146,
+      "total_redemp": 14.135,
+      "total_net": 4.011,
+      "categories": {
+        "Monetarios": {
+          "net": 0.049,
+          "subs": 1.692,
+          "redemp": 1.643
+        },
+        "RF Euro CP": {
+          "net": 0.658,
+          "subs": 5.096,
+          "redemp": 4.438
+        },
+        "RF Euro LP": {
+          "net": 2.089,
+          "subs": 4.03,
+          "redemp": 1.941
+        },
+        "RF Mixta Euro": {
+          "net": 0.211,
+          "subs": 0.603,
+          "redemp": 0.392
+        },
+        "RV Mixta Euro": {
+          "net": 0.003,
+          "subs": 0.007,
+          "redemp": 0.004
+        },
+        "RV Nacional": {
+          "net": -0.013,
+          "subs": 0.091,
+          "redemp": 0.104
+        },
+        "RF Internacional": {
+          "net": 0.917,
+          "subs": 1.771,
+          "redemp": 0.853
+        },
+        "RF Mixta Internacional": {
+          "net": 0.026,
+          "subs": 0.294,
+          "redemp": 0.268
+        },
+        "RV Mixta Internacional": {
+          "net": 0.053,
+          "subs": 0.346,
+          "redemp": 0.293
+        },
+        "RV Euro Resto": {
+          "net": 0.039,
+          "subs": 0.108,
+          "redemp": 0.069
+        },
+        "RV Intl Europa": {
+          "net": -0.202,
+          "subs": 0.262,
+          "redemp": 0.464
+        },
+        "RV Intl EEUU": {
+          "net": -0.606,
+          "subs": 0.239,
+          "redemp": 0.845
+        },
+        "RV Intl Japón": {
+          "net": -0.007,
+          "subs": 0.008,
+          "redemp": 0.016
+        },
+        "RV Intl Emergentes": {
+          "net": -0.008,
+          "subs": 0.036,
+          "redemp": 0.044
+        },
+        "RV Intl Resto": {
+          "net": -0.037,
+          "subs": 0.411,
+          "redemp": 0.448
+        },
+        "Globales": {
+          "net": -0.227,
+          "subs": 0.943,
+          "redemp": 1.17
+        },
+        "Garantizados RF": {
+          "net": 0.131,
+          "subs": 0.253,
+          "redemp": 0.122
+        },
+        "Garantizados RV": {
+          "net": 0.018,
+          "subs": 0.17,
+          "redemp": 0.153
+        },
+        "Retorno Absoluto": {
+          "net": 0.409,
+          "subs": 0.534,
+          "redemp": 0.125
+        },
+        "Fondos Índice": {
+          "net": 0.117,
+          "subs": 0.288,
+          "redemp": 0.171
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.13,
+          "subs": 0.655,
+          "redemp": 0.525
+        },
+        "FIL": {
+          "net": 0.262,
+          "subs": 0.31,
+          "redemp": 0.048
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-08",
+      "total_subs": 8.291,
+      "total_redemp": 6.3,
+      "total_net": 1.991,
+      "categories": {
+        "Monetarios": {
+          "net": 0.097,
+          "subs": 0.803,
+          "redemp": 0.706
+        },
+        "RF Euro CP": {
+          "net": 1.549,
+          "subs": 3.083,
+          "redemp": 1.534
+        },
+        "RF Euro LP": {
+          "net": 0.304,
+          "subs": 1.636,
+          "redemp": 1.332
+        },
+        "RF Mixta Euro": {
+          "net": 0.234,
+          "subs": 0.337,
+          "redemp": 0.103
+        },
+        "RV Mixta Euro": {
+          "net": -0.0,
+          "subs": 0.001,
+          "redemp": 0.001
+        },
+        "RV Nacional": {
+          "net": 0.007,
+          "subs": 0.064,
+          "redemp": 0.057
+        },
+        "RF Internacional": {
+          "net": 0.246,
+          "subs": 0.444,
+          "redemp": 0.198
+        },
+        "RF Mixta Internacional": {
+          "net": -0.058,
+          "subs": 0.132,
+          "redemp": 0.19
+        },
+        "RV Mixta Internacional": {
+          "net": -0.075,
+          "subs": 0.198,
+          "redemp": 0.274
+        },
+        "RV Euro Resto": {
+          "net": 0.071,
+          "subs": 0.103,
+          "redemp": 0.031
+        },
+        "RV Intl Europa": {
+          "net": -0.002,
+          "subs": 0.068,
+          "redemp": 0.071
+        },
+        "RV Intl EEUU": {
+          "net": 0.036,
+          "subs": 0.164,
+          "redemp": 0.128
+        },
+        "RV Intl Japón": {
+          "net": 0.002,
+          "subs": 0.006,
+          "redemp": 0.005
+        },
+        "RV Intl Emergentes": {
+          "net": 0.02,
+          "subs": 0.042,
+          "redemp": 0.023
+        },
+        "RV Intl Resto": {
+          "net": -0.05,
+          "subs": 0.255,
+          "redemp": 0.304
+        },
+        "Globales": {
+          "net": -0.003,
+          "subs": 0.464,
+          "redemp": 0.468
+        },
+        "Garantizados RF": {
+          "net": -0.246,
+          "subs": 0.0,
+          "redemp": 0.246
+        },
+        "Garantizados RV": {
+          "net": 0.006,
+          "subs": 0.025,
+          "redemp": 0.018
+        },
+        "Retorno Absoluto": {
+          "net": 0.092,
+          "subs": 0.153,
+          "redemp": 0.061
+        },
+        "Fondos Índice": {
+          "net": -0.059,
+          "subs": 0.127,
+          "redemp": 0.187
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.191,
+          "subs": 0.159,
+          "redemp": 0.349
+        },
+        "FIL": {
+          "net": 0.013,
+          "subs": 0.028,
+          "redemp": 0.015
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-09",
+      "total_subs": 14.089,
+      "total_redemp": 12.577,
+      "total_net": 1.513,
+      "categories": {
+        "Monetarios": {
+          "net": -0.458,
+          "subs": 1.349,
+          "redemp": 1.807
+        },
+        "RF Euro CP": {
+          "net": 0.438,
+          "subs": 3.957,
+          "redemp": 3.518
+        },
+        "RF Euro LP": {
+          "net": 1.118,
+          "subs": 2.955,
+          "redemp": 1.836
+        },
+        "RF Mixta Euro": {
+          "net": 0.343,
+          "subs": 0.526,
+          "redemp": 0.183
+        },
+        "RV Mixta Euro": {
+          "net": -0.005,
+          "subs": 0.004,
+          "redemp": 0.009
+        },
+        "RV Nacional": {
+          "net": 0.031,
+          "subs": 0.104,
+          "redemp": 0.073
+        },
+        "RF Internacional": {
+          "net": 0.228,
+          "subs": 0.748,
+          "redemp": 0.52
+        },
+        "RF Mixta Internacional": {
+          "net": 0.117,
+          "subs": 0.418,
+          "redemp": 0.301
+        },
+        "RV Mixta Internacional": {
+          "net": 0.104,
+          "subs": 0.432,
+          "redemp": 0.327
+        },
+        "RV Euro Resto": {
+          "net": -0.012,
+          "subs": 0.063,
+          "redemp": 0.076
+        },
+        "RV Intl Europa": {
+          "net": 0.03,
+          "subs": 0.119,
+          "redemp": 0.089
+        },
+        "RV Intl EEUU": {
+          "net": -0.646,
+          "subs": 0.281,
+          "redemp": 0.927
+        },
+        "RV Intl Japón": {
+          "net": -0.021,
+          "subs": 0.017,
+          "redemp": 0.039
+        },
+        "RV Intl Emergentes": {
+          "net": 0.206,
+          "subs": 0.267,
+          "redemp": 0.061
+        },
+        "RV Intl Resto": {
+          "net": -0.015,
+          "subs": 0.447,
+          "redemp": 0.462
+        },
+        "Globales": {
+          "net": 0.048,
+          "subs": 1.326,
+          "redemp": 1.278
+        },
+        "Garantizados RF": {
+          "net": -0.064,
+          "subs": 0.018,
+          "redemp": 0.082
+        },
+        "Garantizados RV": {
+          "net": -0.072,
+          "subs": 0.001,
+          "redemp": 0.073
+        },
+        "Retorno Absoluto": {
+          "net": 0.051,
+          "subs": 0.196,
+          "redemp": 0.145
+        },
+        "Fondos Índice": {
+          "net": 0.004,
+          "subs": 0.394,
+          "redemp": 0.39
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.067,
+          "subs": 0.404,
+          "redemp": 0.336
+        },
+        "FIL": {
+          "net": 0.022,
+          "subs": 0.063,
+          "redemp": 0.041
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-10",
+      "total_subs": 21.019,
+      "total_redemp": 17.61,
+      "total_net": 3.409,
+      "categories": {
+        "Monetarios": {
+          "net": -0.624,
+          "subs": 1.801,
+          "redemp": 2.426
+        },
+        "RF Euro CP": {
+          "net": 0.689,
+          "subs": 6.125,
+          "redemp": 5.436
+        },
+        "RF Euro LP": {
+          "net": 1.186,
+          "subs": 4.611,
+          "redemp": 3.425
+        },
+        "RF Mixta Euro": {
+          "net": 0.674,
+          "subs": 1.139,
+          "redemp": 0.465
+        },
+        "RV Mixta Euro": {
+          "net": -0.001,
+          "subs": 0.005,
+          "redemp": 0.007
+        },
+        "RV Nacional": {
+          "net": 0.009,
+          "subs": 0.121,
+          "redemp": 0.112
+        },
+        "RF Internacional": {
+          "net": 0.206,
+          "subs": 0.996,
+          "redemp": 0.789
+        },
+        "RF Mixta Internacional": {
+          "net": 0.505,
+          "subs": 0.927,
+          "redemp": 0.422
+        },
+        "RV Mixta Internacional": {
+          "net": 0.281,
+          "subs": 0.72,
+          "redemp": 0.439
+        },
+        "RV Euro Resto": {
+          "net": 0.064,
+          "subs": 0.158,
+          "redemp": 0.094
+        },
+        "RV Intl Europa": {
+          "net": 0.32,
+          "subs": 0.462,
+          "redemp": 0.142
+        },
+        "RV Intl EEUU": {
+          "net": -0.285,
+          "subs": 0.525,
+          "redemp": 0.81
+        },
+        "RV Intl Japón": {
+          "net": -0.083,
+          "subs": 0.026,
+          "redemp": 0.109
+        },
+        "RV Intl Emergentes": {
+          "net": 0.029,
+          "subs": 0.115,
+          "redemp": 0.086
+        },
+        "RV Intl Resto": {
+          "net": 0.063,
+          "subs": 0.665,
+          "redemp": 0.602
+        },
+        "Globales": {
+          "net": 0.186,
+          "subs": 1.281,
+          "redemp": 1.095
+        },
+        "Garantizados RF": {
+          "net": 0.009,
+          "subs": 0.13,
+          "redemp": 0.121
+        },
+        "Garantizados RV": {
+          "net": -0.063,
+          "subs": 0.001,
+          "redemp": 0.064
+        },
+        "Retorno Absoluto": {
+          "net": 0.171,
+          "subs": 0.327,
+          "redemp": 0.156
+        },
+        "Fondos Índice": {
+          "net": -0.081,
+          "subs": 0.238,
+          "redemp": 0.319
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.138,
+          "subs": 0.553,
+          "redemp": 0.415
+        },
+        "FIL": {
+          "net": 0.016,
+          "subs": 0.091,
+          "redemp": 0.075
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-11",
+      "total_subs": 21.307,
+      "total_redemp": 18.281,
+      "total_net": 3.026,
+      "categories": {
+        "Monetarios": {
+          "net": 0.995,
+          "subs": 2.786,
+          "redemp": 1.791
+        },
+        "RF Euro CP": {
+          "net": 0.557,
+          "subs": 5.421,
+          "redemp": 4.864
+        },
+        "RF Euro LP": {
+          "net": 0.861,
+          "subs": 4.996,
+          "redemp": 4.135
+        },
+        "RF Mixta Euro": {
+          "net": 0.386,
+          "subs": 0.86,
+          "redemp": 0.474
+        },
+        "RV Mixta Euro": {
+          "net": -0.001,
+          "subs": 0.004,
+          "redemp": 0.005
+        },
+        "RV Nacional": {
+          "net": -0.235,
+          "subs": 0.102,
+          "redemp": 0.337
+        },
+        "RF Internacional": {
+          "net": 0.15,
+          "subs": 0.845,
+          "redemp": 0.695
+        },
+        "RF Mixta Internacional": {
+          "net": 0.345,
+          "subs": 0.783,
+          "redemp": 0.439
+        },
+        "RV Mixta Internacional": {
+          "net": 0.165,
+          "subs": 0.816,
+          "redemp": 0.651
+        },
+        "RV Euro Resto": {
+          "net": 0.277,
+          "subs": 0.334,
+          "redemp": 0.057
+        },
+        "RV Intl Europa": {
+          "net": 0.092,
+          "subs": 0.29,
+          "redemp": 0.197
+        },
+        "RV Intl EEUU": {
+          "net": 0.034,
+          "subs": 0.465,
+          "redemp": 0.431
+        },
+        "RV Intl Japón": {
+          "net": 0.133,
+          "subs": 0.23,
+          "redemp": 0.097
+        },
+        "RV Intl Emergentes": {
+          "net": 0.031,
+          "subs": 0.121,
+          "redemp": 0.09
+        },
+        "RV Intl Resto": {
+          "net": -0.242,
+          "subs": 0.603,
+          "redemp": 0.845
+        },
+        "Globales": {
+          "net": 0.392,
+          "subs": 1.437,
+          "redemp": 1.045
+        },
+        "Garantizados RF": {
+          "net": -0.362,
+          "subs": 0.119,
+          "redemp": 0.48
+        },
+        "Garantizados RV": {
+          "net": -0.177,
+          "subs": 0.037,
+          "redemp": 0.213
+        },
+        "Retorno Absoluto": {
+          "net": 0.157,
+          "subs": 0.296,
+          "redemp": 0.139
+        },
+        "Fondos Índice": {
+          "net": -0.103,
+          "subs": 0.202,
+          "redemp": 0.305
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.411,
+          "subs": 0.519,
+          "redemp": 0.93
+        },
+        "FIL": {
+          "net": -0.02,
+          "subs": 0.04,
+          "redemp": 0.06
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2025-12",
+      "total_subs": 15.384,
+      "total_redemp": 14.306,
+      "total_net": 1.078,
+      "categories": {
+        "Monetarios": {
+          "net": -0.02,
+          "subs": 1.515,
+          "redemp": 1.534
+        },
+        "RF Euro CP": {
+          "net": 0.342,
+          "subs": 4.49,
+          "redemp": 4.148
+        },
+        "RF Euro LP": {
+          "net": 0.529,
+          "subs": 2.701,
+          "redemp": 2.172
+        },
+        "RF Mixta Euro": {
+          "net": 0.243,
+          "subs": 0.783,
+          "redemp": 0.541
+        },
+        "RV Mixta Euro": {
+          "net": 0.009,
+          "subs": 0.096,
+          "redemp": 0.087
+        },
+        "RV Nacional": {
+          "net": -0.059,
+          "subs": 0.116,
+          "redemp": 0.175
+        },
+        "RF Internacional": {
+          "net": 0.059,
+          "subs": 0.57,
+          "redemp": 0.51
+        },
+        "RF Mixta Internacional": {
+          "net": 0.201,
+          "subs": 0.524,
+          "redemp": 0.323
+        },
+        "RV Mixta Internacional": {
+          "net": 0.13,
+          "subs": 0.531,
+          "redemp": 0.4
+        },
+        "RV Euro Resto": {
+          "net": -0.083,
+          "subs": 0.179,
+          "redemp": 0.262
+        },
+        "RV Intl Europa": {
+          "net": 0.067,
+          "subs": 0.193,
+          "redemp": 0.126
+        },
+        "RV Intl EEUU": {
+          "net": -0.091,
+          "subs": 0.347,
+          "redemp": 0.438
+        },
+        "RV Intl Japón": {
+          "net": 0.06,
+          "subs": 0.07,
+          "redemp": 0.009
+        },
+        "RV Intl Emergentes": {
+          "net": 0.053,
+          "subs": 0.095,
+          "redemp": 0.042
+        },
+        "RV Intl Resto": {
+          "net": 0.061,
+          "subs": 0.625,
+          "redemp": 0.563
+        },
+        "Globales": {
+          "net": 0.15,
+          "subs": 1.099,
+          "redemp": 0.949
+        },
+        "Garantizados RF": {
+          "net": -0.053,
+          "subs": 0.047,
+          "redemp": 0.1
+        },
+        "Garantizados RV": {
+          "net": -0.084,
+          "subs": 0.009,
+          "redemp": 0.093
+        },
+        "Retorno Absoluto": {
+          "net": 0.102,
+          "subs": 0.298,
+          "redemp": 0.196
+        },
+        "Fondos Índice": {
+          "net": -0.153,
+          "subs": 0.179,
+          "redemp": 0.332
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.359,
+          "subs": 0.887,
+          "redemp": 1.246
+        },
+        "FIL": {
+          "net": -0.019,
+          "subs": 0.033,
+          "redemp": 0.052
+        },
+        "Hedge Funds": {
+          "net": -0.007,
+          "subs": 0.0,
+          "redemp": 0.007
+        }
+      }
+    },
+    {
+      "date": "2026-01",
+      "total_subs": 17.558,
+      "total_redemp": 15.342,
+      "total_net": 2.217,
+      "categories": {
+        "Monetarios": {
+          "net": -0.101,
+          "subs": 1.383,
+          "redemp": 1.485
+        },
+        "RF Euro CP": {
+          "net": 0.923,
+          "subs": 5.384,
+          "redemp": 4.461
+        },
+        "RF Euro LP": {
+          "net": 0.534,
+          "subs": 3.317,
+          "redemp": 2.783
+        },
+        "RF Mixta Euro": {
+          "net": 0.158,
+          "subs": 0.841,
+          "redemp": 0.683
+        },
+        "RV Mixta Euro": {
+          "net": -0.001,
+          "subs": 0.006,
+          "redemp": 0.007
+        },
+        "RV Nacional": {
+          "net": 0.025,
+          "subs": 0.182,
+          "redemp": 0.157
+        },
+        "RF Internacional": {
+          "net": 0.605,
+          "subs": 1.252,
+          "redemp": 0.647
+        },
+        "RF Mixta Internacional": {
+          "net": 0.191,
+          "subs": 0.684,
+          "redemp": 0.493
+        },
+        "RV Mixta Internacional": {
+          "net": 0.273,
+          "subs": 0.678,
+          "redemp": 0.405
+        },
+        "RV Euro Resto": {
+          "net": 0.02,
+          "subs": 0.115,
+          "redemp": 0.095
+        },
+        "RV Intl Europa": {
+          "net": 0.102,
+          "subs": 0.23,
+          "redemp": 0.128
+        },
+        "RV Intl EEUU": {
+          "net": -0.032,
+          "subs": 0.335,
+          "redemp": 0.367
+        },
+        "RV Intl Japón": {
+          "net": 0.011,
+          "subs": 0.022,
+          "redemp": 0.011
+        },
+        "RV Intl Emergentes": {
+          "net": 0.038,
+          "subs": 0.114,
+          "redemp": 0.076
+        },
+        "RV Intl Resto": {
+          "net": 0.146,
+          "subs": 0.654,
+          "redemp": 0.508
+        },
+        "Globales": {
+          "net": 0.292,
+          "subs": 1.241,
+          "redemp": 0.949
+        },
+        "Garantizados RF": {
+          "net": -0.423,
+          "subs": 0.032,
+          "redemp": 0.455
+        },
+        "Garantizados RV": {
+          "net": -0.132,
+          "subs": 0.062,
+          "redemp": 0.194
+        },
+        "Retorno Absoluto": {
+          "net": 0.104,
+          "subs": 0.285,
+          "redemp": 0.181
+        },
+        "Fondos Índice": {
+          "net": -0.064,
+          "subs": 0.258,
+          "redemp": 0.322
+        },
+        "Objetivo Rentabilidad": {
+          "net": -0.469,
+          "subs": 0.437,
+          "redemp": 0.906
+        },
+        "FIL": {
+          "net": 0.017,
+          "subs": 0.045,
+          "redemp": 0.028
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    },
+    {
+      "date": "2026-02",
+      "total_subs": 18.533,
+      "total_redemp": 14.871,
+      "total_net": 3.663,
+      "categories": {
+        "Monetarios": {
+          "net": -0.467,
+          "subs": 1.422,
+          "redemp": 1.889
+        },
+        "RF Euro CP": {
+          "net": 0.28,
+          "subs": 4.67,
+          "redemp": 4.389
+        },
+        "RF Euro LP": {
+          "net": 0.487,
+          "subs": 3.003,
+          "redemp": 2.515
+        },
+        "RF Mixta Euro": {
+          "net": 0.728,
+          "subs": 0.989,
+          "redemp": 0.261
+        },
+        "RV Mixta Euro": {
+          "net": -0.0,
+          "subs": 0.004,
+          "redemp": 0.004
+        },
+        "RV Nacional": {
+          "net": 0.043,
+          "subs": 0.144,
+          "redemp": 0.101
+        },
+        "RF Internacional": {
+          "net": 0.59,
+          "subs": 1.278,
+          "redemp": 0.688
+        },
+        "RF Mixta Internacional": {
+          "net": 0.357,
+          "subs": 0.83,
+          "redemp": 0.474
+        },
+        "RV Mixta Internacional": {
+          "net": 0.398,
+          "subs": 0.889,
+          "redemp": 0.491
+        },
+        "RV Euro Resto": {
+          "net": 0.049,
+          "subs": 0.122,
+          "redemp": 0.073
+        },
+        "RV Intl Europa": {
+          "net": 0.294,
+          "subs": 0.446,
+          "redemp": 0.152
+        },
+        "RV Intl EEUU": {
+          "net": 0.092,
+          "subs": 0.394,
+          "redemp": 0.301
+        },
+        "RV Intl Japón": {
+          "net": 0.026,
+          "subs": 0.04,
+          "redemp": 0.014
+        },
+        "RV Intl Emergentes": {
+          "net": 0.106,
+          "subs": 0.157,
+          "redemp": 0.051
+        },
+        "RV Intl Resto": {
+          "net": 0.167,
+          "subs": 0.798,
+          "redemp": 0.631
+        },
+        "Globales": {
+          "net": 0.423,
+          "subs": 1.435,
+          "redemp": 1.012
+        },
+        "Garantizados RF": {
+          "net": 0.02,
+          "subs": 0.046,
+          "redemp": 0.027
+        },
+        "Garantizados RV": {
+          "net": -0.016,
+          "subs": 0.02,
+          "redemp": 0.036
+        },
+        "Retorno Absoluto": {
+          "net": 0.109,
+          "subs": 0.325,
+          "redemp": 0.216
+        },
+        "Fondos Índice": {
+          "net": -0.172,
+          "subs": 0.234,
+          "redemp": 0.406
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.153,
+          "subs": 1.252,
+          "redemp": 1.098
+        },
+        "FIL": {
+          "net": -0.004,
+          "subs": 0.035,
+          "redemp": 0.04
+        },
+        "Hedge Funds": {
+          "net": 0.0,
+          "subs": 0.0,
+          "redemp": 0.0
+        }
+      }
+    }
+  ],
+  "gestora_ranking": [
+    {
+      "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
+      "total_net_bn": 0.882,
+      "flows_by_category": {
+        "Monetarios": -0.646,
+        "Renta Fija Corto Plazo": 0.333,
+        "Renta Fija Largo Plazo": -0.48,
+        "Renta Fija Internacional": 0.391,
+        "Renta Fija Mixta": 0.698,
+        "Renta Variable Mixta": 0.033,
+        "Renta Variable Nacional": 0.046,
+        "Renta Variable Internacional": 0.4,
+        "Globales": 0.282,
+        "Retorno Absoluto": 0.048,
+        "Garantizados": -0.022,
+        "Fondos Índice": -0.2
+      }
+    },
+    {
+      "name": "SANTANDER ASSET MANAGEMENT, S.A., SGIIC",
+      "total_net_bn": 0.807,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.149,
+        "Renta Fija Largo Plazo": 0.236,
+        "Renta Fija Internacional": -0.022,
+        "Renta Fija Mixta": 0.654,
+        "Renta Variable Mixta": -0.007,
+        "Renta Variable Nacional": 0.011,
+        "Renta Variable Internacional": 0.009,
+        "Rentabilidad Objetivo": -0.098,
+        "Globales": -0.08,
+        "Retorno Absoluto": 0.014,
+        "Garantizados": -0.021,
+        "Fondos Índice": -0.038,
+        "Inversión Libre": -0.002
+      }
+    },
+    {
+      "name": "UNICAJA ASSET MANAGEMENT, SGIIC, SA",
+      "total_net_bn": 0.575,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.06,
+        "Renta Fija Largo Plazo": 0.323,
+        "Renta Fija Internacional": -0.022,
+        "Renta Fija Mixta": 0.03,
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Nacional": -0.003,
+        "Renta Variable Internacional": 0.045,
+        "Rentabilidad Objetivo": -0.052,
+        "Globales": 0.062,
+        "Retorno Absoluto": 0.134,
+        "Garantizados": -0.002
+      }
+    },
+    {
+      "name": "KUTXABANK GESTION, SGIIC, S.A.",
+      "total_net_bn": 0.537,
+      "flows_by_category": {
+        "Monetarios": 0.154,
+        "Renta Fija Corto Plazo": 0.091,
+        "Renta Fija Largo Plazo": 0.244,
+        "Renta Fija Mixta": 0.046,
+        "Renta Variable Mixta": 0.159,
+        "Renta Variable Nacional": -0.005,
+        "Renta Variable Internacional": 0.039,
+        "Rentabilidad Objetivo": -0.186,
+        "Globales": 0.013,
+        "Garantizados": -0.016
+      }
+    },
+    {
+      "name": "GESCOOPERATIVO, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.51,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.141,
+        "Renta Fija Largo Plazo": 0.193,
+        "Renta Fija Internacional": 0.065,
+        "Renta Fija Mixta": 0.101,
+        "Renta Variable Mixta": 0.038,
+        "Renta Variable Nacional": 0.007,
+        "Renta Variable Internacional": 0.06,
+        "Rentabilidad Objetivo": 0.001,
+        "Garantizados": -0.096
+      }
+    },
+    {
+      "name": "BANKINTER GESTION DE ACTIVOS, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.465,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.006,
+        "Renta Fija Largo Plazo": -0.041,
+        "Renta Fija Internacional": 0.003,
+        "Renta Fija Mixta": 0.237,
+        "Renta Variable Mixta": 0.272,
+        "Renta Variable Nacional": 0.006,
+        "Renta Variable Internacional": 0.006,
+        "Rentabilidad Objetivo": -0.0,
+        "Globales": 0.004,
+        "Retorno Absoluto": -0.0,
+        "Garantizados": -0.027
+      }
+    },
+    {
+      "name": "IBERCAJA GESTION, SGIIC, S.A.",
+      "total_net_bn": 0.448,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.719,
+        "Renta Fija Largo Plazo": 0.374,
+        "Renta Fija Internacional": 0.764,
+        "Renta Fija Mixta": -0.009,
+        "Renta Variable Mixta": 0.006,
+        "Renta Variable Nacional": 0.003,
+        "Renta Variable Internacional": 0.043,
+        "Globales": -0.008,
+        "Garantizados": -0.004
+      }
+    },
+    {
+      "name": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.296,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.165,
+        "Renta Fija Largo Plazo": 0.012,
+        "Renta Fija Internacional": 0.08,
+        "Renta Fija Mixta": -0.0,
+        "Renta Variable Mixta": 0.018,
+        "Renta Variable Nacional": 0.0,
+        "Renta Variable Internacional": 0.029,
+        "Rentabilidad Objetivo": 0.037,
+        "Globales": -0.0,
+        "Garantizados": -0.045
+      }
+    },
+    {
+      "name": "TREA ASSET MANAGEMENT S.G.I.I.C., S.A.",
+      "total_net_bn": 0.245,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.224,
+        "Renta Fija Largo Plazo": 0.182,
+        "Renta Fija Internacional": -0.024,
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Internacional": -0.002,
+        "Rentabilidad Objetivo": 0.094,
+        "Globales": -0.001,
+        "Retorno Absoluto": -0.01,
+        "Garantizados": -0.218
+      }
+    },
+    {
+      "name": "BBVA ASSET MANAGEMENT, S.A., SGIIC",
+      "total_net_bn": 0.212,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.552,
+        "Renta Fija Largo Plazo": -0.336,
+        "Renta Fija Internacional": -0.105,
+        "Renta Fija Mixta": -0.031,
+        "Renta Variable Mixta": -0.002,
+        "Renta Variable Nacional": -0.0,
+        "Renta Variable Internacional": -0.014,
+        "Globales": 0.161,
+        "Retorno Absoluto": 0.001,
+        "Fondos Índice": -0.014,
+        "Inversión Libre": 0.0
+      }
+    },
+    {
+      "name": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.163,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.087,
+        "Renta Fija Largo Plazo": 0.023,
+        "Renta Fija Internacional": -0.0,
+        "Renta Fija Mixta": 0.01,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Nacional": 0.001,
+        "Renta Variable Internacional": -0.003,
+        "Rentabilidad Objetivo": -0.001,
+        "Globales": 0.034,
+        "Retorno Absoluto": -0.006,
+        "Inversión Libre": 0.015
+      }
+    },
+    {
+      "name": "MEDIOLANUM GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.15,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": 0.132,
+        "Renta Fija Internacional": 0.003,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Internacional": 0.014
+      }
+    },
+    {
+      "name": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.15,
+      "flows_by_category": {
+        "Renta Fija Mixta": 0.003,
+        "Renta Variable Internacional": 0.146
+      }
+    },
+    {
+      "name": "G.I.I.C. FINECO, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.14,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.0,
+        "Renta Fija Largo Plazo": 0.052,
+        "Renta Fija Mixta": -0.003,
+        "Renta Variable Mixta": 0.063,
+        "Renta Variable Internacional": 0.008,
+        "Globales": 0.02
+      }
+    },
+    {
+      "name": "ABANCA GESTION DE ACTIVOS, SGIIC, SA",
+      "total_net_bn": 0.123,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.019,
+        "Renta Fija Largo Plazo": 0.181,
+        "Renta Fija Internacional": 0.008,
+        "Renta Fija Mixta": -0.001,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Internacional": 0.019,
+        "Rentabilidad Objetivo": -0.107,
+        "Fondos Índice": -0.002
+      }
+    },
+    {
+      "name": "SABADELL ASSET MANAGEMENT, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.093,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.196,
+        "Renta Fija Largo Plazo": -0.003,
+        "Renta Fija Internacional": 0.001,
+        "Renta Fija Mixta": 0.016,
+        "Renta Variable Mixta": 0.003,
+        "Renta Variable Nacional": 0.003,
+        "Renta Variable Internacional": 0.012,
+        "Globales": -0.018,
+        "Retorno Absoluto": 0.005,
+        "Garantizados": -0.122
+      }
+    },
+    {
+      "name": "COBAS ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.091,
+      "flows_by_category": {
+        "Renta Fija Mixta": 0.02,
+        "Renta Variable Internacional": 0.066,
+        "Inversión Libre": 0.006
+      }
+    },
+    {
+      "name": "ANDBANK WEALTH MANAGEMENT, SGIIC, S.A.U.",
+      "total_net_bn": 0.088,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.0,
+        "Renta Fija Largo Plazo": -0.009,
+        "Renta Fija Internacional": 0.007,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.014,
+        "Renta Variable Nacional": 0.0,
+        "Renta Variable Internacional": 0.046,
+        "Globales": 0.014,
+        "Retorno Absoluto": -0.0,
+        "Inversión Libre": 0.013
+      }
+    },
+    {
+      "name": "AMUNDI IBERIA, SGIIC, S.A.",
+      "total_net_bn": 0.078,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Largo Plazo": 0.002,
+        "Renta Fija Mixta": -0.007,
+        "Renta Variable Mixta": 0.007,
+        "Renta Variable Internacional": 0.043,
+        "Globales": -0.001,
+        "Retorno Absoluto": 0.008,
+        "Fondos Índice": 0.026
+      }
+    },
+    {
+      "name": "SINGULAR ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.069,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.015,
+        "Renta Fija Largo Plazo": -0.006,
+        "Renta Fija Internacional": 0.015,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Internacional": 0.009,
+        "Globales": 0.058,
+        "Retorno Absoluto": 0.001,
+        "Inversión Libre": 0.002
+      }
+    },
+    {
+      "name": "DEUTSCHE WEALTH MANAGEMENT SGIIC, S.A.",
+      "total_net_bn": 0.069,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.029,
+        "Renta Fija Mixta": 0.014,
+        "Renta Variable Mixta": 0.017,
+        "Renta Variable Internacional": 0.008
+      }
+    },
+    {
+      "name": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
+      "total_net_bn": 0.048,
+      "flows_by_category": {
+        "Renta Variable Internacional": 0.048,
+        "Inversión Libre": 0.0
+      }
+    },
+    {
+      "name": "GESCONSULT, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.037,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.038,
+        "Renta Fija Largo Plazo": -0.001,
+        "Renta Fija Mixta": -0.0,
+        "Renta Variable Mixta": -0.0,
+        "Renta Variable Nacional": -0.0,
+        "Renta Variable Internacional": -0.0
+      }
+    },
+    {
+      "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A.U",
+      "total_net_bn": 0.035,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.018,
+        "Renta Fija Largo Plazo": 0.016,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": 0.001,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Nacional": -0.001,
+        "Renta Variable Internacional": 0.001
+      }
+    },
+    {
+      "name": "GRUPO CATALANA OCCIDENTE GESTION DE ACTIVOS, S.A., SGIIC",
+      "total_net_bn": 0.028,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.002,
+        "Renta Fija Largo Plazo": 0.004,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.006,
+        "Renta Variable Nacional": 0.0,
+        "Renta Variable Internacional": 0.015
+      }
+    },
+    {
+      "name": "DUNAS CAPITAL ASSET MANAGEMENT S.G.I.I.C., S.A.",
+      "total_net_bn": 0.027,
+      "flows_by_category": {
+        "Retorno Absoluto": 0.034,
+        "Fondos Índice": -0.008
+      }
+    },
+    {
+      "name": "CAJA INGENIEROS GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.025,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.011,
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Internacional": 0.012,
+        "Renta Fija Mixta": -0.002,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": 0.0,
+        "Retorno Absoluto": 0.004
+      }
+    },
+    {
+      "name": "BESTINVER GESTION, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.025,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.002,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Mixta": 0.018,
+        "Renta Variable Mixta": 0.003,
+        "Renta Variable Internacional": 0.011,
+        "Inversión Libre": -0.005
+      }
+    },
+    {
+      "name": "SANTA LUCIA ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.023,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.025,
+        "Renta Fija Largo Plazo": -0.001,
+        "Renta Fija Internacional": 0.001,
+        "Renta Fija Mixta": -0.0,
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Nacional": -0.001,
+        "Renta Variable Internacional": 0.002,
+        "Retorno Absoluto": -0.003
+      }
+    },
+    {
+      "name": "TRESSIS GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.022,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Variable Mixta": -0.002,
+        "Renta Variable Internacional": 0.006,
+        "Globales": 0.017,
+        "Inversión Libre": 0.0
+      }
+    },
+    {
+      "name": "GESALCALA, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.02,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": 0.001,
+        "Renta Variable Mixta": -0.0,
+        "Renta Variable Internacional": 0.004,
+        "Globales": 0.011,
+        "Retorno Absoluto": 0.0,
+        "Inversión Libre": 0.004
+      }
+    },
+    {
+      "name": "GESPROFIT, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.014,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.004,
+        "Renta Variable Mixta": 0.01,
+        "Renta Variable Internacional": 0.001
+      }
+    },
+    {
+      "name": "GESIURIS ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.01,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Nacional": -0.001,
+        "Renta Variable Internacional": 0.004,
+        "Globales": 0.003,
+        "Inversión Libre": -0.0
+      }
+    },
+    {
+      "name": "MIRALTA ASSET MANAGEMENT SGIIC, SAU",
+      "total_net_bn": 0.01,
+      "flows_by_category": {
+        "Renta Variable Internacional": 0.007,
+        "Inversión Libre": 0.003
+      }
+    },
+    {
+      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
+      "total_net_bn": 0.007,
+      "flows_by_category": {
+        "Globales": 0.007
+      }
+    },
+    {
+      "name": "ARQUIGEST, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.007,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": 0.003,
+        "Renta Variable Mixta": 0.002,
+        "Renta Variable Internacional": 0.001,
+        "Rentabilidad Objetivo": -0.0,
+        "Garantizados": -0.0
+      }
+    },
+    {
+      "name": "SASSOLA PARTNERS, SGIIC, S.A.",
+      "total_net_bn": 0.006,
+      "flows_by_category": {
+        "Renta Variable Mixta": 0.006
+      }
+    },
+    {
+      "name": "LORETO INVERSIONES, SGIIC, SA",
+      "total_net_bn": 0.006,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.0,
+        "Renta Fija Mixta": 0.004,
+        "Renta Variable Mixta": 0.0,
+        "Globales": 0.001
+      }
+    },
+    {
+      "name": "SOLVENTIS S.G.I.I.C., S.A.",
+      "total_net_bn": 0.006,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.001,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.002,
+        "Renta Variable Internacional": 0.003,
+        "Globales": 0.015,
+        "Retorno Absoluto": -0.015,
+        "Inversión Libre": -0.0
+      }
+    },
+    {
+      "name": "GVC GAESCO GESTIÓN, SGIIC, S.A.",
+      "total_net_bn": 0.005,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.022,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Internacional": 0.008,
+        "Renta Fija Mixta": 0.005,
+        "Renta Variable Mixta": 0.005,
+        "Renta Variable Nacional": -0.0,
+        "Renta Variable Internacional": 0.006,
+        "Globales": 0.003,
+        "Retorno Absoluto": 0.001
+      }
+    },
+    {
+      "name": "WELCOME ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.004,
+      "flows_by_category": {
+        "Renta Fija Mixta": 0.003,
+        "Renta Variable Mixta": 0.001,
+        "Globales": 0.001
+      }
+    },
+    {
+      "name": "MARKET PORTFOLIO ASSET MANAGEMENT, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.004,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Internacional": 0.0,
+        "Renta Variable Internacional": 0.004
+      }
+    },
+    {
+      "name": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
+      "total_net_bn": 0.002,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.002,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": 0.0,
+        "Globales": 0.0
+      }
+    },
+    {
+      "name": "PANZA CAPITAL, SGIIC, S.A.",
+      "total_net_bn": 0.002,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.001,
+        "Renta Variable Internacional": 0.002
+      }
+    },
+    {
+      "name": "GESINTER, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.0,
+      "flows_by_category": {
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": -0.0,
+        "Globales": 0.0,
+        "Inversión Libre": 0.0
+      }
+    },
+    {
+      "name": "AMISTRA, SGIIC, S.A.",
+      "total_net_bn": -0.0,
+      "flows_by_category": {
+        "Globales": -0.0
+      }
+    },
+    {
+      "name": "MDEF GESTEFIN, S.A.U., SGIIC (SOCIEDAD UNIPERSONAL)",
+      "total_net_bn": -0.0,
+      "flows_by_category": {
+        "Globales": -0.0
+      }
+    },
+    {
+      "name": "WELZIA MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": -0.001,
+      "flows_by_category": {
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": -0.0,
+        "Renta Variable Internacional": -0.0,
+        "Globales": -0.001,
+        "Retorno Absoluto": -0.001
+      }
+    },
+    {
+      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": -0.002,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": -0.0,
+        "Globales": -0.001
+      }
+    },
+    {
+      "name": "BEKA ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": -0.002,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.0,
+        "Fondos Índice": -0.0,
+        "Inversión Libre": -0.001
+      }
+    },
+    {
+      "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": -0.002,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.009,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Fija Internacional": -0.0,
+        "Renta Fija Mixta": 0.001,
+        "Renta Variable Mixta": 0.009,
+        "Renta Variable Nacional": 0.001,
+        "Renta Variable Internacional": -0.06,
+        "Globales": 0.008,
+        "Garantizados": 0.032,
+        "Inversión Libre": 0.0
+      }
+    },
+    {
+      "name": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
+      "total_net_bn": -0.002,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.003,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Internacional": -0.0,
+        "Globales": -0.001
+      }
+    },
+    {
+      "name": "METAGESTION, S.A., SGIIC",
+      "total_net_bn": -0.003,
+      "flows_by_category": {
+        "Renta Variable Nacional": -0.0,
+        "Renta Variable Internacional": -0.001,
+        "Globales": -0.002
+      }
+    },
+    {
+      "name": "FONDITEL GESTION, SGIIC, SA",
+      "total_net_bn": -0.006,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.0,
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": -0.007,
+        "Renta Variable Nacional": 0.0,
+        "Renta Variable Internacional": 0.0
+      }
+    },
+    {
+      "name": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
+      "total_net_bn": -0.011,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.008,
+        "Renta Fija Largo Plazo": -0.013,
+        "Renta Fija Internacional": 0.009,
+        "Renta Fija Mixta": -0.001,
+        "Renta Variable Mixta": -0.001,
+        "Renta Variable Internacional": 0.004,
+        "Globales": -0.0
+      }
+    },
+    {
+      "name": "SANTANDER ALTERNATIVE INVESTMENTS, SGIIC, S.A.U.",
+      "total_net_bn": -0.014,
+      "flows_by_category": {
+        "Inversión Libre": -0.014
+      }
+    },
+    {
+      "name": "ABANTE ASESORES GESTION, SGIIC, S.A.",
+      "total_net_bn": -0.021,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.038,
+        "Renta Fija Largo Plazo": -0.001,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": -0.005,
+        "Renta Variable Internacional": 0.023,
+        "Globales": -0.001,
+        "Retorno Absoluto": 0.0
+      }
+    },
+    {
+      "name": "INVERSIS GESTIÓN, S.A., SGIIC",
+      "total_net_bn": -0.027,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.0,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Fija Internacional": 0.0,
+        "Renta Fija Mixta": -0.005,
+        "Renta Variable Mixta": 0.002,
+        "Renta Variable Internacional": -0.025,
+        "Globales": 0.003,
+        "Retorno Absoluto": 0.001
+      }
+    },
+    {
+      "name": "EDM GESTION, SOCIEDAD ANONIMA, S.G.I.I.C.",
+      "total_net_bn": -0.03,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.01,
+        "Renta Fija Largo Plazo": 0.009,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Internacional": -0.016,
+        "Rentabilidad Objetivo": -0.0,
+        "Globales": -0.014
+      }
+    },
+    {
+      "name": "MARCH ASSET MANAGEMENT, S.G.I.I.C., S.A.U.",
+      "total_net_bn": -0.088,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.065,
+        "Renta Fija Largo Plazo": -0.022,
+        "Renta Fija Internacional": -0.0,
+        "Renta Fija Mixta": 0.005,
+        "Renta Variable Mixta": 0.003,
+        "Renta Variable Internacional": 0.0,
+        "Garantizados": -0.009
+      }
+    },
+    {
+      "name": "MUTUACTIVOS, S.A., S.G.I.I.C.",
+      "total_net_bn": -0.475,
+      "flows_by_category": {
+        "Monetarios": -0.076,
+        "Renta Fija Corto Plazo": -0.079,
+        "Renta Fija Largo Plazo": -0.045,
+        "Renta Fija Mixta": -0.388,
+        "Renta Variable Mixta": -0.003,
+        "Renta Variable Nacional": 0.001,
+        "Renta Variable Internacional": -0.002,
+        "Rentabilidad Objetivo": -0.003,
+        "Globales": 0.127,
+        "Inversión Libre": -0.008
+      }
+    }
+  ],
+  "cumulative_by_category": {
+    "Monetarios": [
+      {
+        "date": "2024-01",
+        "net": 1.127,
+        "cumulative": 1.127
+      },
+      {
+        "date": "2024-02",
+        "net": 1.324,
+        "cumulative": 2.451
+      },
+      {
+        "date": "2024-03",
+        "net": 1.498,
+        "cumulative": 3.949
+      },
+      {
+        "date": "2024-04",
+        "net": 1.365,
+        "cumulative": 5.314
+      },
+      {
+        "date": "2024-05",
+        "net": 1.242,
+        "cumulative": 6.556
+      },
+      {
+        "date": "2024-06",
+        "net": 1.149,
+        "cumulative": 7.705
+      },
+      {
+        "date": "2024-07",
+        "net": 0.773,
+        "cumulative": 8.478
+      },
+      {
+        "date": "2024-08",
+        "net": 0.552,
+        "cumulative": 9.03
+      },
+      {
+        "date": "2024-09",
+        "net": 0.591,
+        "cumulative": 9.621
+      },
+      {
+        "date": "2024-10",
+        "net": 0.719,
+        "cumulative": 10.34
+      },
+      {
+        "date": "2024-11",
+        "net": 0.839,
+        "cumulative": 11.179
+      },
+      {
+        "date": "2024-12",
+        "net": 0.607,
+        "cumulative": 11.786
+      },
+      {
+        "date": "2025-01",
+        "net": 0.139,
+        "cumulative": 11.925
+      },
+      {
+        "date": "2025-02",
+        "net": 0.147,
+        "cumulative": 12.072
+      },
+      {
+        "date": "2025-03",
+        "net": 0.561,
+        "cumulative": 12.633
+      },
+      {
+        "date": "2025-04",
+        "net": 0.639,
+        "cumulative": 13.272
+      },
+      {
+        "date": "2025-05",
+        "net": -0.083,
+        "cumulative": 13.189
+      },
+      {
+        "date": "2025-06",
+        "net": -0.135,
+        "cumulative": 13.054
+      },
+      {
+        "date": "2025-07",
+        "net": 0.049,
+        "cumulative": 13.103
+      },
+      {
+        "date": "2025-08",
+        "net": 0.097,
+        "cumulative": 13.2
+      },
+      {
+        "date": "2025-09",
+        "net": -0.458,
+        "cumulative": 12.742
+      },
+      {
+        "date": "2025-10",
+        "net": -0.624,
+        "cumulative": 12.118
+      },
+      {
+        "date": "2025-11",
+        "net": 0.995,
+        "cumulative": 13.113
+      },
+      {
+        "date": "2025-12",
+        "net": -0.02,
+        "cumulative": 13.093
+      },
+      {
+        "date": "2026-01",
+        "net": -0.101,
+        "cumulative": 12.992
+      },
+      {
+        "date": "2026-02",
+        "net": -0.467,
+        "cumulative": 12.525
+      }
+    ],
+    "RF Euro CP": [
+      {
+        "date": "2024-01",
+        "net": 1.925,
+        "cumulative": 1.925
+      },
+      {
+        "date": "2024-02",
+        "net": 1.257,
+        "cumulative": 3.182
+      },
+      {
+        "date": "2024-03",
+        "net": 1.012,
+        "cumulative": 4.194
+      },
+      {
+        "date": "2024-04",
+        "net": 1.471,
+        "cumulative": 5.665
+      },
+      {
+        "date": "2024-05",
+        "net": 1.575,
+        "cumulative": 7.24
+      },
+      {
+        "date": "2024-06",
+        "net": 0.624,
+        "cumulative": 7.864
+      },
+      {
+        "date": "2024-07",
+        "net": 1.8,
+        "cumulative": 9.664
+      },
+      {
+        "date": "2024-08",
+        "net": 0.652,
+        "cumulative": 10.316
+      },
+      {
+        "date": "2024-09",
+        "net": 1.273,
+        "cumulative": 11.589
+      },
+      {
+        "date": "2024-10",
+        "net": 1.282,
+        "cumulative": 12.871
+      },
+      {
+        "date": "2024-11",
+        "net": 1.176,
+        "cumulative": 14.047
+      },
+      {
+        "date": "2024-12",
+        "net": 0.873,
+        "cumulative": 14.92
+      },
+      {
+        "date": "2025-01",
+        "net": 2.186,
+        "cumulative": 17.106
+      },
+      {
+        "date": "2025-02",
+        "net": 2.258,
+        "cumulative": 19.364
+      },
+      {
+        "date": "2025-03",
+        "net": 1.748,
+        "cumulative": 21.112
+      },
+      {
+        "date": "2025-04",
+        "net": 1.902,
+        "cumulative": 23.014
+      },
+      {
+        "date": "2025-05",
+        "net": 3.856,
+        "cumulative": 26.87
+      },
+      {
+        "date": "2025-06",
+        "net": 2.014,
+        "cumulative": 28.884
+      },
+      {
+        "date": "2025-07",
+        "net": 0.658,
+        "cumulative": 29.542
+      },
+      {
+        "date": "2025-08",
+        "net": 1.549,
+        "cumulative": 31.091
+      },
+      {
+        "date": "2025-09",
+        "net": 0.438,
+        "cumulative": 31.529
+      },
+      {
+        "date": "2025-10",
+        "net": 0.689,
+        "cumulative": 32.218
+      },
+      {
+        "date": "2025-11",
+        "net": 0.557,
+        "cumulative": 32.775
+      },
+      {
+        "date": "2025-12",
+        "net": 0.342,
+        "cumulative": 33.117
+      },
+      {
+        "date": "2026-01",
+        "net": 0.923,
+        "cumulative": 34.04
+      },
+      {
+        "date": "2026-02",
+        "net": 0.28,
+        "cumulative": 34.32
+      }
+    ],
+    "RF Euro LP": [
+      {
+        "date": "2024-01",
+        "net": 0.297,
+        "cumulative": 0.297
+      },
+      {
+        "date": "2024-02",
+        "net": 0.534,
+        "cumulative": 0.831
+      },
+      {
+        "date": "2024-03",
+        "net": 0.684,
+        "cumulative": 1.515
+      },
+      {
+        "date": "2024-04",
+        "net": 0.869,
+        "cumulative": 2.384
+      },
+      {
+        "date": "2024-05",
+        "net": 0.394,
+        "cumulative": 2.778
+      },
+      {
+        "date": "2024-06",
+        "net": 0.014,
+        "cumulative": 2.792
+      },
+      {
+        "date": "2024-07",
+        "net": -0.34,
+        "cumulative": 2.452
+      },
+      {
+        "date": "2024-08",
+        "net": 0.485,
+        "cumulative": 2.937
+      },
+      {
+        "date": "2024-09",
+        "net": 0.512,
+        "cumulative": 3.449
+      },
+      {
+        "date": "2024-10",
+        "net": 1.066,
+        "cumulative": 4.515
+      },
+      {
+        "date": "2024-11",
+        "net": 0.225,
+        "cumulative": 4.74
+      },
+      {
+        "date": "2024-12",
+        "net": 0.619,
+        "cumulative": 5.359
+      },
+      {
+        "date": "2025-01",
+        "net": 0.88,
+        "cumulative": 6.239
+      },
+      {
+        "date": "2025-02",
+        "net": 1.468,
+        "cumulative": 7.707
+      },
+      {
+        "date": "2025-03",
+        "net": 1.115,
+        "cumulative": 8.822
+      },
+      {
+        "date": "2025-04",
+        "net": 0.863,
+        "cumulative": 9.685
+      },
+      {
+        "date": "2025-05",
+        "net": -0.454,
+        "cumulative": 9.231
+      },
+      {
+        "date": "2025-06",
+        "net": 0.528,
+        "cumulative": 9.759
+      },
+      {
+        "date": "2025-07",
+        "net": 2.089,
+        "cumulative": 11.848
+      },
+      {
+        "date": "2025-08",
+        "net": 0.304,
+        "cumulative": 12.152
+      },
+      {
+        "date": "2025-09",
+        "net": 1.118,
+        "cumulative": 13.27
+      },
+      {
+        "date": "2025-10",
+        "net": 1.186,
+        "cumulative": 14.456
+      },
+      {
+        "date": "2025-11",
+        "net": 0.861,
+        "cumulative": 15.317
+      },
+      {
+        "date": "2025-12",
+        "net": 0.529,
+        "cumulative": 15.846
+      },
+      {
+        "date": "2026-01",
+        "net": 0.534,
+        "cumulative": 16.38
+      },
+      {
+        "date": "2026-02",
+        "net": 0.487,
+        "cumulative": 16.867
+      }
+    ],
+    "RF Mixta Euro": [
+      {
+        "date": "2024-01",
+        "net": 0.054,
+        "cumulative": 0.054
+      },
+      {
+        "date": "2024-02",
+        "net": 0.419,
+        "cumulative": 0.473
+      },
+      {
+        "date": "2024-03",
+        "net": 0.245,
+        "cumulative": 0.718
+      },
+      {
+        "date": "2024-04",
+        "net": 0.764,
+        "cumulative": 1.482
+      },
+      {
+        "date": "2024-05",
+        "net": 0.694,
+        "cumulative": 2.176
+      },
+      {
+        "date": "2024-06",
+        "net": 0.573,
+        "cumulative": 2.749
+      },
+      {
+        "date": "2024-07",
+        "net": 0.52,
+        "cumulative": 3.269
+      },
+      {
+        "date": "2024-08",
+        "net": 0.27,
+        "cumulative": 3.539
+      },
+      {
+        "date": "2024-09",
+        "net": 0.4,
+        "cumulative": 3.939
+      },
+      {
+        "date": "2024-10",
+        "net": 0.641,
+        "cumulative": 4.58
+      },
+      {
+        "date": "2024-11",
+        "net": 0.515,
+        "cumulative": 5.095
+      },
+      {
+        "date": "2024-12",
+        "net": 0.481,
+        "cumulative": 5.576
+      },
+      {
+        "date": "2025-01",
+        "net": 0.61,
+        "cumulative": 6.186
+      },
+      {
+        "date": "2025-02",
+        "net": 0.568,
+        "cumulative": 6.754
+      },
+      {
+        "date": "2025-03",
+        "net": 0.273,
+        "cumulative": 7.027
+      },
+      {
+        "date": "2025-04",
+        "net": 0.237,
+        "cumulative": 7.264
+      },
+      {
+        "date": "2025-05",
+        "net": 0.423,
+        "cumulative": 7.687
+      },
+      {
+        "date": "2025-06",
+        "net": 0.692,
+        "cumulative": 8.379
+      },
+      {
+        "date": "2025-07",
+        "net": 0.211,
+        "cumulative": 8.59
+      },
+      {
+        "date": "2025-08",
+        "net": 0.234,
+        "cumulative": 8.824
+      },
+      {
+        "date": "2025-09",
+        "net": 0.343,
+        "cumulative": 9.167
+      },
+      {
+        "date": "2025-10",
+        "net": 0.674,
+        "cumulative": 9.841
+      },
+      {
+        "date": "2025-11",
+        "net": 0.386,
+        "cumulative": 10.227
+      },
+      {
+        "date": "2025-12",
+        "net": 0.243,
+        "cumulative": 10.47
+      },
+      {
+        "date": "2026-01",
+        "net": 0.158,
+        "cumulative": 10.628
+      },
+      {
+        "date": "2026-02",
+        "net": 0.728,
+        "cumulative": 11.356
+      }
+    ],
+    "RV Mixta Euro": [
+      {
+        "date": "2024-01",
+        "net": -0.002,
+        "cumulative": -0.002
+      },
+      {
+        "date": "2024-02",
+        "net": -0.002,
+        "cumulative": -0.004
+      },
+      {
+        "date": "2024-03",
+        "net": -0.007,
+        "cumulative": -0.011
+      },
+      {
+        "date": "2024-04",
+        "net": -0.003,
+        "cumulative": -0.014
+      },
+      {
+        "date": "2024-05",
+        "net": -0.013,
+        "cumulative": -0.027
+      },
+      {
+        "date": "2024-06",
+        "net": -0.005,
+        "cumulative": -0.032
+      },
+      {
+        "date": "2024-07",
+        "net": -0.003,
+        "cumulative": -0.035
+      },
+      {
+        "date": "2024-08",
+        "net": -0.0,
+        "cumulative": -0.035
+      },
+      {
+        "date": "2024-09",
+        "net": -0.008,
+        "cumulative": -0.043
+      },
+      {
+        "date": "2024-10",
+        "net": -0.004,
+        "cumulative": -0.047
+      },
+      {
+        "date": "2024-11",
+        "net": -0.004,
+        "cumulative": -0.051
+      },
+      {
+        "date": "2024-12",
+        "net": -0.005,
+        "cumulative": -0.056
+      },
+      {
+        "date": "2025-01",
+        "net": -0.004,
+        "cumulative": -0.06
+      },
+      {
+        "date": "2025-02",
+        "net": -0.008,
+        "cumulative": -0.068
+      },
+      {
+        "date": "2025-03",
+        "net": -0.064,
+        "cumulative": -0.132
+      },
+      {
+        "date": "2025-04",
+        "net": -0.001,
+        "cumulative": -0.133
+      },
+      {
+        "date": "2025-05",
+        "net": -0.003,
+        "cumulative": -0.136
+      },
+      {
+        "date": "2025-06",
+        "net": -0.005,
+        "cumulative": -0.141
+      },
+      {
+        "date": "2025-07",
+        "net": 0.003,
+        "cumulative": -0.138
+      },
+      {
+        "date": "2025-08",
+        "net": -0.0,
+        "cumulative": -0.138
+      },
+      {
+        "date": "2025-09",
+        "net": -0.005,
+        "cumulative": -0.143
+      },
+      {
+        "date": "2025-10",
+        "net": -0.001,
+        "cumulative": -0.144
+      },
+      {
+        "date": "2025-11",
+        "net": -0.001,
+        "cumulative": -0.145
+      },
+      {
+        "date": "2025-12",
+        "net": 0.009,
+        "cumulative": -0.136
+      },
+      {
+        "date": "2026-01",
+        "net": -0.001,
+        "cumulative": -0.137
+      },
+      {
+        "date": "2026-02",
+        "net": -0.0,
+        "cumulative": -0.137
+      }
+    ],
+    "RV Nacional": [
+      {
+        "date": "2024-01",
+        "net": -0.147,
+        "cumulative": -0.147
+      },
+      {
+        "date": "2024-02",
+        "net": -0.108,
+        "cumulative": -0.255
+      },
+      {
+        "date": "2024-03",
+        "net": -0.06,
+        "cumulative": -0.315
+      },
+      {
+        "date": "2024-04",
+        "net": -0.059,
+        "cumulative": -0.374
+      },
+      {
+        "date": "2024-05",
+        "net": -0.199,
+        "cumulative": -0.573
+      },
+      {
+        "date": "2024-06",
+        "net": 0.014,
+        "cumulative": -0.559
+      },
+      {
+        "date": "2024-07",
+        "net": -0.013,
+        "cumulative": -0.572
+      },
+      {
+        "date": "2024-08",
+        "net": -0.009,
+        "cumulative": -0.581
+      },
+      {
+        "date": "2024-09",
+        "net": -0.046,
+        "cumulative": -0.627
+      },
+      {
+        "date": "2024-10",
+        "net": -0.026,
+        "cumulative": -0.653
+      },
+      {
+        "date": "2024-11",
+        "net": -0.072,
+        "cumulative": -0.725
+      },
+      {
+        "date": "2024-12",
+        "net": -0.034,
+        "cumulative": -0.759
+      },
+      {
+        "date": "2025-01",
+        "net": -0.043,
+        "cumulative": -0.802
+      },
+      {
+        "date": "2025-02",
+        "net": 0.005,
+        "cumulative": -0.797
+      },
+      {
+        "date": "2025-03",
+        "net": 0.009,
+        "cumulative": -0.788
+      },
+      {
+        "date": "2025-04",
+        "net": -0.007,
+        "cumulative": -0.795
+      },
+      {
+        "date": "2025-05",
+        "net": -0.008,
+        "cumulative": -0.803
+      },
+      {
+        "date": "2025-06",
+        "net": -0.012,
+        "cumulative": -0.815
+      },
+      {
+        "date": "2025-07",
+        "net": -0.013,
+        "cumulative": -0.828
+      },
+      {
+        "date": "2025-08",
+        "net": 0.007,
+        "cumulative": -0.821
+      },
+      {
+        "date": "2025-09",
+        "net": 0.031,
+        "cumulative": -0.79
+      },
+      {
+        "date": "2025-10",
+        "net": 0.009,
+        "cumulative": -0.781
+      },
+      {
+        "date": "2025-11",
+        "net": -0.235,
+        "cumulative": -1.016
+      },
+      {
+        "date": "2025-12",
+        "net": -0.059,
+        "cumulative": -1.075
+      },
+      {
+        "date": "2026-01",
+        "net": 0.025,
+        "cumulative": -1.05
+      },
+      {
+        "date": "2026-02",
+        "net": 0.043,
+        "cumulative": -1.007
+      }
+    ],
+    "RF Internacional": [
+      {
+        "date": "2024-01",
+        "net": 0.46,
+        "cumulative": 0.46
+      },
+      {
+        "date": "2024-02",
+        "net": 0.503,
+        "cumulative": 0.963
+      },
+      {
+        "date": "2024-03",
+        "net": 0.054,
+        "cumulative": 1.017
+      },
+      {
+        "date": "2024-04",
+        "net": -0.276,
+        "cumulative": 0.741
+      },
+      {
+        "date": "2024-05",
+        "net": -0.419,
+        "cumulative": 0.322
+      },
+      {
+        "date": "2024-06",
+        "net": 0.051,
+        "cumulative": 0.373
+      },
+      {
+        "date": "2024-07",
+        "net": 0.202,
+        "cumulative": 0.575
+      },
+      {
+        "date": "2024-08",
+        "net": 0.083,
+        "cumulative": 0.658
+      },
+      {
+        "date": "2024-09",
+        "net": 0.366,
+        "cumulative": 1.024
+      },
+      {
+        "date": "2024-10",
+        "net": 0.632,
+        "cumulative": 1.656
+      },
+      {
+        "date": "2024-11",
+        "net": 0.501,
+        "cumulative": 2.157
+      },
+      {
+        "date": "2024-12",
+        "net": 0.296,
+        "cumulative": 2.453
+      },
+      {
+        "date": "2025-01",
+        "net": 0.237,
+        "cumulative": 2.69
+      },
+      {
+        "date": "2025-02",
+        "net": 0.327,
+        "cumulative": 3.017
+      },
+      {
+        "date": "2025-03",
+        "net": 0.127,
+        "cumulative": 3.144
+      },
+      {
+        "date": "2025-04",
+        "net": -0.185,
+        "cumulative": 2.959
+      },
+      {
+        "date": "2025-05",
+        "net": -0.304,
+        "cumulative": 2.655
+      },
+      {
+        "date": "2025-06",
+        "net": 0.277,
+        "cumulative": 2.932
+      },
+      {
+        "date": "2025-07",
+        "net": 0.917,
+        "cumulative": 3.849
+      },
+      {
+        "date": "2025-08",
+        "net": 0.246,
+        "cumulative": 4.095
+      },
+      {
+        "date": "2025-09",
+        "net": 0.228,
+        "cumulative": 4.323
+      },
+      {
+        "date": "2025-10",
+        "net": 0.206,
+        "cumulative": 4.529
+      },
+      {
+        "date": "2025-11",
+        "net": 0.15,
+        "cumulative": 4.679
+      },
+      {
+        "date": "2025-12",
+        "net": 0.059,
+        "cumulative": 4.738
+      },
+      {
+        "date": "2026-01",
+        "net": 0.605,
+        "cumulative": 5.343
+      },
+      {
+        "date": "2026-02",
+        "net": 0.59,
+        "cumulative": 5.933
+      }
+    ],
+    "RF Mixta Internacional": [
+      {
+        "date": "2024-01",
+        "net": -0.418,
+        "cumulative": -0.418
+      },
+      {
+        "date": "2024-02",
+        "net": -0.325,
+        "cumulative": -0.743
+      },
+      {
+        "date": "2024-03",
+        "net": -0.306,
+        "cumulative": -1.049
+      },
+      {
+        "date": "2024-04",
+        "net": -0.28,
+        "cumulative": -1.329
+      },
+      {
+        "date": "2024-05",
+        "net": -0.288,
+        "cumulative": -1.617
+      },
+      {
+        "date": "2024-06",
+        "net": -0.254,
+        "cumulative": -1.871
+      },
+      {
+        "date": "2024-07",
+        "net": -0.066,
+        "cumulative": -1.937
+      },
+      {
+        "date": "2024-08",
+        "net": -0.047,
+        "cumulative": -1.984
+      },
+      {
+        "date": "2024-09",
+        "net": -0.077,
+        "cumulative": -2.061
+      },
+      {
+        "date": "2024-10",
+        "net": -0.114,
+        "cumulative": -2.175
+      },
+      {
+        "date": "2024-11",
+        "net": -0.764,
+        "cumulative": -2.939
+      },
+      {
+        "date": "2024-12",
+        "net": 0.016,
+        "cumulative": -2.923
+      },
+      {
+        "date": "2025-01",
+        "net": -0.011,
+        "cumulative": -2.934
+      },
+      {
+        "date": "2025-02",
+        "net": 0.089,
+        "cumulative": -2.845
+      },
+      {
+        "date": "2025-03",
+        "net": -0.133,
+        "cumulative": -2.978
+      },
+      {
+        "date": "2025-04",
+        "net": -0.337,
+        "cumulative": -3.315
+      },
+      {
+        "date": "2025-05",
+        "net": 0.024,
+        "cumulative": -3.291
+      },
+      {
+        "date": "2025-06",
+        "net": -0.001,
+        "cumulative": -3.292
+      },
+      {
+        "date": "2025-07",
+        "net": 0.026,
+        "cumulative": -3.266
+      },
+      {
+        "date": "2025-08",
+        "net": -0.058,
+        "cumulative": -3.324
+      },
+      {
+        "date": "2025-09",
+        "net": 0.117,
+        "cumulative": -3.207
+      },
+      {
+        "date": "2025-10",
+        "net": 0.505,
+        "cumulative": -2.702
+      },
+      {
+        "date": "2025-11",
+        "net": 0.345,
+        "cumulative": -2.357
+      },
+      {
+        "date": "2025-12",
+        "net": 0.201,
+        "cumulative": -2.156
+      },
+      {
+        "date": "2026-01",
+        "net": 0.191,
+        "cumulative": -1.965
+      },
+      {
+        "date": "2026-02",
+        "net": 0.357,
+        "cumulative": -1.608
+      }
+    ],
+    "RV Mixta Internacional": [
+      {
+        "date": "2024-01",
+        "net": -0.243,
+        "cumulative": -0.243
+      },
+      {
+        "date": "2024-02",
+        "net": -0.115,
+        "cumulative": -0.358
+      },
+      {
+        "date": "2024-03",
+        "net": -0.107,
+        "cumulative": -0.465
+      },
+      {
+        "date": "2024-04",
+        "net": -0.174,
+        "cumulative": -0.639
+      },
+      {
+        "date": "2024-05",
+        "net": -0.013,
+        "cumulative": -0.652
+      },
+      {
+        "date": "2024-06",
+        "net": -0.022,
+        "cumulative": -0.674
+      },
+      {
+        "date": "2024-07",
+        "net": 0.008,
+        "cumulative": -0.666
+      },
+      {
+        "date": "2024-08",
+        "net": -0.053,
+        "cumulative": -0.719
+      },
+      {
+        "date": "2024-09",
+        "net": -0.047,
+        "cumulative": -0.766
+      },
+      {
+        "date": "2024-10",
+        "net": -0.04,
+        "cumulative": -0.806
+      },
+      {
+        "date": "2024-11",
+        "net": -0.24,
+        "cumulative": -1.046
+      },
+      {
+        "date": "2024-12",
+        "net": 0.062,
+        "cumulative": -0.984
+      },
+      {
+        "date": "2025-01",
+        "net": 0.089,
+        "cumulative": -0.895
+      },
+      {
+        "date": "2025-02",
+        "net": 0.23,
+        "cumulative": -0.665
+      },
+      {
+        "date": "2025-03",
+        "net": -0.081,
+        "cumulative": -0.746
+      },
+      {
+        "date": "2025-04",
+        "net": -0.331,
+        "cumulative": -1.077
+      },
+      {
+        "date": "2025-05",
+        "net": 0.061,
+        "cumulative": -1.016
+      },
+      {
+        "date": "2025-06",
+        "net": -0.056,
+        "cumulative": -1.072
+      },
+      {
+        "date": "2025-07",
+        "net": 0.053,
+        "cumulative": -1.019
+      },
+      {
+        "date": "2025-08",
+        "net": -0.075,
+        "cumulative": -1.094
+      },
+      {
+        "date": "2025-09",
+        "net": 0.104,
+        "cumulative": -0.99
+      },
+      {
+        "date": "2025-10",
+        "net": 0.281,
+        "cumulative": -0.709
+      },
+      {
+        "date": "2025-11",
+        "net": 0.165,
+        "cumulative": -0.544
+      },
+      {
+        "date": "2025-12",
+        "net": 0.13,
+        "cumulative": -0.414
+      },
+      {
+        "date": "2026-01",
+        "net": 0.273,
+        "cumulative": -0.141
+      },
+      {
+        "date": "2026-02",
+        "net": 0.398,
+        "cumulative": 0.257
+      }
+    ],
+    "RV Euro Resto": [
+      {
+        "date": "2024-01",
+        "net": -0.031,
+        "cumulative": -0.031
+      },
+      {
+        "date": "2024-02",
+        "net": 0.028,
+        "cumulative": -0.003
+      },
+      {
+        "date": "2024-03",
+        "net": -0.046,
+        "cumulative": -0.049
+      },
+      {
+        "date": "2024-04",
+        "net": -0.025,
+        "cumulative": -0.074
+      },
+      {
+        "date": "2024-05",
+        "net": -0.025,
+        "cumulative": -0.099
+      },
+      {
+        "date": "2024-06",
+        "net": -0.011,
+        "cumulative": -0.11
+      },
+      {
+        "date": "2024-07",
+        "net": -0.007,
+        "cumulative": -0.117
+      },
+      {
+        "date": "2024-08",
+        "net": 0.005,
+        "cumulative": -0.112
+      },
+      {
+        "date": "2024-09",
+        "net": -0.013,
+        "cumulative": -0.125
+      },
+      {
+        "date": "2024-10",
+        "net": 0.009,
+        "cumulative": -0.116
+      },
+      {
+        "date": "2024-11",
+        "net": -0.013,
+        "cumulative": -0.129
+      },
+      {
+        "date": "2024-12",
+        "net": -0.063,
+        "cumulative": -0.192
+      },
+      {
+        "date": "2025-01",
+        "net": -0.137,
+        "cumulative": -0.329
+      },
+      {
+        "date": "2025-02",
+        "net": 0.003,
+        "cumulative": -0.326
+      },
+      {
+        "date": "2025-03",
+        "net": 0.019,
+        "cumulative": -0.307
+      },
+      {
+        "date": "2025-04",
+        "net": 0.025,
+        "cumulative": -0.282
+      },
+      {
+        "date": "2025-05",
+        "net": -0.037,
+        "cumulative": -0.319
+      },
+      {
+        "date": "2025-06",
+        "net": -0.049,
+        "cumulative": -0.368
+      },
+      {
+        "date": "2025-07",
+        "net": 0.039,
+        "cumulative": -0.329
+      },
+      {
+        "date": "2025-08",
+        "net": 0.071,
+        "cumulative": -0.258
+      },
+      {
+        "date": "2025-09",
+        "net": -0.012,
+        "cumulative": -0.27
+      },
+      {
+        "date": "2025-10",
+        "net": 0.064,
+        "cumulative": -0.206
+      },
+      {
+        "date": "2025-11",
+        "net": 0.277,
+        "cumulative": 0.071
+      },
+      {
+        "date": "2025-12",
+        "net": -0.083,
+        "cumulative": -0.012
+      },
+      {
+        "date": "2026-01",
+        "net": 0.02,
+        "cumulative": 0.008
+      },
+      {
+        "date": "2026-02",
+        "net": 0.049,
+        "cumulative": 0.057
+      }
+    ],
+    "RV Intl Europa": [
+      {
+        "date": "2024-01",
+        "net": -0.018,
+        "cumulative": -0.018
+      },
+      {
+        "date": "2024-02",
+        "net": -0.031,
+        "cumulative": -0.049
+      },
+      {
+        "date": "2024-03",
+        "net": -0.049,
+        "cumulative": -0.098
+      },
+      {
+        "date": "2024-04",
+        "net": 0.081,
+        "cumulative": -0.017
+      },
+      {
+        "date": "2024-05",
+        "net": 0.244,
+        "cumulative": 0.227
+      },
+      {
+        "date": "2024-06",
+        "net": -0.016,
+        "cumulative": 0.211
+      },
+      {
+        "date": "2024-07",
+        "net": 0.017,
+        "cumulative": 0.228
+      },
+      {
+        "date": "2024-08",
+        "net": -0.023,
+        "cumulative": 0.205
+      },
+      {
+        "date": "2024-09",
+        "net": -0.051,
+        "cumulative": 0.154
+      },
+      {
+        "date": "2024-10",
+        "net": 0.126,
+        "cumulative": 0.28
+      },
+      {
+        "date": "2024-11",
+        "net": -0.009,
+        "cumulative": 0.271
+      },
+      {
+        "date": "2024-12",
+        "net": -0.402,
+        "cumulative": -0.131
+      },
+      {
+        "date": "2025-01",
+        "net": -0.06,
+        "cumulative": -0.191
+      },
+      {
+        "date": "2025-02",
+        "net": -0.167,
+        "cumulative": -0.358
+      },
+      {
+        "date": "2025-03",
+        "net": 0.067,
+        "cumulative": -0.291
+      },
+      {
+        "date": "2025-04",
+        "net": 0.078,
+        "cumulative": -0.213
+      },
+      {
+        "date": "2025-05",
+        "net": 0.125,
+        "cumulative": -0.088
+      },
+      {
+        "date": "2025-06",
+        "net": -0.016,
+        "cumulative": -0.104
+      },
+      {
+        "date": "2025-07",
+        "net": -0.202,
+        "cumulative": -0.306
+      },
+      {
+        "date": "2025-08",
+        "net": -0.002,
+        "cumulative": -0.308
+      },
+      {
+        "date": "2025-09",
+        "net": 0.03,
+        "cumulative": -0.278
+      },
+      {
+        "date": "2025-10",
+        "net": 0.32,
+        "cumulative": 0.042
+      },
+      {
+        "date": "2025-11",
+        "net": 0.092,
+        "cumulative": 0.134
+      },
+      {
+        "date": "2025-12",
+        "net": 0.067,
+        "cumulative": 0.201
+      },
+      {
+        "date": "2026-01",
+        "net": 0.102,
+        "cumulative": 0.303
+      },
+      {
+        "date": "2026-02",
+        "net": 0.294,
+        "cumulative": 0.597
+      }
+    ],
+    "RV Intl EEUU": [
+      {
+        "date": "2024-01",
+        "net": -0.207,
+        "cumulative": -0.207
+      },
+      {
+        "date": "2024-02",
+        "net": 0.173,
+        "cumulative": -0.034
+      },
+      {
+        "date": "2024-03",
+        "net": -0.007,
+        "cumulative": -0.041
+      },
+      {
+        "date": "2024-04",
+        "net": -0.031,
+        "cumulative": -0.072
+      },
+      {
+        "date": "2024-05",
+        "net": 0.096,
+        "cumulative": 0.024
+      },
+      {
+        "date": "2024-06",
+        "net": 0.104,
+        "cumulative": 0.128
+      },
+      {
+        "date": "2024-07",
+        "net": 0.073,
+        "cumulative": 0.201
+      },
+      {
+        "date": "2024-08",
+        "net": 0.03,
+        "cumulative": 0.231
+      },
+      {
+        "date": "2024-09",
+        "net": 0.011,
+        "cumulative": 0.242
+      },
+      {
+        "date": "2024-10",
+        "net": 0.033,
+        "cumulative": 0.275
+      },
+      {
+        "date": "2024-11",
+        "net": 0.713,
+        "cumulative": 0.988
+      },
+      {
+        "date": "2024-12",
+        "net": -0.048,
+        "cumulative": 0.94
+      },
+      {
+        "date": "2025-01",
+        "net": 0.408,
+        "cumulative": 1.348
+      },
+      {
+        "date": "2025-02",
+        "net": -0.048,
+        "cumulative": 1.3
+      },
+      {
+        "date": "2025-03",
+        "net": -0.225,
+        "cumulative": 1.075
+      },
+      {
+        "date": "2025-04",
+        "net": -0.195,
+        "cumulative": 0.88
+      },
+      {
+        "date": "2025-05",
+        "net": -0.124,
+        "cumulative": 0.756
+      },
+      {
+        "date": "2025-06",
+        "net": -0.087,
+        "cumulative": 0.669
+      },
+      {
+        "date": "2025-07",
+        "net": -0.606,
+        "cumulative": 0.063
+      },
+      {
+        "date": "2025-08",
+        "net": 0.036,
+        "cumulative": 0.099
+      },
+      {
+        "date": "2025-09",
+        "net": -0.646,
+        "cumulative": -0.547
+      },
+      {
+        "date": "2025-10",
+        "net": -0.285,
+        "cumulative": -0.832
+      },
+      {
+        "date": "2025-11",
+        "net": 0.034,
+        "cumulative": -0.798
+      },
+      {
+        "date": "2025-12",
+        "net": -0.091,
+        "cumulative": -0.889
+      },
+      {
+        "date": "2026-01",
+        "net": -0.032,
+        "cumulative": -0.921
+      },
+      {
+        "date": "2026-02",
+        "net": 0.092,
+        "cumulative": -0.829
+      }
+    ],
+    "RV Intl Japón": [
+      {
+        "date": "2024-01",
+        "net": -0.017,
+        "cumulative": -0.017
+      },
+      {
+        "date": "2024-02",
+        "net": 0.032,
+        "cumulative": 0.015
+      },
+      {
+        "date": "2024-03",
+        "net": -0.018,
+        "cumulative": -0.003
+      },
+      {
+        "date": "2024-04",
+        "net": 0.004,
+        "cumulative": 0.001
+      },
+      {
+        "date": "2024-05",
+        "net": 0.036,
+        "cumulative": 0.037
+      },
+      {
+        "date": "2024-06",
+        "net": -0.002,
+        "cumulative": 0.035
+      },
+      {
+        "date": "2024-07",
+        "net": -0.003,
+        "cumulative": 0.032
+      },
+      {
+        "date": "2024-08",
+        "net": -0.001,
+        "cumulative": 0.031
+      },
+      {
+        "date": "2024-09",
+        "net": -0.007,
+        "cumulative": 0.024
+      },
+      {
+        "date": "2024-10",
+        "net": -0.192,
+        "cumulative": -0.168
+      },
+      {
+        "date": "2024-11",
+        "net": 0.03,
+        "cumulative": -0.138
+      },
+      {
+        "date": "2024-12",
+        "net": -0.003,
+        "cumulative": -0.141
+      },
+      {
+        "date": "2025-01",
+        "net": 0.002,
+        "cumulative": -0.139
+      },
+      {
+        "date": "2025-02",
+        "net": 0.001,
+        "cumulative": -0.138
+      },
+      {
+        "date": "2025-03",
+        "net": 0.011,
+        "cumulative": -0.127
+      },
+      {
+        "date": "2025-04",
+        "net": 0.004,
+        "cumulative": -0.123
+      },
+      {
+        "date": "2025-05",
+        "net": 0.007,
+        "cumulative": -0.116
+      },
+      {
+        "date": "2025-06",
+        "net": -0.003,
+        "cumulative": -0.119
+      },
+      {
+        "date": "2025-07",
+        "net": -0.007,
+        "cumulative": -0.126
+      },
+      {
+        "date": "2025-08",
+        "net": 0.002,
+        "cumulative": -0.124
+      },
+      {
+        "date": "2025-09",
+        "net": -0.021,
+        "cumulative": -0.145
+      },
+      {
+        "date": "2025-10",
+        "net": -0.083,
+        "cumulative": -0.228
+      },
+      {
+        "date": "2025-11",
+        "net": 0.133,
+        "cumulative": -0.095
+      },
+      {
+        "date": "2025-12",
+        "net": 0.06,
+        "cumulative": -0.035
+      },
+      {
+        "date": "2026-01",
+        "net": 0.011,
+        "cumulative": -0.024
+      },
+      {
+        "date": "2026-02",
+        "net": 0.026,
+        "cumulative": 0.002
+      }
+    ],
+    "RV Intl Emergentes": [
+      {
+        "date": "2024-01",
+        "net": -0.027,
+        "cumulative": -0.027
+      },
+      {
+        "date": "2024-02",
+        "net": 0.016,
+        "cumulative": -0.011
+      },
+      {
+        "date": "2024-03",
+        "net": 0.037,
+        "cumulative": 0.026
+      },
+      {
+        "date": "2024-04",
+        "net": -0.026,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-05",
+        "net": -0.063,
+        "cumulative": -0.063
+      },
+      {
+        "date": "2024-06",
+        "net": 0.001,
+        "cumulative": -0.062
+      },
+      {
+        "date": "2024-07",
+        "net": 0.001,
+        "cumulative": -0.061
+      },
+      {
+        "date": "2024-08",
+        "net": -0.004,
+        "cumulative": -0.065
+      },
+      {
+        "date": "2024-09",
+        "net": -0.001,
+        "cumulative": -0.066
+      },
+      {
+        "date": "2024-10",
+        "net": 0.119,
+        "cumulative": 0.053
+      },
+      {
+        "date": "2024-11",
+        "net": 0.094,
+        "cumulative": 0.147
+      },
+      {
+        "date": "2024-12",
+        "net": 0.019,
+        "cumulative": 0.166
+      },
+      {
+        "date": "2025-01",
+        "net": -0.065,
+        "cumulative": 0.101
+      },
+      {
+        "date": "2025-02",
+        "net": 0.028,
+        "cumulative": 0.129
+      },
+      {
+        "date": "2025-03",
+        "net": 0.013,
+        "cumulative": 0.142
+      },
+      {
+        "date": "2025-04",
+        "net": 0.245,
+        "cumulative": 0.387
+      },
+      {
+        "date": "2025-05",
+        "net": 0.222,
+        "cumulative": 0.609
+      },
+      {
+        "date": "2025-06",
+        "net": -0.006,
+        "cumulative": 0.603
+      },
+      {
+        "date": "2025-07",
+        "net": -0.008,
+        "cumulative": 0.595
+      },
+      {
+        "date": "2025-08",
+        "net": 0.02,
+        "cumulative": 0.615
+      },
+      {
+        "date": "2025-09",
+        "net": 0.206,
+        "cumulative": 0.821
+      },
+      {
+        "date": "2025-10",
+        "net": 0.029,
+        "cumulative": 0.85
+      },
+      {
+        "date": "2025-11",
+        "net": 0.031,
+        "cumulative": 0.881
+      },
+      {
+        "date": "2025-12",
+        "net": 0.053,
+        "cumulative": 0.934
+      },
+      {
+        "date": "2026-01",
+        "net": 0.038,
+        "cumulative": 0.972
+      },
+      {
+        "date": "2026-02",
+        "net": 0.106,
+        "cumulative": 1.078
+      }
+    ],
+    "RV Intl Resto": [
+      {
+        "date": "2024-01",
+        "net": -0.18,
+        "cumulative": -0.18
+      },
+      {
+        "date": "2024-02",
+        "net": -0.132,
+        "cumulative": -0.312
+      },
+      {
+        "date": "2024-03",
+        "net": -0.009,
+        "cumulative": -0.321
+      },
+      {
+        "date": "2024-04",
+        "net": -0.096,
+        "cumulative": -0.417
+      },
+      {
+        "date": "2024-05",
+        "net": 0.038,
+        "cumulative": -0.379
+      },
+      {
+        "date": "2024-06",
+        "net": 0.022,
+        "cumulative": -0.357
+      },
+      {
+        "date": "2024-07",
+        "net": 0.092,
+        "cumulative": -0.265
+      },
+      {
+        "date": "2024-08",
+        "net": 0.013,
+        "cumulative": -0.252
+      },
+      {
+        "date": "2024-09",
+        "net": -0.057,
+        "cumulative": -0.309
+      },
+      {
+        "date": "2024-10",
+        "net": -0.128,
+        "cumulative": -0.437
+      },
+      {
+        "date": "2024-11",
+        "net": 0.043,
+        "cumulative": -0.394
+      },
+      {
+        "date": "2024-12",
+        "net": 0.067,
+        "cumulative": -0.327
+      },
+      {
+        "date": "2025-01",
+        "net": 0.175,
+        "cumulative": -0.152
+      },
+      {
+        "date": "2025-02",
+        "net": 0.179,
+        "cumulative": 0.027
+      },
+      {
+        "date": "2025-03",
+        "net": -0.423,
+        "cumulative": -0.396
+      },
+      {
+        "date": "2025-04",
+        "net": -0.05,
+        "cumulative": -0.446
+      },
+      {
+        "date": "2025-05",
+        "net": 0.004,
+        "cumulative": -0.442
+      },
+      {
+        "date": "2025-06",
+        "net": -0.203,
+        "cumulative": -0.645
+      },
+      {
+        "date": "2025-07",
+        "net": -0.037,
+        "cumulative": -0.682
+      },
+      {
+        "date": "2025-08",
+        "net": -0.05,
+        "cumulative": -0.732
+      },
+      {
+        "date": "2025-09",
+        "net": -0.015,
+        "cumulative": -0.747
+      },
+      {
+        "date": "2025-10",
+        "net": 0.063,
+        "cumulative": -0.684
+      },
+      {
+        "date": "2025-11",
+        "net": -0.242,
+        "cumulative": -0.926
+      },
+      {
+        "date": "2025-12",
+        "net": 0.061,
+        "cumulative": -0.865
+      },
+      {
+        "date": "2026-01",
+        "net": 0.146,
+        "cumulative": -0.719
+      },
+      {
+        "date": "2026-02",
+        "net": 0.167,
+        "cumulative": -0.552
+      }
+    ],
+    "Globales": [
+      {
+        "date": "2024-01",
+        "net": -0.859,
+        "cumulative": -0.859
+      },
+      {
+        "date": "2024-02",
+        "net": -0.792,
+        "cumulative": -1.651
+      },
+      {
+        "date": "2024-03",
+        "net": -0.582,
+        "cumulative": -2.233
+      },
+      {
+        "date": "2024-04",
+        "net": -0.716,
+        "cumulative": -2.949
+      },
+      {
+        "date": "2024-05",
+        "net": -0.59,
+        "cumulative": -3.539
+      },
+      {
+        "date": "2024-06",
+        "net": -0.439,
+        "cumulative": -3.978
+      },
+      {
+        "date": "2024-07",
+        "net": -0.329,
+        "cumulative": -4.307
+      },
+      {
+        "date": "2024-08",
+        "net": -0.224,
+        "cumulative": -4.531
+      },
+      {
+        "date": "2024-09",
+        "net": -0.308,
+        "cumulative": -4.839
+      },
+      {
+        "date": "2024-10",
+        "net": -0.566,
+        "cumulative": -5.405
+      },
+      {
+        "date": "2024-11",
+        "net": -0.211,
+        "cumulative": -5.616
+      },
+      {
+        "date": "2024-12",
+        "net": -0.145,
+        "cumulative": -5.761
+      },
+      {
+        "date": "2025-01",
+        "net": -0.041,
+        "cumulative": -5.802
+      },
+      {
+        "date": "2025-02",
+        "net": -0.12,
+        "cumulative": -5.922
+      },
+      {
+        "date": "2025-03",
+        "net": -0.398,
+        "cumulative": -6.32
+      },
+      {
+        "date": "2025-04",
+        "net": -0.453,
+        "cumulative": -6.773
+      },
+      {
+        "date": "2025-05",
+        "net": -0.194,
+        "cumulative": -6.967
+      },
+      {
+        "date": "2025-06",
+        "net": -0.238,
+        "cumulative": -7.205
+      },
+      {
+        "date": "2025-07",
+        "net": -0.227,
+        "cumulative": -7.432
+      },
+      {
+        "date": "2025-08",
+        "net": -0.003,
+        "cumulative": -7.435
+      },
+      {
+        "date": "2025-09",
+        "net": 0.048,
+        "cumulative": -7.387
+      },
+      {
+        "date": "2025-10",
+        "net": 0.186,
+        "cumulative": -7.201
+      },
+      {
+        "date": "2025-11",
+        "net": 0.392,
+        "cumulative": -6.809
+      },
+      {
+        "date": "2025-12",
+        "net": 0.15,
+        "cumulative": -6.659
+      },
+      {
+        "date": "2026-01",
+        "net": 0.292,
+        "cumulative": -6.367
+      },
+      {
+        "date": "2026-02",
+        "net": 0.423,
+        "cumulative": -5.944
+      }
+    ],
+    "Garantizados RF": [
+      {
+        "date": "2024-01",
+        "net": -0.065,
+        "cumulative": -0.065
+      },
+      {
+        "date": "2024-02",
+        "net": -0.369,
+        "cumulative": -0.434
+      },
+      {
+        "date": "2024-03",
+        "net": -0.033,
+        "cumulative": -0.467
+      },
+      {
+        "date": "2024-04",
+        "net": -0.234,
+        "cumulative": -0.701
+      },
+      {
+        "date": "2024-05",
+        "net": -0.039,
+        "cumulative": -0.74
+      },
+      {
+        "date": "2024-06",
+        "net": -0.19,
+        "cumulative": -0.93
+      },
+      {
+        "date": "2024-07",
+        "net": 0.08,
+        "cumulative": -0.85
+      },
+      {
+        "date": "2024-08",
+        "net": -0.112,
+        "cumulative": -0.962
+      },
+      {
+        "date": "2024-09",
+        "net": -0.049,
+        "cumulative": -1.011
+      },
+      {
+        "date": "2024-10",
+        "net": 0.019,
+        "cumulative": -0.992
+      },
+      {
+        "date": "2024-11",
+        "net": -0.174,
+        "cumulative": -1.166
+      },
+      {
+        "date": "2024-12",
+        "net": -0.085,
+        "cumulative": -1.251
+      },
+      {
+        "date": "2025-01",
+        "net": -0.24,
+        "cumulative": -1.491
+      },
+      {
+        "date": "2025-02",
+        "net": -0.313,
+        "cumulative": -1.804
+      },
+      {
+        "date": "2025-03",
+        "net": -0.038,
+        "cumulative": -1.842
+      },
+      {
+        "date": "2025-04",
+        "net": -0.156,
+        "cumulative": -1.998
+      },
+      {
+        "date": "2025-05",
+        "net": -0.237,
+        "cumulative": -2.235
+      },
+      {
+        "date": "2025-06",
+        "net": -0.095,
+        "cumulative": -2.33
+      },
+      {
+        "date": "2025-07",
+        "net": 0.131,
+        "cumulative": -2.199
+      },
+      {
+        "date": "2025-08",
+        "net": -0.246,
+        "cumulative": -2.445
+      },
+      {
+        "date": "2025-09",
+        "net": -0.064,
+        "cumulative": -2.509
+      },
+      {
+        "date": "2025-10",
+        "net": 0.009,
+        "cumulative": -2.5
+      },
+      {
+        "date": "2025-11",
+        "net": -0.362,
+        "cumulative": -2.862
+      },
+      {
+        "date": "2025-12",
+        "net": -0.053,
+        "cumulative": -2.915
+      },
+      {
+        "date": "2026-01",
+        "net": -0.423,
+        "cumulative": -3.338
+      },
+      {
+        "date": "2026-02",
+        "net": 0.02,
+        "cumulative": -3.318
+      }
+    ],
+    "Garantizados RV": [
+      {
+        "date": "2024-01",
+        "net": -0.125,
+        "cumulative": -0.125
+      },
+      {
+        "date": "2024-02",
+        "net": -0.171,
+        "cumulative": -0.296
+      },
+      {
+        "date": "2024-03",
+        "net": -0.06,
+        "cumulative": -0.356
+      },
+      {
+        "date": "2024-04",
+        "net": -0.165,
+        "cumulative": -0.521
+      },
+      {
+        "date": "2024-05",
+        "net": -0.094,
+        "cumulative": -0.615
+      },
+      {
+        "date": "2024-06",
+        "net": -0.033,
+        "cumulative": -0.648
+      },
+      {
+        "date": "2024-07",
+        "net": -0.139,
+        "cumulative": -0.787
+      },
+      {
+        "date": "2024-08",
+        "net": -0.022,
+        "cumulative": -0.809
+      },
+      {
+        "date": "2024-09",
+        "net": -0.199,
+        "cumulative": -1.008
+      },
+      {
+        "date": "2024-10",
+        "net": -0.098,
+        "cumulative": -1.106
+      },
+      {
+        "date": "2024-11",
+        "net": -0.511,
+        "cumulative": -1.617
+      },
+      {
+        "date": "2024-12",
+        "net": -0.083,
+        "cumulative": -1.7
+      },
+      {
+        "date": "2025-01",
+        "net": -0.235,
+        "cumulative": -1.935
+      },
+      {
+        "date": "2025-02",
+        "net": -0.05,
+        "cumulative": -1.985
+      },
+      {
+        "date": "2025-03",
+        "net": -0.009,
+        "cumulative": -1.994
+      },
+      {
+        "date": "2025-04",
+        "net": -0.083,
+        "cumulative": -2.077
+      },
+      {
+        "date": "2025-05",
+        "net": -0.421,
+        "cumulative": -2.498
+      },
+      {
+        "date": "2025-06",
+        "net": -0.024,
+        "cumulative": -2.522
+      },
+      {
+        "date": "2025-07",
+        "net": 0.018,
+        "cumulative": -2.504
+      },
+      {
+        "date": "2025-08",
+        "net": 0.006,
+        "cumulative": -2.498
+      },
+      {
+        "date": "2025-09",
+        "net": -0.072,
+        "cumulative": -2.57
+      },
+      {
+        "date": "2025-10",
+        "net": -0.063,
+        "cumulative": -2.633
+      },
+      {
+        "date": "2025-11",
+        "net": -0.177,
+        "cumulative": -2.81
+      },
+      {
+        "date": "2025-12",
+        "net": -0.084,
+        "cumulative": -2.894
+      },
+      {
+        "date": "2026-01",
+        "net": -0.132,
+        "cumulative": -3.026
+      },
+      {
+        "date": "2026-02",
+        "net": -0.016,
+        "cumulative": -3.042
+      }
+    ],
+    "Garantía parcial": [
+      {
+        "date": "2024-01",
+        "net": -0.001,
+        "cumulative": -0.001
+      },
+      {
+        "date": "2024-02",
+        "net": -0.001,
+        "cumulative": -0.002
+      },
+      {
+        "date": "2024-03",
+        "net": -0.0,
+        "cumulative": -0.002
+      },
+      {
+        "date": "2024-04",
+        "net": -0.0,
+        "cumulative": -0.002
+      },
+      {
+        "date": "2024-05",
+        "net": -0.005,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-06",
+        "net": 0.0,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-07",
+        "net": 0.0,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-08",
+        "net": 0.0,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-09",
+        "net": 0.0,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-10",
+        "net": 0.0,
+        "cumulative": -0.007
+      },
+      {
+        "date": "2024-11",
+        "net": 0.0,
+        "cumulative": -0.007
+      }
+    ],
+    "Retorno Absoluto": [
+      {
+        "date": "2024-01",
+        "net": 0.012,
+        "cumulative": 0.012
+      },
+      {
+        "date": "2024-02",
+        "net": -0.105,
+        "cumulative": -0.093
+      },
+      {
+        "date": "2024-03",
+        "net": -0.003,
+        "cumulative": -0.096
+      },
+      {
+        "date": "2024-04",
+        "net": 0.034,
+        "cumulative": -0.062
+      },
+      {
+        "date": "2024-05",
+        "net": -0.009,
+        "cumulative": -0.071
+      },
+      {
+        "date": "2024-06",
+        "net": 0.036,
+        "cumulative": -0.035
+      },
+      {
+        "date": "2024-07",
+        "net": 0.046,
+        "cumulative": 0.011
+      },
+      {
+        "date": "2024-08",
+        "net": 0.037,
+        "cumulative": 0.048
+      },
+      {
+        "date": "2024-09",
+        "net": 0.059,
+        "cumulative": 0.107
+      },
+      {
+        "date": "2024-10",
+        "net": 0.068,
+        "cumulative": 0.175
+      },
+      {
+        "date": "2024-11",
+        "net": 0.078,
+        "cumulative": 0.253
+      },
+      {
+        "date": "2024-12",
+        "net": -0.042,
+        "cumulative": 0.211
+      },
+      {
+        "date": "2025-01",
+        "net": 0.027,
+        "cumulative": 0.238
+      },
+      {
+        "date": "2025-02",
+        "net": 0.13,
+        "cumulative": 0.368
+      },
+      {
+        "date": "2025-03",
+        "net": 0.15,
+        "cumulative": 0.518
+      },
+      {
+        "date": "2025-04",
+        "net": 0.056,
+        "cumulative": 0.574
+      },
+      {
+        "date": "2025-05",
+        "net": 0.167,
+        "cumulative": 0.741
+      },
+      {
+        "date": "2025-06",
+        "net": 0.16,
+        "cumulative": 0.901
+      },
+      {
+        "date": "2025-07",
+        "net": 0.409,
+        "cumulative": 1.31
+      },
+      {
+        "date": "2025-08",
+        "net": 0.092,
+        "cumulative": 1.402
+      },
+      {
+        "date": "2025-09",
+        "net": 0.051,
+        "cumulative": 1.453
+      },
+      {
+        "date": "2025-10",
+        "net": 0.171,
+        "cumulative": 1.624
+      },
+      {
+        "date": "2025-11",
+        "net": 0.157,
+        "cumulative": 1.781
+      },
+      {
+        "date": "2025-12",
+        "net": 0.102,
+        "cumulative": 1.883
+      },
+      {
+        "date": "2026-01",
+        "net": 0.104,
+        "cumulative": 1.987
+      },
+      {
+        "date": "2026-02",
+        "net": 0.109,
+        "cumulative": 2.096
+      }
+    ],
+    "Fondos Índice": [
+      {
+        "date": "2024-01",
+        "net": 0.115,
+        "cumulative": 0.115
+      },
+      {
+        "date": "2024-02",
+        "net": -0.057,
+        "cumulative": 0.058
+      },
+      {
+        "date": "2024-03",
+        "net": 0.038,
+        "cumulative": 0.096
+      },
+      {
+        "date": "2024-04",
+        "net": -0.129,
+        "cumulative": -0.033
+      },
+      {
+        "date": "2024-05",
+        "net": -0.003,
+        "cumulative": -0.036
+      },
+      {
+        "date": "2024-06",
+        "net": 0.033,
+        "cumulative": -0.003
+      },
+      {
+        "date": "2024-07",
+        "net": 0.036,
+        "cumulative": 0.033
+      },
+      {
+        "date": "2024-08",
+        "net": -0.007,
+        "cumulative": 0.026
+      },
+      {
+        "date": "2024-09",
+        "net": 0.016,
+        "cumulative": 0.042
+      },
+      {
+        "date": "2024-10",
+        "net": 0.836,
+        "cumulative": 0.878
+      },
+      {
+        "date": "2024-11",
+        "net": -0.753,
+        "cumulative": 0.125
+      },
+      {
+        "date": "2024-12",
+        "net": -0.174,
+        "cumulative": -0.049
+      },
+      {
+        "date": "2025-01",
+        "net": 0.031,
+        "cumulative": -0.018
+      },
+      {
+        "date": "2025-02",
+        "net": -0.057,
+        "cumulative": -0.075
+      },
+      {
+        "date": "2025-03",
+        "net": 0.036,
+        "cumulative": -0.039
+      },
+      {
+        "date": "2025-04",
+        "net": -0.034,
+        "cumulative": -0.073
+      },
+      {
+        "date": "2025-05",
+        "net": -0.038,
+        "cumulative": -0.111
+      },
+      {
+        "date": "2025-06",
+        "net": -0.265,
+        "cumulative": -0.376
+      },
+      {
+        "date": "2025-07",
+        "net": 0.117,
+        "cumulative": -0.259
+      },
+      {
+        "date": "2025-08",
+        "net": -0.059,
+        "cumulative": -0.318
+      },
+      {
+        "date": "2025-09",
+        "net": 0.004,
+        "cumulative": -0.314
+      },
+      {
+        "date": "2025-10",
+        "net": -0.081,
+        "cumulative": -0.395
+      },
+      {
+        "date": "2025-11",
+        "net": -0.103,
+        "cumulative": -0.498
+      },
+      {
+        "date": "2025-12",
+        "net": -0.153,
+        "cumulative": -0.651
+      },
+      {
+        "date": "2026-01",
+        "net": -0.064,
+        "cumulative": -0.715
+      },
+      {
+        "date": "2026-02",
+        "net": -0.172,
+        "cumulative": -0.887
+      }
+    ],
+    "Objetivo Rentabilidad": [
+      {
+        "date": "2024-01",
+        "net": 0.712,
+        "cumulative": 0.712
+      },
+      {
+        "date": "2024-02",
+        "net": 0.169,
+        "cumulative": 0.881
+      },
+      {
+        "date": "2024-03",
+        "net": 0.398,
+        "cumulative": 1.279
+      },
+      {
+        "date": "2024-04",
+        "net": -0.247,
+        "cumulative": 1.032
+      },
+      {
+        "date": "2024-05",
+        "net": -0.55,
+        "cumulative": 0.482
+      },
+      {
+        "date": "2024-06",
+        "net": -0.42,
+        "cumulative": 0.062
+      },
+      {
+        "date": "2024-07",
+        "net": -0.01,
+        "cumulative": 0.052
+      },
+      {
+        "date": "2024-08",
+        "net": -0.097,
+        "cumulative": -0.045
+      },
+      {
+        "date": "2024-09",
+        "net": -0.029,
+        "cumulative": -0.074
+      },
+      {
+        "date": "2024-10",
+        "net": -0.118,
+        "cumulative": -0.192
+      },
+      {
+        "date": "2024-11",
+        "net": -0.332,
+        "cumulative": -0.524
+      },
+      {
+        "date": "2024-12",
+        "net": -0.091,
+        "cumulative": -0.615
+      },
+      {
+        "date": "2025-01",
+        "net": -0.364,
+        "cumulative": -0.979
+      },
+      {
+        "date": "2025-02",
+        "net": -0.581,
+        "cumulative": -1.56
+      },
+      {
+        "date": "2025-03",
+        "net": -0.069,
+        "cumulative": -1.629
+      },
+      {
+        "date": "2025-04",
+        "net": 0.102,
+        "cumulative": -1.527
+      },
+      {
+        "date": "2025-05",
+        "net": -0.168,
+        "cumulative": -1.695
+      },
+      {
+        "date": "2025-06",
+        "net": -0.822,
+        "cumulative": -2.517
+      },
+      {
+        "date": "2025-07",
+        "net": 0.13,
+        "cumulative": -2.387
+      },
+      {
+        "date": "2025-08",
+        "net": -0.191,
+        "cumulative": -2.578
+      },
+      {
+        "date": "2025-09",
+        "net": 0.067,
+        "cumulative": -2.511
+      },
+      {
+        "date": "2025-10",
+        "net": 0.138,
+        "cumulative": -2.373
+      },
+      {
+        "date": "2025-11",
+        "net": -0.411,
+        "cumulative": -2.784
+      },
+      {
+        "date": "2025-12",
+        "net": -0.359,
+        "cumulative": -3.143
+      },
+      {
+        "date": "2026-01",
+        "net": -0.469,
+        "cumulative": -3.612
+      },
+      {
+        "date": "2026-02",
+        "net": 0.153,
+        "cumulative": -3.459
+      }
+    ],
+    "FIL": [
+      {
+        "date": "2024-01",
+        "net": -0.018,
+        "cumulative": -0.018
+      },
+      {
+        "date": "2024-02",
+        "net": -0.008,
+        "cumulative": -0.026
+      },
+      {
+        "date": "2024-03",
+        "net": 0.002,
+        "cumulative": -0.024
+      },
+      {
+        "date": "2024-04",
+        "net": -0.005,
+        "cumulative": -0.029
+      },
+      {
+        "date": "2024-05",
+        "net": 0.007,
+        "cumulative": -0.022
+      },
+      {
+        "date": "2024-06",
+        "net": -0.013,
+        "cumulative": -0.035
+      },
+      {
+        "date": "2024-07",
+        "net": 0.01,
+        "cumulative": -0.025
+      },
+      {
+        "date": "2024-08",
+        "net": -0.002,
+        "cumulative": -0.027
+      },
+      {
+        "date": "2024-09",
+        "net": 0.004,
+        "cumulative": -0.023
+      },
+      {
+        "date": "2024-10",
+        "net": 0.002,
+        "cumulative": -0.021
+      },
+      {
+        "date": "2024-11",
+        "net": 0.002,
+        "cumulative": -0.019
+      },
+      {
+        "date": "2024-12",
+        "net": -0.009,
+        "cumulative": -0.028
+      },
+      {
+        "date": "2025-01",
+        "net": -0.02,
+        "cumulative": -0.048
+      },
+      {
+        "date": "2025-02",
+        "net": -0.016,
+        "cumulative": -0.064
+      },
+      {
+        "date": "2025-03",
+        "net": 0.244,
+        "cumulative": 0.18
+      },
+      {
+        "date": "2025-04",
+        "net": 0.037,
+        "cumulative": 0.217
+      },
+      {
+        "date": "2025-05",
+        "net": -0.001,
+        "cumulative": 0.216
+      },
+      {
+        "date": "2025-06",
+        "net": -0.044,
+        "cumulative": 0.172
+      },
+      {
+        "date": "2025-07",
+        "net": 0.262,
+        "cumulative": 0.434
+      },
+      {
+        "date": "2025-08",
+        "net": 0.013,
+        "cumulative": 0.447
+      },
+      {
+        "date": "2025-09",
+        "net": 0.022,
+        "cumulative": 0.469
+      },
+      {
+        "date": "2025-10",
+        "net": 0.016,
+        "cumulative": 0.485
+      },
+      {
+        "date": "2025-11",
+        "net": -0.02,
+        "cumulative": 0.465
+      },
+      {
+        "date": "2025-12",
+        "net": -0.019,
+        "cumulative": 0.446
+      },
+      {
+        "date": "2026-01",
+        "net": 0.017,
+        "cumulative": 0.463
+      },
+      {
+        "date": "2026-02",
+        "net": -0.004,
+        "cumulative": 0.459
+      }
+    ],
+    "Hedge Funds": [
+      {
+        "date": "2024-01",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-02",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-03",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-04",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-05",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-06",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-07",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-08",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-09",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-10",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-11",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2024-12",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2025-01",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2025-02",
+        "net": 0.0,
+        "cumulative": 0.0
+      },
+      {
+        "date": "2025-03",
+        "net": -0.01,
+        "cumulative": -0.01
+      },
+      {
+        "date": "2025-04",
+        "net": 0.0,
+        "cumulative": -0.01
+      },
+      {
+        "date": "2025-05",
+        "net": 0.0,
+        "cumulative": -0.01
+      },
+      {
+        "date": "2025-06",
+        "net": -0.006,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-07",
+        "net": 0.0,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-08",
+        "net": 0.0,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-09",
+        "net": 0.0,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-10",
+        "net": 0.0,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-11",
+        "net": 0.0,
+        "cumulative": -0.016
+      },
+      {
+        "date": "2025-12",
+        "net": -0.007,
+        "cumulative": -0.023
+      },
+      {
+        "date": "2026-01",
+        "net": 0.0,
+        "cumulative": -0.023
+      },
+      {
+        "date": "2026-02",
+        "net": 0.0,
+        "cumulative": -0.023
+      }
+    ]
+  }
+}
