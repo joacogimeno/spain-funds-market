@@ -10,7 +10,7 @@ import SectionHeader from '../components/SectionHeader';
 import InsightCard from '../components/InsightCard';
 import DataTable from '../components/DataTable';
 import ChartTooltip from '../components/ChartTooltip';
-import { CHART_MARGIN, CHART_COLORS } from '../theme';
+import { CHART_COLORS } from '../theme';
 import rawData from '../data/inversis.json';
 
 /* ── Types ──────────────────────────────────────────────────────── */
@@ -72,9 +72,9 @@ const d = rawData as {
 };
 
 /* ── Helpers ─────────────────────────────────────────────────────── */
-const fmtB  = (v: number) => `€${v.toFixed(2)}B`;
-const fmtM  = (v: number) => `€${v.toFixed(1)}M`;
-const fmtK  = (k: number) => k >= 1000 ? `€${(k / 1000).toFixed(2)}M` : `€${k.toFixed(0)}K`;
+const fmtB   = (v: number) => `€${v.toFixed(2)}B`;
+const fmtM   = (v: number) => `€${v.toFixed(1)}M`;
+const fmtK   = (k: number) => k >= 1000 ? `€${(k / 1000).toFixed(2)}M` : `€${k.toFixed(0)}K`;
 const fmtBps = (v: number) => `${v.toFixed(2)} bps`;
 const fmtPct = (v: number) => `${v.toFixed(1)}%`;
 const num    = (v: number) => v.toLocaleString('es-ES');
@@ -106,23 +106,23 @@ function OverviewSection() {
       <div>
         <SectionHeader title="Depositary Business" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-          <KpiCard label="Depositary AUM"      value={fmtB(dep.aum_bn)}              sub="Banco Inversis book" />
-          <KpiCard label="Market Share"        value={fmtPct(dep.market_share_pct)}  sub={`Rank #${dep.rank_aum} by AUM`} />
-          <KpiCard label="Rank by Gestoras"    value={`#${dep.rank_gestoras}`}        sub="2nd most clients in Spain" />
-          <KpiCard label="Active Clients"      value={`${dep.gestora_count}`}         sub="gestoras in custody" />
-          <KpiCard label="Funds in Custody"    value={`${dep.fund_count}`}            sub={`${dep.class_count} share classes`} />
-          <KpiCard label="Est. Revenue"        value={`€${dep.est_annual_rev_m.toFixed(2)}M`} sub="annual depositary fees" />
+          <KpiCard title="Depositary AUM"      value={fmtB(dep.aum_bn)}              subtitle="Banco Inversis book" />
+          <KpiCard title="Market Share"        value={fmtPct(dep.market_share_pct)}  subtitle={`Rank #${dep.rank_aum} by AUM`} />
+          <KpiCard title="Rank by Gestoras"    value={`#${dep.rank_gestoras}`}        subtitle="2nd most clients in Spain" />
+          <KpiCard title="Active Clients"      value={`${dep.gestora_count}`}         subtitle="gestoras in custody" />
+          <KpiCard title="Funds in Custody"    value={`${dep.fund_count}`}            subtitle={`${dep.class_count} share classes`} />
+          <KpiCard title="Est. Revenue"        value={`€${dep.est_annual_rev_m.toFixed(2)}M`} subtitle="annual depositary fees" />
         </div>
       </div>
 
       <div>
         <SectionHeader title="Gestora Business" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-          <KpiCard label="Inversis Gestión AUM"  value={fmtB(gest.aum_bn)}    sub="under management" />
-          <KpiCard label="Growth 1Y"             value={gest.growth_1y != null ? fmtPct(gest.growth_1y) : 'N/A'}
-                   sub="Inversis Gestión" />
-          <KpiCard label="Funds Managed"         value={`${gest.fund_count}`}  sub={`${gest.class_count} share classes`} />
-          <KpiCard label="Fee Paid (Depositary)" value={fmtBps(gest.fee_bps_paid)} sub="as a client of Inversis Bank" />
+          <KpiCard title="Inversis Gestión AUM"  value={fmtB(gest.aum_bn)}    subtitle="under management" />
+          <KpiCard title="Growth 1Y"             value={gest.growth_1y != null ? fmtPct(gest.growth_1y) : 'N/A'}
+                   subtitle="Inversis Gestión" />
+          <KpiCard title="Funds Managed"         value={`${gest.fund_count}`}  subtitle={`${gest.class_count} share classes`} />
+          <KpiCard title="Fee Paid (Depositary)" value={fmtBps(gest.fee_bps_paid)} subtitle="as a client of Inversis Bank" />
         </div>
       </div>
 
@@ -197,7 +197,7 @@ function DepositarySection() {
               <XAxis type="number" tick={{ fill: '#8888a0', fontSize: 10 }}
                      tickFormatter={v => `€${(v / 1000).toFixed(1)}B`} />
               <YAxis type="category" dataKey="group" tick={{ fill: '#c8c8d8', fontSize: 11 }} width={120} />
-              <Tooltip content={<ChartTooltip formatter={(v: number) => fmtM(v)} />} />
+              <Tooltip content={<ChartTooltip prefix="€" suffix="M" decimals={1} />} />
               <Bar dataKey="aum_m" radius={[0, 4, 4, 0]}>
                 {dep.by_group.map((_, i) => (
                   <Cell key={i} fill={CHART_COLORS[i % CHART_COLORS.length]} />
@@ -214,15 +214,14 @@ function DepositarySection() {
         <DataTable
           columns={[
             { key: 'gestora_short', label: 'Gestora' },
-            { key: 'funds',        label: 'Funds',    numeric: true },
-            { key: 'classes',      label: 'Classes',  numeric: true },
-            { key: 'investors',    label: 'Investors',numeric: true, format: (v: number) => num(v) },
-            { key: 'aum_m',        label: 'AUM',      numeric: true, format: (v: number) => fmtM(v) },
-            { key: 'wtd_fee_bps',  label: 'Fee (bps)',numeric: true, format: (v: number) => v.toFixed(2) },
-            { key: 'est_rev_k',    label: 'Est. Revenue', numeric: true, format: (v: number) => fmtK(v) },
+            { key: 'funds',        label: 'Funds',    align: 'right' as const },
+            { key: 'classes',      label: 'Classes',  align: 'right' as const },
+            { key: 'investors',    label: 'Investors',align: 'right' as const, format: (v: unknown) => num(Number(v)) },
+            { key: 'aum_m',        label: 'AUM',      align: 'right' as const, format: (v: unknown) => fmtM(Number(v)) },
+            { key: 'wtd_fee_bps',  label: 'Fee (bps)',align: 'right' as const, format: (v: unknown) => Number(v).toFixed(2) },
+            { key: 'est_rev_k',    label: 'Est. Revenue', align: 'right' as const, format: (v: unknown) => fmtK(Number(v)) },
           ]}
-          data={dep.by_gestora}
-          maxHeight={420}
+          data={dep.by_gestora as unknown as Record<string, unknown>[]}
         />
       </div>
 
@@ -236,7 +235,7 @@ function DepositarySection() {
               <XAxis dataKey="gestora_short" tick={{ fill: '#8888a0', fontSize: 9, fontFamily: "'JetBrains Mono', monospace" }}
                      angle={-35} textAnchor="end" interval={0} />
               <YAxis tick={{ fill: '#8888a0', fontSize: 10 }} tickFormatter={v => `€${(v / 1000).toFixed(0)}K`} />
-              <Tooltip content={<ChartTooltip formatter={(v: number) => fmtK(v)} />} />
+              <Tooltip content={<ChartTooltip prefix="€" suffix="K" decimals={0} />} />
               <Bar dataKey="est_rev_k" radius={[4, 4, 0, 0]}>
                 {dep.by_gestora.slice(0, 12).map((_, i) => (
                   <Cell key={i} fill={CHART_COLORS[i % CHART_COLORS.length]} />
@@ -262,11 +261,11 @@ function MarketSection() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       {/* Market summary KPIs */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-        <KpiCard label="Total Market AUM" value={fmtB(mc.total_depositario_aum_bn)} sub="all depositarios" />
-        <KpiCard label="Inversis Share"   value={fmtPct(dep.market_share_pct)}      sub={`Rank #${dep.rank_aum}`} />
-        <KpiCard label="Rank by Clients"  value={`#${dep.rank_gestoras}`}            sub="gestoras served" />
-        <KpiCard label="Mkt Fee Median"   value={fmtBps(mc.mkt_dep_fee_p50_bps)}    sub="depositario avg" />
-        <KpiCard label="Inversis Avg Fee" value={fmtBps(mc.inv_avg_fee_bps)}         sub="vs median" />
+        <KpiCard title="Total Market AUM" value={fmtB(mc.total_depositario_aum_bn)} subtitle="all depositarios" />
+        <KpiCard title="Inversis Share"   value={fmtPct(dep.market_share_pct)}      subtitle={`Rank #${dep.rank_aum}`} />
+        <KpiCard title="Rank by Clients"  value={`#${dep.rank_gestoras}`}            subtitle="gestoras served" />
+        <KpiCard title="Mkt Fee Median"   value={fmtBps(mc.mkt_dep_fee_p50_bps)}    subtitle="depositario avg" />
+        <KpiCard title="Inversis Avg Fee" value={fmtBps(mc.inv_avg_fee_bps)}         subtitle="vs median" />
       </div>
 
       {/* Depositario AUM ranking */}
@@ -281,15 +280,12 @@ function MarketSection() {
                      tickFormatter={v => `€${v.toFixed(0)}B`} />
               <YAxis type="category" dataKey="depositario_short"
                      tick={{ fill: '#c8c8d8', fontSize: 11 }} width={170} />
-              <Tooltip content={<ChartTooltip
-                formatter={(v: number) => fmtB(v)}
-                labelFormatter={(label: string) => label}
-              />} />
+              <Tooltip content={<ChartTooltip prefix="€" suffix="B" decimals={2} />} />
               <Bar dataKey="aum_bn" radius={[0, 4, 4, 0]} label={{
                 position: 'right',
-                formatter: (v: number) => `${d.depositary.market_ranking.find(r => r.aum_bn === v)?.market_share_pct?.toFixed(1) ?? ''}%`,
+                formatter: (v: unknown) => `${d.depositary.market_ranking.find(r => r.aum_bn === (v as number))?.market_share_pct?.toFixed(1) ?? ''}%`,
                 fill: '#8888a0', fontSize: 10,
-              }}>
+              } as Record<string, unknown>}>
                 {dep.market_ranking.map((r, i) => (
                   <Cell key={i} fill={r.is_inversis ? INVERSIS_RED : '#2a2a4a'} />
                 ))}
@@ -348,11 +344,11 @@ function GestoraSection() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-        <KpiCard label="AUM (Gestora)"    value={fmtB(g.aum_bn)}    sub="Inversis Gestión" />
-        <KpiCard label="Growth 1Y"        value={g.growth_1y != null ? fmtPct(g.growth_1y) : 'N/A'} sub="year-on-year" />
-        <KpiCard label="Growth YTD"       value={g.growth_ytd != null ? fmtPct(g.growth_ytd) : 'N/A'} sub="year-to-date" />
-        <KpiCard label="Funds"            value={`${g.fund_count}`}  sub={`${g.class_count} share classes`} />
-        <KpiCard label="Fee Paid"         value={fmtBps(g.fee_bps_paid)} sub="depositary fee paid to Inversis Bank" />
+        <KpiCard title="AUM (Gestora)"    value={fmtB(g.aum_bn)}    subtitle="Inversis Gestión" />
+        <KpiCard title="Growth 1Y"        value={g.growth_1y != null ? fmtPct(g.growth_1y) : 'N/A'} subtitle="year-on-year" />
+        <KpiCard title="Growth YTD"       value={g.growth_ytd != null ? fmtPct(g.growth_ytd) : 'N/A'} subtitle="year-to-date" />
+        <KpiCard title="Funds"            value={`${g.fund_count}`}  subtitle={`${g.class_count} share classes`} />
+        <KpiCard title="Fee Paid"         value={fmtBps(g.fee_bps_paid)} subtitle="depositary fee paid to Inversis Bank" />
       </div>
 
       {/* AUM time series */}
@@ -368,9 +364,7 @@ function GestoraSection() {
                 <YAxis tick={{ fill: '#8888a0', fontSize: 10 }}
                        tickFormatter={v => `€${(v * 1000).toFixed(0)}M`}
                        domain={['auto', 'auto']} />
-                <Tooltip
-                  content={<ChartTooltip formatter={(v: number) => `€${(v * 1000).toFixed(0)}M`} />}
-                />
+                <Tooltip content={<ChartTooltip prefix="€" suffix="B" decimals={3} />} />
                 <Line
                   type="monotone" dataKey="aum_bn" stroke={INVERSIS_RED} strokeWidth={2.5}
                   dot={{ fill: INVERSIS_RED, r: 3 }} activeDot={{ r: 5 }}
@@ -406,11 +400,11 @@ function SicavSection() {
       <div>
         <SectionHeader title="SICAV Market Overview" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-          <KpiCard label="Total SICAV Market"    value={fmtB(s.total_market_aum_bn)}  sub="Spain total AUM" />
-          <KpiCard label="Number of SICAVs"      value={num(s.total_market_count)}     sub="active vehicles" />
-          <KpiCard label="Total Shareholders"    value={num(s.total_shareholders)}     sub="accionistas" />
-          <KpiCard label="Inversis Gestión AUM"  value={fmtM(s.inversis_gestora_aum_m)} sub={`${s.inversis_gestora_count} SICAVs managed`} />
-          <KpiCard label="Gestora Market Share"  value={fmtPct(invSharePct)}           sub="of SICAV market by AUM" />
+          <KpiCard title="Total SICAV Market"    value={fmtB(s.total_market_aum_bn)}  subtitle="Spain total AUM" />
+          <KpiCard title="Number of SICAVs"      value={num(s.total_market_count)}     subtitle="active vehicles" />
+          <KpiCard title="Total Shareholders"    value={num(s.total_shareholders)}     subtitle="accionistas" />
+          <KpiCard title="Inversis Gestión AUM"  value={fmtM(s.inversis_gestora_aum_m)} subtitle={`${s.inversis_gestora_count} SICAVs managed`} />
+          <KpiCard title="Gestora Market Share"  value={fmtPct(invSharePct)}           subtitle="of SICAV market by AUM" />
         </div>
       </div>
 
@@ -426,7 +420,7 @@ function SicavSection() {
                 <XAxis type="number" tick={{ fill: '#8888a0', fontSize: 10 }}
                        tickFormatter={v => `€${(v / 1000).toFixed(0)}M`} />
                 <YAxis type="category" dataKey="group" tick={{ fill: '#c8c8d8', fontSize: 11 }} width={120} />
-                <Tooltip content={<ChartTooltip formatter={(v: number) => `€${(v / 1000).toFixed(1)}M`} />} />
+                <Tooltip content={<ChartTooltip prefix="€" suffix="M" decimals={1} />} />
                 <Bar dataKey="aum_m" radius={[0, 4, 4, 0]}>
                   {s.market_ranking.slice(0, 15).map((r, i) => (
                     <Cell key={i}
@@ -443,14 +437,13 @@ function SicavSection() {
           {/* SICAV table */}
           <DataTable
             columns={[
-              { key: 'rank',         label: '#',       numeric: true },
-              { key: 'group',        label: 'Group'                  },
-              { key: 'aum_m',        label: 'AUM',     numeric: true, format: (v: number) => `€${(v / 1000).toFixed(2)}B` },
-              { key: 'count',        label: 'SICAVs',  numeric: true },
-              { key: 'shareholders', label: 'Accionistas', numeric: true, format: (v: number) => num(v) },
+              { key: 'rank',         label: '#',           align: 'right' as const },
+              { key: 'group',        label: 'Group'                                },
+              { key: 'aum_m',        label: 'AUM',         align: 'right' as const, format: (v: unknown) => `€${(Number(v) / 1000).toFixed(2)}B` },
+              { key: 'count',        label: 'SICAVs',      align: 'right' as const },
+              { key: 'shareholders', label: 'Accionistas', align: 'right' as const, format: (v: unknown) => num(Number(v)) },
             ]}
-            data={s.market_ranking.slice(0, 20)}
-            maxHeight={320}
+            data={s.market_ranking.slice(0, 20) as unknown as Record<string, unknown>[]}
           />
         </div>
       </div>
@@ -475,10 +468,10 @@ function PipelineSection() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-        <KpiCard label="Addressable AUM"     value={fmtB(opp.addressable_aum_bn)} sub="non-captive not yet Inversis clients" />
-        <KpiCard label="Target Gestoras"     value={`${nc.length}`}               sub="non-captive opportunities" />
-        <KpiCard label="Potential Revenue"   value={`€${opp.potential_revenue_m.toFixed(1)}M`} sub="at current avg fee" />
-        <KpiCard label="Captive (Defended)"  value={`${cap.length}`}              sub="captive bank relationships" />
+        <KpiCard title="Addressable AUM"     value={fmtB(opp.addressable_aum_bn)} subtitle="non-captive not yet Inversis clients" />
+        <KpiCard title="Target Gestoras"     value={`${nc.length}`}               subtitle="non-captive opportunities" />
+        <KpiCard title="Potential Revenue"   value={`€${opp.potential_revenue_m.toFixed(1)}M`} subtitle="at current avg fee" />
+        <KpiCard title="Captive (Defended)"  value={`${cap.length}`}              subtitle="captive bank relationships" />
       </div>
 
       {/* Non-captive targets */}
@@ -486,16 +479,14 @@ function PipelineSection() {
         <SectionHeader title="Non-Captive Opportunity Targets" />
         <DataTable
           columns={[
-            { key: 'gestora_short',        label: 'Gestora'             },
-            { key: 'current_depositario',  label: 'Current Depositary'  },
-            { key: 'aum_m',                label: 'AUM',       numeric: true, format: (v: number) => fmtM(v) },
-            { key: 'fund_count',           label: 'Funds',     numeric: true },
-            { key: 'avg_fee_bps',          label: 'Curr Fee',  numeric: true, format: (v: number) => `${v.toFixed(1)} bps` },
-            { key: 'potential_rev_k',      label: 'Pot. Revenue', numeric: true, format: (v: number) => fmtK(v) },
+            { key: 'gestora_short',        label: 'Gestora'                                                          },
+            { key: 'current_depositario',  label: 'Current Depositary'                                               },
+            { key: 'aum_m',                label: 'AUM',          align: 'right' as const, format: (v: unknown) => fmtM(Number(v)) },
+            { key: 'fund_count',           label: 'Funds',        align: 'right' as const                            },
+            { key: 'avg_fee_bps',          label: 'Curr Fee',     align: 'right' as const, format: (v: unknown) => `${Number(v).toFixed(1)} bps` },
+            { key: 'potential_rev_k',      label: 'Pot. Revenue', align: 'right' as const, format: (v: unknown) => fmtK(Number(v)) },
           ]}
-          data={nc}
-          maxHeight={480}
-          highlight={(row: OpportunityTarget) => !row.is_captive && row.aum_m > 1000}
+          data={nc as unknown as Record<string, unknown>[]}
         />
       </div>
 
