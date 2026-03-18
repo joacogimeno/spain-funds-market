@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, Cell, ReferenceLine,
@@ -10,8 +10,10 @@ import SectionHeader from '../components/SectionHeader';
 import InsightCard from '../components/InsightCard';
 import DataTable from '../components/DataTable';
 import ChartTooltip from '../components/ChartTooltip';
-import { CHART_COLORS } from '../theme';
+import { CHART_COLORS, CHART_MARGIN } from '../theme';
 import rawData from '../data/inversis.json';
+import feesData from '../data/cnmv_fees.json';
+import depoData from '../data/cnmv_depositaria.json';
 
 /* ── Types ──────────────────────────────────────────────────────── */
 
@@ -71,6 +73,94 @@ const d = rawData as {
   positioning: { radar: RadarPoint[] };
 };
 
+/* ── CNMV raw data for Market Scan ──────────────────────────────── */
+
+interface FundClass {
+  isin: string; fund_name: string; gestora: string; grupo: string;
+  category: string; share_class: string; patrimonio_m: number;
+  investors: number; depositary_fee: number;
+  [key: string]: unknown;
+}
+interface GestoraDepo {
+  gestora: string; depositario: string;
+  is_inversis: boolean;
+  [key: string]: unknown;
+}
+const allClasses = feesData.funds as FundClass[];
+const gestoraDepoRelations = depoData.gestora_depositario as GestoraDepo[];
+
+interface GestoraFeeGap {
+  gestora: string; aum_bn: number;
+  actual_fee_bps: number; fair_fee_bps: number; fee_gap_bps: number;
+  overpayment_k: number; is_inversis: boolean; current_depo: string;
+}
+
+function useMarketScan() {
+  return useMemo(() => {
+    // 1. Category benchmarks: median depositary fee per category across gestoras
+    const catGestoraFees = new Map<string, Map<string, { aum_m: number; fee_aum: number }>>();
+    for (const c of allClasses) {
+      if (!catGestoraFees.has(c.category)) catGestoraFees.set(c.category, new Map());
+      const gMap = catGestoraFees.get(c.category)!;
+      const entry = gMap.get(c.gestora) ?? { aum_m: 0, fee_aum: 0 };
+      entry.aum_m += c.patrimonio_m;
+      entry.fee_aum += c.patrimonio_m * c.depositary_fee;
+      gMap.set(c.gestora, entry);
+    }
+
+    const benchmarkMap = new Map<string, number>();
+    for (const [cat, gMap] of catGestoraFees) {
+      const gestoraFees: number[] = [];
+      for (const [, v] of gMap) {
+        if (v.aum_m > 0) gestoraFees.push((v.fee_aum / v.aum_m) * 100);
+      }
+      if (gestoraFees.length === 0) continue;
+      const sorted = [...gestoraFees].sort((a, b) => a - b);
+      const mid = Math.floor(sorted.length / 2);
+      benchmarkMap.set(cat, sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid]);
+    }
+
+    // 2. Per-gestora: actual vs fair fee
+    const gestoraMap = new Map<string, { aum_m: number; fee_aum: number; cat_aums: Map<string, number> }>();
+    for (const c of allClasses) {
+      const entry = gestoraMap.get(c.gestora) ?? { aum_m: 0, fee_aum: 0, cat_aums: new Map() };
+      entry.aum_m += c.patrimonio_m;
+      entry.fee_aum += c.patrimonio_m * c.depositary_fee;
+      entry.cat_aums.set(c.category, (entry.cat_aums.get(c.category) ?? 0) + c.patrimonio_m);
+      gestoraMap.set(c.gestora, entry);
+    }
+
+    const allGaps: GestoraFeeGap[] = [];
+    for (const [gestora, data] of gestoraMap) {
+      if (data.aum_m <= 0) continue;
+      const actualBps = (data.fee_aum / data.aum_m) * 100;
+      let fairFeeWeighted = 0;
+      for (const [cat, catAum] of data.cat_aums) {
+        fairFeeWeighted += catAum * (benchmarkMap.get(cat) ?? 0);
+      }
+      const fairBps = fairFeeWeighted / data.aum_m;
+      const gapBps = actualBps - fairBps;
+      const overpaymentK = (data.aum_m * gapBps / 100) * 10;
+
+      const depoRel = gestoraDepoRelations.find(g => g.gestora === gestora);
+      allGaps.push({
+        gestora, aum_bn: +(data.aum_m / 1000).toFixed(2),
+        actual_fee_bps: +actualBps.toFixed(2), fair_fee_bps: +fairBps.toFixed(2),
+        fee_gap_bps: +gapBps.toFixed(2), overpayment_k: +overpaymentK.toFixed(0),
+        is_inversis: depoRel?.is_inversis ?? false,
+        current_depo: depoRel?.depositario?.split(',')[0] ?? 'Unknown',
+      });
+    }
+
+    const targets = allGaps.filter(g => !g.is_inversis && g.fee_gap_bps > 0.5).sort((a, b) => b.overpayment_k - a.overpayment_k);
+    const inversisClients = allGaps.filter(g => g.is_inversis);
+    const inversisAtRisk = inversisClients.filter(g => g.fee_gap_bps > 0.5).sort((a, b) => b.overpayment_k - a.overpayment_k);
+    const inversisRepriceable = inversisClients.filter(g => g.fee_gap_bps < -0.5).sort((a, b) => a.overpayment_k - b.overpayment_k);
+
+    return { targets, inversisAtRisk, inversisRepriceable };
+  }, []);
+}
+
 /* ── Helpers ─────────────────────────────────────────────────────── */
 const fmtB   = (v: number) => `€${v.toFixed(2)}B`;
 const fmtM   = (v: number) => `€${v.toFixed(1)}M`;
@@ -87,6 +177,7 @@ const SUB_TABS = [
   { id: 'overview',    label: 'Overview'        },
   { id: 'depositary',  label: 'Depositary Book' },
   { id: 'market',      label: 'Market Position' },
+  { id: 'marketscan',  label: 'Market Scan'     },
   { id: 'gestora',     label: 'Gestora'         },
   { id: 'sicav',       label: 'SICAVs'          },
   { id: 'pipeline',    label: 'Pipeline'        },
@@ -360,7 +451,7 @@ function GestoraSection() {
               <LineChart data={g.aum_series} margin={{ top: 8, right: 24, left: 12, bottom: 4 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
                 <XAxis dataKey="label" tick={{ fill: '#8888a0', fontSize: 10 }}
-                       interval={Math.floor(g.aum_series.length / 6)} />
+                       interval={g.aum_series.length > 0 ? Math.floor(g.aum_series.length / 6) : 0} />
                 <YAxis tick={{ fill: '#8888a0', fontSize: 10 }}
                        tickFormatter={v => `€${(v * 1000).toFixed(0)}M`}
                        domain={['auto', 'auto']} />
@@ -501,10 +592,127 @@ function PipelineSection() {
   );
 }
 
+/* ── Market Scan ────────────────────────────────────────────────── */
+function MarketScanSection({ targets, inversisAtRisk, inversisRepriceable }: {
+  targets: GestoraFeeGap[];
+  inversisAtRisk: GestoraFeeGap[];
+  inversisRepriceable: GestoraFeeGap[];
+}) {
+  const totalTargetRev = targets.reduce((s, g) => s + g.overpayment_k, 0);
+  const totalAtRiskRev = inversisAtRisk.reduce((s, g) => s + g.overpayment_k, 0);
+  const totalRepriceRev = inversisRepriceable.reduce((s, g) => s + Math.abs(g.overpayment_k), 0);
+
+  const targetColumns = [
+    { key: 'gestora', label: 'Gestora', format: (v: unknown) => { const s = String(v); return s.length > 35 ? s.slice(0, 33) + '…' : s; } },
+    { key: 'current_depo', label: 'Depositary' },
+    { key: 'aum_bn', label: 'AUM', align: 'right' as const, format: (v: unknown) => `€${Number(v).toFixed(1)}B` },
+    { key: 'actual_fee_bps', label: 'Actual', align: 'right' as const, format: (v: unknown) => `${Number(v).toFixed(1)} bps` },
+    { key: 'fair_fee_bps', label: 'Fair Fee', align: 'right' as const, format: (v: unknown) => `${Number(v).toFixed(1)} bps` },
+    { key: 'fee_gap_bps', label: 'Gap', align: 'right' as const, heatmap: true, format: (v: unknown) => {
+      const n = Number(v);
+      return <span style={{ color: n > 0 ? '#ef4444' : '#10b981' }}>{n > 0 ? '+' : ''}{n.toFixed(1)} bps</span>;
+    }},
+    { key: 'overpayment_k', label: 'Overpaying', align: 'right' as const, format: (v: unknown) => fmtK(Number(v)) },
+  ];
+
+  const inversisColumns = [
+    { key: 'gestora', label: 'Client', format: (v: unknown) => { const s = String(v); return s.length > 35 ? s.slice(0, 33) + '…' : s; } },
+    { key: 'aum_bn', label: 'AUM', align: 'right' as const, format: (v: unknown) => `€${Number(v).toFixed(1)}B` },
+    { key: 'actual_fee_bps', label: 'Actual', align: 'right' as const, format: (v: unknown) => `${Number(v).toFixed(1)} bps` },
+    { key: 'fair_fee_bps', label: 'Fair Fee', align: 'right' as const, format: (v: unknown) => `${Number(v).toFixed(1)} bps` },
+    { key: 'fee_gap_bps', label: 'Gap', align: 'right' as const, format: (v: unknown) => {
+      const n = Number(v);
+      return <span style={{ color: n > 0 ? '#ef4444' : '#10b981' }}>{n > 0 ? '+' : ''}{n.toFixed(1)} bps</span>;
+    }},
+    { key: 'overpayment_k', label: 'Impact', align: 'right' as const, format: (v: unknown) => {
+      const n = Number(v);
+      return <span style={{ color: n > 0 ? '#ef4444' : '#10b981' }}>{n > 0 ? '+' : ''}{fmtK(Math.abs(n))}</span>;
+    }},
+  ];
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14 }}>
+        <KpiCard title="Prospect Targets" value={String(targets.length)}
+          subtitle={`Overpaying ~${fmtK(totalTargetRev)}/yr total`} />
+        <KpiCard title="Inversis At Risk" value={String(inversisAtRisk.length)}
+          subtitle={`Overpaying ~${fmtK(totalAtRiskRev)}/yr vs fair`} />
+        <KpiCard title="Inversis Repriceable" value={String(inversisRepriceable.length)}
+          subtitle={`Underpaying ~${fmtK(totalRepriceRev)}/yr vs fair`} />
+      </div>
+
+      <InsightCard title="Category-Adjusted Market Scan" color="#f59e0b">
+        Each gestora's <strong>actual depositary fee</strong> is compared against a <strong>category-adjusted fair fee</strong> —
+        the AUM-weighted median depositary fee per fund category. Gestoras overpaying for their portfolio type are prospect targets;
+        Inversis clients overpaying are at risk of switching; those underpaying represent repricing opportunity.
+      </InsightCard>
+
+      {/* Prospect Targets */}
+      <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
+        <SectionHeader title={`Prospect Targets — Non-Inversis Gestoras Overpaying (${targets.length})`} source="CNMV A2.2 · Category-adjusted" />
+        {targets.length > 0 ? (
+          <>
+            <ResponsiveContainer width="100%" height={Math.min(500, Math.max(200, targets.slice(0, 15).length * 32))}>
+              <BarChart data={targets.slice(0, 15)} layout="vertical" margin={{ ...CHART_MARGIN, left: 200 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
+                <XAxis type="number" tickFormatter={v => fmtK(v)}
+                  tick={{ fill: '#8888a0', fontSize: 11, fontFamily: "'JetBrains Mono', monospace" }} />
+                <YAxis type="category" dataKey="gestora" width={195}
+                  tickFormatter={(v: string) => v.length > 28 ? v.slice(0, 26) + '..' : v}
+                  tick={{ fill: '#8888a0', fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
+                <Tooltip content={({ active, payload }) => {
+                  if (!active || !payload?.length) return null;
+                  const g = payload[0].payload as GestoraFeeGap;
+                  return (
+                    <div style={{ background: '#1e1e2a', border: '1px solid #3a3a4a', borderRadius: 8, padding: '10px 14px', fontFamily: "'JetBrains Mono', monospace", fontSize: 12 }}>
+                      <div style={{ color: '#e8e8f0', fontWeight: 600, marginBottom: 4 }}>{g.gestora}</div>
+                      <div style={{ color: '#8888a0' }}>AUM: €{g.aum_bn.toFixed(1)}B · Depo: {g.current_depo}</div>
+                      <div style={{ color: '#ef4444', marginTop: 4 }}>Overpaying {fmtK(g.overpayment_k)}/yr (+{g.fee_gap_bps.toFixed(1)} bps vs fair)</div>
+                    </div>
+                  );
+                }} />
+                <Bar dataKey="overpayment_k" radius={[0, 4, 4, 0]}>
+                  {targets.slice(0, 15).map((t, i) => (
+                    <Cell key={`${t.gestora}-${i}`} fill="#ef4444" opacity={0.7 + (0.3 * (1 - i / 15))} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+            <DataTable data={targets as unknown as Record<string, unknown>[]} columns={targetColumns} defaultSort="overpayment_k" maxRows={30} />
+          </>
+        ) : (
+          <div style={{ color: '#555570', textAlign: 'center', padding: 24 }}>No gestoras significantly overpaying vs category benchmark</div>
+        )}
+      </div>
+
+      {/* Inversis Book Health */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div style={{ background: '#ef444410', border: '1px solid #ef444430', borderRadius: 12, padding: 24 }}>
+          <SectionHeader title={`Inversis Clients At Risk (${inversisAtRisk.length})`} source="Overpaying vs category-adjusted fair fee" />
+          {inversisAtRisk.length > 0 ? (
+            <DataTable data={inversisAtRisk as unknown as Record<string, unknown>[]} columns={inversisColumns} defaultSort="overpayment_k" maxRows={20} />
+          ) : (
+            <div style={{ color: '#555570', textAlign: 'center', padding: 24 }}>No Inversis clients significantly overpaying</div>
+          )}
+        </div>
+        <div style={{ background: '#10b98110', border: '1px solid #10b98130', borderRadius: 12, padding: 24 }}>
+          <SectionHeader title={`Inversis Repriceable (${inversisRepriceable.length})`} source="Underpaying vs category-adjusted fair fee" />
+          {inversisRepriceable.length > 0 ? (
+            <DataTable data={inversisRepriceable as unknown as Record<string, unknown>[]} columns={inversisColumns} defaultSort="overpayment_k" maxRows={20} />
+          ) : (
+            <div style={{ color: '#555570', textAlign: 'center', padding: 24 }}>No Inversis clients significantly underpaying</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── Root Component ──────────────────────────────────────────────── */
 export default function Inversis() {
   const [subTab, setSubTab] = useState<SubTab>('overview');
   const dep = d.depositary;
+  const marketScan = useMarketScan();
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -567,6 +775,7 @@ export default function Inversis() {
       {subTab === 'overview'   && <OverviewSection />}
       {subTab === 'depositary' && <DepositarySection />}
       {subTab === 'market'     && <MarketSection />}
+      {subTab === 'marketscan' && <MarketScanSection targets={marketScan.targets} inversisAtRisk={marketScan.inversisAtRisk} inversisRepriceable={marketScan.inversisRepriceable} />}
       {subTab === 'gestora'    && <GestoraSection />}
       {subTab === 'sicav'      && <SicavSection />}
       {subTab === 'pipeline'   && <PipelineSection />}

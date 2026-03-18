@@ -40,7 +40,7 @@ export default function CategoryAnalysis() {
         <SectionHeader title="Category AUM & Growth" source="INVERCO — PatrimFondosEuro" />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
           {treemap.map((item: { category: string; aum_bn: number; yoy_growth: number | null }) => {
-            const maxAum = treemap[0]?.aum_bn || 1;
+            const maxAum = Math.max(...treemap.map((t: { aum_bn: number }) => t.aum_bn), 1);
             const width = (item.aum_bn / maxAum) * 100;
             return (
               <div key={item.category} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>

@@ -20,7 +20,7 @@ export default function ChartTooltip({ active, payload, label, suffix = '', pref
     }}>
       <div style={{ color: '#e8e8f0', fontWeight: 600, marginBottom: 6 }}>{label}</div>
       {payload.map((entry, i) => (
-        <div key={i} style={{
+        <div key={entry.dataKey ?? i} style={{
           display: 'flex', justifyContent: 'space-between', gap: 16,
           padding: '2px 0',
           color: entry.color || '#8888a0',

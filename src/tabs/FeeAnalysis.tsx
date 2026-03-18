@@ -41,7 +41,7 @@ export default function FeeAnalysis() {
   const catByTer = useMemo(() =>
     [...(category_stats as Array<{ category: string; median_ter: number; count: number }>)]
       .sort((a, b) => b.median_ter - a.median_ter),
-  []);
+  [category_stats]);
 
   // Top 20 gestoras by AUM for fee comparison
   const topGestoras = useMemo(() =>
@@ -51,7 +51,7 @@ export default function FeeAnalysis() {
         ...g,
         gestora_short: g.gestora.length > 25 ? g.gestora.slice(0, 23) + '...' : g.gestora,
       })),
-  []);
+  [gestora_stats]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>

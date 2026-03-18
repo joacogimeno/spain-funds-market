@@ -4,7 +4,7 @@ import SectionHeader from '../components/SectionHeader';
 import KpiCard from '../components/KpiCard';
 import DataTable from '../components/DataTable';
 import InsightCard from '../components/InsightCard';
-import { CHART_MARGIN, CHART_COLORS, formatNum } from '../theme';
+import { CHART_MARGIN, CHART_COLORS } from '../theme';
 import data from '../data/cnmv_depositaria.json';
 
 const {
@@ -205,6 +205,9 @@ export default function Depositaria() {
         <SectionHeader title="Gestora AUM vs Depositary Fee" source="CNMV Anexo A1.1 + A2.2" />
         <GestoraScatter />
       </div>
+
+      {/* Category-level median fees with depositary comparison */}
+      <CategoryFeeByDepositary />
 
       {/* === SECTION B: INVERSIS CLIENT REVENUE DETAIL === */}
       {inversis_by_gestora && inversis_by_gestora.length > 0 && (
@@ -665,8 +668,8 @@ function GestoraScatter() {
   const others = scatterData.filter(d => !d.is_inversis);
 
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <ScatterChart margin={CHART_MARGIN}>
+    <ResponsiveContainer width="100%" height={440}>
+      <ScatterChart margin={{ ...CHART_MARGIN, bottom: 30 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
         <XAxis dataKey="total_aum_m" name="AUM" type="number" scale="log" domain={['auto', 'auto']}
           tick={{ fontSize: 10, fill: '#8888a0' }}
@@ -695,7 +698,7 @@ function GestoraScatter() {
             </div>
           );
         }} />
-        <Legend wrapperStyle={{ fontSize: 11 }} />
+        <Legend wrapperStyle={{ fontSize: 11, paddingTop: 20 }} />
         {others.length > 0 && (
           <Scatter name="Other Depositarios" data={others} fill="#3b82f6" fillOpacity={0.5} />
         )}
@@ -704,6 +707,126 @@ function GestoraScatter() {
         )}
       </ScatterChart>
     </ResponsiveContainer>
+  );
+}
+
+/* ========== CATEGORY FEE BY DEPOSITARY ========== */
+function CategoryFeeByDepositary() {
+  const [selectedDepo, setSelectedDepo] = useState('');
+
+  const { categoryMedians, depoFeesByCategory } = useMemo(() => {
+    // Compute median depositary fee per category across all gestoras
+    const catGestoraFees = new Map<string, number[]>();
+    const catAum = new Map<string, number>();
+
+    // Group classes by category, then compute per-gestora weighted fees
+    const catGestora = new Map<string, Map<string, { aum: number; fee_aum: number }>>();
+    for (const f of fund_detail as Array<{ category: string; gestora: string; aum_m: number; depo_fee: number; depositario: string }>) {
+      if (!f.category || f.aum_m <= 0) continue;
+      if (!catGestora.has(f.category)) catGestora.set(f.category, new Map());
+      const gMap = catGestora.get(f.category)!;
+      const entry = gMap.get(f.gestora) ?? { aum: 0, fee_aum: 0 };
+      entry.aum += f.aum_m;
+      entry.fee_aum += f.aum_m * (f.depo_fee ?? 0);
+      gMap.set(f.gestora, entry);
+      catAum.set(f.category, (catAum.get(f.category) ?? 0) + f.aum_m);
+    }
+
+    for (const [cat, gMap] of catGestora) {
+      const fees: number[] = [];
+      for (const [, v] of gMap) {
+        if (v.aum > 0) fees.push((v.fee_aum / v.aum) * 100);
+      }
+      catGestoraFees.set(cat, fees);
+    }
+
+    const medians: Array<{ category: string; median_bps: number; aum_m: number }> = [];
+    for (const [cat, fees] of catGestoraFees) {
+      if (fees.length === 0) continue;
+      const sorted = [...fees].sort((a, b) => a - b);
+      const mid = Math.floor(sorted.length / 2);
+      const median = sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+      medians.push({ category: cat, median_bps: +median.toFixed(2), aum_m: catAum.get(cat) ?? 0 });
+    }
+    medians.sort((a, b) => b.aum_m - a.aum_m);
+
+    // Per-depositary per-category weighted fee
+    const depoMap = new Map<string, Map<string, { aum: number; fee_aum: number }>>();
+    for (const f of fund_detail as Array<{ category: string; depositario: string; aum_m: number; depo_fee: number }>) {
+      if (!f.category || !f.depositario || f.aum_m <= 0) continue;
+      if (!depoMap.has(f.depositario)) depoMap.set(f.depositario, new Map());
+      const cMap = depoMap.get(f.depositario)!;
+      const entry = cMap.get(f.category) ?? { aum: 0, fee_aum: 0 };
+      entry.aum += f.aum_m;
+      entry.fee_aum += f.aum_m * (f.depo_fee ?? 0);
+      cMap.set(f.category, entry);
+    }
+
+    const depoFees = new Map<string, Map<string, number>>();
+    for (const [depo, cMap] of depoMap) {
+      const catFees = new Map<string, number>();
+      for (const [cat, v] of cMap) {
+        if (v.aum > 0) catFees.set(cat, +((v.fee_aum / v.aum) * 100).toFixed(2));
+      }
+      depoFees.set(depo, catFees);
+    }
+
+    return { categoryMedians: medians, depoFeesByCategory: depoFees };
+  }, []);
+
+  const selectedDepoFees = selectedDepo ? depoFeesByCategory.get(selectedDepo) : null;
+
+  const chartData = categoryMedians.map(cm => ({
+    category: cm.category,
+    median_bps: cm.median_bps,
+    depo_bps: selectedDepoFees?.get(cm.category) ?? null,
+  }));
+
+  const depoNames = [...depoFeesByCategory.keys()].sort();
+
+  return (
+    <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
+      <SectionHeader title="Median Depositary Fee by Fund Category" source="CNMV Anexo A2.2">
+        <select value={selectedDepo} onChange={e => setSelectedDepo(e.target.value)} style={{ fontSize: 12, maxWidth: 300 }}>
+          <option value="">Compare with a depositario...</option>
+          {depoNames.map(d => (
+            <option key={d} value={d}>{d.replace(/, S\.A\.?/, '').length > 35 ? d.replace(/, S\.A\.?/, '').slice(0, 33) + '..' : d.replace(/, S\.A\.?/, '')}</option>
+          ))}
+        </select>
+      </SectionHeader>
+
+      <ResponsiveContainer width="100%" height={Math.max(300, chartData.length * 28)}>
+        <BarChart data={chartData} layout="vertical" margin={{ ...CHART_MARGIN, left: 180 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
+          <XAxis type="number" tickFormatter={v => `${v} bps`}
+            tick={{ fill: '#8888a0', fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
+          <YAxis type="category" dataKey="category" width={175}
+            tick={{ fill: '#8888a0', fontSize: 10, fontFamily: "'JetBrains Mono', monospace" }} />
+          <Tooltip content={({ active, payload, label }) => {
+            if (!active || !payload?.length) return null;
+            return (
+              <div style={{ background: '#1e1e2a', border: '1px solid #3a3a4a', borderRadius: 8, padding: '10px 14px', fontFamily: "'JetBrains Mono', monospace", fontSize: 12 }}>
+                <div style={{ color: '#e8e8f0', fontWeight: 600, marginBottom: 4 }}>{label}</div>
+                {payload.map((entry, i) => (
+                  <div key={i} style={{ color: entry.color, padding: '2px 0' }}>
+                    {entry.name}: {Number(entry.value).toFixed(2)} bps
+                  </div>
+                ))}
+              </div>
+            );
+          }} />
+          <Bar dataKey="median_bps" name="Market Median" fill="#3b82f6" fillOpacity={0.6} radius={[0, 4, 4, 0]} />
+          {selectedDepo && (
+            <Bar dataKey="depo_bps" name={selectedDepo.replace(/, S\.A\.?/, '').slice(0, 25)} fill="#10b981" fillOpacity={0.85} radius={[0, 4, 4, 0]} />
+          )}
+        </BarChart>
+      </ResponsiveContainer>
+
+      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 8, fontSize: 10, color: '#555570' }}>
+        <span><span style={{ display: 'inline-block', width: 10, height: 10, background: '#3b82f6', opacity: 0.6, borderRadius: 2, marginRight: 4 }} />Market Median</span>
+        {selectedDepo && <span><span style={{ display: 'inline-block', width: 10, height: 10, background: '#10b981', borderRadius: 2, marginRight: 4 }} />{selectedDepo.replace(/, S\.A\.?/, '').slice(0, 30)}</span>}
+      </div>
+    </div>
   );
 }
 

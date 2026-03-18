@@ -60,9 +60,13 @@ export default function DataTable<T extends Record<string, unknown>>({ data, col
             {columns.map(col => (
               <th key={col.key}
                 onClick={() => handleSort(col.key)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSort(col.key); } }}
+                tabIndex={0}
+                role="button"
                 style={{
                   textAlign: col.align || 'left',
                   width: col.width,
+                  cursor: 'pointer',
                 }}>
                 {col.label} {sortKey === col.key ? (sortDir === 'asc' ? '\u25B2' : '\u25BC') : ''}
               </th>
@@ -71,7 +75,7 @@ export default function DataTable<T extends Record<string, unknown>>({ data, col
         </thead>
         <tbody>
           {sorted.map((row, i) => (
-            <tr key={i} onClick={() => onRowClick?.(row)} style={{ cursor: onRowClick ? 'pointer' : undefined }}>
+            <tr key={`${String(row[columns[0]?.key] ?? '')}-${i}`} onClick={() => onRowClick?.(row)} style={{ cursor: onRowClick ? 'pointer' : undefined }}>
               {columns.map(col => {
                 const val = row[col.key];
                 const bg = col.heatmap && typeof val === 'number' ? getHeatColor(val) : 'transparent';

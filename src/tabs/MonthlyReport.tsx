@@ -490,8 +490,7 @@ export default function MonthlyReport() {
         The Spanish fund market {headline.aum_delta_bn > 0 ? 'grew' : 'contracted'} by <strong>{'\u20AC'}{Math.abs(headline.aum_delta_bn).toFixed(1)}B</strong> ({headline.aum_delta_pct > 0 ? '+' : ''}{headline.aum_delta_pct.toFixed(2)}%) to reach <strong>{'\u20AC'}{headline.total_aum_bn.toFixed(1)}B</strong>.
         {' '}Market appreciation contributed <strong>{'\u20AC'}{headline.market_effect_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}
         {' '}while net investor flows added <strong>{'\u20AC'}{headline.net_flows_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}.
-        {' '}Flows doubled vs {prevLabel} ({'\u20AC'}{headline.prev_net_flows_bn.toFixed(1)}B), with <strong>{category_flows[0]?.category}</strong> leading
-        {' '}at {'\u20AC'}{category_flows[0]?.net.toFixed(2)}B. The market added <strong>{headline.inv_delta.toLocaleString()}</strong> new investors,
+        {' '}Flows doubled vs {prevLabel} ({'\u20AC'}{headline.prev_net_flows_bn.toFixed(1)}B){category_flows.length > 0 ? <>, with <strong>{category_flows[0].category}</strong> leading at {'\u20AC'}{category_flows[0].net.toFixed(2)}B</> : null}. The market added <strong>{headline.inv_delta.toLocaleString()}</strong> new investors,
         {' '}reaching {headline.investors.toLocaleString()} total.
       </InsightCard>
     </div>

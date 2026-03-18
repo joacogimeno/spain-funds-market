@@ -267,8 +267,8 @@ function InvestorsSection() {
       <InsightCard title="Investor Profile" color="#6366f1">
         Abanca has <strong>{s.total_investors.toLocaleString()} registered fund investors</strong> across {s.total_funds} funds —
         reflecting a broad retail client base distributed through Abanca's branch network across Galicia and beyond.
-        The two largest funds by investor count are <strong>Abanca Renta Fija Patrimonio</strong> ({d.funds.find(f => f.investors === Math.max(...d.funds.map(f => f.investors)))?.investors.toLocaleString()} investors)
-        and <strong>Abanca FonDepósito</strong> ({d.funds.find(f => f.fund.includes('FONDEPOSITO'))?.investors.toLocaleString()} investors).
+        The two largest funds by investor count are <strong>Abanca Renta Fija Patrimonio</strong> ({d.funds.find(f => f.investors === Math.max(...d.funds.map(f => f.investors)))?.investors?.toLocaleString() ?? 'N/A'} investors)
+        and <strong>Abanca FonDepósito</strong> ({d.funds.find(f => f.fund.includes('FONDEPOSITO'))?.investors?.toLocaleString() ?? 'N/A'} investors).
         Fixed income categories account for approximately <strong>{Math.round(d.categories.filter(c => c.category.startsWith('RF')).reduce((s, c) => s + c.investors, 0) / s.total_investors * 100)}%</strong> of all investors.
       </InsightCard>
 

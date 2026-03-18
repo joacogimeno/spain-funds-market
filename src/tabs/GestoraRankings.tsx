@@ -27,9 +27,19 @@ const typeLabels: Record<string, string> = {
 export default function GestoraRankings() {
   const [showGroups, setShowGroups] = useState(false);
 
+  const gestoraGrowthMap = useMemo(() => {
+    const map = new Map<string, number>();
+    (gestoras as Array<{name: string; yoy_growth: number | null}>).forEach(g => {
+      if (g.yoy_growth != null) map.set(g.name, g.yoy_growth);
+    });
+    return map;
+  }, []);
+
   const fmtYoY = (name: string) => {
-    const g = (gestoras as Array<{name: string; yoy_growth: number | null}>).find(g => g.name.includes(name));
-    return g?.yoy_growth != null ? ` (+${g.yoy_growth.toFixed(1)}%)` : '';
+    for (const [key, growth] of gestoraGrowthMap) {
+      if (key.includes(name)) return ` (+${growth.toFixed(1)}%)`;
+    }
+    return '';
   };
 
   const concentrationData = [

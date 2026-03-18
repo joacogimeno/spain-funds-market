@@ -11,7 +11,7 @@ import MonthlyReport from './tabs/MonthlyReport';
 import FeeAnalysis from './tabs/FeeAnalysis';
 import Depositaria from './tabs/Depositaria';
 import BancaMarch from './tabs/BancaMarch';
-import Abanca from './tabs/Abanca';
+import ProspectAnalysis from './tabs/ProspectAnalysis';
 import Inversis from './tabs/Inversis';
 
 const TABS = [
@@ -24,7 +24,7 @@ const TABS = [
   { id: 'fees', label: 'Fee Analysis', component: FeeAnalysis },
   { id: 'depositaria', label: 'Depositar\u00eda', component: Depositaria },
   { id: 'banca_march', label: 'Banca March', component: BancaMarch },
-  { id: 'abanca',      label: 'Abanca',      component: Abanca      },
+  { id: 'prospects',   label: 'Prospect Analysis', component: ProspectAnalysis },
   { id: 'inversis',    label: 'Inversis',    component: Inversis    },
   { id: 'opportunities', label: 'Opportunities', component: Opportunities },
   { id: 'explorer', label: 'Fund Explorer', component: FundExplorer },

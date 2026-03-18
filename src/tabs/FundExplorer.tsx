@@ -12,7 +12,7 @@ export default function FundExplorer() {
   const [search, setSearch] = useState('');
 
   const filtered = useMemo(() => {
-    let result = funds as Record<string, unknown>[];
+    let result = (funds ?? []) as Record<string, unknown>[];
     if (categoryFilter) {
       result = result.filter(f => f.category === categoryFilter);
     }
