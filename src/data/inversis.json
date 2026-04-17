@@ -577,9 +577,9 @@
   },
   "gestora": {
     "name": "INVERSIS GESTIÓN, S.A., SGIIC",
-    "aum_bn": 0.947,
-    "growth_1y": 5.15,
-    "growth_ytd": -0.94,
+    "aum_bn": 0.942,
+    "growth_1y": 6.97,
+    "growth_ytd": -1.43,
     "fund_count": 29,
     "class_count": 66,
     "fee_bps_paid": 8.81,
@@ -688,45 +688,49 @@
       {
         "label": "2026-02",
         "aum_bn": 0.947
+      },
+      {
+        "label": "2026-03",
+        "aum_bn": 0.942
       }
     ]
   },
   "sicav": {
-    "total_market_aum_bn": 21.59,
-    "total_market_count": 481,
-    "total_shareholders": 95158,
-    "inversis_gestora_aum_m": 21.6,
-    "inversis_gestora_count": 4,
+    "total_market_aum_bn": 20.76,
+    "total_market_count": 485,
+    "total_shareholders": 94652,
+    "inversis_gestora_aum_m": 26.0,
+    "inversis_gestora_count": 5,
     "market_ranking": [
       {
         "rank": 1,
         "group": "SANTANDER",
         "gestora": "SANTANDER AM",
-        "aum_m": 3816.3,
+        "aum_m": 3654.0,
         "count": 114,
-        "shareholders": 25490
+        "shareholders": 25317
       },
       {
         "rank": 2,
         "group": "BANCA MARCH",
         "gestora": "",
-        "aum_m": 2395.7,
-        "count": 13,
-        "shareholders": 12173
+        "aum_m": 2347.6,
+        "count": 14,
+        "shareholders": 12636
       },
       {
         "rank": 3,
         "group": "BANKINTER",
         "gestora": "BANKINTER GESTIÓN",
-        "aum_m": 2215.3,
+        "aum_m": 2117.7,
         "count": 87,
-        "shareholders": 11103
+        "shareholders": 11083
       },
       {
         "rank": 4,
         "group": "PACTIO",
         "gestora": "PACTIO GESTIÓN",
-        "aum_m": 1750.5,
+        "aum_m": 1675.1,
         "count": 2,
         "shareholders": 1097
       },
@@ -734,63 +738,63 @@
         "rank": 5,
         "group": "ANDBANK",
         "gestora": "",
-        "aum_m": 1493.1,
-        "count": 63,
-        "shareholders": 7645
+        "aum_m": 1488.2,
+        "count": 67,
+        "shareholders": 7677
       },
       {
         "rank": 6,
         "group": "UBS",
         "gestora": "UBS WM",
-        "aum_m": 1385.3,
-        "count": 20,
-        "shareholders": 2453
+        "aum_m": 1339.8,
+        "count": 19,
+        "shareholders": 2414
       },
       {
         "rank": 7,
         "group": "RENTA 4",
         "gestora": "RENTA 4 GESTORA",
-        "aum_m": 1136.6,
+        "aum_m": 1104.1,
         "count": 38,
-        "shareholders": 4096
+        "shareholders": 4093
       },
       {
         "rank": 8,
         "group": "CREAND WM",
         "gestora": "CREAND AM",
-        "aum_m": 975.7,
+        "aum_m": 938.9,
         "count": 15,
-        "shareholders": 2989
+        "shareholders": 2993
       },
       {
         "rank": 9,
         "group": "BCO. SABADELL",
         "gestora": "URQUIJO GESTIÓN",
-        "aum_m": 948.8,
+        "aum_m": 915.5,
         "count": 11,
-        "shareholders": 2696
+        "shareholders": 2704
       },
       {
         "rank": 10,
         "group": "BBVA",
         "gestora": "BBVA AM",
-        "aum_m": 789.1,
+        "aum_m": 693.8,
         "count": 4,
-        "shareholders": 5941
+        "shareholders": 5926
       },
       {
         "rank": 11,
         "group": "MAGALLANES",
         "gestora": "MAGALLANES VALUE INVES.",
-        "aum_m": 642.2,
+        "aum_m": 599.6,
         "count": 1,
-        "shareholders": 286
+        "shareholders": 288
       },
       {
         "rank": 12,
         "group": "ARBARIN SICAV",
         "gestora": "",
-        "aum_m": 376.1,
+        "aum_m": 355.5,
         "count": 1,
         "shareholders": 236
       },
@@ -798,15 +802,15 @@
         "rank": 13,
         "group": "CREDIT AGRICOLE",
         "gestora": "AMUNDI",
-        "aum_m": 360.0,
+        "aum_m": 342.5,
         "count": 13,
-        "shareholders": 2061
+        "shareholders": 2056
       },
       {
         "rank": 14,
         "group": "SINGULAR BANK",
         "gestora": "SINGULAR AM",
-        "aum_m": 344.7,
+        "aum_m": 331.1,
         "count": 12,
         "shareholders": 1579
       },
@@ -814,7 +818,7 @@
         "rank": 15,
         "group": "MUZA",
         "gestora": "MUZA GESTIÓN DE ACTIVOS",
-        "aum_m": 314.9,
+        "aum_m": 304.7,
         "count": 1,
         "shareholders": 258
       },
@@ -822,17 +826,17 @@
         "rank": 16,
         "group": "MUTUA MADRILEÑA",
         "gestora": "",
-        "aum_m": 266.9,
+        "aum_m": 249.5,
         "count": 7,
-        "shareholders": 710
+        "shareholders": 713
       },
       {
         "rank": 17,
         "group": "GESIURIS",
         "gestora": "GESIURIS AM",
-        "aum_m": 241.6,
+        "aum_m": 231.8,
         "count": 12,
-        "shareholders": 4609
+        "shareholders": 3836
       },
       {
         "rank": 18,
@@ -846,15 +850,15 @@
         "rank": 19,
         "group": "ABANTE",
         "gestora": "",
-        "aum_m": 215.9,
+        "aum_m": 207.4,
         "count": 11,
-        "shareholders": 1681
+        "shareholders": 1676
       },
       {
         "rank": 20,
         "group": "ASESORES Y GESTORES",
         "gestora": "A&G FONDOS",
-        "aum_m": 217.8,
+        "aum_m": 213.5,
         "count": 5,
         "shareholders": 635
       },
@@ -862,7 +866,7 @@
         "rank": 21,
         "group": "AURIGA",
         "gestora": "QUADRIGA AM",
-        "aum_m": 190.6,
+        "aum_m": 186.0,
         "count": 5,
         "shareholders": 623
       },
@@ -870,7 +874,7 @@
         "rank": 22,
         "group": "UNICAJA",
         "gestora": "UNICAJA AM",
-        "aum_m": 152.5,
+        "aum_m": 146.9,
         "count": 3,
         "shareholders": 432
       },
@@ -878,7 +882,7 @@
         "rank": 23,
         "group": "DIAGONAL ASSET SGIIC",
         "gestora": "DIAGONAL AM",
-        "aum_m": 149.4,
+        "aum_m": 145.2,
         "count": 5,
         "shareholders": 791
       },
@@ -886,7 +890,7 @@
         "rank": 24,
         "group": "INVERSIONES NAIRA SICAV",
         "gestora": "",
-        "aum_m": 142.5,
+        "aum_m": 134.5,
         "count": 1,
         "shareholders": 170
       },
@@ -894,7 +898,7 @@
         "rank": 25,
         "group": "AUGUSTUS",
         "gestora": "AUGUSTUS CAPITAL AM",
-        "aum_m": 121.5,
+        "aum_m": 109.5,
         "count": 1,
         "shareholders": 540
       },
@@ -902,15 +906,15 @@
         "rank": 26,
         "group": "CAIXABANK",
         "gestora": "CAIXABANK AM",
-        "aum_m": 107.0,
+        "aum_m": 102.0,
         "count": 9,
-        "shareholders": 937
+        "shareholders": 933
       },
       {
         "rank": 27,
         "group": "TALENTA",
         "gestora": "TALENTA GESTION",
-        "aum_m": 90.2,
+        "aum_m": 92.1,
         "count": 2,
         "shareholders": 202
       },
@@ -918,7 +922,7 @@
         "rank": 28,
         "group": "GVC GAESCO",
         "gestora": "GAESCO GESTIÓN",
-        "aum_m": 82.6,
+        "aum_m": 76.1,
         "count": 5,
         "shareholders": 868
       },
@@ -926,7 +930,7 @@
         "rank": 29,
         "group": "RENTA INSULAR CANARIA SICAV",
         "gestora": "",
-        "aum_m": 65.1,
+        "aum_m": 62.3,
         "count": 1,
         "shareholders": 173
       },
@@ -934,7 +938,7 @@
         "rank": 30,
         "group": "JULIUS BAER",
         "gestora": "JULIUS BAER",
-        "aum_m": 56.4,
+        "aum_m": 57.9,
         "count": 1,
         "shareholders": 511
       }

@@ -2,807 +2,788 @@
   "gestoras": [
     {
       "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
-      "aum_bn": 107.774,
-      "pct": 23.17,
+      "aum_bn": 104.129,
+      "pct": 22.97,
       "num_fondos": 586,
       "type": "bank",
-      "yoy_growth": 10.6,
+      "yoy_growth": 8.8,
       "categories": {
-        "Monetarios": 20.038,
-        "RF Euro CP": 13.757,
-        "RF Euro LP": 30.561,
-        "RF Mixta Euro": 1.948,
-        "RV Nacional": 0.973,
-        "RF Internacional": 2.839,
-        "RF Mixta Internacional": 3.701,
-        "RV Mixta Internacional": 1.514,
-        "RV Euro Resto": 0.11,
-        "RV Intl Europa": 3.531,
-        "RV Intl EEUU": 8.659,
-        "RV Intl Japón": 1.009,
-        "RV Intl Emergentes": 4.153,
-        "RV Intl Resto": 2.707,
-        "Globales": 7.82,
+        "Monetarios": 19.855,
+        "RF Euro CP": 14.023,
+        "RF Euro LP": 29.189,
+        "RF Mixta Euro": 1.888,
+        "RV Nacional": 0.859,
+        "RF Internacional": 2.8,
+        "RF Mixta Internacional": 3.585,
+        "RV Mixta Internacional": 1.437,
+        "RV Euro Resto": 0.099,
+        "RV Intl Europa": 3.235,
+        "RV Intl EEUU": 8.326,
+        "RV Intl Japón": 0.888,
+        "RV Intl Emergentes": 3.679,
+        "RV Intl Resto": 2.519,
+        "Globales": 7.419,
         "Garantizados RF": 0.072,
-        "Garantizados RV": 0.031,
-        "Fondos Índice": 1.26,
-        "Retorno Absoluto": 3.088
+        "Garantizados RV": 0.028,
+        "Fondos Índice": 1.188,
+        "Retorno Absoluto": 3.042
       },
       "rank": 1
     },
     {
       "name": "Santander Asset Management, S.A.,SGIIC",
-      "aum_bn": 67.475,
+      "aum_bn": 65.793,
       "pct": 14.51,
-      "num_fondos": 448,
+      "num_fondos": 454,
       "type": "bank",
-      "yoy_growth": null,
+      "yoy_growth": 5.9,
       "categories": {
-        "RF Euro CP": 10.369,
-        "RF Euro LP": 6.841,
-        "RF Mixta Euro": 13.164,
-        "RV Nacional": 1.32,
-        "RF Internacional": 2.579,
-        "RF Mixta Internacional": 1.182,
-        "RV Mixta Internacional": 0.283,
-        "RV Euro Resto": 0.372,
-        "RV Intl Europa": 1.224,
-        "RV Intl EEUU": 2.549,
-        "RV Intl Emergentes": 0.067,
-        "RV Intl Resto": 0.473,
-        "Globales": 17.403,
-        "Fondos Índice": 1.231,
-        "Objetivo Rentabilidad": 7.819,
-        "Retorno Absoluto": 0.379,
-        "FIL": 0.219,
+        "RF Euro CP": 10.463,
+        "RF Euro LP": 6.729,
+        "RF Mixta Euro": 13.187,
+        "RV Nacional": 1.154,
+        "RF Internacional": 2.486,
+        "RF Mixta Internacional": 1.136,
+        "RV Mixta Internacional": 0.268,
+        "RV Euro Resto": 0.334,
+        "RV Intl Europa": 1.137,
+        "RV Intl EEUU": 2.413,
+        "RV Intl Emergentes": 0.061,
+        "RV Intl Resto": 0.423,
+        "Globales": 16.517,
+        "Fondos Índice": 1.141,
+        "Objetivo Rentabilidad": 7.752,
+        "Retorno Absoluto": 0.375,
+        "FIL": 0.215,
         "Hedge Funds": 0.001
       },
       "rank": 2
     },
     {
       "name": "BBVA Asset Management SA SGIIC",
-      "aum_bn": 59.938,
-      "pct": 12.89,
-      "num_fondos": 212,
+      "aum_bn": 58.908,
+      "pct": 12.99,
+      "num_fondos": 216,
       "type": "bank",
-      "yoy_growth": 7.4,
+      "yoy_growth": 7.3,
       "categories": {
-        "RF Euro CP": 14.709,
-        "RF Euro LP": 7.276,
-        "RF Mixta Euro": 0.193,
-        "RV Nacional": 0.132,
-        "RF Internacional": 1.755,
-        "RF Mixta Internacional": 1.439,
-        "RV Mixta Internacional": 1.395,
-        "RV Intl Europa": 2.271,
-        "RV Intl EEUU": 0.759,
-        "RV Intl Emergentes": 0.089,
-        "RV Intl Resto": 4.273,
-        "Globales": 22.464,
-        "Fondos Índice": 2.738,
-        "Retorno Absoluto": 0.074,
-        "FIL": 0.232,
-        "Hedge Funds": 0.139
+        "RF Euro CP": 14.766,
+        "RF Euro LP": 7.154,
+        "RF Mixta Euro": 0.187,
+        "RV Nacional": 0.118,
+        "RF Internacional": 1.699,
+        "RF Mixta Internacional": 1.371,
+        "RV Mixta Internacional": 1.336,
+        "RV Intl Europa": 3.09,
+        "RV Intl EEUU": 0.727,
+        "RV Intl Emergentes": 0.081,
+        "RV Intl Resto": 3.96,
+        "Globales": 21.412,
+        "Fondos Índice": 2.526,
+        "Retorno Absoluto": 0.072,
+        "FIL": 0.279,
+        "Hedge Funds": 0.13
       },
       "rank": 3
     },
     {
       "name": "IBERCAJA GESTIÓN, S.A.U.",
-      "aum_bn": 29.44,
-      "pct": 6.33,
-      "num_fondos": 246,
+      "aum_bn": 28.882,
+      "pct": 6.37,
+      "num_fondos": 248,
       "type": "bank",
-      "yoy_growth": 9.6,
+      "yoy_growth": 7.8,
       "categories": {
-        "RF Euro CP": 11.127,
-        "RF Euro LP": 7.581,
-        "RV Nacional": 0.074,
-        "RF Internacional": 2.01,
-        "RF Mixta Internacional": 3.849,
-        "RV Mixta Internacional": 1.071,
-        "RV Intl Europa": 0.148,
-        "RV Intl EEUU": 0.224,
-        "RV Intl Japón": 0.014,
-        "RV Intl Emergentes": 0.131,
-        "RV Intl Resto": 2.407,
-        "Globales": 0.618,
-        "Garantizados RF": 0.177,
-        "Garantizados RV": 0.01
+        "RF Euro CP": 10.141,
+        "RF Euro LP": 8.292,
+        "RV Nacional": 0.067,
+        "RF Internacional": 2.068,
+        "RF Mixta Internacional": 3.749,
+        "RV Mixta Internacional": 1.02,
+        "RV Intl Europa": 0.131,
+        "RV Intl EEUU": 0.216,
+        "RV Intl Japón": 0.013,
+        "RV Intl Emergentes": 0.122,
+        "RV Intl Resto": 2.278,
+        "Globales": 0.598,
+        "Garantizados RF": 0.176,
+        "Garantizados RV": 0.009
       },
       "rank": 4
     },
     {
       "name": "KUTXABANK GESTION, S.G.I.I.C., S.A.U.",
-      "aum_bn": 28.004,
-      "pct": 6.02,
-      "num_fondos": 132,
+      "aum_bn": 27.449,
+      "pct": 6.05,
+      "num_fondos": 130,
       "type": "bank",
-      "yoy_growth": 13.4,
+      "yoy_growth": 12.3,
       "categories": {
-        "Monetarios": 2.404,
-        "RF Euro CP": 2.919,
-        "RF Euro LP": 5.251,
-        "RF Mixta Euro": 1.101,
-        "RV Nacional": 0.078,
-        "RF Mixta Internacional": 0.829,
-        "RV Mixta Internacional": 3.154,
-        "RV Euro Resto": 2.143,
-        "RV Intl EEUU": 2.055,
-        "RV Intl Japón": 0.395,
-        "RV Intl Emergentes": 0.977,
-        "RV Intl Resto": 1.771,
-        "Globales": 0.682,
+        "Monetarios": 2.574,
+        "RF Euro CP": 2.954,
+        "RF Euro LP": 5.326,
+        "RF Mixta Euro": 0.96,
+        "RV Nacional": 0.07,
+        "RF Internacional": 0.0,
+        "RF Mixta Internacional": 0.803,
+        "RV Mixta Internacional": 3.042,
+        "RV Euro Resto": 1.988,
+        "RV Intl EEUU": 2.004,
+        "RV Intl Japón": 0.343,
+        "RV Intl Emergentes": 0.845,
+        "RV Intl Resto": 1.589,
+        "Globales": 0.678,
         "Garantizados RV": 0.075,
-        "Objetivo Rentabilidad": 4.169
+        "Objetivo Rentabilidad": 4.197
       },
       "rank": 5
     },
     {
       "name": "BANKINTER GESTION DE ACTIVOS SGIIC",
-      "aum_bn": 19.836,
-      "pct": 4.26,
-      "num_fondos": 314,
+      "aum_bn": 19.167,
+      "pct": 4.23,
+      "num_fondos": 310,
       "type": "bank",
-      "yoy_growth": 23.5,
+      "yoy_growth": 20.4,
       "categories": {
-        "RF Euro CP": 3.118,
-        "RF Euro LP": 0.788,
-        "RF Mixta Euro": 0.264,
-        "RV Mixta Euro": 0.049,
-        "RV Nacional": 0.268,
-        "RF Internacional": 4.887,
-        "RF Mixta Internacional": 3.783,
-        "RV Mixta Internacional": 4.356,
-        "RV Euro Resto": 0.104,
-        "RV Intl Europa": 0.205,
-        "RV Intl EEUU": 0.739,
-        "RV Intl Japón": 0.057,
-        "RV Intl Emergentes": 0.019,
-        "RV Intl Resto": 0.732,
-        "Globales": 0.048,
-        "Garantizados RF": 0.052,
-        "Garantizados RV": 0.346,
+        "RF Euro CP": 3.159,
+        "RF Euro LP": 0.768,
+        "RF Mixta Euro": 0.27,
+        "RV Mixta Euro": 0.044,
+        "RV Nacional": 0.242,
+        "RF Internacional": 4.779,
+        "RF Mixta Internacional": 3.664,
+        "RV Mixta Internacional": 4.109,
+        "RV Euro Resto": 0.097,
+        "RV Intl Europa": 0.185,
+        "RV Intl EEUU": 0.679,
+        "RV Intl Japón": 0.048,
+        "RV Intl Emergentes": 0.012,
+        "RV Intl Resto": 0.686,
+        "Globales": 0.046,
+        "Garantizados RF": 0.051,
+        "Garantizados RV": 0.306,
         "Objetivo Rentabilidad": 0.004,
-        "Retorno Absoluto": 0.017
+        "Retorno Absoluto": 0.016
       },
       "rank": 6
     },
     {
       "name": "SABADELL ASSET MANAGEMENT, S.A.,S.G.I.I.C., S.U.",
-      "aum_bn": 15.372,
-      "pct": 3.31,
-      "num_fondos": 372,
+      "aum_bn": 14.864,
+      "pct": 3.28,
+      "num_fondos": 374,
       "type": "bank",
-      "yoy_growth": 3.7,
+      "yoy_growth": 2.4,
       "categories": {
-        "RF Euro CP": 5.596,
-        "RF Euro LP": 2.019,
-        "RF Mixta Euro": 0.359,
-        "RV Nacional": 0.148,
-        "RF Internacional": 0.147,
-        "RF Mixta Internacional": 1.096,
-        "RV Mixta Internacional": 0.376,
-        "RV Euro Resto": 0.23,
-        "RV Intl Europa": 0.09,
-        "RV Intl EEUU": 0.55,
-        "RV Intl Emergentes": 0.086,
-        "RV Intl Resto": 0.555,
-        "Globales": 2.306,
-        "Garantizados RF": 1.407,
-        "Garantizados RV": 0.313,
-        "Retorno Absoluto": 0.096
+        "RF Euro CP": 5.585,
+        "RF Euro LP": 1.967,
+        "RF Mixta Euro": 0.347,
+        "RV Nacional": 0.135,
+        "RF Internacional": 0.142,
+        "RF Mixta Internacional": 1.057,
+        "RV Mixta Internacional": 0.36,
+        "RV Euro Resto": 0.21,
+        "RV Intl Europa": 0.079,
+        "RV Intl EEUU": 0.52,
+        "RV Intl Emergentes": 0.066,
+        "RV Intl Resto": 0.512,
+        "Globales": 2.163,
+        "Garantizados RF": 1.401,
+        "Garantizados RV": 0.226,
+        "Retorno Absoluto": 0.094
       },
       "rank": 7
     },
     {
       "name": "UNICAJA ASSET MANAGEMENT, SGIIC, SA",
-      "aum_bn": 13.784,
-      "pct": 2.96,
-      "num_fondos": 206,
+      "aum_bn": 13.512,
+      "pct": 2.98,
+      "num_fondos": 208,
       "type": "bank",
       "yoy_growth": null,
       "categories": {
-        "RF Euro CP": 2.439,
-        "RF Euro LP": 1.417,
-        "RF Mixta Euro": 0.301,
-        "RV Mixta Euro": 0.035,
-        "RV Nacional": 0.064,
-        "RF Internacional": 1.47,
-        "RF Mixta Internacional": 0.065,
-        "RV Intl Europa": 0.208,
-        "RV Intl EEUU": 0.009,
-        "RV Intl Emergentes": 0.013,
-        "Globales": 3.637,
-        "Garantizados RV": 0.457,
-        "Objetivo Rentabilidad": 2.134,
-        "Retorno Absoluto": 1.537
+        "RF Euro CP": 2.698,
+        "RF Euro LP": 1.572,
+        "RF Mixta Euro": 0.295,
+        "RV Mixta Euro": 0.033,
+        "RV Nacional": 0.06,
+        "RF Internacional": 1.425,
+        "RF Mixta Internacional": 0.063,
+        "RV Intl Europa": 0.211,
+        "RV Intl EEUU": 0.008,
+        "RV Intl Emergentes": 0.012,
+        "Globales": 3.379,
+        "Garantizados RV": 0.447,
+        "Objetivo Rentabilidad": 1.805,
+        "Retorno Absoluto": 1.503
       },
       "rank": 8
     },
     {
       "name": "GESCOOPERATIVO SA SG IIC",
-      "aum_bn": 12.443,
-      "pct": 2.68,
+      "aum_bn": 12.198,
+      "pct": 2.69,
       "num_fondos": 160,
       "type": "bank",
-      "yoy_growth": 19.5,
+      "yoy_growth": 17.2,
       "categories": {
-        "RF Euro CP": 3.139,
-        "RF Euro LP": 1.311,
-        "RF Mixta Euro": 1.012,
-        "RV Nacional": 0.063,
-        "RF Internacional": 0.491,
-        "RF Mixta Internacional": 1.799,
-        "RV Mixta Internacional": 1.497,
-        "RV Euro Resto": 0.132,
-        "RV Intl EEUU": 0.453,
-        "RV Intl Emergentes": 0.055,
-        "RV Intl Resto": 0.393,
-        "Garantizados RF": 1.864,
-        "Garantizados RV": 0.069,
-        "Objetivo Rentabilidad": 0.167
+        "RF Euro CP": 3.189,
+        "RF Euro LP": 1.247,
+        "RF Mixta Euro": 0.978,
+        "RV Nacional": 0.056,
+        "RF Internacional": 0.466,
+        "RF Mixta Internacional": 1.738,
+        "RV Mixta Internacional": 1.424,
+        "RV Euro Resto": 0.124,
+        "RV Intl EEUU": 0.428,
+        "RV Intl Emergentes": 0.052,
+        "RV Intl Resto": 0.368,
+        "Garantizados RF": 1.901,
+        "Garantizados RV": 0.068,
+        "Objetivo Rentabilidad": 0.158
       },
       "rank": 9
     },
     {
       "name": "MUTUACTIVOS SGIIC  S.A.U.",
-      "aum_bn": 11.89,
-      "pct": 2.56,
+      "aum_bn": 11.636,
+      "pct": 2.57,
       "num_fondos": 248,
       "type": "insurance",
-      "yoy_growth": 10.9,
+      "yoy_growth": 9.3,
       "categories": {
-        "Monetarios": 1.658,
-        "RF Euro CP": 1.78,
-        "RF Euro LP": 3.131,
-        "RF Mixta Euro": 0.232,
-        "RV Mixta Euro": 0.071,
-        "RV Nacional": 0.153,
-        "RF Mixta Internacional": 1.018,
-        "RV Mixta Internacional": 1.452,
-        "RV Euro Resto": 0.145,
-        "RV Intl Europa": 0.063,
-        "RV Intl EEUU": 0.101,
-        "RV Intl Resto": 0.558,
-        "Globales": 0.859,
-        "Objetivo Rentabilidad": 0.214,
-        "FIL": 0.454
+        "Monetarios": 1.709,
+        "RF Euro CP": 1.736,
+        "RF Euro LP": 3.074,
+        "RF Mixta Euro": 0.228,
+        "RV Mixta Euro": 0.069,
+        "RV Nacional": 0.131,
+        "RF Mixta Internacional": 1.015,
+        "RV Mixta Internacional": 1.418,
+        "RV Euro Resto": 0.144,
+        "RV Intl Europa": 0.058,
+        "RV Intl EEUU": 0.1,
+        "RV Intl Resto": 0.612,
+        "Globales": 0.727,
+        "Objetivo Rentabilidad": 0.167,
+        "FIL": 0.449
       },
       "rank": 10
     },
     {
       "name": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
-      "aum_bn": 7.543,
-      "pct": 1.62,
-      "num_fondos": 88,
+      "aum_bn": 7.525,
+      "pct": 1.66,
+      "num_fondos": 102,
       "type": "bank",
-      "yoy_growth": 22.5,
+      "yoy_growth": 20.4,
       "categories": {
-        "RF Euro CP": 1.461,
-        "RF Euro LP": 0.173,
-        "RV Nacional": 0.013,
-        "RF Internacional": 1.433,
-        "RF Mixta Internacional": 0.495,
-        "RV Mixta Internacional": 1.005,
-        "RV Euro Resto": 0.094,
-        "RV Intl EEUU": 0.065,
-        "RV Intl Japón": 0.008,
-        "RV Intl Emergentes": 0.017,
-        "RV Intl Resto": 0.258,
-        "Globales": 0.038,
-        "Garantizados RF": 0.036,
-        "Objetivo Rentabilidad": 2.448
+        "RF Euro CP": 1.561,
+        "RF Euro LP": 0.154,
+        "RV Nacional": 0.012,
+        "RF Internacional": 1.346,
+        "RF Mixta Internacional": 0.506,
+        "RV Mixta Internacional": 0.982,
+        "RV Euro Resto": 0.081,
+        "RV Intl EEUU": 0.054,
+        "RV Intl Japón": 0.007,
+        "RV Intl Emergentes": 0.012,
+        "RV Intl Resto": 0.256,
+        "Globales": 0.06,
+        "Garantizados RF": 0.035,
+        "Objetivo Rentabilidad": 2.458
       },
       "rank": 11
     },
     {
       "name": "ABANCA GESTIÓN DE ACTIVOS, S.A. S.G.I.I.C.",
-      "aum_bn": 6.843,
-      "pct": 1.47,
+      "aum_bn": 6.786,
+      "pct": 1.5,
       "num_fondos": 62,
       "type": "bank",
-      "yoy_growth": 20.5,
+      "yoy_growth": 17.5,
       "categories": {
-        "RF Euro CP": 2.256,
-        "RF Euro LP": 2.526,
-        "RF Mixta Euro": 0.537,
-        "RF Internacional": 0.483,
-        "RF Mixta Internacional": 0.228,
-        "RV Mixta Internacional": 0.052,
-        "RV Intl Resto": 0.307,
-        "Fondos Índice": 0.049,
-        "Objetivo Rentabilidad": 0.406
+        "RF Euro CP": 2.361,
+        "RF Euro LP": 2.606,
+        "RF Mixta Euro": 0.517,
+        "RF Internacional": 0.469,
+        "RF Mixta Internacional": 0.219,
+        "RV Mixta Internacional": 0.05,
+        "RV Intl Resto": 0.3,
+        "Fondos Índice": 0.047,
+        "Objetivo Rentabilidad": 0.217
       },
       "rank": 12
     },
     {
       "name": "GIIC FINECO S.G.I.I.C., S.A.U.",
-      "aum_bn": 6.398,
-      "pct": 1.38,
-      "num_fondos": 70,
+      "aum_bn": 6.283,
+      "pct": 1.39,
+      "num_fondos": 72,
       "type": "independent",
-      "yoy_growth": 15.0,
+      "yoy_growth": 13.0,
       "categories": {
-        "RF Euro CP": 1.102,
-        "RF Euro LP": 1.687,
-        "RF Mixta Euro": 0.183,
-        "RV Mixta Internacional": 1.212,
-        "RV Euro Resto": 0.019,
-        "RV Intl Europa": 0.333,
-        "RV Intl EEUU": 0.3,
-        "Globales": 1.562
+        "RF Euro CP": 1.083,
+        "RF Euro LP": 1.647,
+        "RF Mixta Euro": 0.179,
+        "RV Mixta Internacional": 1.171,
+        "RV Euro Resto": 0.018,
+        "RV Intl Europa": 0.311,
+        "RV Intl EEUU": 0.283,
+        "Globales": 1.591
       },
       "rank": 13
     },
     {
       "name": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
-      "aum_bn": 6.219,
-      "pct": 1.34,
+      "aum_bn": 6.147,
+      "pct": 1.36,
       "num_fondos": 274,
       "type": "independent",
-      "yoy_growth": 21.3,
+      "yoy_growth": 18.2,
       "categories": {
-        "RF Euro CP": 1.646,
-        "RF Euro LP": 1.586,
-        "RF Mixta Euro": 0.011,
-        "RV Mixta Euro": 0.013,
-        "RV Nacional": 0.059,
+        "RF Euro CP": 1.78,
+        "RF Euro LP": 1.513,
+        "RF Mixta Euro": 0.01,
+        "RV Mixta Euro": 0.012,
+        "RV Nacional": 0.053,
         "RF Internacional": 0.006,
-        "RF Mixta Internacional": 0.081,
-        "RV Mixta Internacional": 0.211,
-        "RV Euro Resto": 0.094,
+        "RF Mixta Internacional": 0.079,
+        "RV Mixta Internacional": 0.204,
+        "RV Euro Resto": 0.086,
         "RV Intl Emergentes": 0.016,
-        "RV Intl Resto": 0.359,
-        "Globales": 1.134,
-        "Objetivo Rentabilidad": 0.014,
-        "Retorno Absoluto": 0.531,
-        "FIL": 0.458
+        "RV Intl Resto": 0.33,
+        "Globales": 1.101,
+        "Objetivo Rentabilidad": 0.001,
+        "Retorno Absoluto": 0.502,
+        "FIL": 0.454
       },
       "rank": 14
     },
     {
       "name": "TREA ASSET MANAGEMENT SGIIC SA",
-      "aum_bn": 5.761,
-      "pct": 1.24,
+      "aum_bn": 5.558,
+      "pct": 1.23,
       "num_fondos": 38,
       "type": "independent",
-      "yoy_growth": 22.4,
+      "yoy_growth": 18.1,
       "categories": {
-        "RF Euro CP": 1.842,
-        "RF Euro LP": 1.441,
-        "RF Internacional": 0.942,
+        "RF Euro CP": 1.864,
+        "RF Euro LP": 1.315,
+        "RF Internacional": 0.859,
         "RV Mixta Internacional": 0.014,
-        "RV Intl Resto": 0.09,
-        "Globales": 0.049,
+        "RV Intl Resto": 0.083,
+        "Globales": 0.046,
         "Garantizados RF": 0.164,
-        "Objetivo Rentabilidad": 0.938,
-        "Retorno Absoluto": 0.281
+        "Objetivo Rentabilidad": 0.948,
+        "Retorno Absoluto": 0.266
       },
       "rank": 15
     },
     {
       "name": "BESTINVER GESTION S.A., SGIIC",
-      "aum_bn": 5.559,
-      "pct": 1.2,
+      "aum_bn": 5.23,
+      "pct": 1.15,
       "num_fondos": 80,
       "type": "independent",
-      "yoy_growth": 9.3,
+      "yoy_growth": 9.5,
       "categories": {
-        "RF Euro CP": 0.224,
-        "RF Euro LP": 0.097,
-        "RF Mixta Euro": 0.715,
-        "RV Mixta Internacional": 0.08,
-        "RV Euro Resto": 0.289,
-        "RV Intl Europa": 0.047,
-        "RV Intl EEUU": 0.147,
+        "RF Euro CP": 0.25,
+        "RF Euro LP": 0.096,
+        "RF Mixta Euro": 0.689,
+        "RV Mixta Internacional": 0.075,
+        "RV Euro Resto": 0.263,
+        "RV Intl Europa": 0.045,
+        "RV Intl EEUU": 0.139,
         "RV Intl Emergentes": 0.012,
-        "RV Intl Resto": 3.801,
-        "FIL": 0.147
+        "RV Intl Resto": 3.531,
+        "FIL": 0.13
       },
       "rank": 16
     },
     {
       "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
-      "aum_bn": 4.442,
-      "pct": 0.96,
+      "aum_bn": 4.322,
+      "pct": 0.95,
       "num_fondos": 102,
       "type": "insurance",
       "yoy_growth": null,
       "categories": {
-        "RF Euro CP": 0.284,
-        "RF Euro LP": 0.097,
-        "RF Mixta Euro": 0.176,
-        "RV Mixta Euro": 0.222,
-        "RV Nacional": 0.039,
+        "RF Euro CP": 0.288,
+        "RF Euro LP": 0.094,
+        "RF Mixta Euro": 0.171,
+        "RV Mixta Euro": 0.209,
+        "RV Nacional": 0.036,
         "RF Internacional": 0.022,
-        "RF Mixta Internacional": 0.307,
-        "RV Mixta Internacional": 0.475,
-        "RV Intl Europa": 0.157,
-        "RV Intl EEUU": 0.592,
-        "Globales": 0.383,
-        "Garantizados RF": 0.599,
-        "Garantizados RV": 0.546,
+        "RF Mixta Internacional": 0.311,
+        "RV Mixta Internacional": 0.468,
+        "RV Intl Europa": 0.138,
+        "RV Intl EEUU": 0.553,
+        "Globales": 0.368,
+        "Garantizados RF": 0.593,
+        "Garantizados RV": 0.53,
         "FIL": 0.543
       },
       "rank": 17
     },
     {
-      "name": "AMUNDI IBERIA, SGIIC, S.A.",
-      "aum_bn": 4.302,
-      "pct": 0.92,
-      "num_fondos": 46,
-      "type": "foreign",
-      "yoy_growth": 9.4,
+      "name": "MEDIOLANUM GESTION, SGIIC, S.A.",
+      "aum_bn": 4.102,
+      "pct": 0.9,
+      "num_fondos": 48,
+      "type": "independent",
+      "yoy_growth": 29.7,
       "categories": {
-        "RF Euro CP": 0.016,
-        "RF Euro LP": 0.023,
-        "RF Mixta Euro": 0.1,
-        "RF Mixta Internacional": 0.128,
-        "RV Mixta Internacional": 0.964,
-        "RV Intl Resto": 0.617,
-        "Globales": 0.072,
-        "Fondos Índice": 1.843,
-        "Retorno Absoluto": 0.539
+        "RF Euro LP": 3.768,
+        "RF Internacional": 0.098,
+        "RF Mixta Internacional": 0.04,
+        "RV Intl Resto": 0.196
       },
       "rank": 18
     },
     {
-      "name": "ABANTE ASESORES GESTIÓN SGIIC S.A.",
-      "aum_bn": 4.161,
-      "pct": 0.89,
-      "num_fondos": 60,
-      "type": "independent",
-      "yoy_growth": 17.6,
+      "name": "AMUNDI IBERIA, SGIIC, S.A.",
+      "aum_bn": 3.999,
+      "pct": 0.88,
+      "num_fondos": 46,
+      "type": "foreign",
+      "yoy_growth": 8.7,
       "categories": {
-        "RF Euro CP": 0.386,
-        "RF Euro LP": 0.031,
-        "RF Mixta Euro": 0.035,
-        "RV Mixta Euro": 0.1,
-        "RF Mixta Internacional": 0.702,
-        "RV Mixta Internacional": 1.597,
-        "RV Euro Resto": 0.013,
-        "RV Intl Europa": 0.129,
-        "RV Intl Resto": 0.979,
-        "Globales": 0.188
+        "RF Euro CP": 0.015,
+        "RF Euro LP": 0.021,
+        "RF Mixta Euro": 0.095,
+        "RF Mixta Internacional": 0.119,
+        "RV Mixta Internacional": 0.904,
+        "RV Intl Resto": 0.576,
+        "Globales": 0.068,
+        "Fondos Índice": 1.697,
+        "Retorno Absoluto": 0.505
       },
       "rank": 19
     },
     {
-      "name": "MEDIOLANUM GESTION, SGIIC, S.A.",
-      "aum_bn": 4.127,
-      "pct": 0.89,
-      "num_fondos": 48,
+      "name": "ABANTE ASESORES GESTIÓN SGIIC S.A.",
+      "aum_bn": 3.998,
+      "pct": 0.88,
+      "num_fondos": 58,
       "type": "independent",
-      "yoy_growth": 38.3,
+      "yoy_growth": 9.1,
       "categories": {
-        "RF Euro LP": 3.787,
-        "RF Internacional": 0.101,
-        "RF Mixta Internacional": 0.042,
-        "RV Intl Resto": 0.198
+        "RF Euro CP": 0.375,
+        "RF Euro LP": 0.03,
+        "RF Mixta Euro": 0.034,
+        "RV Mixta Euro": 0.094,
+        "RF Mixta Internacional": 0.675,
+        "RV Mixta Internacional": 1.54,
+        "RV Euro Resto": 0.008,
+        "RV Intl Europa": 0.125,
+        "RV Intl Resto": 0.941,
+        "Globales": 0.175
       },
       "rank": 20
     },
     {
       "name": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
-      "aum_bn": 3.58,
-      "pct": 0.77,
+      "aum_bn": 3.664,
+      "pct": 0.81,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 56.4,
+      "yoy_growth": 62.7,
       "categories": {
-        "RF Mixta Euro": 0.036,
-        "RV Euro Resto": 0.085,
-        "RV Intl Resto": 3.459
+        "RF Mixta Euro": 0.04,
+        "RV Euro Resto": 0.084,
+        "RV Intl Resto": 3.54
       },
       "rank": 21
     },
     {
       "name": "DUNAS CAPITAL ASSET MANAGEMENT SGIIC SA",
-      "aum_bn": 3.045,
+      "aum_bn": 2.936,
       "pct": 0.65,
       "num_fondos": 44,
       "type": "independent",
-      "yoy_growth": 51.6,
+      "yoy_growth": null,
       "categories": {
-        "Fondos Índice": 0.328,
-        "Retorno Absoluto": 2.717
+        "Fondos Índice": 0.307,
+        "Retorno Absoluto": 2.629
       },
       "rank": 22
     },
     {
       "name": "ANDBANK WEALTH MANAGEMENT,SGIIC,SAU",
-      "aum_bn": 3.016,
+      "aum_bn": 2.925,
       "pct": 0.65,
       "num_fondos": 398,
       "type": "independent",
-      "yoy_growth": 15.2,
+      "yoy_growth": 16.0,
       "categories": {
         "RF Euro CP": 0.008,
-        "RF Euro LP": 0.683,
-        "RF Mixta Euro": 0.028,
+        "RF Euro LP": 0.684,
+        "RF Mixta Euro": 0.027,
         "RV Mixta Euro": 0.006,
-        "RV Nacional": 0.007,
-        "RF Internacional": 0.035,
-        "RF Mixta Internacional": 0.071,
-        "RV Mixta Internacional": 0.303,
-        "RV Euro Resto": 0.002,
+        "RV Nacional": 0.006,
+        "RF Internacional": 0.03,
+        "RF Mixta Internacional": 0.069,
+        "RV Mixta Internacional": 0.288,
+        "RV Euro Resto": 0.001,
         "RV Intl Europa": 0.012,
-        "RV Intl EEUU": 0.123,
+        "RV Intl EEUU": 0.119,
         "RV Intl Emergentes": 0.001,
-        "RV Intl Resto": 0.516,
-        "Globales": 0.932,
+        "RV Intl Resto": 0.501,
+        "Globales": 0.883,
         "Retorno Absoluto": 0.005,
-        "FIL": 0.283
+        "FIL": 0.282
       },
       "rank": 23
     },
     {
       "name": "Cobas Asset Management S.G.I.I.C. S.A.",
-      "aum_bn": 2.847,
-      "pct": 0.61,
+      "aum_bn": 2.797,
+      "pct": 0.62,
       "num_fondos": 42,
       "type": "independent",
       "yoy_growth": null,
       "categories": {
-        "RF Mixta Euro": 0.113,
-        "RV Euro Resto": 0.091,
-        "RV Intl Resto": 2.551,
-        "FIL": 0.091
+        "RF Mixta Euro": 0.134,
+        "RV Euro Resto": 0.079,
+        "RV Intl Resto": 2.49,
+        "FIL": 0.093
       },
       "rank": 24
     },
     {
       "name": "MARCH ASSET MANAGEMENT S.G.I.I.C., S.A.U.",
-      "aum_bn": 2.707,
+      "aum_bn": 2.644,
       "pct": 0.58,
       "num_fondos": 76,
       "type": "independent",
-      "yoy_growth": 5.6,
+      "yoy_growth": 3.8,
       "categories": {
-        "RF Euro CP": 1.366,
-        "RF Euro LP": 0.442,
+        "RF Euro CP": 1.362,
+        "RF Euro LP": 0.428,
         "RF Internacional": 0.006,
-        "RF Mixta Internacional": 0.335,
-        "RV Mixta Internacional": 0.366,
-        "RV Intl Resto": 0.094,
-        "Garantizados RF": 0.097
+        "RF Mixta Internacional": 0.331,
+        "RV Mixta Internacional": 0.355,
+        "RV Intl Resto": 0.089,
+        "Garantizados RF": 0.073
       },
       "rank": 25
     },
     {
-      "name": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
-      "aum_bn": 2.071,
-      "pct": 0.45,
-      "num_fondos": 24,
+      "name": "DEUTSCHE WEALTH MANAGEMENT SGIIC,S.A.",
+      "aum_bn": 1.941,
+      "pct": 0.43,
+      "num_fondos": 32,
       "type": "independent",
-      "yoy_growth": 53.3,
+      "yoy_growth": 25.7,
       "categories": {
-        "RV Euro Resto": 0.347,
-        "RV Intl Europa": 1.724,
-        "FIL": 0.001
+        "RF Euro CP": 0.488,
+        "RF Mixta Euro": 0.323,
+        "RF Mixta Internacional": 0.128,
+        "RV Mixta Internacional": 0.793,
+        "RV Intl Resto": 0.209
       },
       "rank": 26
     },
     {
-      "name": "DEUTSCHE WEALTH MANAGEMENT SGIIC,S.A.",
-      "aum_bn": 1.993,
+      "name": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
+      "aum_bn": 1.934,
       "pct": 0.43,
-      "num_fondos": 32,
+      "num_fondos": 24,
       "type": "independent",
-      "yoy_growth": 28.9,
+      "yoy_growth": 46.1,
       "categories": {
-        "RF Euro CP": 0.48,
-        "RF Mixta Euro": 0.325,
-        "RF Mixta Internacional": 0.131,
-        "RV Mixta Internacional": 0.836,
-        "RV Intl Resto": 0.22
+        "RV Euro Resto": 0.324,
+        "RV Intl Europa": 1.609,
+        "FIL": 0.001
       },
       "rank": 27
     },
     {
       "name": "CAJA INGENIEROS GESTION, S.G.I.I.C., S.A.U.",
-      "aum_bn": 1.736,
+      "aum_bn": 1.687,
       "pct": 0.37,
       "num_fondos": 52,
       "type": "bank",
-      "yoy_growth": 17.5,
+      "yoy_growth": 16.0,
       "categories": {
-        "RF Euro CP": 0.545,
-        "RF Euro LP": 0.14,
-        "RF Internacional": 0.247,
-        "RF Mixta Internacional": 0.106,
-        "RV Mixta Internacional": 0.341,
-        "RV Euro Resto": 0.067,
-        "RV Intl EEUU": 0.046,
-        "RV Intl Emergentes": 0.044,
-        "RV Intl Resto": 0.142,
-        "Retorno Absoluto": 0.059
+        "RF Euro CP": 0.565,
+        "RF Euro LP": 0.138,
+        "RF Internacional": 0.236,
+        "RF Mixta Internacional": 0.101,
+        "RV Mixta Internacional": 0.319,
+        "RV Euro Resto": 0.056,
+        "RV Intl EEUU": 0.042,
+        "RV Intl Emergentes": 0.039,
+        "RV Intl Resto": 0.132,
+        "Retorno Absoluto": 0.057
       },
       "rank": 28
     },
     {
       "name": "GVC GAESCO GESTION S.G.I.I.C.",
-      "aum_bn": 1.606,
-      "pct": 0.35,
+      "aum_bn": 1.545,
+      "pct": 0.34,
       "num_fondos": 336,
       "type": "independent",
       "yoy_growth": null,
       "categories": {
-        "RF Euro CP": 0.262,
+        "RF Euro CP": 0.271,
         "RF Euro LP": 0.035,
-        "RF Mixta Euro": 0.068,
-        "RV Mixta Euro": 0.032,
+        "RF Mixta Euro": 0.067,
+        "RV Mixta Euro": 0.031,
         "RV Nacional": 0.01,
-        "RF Internacional": 0.17,
-        "RF Mixta Internacional": 0.029,
-        "RV Mixta Internacional": 0.215,
-        "RV Euro Resto": 0.128,
-        "RV Intl Europa": 0.028,
-        "RV Intl Japón": 0.012,
-        "RV Intl Emergentes": 0.015,
-        "RV Intl Resto": 0.287,
-        "Globales": 0.237,
-        "Retorno Absoluto": 0.078
+        "RF Internacional": 0.162,
+        "RF Mixta Internacional": 0.027,
+        "RV Mixta Internacional": 0.204,
+        "RV Euro Resto": 0.121,
+        "RV Intl Europa": 0.027,
+        "RV Intl Japón": 0.011,
+        "RV Intl Emergentes": 0.014,
+        "RV Intl Resto": 0.264,
+        "Globales": 0.225,
+        "Retorno Absoluto": 0.076
       },
       "rank": 29
     },
     {
-      "name": "SANTA LUCIA ASSET MANAGEMENT SGIIC, SAU",
-      "aum_bn": 1.423,
+      "name": "SINGULAR ASSET MANAGEMENT, SGIIC, S.A.",
+      "aum_bn": 1.4,
       "pct": 0.31,
-      "num_fondos": 132,
+      "num_fondos": 100,
       "type": "independent",
-      "yoy_growth": 10.3,
+      "yoy_growth": 45.9,
       "categories": {
-        "RF Euro CP": 0.284,
-        "RF Euro LP": 0.321,
-        "RF Mixta Euro": 0.008,
-        "RV Mixta Euro": 0.035,
-        "RV Nacional": 0.129,
-        "RF Internacional": 0.054,
-        "RF Mixta Internacional": 0.043,
-        "RV Mixta Internacional": 0.029,
-        "RV Euro Resto": 0.153,
-        "RV Intl EEUU": 0.016,
-        "RV Intl Emergentes": 0.01,
-        "RV Intl Resto": 0.328,
-        "Retorno Absoluto": 0.012
+        "RF Euro CP": 0.015,
+        "RF Euro LP": 0.138,
+        "RF Internacional": 0.142,
+        "RF Mixta Internacional": 0.009,
+        "RV Mixta Internacional": 0.12,
+        "RV Euro Resto": 0.033,
+        "RV Intl Europa": 0.016,
+        "RV Intl Resto": 0.17,
+        "Globales": 0.604,
+        "Retorno Absoluto": 0.044,
+        "FIL": 0.11
       },
       "rank": 30
     },
     {
-      "name": "SINGULAR ASSET MANAGEMENT, SGIIC, S.A.",
-      "aum_bn": 1.4,
+      "name": "SANTA LUCIA ASSET MANAGEMENT SGIIC, SAU",
+      "aum_bn": 1.376,
       "pct": 0.3,
-      "num_fondos": 100,
+      "num_fondos": 126,
       "type": "independent",
-      "yoy_growth": 50.6,
+      "yoy_growth": 10.8,
       "categories": {
-        "RF Euro CP": 0.016,
-        "RF Euro LP": 0.139,
-        "RF Internacional": 0.145,
-        "RF Mixta Internacional": 0.009,
-        "RV Mixta Internacional": 0.124,
-        "RV Euro Resto": 0.037,
-        "RV Intl Europa": 0.018,
-        "RV Intl Resto": 0.171,
-        "Globales": 0.592,
-        "Retorno Absoluto": 0.042,
-        "FIL": 0.105
+        "RF Euro CP": 0.289,
+        "RF Euro LP": 0.315,
+        "RF Mixta Euro": 0.008,
+        "RV Mixta Euro": 0.033,
+        "RV Nacional": 0.12,
+        "RF Internacional": 0.053,
+        "RF Mixta Internacional": 0.043,
+        "RV Mixta Internacional": 0.028,
+        "RV Euro Resto": 0.14,
+        "RV Intl EEUU": 0.015,
+        "RV Intl Emergentes": 0.009,
+        "RV Intl Resto": 0.311,
+        "Retorno Absoluto": 0.011
       },
       "rank": 31
     },
     {
       "name": "GCO Gestión de Activos, S.A.U, SGIIC",
-      "aum_bn": 1.33,
-      "pct": 0.29,
+      "aum_bn": 1.288,
+      "pct": 0.28,
       "num_fondos": 16,
       "type": "independent",
-      "yoy_growth": 22.7,
+      "yoy_growth": 22.3,
       "categories": {
-        "RF Euro CP": 0.111,
-        "RF Euro LP": 0.08,
-        "RV Nacional": 0.276,
-        "RF Mixta Internacional": 0.199,
-        "RV Mixta Internacional": 0.153,
-        "RV Euro Resto": 0.1,
-        "RV Intl EEUU": 0.091,
-        "RV Intl Resto": 0.321
+        "RF Euro CP": 0.121,
+        "RF Euro LP": 0.082,
+        "RV Nacional": 0.257,
+        "RF Mixta Internacional": 0.194,
+        "RV Mixta Internacional": 0.148,
+        "RV Euro Resto": 0.092,
+        "RV Intl EEUU": 0.089,
+        "RV Intl Resto": 0.306
       },
       "rank": 32
     },
     {
       "name": "EDM Gestión, S.A. SGIIC",
-      "aum_bn": 1.186,
+      "aum_bn": 1.154,
       "pct": 0.25,
       "num_fondos": 38,
       "type": "independent",
-      "yoy_growth": 8.7,
+      "yoy_growth": 9.7,
       "categories": {
-        "RF Euro CP": 0.204,
-        "RF Euro LP": 0.467,
-        "RF Mixta Internacional": 0.021,
-        "RV Intl Europa": 0.077,
-        "RV Intl Resto": 0.033,
-        "Globales": 0.148,
-        "Objetivo Rentabilidad": 0.235
+        "RF Euro CP": 0.207,
+        "RF Euro LP": 0.46,
+        "RF Mixta Internacional": 0.02,
+        "RV Intl Europa": 0.063,
+        "RV Intl Resto": 0.03,
+        "Globales": 0.139,
+        "Objetivo Rentabilidad": 0.234
       },
       "rank": 33
     },
     {
       "name": "TRESSIS GESTION SGIIC, S.A.",
-      "aum_bn": 1.044,
-      "pct": 0.22,
+      "aum_bn": 1.021,
+      "pct": 0.23,
       "num_fondos": 74,
       "type": "independent",
-      "yoy_growth": 16.4,
+      "yoy_growth": 15.7,
       "categories": {
-        "RF Euro CP": 0.196,
-        "RF Euro LP": 0.026,
-        "RV Mixta Internacional": 0.085,
-        "RV Intl Resto": 0.079,
-        "Globales": 0.645,
+        "RF Euro CP": 0.202,
+        "RF Euro LP": 0.025,
+        "RV Mixta Internacional": 0.081,
+        "RV Intl Resto": 0.078,
+        "Globales": 0.622,
         "FIL": 0.013
       },
       "rank": 34
     },
     {
       "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
-      "aum_bn": 0.947,
-      "pct": 0.2,
+      "aum_bn": 0.942,
+      "pct": 0.21,
       "num_fondos": 130,
       "type": "independent",
-      "yoy_growth": 5.2,
+      "yoy_growth": 7.0,
       "categories": {
-        "RF Euro CP": 0.008,
+        "RF Euro CP": 0.013,
         "RF Euro LP": 0.01,
-        "RF Internacional": 0.002,
-        "RF Mixta Internacional": 0.289,
+        "RF Internacional": 0.004,
+        "RF Mixta Internacional": 0.302,
         "RV Mixta Internacional": 0.074,
-        "RV Euro Resto": 0.024,
-        "RV Intl Resto": 0.398,
-        "Globales": 0.096,
+        "RV Euro Resto": 0.023,
+        "RV Intl Resto": 0.377,
+        "Globales": 0.094,
         "Retorno Absoluto": 0.045
       },
       "rank": 35
     },
     {
       "name": "UBS WEALTH MANAGEMENT SGIIC SA",
-      "aum_bn": 0.814,
+      "aum_bn": 0.789,
       "pct": 0.17,
       "num_fondos": 34,
       "type": "independent",
-      "yoy_growth": 8.7,
+      "yoy_growth": 6.7,
       "categories": {
-        "RF Euro CP": 0.347,
-        "RF Mixta Euro": 0.056,
-        "RF Internacional": 0.193,
-        "RV Mixta Internacional": 0.117,
+        "RF Euro CP": 0.335,
+        "RF Mixta Euro": 0.055,
+        "RF Internacional": 0.185,
+        "RV Mixta Internacional": 0.118,
         "RV Euro Resto": 0.007,
-        "RV Intl Resto": 0.02,
-        "Globales": 0.074
+        "RV Intl Resto": 0.018,
+        "Globales": 0.072
       },
       "rank": 36
-    },
-    {
-      "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A",
-      "aum_bn": 0.748,
-      "pct": 0.16,
-      "num_fondos": 68,
-      "type": "independent",
-      "yoy_growth": null,
-      "categories": {
-        "RF Euro CP": 0.279,
-        "RF Euro LP": 0.245,
-        "RF Mixta Euro": 0.051,
-        "RV Nacional": 0.008,
-        "RF Internacional": 0.016,
-        "RF Mixta Internacional": 0.046,
-        "RV Mixta Internacional": 0.036,
-        "RV Euro Resto": 0.032,
-        "RV Intl Resto": 0.035
-      },
-      "rank": 37
     },
     {
       "name": "CARTESIO INVERSIONES, SGIIC, S.A.",
@@ -810,46 +791,66 @@
       "pct": 0.16,
       "num_fondos": 4,
       "type": "independent",
-      "yoy_growth": 29.1,
+      "yoy_growth": 26.6,
       "categories": {
         "RV Mixta Internacional": 0.464,
         "Globales": 0.275
       },
+      "rank": 37
+    },
+    {
+      "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A",
+      "aum_bn": 0.738,
+      "pct": 0.16,
+      "num_fondos": 68,
+      "type": "independent",
+      "yoy_growth": null,
+      "categories": {
+        "RF Euro CP": 0.289,
+        "RF Euro LP": 0.234,
+        "RF Mixta Euro": 0.049,
+        "RV Nacional": 0.007,
+        "RF Internacional": 0.016,
+        "RF Mixta Internacional": 0.044,
+        "RV Mixta Internacional": 0.028,
+        "RV Euro Resto": 0.031,
+        "RV Intl Resto": 0.04
+      },
       "rank": 38
     },
     {
-      "name": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
-      "aum_bn": 0.723,
-      "pct": 0.16,
-      "num_fondos": 80,
-      "type": "independent",
-      "yoy_growth": 15.4,
-      "categories": {
-        "RF Euro CP": 0.115,
-        "RF Euro LP": 0.009,
-        "RF Internacional": 0.101,
-        "RF Mixta Internacional": 0.104,
-        "RV Mixta Internacional": 0.165,
-        "RV Intl Resto": 0.168,
-        "Globales": 0.062
-      },
-      "rank": 39
-    },
-    {
       "name": "GESCONSULT S.A., S.G.I.I.C.",
-      "aum_bn": 0.722,
+      "aum_bn": 0.717,
       "pct": 0.16,
       "num_fondos": 42,
       "type": "foreign",
-      "yoy_growth": 98.5,
+      "yoy_growth": 78.8,
       "categories": {
-        "RF Euro CP": 0.665,
-        "RF Euro LP": 0.02,
+        "RF Euro CP": 0.663,
+        "RF Euro LP": 0.019,
         "RF Mixta Euro": 0.006,
         "RV Mixta Euro": 0.014,
         "RV Nacional": 0.01,
         "RV Euro Resto": 0.003,
-        "RV Intl EEUU": 0.004
+        "RV Intl EEUU": 0.003
+      },
+      "rank": 39
+    },
+    {
+      "name": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
+      "aum_bn": 0.688,
+      "pct": 0.15,
+      "num_fondos": 80,
+      "type": "independent",
+      "yoy_growth": 12.0,
+      "categories": {
+        "RF Euro CP": 0.109,
+        "RF Euro LP": 0.002,
+        "RF Internacional": 0.104,
+        "RF Mixta Internacional": 0.101,
+        "RV Mixta Internacional": 0.157,
+        "RV Intl Resto": 0.156,
+        "Globales": 0.06
       },
       "rank": 40
     },
@@ -867,80 +868,80 @@
     },
     {
       "name": "ARQUIGEST SGIIC,S.A.",
-      "aum_bn": 0.641,
+      "aum_bn": 0.643,
       "pct": 0.14,
-      "num_fondos": 78,
+      "num_fondos": 80,
       "type": "independent",
-      "yoy_growth": 20.0,
+      "yoy_growth": 20.3,
       "categories": {
-        "RF Euro CP": 0.107,
-        "RF Internacional": 0.044,
-        "RF Mixta Internacional": 0.098,
-        "RV Mixta Internacional": 0.085,
-        "RV Intl Resto": 0.074,
+        "RF Euro CP": 0.114,
+        "RF Internacional": 0.038,
+        "RF Mixta Internacional": 0.091,
+        "RV Mixta Internacional": 0.08,
+        "RV Intl Resto": 0.068,
         "Garantizados RF": 0.09,
-        "Garantizados RV": 0.069,
-        "Objetivo Rentabilidad": 0.075
+        "Garantizados RV": 0.066,
+        "Objetivo Rentabilidad": 0.096
       },
       "rank": 42
     },
     {
       "name": "GESIURIS ASSET MANAGEMENT SGIIC S.A.",
-      "aum_bn": 0.561,
+      "aum_bn": 0.555,
       "pct": 0.12,
-      "num_fondos": 94,
+      "num_fondos": 96,
       "type": "independent",
-      "yoy_growth": 33.3,
+      "yoy_growth": 37.1,
       "categories": {
         "RF Euro CP": 0.024,
         "RF Euro LP": 0.013,
         "RF Mixta Euro": 0.018,
-        "RV Mixta Euro": 0.007,
-        "RV Nacional": 0.035,
+        "RV Mixta Euro": 0.006,
+        "RV Nacional": 0.032,
         "RF Mixta Internacional": 0.003,
-        "RV Mixta Internacional": 0.033,
-        "RV Euro Resto": 0.008,
+        "RV Mixta Internacional": 0.032,
+        "RV Euro Resto": 0.007,
         "RV Intl Europa": 0.001,
         "RV Intl EEUU": 0.002,
-        "RV Intl Japón": 0.061,
+        "RV Intl Japón": 0.057,
         "RV Intl Emergentes": 0.006,
-        "RV Intl Resto": 0.145,
-        "Globales": 0.133,
-        "FIL": 0.072
+        "RV Intl Resto": 0.137,
+        "Globales": 0.142,
+        "FIL": 0.074
       },
       "rank": 43
     },
     {
       "name": "GESALCALA, SGIIC, S.A.U.",
-      "aum_bn": 0.538,
+      "aum_bn": 0.536,
       "pct": 0.12,
-      "num_fondos": 112,
+      "num_fondos": 114,
       "type": "independent",
-      "yoy_growth": 35.4,
+      "yoy_growth": 38.8,
       "categories": {
         "RF Euro LP": 0.009,
-        "RF Mixta Euro": 0.05,
+        "RF Mixta Euro": 0.048,
         "RV Mixta Euro": 0.003,
-        "RF Internacional": 0.003,
-        "RV Mixta Internacional": 0.031,
-        "RV Intl Resto": 0.071,
+        "RF Internacional": 0.002,
+        "RV Mixta Internacional": 0.03,
+        "RV Intl Resto": 0.072,
         "Globales": 0.259,
-        "Retorno Absoluto": 0.049,
-        "FIL": 0.063
+        "Retorno Absoluto": 0.047,
+        "FIL": 0.065
       },
       "rank": 44
     },
     {
       "name": "GESPROFIT, S.A., S.G.I.I.C.",
-      "aum_bn": 0.53,
+      "aum_bn": 0.521,
       "pct": 0.11,
       "num_fondos": 6,
       "type": "independent",
-      "yoy_growth": 22.2,
+      "yoy_growth": 20.4,
       "categories": {
-        "RF Euro CP": 0.101,
-        "RV Mixta Internacional": 0.396,
-        "RV Intl Resto": 0.033
+        "RF Euro CP": 0.103,
+        "RV Mixta Internacional": 0.385,
+        "RV Intl Resto": 0.032
       },
       "rank": 45
     },
@@ -950,7 +951,7 @@
       "pct": 0.11,
       "num_fondos": 90,
       "type": "independent",
-      "yoy_growth": -3.3,
+      "yoy_growth": -2.0,
       "categories": {
         "RF Euro LP": 0.057,
         "FIL": 0.446
@@ -963,7 +964,7 @@
       "pct": 0.09,
       "num_fondos": 38,
       "type": "independent",
-      "yoy_growth": 13.0,
+      "yoy_growth": 14.4,
       "categories": {
         "RF Euro CP": 0.027,
         "RF Mixta Internacional": 0.049,
@@ -977,26 +978,26 @@
     },
     {
       "name": "LORETO INVERSIONES SGIIC, S.A",
-      "aum_bn": 0.382,
+      "aum_bn": 0.368,
       "pct": 0.08,
       "num_fondos": 14,
       "type": "independent",
-      "yoy_growth": 7.9,
+      "yoy_growth": 4.2,
       "categories": {
         "RF Euro CP": 0.034,
         "RF Mixta Euro": 0.126,
-        "RV Mixta Euro": 0.097,
-        "Globales": 0.126
+        "RV Mixta Euro": 0.09,
+        "Globales": 0.117
       },
       "rank": 48
     },
     {
       "name": "A&G FONDOS, SGIIC, SA",
       "aum_bn": 0.34,
-      "pct": 0.07,
+      "pct": 0.08,
       "num_fondos": 24,
       "type": "independent",
-      "yoy_growth": 15.4,
+      "yoy_growth": 17.8,
       "categories": {
         "RF Euro CP": 0.092,
         "RF Internacional": 0.082,
@@ -1014,7 +1015,7 @@
       "pct": 0.07,
       "num_fondos": 8,
       "type": "independent",
-      "yoy_growth": 133.6,
+      "yoy_growth": 120.2,
       "categories": {
         "RF Mixta Euro": 0.042,
         "RV Euro Resto": 0.017,
@@ -1024,7 +1025,7 @@
     },
     {
       "name": "FONDITEL GESTION, SGIIC, SA",
-      "aum_bn": 0.332,
+      "aum_bn": 0.313,
       "pct": 0.07,
       "num_fondos": 26,
       "type": "independent",
@@ -1032,20 +1033,20 @@
       "categories": {
         "RF Euro CP": 0.009,
         "RF Euro LP": 0.009,
-        "RV Nacional": 0.008,
-        "RF Mixta Internacional": 0.049,
-        "RV Mixta Internacional": 0.224,
-        "RV Intl Resto": 0.033
+        "RV Nacional": 0.007,
+        "RF Mixta Internacional": 0.047,
+        "RV Mixta Internacional": 0.21,
+        "RV Intl Resto": 0.031
       },
       "rank": 51
     },
     {
       "name": "ATTITUDE GESTION, SGIIC, S.A.",
       "aum_bn": 0.3,
-      "pct": 0.06,
+      "pct": 0.07,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 14.1,
+      "yoy_growth": 13.0,
       "categories": {
         "RV Intl Resto": 0.009,
         "Globales": 0.076,
@@ -1060,7 +1061,7 @@
       "pct": 0.06,
       "num_fondos": 36,
       "type": "independent",
-      "yoy_growth": -41.1,
+      "yoy_growth": 16.0,
       "categories": {
         "RV Nacional": 0.002,
         "RV Mixta Internacional": 0.011,
@@ -1080,58 +1081,58 @@
       "yoy_growth": null,
       "categories": {
         "RV Mixta Euro": 0.073,
-        "RF Mixta Internacional": 0.032,
-        "RV Intl Resto": 0.072,
-        "Globales": 0.024,
-        "Retorno Absoluto": 0.057
+        "RF Mixta Internacional": 0.035,
+        "RV Intl Resto": 0.071,
+        "Globales": 0.023,
+        "Retorno Absoluto": 0.056
       },
       "rank": 54
     },
     {
       "name": "SOLVENTIS S.G.I.I.C., S.A.",
-      "aum_bn": 0.256,
-      "pct": 0.06,
-      "num_fondos": 70,
+      "aum_bn": 0.248,
+      "pct": 0.05,
+      "num_fondos": 66,
       "type": "independent",
-      "yoy_growth": 15.1,
+      "yoy_growth": 22.3,
       "categories": {
-        "RF Euro CP": 0.033,
-        "RF Euro LP": 0.016,
-        "RF Mixta Euro": 0.005,
-        "RF Internacional": 0.025,
-        "RF Mixta Internacional": 0.035,
+        "RF Euro CP": 0.03,
+        "RF Euro LP": 0.015,
+        "RF Mixta Euro": 0.004,
+        "RF Internacional": 0.024,
+        "RF Mixta Internacional": 0.034,
         "RV Mixta Internacional": 0.016,
         "RV Euro Resto": 0.023,
         "RV Intl Resto": 0.024,
-        "Globales": 0.05,
+        "Globales": 0.047,
         "FIL": 0.03
       },
       "rank": 55
     },
     {
-      "name": "PANZA CAPITAL, SGIIC, S. A.",
-      "aum_bn": 0.225,
-      "pct": 0.05,
-      "num_fondos": 14,
-      "type": "independent",
-      "yoy_growth": 9.8,
-      "categories": {
-        "RF Euro CP": 0.014,
-        "RV Intl Resto": 0.211
-      },
-      "rank": 56
-    },
-    {
       "name": "BUY & HOLD CAPITAL, SGIIC, S.A.",
       "aum_bn": 0.207,
-      "pct": 0.04,
+      "pct": 0.05,
       "num_fondos": 8,
       "type": "independent",
-      "yoy_growth": 23.4,
+      "yoy_growth": 23.0,
       "categories": {
         "RF Euro LP": 0.11,
         "RV Intl Resto": 0.014,
         "Globales": 0.083
+      },
+      "rank": 56
+    },
+    {
+      "name": "PANZA CAPITAL, SGIIC, S. A.",
+      "aum_bn": 0.206,
+      "pct": 0.05,
+      "num_fondos": 14,
+      "type": "independent",
+      "yoy_growth": 2.6,
+      "categories": {
+        "RF Euro CP": 0.017,
+        "RV Intl Resto": 0.189
       },
       "rank": 57
     },
@@ -1141,7 +1142,7 @@
       "pct": 0.04,
       "num_fondos": 18,
       "type": "independent",
-      "yoy_growth": 25.3,
+      "yoy_growth": 26.0,
       "categories": {
         "RF Internacional": 0.029,
         "RF Mixta Internacional": 0.109,
@@ -1158,7 +1159,7 @@
       "yoy_growth": null,
       "categories": {
         "RF Mixta Euro": 0.122,
-        "RV Mixta Internacional": 0.033,
+        "RV Mixta Internacional": 0.032,
         "Globales": 0.028
       },
       "rank": 59
@@ -1178,10 +1179,10 @@
     {
       "name": "SILVER ALPHA ASSET MANAGEMENT SGIIC, S.A.",
       "aum_bn": 0.161,
-      "pct": 0.03,
+      "pct": 0.04,
       "num_fondos": 8,
       "type": "independent",
-      "yoy_growth": 10.0,
+      "yoy_growth": 12.8,
       "categories": {
         "RF Mixta Internacional": 0.006,
         "RV Intl Resto": 0.155
@@ -1194,7 +1195,7 @@
       "pct": 0.03,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 9.2,
+      "yoy_growth": 11.2,
       "categories": {
         "RF Euro CP": 0.012,
         "RF Mixta Internacional": 0.053,
@@ -1204,49 +1205,49 @@
       "rank": 62
     },
     {
-      "name": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
-      "aum_bn": 0.151,
-      "pct": 0.03,
-      "num_fondos": 22,
-      "type": "independent",
-      "yoy_growth": 12.9,
-      "categories": {
-        "RF Euro CP": 0.012,
-        "RF Euro LP": 0.002,
-        "RV Mixta Internacional": 0.086,
-        "RV Intl Europa": 0.019,
-        "RV Intl Resto": 0.003,
-        "Globales": 0.029
-      },
-      "rank": 63
-    },
-    {
-      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
-      "aum_bn": 0.15,
-      "pct": 0.03,
-      "num_fondos": 30,
-      "type": "independent",
-      "yoy_growth": -14.3,
-      "categories": {
-        "RF Euro LP": 0.003,
-        "RF Mixta Internacional": 0.006,
-        "RV Mixta Internacional": 0.014,
-        "RV Euro Resto": 0.007,
-        "RV Intl Resto": 0.005,
-        "Globales": 0.114
-      },
-      "rank": 64
-    },
-    {
       "name": "PATRIVALOR, SGIIC, S.A.",
       "aum_bn": 0.146,
       "pct": 0.03,
       "num_fondos": 4,
       "type": "independent",
-      "yoy_growth": 9.4,
+      "yoy_growth": 18.7,
       "categories": {
         "RV Mixta Internacional": 0.079,
         "Globales": 0.067
+      },
+      "rank": 63
+    },
+    {
+      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
+      "aum_bn": 0.146,
+      "pct": 0.03,
+      "num_fondos": 30,
+      "type": "independent",
+      "yoy_growth": -15.2,
+      "categories": {
+        "RF Euro LP": 0.003,
+        "RF Mixta Internacional": 0.006,
+        "RV Mixta Internacional": 0.014,
+        "RV Euro Resto": 0.006,
+        "RV Intl Resto": 0.005,
+        "Globales": 0.112
+      },
+      "rank": 64
+    },
+    {
+      "name": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
+      "aum_bn": 0.143,
+      "pct": 0.03,
+      "num_fondos": 24,
+      "type": "independent",
+      "yoy_growth": 6.6,
+      "categories": {
+        "RF Euro CP": 0.011,
+        "RF Euro LP": 0.002,
+        "RV Mixta Internacional": 0.082,
+        "RV Intl Europa": 0.018,
+        "RV Intl Resto": 0.003,
+        "Globales": 0.028
       },
       "rank": 65
     },
@@ -1256,23 +1257,11 @@
       "pct": 0.03,
       "num_fondos": 4,
       "type": "bank",
-      "yoy_growth": -23.8,
+      "yoy_growth": -24.0,
       "categories": {
         "FIL": 0.141
       },
       "rank": 66
-    },
-    {
-      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
-      "aum_bn": 0.14,
-      "pct": 0.03,
-      "num_fondos": 2,
-      "type": "independent",
-      "yoy_growth": 50.2,
-      "categories": {
-        "Globales": 0.14
-      },
-      "rank": 67
     },
     {
       "name": "VALENTUM ASSET MANAGEMENT, SGIIC, S.A.",
@@ -1280,11 +1269,11 @@
       "pct": 0.03,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 21.1,
+      "yoy_growth": 27.0,
       "categories": {
         "RV Intl Resto": 0.135
       },
-      "rank": 68
+      "rank": 67
     },
     {
       "name": "JULIUS BAER GESTION, SGIIC, S.A.",
@@ -1292,12 +1281,12 @@
       "pct": 0.03,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": -1.8,
+      "yoy_growth": 2.4,
       "categories": {
         "RV Mixta Internacional": 0.115,
         "RV Intl Resto": 0.02
       },
-      "rank": 69
+      "rank": 68
     },
     {
       "name": "ALANTRA MULTI ASSET, SGIIC, S.A.",
@@ -1305,64 +1294,76 @@
       "pct": 0.03,
       "num_fondos": 28,
       "type": "independent",
-      "yoy_growth": -21.3,
+      "yoy_growth": -22.2,
       "categories": {
         "FIL": 0.134
+      },
+      "rank": 69
+    },
+    {
+      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
+      "aum_bn": 0.134,
+      "pct": 0.03,
+      "num_fondos": 2,
+      "type": "independent",
+      "yoy_growth": 41.0,
+      "categories": {
+        "Globales": 0.134
       },
       "rank": 70
     },
     {
       "name": "SASSOLA PARTNERS, SGIIC, S.A.",
-      "aum_bn": 0.128,
+      "aum_bn": 0.126,
       "pct": 0.03,
       "num_fondos": 12,
       "type": "independent",
-      "yoy_growth": 24.3,
+      "yoy_growth": 24.4,
       "categories": {
-        "RV Mixta Internacional": 0.128
+        "RV Mixta Internacional": 0.126
       },
       "rank": 71
     },
     {
       "name": "MARKET PORTFOLIO ASSET MANAGEMENT, SGIIC, S.A.",
-      "aum_bn": 0.11,
+      "aum_bn": 0.104,
       "pct": 0.02,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 49.9,
+      "yoy_growth": 46.0,
       "categories": {
         "RF Euro LP": 0.018,
-        "RF Internacional": 0.008,
-        "RV Intl Resto": 0.084
+        "RF Internacional": 0.007,
+        "RV Intl Resto": 0.079
       },
       "rank": 72
     },
     {
-      "name": "METAGESTIÓN, SGIIC, SAU",
-      "aum_bn": 0.107,
+      "name": "GESBUSA, S.A., S.G.I.I.C.",
+      "aum_bn": 0.102,
       "pct": 0.02,
-      "num_fondos": 16,
+      "num_fondos": 6,
       "type": "independent",
-      "yoy_growth": 1.0,
+      "yoy_growth": 18.8,
       "categories": {
-        "RV Nacional": 0.023,
-        "RV Intl EEUU": 0.005,
-        "RV Intl Resto": 0.023,
-        "Globales": 0.056
+        "RV Mixta Euro": 0.048,
+        "RF Internacional": 0.015,
+        "RV Mixta Internacional": 0.039
       },
       "rank": 73
     },
     {
-      "name": "GESBUSA, S.A., S.G.I.I.C.",
-      "aum_bn": 0.105,
+      "name": "METAGESTIÓN, SGIIC, SAU",
+      "aum_bn": 0.099,
       "pct": 0.02,
-      "num_fondos": 6,
+      "num_fondos": 16,
       "type": "independent",
-      "yoy_growth": 20.9,
+      "yoy_growth": -1.8,
       "categories": {
-        "RV Mixta Euro": 0.049,
-        "RF Internacional": 0.015,
-        "RV Mixta Internacional": 0.041
+        "RV Nacional": 0.021,
+        "RV Intl EEUU": 0.005,
+        "RV Intl Resto": 0.021,
+        "Globales": 0.053
       },
       "rank": 74
     },
@@ -1392,28 +1393,29 @@
     },
     {
       "name": "MIRALTA ASSET MANAGEMENT SGIIC SA",
-      "aum_bn": 0.056,
+      "aum_bn": 0.054,
       "pct": 0.01,
-      "num_fondos": 22,
+      "num_fondos": 24,
       "type": "independent",
-      "yoy_growth": 56.2,
+      "yoy_growth": 47.1,
       "categories": {
-        "RV Intl Europa": 0.029,
+        "RV Mixta Internacional": 0.0,
+        "RV Intl Europa": 0.028,
         "FIL": 0.027
       },
       "rank": 77
     },
     {
       "name": "BEKA ASSET MANAGEMENT, SGIIC, S.A.",
-      "aum_bn": 0.054,
+      "aum_bn": 0.052,
       "pct": 0.01,
       "num_fondos": 16,
       "type": "independent",
-      "yoy_growth": 1.0,
+      "yoy_growth": -3.6,
       "categories": {
         "RF Euro CP": 0.007,
-        "Fondos Índice": 0.024,
-        "FIL": 0.023
+        "Fondos Índice": 0.021,
+        "FIL": 0.024
       },
       "rank": 78
     },
@@ -1423,7 +1425,7 @@
       "pct": 0.01,
       "num_fondos": 4,
       "type": "independent",
-      "yoy_growth": 48.6,
+      "yoy_growth": 34.4,
       "categories": {
         "RF Euro LP": 0.049
       },
@@ -1447,7 +1449,7 @@
       "pct": 0.01,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": -33.4,
+      "yoy_growth": -31.8,
       "categories": {
         "FIL": 0.048
       },
@@ -1459,7 +1461,7 @@
       "pct": 0.01,
       "num_fondos": 6,
       "type": "independent",
-      "yoy_growth": -33.8,
+      "yoy_growth": -20.8,
       "categories": {
         "FIL": 0.047
       },
@@ -1471,7 +1473,7 @@
       "pct": 0.01,
       "num_fondos": 2,
       "type": "independent",
-      "yoy_growth": -11.8,
+      "yoy_growth": -5.3,
       "categories": {
         "RV Mixta Internacional": 0.046
       },
@@ -1483,7 +1485,7 @@
       "pct": 0.01,
       "num_fondos": 10,
       "type": "independent",
-      "yoy_growth": 16.1,
+      "yoy_growth": 17.1,
       "categories": {
         "RF Mixta Internacional": 0.005,
         "RV Mixta Internacional": 0.028,
@@ -1505,33 +1507,18 @@
       "rank": 85
     },
     {
-      "name": "GESINTER, SGIIC",
-      "aum_bn": 0.035,
-      "pct": 0.01,
-      "num_fondos": 8,
-      "type": "independent",
-      "yoy_growth": 17.1,
-      "categories": {
-        "RV Mixta Internacional": 0.018,
-        "RV Intl Resto": 0.006,
-        "Globales": 0.005,
-        "FIL": 0.006
-      },
-      "rank": 86
-    },
-    {
       "name": "ANTA ASSET MANAGEMENT SGIIC, SOCIEDAD ANÓNIMA",
       "aum_bn": 0.035,
       "pct": 0.01,
       "num_fondos": 14,
       "type": "independent",
-      "yoy_growth": -28.9,
+      "yoy_growth": -27.8,
       "categories": {
         "RF Euro LP": 0.022,
         "RV Intl Resto": 0.006,
         "Globales": 0.006
       },
-      "rank": 87
+      "rank": 86
     },
     {
       "name": "ROLNIK CAPITAL OWNERS, SGIIC, S.A.",
@@ -1539,10 +1526,25 @@
       "pct": 0.01,
       "num_fondos": 8,
       "type": "independent",
-      "yoy_growth": 16.7,
+      "yoy_growth": 26.3,
       "categories": {
         "RV Intl Resto": 0.009,
         "FIL": 0.025
+      },
+      "rank": 87
+    },
+    {
+      "name": "GESINTER, SGIIC",
+      "aum_bn": 0.033,
+      "pct": 0.01,
+      "num_fondos": 8,
+      "type": "independent",
+      "yoy_growth": 14.4,
+      "categories": {
+        "RV Mixta Internacional": 0.018,
+        "RV Intl Resto": 0.006,
+        "Globales": 0.005,
+        "FIL": 0.005
       },
       "rank": 88
     },
@@ -1552,23 +1554,11 @@
       "pct": 0.01,
       "num_fondos": 2,
       "type": "independent",
-      "yoy_growth": 34.7,
+      "yoy_growth": 36.3,
       "categories": {
         "RV Intl Resto": 0.031
       },
       "rank": 89
-    },
-    {
-      "name": "MDEF GESTEFIN, S.A.U., SGIIC",
-      "aum_bn": 0.029,
-      "pct": 0.01,
-      "num_fondos": 2,
-      "type": "independent",
-      "yoy_growth": 2.7,
-      "categories": {
-        "Globales": 0.029
-      },
-      "rank": 90
     },
     {
       "name": "EBN CAPITAL, SGIIC, S.A.",
@@ -1581,6 +1571,18 @@
         "RV Intl Resto": 0.005,
         "FIL": 0.024
       },
+      "rank": 90
+    },
+    {
+      "name": "MDEF GESTEFIN, S.A.U., SGIIC",
+      "aum_bn": 0.028,
+      "pct": 0.01,
+      "num_fondos": 2,
+      "type": "independent",
+      "yoy_growth": 0.3,
+      "categories": {
+        "Globales": 0.028
+      },
       "rank": 91
     },
     {
@@ -1589,7 +1591,7 @@
       "pct": 0.01,
       "num_fondos": 4,
       "type": "independent",
-      "yoy_growth": 25.3,
+      "yoy_growth": 21.7,
       "categories": {
         "Globales": 0.028
       },
@@ -1610,10 +1612,10 @@
     {
       "name": "NAO ASSET MANAGEMENT, E.S.G. SGIIC, S.A.",
       "aum_bn": 0.023,
-      "pct": 0.0,
+      "pct": 0.01,
       "num_fondos": 6,
       "type": "independent",
-      "yoy_growth": 16.8,
+      "yoy_growth": 20.5,
       "categories": {
         "RV Intl Europa": 0.023
       },
@@ -1625,7 +1627,7 @@
       "pct": 0.0,
       "num_fondos": 20,
       "type": "independent",
-      "yoy_growth": 1.6,
+      "yoy_growth": 3.3,
       "categories": {
         "RF Euro CP": 0.014,
         "Globales": 0.006
@@ -1638,7 +1640,7 @@
       "pct": 0.0,
       "num_fondos": 2,
       "type": "independent",
-      "yoy_growth": 19.5,
+      "yoy_growth": 21.2,
       "categories": {
         "RV Mixta Internacional": 0.02
       },
@@ -1650,7 +1652,7 @@
       "pct": 0.0,
       "num_fondos": 2,
       "type": "independent",
-      "yoy_growth": 17.3,
+      "yoy_growth": 18.9,
       "categories": {
         "RV Intl Resto": 0.007
       },
@@ -1662,7 +1664,7 @@
       "pct": 0.0,
       "num_fondos": 2,
       "type": "independent",
-      "yoy_growth": 1286.0,
+      "yoy_growth": 24.3,
       "categories": {
         "Globales": 0.004
       },
@@ -1682,10 +1684,10 @@
     }
   ],
   "concentration": {
-    "top3_pct": 50.6,
+    "top3_pct": 50.5,
     "top5_pct": 62.9,
-    "top10_pct": 78.7,
-    "total_market_bn": 465.1
+    "top10_pct": 78.6,
+    "total_market_bn": 453.4
   },
   "monthly": [
     {
@@ -19393,6 +19395,699 @@
     },
     {
       "date": "2026-02",
+      "name": "CRESCENTA INVESTMENTS, SGIIC, S.A",
+      "total_aum": 0.0003,
+      "pct": 0.0,
+      "num_fondos": 14
+    },
+    {
+      "date": "2026-03",
+      "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
+      "total_aum": 104.12935775,
+      "pct": 22.97,
+      "num_fondos": 586
+    },
+    {
+      "date": "2026-03",
+      "name": "Santander Asset Management, S.A.,SGIIC",
+      "total_aum": 65.79302147,
+      "pct": 14.51,
+      "num_fondos": 454
+    },
+    {
+      "date": "2026-03",
+      "name": "BBVA Asset Management SA SGIIC",
+      "total_aum": 58.907943380000006,
+      "pct": 12.99,
+      "num_fondos": 216
+    },
+    {
+      "date": "2026-03",
+      "name": "IBERCAJA GESTIÓN, S.A.U.",
+      "total_aum": 28.882062050000002,
+      "pct": 6.37,
+      "num_fondos": 248
+    },
+    {
+      "date": "2026-03",
+      "name": "KUTXABANK GESTION, S.G.I.I.C., S.A.U.",
+      "total_aum": 27.44881432,
+      "pct": 6.05,
+      "num_fondos": 130
+    },
+    {
+      "date": "2026-03",
+      "name": "BANKINTER GESTION DE ACTIVOS SGIIC",
+      "total_aum": 19.1667997,
+      "pct": 4.23,
+      "num_fondos": 310
+    },
+    {
+      "date": "2026-03",
+      "name": "SABADELL ASSET MANAGEMENT, S.A.,S.G.I.I.C., S.U.",
+      "total_aum": 14.86419676,
+      "pct": 3.28,
+      "num_fondos": 374
+    },
+    {
+      "date": "2026-03",
+      "name": "UNICAJA ASSET MANAGEMENT, SGIIC, SA",
+      "total_aum": 13.512076449999999,
+      "pct": 2.98,
+      "num_fondos": 208
+    },
+    {
+      "date": "2026-03",
+      "name": "GESCOOPERATIVO SA SG IIC",
+      "total_aum": 12.19753911,
+      "pct": 2.69,
+      "num_fondos": 160
+    },
+    {
+      "date": "2026-03",
+      "name": "MUTUACTIVOS SGIIC  S.A.U.",
+      "total_aum": 11.636264039999999,
+      "pct": 2.57,
+      "num_fondos": 248
+    },
+    {
+      "date": "2026-03",
+      "name": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
+      "total_aum": 7.52478801,
+      "pct": 1.66,
+      "num_fondos": 102
+    },
+    {
+      "date": "2026-03",
+      "name": "ABANCA GESTIÓN DE ACTIVOS, S.A. S.G.I.I.C.",
+      "total_aum": 6.78593396,
+      "pct": 1.5,
+      "num_fondos": 62
+    },
+    {
+      "date": "2026-03",
+      "name": "GIIC FINECO S.G.I.I.C., S.A.U.",
+      "total_aum": 6.283154049999999,
+      "pct": 1.39,
+      "num_fondos": 72
+    },
+    {
+      "date": "2026-03",
+      "name": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
+      "total_aum": 6.1467541500000005,
+      "pct": 1.36,
+      "num_fondos": 274
+    },
+    {
+      "date": "2026-03",
+      "name": "TREA ASSET MANAGEMENT SGIIC SA",
+      "total_aum": 5.5582229199999995,
+      "pct": 1.23,
+      "num_fondos": 38
+    },
+    {
+      "date": "2026-03",
+      "name": "BESTINVER GESTION S.A., SGIIC",
+      "total_aum": 5.22981329,
+      "pct": 1.15,
+      "num_fondos": 80
+    },
+    {
+      "date": "2026-03",
+      "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 4.32228446,
+      "pct": 0.95,
+      "num_fondos": 102
+    },
+    {
+      "date": "2026-03",
+      "name": "MEDIOLANUM GESTION, SGIIC, S.A.",
+      "total_aum": 4.10216927,
+      "pct": 0.9,
+      "num_fondos": 48
+    },
+    {
+      "date": "2026-03",
+      "name": "AMUNDI IBERIA, SGIIC, S.A.",
+      "total_aum": 3.999477,
+      "pct": 0.88,
+      "num_fondos": 46
+    },
+    {
+      "date": "2026-03",
+      "name": "ABANTE ASESORES GESTIÓN SGIIC S.A.",
+      "total_aum": 3.99806966,
+      "pct": 0.88,
+      "num_fondos": 58
+    },
+    {
+      "date": "2026-03",
+      "name": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 3.6640426699999997,
+      "pct": 0.81,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "DUNAS CAPITAL ASSET MANAGEMENT SGIIC SA",
+      "total_aum": 2.93606708,
+      "pct": 0.65,
+      "num_fondos": 44
+    },
+    {
+      "date": "2026-03",
+      "name": "ANDBANK WEALTH MANAGEMENT,SGIIC,SAU",
+      "total_aum": 2.924753,
+      "pct": 0.65,
+      "num_fondos": 398
+    },
+    {
+      "date": "2026-03",
+      "name": "Cobas Asset Management S.G.I.I.C. S.A.",
+      "total_aum": 2.7969725899999998,
+      "pct": 0.62,
+      "num_fondos": 42
+    },
+    {
+      "date": "2026-03",
+      "name": "MARCH ASSET MANAGEMENT S.G.I.I.C., S.A.U.",
+      "total_aum": 2.64424029,
+      "pct": 0.58,
+      "num_fondos": 76
+    },
+    {
+      "date": "2026-03",
+      "name": "DEUTSCHE WEALTH MANAGEMENT SGIIC,S.A.",
+      "total_aum": 1.94107565,
+      "pct": 0.43,
+      "num_fondos": 32
+    },
+    {
+      "date": "2026-03",
+      "name": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
+      "total_aum": 1.93416053,
+      "pct": 0.43,
+      "num_fondos": 24
+    },
+    {
+      "date": "2026-03",
+      "name": "CAJA INGENIEROS GESTION, S.G.I.I.C., S.A.U.",
+      "total_aum": 1.68667629,
+      "pct": 0.37,
+      "num_fondos": 52
+    },
+    {
+      "date": "2026-03",
+      "name": "GVC GAESCO GESTION S.G.I.I.C.",
+      "total_aum": 1.54495218,
+      "pct": 0.34,
+      "num_fondos": 336
+    },
+    {
+      "date": "2026-03",
+      "name": "SINGULAR ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 1.400231,
+      "pct": 0.31,
+      "num_fondos": 100
+    },
+    {
+      "date": "2026-03",
+      "name": "SANTA LUCIA ASSET MANAGEMENT SGIIC, SAU",
+      "total_aum": 1.37578829,
+      "pct": 0.3,
+      "num_fondos": 126
+    },
+    {
+      "date": "2026-03",
+      "name": "GCO Gestión de Activos, S.A.U, SGIIC",
+      "total_aum": 1.28849534,
+      "pct": 0.28,
+      "num_fondos": 16
+    },
+    {
+      "date": "2026-03",
+      "name": "EDM Gestión, S.A. SGIIC",
+      "total_aum": 1.15388828,
+      "pct": 0.25,
+      "num_fondos": 38
+    },
+    {
+      "date": "2026-03",
+      "name": "TRESSIS GESTION SGIIC, S.A.",
+      "total_aum": 1.02059294,
+      "pct": 0.23,
+      "num_fondos": 74
+    },
+    {
+      "date": "2026-03",
+      "name": "INVERSIS GESTION, S.G.I.I.C., S.A.U.",
+      "total_aum": 0.94184855,
+      "pct": 0.21,
+      "num_fondos": 130
+    },
+    {
+      "date": "2026-03",
+      "name": "UBS WEALTH MANAGEMENT SGIIC SA",
+      "total_aum": 0.78946854,
+      "pct": 0.17,
+      "num_fondos": 34
+    },
+    {
+      "date": "2026-03",
+      "name": "CARTESIO INVERSIONES, SGIIC, S.A.",
+      "total_aum": 0.739223,
+      "pct": 0.16,
+      "num_fondos": 4
+    },
+    {
+      "date": "2026-03",
+      "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A",
+      "total_aum": 0.73841416,
+      "pct": 0.16,
+      "num_fondos": 68
+    },
+    {
+      "date": "2026-03",
+      "name": "GESCONSULT S.A., S.G.I.I.C.",
+      "total_aum": 0.71736782,
+      "pct": 0.16,
+      "num_fondos": 42
+    },
+    {
+      "date": "2026-03",
+      "name": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
+      "total_aum": 0.68797779,
+      "pct": 0.15,
+      "num_fondos": 80
+    },
+    {
+      "date": "2026-03",
+      "name": "ALTAMAR PRIVATE EQUITY, S.G.I.I.C., S.A.",
+      "total_aum": 0.678728,
+      "pct": 0.15,
+      "num_fondos": 34
+    },
+    {
+      "date": "2026-03",
+      "name": "ARQUIGEST SGIIC,S.A.",
+      "total_aum": 0.6432541700000001,
+      "pct": 0.14,
+      "num_fondos": 80
+    },
+    {
+      "date": "2026-03",
+      "name": "GESIURIS ASSET MANAGEMENT SGIIC S.A.",
+      "total_aum": 0.55485167,
+      "pct": 0.12,
+      "num_fondos": 96
+    },
+    {
+      "date": "2026-03",
+      "name": "GESALCALA, SGIIC, S.A.U.",
+      "total_aum": 0.53558881,
+      "pct": 0.12,
+      "num_fondos": 114
+    },
+    {
+      "date": "2026-03",
+      "name": "GESPROFIT, S.A., S.G.I.I.C.",
+      "total_aum": 0.52054419,
+      "pct": 0.11,
+      "num_fondos": 6
+    },
+    {
+      "date": "2026-03",
+      "name": "ARCANO CAPITAL, SGIIC, S.A.",
+      "total_aum": 0.502426,
+      "pct": 0.11,
+      "num_fondos": 90
+    },
+    {
+      "date": "2026-03",
+      "name": "ACACIA INVERSION, SGIIC, S.A.",
+      "total_aum": 0.430164,
+      "pct": 0.09,
+      "num_fondos": 38
+    },
+    {
+      "date": "2026-03",
+      "name": "LORETO INVERSIONES SGIIC, S.A",
+      "total_aum": 0.36786759999999996,
+      "pct": 0.08,
+      "num_fondos": 14
+    },
+    {
+      "date": "2026-03",
+      "name": "A&G FONDOS, SGIIC, SA",
+      "total_aum": 0.340273,
+      "pct": 0.08,
+      "num_fondos": 24
+    },
+    {
+      "date": "2026-03",
+      "name": "HOROS ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.335112,
+      "pct": 0.07,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "FONDITEL GESTION, SGIIC, SA",
+      "total_aum": 0.3130171,
+      "pct": 0.07,
+      "num_fondos": 26
+    },
+    {
+      "date": "2026-03",
+      "name": "ATTITUDE GESTION, SGIIC, S.A.",
+      "total_aum": 0.300388,
+      "pct": 0.07,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "DUX INVERSORES, SGIIC, S.A.",
+      "total_aum": 0.260243,
+      "pct": 0.06,
+      "num_fondos": 36
+    },
+    {
+      "date": "2026-03",
+      "name": "WELZIA MANAGEMENT S.G.I.I.C., S.A.U.",
+      "total_aum": 0.25893767,
+      "pct": 0.06,
+      "num_fondos": 26
+    },
+    {
+      "date": "2026-03",
+      "name": "SOLVENTIS S.G.I.I.C., S.A.",
+      "total_aum": 0.247847,
+      "pct": 0.05,
+      "num_fondos": 66
+    },
+    {
+      "date": "2026-03",
+      "name": "BUY & HOLD CAPITAL, SGIIC, S.A.",
+      "total_aum": 0.206569,
+      "pct": 0.05,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "PANZA CAPITAL, SGIIC, S. A.",
+      "total_aum": 0.20577676,
+      "pct": 0.05,
+      "num_fondos": 14
+    },
+    {
+      "date": "2026-03",
+      "name": "ABACO CAPITAL, SGIIC, S.A.",
+      "total_aum": 0.195733,
+      "pct": 0.04,
+      "num_fondos": 18
+    },
+    {
+      "date": "2026-03",
+      "name": "WELCOME ASSET MANAGEMENT, SGIIC, S. A. UNI",
+      "total_aum": 0.18264386999999999,
+      "pct": 0.04,
+      "num_fondos": 14
+    },
+    {
+      "date": "2026-03",
+      "name": "OMEGA GESTION DE INVERSIONES, SGIIC, S.A.",
+      "total_aum": 0.16835,
+      "pct": 0.04,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "SILVER ALPHA ASSET MANAGEMENT SGIIC, S.A.",
+      "total_aum": 0.160563,
+      "pct": 0.04,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "GINVEST ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.157457,
+      "pct": 0.03,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "PATRIVALOR, SGIIC, S.A.",
+      "total_aum": 0.145605,
+      "pct": 0.03,
+      "num_fondos": 4
+    },
+    {
+      "date": "2026-03",
+      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
+      "total_aum": 0.1455276,
+      "pct": 0.03,
+      "num_fondos": 30
+    },
+    {
+      "date": "2026-03",
+      "name": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
+      "total_aum": 0.14349842999999998,
+      "pct": 0.03,
+      "num_fondos": 24
+    },
+    {
+      "date": "2026-03",
+      "name": "SANTANDER ALTERNATIVE INVESTMENTS, SGIIC, S.A.U.",
+      "total_aum": 0.14116199,
+      "pct": 0.03,
+      "num_fondos": 4
+    },
+    {
+      "date": "2026-03",
+      "name": "VALENTUM ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.13508,
+      "pct": 0.03,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "JULIUS BAER GESTION, SGIIC, S.A.",
+      "total_aum": 0.134883,
+      "pct": 0.03,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "ALANTRA MULTI ASSET, SGIIC, S.A.",
+      "total_aum": 0.133768,
+      "pct": 0.03,
+      "num_fondos": 28
+    },
+    {
+      "date": "2026-03",
+      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
+      "total_aum": 0.13360551999999998,
+      "pct": 0.03,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "SASSOLA PARTNERS, SGIIC, S.A.",
+      "total_aum": 0.12595436999999998,
+      "pct": 0.03,
+      "num_fondos": 12
+    },
+    {
+      "date": "2026-03",
+      "name": "MARKET PORTFOLIO ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.10428039,
+      "pct": 0.02,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "GESBUSA, S.A., S.G.I.I.C.",
+      "total_aum": 0.10175208000000001,
+      "pct": 0.02,
+      "num_fondos": 6
+    },
+    {
+      "date": "2026-03",
+      "name": "METAGESTIÓN, SGIIC, SAU",
+      "total_aum": 0.09908361,
+      "pct": 0.02,
+      "num_fondos": 16
+    },
+    {
+      "date": "2026-03",
+      "name": "AMCHOR INVESTMENT STRATEGIES, SGIIC, S.A.",
+      "total_aum": 0.086406,
+      "pct": 0.02,
+      "num_fondos": 18
+    },
+    {
+      "date": "2026-03",
+      "name": "IMPACT BRIDGE ASSET MANAGEMENT SGIIC, S.A.",
+      "total_aum": 0.064912,
+      "pct": 0.01,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "MIRALTA ASSET MANAGEMENT SGIIC SA",
+      "total_aum": 0.05436121,
+      "pct": 0.01,
+      "num_fondos": 24
+    },
+    {
+      "date": "2026-03",
+      "name": "BEKA ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.05210579,
+      "pct": 0.01,
+      "num_fondos": 16
+    },
+    {
+      "date": "2026-03",
+      "name": "ALTERNA INVERSIONES Y VALORES, S.G.I.I.C., S.A.",
+      "total_aum": 0.049437,
+      "pct": 0.01,
+      "num_fondos": 4
+    },
+    {
+      "date": "2026-03",
+      "name": "MACROFLOW PARTNERS SGIIC, S. L",
+      "total_aum": 0.049206,
+      "pct": 0.01,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "ALANTRA EQMC ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_aum": 0.047569,
+      "pct": 0.01,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "ALTAN CAPITAL, SGIIC, S.A.",
+      "total_aum": 0.04667,
+      "pct": 0.01,
+      "num_fondos": 6
+    },
+    {
+      "date": "2026-03",
+      "name": "FINLETIC CAPITAL SGIIC SA.",
+      "total_aum": 0.046081,
+      "pct": 0.01,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "TALENTA GESTION , SGIIC, S.A.",
+      "total_aum": 0.039005,
+      "pct": 0.01,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "ACTYUS PRIVATE EQUITY SGIIC, S.A.",
+      "total_aum": 0.038493,
+      "pct": 0.01,
+      "num_fondos": 10
+    },
+    {
+      "date": "2026-03",
+      "name": "ANTA ASSET MANAGEMENT SGIIC, SOCIEDAD ANÓNIMA",
+      "total_aum": 0.034896,
+      "pct": 0.01,
+      "num_fondos": 14
+    },
+    {
+      "date": "2026-03",
+      "name": "ROLNIK CAPITAL OWNERS, SGIIC, S.A.",
+      "total_aum": 0.034346,
+      "pct": 0.01,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "GESINTER, SGIIC",
+      "total_aum": 0.033357,
+      "pct": 0.01,
+      "num_fondos": 8
+    },
+    {
+      "date": "2026-03",
+      "name": "MUZA GESTIÓN DE ACTIVOS, SGIIC, S.A.",
+      "total_aum": 0.030697,
+      "pct": 0.01,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "EBN CAPITAL, SGIIC, S.A.",
+      "total_aum": 0.028919,
+      "pct": 0.01,
+      "num_fondos": 34
+    },
+    {
+      "date": "2026-03",
+      "name": "MDEF GESTEFIN, S.A.U., SGIIC",
+      "total_aum": 0.02819221,
+      "pct": 0.01,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "AMISTRA, SGIIC, S.A.",
+      "total_aum": 0.02804548,
+      "pct": 0.01,
+      "num_fondos": 4
+    },
+    {
+      "date": "2026-03",
+      "name": "TESYS ACTIVOS FINANCIEROS SGIIC, SOCIEDAD LIMITADA",
+      "total_aum": 0.024832,
+      "pct": 0.01,
+      "num_fondos": 6
+    },
+    {
+      "date": "2026-03",
+      "name": "NAO ASSET MANAGEMENT, E.S.G. SGIIC, S.A.",
+      "total_aum": 0.022879,
+      "pct": 0.01,
+      "num_fondos": 6
+    },
+    {
+      "date": "2026-03",
+      "name": "ACCI CAPITAL INVESTMENTS, SGIIC, S.A.",
+      "total_aum": 0.020067,
+      "pct": 0.0,
+      "num_fondos": 20
+    },
+    {
+      "date": "2026-03",
+      "name": "VARIANZA GESTION, SGIIC, S.A.",
+      "total_aum": 0.019893,
+      "pct": 0.0,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "AUGUSTUS CAPITAL ASSET MANAGEMENT, SGIIC, S.A",
+      "total_aum": 0.006853,
+      "pct": 0.0,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
+      "name": "DIAGONAL ASSET MANAGEMENT SGIIC, S.A.",
+      "total_aum": 0.004122,
+      "pct": 0.0,
+      "num_fondos": 2
+    },
+    {
+      "date": "2026-03",
       "name": "CRESCENTA INVESTMENTS, SGIIC, S.A",
       "total_aum": 0.0003,
       "pct": 0.0,

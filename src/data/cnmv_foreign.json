@@ -187,10 +187,10 @@
     }
   ],
   "domestic_vs_foreign": {
-    "domestic_aum_bn": 465.1,
+    "domestic_aum_bn": 453.4,
     "foreign_aum_bn": 321.9,
-    "total_market_bn": 787.0,
-    "foreign_pct": 40.9,
+    "total_market_bn": 775.3,
+    "foreign_pct": 41.5,
     "note": "Domestic AUM from latest INVERCO monthly snapshot"
   }
 }
