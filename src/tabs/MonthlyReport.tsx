@@ -13,6 +13,7 @@ const inversis = _inversis as {
   group: { name: string; aum_bn: number; var_1m: number; var_ytd: number; var_1y: number; num_isin: number } | null;
   gestora: { curr_aum_bn: number; delta_bn: number; delta_pct: number } | null;
 };
+const invDeltaPct = headline.inv_delta_pct as unknown as number | null;
 
 const MONTH_NAMES: Record<string, string> = {
   '01': 'January', '02': 'February', '03': 'March', '04': 'April',
@@ -158,7 +159,7 @@ export default function MonthlyReport() {
           label="Investors"
           value={headline.investors.toLocaleString()}
           delta={`${headline.inv_delta > 0 ? '+' : ''}${headline.inv_delta.toLocaleString()}`}
-          deltaLabel={`(${headline.inv_delta_pct > 0 ? '+' : ''}${headline.inv_delta_pct.toFixed(2)}%)`}
+          deltaLabel={invDeltaPct != null ? `(${invDeltaPct > 0 ? '+' : ''}${invDeltaPct.toFixed(2)}%)` : undefined}
           positive={headline.inv_delta > 0}
         />
         <MiniKpi
@@ -490,8 +491,11 @@ export default function MonthlyReport() {
         The Spanish fund market {headline.aum_delta_bn > 0 ? 'grew' : 'contracted'} by <strong>{'\u20AC'}{Math.abs(headline.aum_delta_bn).toFixed(1)}B</strong> ({headline.aum_delta_pct > 0 ? '+' : ''}{headline.aum_delta_pct.toFixed(2)}%) to reach <strong>{'\u20AC'}{headline.total_aum_bn.toFixed(1)}B</strong>.
         {' '}Market appreciation contributed <strong>{'\u20AC'}{headline.market_effect_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.market_effect_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}
         {' '}while net investor flows added <strong>{'\u20AC'}{headline.net_flows_bn.toFixed(1)}B</strong>{headline.aum_delta_bn !== 0 ? ` (${((headline.net_flows_bn / headline.aum_delta_bn) * 100).toFixed(0)}%)` : ''}.
-        {' '}Flows doubled vs {prevLabel} ({'\u20AC'}{headline.prev_net_flows_bn.toFixed(1)}B){category_flows.length > 0 ? <>, with <strong>{category_flows[0].category}</strong> leading at {'\u20AC'}{category_flows[0].net.toFixed(2)}B</> : null}. The market added <strong>{headline.inv_delta.toLocaleString()}</strong> new investors,
-        {' '}reaching {headline.investors.toLocaleString()} total.
+        {' '}Flows {headline.net_flows_bn > headline.prev_net_flows_bn ? 'increased' : 'decreased'} vs {prevLabel} ({'\u20AC'}{headline.prev_net_flows_bn.toFixed(1)}B){category_flows.length > 0 ? <>, with <strong>{category_flows[0].category}</strong> leading at {'\u20AC'}{category_flows[0].net.toFixed(2)}B</> : null}.
+        {invDeltaPct != null
+          ? <> The market added <strong>{headline.inv_delta.toLocaleString()}</strong> new investors, reaching {headline.investors.toLocaleString()} total.</>
+          : <> The market has <strong>{headline.investors.toLocaleString()}</strong> investors.</>
+        }
       </InsightCard>
     </div>
   );
