@@ -10,6 +10,7 @@ import openpyxl
 
 from ..parsers.cnmv_registry import parse_cnmv_registry
 from ..parsers.cnmv_fees import parse_cnmv_fees, VOCACION_MAP
+from ..parsers.cnmv_sicav import parse_cnmv_sicav
 from ..config import DATA_DIR, find_cnmv_file
 
 INSIGHTS_FILE = 'inversis_depositary_insights_2025Q3.xlsx'
@@ -128,9 +129,9 @@ def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opp
             'body': (
                 f'Inversis custodies \u20AC{inversis_stats.get("inversis_aum_bn", 0):.1f}B across '
                 f'{inversis_stats.get("inversis_gestora_count", 0)} gestoras and '
-                f'{inversis_stats.get("total_funds", 0)} funds. '
-                f'The overall depositary market (ex-foreign IICs) totals \u20AC{total_market_aum_k/1e6:.0f}B, '
-                f'dominated by Cecabank (44.7%) and CACEIS (19.5%). '
+                f'{inversis_stats.get("inversis_fund_count", 0)} funds (FI + SICAV). '
+                f'The overall depositary market (FI + SICAV, ex-foreign IICs / FIL / FCR / pensions) '
+                f'totals \u20AC{total_market_aum_k/1e6:.0f}B, dominated by Cecabank (44.7%) and CACEIS (19.5%). '
                 f'Inversis\u2019s position is structurally differentiated: it serves independent '
                 f'boutiques and Andorran-origin private banking gestoras that are excluded from '
                 f'captive bank depositaries.'
@@ -174,7 +175,9 @@ def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opp
                 f'currently use other depositaries. The most valuable non-captive targets include '
                 f'{", ".join(str(t.get("gestora","")).split(",")[0] for t in nc_targets[:3])}. '
                 f'Inversis\u2019s competitive advantage in this segment is its combination of '
-                f'regulatory independence, operational breadth (195 funds across 25 gestoras), '
+                f'regulatory independence, operational breadth ('
+                f'{inversis_stats.get("inversis_fund_count", 0)} funds across '
+                f'{inversis_stats.get("inversis_gestora_count", 0)} gestoras), '
                 f'and — post-Euroclear — tier-1 group backing without conflicting distribution interests.'
             ),
         },
@@ -188,9 +191,14 @@ def build_cnmv_depositaria():
     _, cnmv_date = find_cnmv_file(cnmv_dir, 'Anexo')
     cnmv_date = cnmv_date or 'unknown'
 
-    # Parse CNMV Anexo A1.1 + A2.2
+    # Parse CNMV Anexo A1.1 + A2.2 (FI registry + fees)
     registry = parse_cnmv_registry(cnmv_dir)
     fees = parse_cnmv_fees(cnmv_dir)
+
+    # Parse SICAV registry + patrimonio from CNMV quarterly XML (SOCREGISTRO + SOCTRIM).
+    # FI Anexo excludes SICAVs entirely, which understates depositary AuM by the
+    # full SICAV book (~€16B market in 2025; ~€3B at Inversis).
+    sicav_records, sicav_period = parse_cnmv_sicav(cnmv_dir)
 
     # Load Inversis depositary insights (richer data for market ranking + revenue)
     insights = _load_insights(cnmv_dir)
@@ -228,6 +236,29 @@ def build_cnmv_depositaria():
             'mgmt_fee': fee_data.get('mgmt_fee_aum'),
             'ter': fee_data.get('ter'),
             'investors': fee_data.get('investors', 0),
+            'fund_type': 'FI',
+        })
+
+    # Append SICAV series records (depositary fees aren't published for SICAVs in
+    # the public CNMV feed, so depo_fee/mgmt_fee/ter are left None — they're handled
+    # downstream by the AUM-weighted aggregations which already skip None entries).
+    sicav_aum_k = 0.0
+    for r in sicav_records:
+        sicav_aum_k += r['patrimonio_k']
+        joined.append({
+            'fund_name': r['fund_name'],
+            'isin': r['isin'],
+            'share_class': r['share_class'],
+            'gestora': r['gestora'],
+            'depositario': r['depositario'],
+            'grupo': r['grupo'],
+            'category': r['category'] or 'SICAV',
+            'depo_fee': None,
+            'patrimonio_k': r['patrimonio_k'],
+            'mgmt_fee': None,
+            'ter': None,
+            'investors': r['investors'],
+            'fund_type': 'SICAV',
         })
 
     # === Fund-level aggregation (sum AUM across all classes per fund) ===
@@ -453,6 +484,7 @@ def build_cnmv_depositaria():
         'inversis_aum_bn': inversis_stats['total_aum_bn'] if inversis_stats else 0,
         'inversis_market_share_pct': inversis_stats['market_share_pct'] if inversis_stats else 0,
         'inversis_gestora_count': inversis_stats['gestora_count'] if inversis_stats else 0,
+        'inversis_fund_count': inversis_stats['fund_count'] if inversis_stats else 0,
         'inversis_avg_fee': inversis_avg_fee,
         'inversis_rank_aum': inversis_rank_aum,
         'inversis_rank_gestoras': inversis_rank_gestoras,
@@ -460,6 +492,9 @@ def build_cnmv_depositaria():
         'target_gestoras': len(premium_targets),
         'potential_revenue_m': round(sum(t['potential_revenue_k'] for t in premium_targets) / 1000, 1),
         'date': cnmv_date,
+        'sicav_period': sicav_period,
+        'sicav_fund_count': sum(1 for r in joined if r.get('fund_type') == 'SICAV'),
+        'sicav_aum_bn': round(sicav_aum_k / 1_000_000, 2),
     }
 
     all_depositarios = sorted(set(f['depositario'] for f in funds))

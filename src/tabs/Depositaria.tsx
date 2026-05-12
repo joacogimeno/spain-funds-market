@@ -43,6 +43,19 @@ export default function Depositaria() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {/* Scope note */}
+      <div style={{
+        background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 8,
+        padding: '8px 14px', fontSize: 11, color: '#8888a0',
+        fontFamily: "'Outfit', sans-serif",
+      }}>
+        <span style={{ color: '#c0c0d0', fontWeight: 600 }}>Scope:</span>{' '}
+        Spanish FI (CNMV Anexo A1.1 + A2.2, {summary.date}) +
+        Spanish SICAV (CNMV SOCREGISTRO + SOCTRIM, {(summary as Record<string, unknown>).sicav_period as string ?? 'latest quarter'}).
+        Excludes FIL (hedge funds), FCR/FCRE (private equity), foreign IICs and pension funds.
+        SICAV depositary fees are not published by CNMV — fee aggregates reflect FI only.
+      </div>
+
       {/* KPI Row */}
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <KpiCard
@@ -436,7 +449,7 @@ function ByDepositarioView({ depoFilter, setDepoFilter }: { depoFilter: string; 
 
       {/* Depositario Stats Table */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Depositario Overview" source="CNMV Anexo A1.1 + A2.2" />
+        <SectionHeader title="Depositario Overview" source={`CNMV Anexo A1.1 + A2.2 (FI) + SOCREGISTRO/SOCTRIM (SICAV) \u2014 ${summary.date}`} />
         <DataTable
           data={stats}
           columns={[
@@ -530,7 +543,7 @@ function ByGestoraView({ depoFilter, search }: { depoFilter: string; search: str
 
   return (
     <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-      <SectionHeader title="Gestora \u2194 Depositario Relationships" source={`CNMV Anexo A1.1 + A2.2 \u2014 ${summary.date} | ${filtered.length} relationships`} />
+      <SectionHeader title="Gestora \u2194 Depositario Relationships" source={`CNMV Anexo A1.1 + A2.2 (FI) + SOCREGISTRO/SOCTRIM (SICAV) \u2014 ${summary.date} | ${filtered.length} relationships`} />
       <DataTable
         data={filtered}
         columns={[
@@ -602,7 +615,7 @@ function ByFundView({ depoFilter, gestoraFilter, categoryFilter, search }: {
 
   return (
     <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-      <SectionHeader title="Fund-Level Depositaría Detail" source={`CNMV Anexo A1.1 + A2.2 \u2014 ${summary.date} | ${filtered.length} funds`} />
+      <SectionHeader title="Fund-Level Depositaría Detail" source={`CNMV Anexo A1.1 + A2.2 (FI) + SOCREGISTRO/SOCTRIM (SICAV) \u2014 ${summary.date} | ${filtered.length} funds`} />
       <DataTable
         data={filtered}
         columns={[

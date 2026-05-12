@@ -953,9 +953,9 @@
     "mkt_dep_fee_p75_bps": 9.27
   },
   "opportunity": {
-    "addressable_aum_bn": 36.2,
-    "target_gestoras_count": 47,
-    "potential_revenue_m": 4.7,
+    "addressable_aum_bn": 38.1,
+    "target_gestoras_count": 46,
+    "potential_revenue_m": 5.1,
     "targets": [
       {
         "gestora": "TREA ASSET MANAGEMENT S.G.I.I.C., S.A.",
@@ -1006,32 +1006,10 @@
         "gestora_short": "AZVALOR ASSET MANAGEMENT",
         "current_depositario": "BNP PARIBAS",
         "grupo": "AZVALOR",
-        "aum_m": 2555.3,
-        "fund_count": 5,
-        "avg_fee_bps": 3.8,
-        "potential_rev_k": 971.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "COBAS ASSET MANAGEMENT, SGIIC, S.A.",
-        "gestora_short": "COBAS ASSET MANAGEMENT",
-        "current_depositario": "BNP PARIBAS",
-        "grupo": "SANTA COMBA GESTIÓN",
-        "aum_m": 2084.9,
-        "fund_count": 5,
-        "avg_fee_bps": 2.6,
-        "potential_rev_k": 542.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "DEUTSCHE WEALTH MANAGEMENT SGIIC, S.A.",
-        "gestora_short": "DEUTSCHE WEALTH MANAGEMENT",
-        "current_depositario": "BNP PARIBAS",
-        "grupo": "DEUTSCHE BANK",
-        "aum_m": 1808.1,
+        "aum_m": 2577.0,
         "fund_count": 6,
-        "avg_fee_bps": 4.0,
-        "potential_rev_k": 723.0,
+        "avg_fee_bps": 3.8,
+        "potential_rev_k": 979.0,
         "is_captive": false
       },
       {
@@ -1039,10 +1017,32 @@
         "gestora_short": "MAGALLANES VALUE INVESTORS",
         "current_depositario": "CACEIS BANK SPAIN",
         "grupo": "MAGALLANES VALUE INVESTORS",
-        "aum_m": 1692.8,
-        "fund_count": 3,
+        "aum_m": 2221.3,
+        "fund_count": 4,
         "avg_fee_bps": 4.0,
-        "potential_rev_k": 677.0,
+        "potential_rev_k": 889.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "COBAS ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "COBAS ASSET MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "SANTA COMBA GESTIÓN",
+        "aum_m": 2099.3,
+        "fund_count": 6,
+        "avg_fee_bps": 2.6,
+        "potential_rev_k": 546.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "DEUTSCHE WEALTH MANAGEMENT SGIIC, S.A.",
+        "gestora_short": "DEUTSCHE WEALTH MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "DEUTSCHE BANK",
+        "aum_m": 1841.9,
+        "fund_count": 8,
+        "avg_fee_bps": 4.0,
+        "potential_rev_k": 737.0,
         "is_captive": false
       },
       {
@@ -1050,10 +1050,21 @@
         "gestora_short": "GVC GAESCO GESTIÓN",
         "current_depositario": "BNP PARIBAS",
         "grupo": "GVC GAESCO",
-        "aum_m": 1476.7,
-        "fund_count": 44,
+        "aum_m": 1543.8,
+        "fund_count": 49,
         "avg_fee_bps": 7.82,
-        "potential_rev_k": 1155.0,
+        "potential_rev_k": 1207.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
+        "gestora_short": "UBS WEALTH MANAGEMENT",
+        "current_depositario": "UBS AG",
+        "grupo": "UBS",
+        "aum_m": 1459.1,
+        "fund_count": 27,
+        "avg_fee_bps": 7.89,
+        "potential_rev_k": 1151.0,
         "is_captive": false
       },
       {
@@ -1076,17 +1087,6 @@
         "fund_count": 8,
         "avg_fee_bps": 3.5,
         "potential_rev_k": 421.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
-        "gestora_short": "UBS WEALTH MANAGEMENT",
-        "current_depositario": "UBS AG",
-        "grupo": "UBS",
-        "aum_m": 831.2,
-        "fund_count": 9,
-        "avg_fee_bps": 7.89,
-        "potential_rev_k": 656.0,
         "is_captive": false
       },
       {
@@ -1123,6 +1123,28 @@
         "is_captive": false
       },
       {
+        "gestora": "URQUIJO GESTION, S.A., S.G.I.I.C., SOCIEDAD UNIPERSONAL",
+        "gestora_short": "URQUIJO GESTION",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "BANQUE NATIONALE DE PARIS, S.A.",
+        "aum_m": 497.4,
+        "fund_count": 9,
+        "avg_fee_bps": 0.0,
+        "potential_rev_k": 0,
+        "is_captive": false
+      },
+      {
+        "gestora": "A&G FONDOS, SGIIC, SA",
+        "gestora_short": "A&G FONDOS",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "A&G",
+        "aum_m": 495.6,
+        "fund_count": 11,
+        "avg_fee_bps": 7.33,
+        "potential_rev_k": 363.0,
+        "is_captive": false
+      },
+      {
         "gestora": "GESPROFIT, S.A., S.G.I.I.C.",
         "gestora_short": "GESPROFIT",
         "current_depositario": "CECABANK",
@@ -1131,17 +1153,6 @@
         "fund_count": 3,
         "avg_fee_bps": 7.0,
         "potential_rev_k": 326.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "GESIURIS ASSET MANAGEMENT, SGIIC, S.A.",
-        "gestora_short": "GESIURIS ASSET MANAGEMENT",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "GESIURIS, S.A., S.G.I.I.C.",
-        "aum_m": 458.3,
-        "fund_count": 27,
-        "avg_fee_bps": 7.01,
-        "potential_rev_k": 321.0,
         "is_captive": false
       },
       {
@@ -1167,14 +1178,25 @@
         "is_captive": false
       },
       {
-        "gestora": "A&G FONDOS, SGIIC, SA",
-        "gestora_short": "A&G FONDOS",
+        "gestora": "DUX INVERSORES, SGIIC, S.A.",
+        "gestora_short": "DUX INVERSORES",
+        "current_depositario": "BANKINTER",
+        "grupo": "ABANTE ASESORES",
+        "aum_m": 253.8,
+        "fund_count": 10,
+        "avg_fee_bps": 9.6,
+        "potential_rev_k": 244.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MUZA GESTIÓN DE ACTIVOS, SGIIC, S.A.",
+        "gestora_short": "MUZA GESTIÓN DE ACTIVOS",
         "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "A&G",
-        "aum_m": 303.4,
-        "fund_count": 6,
-        "avg_fee_bps": 7.33,
-        "potential_rev_k": 222.0,
+        "grupo": "MUZA",
+        "aum_m": 252.1,
+        "fund_count": 2,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 176.0,
         "is_captive": false
       },
       {
@@ -1189,14 +1211,14 @@
         "is_captive": false
       },
       {
-        "gestora": "DUX INVERSORES, SGIIC, S.A.",
-        "gestora_short": "DUX INVERSORES",
-        "current_depositario": "BANKINTER",
-        "grupo": "ABANTE ASESORES",
-        "aum_m": 231.5,
-        "fund_count": 8,
-        "avg_fee_bps": 9.6,
-        "potential_rev_k": 222.0,
+        "gestora": "SOLVENTIS S.G.I.I.C., S.A.",
+        "gestora_short": "SOLVENTIS S.G.I.I.C.",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "SOLVENTIS",
+        "aum_m": 226.3,
+        "fund_count": 13,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 158.0,
         "is_captive": false
       },
       {
@@ -1211,17 +1233,6 @@
         "is_captive": false
       },
       {
-        "gestora": "SOLVENTIS S.G.I.I.C., S.A.",
-        "gestora_short": "SOLVENTIS S.G.I.I.C.",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "SOLVENTIS",
-        "aum_m": 188.3,
-        "fund_count": 11,
-        "avg_fee_bps": 7.0,
-        "potential_rev_k": 132.0,
-        "is_captive": false
-      },
-      {
         "gestora": "ABACO CAPITAL, SGIIC, S.A.",
         "gestora_short": "ABACO CAPITAL",
         "current_depositario": "SINGULAR BANK",
@@ -1230,17 +1241,6 @@
         "fund_count": 3,
         "avg_fee_bps": 8.0,
         "potential_rev_k": 140.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "SILVER ALPHA ASSET MANAGEMENT SGIIC, S.A.",
-        "gestora_short": "SILVER ALPHA ASSET MANAGEMENT",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "SILVER ALPHA",
-        "aum_m": 154.5,
-        "fund_count": 3,
-        "avg_fee_bps": 7.67,
-        "potential_rev_k": 119.0,
         "is_captive": false
       },
       {
@@ -1266,14 +1266,14 @@
         "is_captive": false
       },
       {
-        "gestora": "JULIUS BAER GESTION, SGIIC, S.A.",
-        "gestora_short": "JULIUS BAER GESTION",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "JULIUS BAER",
-        "aum_m": 131.9,
-        "fund_count": 2,
-        "avg_fee_bps": 6.0,
-        "potential_rev_k": 79.0,
+        "gestora": "DIAGONAL ASSET MANAGEMENT SGIIC, S.A.",
+        "gestora_short": "DIAGONAL ASSET MANAGEMENT",
+        "current_depositario": "BANKINTER",
+        "grupo": "DIAGONAL ASSET SGIIC",
+        "aum_m": 137.3,
+        "fund_count": 7,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 96.0,
         "is_captive": false
       },
       {
@@ -1285,6 +1285,17 @@
         "fund_count": 2,
         "avg_fee_bps": 6.0,
         "potential_rev_k": 76.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "AUGUSTUS CAPITAL ASSET MANAGEMENT, SGIIC, S.A.",
+        "gestora_short": "AUGUSTUS CAPITAL ASSET MANAGEMENT",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "AUGUSTUS CAPITAL ASSET MANAGEMENT",
+        "aum_m": 122.5,
+        "fund_count": 2,
+        "avg_fee_bps": 7.0,
+        "potential_rev_k": 86.0,
         "is_captive": false
       },
       {
@@ -1321,6 +1332,17 @@
         "is_captive": false
       },
       {
+        "gestora": "QUADRIGA ASSET MANAGERS, SGIIC, S.A.",
+        "gestora_short": "QUADRIGA ASSET MANAGERS",
+        "current_depositario": "BNP PARIBAS",
+        "grupo": "BANQUE NATIONALE DE PARIS, S.A.",
+        "aum_m": 70.2,
+        "fund_count": 3,
+        "avg_fee_bps": 0.0,
+        "potential_rev_k": 0,
+        "is_captive": false
+      },
+      {
         "gestora": "ARCANO CAPITAL, SGIIC, S.A.",
         "gestora_short": "ARCANO CAPITAL",
         "current_depositario": "BNP PARIBAS",
@@ -1336,10 +1358,32 @@
         "gestora_short": "TALENTA GESTION",
         "current_depositario": "UBS AG",
         "grupo": "TALENTA GESTION SGIIC SA",
-        "aum_m": 37.8,
-        "fund_count": 1,
+        "aum_m": 56.4,
+        "fund_count": 2,
         "avg_fee_bps": 5.0,
-        "potential_rev_k": 19.0,
+        "potential_rev_k": 28.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "MDEF GESTEFIN, S.A.U., SGIIC  (SOCIEDAD UNIPERSONAL)",
+        "gestora_short": "MDEF GESTEFIN",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "GESTEFIN, SA, SGIIC",
+        "aum_m": 55.7,
+        "fund_count": 2,
+        "avg_fee_bps": 6.0,
+        "potential_rev_k": 33.0,
+        "is_captive": false
+      },
+      {
+        "gestora": "GESINTER, S.G.I.I.C., S.A.",
+        "gestora_short": "GESINTER",
+        "current_depositario": "CACEIS BANK SPAIN",
+        "grupo": "GESINTER, S.G.I.I.C., S.A.",
+        "aum_m": 34.6,
+        "fund_count": 4,
+        "avg_fee_bps": 10.0,
+        "potential_rev_k": 35.0,
         "is_captive": false
       },
       {
@@ -1351,50 +1395,6 @@
         "fund_count": 2,
         "avg_fee_bps": 9.0,
         "potential_rev_k": 30.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "BEKA ASSET MANAGEMENT, SGIIC, S.A.",
-        "gestora_short": "BEKA ASSET MANAGEMENT",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "BEKA FINANCIAL MARKETS HOLDINGS, S.L.",
-        "aum_m": 30.8,
-        "fund_count": 2,
-        "avg_fee_bps": 9.0,
-        "potential_rev_k": 28.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "GESINTER, S.G.I.I.C., S.A.",
-        "gestora_short": "GESINTER",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "GESINTER, S.G.I.I.C., S.A.",
-        "aum_m": 28.4,
-        "fund_count": 3,
-        "avg_fee_bps": 10.0,
-        "potential_rev_k": 28.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "MDEF GESTEFIN, S.A.U., SGIIC  (SOCIEDAD UNIPERSONAL)",
-        "gestora_short": "MDEF GESTEFIN",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "GESTEFIN, SA, SGIIC",
-        "aum_m": 27.8,
-        "fund_count": 1,
-        "avg_fee_bps": 6.0,
-        "potential_rev_k": 17.0,
-        "is_captive": false
-      },
-      {
-        "gestora": "MUZA GESTIÓN DE ACTIVOS, SGIIC, S.A.",
-        "gestora_short": "MUZA GESTIÓN DE ACTIVOS",
-        "current_depositario": "CACEIS BANK SPAIN",
-        "grupo": "MUZA",
-        "aum_m": 26.4,
-        "fund_count": 1,
-        "avg_fee_bps": 7.0,
-        "potential_rev_k": 19.0,
         "is_captive": false
       }
     ]
