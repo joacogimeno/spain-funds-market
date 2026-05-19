@@ -1,5 +1,5 @@
 {
-  "date": "2025-Q3",
+  "date": "2025-Q4",
   "note": "Inversis exits Banca March group upon Euroclear acquisition (expected Aug 2026). All intragroup pricing then becomes arm's-length commercial pricing.",
   "march_am": {
     "gestora": "MARCH ASSET MANAGEMENT, S.G.I.I.C., S.A.U.",
@@ -932,54 +932,54 @@
   "market_benchmarks": {
     "universe": "RFECP + M + MCP (all Spanish IICs, all depositaries)",
     "source": "CNMV Estadísticas IIC 2025 Q3 Anexo A2.2",
-    "total_isins": 148,
-    "total_aum_bn": 54.4,
+    "total_isins": 150,
+    "total_aum_bn": 56.4,
     "march_am_bps": 3.25,
-    "march_am_rfecp_bps": 0.4,
-    "march_am_percentile": 5.4,
+    "march_am_rfecp_bps": 0.47,
+    "march_am_percentile": 4.7,
     "percentiles": {
       "p10": 2.0,
       "p25": 3.0,
       "p50": 5.0,
       "p75": 6.0,
-      "p90": 8.6,
-      "wtd_avg": 4.97
+      "p90": 8.2,
+      "wtd_avg": 5.15
     },
     "fee_distribution": [
       {
         "label": "0 bps",
-        "isins": 8,
-        "aum_bn": 1.46,
-        "aum_pct": 2.7
+        "isins": 7,
+        "aum_bn": 1.33,
+        "aum_pct": 2.4
       },
       {
         "label": "0–2 bps",
         "isins": 21,
-        "aum_bn": 6.02,
-        "aum_pct": 11.1
+        "aum_bn": 6.15,
+        "aum_pct": 10.9
       },
       {
         "label": "2-5 bps",
-        "isins": 68,
-        "aum_bn": 33.28,
-        "aum_pct": 61.1
+        "isins": 70,
+        "aum_bn": 32.99,
+        "aum_pct": 58.5
       },
       {
         "label": "5-7 bps",
-        "isins": 15,
-        "aum_bn": 1.53,
-        "aum_pct": 2.8
+        "isins": 16,
+        "aum_bn": 1.49,
+        "aum_pct": 2.6
       },
       {
         "label": "7-9 bps",
         "isins": 21,
-        "aum_bn": 8.19,
-        "aum_pct": 15.0
+        "aum_bn": 10.32,
+        "aum_pct": 18.3
       },
       {
         "label": "9-12 bps",
         "isins": 13,
-        "aum_bn": 3.93,
+        "aum_bn": 4.04,
         "aum_pct": 7.2
       },
       {
@@ -992,55 +992,55 @@
     "private_bank_peers": [
       {
         "group": "BANCA MARCH",
-        "liquid_aum_m": 1517.2,
-        "wtd_dep_bps": 0.4,
+        "liquid_aum_m": 1398.8,
+        "wtd_dep_bps": 0.47,
         "is_march_am": true
       },
       {
         "group": "ANDBANK",
-        "liquid_aum_m": 549.7,
-        "wtd_dep_bps": 5.03,
+        "liquid_aum_m": 631.7,
+        "wtd_dep_bps": 5.02,
         "is_march_am": false
       },
       {
         "group": "CREDIT AGRICOLE",
-        "liquid_aum_m": 508.1,
-        "wtd_dep_bps": 5.38,
+        "liquid_aum_m": 487.1,
+        "wtd_dep_bps": 5.37,
         "is_march_am": false
       },
       {
         "group": "MEDIOLANUM",
-        "liquid_aum_m": 442.6,
+        "liquid_aum_m": 463.4,
         "wtd_dep_bps": 12.0,
         "is_march_am": false
       },
       {
         "group": "DEUTSCHE BANK",
-        "liquid_aum_m": 439.7,
+        "liquid_aum_m": 449.6,
         "wtd_dep_bps": 3.0,
         "is_march_am": false
       },
       {
         "group": "ABANTE",
-        "liquid_aum_m": 407.0,
+        "liquid_aum_m": 423.2,
         "wtd_dep_bps": 5.0,
         "is_march_am": false
       },
       {
         "group": "UBS",
-        "liquid_aum_m": 226.9,
+        "liquid_aum_m": 227.1,
         "wtd_dep_bps": 4.0,
         "is_march_am": false
       },
       {
         "group": "MORA BANC",
-        "liquid_aum_m": 189.5,
-        "wtd_dep_bps": 5.53,
+        "liquid_aum_m": 199.6,
+        "wtd_dep_bps": 5.55,
         "is_march_am": false
       },
       {
         "group": "A&G",
-        "liquid_aum_m": 84.8,
+        "liquid_aum_m": 91.7,
         "wtd_dep_bps": 8.0,
         "is_march_am": false
       }
@@ -1050,42 +1050,42 @@
         "isin": "ES0160873008",
         "group": "BANCA MARCH",
         "fund": "MARCH PAGARES, FI",
-        "aum_m": 581.1,
-        "is_march_am": true
-      },
-      {
-        "isin": "ES0160873024",
-        "group": "BANCA MARCH",
-        "fund": "MARCH PAGARES, FI",
-        "aum_m": 337.5,
+        "aum_m": 538.3,
         "is_march_am": true
       },
       {
         "isin": "ES0161032034",
         "group": "BANCA MARCH",
         "fund": "MARCH RENTA FIJA CORTO PLAZO, FI",
-        "aum_m": 305.2,
+        "aum_m": 299.1,
+        "is_march_am": true
+      },
+      {
+        "isin": "ES0160873024",
+        "group": "BANCA MARCH",
+        "fund": "MARCH PAGARES, FI",
+        "aum_m": 291.8,
         "is_march_am": true
       },
       {
         "isin": "ES0161032000",
         "group": "BANCA MARCH",
         "fund": "MARCH RENTA FIJA CORTO PLAZO, FI",
-        "aum_m": 168.7,
-        "is_march_am": true
-      },
-      {
-        "isin": "ES0160873016",
-        "group": "BANCA MARCH",
-        "fund": "MARCH PAGARES, FI",
-        "aum_m": 31.7,
+        "aum_m": 144.0,
         "is_march_am": true
       },
       {
         "isin": "ES0161032018",
         "group": "BANCA MARCH",
         "fund": "MARCH RENTA FIJA CORTO PLAZO, FI",
-        "aum_m": 29.7,
+        "aum_m": 30.2,
+        "is_march_am": true
+      },
+      {
+        "isin": "ES0160873016",
+        "group": "BANCA MARCH",
+        "fund": "MARCH PAGARES, FI",
+        "aum_m": 25.5,
         "is_march_am": true
       },
       {
@@ -1094,16 +1094,9 @@
         "fund": "MUTUAFONDO COMPROMISO SOLIDARIO, FI",
         "aum_m": 3.6,
         "is_march_am": false
-      },
-      {
-        "isin": "ES0164990022",
-        "group": "MUTUA MADRILEÑA",
-        "fund": "MUTUAFONDO COMPROMISO SOLIDARIO, FI",
-        "aum_m": 0.0,
-        "is_march_am": false
       }
     ],
     "bbva_captive_ref_bps": 5.0,
-    "note": "Even BBVA depositing its own funds in BBVA (captive arrangement) charges 5.0 bps for RFECP products. Banca March at 0.40 bps is the sole outlier with meaningful AUM across all Spanish depositaries."
+    "note": "Even BBVA depositing its own funds in BBVA (captive arrangement) charges 5.0 bps for RFECP products. Banca March at 0.47 bps is the sole outlier with meaningful AUM across all Spanish depositaries."
   }
 }

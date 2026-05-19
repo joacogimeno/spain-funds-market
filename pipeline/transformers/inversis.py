@@ -423,11 +423,25 @@ def build_inversis():
         {'metric': 'Independence', 'inversis': 80, 'market_avg': 40, 'top_peer': 90},
     ]
 
-    # ── 11. Assemble output ────────────────────────────────────────
+    # ── 11. Pull combined depositary AUM (FI + SICAV + FIL est) from depositaria ─
+    # `inv_aum_k` above is FI-only (insights Excel). The depositaria.json summary
+    # has the consolidated view that includes SICAV (Q2 2025 XML) and an estimated
+    # FIL AUM (Cuadro 6.1 aggregate split by entity count).
+    inv_dep_row = next(
+        (s for s in dep_json.get('depositario_stats', []) if s.get('is_inversis')), {})
+    fi_aum_bn      = _sf(inv_dep_row.get('fi_aum_bn', 0))
+    sicav_aum_bn   = _sf(inv_dep_row.get('sicav_aum_bn', 0))
+    fil_est_aum_bn = _sf(inv_dep_row.get('fil_est_aum_bn', 0))
+    combined_aum_bn = round(fi_aum_bn + sicav_aum_bn + fil_est_aum_bn, 2)
+    combined_rank      = _sf(dep_summary.get('inversis_combined_rank'), 0)
+    combined_share_pct = _sf(dep_summary.get('inversis_combined_share_pct'), 0)
+    combined_market_aum_bn = _sf(dep_summary.get('combined_market_aum_bn'), 0)
+
+    # ── 12. Assemble output ────────────────────────────────────────
     return {
         'date': cnmv_date,
         'depositary': {
-            'aum_bn':           round(inv_aum_k / 1_000_000, 2),
+            'aum_bn':           round(inv_aum_k / 1_000_000, 2),  # FI-only (insights Excel)
             'class_count':      inv_class_cnt,
             'fund_count':       inv_fund_cnt,
             'gestora_count':    len(by_gestora),
@@ -439,6 +453,17 @@ def build_inversis():
             'by_gestora':       by_gestora,
             'by_group':         by_group,
             'market_ranking':   market_ranking,
+            # Consolidated view: FI + SICAV + estimated FIL AUM
+            'combined_aum_bn':         combined_aum_bn,
+            'combined_rank':           int(combined_rank),
+            'combined_share_pct':      combined_share_pct,
+            'fi_aum_bn':               fi_aum_bn,
+            'sicav_aum_bn':            sicav_aum_bn,
+            'fil_est_aum_bn':          fil_est_aum_bn,
+            'fil_entity_count':        int(_sf(inv_dep_row.get('fil_entity_count', 0))),
+            'alt_entity_count':        int(_sf(inv_dep_row.get('alt_entity_count', 0))),
+            'alt_rank':                int(_sf(dep_summary.get('inversis_alt_rank'), 0)),
+            'combined_market_aum_bn':  combined_market_aum_bn,
         },
         'gestora': gestora_section,
         'sicav': {

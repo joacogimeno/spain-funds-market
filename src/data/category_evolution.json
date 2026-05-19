@@ -462,6 +462,23 @@
       "Globales": 60.962,
       "Internacional": 139.152,
       "total": 453.42
+    },
+    {
+      "date": "2026-04",
+      "Monetarios": 24.487,
+      "RF Euro CP": 81.599,
+      "RF Euro LP": 81.601,
+      "RF Mixta Euro": 21.143,
+      "RV Mixta Euro": 0.792,
+      "RV Nacional": 3.683,
+      "Garantizados RF": 4.634,
+      "Garantizados RV": 1.748,
+      "Retorno Absoluto": 9.512,
+      "Fondos Índice": 7.491,
+      "Objetivo Rentabilidad": 18.448,
+      "Globales": 63.082,
+      "Internacional": 147.299,
+      "total": 465.52
     }
   ],
   "annual": [
@@ -671,134 +688,134 @@
   "treemap": [
     {
       "category": "Internacional",
-      "aum_bn": 139.15,
-      "yoy_growth": 10.6
+      "aum_bn": 147.3,
+      "yoy_growth": 20.6
     },
     {
       "category": "RF Euro CP",
-      "aum_bn": 83.72,
-      "yoy_growth": 37.7
+      "aum_bn": 81.6,
+      "yoy_growth": 29.8
     },
     {
       "category": "RF Euro LP",
-      "aum_bn": 79.44,
-      "yoy_growth": 3.5
+      "aum_bn": 81.6,
+      "yoy_growth": 4.3
     },
     {
       "category": "Globales",
-      "aum_bn": 60.96,
-      "yoy_growth": 8.8
+      "aum_bn": 63.08,
+      "yoy_growth": 10.4
     },
     {
       "category": "Monetarios",
-      "aum_bn": 24.14,
-      "yoy_growth": 1.3
+      "aum_bn": 24.49,
+      "yoy_growth": -0.1
     },
     {
       "category": "RF Mixta Euro",
-      "aum_bn": 21.11,
-      "yoy_growth": 21.6
+      "aum_bn": 21.14,
+      "yoy_growth": 26.1
     },
     {
       "category": "Objetivo Rentabilidad",
-      "aum_bn": 18.04,
-      "yoy_growth": -9.8
+      "aum_bn": 18.45,
+      "yoy_growth": -8.3
     },
     {
       "category": "Retorno Absoluto",
-      "aum_bn": 9.39,
-      "yoy_growth": 23.8
+      "aum_bn": 9.51,
+      "yoy_growth": 24.0
     },
     {
       "category": "Fondos Índice",
-      "aum_bn": 6.93,
-      "yoy_growth": 2.0
+      "aum_bn": 7.49,
+      "yoy_growth": 12.5
     },
     {
       "category": "Garantizados RF",
-      "aum_bn": 4.56,
-      "yoy_growth": -23.9
+      "aum_bn": 4.63,
+      "yoy_growth": -20.6
     },
     {
       "category": "RV Nacional",
-      "aum_bn": 3.46,
-      "yoy_growth": 16.8
+      "aum_bn": 3.68,
+      "yoy_growth": 22.7
     },
     {
       "category": "Garantizados RV",
       "aum_bn": 1.75,
-      "yoy_growth": -44.1
+      "yoy_growth": -42.9
     },
     {
       "category": "RV Mixta Euro",
-      "aum_bn": 0.77,
-      "yoy_growth": 6.1
+      "aum_bn": 0.79,
+      "yoy_growth": 9.8
     }
   ],
   "growth_rates": [
     {
       "category": "RF Euro CP",
-      "growth_pct": 37.7,
-      "aum_bn": 83.72
-    },
-    {
-      "category": "Retorno Absoluto",
-      "growth_pct": 23.8,
-      "aum_bn": 9.39
+      "growth_pct": 29.8,
+      "aum_bn": 81.6
     },
     {
       "category": "RF Mixta Euro",
-      "growth_pct": 21.6,
-      "aum_bn": 21.11
+      "growth_pct": 26.1,
+      "aum_bn": 21.14
+    },
+    {
+      "category": "Retorno Absoluto",
+      "growth_pct": 24.0,
+      "aum_bn": 9.51
     },
     {
       "category": "RV Nacional",
-      "growth_pct": 16.8,
-      "aum_bn": 3.46
+      "growth_pct": 22.7,
+      "aum_bn": 3.68
     },
     {
       "category": "Internacional",
-      "growth_pct": 10.6,
-      "aum_bn": 139.15
-    },
-    {
-      "category": "Globales",
-      "growth_pct": 8.8,
-      "aum_bn": 60.96
-    },
-    {
-      "category": "RV Mixta Euro",
-      "growth_pct": 6.1,
-      "aum_bn": 0.77
-    },
-    {
-      "category": "RF Euro LP",
-      "growth_pct": 3.5,
-      "aum_bn": 79.44
+      "growth_pct": 20.6,
+      "aum_bn": 147.3
     },
     {
       "category": "Fondos Índice",
-      "growth_pct": 2.0,
-      "aum_bn": 6.93
+      "growth_pct": 12.5,
+      "aum_bn": 7.49
+    },
+    {
+      "category": "Globales",
+      "growth_pct": 10.4,
+      "aum_bn": 63.08
+    },
+    {
+      "category": "RV Mixta Euro",
+      "growth_pct": 9.8,
+      "aum_bn": 0.79
+    },
+    {
+      "category": "RF Euro LP",
+      "growth_pct": 4.3,
+      "aum_bn": 81.6
     },
     {
       "category": "Monetarios",
-      "growth_pct": 1.3,
-      "aum_bn": 24.14
+      "growth_pct": -0.1,
+      "aum_bn": 24.49
     },
     {
       "category": "Objetivo Rentabilidad",
-      "growth_pct": -9.8,
-      "aum_bn": 18.04
+      "growth_pct": -8.3,
+      "aum_bn": 18.45
     },
     {
       "category": "Garantizados RF",
-      "growth_pct": -23.9,
-      "aum_bn": 4.56
+      "growth_pct": -20.6,
+      "aum_bn": 4.63
     },
     {
       "category": "Garantizados RV",
-      "growth_pct": -44.1,
+      "growth_pct": -42.9,
       "aum_bn": 1.75
     }
   ]

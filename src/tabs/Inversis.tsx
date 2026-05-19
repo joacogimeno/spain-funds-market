@@ -51,6 +51,10 @@ const d = rawData as {
     market_share_pct: number; rank_aum: number; rank_gestoras: number;
     wtd_fee_bps: number; est_annual_rev_m: number;
     by_gestora: ByGestora[]; by_group: ByGroup[]; market_ranking: MarketRankEntry[];
+    combined_aum_bn?: number; combined_rank?: number; combined_share_pct?: number;
+    fi_aum_bn?: number; sicav_aum_bn?: number; fil_est_aum_bn?: number;
+    fil_entity_count?: number; alt_entity_count?: number; alt_rank?: number;
+    combined_market_aum_bn?: number;
   };
   gestora: {
     name: string; aum_bn: number; growth_1y: number | null; growth_ytd: number | null;
@@ -197,11 +201,40 @@ function OverviewSection() {
       <div>
         <SectionHeader title="Depositary Business" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-          <KpiCard title="Depositary AUM"      value={fmtB(dep.aum_bn)}              subtitle="Banco Inversis book" />
-          <KpiCard title="Market Share"        value={fmtPct(dep.market_share_pct)}  subtitle={`Rank #${dep.rank_aum} by AUM`} />
-          <KpiCard title="Rank by Gestoras"    value={`#${dep.rank_gestoras}`}        subtitle="2nd most clients in Spain" />
-          <KpiCard title="Active Clients"      value={`${dep.gestora_count}`}         subtitle="gestoras in custody" />
-          <KpiCard title="Funds in Custody"    value={`${dep.fund_count}`}            subtitle={`${dep.class_count} share classes`} />
+          {dep.combined_aum_bn != null ? (
+            (() => {
+              const invPub = (depoData.summary as Record<string, unknown>).inversis_published as
+                | { fi_bn: number; sicav_bn: number; pensiones_bn: number; epsv_bn: number; alternativos_bn: number; total_bn: number }
+                | undefined;
+              const subtitle = invPub
+                ? `FI \u20AC${invPub.fi_bn.toFixed(2)}B + SICAV \u20AC${invPub.sicav_bn.toFixed(2)}B + Alts \u20AC${invPub.alternativos_bn.toFixed(2)}B + Pens \u20AC${invPub.pensiones_bn.toFixed(2)}B + EPSV \u20AC${invPub.epsv_bn.toFixed(2)}B`
+                : `FI \u20AC${(dep.fi_aum_bn ?? 0).toFixed(2)}B + SICAV \u20AC${(dep.sicav_aum_bn ?? 0).toFixed(2)}B + FIL est \u20AC${(dep.fil_est_aum_bn ?? 0).toFixed(2)}B`;
+              return (
+                <KpiCard
+                  title="Depositary AUM (combined)"
+                  value={fmtB(invPub?.total_bn ?? dep.combined_aum_bn)}
+                  subtitle={subtitle}
+                />
+              );
+            })()
+          ) : (
+            <KpiCard title="Depositary AUM" value={fmtB(dep.aum_bn)} subtitle="Banco Inversis book (FI only)" />
+          )}
+          <KpiCard
+            title="Market Share (combined)"
+            value={fmtPct(dep.combined_share_pct ?? dep.market_share_pct)}
+            subtitle={`Rank #${dep.combined_rank ?? dep.rank_aum} by combined AUM`}
+          />
+          <KpiCard title="Rank by Gestoras"    value={`#${dep.rank_gestoras}`}        subtitle="2nd most clients in Spain (FI+SICAV)" />
+          {dep.alt_rank != null && dep.alt_rank > 0 && (
+            <KpiCard
+              title="Alternativos Rank"
+              value={`#${dep.alt_rank}`}
+              subtitle={`${dep.alt_entity_count ?? 0} entities (FIL ${dep.fil_entity_count ?? 0})`}
+            />
+          )}
+          <KpiCard title="Active Clients"      value={`${dep.gestora_count}`}         subtitle="gestoras in custody (FI+SICAV)" />
+          <KpiCard title="Funds in Custody"    value={`${dep.fund_count}`}            subtitle={`${dep.class_count} share classes (FI)`} />
           <KpiCard title="Est. Revenue"        value={`€${dep.est_annual_rev_m.toFixed(2)}M`} subtitle="annual depositary fees" />
         </div>
       </div>
@@ -352,8 +385,16 @@ function MarketSection() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
       {/* Market summary KPIs */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-        <KpiCard title="Total Market AUM" value={fmtB(mc.total_depositario_aum_bn)} subtitle="all depositarios" />
-        <KpiCard title="Inversis Share"   value={fmtPct(dep.market_share_pct)}      subtitle={`Rank #${dep.rank_aum}`} />
+        <KpiCard
+          title="Total Market AUM"
+          value={fmtB(dep.combined_market_aum_bn ?? mc.total_depositario_aum_bn)}
+          subtitle="FI + SICAV + FIL est."
+        />
+        <KpiCard
+          title="Inversis Share"
+          value={fmtPct(dep.combined_share_pct ?? dep.market_share_pct)}
+          subtitle={`Rank #${dep.combined_rank ?? dep.rank_aum} (combined)`}
+        />
         <KpiCard title="Rank by Clients"  value={`#${dep.rank_gestoras}`}            subtitle="gestoras served" />
         <KpiCard title="Mkt Fee Median"   value={fmtBps(mc.mkt_dep_fee_p50_bps)}    subtitle="depositario avg" />
         <KpiCard title="Inversis Avg Fee" value={fmtBps(mc.inv_avg_fee_bps)}         subtitle="vs median" />
@@ -725,7 +766,7 @@ export default function Inversis() {
           </h2>
           <p style={{ margin: '4px 0 0', fontSize: 13, color: '#8888a0',
             fontFamily: "'Outfit', sans-serif" }}>
-            Banco Inversis depositary ({dep.gestora_count} gestoras · {fmtB(dep.aum_bn)}) +
+            Banco Inversis depositary ({dep.gestora_count} gestoras · {fmtB(dep.combined_aum_bn ?? dep.aum_bn)} combined) +
             Inversis Gestión ({fmtB(d.gestora.aum_bn)} AUM) · Data: CNMV {d.date}
           </p>
         </div>

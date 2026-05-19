@@ -10,7 +10,7 @@ import data from '../data/cnmv_depositaria.json';
 const {
   summary, depositario_stats, gestora_depositario, fund_detail,
   opportunity_targets, market_share_chart, fee_by_depositario,
-  inversis_by_gestora, qualitative_analysis,
+  inversis_by_gestora, qualitative_analysis, alternativos_stats,
   depositarios, gestoras, categories,
 } = data as typeof data & {
   inversis_by_gestora: Array<{
@@ -20,6 +20,11 @@ const {
   }>;
   qualitative_analysis: Array<{
     type: string; severity: string; title: string; body: string;
+  }>;
+  alternativos_stats: Array<{
+    depositario: string; entity_count: number; fil_count: number;
+    fil_aum_est_bn: number; by_type: Record<string, number>;
+    is_inversis: boolean;
   }>;
 };
 
@@ -51,8 +56,10 @@ export default function Depositaria() {
       }}>
         <span style={{ color: '#c0c0d0', fontWeight: 600 }}>Scope:</span>{' '}
         Spanish FI (CNMV Anexo A1.1 + A2.2, {summary.date}) +
-        Spanish SICAV (CNMV SOCREGISTRO + SOCTRIM, {(summary as Record<string, unknown>).sicav_period as string ?? 'latest quarter'}).
-        Excludes FIL (hedge funds), FCR/FCRE (private equity), foreign IICs and pension funds.
+        Spanish SICAV (CNMV SOCREGISTRO + SOCTRIM, {(summary as Record<string, unknown>).sicav_period as string ?? 'latest quarter'}) +
+        Alternativos (FIL, FCR/SCR, SICC/FICC, FILPE — entity counts from CNMV registry).
+        Pensiones / EPSV / true Alternativos AUM overlaid from <strong style={{ color: '#10b981' }}>FundsPeople IX Ranking de Depositaría 2026</strong> where
+        published (Cecabank pensiones; BNP Paribas alternativos; Inversis full breakdown). Other entities&apos; pensions/EPSV are not in the public dataset.
         SICAV depositary fees are not published by CNMV — fee aggregates reflect FI only.
       </div>
 
@@ -64,16 +71,25 @@ export default function Depositaria() {
           subtitle={`${summary.total_funds.toLocaleString()} funds custodied`}
         />
         <KpiCard
-          title="Market AUM"
-          value={`\u20AC${summary.total_aum_bn}B`}
-          subtitle={`${summary.total_gestoras} gestoras`}
+          title="Market AUM (combined)"
+          value={`\u20AC${((summary as Record<string, unknown>).combined_market_aum_bn as number ?? summary.total_aum_bn).toFixed(1)}B`}
+          subtitle={`FI \u20AC${summary.total_aum_bn}B + SICAV \u20AC${(summary as Record<string, unknown>).sicav_aum_bn as number}B + FIL est \u20AC${(summary as Record<string, unknown>).alternativos_fil_aum_bn as number}B`}
         />
+        {(summary as Record<string, unknown>).published_total_aum_bn != null && (
+          <KpiCard
+            title="Industry Total (FundsPeople IX 2026)"
+            value={`\u20AC${((summary as Record<string, unknown>).published_total_aum_bn as number).toFixed(0)}B`}
+            delta="+12% YoY"
+            deltaPositive={true}
+            subtitle={`Pens \u20AC${((summary as Record<string, unknown>).published_pensions_total_bn as number).toFixed(0)}B \u00b7 EPSV \u20AC${((summary as Record<string, unknown>).published_epsv_total_bn as number).toFixed(0)}B \u00b7 Alts \u20AC${((summary as Record<string, unknown>).published_alternativos_total_bn as number).toFixed(0)}B`}
+          />
+        )}
         <KpiCard
-          title="Inversis AUM"
-          value={`\u20AC${summary.inversis_aum_bn}B`}
-          delta={`${summary.inversis_market_share_pct}% market share`}
+          title="Inversis AUM (combined)"
+          value={`\u20AC${((summary as Record<string, unknown>).inversis_combined_aum_bn as number ?? summary.inversis_aum_bn).toFixed(2)}B`}
+          delta={`${(summary as Record<string, unknown>).inversis_combined_share_pct ?? summary.inversis_market_share_pct}% combined share`}
           deltaPositive={true}
-          subtitle={`Rank #${summary.inversis_rank_aum} by AUM`}
+          subtitle={`Rank #${(summary as Record<string, unknown>).inversis_combined_rank ?? summary.inversis_rank_aum} \u00b7 FI \u20AC${summary.inversis_aum_bn}B + SICAV \u20AC${((summary as Record<string, unknown>).sicav_aum_bn as number)?.toFixed(2) ?? '0'}B + FIL est \u20AC${((summary as Record<string, unknown>).inversis_alt_fil_aum_bn as number)?.toFixed(2) ?? '0'}B`}
         />
         <KpiCard
           title="Inversis Clients"
@@ -87,6 +103,15 @@ export default function Depositaria() {
             title="Est. Annual Rev."
             value={`\u20AC${((summary as Record<string, unknown>).inversis_est_annual_rev_m as number).toFixed(2)}M`}
             subtitle="Depositary fee income (est.)"
+          />
+        )}
+        {(summary as Record<string, unknown>).inversis_alt_entities != null && (
+          <KpiCard
+            title="Alternativos"
+            value={String((summary as Record<string, unknown>).inversis_alt_entities)}
+            delta={`Rank #${(summary as Record<string, unknown>).inversis_alt_rank} of ${(summary as Record<string, unknown>).alternativos_total_depositarios}`}
+            deltaPositive={true}
+            subtitle={`FIL: ${(summary as Record<string, unknown>).inversis_alt_fil_count} entities · est. \u20AC${((summary as Record<string, unknown>).inversis_alt_fil_aum_bn as number).toFixed(1)}B AUM`}
           />
         )}
       </div>
@@ -352,6 +377,45 @@ export default function Depositaria() {
         </div>
       )}
 
+      {/* === SECTION B2: ALTERNATIVOS (FIL + Capital Riesgo) === */}
+      {alternativos_stats && alternativos_stats.length > 0 && (
+        <div style={{ borderTop: '2px solid #f59e0b30', paddingTop: 24, marginTop: 8 }}>
+          <SectionHeader
+            title="Alternativos: FIL + Capital Riesgo"
+            source={`${summary.alternativos_total_entities.toLocaleString()} entities across ${alternativos_stats.length} depositarios. AUM not exposed in CNMV public data; FIL aggregate (\u20AC${summary.alternativos_fil_aum_bn.toFixed(1)}B from Cuadro 6.1) distributed proportionally by FIL entity count.`}
+          />
+          <DataTable
+            data={alternativos_stats.map(a => ({
+              depositario: a.depositario,
+              entity_count: a.entity_count,
+              fil_count: a.fil_count,
+              fil_aum_est_bn: a.fil_aum_est_bn,
+              fcr_count: (a.by_type.FCR ?? 0) + (a.by_type.FCR_Pyme ?? 0) + (a.by_type.FCR_Europeo ?? 0),
+              scr_count: (a.by_type.SCR ?? 0) + (a.by_type.SCR_Pyme ?? 0),
+              cerrado_count: (a.by_type.SICC ?? 0) + (a.by_type.FICC ?? 0),
+              is_inversis: a.is_inversis,
+            }))}
+            columns={[
+              { key: 'depositario', label: 'Depositario', width: 320,
+                format: (_v, row) => (
+                  <span style={{ color: (row as { is_inversis: boolean }).is_inversis ? '#10b981' : '#e8e8f0',
+                                 fontWeight: (row as { is_inversis: boolean }).is_inversis ? 600 : 400 }}>
+                    {(row as { depositario: string }).depositario}
+                  </span>
+                ) },
+              { key: 'entity_count', label: 'Total entities', align: 'right' },
+              { key: 'fil_count', label: 'FIL', align: 'right' },
+              { key: 'fil_aum_est_bn', label: 'Est. FIL AUM (\u20ACB)', align: 'right',
+                format: (v) => (v as number).toFixed(2) },
+              { key: 'fcr_count', label: 'FCR', align: 'right' },
+              { key: 'scr_count', label: 'SCR', align: 'right' },
+              { key: 'cerrado_count', label: 'SICC/FICC', align: 'right' },
+            ]}
+            defaultSort="entity_count"
+          />
+        </div>
+      )}
+
       {/* === SECTION C: QUALITATIVE ANALYSIS === */}
       {qualitative_analysis && qualitative_analysis.length > 0 && (
         <div style={{ borderTop: '2px solid #3b82f630', paddingTop: 24, marginTop: 8 }}>
@@ -414,42 +478,50 @@ function ByDepositarioView({ depoFilter, setDepoFilter }: { depoFilter: string; 
 
   return (
     <>
-      {/* AUM bar chart */}
+      {/* AUM bar chart — stacked by asset type (FI / SICAV / Alts / Pensiones / EPSV) */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="AUM by Depositario" source={`CNMV Anexo A1.1 + A2.2 \u2014 ${summary.date}`} />
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={market_share_chart as Array<Record<string, unknown>>} layout="vertical"
-            margin={{ ...CHART_MARGIN, left: 170 }}>
+        <SectionHeader
+          title="AUM by Depositario \u2014 stacked (FI + SICAV + Alts + Pensiones + EPSV)"
+          source={`CNMV Anexo + SOCREGISTRO/SOCTRIM + FundsPeople IX 2026 overlay (Alts/Pensiones/EPSV where published) \u2014 ${summary.date}`}
+        />
+        <ResponsiveContainer width="100%" height={420}>
+          <BarChart
+            data={[...(stats as Array<Record<string, unknown>>)]
+              .sort((a, b) => Number(b.combined_aum_bn) - Number(a.combined_aum_bn))
+              .map(s => ({
+                depositario: String(s.depositario).replace(', S.A.', '').replace(', S.A', '').slice(0, 30),
+                depositario_full: s.depositario,
+                fi: s.fi_aum_bn,
+                sicav: s.sicav_aum_bn,
+                alts: s.alt_published_aum_bn ?? s.fil_est_aum_bn,
+                pens: s.pension_aum_bn ?? 0,
+                epsv: s.epsv_aum_bn ?? 0,
+                is_inversis: s.is_inversis,
+              }))}
+            layout="vertical" margin={{ ...CHART_MARGIN, left: 170 }}
+          >
             <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
             <XAxis type="number" tick={{ fontSize: 10, fill: '#8888a0' }}
               tickFormatter={(v: number) => `\u20AC${v.toFixed(0)}B`} />
             <YAxis dataKey="depositario" type="category" tick={{ fontSize: 10, fill: '#8888a0' }} width={165} />
             <Tooltip
-              formatter={(v: number | undefined) => [`\u20AC${(v ?? 0).toFixed(1)}B`, 'AUM']}
+              formatter={(v: unknown, name: unknown) => [`\u20AC${Number(v ?? 0).toFixed(2)}B`, String(name ?? '')]}
               contentStyle={{ background: '#1a1a2e', border: '1px solid #2a2a3a', borderRadius: 8 }}
               labelStyle={{ color: '#e8e8f0' }} itemStyle={{ color: '#c0c0d0' }}
             />
-            <Bar dataKey="aum_bn" name="AUM" radius={[0, 4, 4, 0]}
-              onClick={(_: unknown, idx: number) => {
-                const entry = (market_share_chart as Array<{ depositario_full: string }>)[idx];
-                setDepoFilter(entry.depositario_full);
-              }}
-              cursor="pointer"
-            >
-              {(market_share_chart as Array<{ is_inversis: boolean }>).map((entry, i) => (
-                <Cell key={i}
-                  fill={entry.is_inversis ? '#10b981' : CHART_COLORS[i % CHART_COLORS.length]}
-                  fillOpacity={0.8}
-                />
-              ))}
-            </Bar>
+            <Legend wrapperStyle={{ fontSize: 11 }} />
+            <Bar dataKey="fi"    name="FI"            stackId="a" fill="#3b82f6" />
+            <Bar dataKey="sicav" name="SICAV"         stackId="a" fill="#8b5cf6" />
+            <Bar dataKey="alts"  name="Alternativos"  stackId="a" fill="#f59e0b" />
+            <Bar dataKey="pens"  name="Pensiones"     stackId="a" fill="#10b981" />
+            <Bar dataKey="epsv"  name="EPSV"          stackId="a" fill="#06b6d4" radius={[0, 4, 4, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
 
       {/* Depositario Stats Table */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Depositario Overview" source={`CNMV Anexo A1.1 + A2.2 (FI) + SOCREGISTRO/SOCTRIM (SICAV) \u2014 ${summary.date}`} />
+        <SectionHeader title="Depositario Overview \u2014 Combined (FI + SICAV + Alts + Pensiones + EPSV)" source={`CNMV Anexo A1.1 + A2.2 (FI) + SOCREGISTRO/SOCTRIM (SICAV) + FundsPeople IX 2026 overlay for Alts/Pensiones/EPSV (green = published value, gray = CNMV-derived estimate) \u2014 ${summary.date}`} />
         <DataTable
           data={stats}
           columns={[
@@ -464,18 +536,36 @@ function ByDepositarioView({ depoFilter, setDepoFilter }: { depoFilter: string; 
                 }}>{short.length > 35 ? short.slice(0, 33) + '..' : short}</span>
               );
             }},
+            { key: 'combined_aum_bn', label: 'Combined AUM', align: 'right' as const,
+              format: (v: unknown) => `\u20AC${Number(v ?? 0).toFixed(2)}B` },
+            { key: 'fi_aum_bn', label: 'FI', align: 'right' as const,
+              format: (v: unknown) => `\u20AC${Number(v ?? 0).toFixed(2)}B` },
+            { key: 'sicav_aum_bn', label: 'SICAV', align: 'right' as const,
+              format: (v: unknown) => `\u20AC${Number(v ?? 0).toFixed(2)}B` },
+            { key: 'alt_published_aum_bn', label: 'Alts (FP)', align: 'right' as const,
+              format: (v: unknown, row?: Record<string, unknown>) => {
+                if (v != null) {
+                  return <span style={{ color: '#10b981', fontWeight: 600 }}>{`\u20AC${Number(v).toFixed(2)}B`}</span>;
+                }
+                const fil = Number(row?.fil_est_aum_bn ?? 0);
+                return <span style={{ color: '#8888a0' }}>{`\u20AC${fil.toFixed(2)}B`}<span style={{ fontSize: 9, marginLeft: 3 }}>est</span></span>;
+              }},
+            { key: 'pension_aum_bn', label: 'Pensiones (FP)', align: 'right' as const,
+              format: (v: unknown) => v != null
+                ? <span style={{ color: '#10b981', fontWeight: 600 }}>{`\u20AC${Number(v).toFixed(1)}B`}</span>
+                : <span style={{ color: '#555570' }}>n/a</span> },
+            { key: 'epsv_aum_bn', label: 'EPSV (FP)', align: 'right' as const,
+              format: (v: unknown) => v != null
+                ? <span style={{ color: '#10b981', fontWeight: 600 }}>{`\u20AC${Number(v).toFixed(2)}B`}</span>
+                : <span style={{ color: '#555570' }}>n/a</span> },
+            { key: 'alt_entity_count', label: 'Alt. entities', align: 'right' as const,
+              format: (v: unknown) => String(v ?? 0) },
             { key: 'gestora_count', label: 'Gestoras', align: 'right' as const },
             { key: 'fund_count', label: 'Funds', align: 'right' as const },
-            { key: 'total_aum_bn', label: 'AUM (B)', align: 'right' as const,
-              format: (v: unknown) => `\u20AC${Number(v).toFixed(1)}B` },
-            { key: 'market_share_pct', label: 'Share', align: 'right' as const,
-              format: (v: unknown) => `${Number(v).toFixed(1)}%` },
             { key: 'avg_depo_fee', label: 'Avg Fee', align: 'right' as const,
               format: (v: unknown) => `${(Number(v) * 100).toFixed(1)} bps` },
-            { key: 'median_depo_fee', label: 'Med Fee', align: 'right' as const,
-              format: (v: unknown) => `${(Number(v) * 100).toFixed(1)} bps` },
           ]}
-          defaultSort="total_aum_bn"
+          defaultSort="combined_aum_bn"
           onRowClick={(row) => setDepoFilter(String(row.depositario))}
         />
       </div>

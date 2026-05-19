@@ -4,16 +4,43 @@ Also reads inversis_depositary_insights_2025Q3.xlsx for:
 - Full-market depositary AUM ranking (depositary_ranking sheet)
 - Inversis client detail with estimated deposit fee revenue (by_gestora sheet)
 - Computed qualitative analysis for the Depositar\u00eda tab
+
+Pensiones / EPSV and full-scope Alternativos AUM are NOT in CNMV public feeds.
+We overlay published values from Data/published/depositary_published_2025Q4.json
+(FundsPeople IX 2026 ranking + Cecabank press releases + INVERCO totals).
 """
+import json
 import os
 import openpyxl
 
 from ..parsers.cnmv_registry import parse_cnmv_registry
 from ..parsers.cnmv_fees import parse_cnmv_fees, VOCACION_MAP
 from ..parsers.cnmv_sicav import parse_cnmv_sicav
+from ..parsers.cnmv_alternativos import parse_cnmv_alternativos
 from ..config import DATA_DIR, find_cnmv_file
 
 INSIGHTS_FILE = 'inversis_depositary_insights_2025Q3.xlsx'
+PUBLISHED_FILE = os.path.join(DATA_DIR, 'published', 'depositary_published_2025Q4.json')
+
+
+def _load_published_overlay():
+    """Load FundsPeople-published overlay (pensions, EPSV, true alts AUM)."""
+    if not os.path.exists(PUBLISHED_FILE):
+        return None
+    with open(PUBLISHED_FILE, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def _match_published(depositario_name, published):
+    """Return the published row whose match-key is a substring of the depositario name."""
+    if not published:
+        return None
+    name_up = (depositario_name or '').upper()
+    for row in published.get('depositaries', []):
+        key = (row.get('depositario_match') or '').upper()
+        if key and key in name_up:
+            return row
+    return None
 
 
 # Known captive pairs: grupo keyword → depositario keyword
@@ -200,6 +227,13 @@ def build_cnmv_depositaria():
     # full SICAV book (~€16B market in 2025; ~€3B at Inversis).
     sicav_records, sicav_period = parse_cnmv_sicav(cnmv_dir)
 
+    # Scrape CNMV per-entity pages for alternativo categories (FIL, FCR/SCR, SICC/FICC,
+    # FILPE, FESE). No bulk XML exists for these; AUM is not exposed on the public HTML
+    # pages so we track entity counts only and combine with the aggregate FIL AUM
+    # (Cuadro 6.1: IICIL €7.16B + IICIICIL €0.83B = €8.0B Q2 2025).
+    alt_cache = os.path.join(cnmv_dir, 'cnmv_alternativos_cache.json')
+    alternativos_records = parse_cnmv_alternativos(alt_cache, verbose=False)
+
     # Load Inversis depositary insights (richer data for market ranking + revenue)
     insights = _load_insights(cnmv_dir)
 
@@ -306,6 +340,12 @@ def build_cnmv_depositaria():
         depo_fees = [f['depo_fee'] for f in d_funds if f['depo_fee'] is not None and f['depo_fee'] > 0]
         gestoras = set(f['gestora'] for f in d_funds)
 
+        # AUM and counts split by fund_type (FI vs SICAV — alternativos appended below)
+        fi_funds    = [f for f in d_funds if f.get('fund_type') == 'FI']
+        sicav_funds = [f for f in d_funds if f.get('fund_type') == 'SICAV']
+        fi_aum_k    = sum(f['patrimonio_k'] or 0 for f in fi_funds)
+        sicav_aum_kk = sum(f['patrimonio_k'] or 0 for f in sicav_funds)
+
         depositario_stats.append({
             'depositario': d,
             'gestora_count': len(gestoras),
@@ -315,6 +355,22 @@ def build_cnmv_depositaria():
             'avg_depo_fee': round(sum(depo_fees) / len(depo_fees), 4) if depo_fees else 0,
             'median_depo_fee': _median(depo_fees),
             'is_inversis': INVERSIS_NAME in d,
+            # Per-asset-type breakdown (FI + SICAV from CNMV bulk feeds; alternativos
+            # added in a later loop once the alternativos scrape is processed below).
+            'fi_aum_bn':    round(fi_aum_k / 1_000_000, 2),
+            'fi_fund_count': len(fi_funds),
+            'sicav_aum_bn': round(sicav_aum_kk / 1_000_000, 2),
+            'sicav_fund_count': len(sicav_funds),
+            'fil_est_aum_bn': 0.0,   # filled in below from alternativos scrape
+            'fil_entity_count': 0,
+            'alt_entity_count': 0,
+            # Published overlay placeholders — set later from Funds People file.
+            'pension_aum_bn': None,
+            'epsv_aum_bn': None,
+            'alt_published_aum_bn': None,
+            'published_total_aum_bn': None,
+            'published_source': None,
+            'combined_aum_bn': round(aum_k / 1_000_000, 2),  # recomputed below
         })
 
     # === Gestora-Depositario relationships ===
@@ -543,6 +599,168 @@ def build_cnmv_depositaria():
             'is_march': 'MARCH ASSET' in g,
         })
 
+    # ── Alternativos: aggregate entity counts per depositary ──────────────
+    # AUM is not available per entity (CNMV public pages don't expose it).
+    # We expose entity counts and a per-depositary FIL AUM estimate (proportional
+    # split of the €8.0B Cuadro 6.1 aggregate by FIL entity count).
+    FIL_AGGREGATE_AUM_K = 7_989_231  # IICIL €7,156,484k + IICIICIL €832,747k (Q2 2025)
+    fil_total_entities = sum(1 for r in alternativos_records if r['fund_type'].startswith('FIL'))
+
+    alt_by_depo = {}
+    for r in alternativos_records:
+        d = r['depositario']
+        if d not in alt_by_depo:
+            alt_by_depo[d] = {'total': 0, 'by_type': {}, 'fil_count': 0}
+        alt_by_depo[d]['total'] += 1
+        ftype = r['fund_type']
+        alt_by_depo[d]['by_type'][ftype] = alt_by_depo[d]['by_type'].get(ftype, 0) + 1
+        if ftype.startswith('FIL'):
+            alt_by_depo[d]['fil_count'] += 1
+
+    alternativos_stats = []
+    for d, info in sorted(alt_by_depo.items(), key=lambda x: -x[1]['total']):
+        fil_aum_est_k = (info['fil_count'] / fil_total_entities * FIL_AGGREGATE_AUM_K
+                         if fil_total_entities else 0)
+        alternativos_stats.append({
+            'depositario': d,
+            'entity_count': info['total'],
+            'fil_count': info['fil_count'],
+            'fil_aum_est_bn': round(fil_aum_est_k / 1_000_000, 2),
+            'by_type': info['by_type'],
+            'is_inversis': INVERSIS_NAME in d,
+        })
+
+    inversis_alt = next((a for a in alternativos_stats if a['is_inversis']), None)
+    inversis_alt_rank = next(
+        (i + 1 for i, a in enumerate(alternativos_stats) if a['is_inversis']), 0)
+
+    # Enrich depositario_stats with alternativos counts + FIL est AUM, and recompute
+    # combined_aum_bn = FI + SICAV + (published alts || FIL est) + (published pensiones)
+    # + (published EPSV). Some depositarios appear only in alternativos (no FI/SICAV) —
+    # append those as new entries with zero FI/SICAV.
+    alt_lookup = {a['depositario']: a for a in alternativos_stats}
+    existing_depos = {ds['depositario'] for ds in depositario_stats}
+    published = _load_published_overlay()
+    for ds in depositario_stats:
+        a = alt_lookup.get(ds['depositario'])
+        if a:
+            ds['fil_est_aum_bn']    = a['fil_aum_est_bn']
+            ds['fil_entity_count']  = a['fil_count']
+            ds['alt_entity_count']  = a['entity_count']
+        # Apply Funds People overlay (pensions, EPSV, published alts; optional FI/SICAV)
+        pub = _match_published(ds['depositario'], published)
+        ds['fi_aum_bn_cnmv']    = ds['fi_aum_bn']     # preserve CNMV-derived for diff
+        ds['sicav_aum_bn_cnmv'] = ds['sicav_aum_bn']
+        if pub:
+            if pub.get('fi') is not None:
+                ds['fi_aum_bn'] = round(pub['fi'] / 1000, 3)
+            if pub.get('sicav') is not None:
+                ds['sicav_aum_bn'] = round(pub['sicav'] / 1000, 3)
+            if pub.get('pensiones') is not None:
+                ds['pension_aum_bn'] = round(pub['pensiones'] / 1000, 3)
+            if pub.get('epsv') is not None:
+                ds['epsv_aum_bn'] = round(pub['epsv'] / 1000, 3)
+            if pub.get('alternativos') is not None:
+                ds['alt_published_aum_bn'] = round(pub['alternativos'] / 1000, 3)
+            if pub.get('total') is not None:
+                ds['published_total_aum_bn'] = round(pub['total'] / 1000, 3)
+            ds['published_source'] = pub.get('source') or pub.get('source_other')
+        # Use published alts if available, else FIL-only proportional estimate
+        alt_for_combined = (ds['alt_published_aum_bn']
+                            if ds['alt_published_aum_bn'] is not None
+                            else ds['fil_est_aum_bn'])
+        pension_for_combined = ds['pension_aum_bn'] or 0
+        epsv_for_combined    = ds['epsv_aum_bn'] or 0
+        ds['combined_aum_bn'] = round(
+            ds['fi_aum_bn'] + ds['sicav_aum_bn'] + alt_for_combined
+            + pension_for_combined + epsv_for_combined, 2)
+    # Append alternativos-only depositarios (none in current data, but defensive)
+    for a in alternativos_stats:
+        if a['depositario'] in existing_depos:
+            continue
+        depositario_stats.append({
+            'depositario': a['depositario'],
+            'gestora_count': 0,
+            'fund_count': 0,
+            'total_aum_bn': 0,
+            'market_share_pct': 0,
+            'avg_depo_fee': 0,
+            'median_depo_fee': 0,
+            'is_inversis': a['is_inversis'],
+            'fi_aum_bn': 0.0,
+            'fi_fund_count': 0,
+            'sicav_aum_bn': 0.0,
+            'sicav_fund_count': 0,
+            'fil_est_aum_bn':    a['fil_aum_est_bn'],
+            'fil_entity_count':  a['fil_count'],
+            'alt_entity_count':  a['entity_count'],
+            'pension_aum_bn': None,
+            'epsv_aum_bn': None,
+            'alt_published_aum_bn': None,
+            'published_total_aum_bn': None,
+            'published_source': None,
+            'combined_aum_bn':   round(a['fil_aum_est_bn'], 2),
+        })
+    # Re-sort by combined AUM (alternativos + pensions can shift ranking)
+    depositario_stats.sort(key=lambda x: -x['combined_aum_bn'])
+
+    # Inversis combined position (FI + SICAV + FIL est)
+    inversis_combined = next((d for d in depositario_stats if d['is_inversis']), None)
+    inversis_combined_rank = next(
+        (i + 1 for i, d in enumerate(depositario_stats) if d['is_inversis']), 0)
+
+    summary['alternativos_total_entities'] = len(alternativos_records)
+    summary['alternativos_total_depositarios'] = len(alternativos_stats)
+    summary['alternativos_fil_aum_bn'] = round(FIL_AGGREGATE_AUM_K / 1_000_000, 1)
+    summary['inversis_alt_entities'] = inversis_alt['entity_count'] if inversis_alt else 0
+    summary['inversis_alt_fil_count'] = inversis_alt['fil_count'] if inversis_alt else 0
+    summary['inversis_alt_fil_aum_bn'] = inversis_alt['fil_aum_est_bn'] if inversis_alt else 0
+    summary['inversis_alt_rank'] = inversis_alt_rank
+    # Combined headline: FI + SICAV + best-available alts + pensions + EPSV
+    summary['inversis_combined_aum_bn'] = inversis_combined['combined_aum_bn'] if inversis_combined else 0
+    summary['inversis_combined_rank']   = inversis_combined_rank
+    summary['combined_market_aum_bn']   = round(
+        sum(d['combined_aum_bn'] for d in depositario_stats), 1)
+    summary['inversis_combined_share_pct'] = round(
+        inversis_combined['combined_aum_bn'] / summary['combined_market_aum_bn'] * 100, 2
+    ) if inversis_combined and summary['combined_market_aum_bn'] else 0
+
+    # ── Published Funds People IX overlay summary ─────────────────────────
+    if published:
+        mkt_totals = published.get('market_totals_2025Q4', {})
+        summary['published_total_aum_bn']        = round(
+            (mkt_totals.get('fundspeople_total_aum_m') or 0) / 1000, 1)
+        summary['published_pensions_total_bn']   = round(
+            (mkt_totals.get('pensiones_aum_m') or 0) / 1000, 1)
+        summary['published_pensions_individual_bn'] = round(
+            (mkt_totals.get('pensiones_individual_m') or 0) / 1000, 1)
+        summary['published_pensions_empleo_bn']  = round(
+            (mkt_totals.get('pensiones_empleo_m') or 0) / 1000, 1)
+        summary['published_epsv_total_bn']       = round(
+            (mkt_totals.get('epsv_aum_m_estimate') or 0) / 1000, 1)
+        summary['published_alternativos_total_bn'] = round(
+            (mkt_totals.get('alternativos_aum_m_estimate') or 0) / 1000, 1)
+        summary['published_source'] = published['_metadata']['primary_source']
+
+        # Inversis published breakdown (verbatim from FundsPeople IX 2026)
+        inv_pub = next((r for r in published['depositaries']
+                        if 'INVERSIS' in (r.get('depositario_match') or '').upper()), None)
+        if inv_pub:
+            summary['inversis_published'] = {
+                'fi_bn':           round((inv_pub.get('fi') or 0) / 1000, 3),
+                'sicav_bn':        round((inv_pub.get('sicav') or 0) / 1000, 3),
+                'pensiones_bn':    round((inv_pub.get('pensiones') or 0) / 1000, 3),
+                'epsv_bn':         round((inv_pub.get('epsv') or 0) / 1000, 3),
+                'alternativos_bn': round((inv_pub.get('alternativos') or 0) / 1000, 3),
+                'total_bn':        round((inv_pub.get('total') or 0) / 1000, 3),
+                'source':          inv_pub.get('source'),
+            }
+
+        bnp_pub = next((r for r in published['depositaries']
+                        if 'BNP PARIBAS' in (r.get('depositario_match') or '').upper()), None)
+        if bnp_pub and bnp_pub.get('alternativos') is not None:
+            summary['bnp_published_alts_bn'] = round(bnp_pub['alternativos'] / 1000, 2)
+
     # Qualitative analysis section
     qualitative_analysis = _build_qualitative_analysis(
         insights, summary, depositario_stats, opportunity_targets)
@@ -557,6 +775,7 @@ def build_cnmv_depositaria():
         'fee_by_depositario': fee_by_depositario,
         'inversis_by_gestora': inv_by_gestora_out,  # NEW: Inversis client detail with revenue
         'qualitative_analysis': qualitative_analysis,  # NEW: computed qualitative insights
+        'alternativos_stats': alternativos_stats,   # NEW: FIL/FCR/SCR/SICC/FICC entity counts
         'depositarios': all_depositarios,
         'gestoras': all_gestoras,
         'categories': all_categories,

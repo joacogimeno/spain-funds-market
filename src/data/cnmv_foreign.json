@@ -1,21 +1,15 @@
 {
   "summary": {
-    "total_iic": 1177,
-    "total_accounts_m": 9.4,
-    "total_volume_bn": 321.9,
-    "yoy_growth_pct": 17.06,
-    "ytd_growth_pct": 16.09,
-    "qoq_growth_pct": 7.57,
-    "accounts_yoy_pct": 26.73,
-    "date": "2025-Q3"
+    "total_iic": 1183,
+    "total_accounts_m": 10.14,
+    "total_volume_bn": 341.6,
+    "yoy_growth_pct": 23.2,
+    "ytd_growth_pct": 23.2,
+    "qoq_growth_pct": 6.12,
+    "accounts_yoy_pct": 36.58,
+    "date": "2025-Q4"
   },
   "quarterly_trend": [
-    {
-      "quarter": "2024-Q3",
-      "num_iic": 1135,
-      "accounts_m": 7.41,
-      "volume_bn": 275.0
-    },
     {
       "quarter": "2024-Q4",
       "num_iic": 1139,
@@ -39,68 +33,74 @@
       "num_iic": 1177,
       "accounts_m": 9.4,
       "volume_bn": 321.9
+    },
+    {
+      "quarter": "2025-Q4",
+      "num_iic": 1183,
+      "accounts_m": 10.14,
+      "volume_bn": 341.6
     }
   ],
   "type_breakdown": [
     {
       "type": "Fondos (Funds)",
       "latest_count": 476,
-      "latest_volume_bn": 56.0,
-      "latest_accounts_m": 1.52,
-      "yoy_volume_pct": 31.61,
-      "yoy_accounts_pct": 53.0
+      "latest_volume_bn": 57.5,
+      "latest_accounts_m": 1.78,
+      "yoy_volume_pct": 23.13,
+      "yoy_accounts_pct": 57.88
     },
     {
       "type": "Sociedades (Companies)",
-      "latest_count": 701,
-      "latest_volume_bn": 265.9,
-      "latest_accounts_m": 7.87,
-      "yoy_volume_pct": 14.4,
-      "yoy_accounts_pct": 22.66
+      "latest_count": 707,
+      "latest_volume_bn": 284.1,
+      "latest_accounts_m": 8.36,
+      "yoy_volume_pct": 23.21,
+      "yoy_accounts_pct": 32.76
     }
   ],
   "countries": [
     {
       "name": "Luxemburgo",
-      "count": 512,
-      "pct_of_total": 43.5,
-      "yoy_pct": 0.2
+      "count": 516,
+      "pct_of_total": 43.6,
+      "yoy_pct": 1.38
     },
     {
       "name": "Irlanda",
-      "count": 261,
-      "pct_of_total": 22.2,
-      "yoy_pct": 3.57
+      "count": 264,
+      "pct_of_total": 22.3,
+      "yoy_pct": 3.53
     },
     {
       "name": "Francia",
-      "count": 254,
-      "pct_of_total": 21.6,
-      "yoy_pct": 8.09
+      "count": 248,
+      "pct_of_total": 21.0,
+      "yoy_pct": 3.77
     },
     {
       "name": "Alemania",
-      "count": 67,
+      "count": 68,
       "pct_of_total": 5.7,
-      "yoy_pct": 9.84
+      "yoy_pct": 11.48
     },
     {
       "name": "Austria",
-      "count": 38,
-      "pct_of_total": 3.2,
-      "yoy_pct": 11.76
+      "count": 39,
+      "pct_of_total": 3.3,
+      "yoy_pct": 14.71
     },
     {
       "name": "Finlandia",
       "count": 15,
       "pct_of_total": 1.3,
-      "yoy_pct": 0.0
+      "yoy_pct": 7.14
     },
     {
       "name": "Suecia",
-      "count": 10,
-      "pct_of_total": 0.8,
-      "yoy_pct": 0.0
+      "count": 11,
+      "pct_of_total": 0.9,
+      "yoy_pct": 10.0
     },
     {
       "name": "Portugal",
@@ -127,13 +127,13 @@
       "yoy_pct": 0.0
     },
     {
-      "name": "Malta",
-      "count": 1,
-      "pct_of_total": 0.1,
+      "name": "Noruega",
+      "count": 3,
+      "pct_of_total": 0.3,
       "yoy_pct": null
     },
     {
-      "name": "Noruega",
+      "name": "Malta",
       "count": 1,
       "pct_of_total": 0.1,
       "yoy_pct": null
@@ -142,55 +142,55 @@
   "size_distribution": [
     {
       "bracket": "Más de 30.000",
-      "count": 346,
-      "volume_bn": 319.4
+      "count": 352,
+      "volume_bn": 339.2
     },
     {
       "bracket": "12.001-30.000",
-      "count": 81,
-      "volume_bn": 1.6
+      "count": 74,
+      "volume_bn": 1.5
     },
     {
       "bracket": "6.001-12.000",
-      "count": 64,
-      "volume_bn": 0.6
+      "count": 60,
+      "volume_bn": 0.5
     },
     {
       "bracket": "3.001-6.000",
-      "count": 54,
+      "count": 56,
       "volume_bn": 0.2
     },
     {
       "bracket": "1.201-3.000",
-      "count": 68,
-      "volume_bn": 0.1
+      "count": 74,
+      "volume_bn": 0.2
     },
     {
       "bracket": "601-1.200",
-      "count": 33,
+      "count": 37,
       "volume_bn": 0.0
     },
     {
       "bracket": "301-600",
-      "count": 29,
+      "count": 27,
       "volume_bn": 0.0
     },
     {
       "bracket": "101-300",
-      "count": 34,
+      "count": 32,
       "volume_bn": 0.0
     },
     {
       "bracket": "0-100",
-      "count": 74,
+      "count": 81,
       "volume_bn": 0.0
     }
   ],
   "domestic_vs_foreign": {
-    "domestic_aum_bn": 453.4,
-    "foreign_aum_bn": 321.9,
-    "total_market_bn": 775.3,
-    "foreign_pct": 41.5,
+    "domestic_aum_bn": 465.5,
+    "foreign_aum_bn": 341.6,
+    "total_market_bn": 807.1,
+    "foreign_pct": 42.3,
     "note": "Domestic AUM from latest INVERCO monthly snapshot"
   }
 }

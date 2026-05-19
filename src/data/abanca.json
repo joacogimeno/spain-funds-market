@@ -1,23 +1,23 @@
 {
-  "date": "2025-Q3",
+  "date": "2025-Q4",
   "gestora": "ABANCA GESTION DE ACTIVOS, SGIIC, SA",
   "gestora_short": "Abanca Gestión",
   "grupo": "ABANCA",
   "current_depositario": "CECABANK, S.A.",
   "summary": {
-    "total_aum_bn": 6.654,
-    "total_funds": 16,
-    "total_classes": 32,
-    "total_investors": 196247,
+    "total_aum_bn": 6.663,
+    "total_funds": 15,
+    "total_classes": 31,
+    "total_investors": 203922,
     "total_categories": 9,
-    "wtd_dep_fee_bps": 5.68,
-    "est_cecabank_rev_k": 3779.0,
+    "wtd_dep_fee_bps": 5.76,
+    "est_cecabank_rev_k": 3839.0,
     "aum_rank_spain": 12,
-    "fee_percentile": 27.0
+    "fee_percentile": 28.0
   },
   "market_context": {
-    "total_gestoras": 88,
-    "mkt_dep_fee_p25": 5.65,
+    "total_gestoras": 89,
+    "mkt_dep_fee_p25": 5.4,
     "mkt_dep_fee_p50": 7.0,
     "mkt_dep_fee_p75": 8.0
   },
@@ -26,636 +26,616 @@
       "fund": "ABANCA FONDEPOSITO, FI",
       "vocacion": "RFECP",
       "category": "RF Euro CP",
-      "aum_m": 2282.2,
-      "aum_pct": 34.3,
+      "aum_m": 2231.3,
+      "aum_pct": 33.5,
       "classes": 3,
       "class_detail": [
         {
           "isin": "ES0106933031",
           "share_class": "MINORISTA",
-          "aum_k": 1990170.0,
+          "aum_k": 1994431.0,
           "dep_fee_bps": 3.0,
           "mgmt_fee_pct": 0.55
         },
         {
           "isin": "ES0106933007",
           "share_class": "INSTITUCIONAL",
-          "aum_k": 215753.0,
+          "aum_k": 199404.0,
           "dep_fee_bps": 3.0,
           "mgmt_fee_pct": 0.28
         },
         {
           "isin": "ES0106933023",
           "share_class": "CARTERA",
-          "aum_k": 76277.0,
+          "aum_k": 37481.0,
           "dep_fee_bps": 3.0,
           "mgmt_fee_pct": 0.11
         }
       ],
-      "investors": 45841,
+      "investors": 40773,
       "wtd_dep_fee_bps": 3.0,
-      "est_dep_rev_k": 684.7
+      "est_dep_rev_k": 669.4
     },
     {
       "fund": "ABANCA RENTA FIJA PATRIMONIO, FI",
       "vocacion": "RFE",
       "category": "RF Euro LP",
-      "aum_m": 1097.9,
-      "aum_pct": 16.5,
+      "aum_m": 1291.2,
+      "aum_pct": 19.4,
       "classes": 3,
       "class_detail": [
         {
           "isin": "ES0119483008",
           "share_class": "CLASE A",
-          "aum_k": 776042.0,
+          "aum_k": 926843.0,
           "dep_fee_bps": 7.0,
           "mgmt_fee_pct": 0.6
         },
         {
           "isin": "ES0119483024",
           "share_class": "CLASE CARTERA",
-          "aum_k": 253303.0,
+          "aum_k": 283051.0,
           "dep_fee_bps": 7.0,
           "mgmt_fee_pct": 0.12
         },
         {
           "isin": "ES0119483016",
           "share_class": "CLASE I",
-          "aum_k": 68592.0,
+          "aum_k": 81318.0,
           "dep_fee_bps": 7.0,
           "mgmt_fee_pct": 0.4
         }
       ],
-      "investors": 33866,
+      "investors": 32263,
       "wtd_dep_fee_bps": 7.0,
-      "est_dep_rev_k": 768.6
-    },
-    {
-      "fund": "ABANCA GESTION, FI",
-      "vocacion": "RFMI",
-      "category": "RF Mixta Internacional",
-      "aum_m": 689.3,
-      "aum_pct": 10.4,
-      "classes": 4,
-      "class_detail": [
-        {
-          "isin": "ES0133400012",
-          "share_class": "",
-          "aum_k": 549731.0,
-          "dep_fee_bps": 9.0,
-          "mgmt_fee_pct": 1.0
-        },
-        {
-          "isin": "ES0133400020",
-          "share_class": "",
-          "aum_k": 119514.0,
-          "dep_fee_bps": 9.0,
-          "mgmt_fee_pct": 1.1
-        },
-        {
-          "isin": "ES0133400004",
-          "share_class": "",
-          "aum_k": 17152.0,
-          "dep_fee_bps": 9.0,
-          "mgmt_fee_pct": 1.2
-        },
-        {
-          "isin": "ES0133400046",
-          "share_class": "",
-          "aum_k": 2930.0,
-          "dep_fee_bps": 9.0,
-          "mgmt_fee_pct": 1.35
-        }
-      ],
-      "investors": 3742,
-      "wtd_dep_fee_bps": 9.0,
-      "est_dep_rev_k": 620.4
+      "est_dep_rev_k": 903.8
     },
     {
       "fund": "ABANCA AHORRO, FI",
       "vocacion": "RFE",
       "category": "RF Euro LP",
-      "aum_m": 673.7,
-      "aum_pct": 10.1,
+      "aum_m": 687.7,
+      "aum_pct": 10.3,
       "classes": 3,
       "class_detail": [
         {
           "isin": "ES0113691010",
           "share_class": "CLASE CARTERA",
-          "aum_k": 353040.0,
+          "aum_k": 355659.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.11
         },
         {
           "isin": "ES0113691036",
           "share_class": "CLASE R",
-          "aum_k": 265836.0,
+          "aum_k": 276913.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.55
         },
         {
           "isin": "ES0113691002",
           "share_class": "CLASE I",
-          "aum_k": 54852.0,
+          "aum_k": 55113.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.3
         }
       ],
-      "investors": 20261,
+      "investors": 19293,
       "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 336.9
+      "est_dep_rev_k": 343.8
+    },
+    {
+      "fund": "ABANCA GESTION, FI",
+      "vocacion": "RFMI",
+      "category": "RF Mixta Internacional",
+      "aum_m": 673.7,
+      "aum_pct": 10.1,
+      "classes": 4,
+      "class_detail": [
+        {
+          "isin": "ES0133400012",
+          "share_class": "",
+          "aum_k": 541494.0,
+          "dep_fee_bps": 9.0,
+          "mgmt_fee_pct": 1.0
+        },
+        {
+          "isin": "ES0133400020",
+          "share_class": "",
+          "aum_k": 113825.0,
+          "dep_fee_bps": 9.0,
+          "mgmt_fee_pct": 1.1
+        },
+        {
+          "isin": "ES0133400004",
+          "share_class": "",
+          "aum_k": 17216.0,
+          "dep_fee_bps": 9.0,
+          "mgmt_fee_pct": 1.2
+        },
+        {
+          "isin": "ES0133400046",
+          "share_class": "",
+          "aum_k": 1188.0,
+          "dep_fee_bps": 9.0,
+          "mgmt_fee_pct": 1.35
+        }
+      ],
+      "investors": 2808,
+      "wtd_dep_fee_bps": 9.0,
+      "est_dep_rev_k": 606.4
     },
     {
       "fund": "ABANCA BONOS CORPORATIVOS, FI",
       "vocacion": "RFME",
       "category": "RF Mixta Euro",
-      "aum_m": 475.7,
+      "aum_m": 471.4,
       "aum_pct": 7.1,
       "classes": 3,
       "class_detail": [
         {
           "isin": "ES0147597035",
           "share_class": "SP",
-          "aum_k": 331327.0,
+          "aum_k": 325941.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 0.9
         },
         {
           "isin": "ES0147597019",
           "share_class": "CARTERA",
-          "aum_k": 141620.0,
+          "aum_k": 140282.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 0.18
         },
         {
           "isin": "ES0147597001",
           "share_class": "FUNDO DE OBRIGAÇÕES",
-          "aum_k": 2709.0,
+          "aum_k": 5188.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 0.9
         }
       ],
-      "investors": 26133,
+      "investors": 26055,
       "wtd_dep_fee_bps": 10.0,
-      "est_dep_rev_k": 475.7
+      "est_dep_rev_k": 471.4
     },
     {
       "fund": "ABANCA RENTA FIJA GOBIERNOS, FI",
       "vocacion": "RFE",
       "category": "RF Euro LP",
-      "aum_m": 361.7,
-      "aum_pct": 5.4,
+      "aum_m": 348.3,
+      "aum_pct": 5.2,
       "classes": 2,
       "class_detail": [
         {
           "isin": "ES0124524002",
           "share_class": "CARTERA",
-          "aum_k": 356869.0,
+          "aum_k": 342459.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.16
         },
         {
           "isin": "ES0124524010",
           "share_class": "MINORISTA",
-          "aum_k": 4799.0,
+          "aum_k": 5835.0,
           "dep_fee_bps": 7.0,
           "mgmt_fee_pct": 0.8
         }
       ],
-      "investors": 17250,
+      "investors": 21726,
       "wtd_dep_fee_bps": 5.03,
-      "est_dep_rev_k": 181.8
+      "est_dep_rev_k": 175.3
     },
     {
       "fund": "ABANCA GARANTIZADO 2025, FI",
       "vocacion": "GRV",
       "category": "Garantizados RV",
-      "aum_m": 283.6,
-      "aum_pct": 4.3,
+      "aum_m": 265.9,
+      "aum_pct": 4.0,
       "classes": 1,
       "class_detail": [
         {
           "isin": "ES0162962007",
           "share_class": "",
-          "aum_k": 283608.0,
+          "aum_k": 265899.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.55
         }
       ],
-      "investors": 7475,
+      "investors": 4980,
       "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 141.8
-    },
-    {
-      "fund": "ABANCA INDICE RENTA VARIABLE GLOBAL, FI",
-      "vocacion": "IND",
-      "category": "Fondos Índice",
-      "aum_m": 218.6,
-      "aum_pct": 3.3,
-      "classes": 1,
-      "class_detail": [
-        {
-          "isin": "ES0162956009",
-          "share_class": "",
-          "aum_k": 218564.0,
-          "dep_fee_bps": 5.0,
-          "mgmt_fee_pct": 0.23
-        }
-      ],
-      "investors": 10886,
-      "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 109.3
-    },
-    {
-      "fund": "ABANCA RENTAS CRECIENTES 2027, FI",
-      "vocacion": "OCRNG",
-      "category": "Objetivo Rentabilidad",
-      "aum_m": 156.0,
-      "aum_pct": 2.3,
-      "classes": 1,
-      "class_detail": [
-        {
-          "isin": "ES0124527005",
-          "share_class": "",
-          "aum_k": 156027.0,
-          "dep_fee_bps": 5.0,
-          "mgmt_fee_pct": 0.5
-        }
-      ],
-      "investors": 6948,
-      "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 78.0
+      "est_dep_rev_k": 132.9
     },
     {
       "fund": "ABANCA RENTA VARIABLE DIVIDENDO, FI",
       "vocacion": "RVI",
       "category": "RV Internacional",
-      "aum_m": 133.2,
-      "aum_pct": 2.0,
+      "aum_m": 170.3,
+      "aum_pct": 2.6,
       "classes": 2,
       "class_detail": [
         {
           "isin": "ES0162948006",
           "share_class": "MINORISTA",
-          "aum_k": 83460.0,
+          "aum_k": 99958.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 1.5
         },
         {
           "isin": "ES0162948014",
           "share_class": "CARTERA",
-          "aum_k": 49745.0,
+          "aum_k": 70295.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 0.3
         }
       ],
-      "investors": 11014,
+      "investors": 14353,
       "wtd_dep_fee_bps": 10.0,
-      "est_dep_rev_k": 133.2
+      "est_dep_rev_k": 170.3
+    },
+    {
+      "fund": "ABANCA RENTAS CRECIENTES 2027, FI",
+      "vocacion": "OCRNG",
+      "category": "Objetivo Rentabilidad",
+      "aum_m": 151.0,
+      "aum_pct": 2.3,
+      "classes": 1,
+      "class_detail": [
+        {
+          "isin": "ES0124527005",
+          "share_class": "",
+          "aum_k": 150989.0,
+          "dep_fee_bps": 5.0,
+          "mgmt_fee_pct": 0.5
+        }
+      ],
+      "investors": 5046,
+      "wtd_dep_fee_bps": 5.0,
+      "est_dep_rev_k": 75.5
     },
     {
       "fund": "ABANCA RENTA FIJA MIXTA, FI",
       "vocacion": "RFMI",
       "category": "RF Mixta Internacional",
-      "aum_m": 92.5,
-      "aum_pct": 1.4,
+      "aum_m": 101.7,
+      "aum_pct": 1.5,
       "classes": 2,
       "class_detail": [
         {
           "isin": "ES0140073000",
           "share_class": "SP",
-          "aum_k": 64958.0,
+          "aum_k": 71293.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 1.1
         },
         {
           "isin": "ES0140073018",
           "share_class": "FUNDO MISTO OBRIGAÇÕES",
-          "aum_k": 27579.0,
+          "aum_k": 30410.0,
           "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 1.1
         }
       ],
-      "investors": 3274,
+      "investors": 3687,
       "wtd_dep_fee_bps": 10.0,
-      "est_dep_rev_k": 92.5
-    },
-    {
-      "fund": "ABANCA RENTAS CRECIENTES 2026, FI",
-      "vocacion": "OCRNG",
-      "category": "Objetivo Rentabilidad",
-      "aum_m": 68.6,
-      "aum_pct": 1.0,
-      "classes": 1,
-      "class_detail": [
-        {
-          "isin": "ES0162959003",
-          "share_class": "",
-          "aum_k": 68617.0,
-          "dep_fee_bps": 5.0,
-          "mgmt_fee_pct": 0.5
-        }
-      ],
-      "investors": 3370,
-      "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 34.3
+      "est_dep_rev_k": 101.7
     },
     {
       "fund": "ABANCA RENTA VARIABLE CRECIMIENTO, FI",
       "vocacion": "RVI",
       "category": "RV Internacional",
-      "aum_m": 60.1,
-      "aum_pct": 0.9,
+      "aum_m": 97.3,
+      "aum_pct": 1.5,
       "classes": 2,
       "class_detail": [
         {
           "isin": "ES0106949037",
           "share_class": "MINORISTA",
-          "aum_k": 60108.0,
+          "aum_k": 58933.0,
           "dep_fee_bps": 9.0,
           "mgmt_fee_pct": 1.5
         },
         {
           "isin": "ES0106949003",
           "share_class": "CARTERA",
-          "aum_k": 0.0,
+          "aum_k": 38326.0,
           "dep_fee_bps": 9.0,
           "mgmt_fee_pct": 0.3
         }
       ],
-      "investors": 6942,
+      "investors": 15885,
       "wtd_dep_fee_bps": 9.0,
-      "est_dep_rev_k": 54.1
+      "est_dep_rev_k": 87.5
     },
     {
-      "fund": "ABANCA OBJETIVO 2025, FI",
+      "fund": "ABANCA RENTAS CRECIENTES 2026, FI",
       "vocacion": "OCRNG",
       "category": "Objetivo Rentabilidad",
-      "aum_m": 32.3,
-      "aum_pct": 0.5,
+      "aum_m": 66.9,
+      "aum_pct": 1.0,
       "classes": 1,
       "class_detail": [
         {
-          "isin": "ES0162961009",
+          "isin": "ES0162959003",
           "share_class": "",
-          "aum_k": 32268.0,
+          "aum_k": 66866.0,
           "dep_fee_bps": 5.0,
           "mgmt_fee_pct": 0.5
         }
       ],
-      "investors": 1203,
+      "investors": 2531,
       "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 16.1
+      "est_dep_rev_k": 33.4
+    },
+    {
+      "fund": "ABANCA INDICE RENTA VARIABLE GLOBAL, FI",
+      "vocacion": "IND",
+      "category": "Fondos Índice",
+      "aum_m": 50.5,
+      "aum_pct": 0.8,
+      "classes": 1,
+      "class_detail": [
+        {
+          "isin": "ES0162956009",
+          "share_class": "",
+          "aum_k": 50537.0,
+          "dep_fee_bps": 5.0,
+          "mgmt_fee_pct": 0.23
+        }
+      ],
+      "investors": 15220,
+      "wtd_dep_fee_bps": 5.0,
+      "est_dep_rev_k": 25.3
     },
     {
       "fund": "ABANCA RENTA VARIABLE MIXTA, FI",
       "vocacion": "RVMI",
       "category": "RV Mixta Internacional",
-      "aum_m": 25.0,
+      "aum_m": 28.2,
       "aum_pct": 0.4,
       "classes": 2,
       "class_detail": [
         {
           "isin": "ES0115418032",
           "share_class": "SP",
-          "aum_k": 19061.0,
-          "dep_fee_bps": 20.0,
+          "aum_k": 20799.0,
+          "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 1.2
         },
         {
           "isin": "ES0115418008",
           "share_class": "FUNDO MISTO AÇOES",
-          "aum_k": 5897.0,
-          "dep_fee_bps": 20.0,
+          "aum_k": 7419.0,
+          "dep_fee_bps": 10.0,
           "mgmt_fee_pct": 1.2
         }
       ],
-      "investors": 1283,
-      "wtd_dep_fee_bps": 20.0,
-      "est_dep_rev_k": 49.9
+      "investors": 1304,
+      "wtd_dep_fee_bps": 10.0,
+      "est_dep_rev_k": 28.2
     },
     {
-      "fund": "ABANCA RENTA FIJA TRANSICIÓN CLIMÁTICA 360, FI",
-      "vocacion": "IND",
-      "category": "Fondos Índice",
-      "aum_m": 3.8,
-      "aum_pct": 0.1,
+      "fund": "ABANCA OBJETIVO 2025, FI",
+      "vocacion": "OCRNG",
+      "category": "Objetivo Rentabilidad",
+      "aum_m": 27.3,
+      "aum_pct": 0.4,
       "classes": 1,
       "class_detail": [
         {
-          "isin": "ES0124525009",
+          "isin": "ES0162961009",
           "share_class": "",
-          "aum_k": 3774.0,
+          "aum_k": 27292.0,
           "dep_fee_bps": 5.0,
-          "mgmt_fee_pct": 0.13
+          "mgmt_fee_pct": 0.5
         }
       ],
-      "investors": 342,
+      "investors": 746,
       "wtd_dep_fee_bps": 5.0,
-      "est_dep_rev_k": 1.9
+      "est_dep_rev_k": 13.6
     }
   ],
   "categories": [
     {
+      "category": "RF Euro LP",
+      "aum_m": 2327.2,
+      "aum_pct": 34.9,
+      "funds": 3,
+      "classes": 8,
+      "investors": 73282,
+      "wtd_dep_fee_bps": 6.11
+    },
+    {
       "category": "RF Euro CP",
-      "aum_m": 2282.2,
-      "aum_pct": 34.3,
+      "aum_m": 2231.3,
+      "aum_pct": 33.5,
       "funds": 1,
       "classes": 3,
-      "investors": 45841,
+      "investors": 40773,
       "wtd_dep_fee_bps": 3.0
     },
     {
-      "category": "RF Euro LP",
-      "aum_m": 2133.3,
-      "aum_pct": 32.1,
-      "funds": 3,
-      "classes": 8,
-      "investors": 71377,
-      "wtd_dep_fee_bps": 6.03
-    },
-    {
       "category": "RF Mixta Internacional",
-      "aum_m": 781.8,
-      "aum_pct": 11.7,
+      "aum_m": 775.4,
+      "aum_pct": 11.6,
       "funds": 2,
       "classes": 6,
-      "investors": 7016,
-      "wtd_dep_fee_bps": 9.12
+      "investors": 6495,
+      "wtd_dep_fee_bps": 9.13
     },
     {
       "category": "RF Mixta Euro",
-      "aum_m": 475.7,
+      "aum_m": 471.4,
       "aum_pct": 7.1,
       "funds": 1,
       "classes": 3,
-      "investors": 26133,
+      "investors": 26055,
       "wtd_dep_fee_bps": 10.0
     },
     {
+      "category": "RV Internacional",
+      "aum_m": 267.6,
+      "aum_pct": 4.0,
+      "funds": 2,
+      "classes": 4,
+      "investors": 30238,
+      "wtd_dep_fee_bps": 9.64
+    },
+    {
       "category": "Garantizados RV",
-      "aum_m": 283.6,
-      "aum_pct": 4.3,
+      "aum_m": 265.9,
+      "aum_pct": 4.0,
       "funds": 1,
       "classes": 1,
-      "investors": 7475,
+      "investors": 4980,
       "wtd_dep_fee_bps": 5.0
     },
     {
       "category": "Objetivo Rentabilidad",
-      "aum_m": 256.9,
-      "aum_pct": 3.9,
+      "aum_m": 245.2,
+      "aum_pct": 3.7,
       "funds": 3,
       "classes": 3,
-      "investors": 11521,
+      "investors": 8323,
       "wtd_dep_fee_bps": 5.0
     },
     {
       "category": "Fondos Índice",
-      "aum_m": 222.4,
-      "aum_pct": 3.3,
-      "funds": 2,
-      "classes": 2,
-      "investors": 11228,
+      "aum_m": 50.5,
+      "aum_pct": 0.8,
+      "funds": 1,
+      "classes": 1,
+      "investors": 15220,
       "wtd_dep_fee_bps": 5.0
     },
     {
-      "category": "RV Internacional",
-      "aum_m": 193.3,
-      "aum_pct": 2.9,
-      "funds": 2,
-      "classes": 4,
-      "investors": 17956,
-      "wtd_dep_fee_bps": 9.69
-    },
-    {
       "category": "RV Mixta Internacional",
-      "aum_m": 25.0,
+      "aum_m": 28.2,
       "aum_pct": 0.4,
       "funds": 1,
       "classes": 2,
-      "investors": 1283,
-      "wtd_dep_fee_bps": 20.0
+      "investors": 1304,
+      "wtd_dep_fee_bps": 10.0
     }
   ],
   "peers": [
     {
       "gestora": "IBERCAJA GESTION, SGIIC, S.A.",
       "gestora_short": "IBERCAJA GESTION",
-      "aum_bn": 32.32,
-      "funds": 71,
-      "classes": 123,
-      "investors": 796330,
-      "wtd_dep_fee_bps": 7.3,
-      "est_dep_rev_k": 23595.0,
+      "aum_bn": 33.05,
+      "funds": 69,
+      "classes": 121,
+      "investors": 806126,
+      "wtd_dep_fee_bps": 7.37,
+      "est_dep_rev_k": 24349.0,
       "is_abanca": false
     },
     {
       "gestora": "KUTXABANK GESTION, SGIIC, S.A.",
       "gestora_short": "KUTXABANK GESTION",
-      "aum_bn": 28.12,
-      "funds": 41,
-      "classes": 63,
-      "investors": 1890529,
-      "wtd_dep_fee_bps": 7.82,
-      "est_dep_rev_k": 21982.0,
+      "aum_bn": 28.89,
+      "funds": 42,
+      "classes": 64,
+      "investors": 1813986,
+      "wtd_dep_fee_bps": 7.78,
+      "est_dep_rev_k": 22485.0,
       "is_abanca": false
     },
     {
       "gestora": "BANKINTER GESTION DE ACTIVOS, S.A., S.G.I.I.C.",
       "gestora_short": "BANKINTER GESTION DE ACTIVOS",
-      "aum_bn": 18.49,
-      "funds": 80,
+      "aum_bn": 19.4,
+      "funds": 79,
       "classes": 156,
-      "investors": 225556,
-      "wtd_dep_fee_bps": 9.5,
-      "est_dep_rev_k": 17572.0,
+      "investors": 232726,
+      "wtd_dep_fee_bps": 9.48,
+      "est_dep_rev_k": 18397.0,
       "is_abanca": false
     },
     {
       "gestora": "SABADELL ASSET MANAGEMENT, S.A., S.G.I.I.C.",
       "gestora_short": "SABADELL ASSET MANAGEMENT",
-      "aum_bn": 15.9,
-      "funds": 51,
-      "classes": 187,
-      "investors": 507705,
-      "wtd_dep_fee_bps": 5.65,
-      "est_dep_rev_k": 8990.0,
+      "aum_bn": 15.78,
+      "funds": 53,
+      "classes": 189,
+      "investors": 520056,
+      "wtd_dep_fee_bps": 5.73,
+      "est_dep_rev_k": 9041.0,
       "is_abanca": false
     },
     {
       "gestora": "UNICAJA ASSET MANAGEMENT, S.G.I.I.C., S.A.",
       "gestora_short": "UNICAJA ASSET MANAGEMENT",
-      "aum_bn": 12.49,
-      "funds": 33,
-      "classes": 98,
-      "investors": 415173,
-      "wtd_dep_fee_bps": 5.97,
-      "est_dep_rev_k": 7461.0,
+      "aum_bn": 13.02,
+      "funds": 35,
+      "classes": 103,
+      "investors": 423727,
+      "wtd_dep_fee_bps": 5.99,
+      "est_dep_rev_k": 7801.0,
       "is_abanca": false
     },
     {
       "gestora": "GESCOOPERATIVO, S.A., S.G.I.I.C.",
       "gestora_short": "GESCOOPERATIVO",
-      "aum_bn": 11.47,
-      "funds": 57,
-      "classes": 82,
-      "investors": 381545,
-      "wtd_dep_fee_bps": 6.58,
-      "est_dep_rev_k": 7549.0,
+      "aum_bn": 11.88,
+      "funds": 56,
+      "classes": 81,
+      "investors": 393390,
+      "wtd_dep_fee_bps": 6.63,
+      "est_dep_rev_k": 7871.0,
       "is_abanca": false
     },
     {
       "gestora": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
       "gestora_short": "CAJA LABORAL GESTION",
-      "aum_bn": 6.88,
-      "funds": 40,
-      "classes": 46,
-      "investors": 302139,
-      "wtd_dep_fee_bps": 7.22,
-      "est_dep_rev_k": 4965.0,
+      "aum_bn": 7.18,
+      "funds": 41,
+      "classes": 47,
+      "investors": 376747,
+      "wtd_dep_fee_bps": 7.17,
+      "est_dep_rev_k": 5148.0,
       "is_abanca": false
     },
     {
       "gestora": "ABANCA GESTION DE ACTIVOS, SGIIC, SA",
       "gestora_short": "ABANCA GESTION DE ACTIVOS",
-      "aum_bn": 6.65,
-      "funds": 16,
-      "classes": 32,
-      "investors": 196247,
-      "wtd_dep_fee_bps": 5.68,
-      "est_dep_rev_k": 3779.0,
+      "aum_bn": 6.66,
+      "funds": 15,
+      "classes": 31,
+      "investors": 203922,
+      "wtd_dep_fee_bps": 5.76,
+      "est_dep_rev_k": 3839.0,
       "is_abanca": true
     }
   ],
   "scenarios": [
     {
       "name": "Cecabank (current)",
-      "fee_bps": 5.68,
-      "description": "Current Cecabank rate — 5.68 bps weighted avg",
-      "est_annual_rev_k": 3780.0,
-      "delta_vs_cecabank_k": 0.0
+      "fee_bps": 5.76,
+      "description": "Current Cecabank rate — 5.76 bps weighted avg",
+      "est_annual_rev_k": 3838.0,
+      "delta_vs_cecabank_k": -1.0
     },
     {
       "name": "Inversis competitive (6 bps)",
       "fee_bps": 6.0,
       "description": "Inversis entry offer — slightly above Cecabank, below market median",
-      "est_annual_rev_k": 3993.0,
-      "delta_vs_cecabank_k": 213.0
+      "est_annual_rev_k": 3998.0,
+      "delta_vs_cecabank_k": 159.0
     },
     {
       "name": "Market median (7 bps)",
       "fee_bps": 7.0,
       "description": "Inversis at market median (7.0 bps) — standard commercial terms",
-      "est_annual_rev_k": 4658.0,
-      "delta_vs_cecabank_k": 879.0
+      "est_annual_rev_k": 4664.0,
+      "delta_vs_cecabank_k": 825.0
     },
     {
       "name": "Full market rate (8 bps)",
       "fee_bps": 8.0,
       "description": "Inversis at P75 market rate — reflects service quality premium",
-      "est_annual_rev_k": 5323.0,
-      "delta_vs_cecabank_k": 1544.0
+      "est_annual_rev_k": 5330.0,
+      "delta_vs_cecabank_k": 1491.0
     }
   ]
 }

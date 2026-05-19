@@ -3375,356 +3375,511 @@
           "redemp": 0.0
         }
       }
+    },
+    {
+      "date": "2026-04",
+      "total_subs": 15.498,
+      "total_redemp": 13.914,
+      "total_net": 1.585,
+      "categories": {
+        "Monetarios": {
+          "net": 0.31,
+          "subs": 1.685,
+          "redemp": 1.375
+        },
+        "RF Euro CP": {
+          "net": -2.329,
+          "subs": 3.437,
+          "redemp": 5.766
+        },
+        "RF Euro LP": {
+          "net": 1.759,
+          "subs": 3.748,
+          "redemp": 1.989
+        },
+        "RF Mixta Euro": {
+          "net": -0.127,
+          "subs": 0.388,
+          "redemp": 0.516
+        },
+        "RV Mixta Euro": {
+          "net": -0.002,
+          "subs": 0.003,
+          "redemp": 0.005
+        },
+        "RV Nacional": {
+          "net": 0.023,
+          "subs": 0.105,
+          "redemp": 0.082
+        },
+        "RF Internacional": {
+          "net": 0.765,
+          "subs": 1.246,
+          "redemp": 0.482
+        },
+        "RF Mixta Internacional": {
+          "net": 0.088,
+          "subs": 0.687,
+          "redemp": 0.599
+        },
+        "RV Mixta Internacional": {
+          "net": 0.053,
+          "subs": 0.392,
+          "redemp": 0.339
+        },
+        "RV Euro Resto": {
+          "net": 0.035,
+          "subs": 0.133,
+          "redemp": 0.098
+        },
+        "RV Intl Europa": {
+          "net": 0.144,
+          "subs": 0.284,
+          "redemp": 0.14
+        },
+        "RV Intl EEUU": {
+          "net": 0.136,
+          "subs": 0.378,
+          "redemp": 0.242
+        },
+        "RV Intl Japón": {
+          "net": 0.02,
+          "subs": 0.044,
+          "redemp": 0.023
+        },
+        "RV Intl Emergentes": {
+          "net": -0.021,
+          "subs": 0.097,
+          "redemp": 0.118
+        },
+        "RV Intl Resto": {
+          "net": 0.241,
+          "subs": 0.695,
+          "redemp": 0.453
+        },
+        "Globales": {
+          "net": 0.034,
+          "subs": 0.911,
+          "redemp": 0.877
+        },
+        "Garantizados RF": {
+          "net": 0.071,
+          "subs": 0.147,
+          "redemp": 0.076
+        },
+        "Garantizados RV": {
+          "net": -0.024,
+          "subs": 0.008,
+          "redemp": 0.032
+        },
+        "Retorno Absoluto": {
+          "net": 0.002,
+          "subs": 0.135,
+          "redemp": 0.133
+        },
+        "Fondos Índice": {
+          "net": 0.044,
+          "subs": 0.202,
+          "redemp": 0.158
+        },
+        "Objetivo Rentabilidad": {
+          "net": 0.371,
+          "subs": 0.741,
+          "redemp": 0.371
+        },
+        "FIL": {
+          "net": -0.017,
+          "subs": 0.023,
+          "redemp": 0.039
+        },
+        "Hedge Funds": {
+          "net": 0.01,
+          "subs": 0.01,
+          "redemp": 0.0
+        }
+      }
     }
   ],
   "gestora_ranking": [
     {
-      "name": "BBVA ASSET MANAGEMENT, S.A., SGIIC",
-      "total_net_bn": 0.819,
+      "name": "KUTXABANK GESTION, SGIIC, S.A.",
+      "total_net_bn": 1.033,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.618,
-        "Renta Fija Largo Plazo": -0.372,
-        "Renta Fija Internacional": -0.14,
-        "Renta Fija Mixta": -0.059,
-        "Renta Variable Mixta": -0.017,
-        "Renta Variable Nacional": -0.003,
-        "Renta Variable Internacional": 0.844,
-        "Globales": -0.018,
-        "Retorno Absoluto": -0.001,
-        "Fondos Índice": -0.079,
+        "Monetarios": 0.405,
+        "Renta Fija Corto Plazo": -0.401,
+        "Renta Fija Largo Plazo": 0.475,
+        "Renta Fija Internacional": 0.763,
+        "Renta Fija Mixta": -0.392,
+        "Renta Variable Mixta": 0.148,
+        "Renta Variable Nacional": -0.008,
+        "Renta Variable Internacional": 0.012,
+        "Rentabilidad Objetivo": 0.038,
+        "Globales": 0.023,
+        "Garantizados": -0.029
+      }
+    },
+    {
+      "name": "BBVA ASSET MANAGEMENT, S.A., SGIIC",
+      "total_net_bn": 0.903,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.569,
+        "Renta Fija Largo Plazo": -0.345,
+        "Renta Fija Internacional": -0.138,
+        "Renta Fija Mixta": -0.077,
+        "Renta Variable Mixta": -0.023,
+        "Renta Variable Nacional": -0.004,
+        "Renta Variable Internacional": 0.957,
+        "Globales": -0.03,
+        "Retorno Absoluto": -0.002,
+        "Fondos Índice": -0.052,
         "Inversión Libre": 0.047
       }
     },
     {
-      "name": "SANTANDER ASSET MANAGEMENT, S.A., SGIIC",
-      "total_net_bn": 0.712,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.299,
-        "Renta Fija Largo Plazo": 0.24,
-        "Renta Fija Internacional": -0.051,
-        "Renta Fija Mixta": 0.782,
-        "Renta Variable Mixta": -0.011,
-        "Renta Variable Nacional": -0.029,
-        "Renta Variable Internacional": -0.066,
-        "Rentabilidad Objetivo": -0.155,
-        "Globales": -0.26,
-        "Retorno Absoluto": 0.015,
-        "Garantizados": -0.021,
-        "Fondos Índice": -0.032,
-        "Inversión Libre": 0.001
-      }
-    },
-    {
-      "name": "KUTXABANK GESTION, SGIIC, S.A.",
-      "total_net_bn": 0.691,
-      "flows_by_category": {
-        "Monetarios": 0.32,
-        "Renta Fija Corto Plazo": 0.127,
-        "Renta Fija Largo Plazo": 0.411,
-        "Renta Fija Internacional": 0.0,
-        "Renta Fija Mixta": -0.093,
-        "Renta Variable Mixta": 0.142,
-        "Renta Variable Nacional": -0.008,
-        "Renta Variable Internacional": -0.068,
-        "Rentabilidad Objetivo": -0.138,
-        "Globales": 0.013,
-        "Garantizados": -0.016
-      }
-    },
-    {
       "name": "UNICAJA ASSET MANAGEMENT, SGIIC, SA",
-      "total_net_bn": 0.597,
+      "total_net_bn": 0.754,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.317,
-        "Renta Fija Largo Plazo": 0.492,
-        "Renta Fija Internacional": -0.032,
-        "Renta Fija Mixta": 0.033,
+        "Renta Fija Corto Plazo": 0.364,
+        "Renta Fija Largo Plazo": 0.436,
+        "Renta Fija Internacional": -0.046,
+        "Renta Fija Mixta": 0.034,
         "Renta Variable Mixta": 0.001,
         "Renta Variable Nacional": -0.003,
-        "Renta Variable Internacional": 0.056,
-        "Rentabilidad Objetivo": -0.379,
-        "Globales": -0.001,
-        "Retorno Absoluto": 0.119,
+        "Renta Variable Internacional": 0.064,
+        "Rentabilidad Objetivo": -0.205,
+        "Globales": -0.009,
+        "Retorno Absoluto": 0.122,
         "Garantizados": -0.004
       }
     },
     {
       "name": "GESCOOPERATIVO, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.486,
+      "total_net_bn": 0.587,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.202,
-        "Renta Fija Largo Plazo": 0.151,
-        "Renta Fija Internacional": 0.049,
-        "Renta Fija Mixta": 0.068,
-        "Renta Variable Mixta": 0.013,
-        "Renta Variable Nacional": 0.005,
-        "Renta Variable Internacional": 0.049,
-        "Rentabilidad Objetivo": -0.008,
-        "Garantizados": -0.042
+        "Renta Fija Corto Plazo": 0.242,
+        "Renta Fija Largo Plazo": 0.141,
+        "Renta Fija Internacional": 0.044,
+        "Renta Fija Mixta": 0.056,
+        "Renta Variable Mixta": 0.009,
+        "Renta Variable Nacional": 0.007,
+        "Renta Variable Internacional": 0.056,
+        "Rentabilidad Objetivo": -0.009,
+        "Garantizados": 0.041
+      }
+    },
+    {
+      "name": "SANTANDER ASSET MANAGEMENT, S.A., SGIIC",
+      "total_net_bn": 0.582,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.258,
+        "Renta Fija Largo Plazo": 0.231,
+        "Renta Fija Internacional": -0.073,
+        "Renta Fija Mixta": 0.789,
+        "Renta Variable Mixta": -0.014,
+        "Renta Variable Nacional": -0.027,
+        "Renta Variable Internacional": -0.081,
+        "Rentabilidad Objetivo": -0.09,
+        "Globales": -0.343,
+        "Retorno Absoluto": 0.014,
+        "Garantizados": -0.021,
+        "Fondos Índice": -0.059,
+        "Inversión Libre": -0.002
       }
     },
     {
       "name": "CAJA LABORAL GESTION, S.G.I.I.C., S.A.",
-      "total_net_bn": 0.42,
+      "total_net_bn": 0.557,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.263,
-        "Renta Fija Largo Plazo": -0.006,
-        "Renta Fija Internacional": 0.024,
-        "Renta Fija Mixta": 0.026,
-        "Renta Variable Mixta": 0.043,
-        "Renta Variable Nacional": -0.0,
-        "Renta Variable Internacional": 0.027,
-        "Rentabilidad Objetivo": 0.065,
-        "Globales": 0.025,
+        "Renta Fija Corto Plazo": 0.311,
+        "Renta Fija Largo Plazo": 0.064,
+        "Renta Fija Internacional": 0.032,
+        "Renta Fija Mixta": 0.024,
+        "Renta Variable Mixta": 0.047,
+        "Renta Variable Nacional": 0.0,
+        "Renta Variable Internacional": 0.032,
+        "Rentabilidad Objetivo": 0.066,
+        "Globales": 0.026,
         "Garantizados": -0.045
       }
     },
     {
       "name": "IBERCAJA GESTION, SGIIC, S.A.",
-      "total_net_bn": 0.414,
+      "total_net_bn": 0.504,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -1.119,
-        "Renta Fija Largo Plazo": 0.689,
-        "Renta Fija Internacional": 0.854,
-        "Renta Fija Mixta": -0.019,
-        "Renta Variable Mixta": -0.004,
-        "Renta Variable Nacional": 0.0,
-        "Renta Variable Internacional": 0.032,
-        "Globales": -0.015,
+        "Renta Fija Corto Plazo": -1.451,
+        "Renta Fija Largo Plazo": 1.047,
+        "Renta Fija Internacional": 0.895,
+        "Renta Fija Mixta": -0.014,
+        "Renta Variable Mixta": -0.005,
+        "Renta Variable Nacional": 0.001,
+        "Renta Variable Internacional": 0.054,
+        "Globales": -0.02,
         "Garantizados": -0.004
       }
     },
     {
-      "name": "BANKINTER GESTION DE ACTIVOS, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.26,
+      "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
+      "total_net_bn": 0.387,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.048,
-        "Renta Fija Largo Plazo": -0.053,
-        "Renta Fija Internacional": -0.056,
-        "Renta Fija Mixta": 0.219,
-        "Renta Variable Mixta": 0.19,
-        "Renta Variable Nacional": -0.001,
-        "Renta Variable Internacional": -0.026,
-        "Rentabilidad Objetivo": -0.0,
-        "Globales": 0.001,
-        "Retorno Absoluto": -0.001,
-        "Garantizados": -0.061
+        "Monetarios": -0.666,
+        "Renta Fija Corto Plazo": -0.988,
+        "Renta Fija Largo Plazo": 0.289,
+        "Renta Fija Internacional": 0.387,
+        "Renta Fija Mixta": 0.735,
+        "Renta Variable Mixta": 0.007,
+        "Renta Variable Nacional": 0.027,
+        "Renta Variable Internacional": 0.392,
+        "Globales": 0.315,
+        "Retorno Absoluto": 0.071,
+        "Garantizados": -0.029,
+        "Fondos Índice": -0.162,
+        "Inversión Libre": 0.01
       }
     },
     {
-      "name": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
-      "total_net_bn": 0.205,
+      "name": "BANKINTER GESTION DE ACTIVOS, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.307,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.22,
-        "Renta Fija Largo Plazo": -0.041,
-        "Renta Fija Internacional": -0.0,
-        "Renta Fija Mixta": 0.008,
-        "Renta Variable Mixta": 0.005,
+        "Renta Fija Corto Plazo": 0.01,
+        "Renta Fija Largo Plazo": -0.065,
+        "Renta Fija Internacional": -0.057,
+        "Renta Fija Mixta": 0.234,
+        "Renta Variable Mixta": 0.252,
         "Renta Variable Nacional": -0.001,
-        "Renta Variable Internacional": -0.008,
-        "Rentabilidad Objetivo": -0.014,
-        "Globales": 0.051,
-        "Retorno Absoluto": -0.026,
-        "Inversión Libre": 0.012
+        "Renta Variable Internacional": 0.0,
+        "Rentabilidad Objetivo": -0.0,
+        "Globales": -0.002,
+        "Retorno Absoluto": -0.001,
+        "Garantizados": -0.064
       }
     },
     {
       "name": "AZVALOR ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.198,
+      "total_net_bn": 0.257,
       "flows_by_category": {
-        "Renta Fija Mixta": 0.007,
-        "Renta Variable Internacional": 0.191
-      }
-    },
-    {
-      "name": "MEDIOLANUM GESTION, S.G.I.I.C., S.A.",
-      "total_net_bn": 0.186,
-      "flows_by_category": {
-        "Renta Fija Largo Plazo": 0.161,
-        "Renta Fija Internacional": 0.002,
-        "Renta Fija Mixta": 0.0,
-        "Renta Variable Internacional": 0.023
-      }
-    },
-    {
-      "name": "G.I.I.C. FINECO, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.179,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.02,
-        "Renta Fija Largo Plazo": 0.039,
-        "Renta Fija Mixta": -0.003,
-        "Renta Variable Mixta": 0.063,
-        "Renta Variable Internacional": 0.013,
-        "Globales": 0.086
+        "Renta Fija Mixta": 0.006,
+        "Renta Variable Internacional": 0.251
       }
     },
     {
       "name": "ABANCA GESTION DE ACTIVOS, SGIIC, SA",
-      "total_net_bn": 0.143,
+      "total_net_bn": 0.253,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.123,
-        "Renta Fija Largo Plazo": 0.293,
-        "Renta Fija Internacional": 0.002,
-        "Renta Fija Mixta": -0.016,
-        "Renta Variable Mixta": 0.004,
-        "Renta Variable Internacional": 0.022,
+        "Renta Fija Corto Plazo": 0.208,
+        "Renta Fija Largo Plazo": 0.297,
+        "Renta Fija Internacional": 0.001,
+        "Renta Fija Mixta": -0.023,
+        "Renta Variable Mixta": 0.005,
+        "Renta Variable Internacional": 0.043,
         "Rentabilidad Objetivo": -0.284,
-        "Fondos Índice": -0.002
+        "Fondos Índice": 0.006
+      }
+    },
+    {
+      "name": "RENTA 4 GESTORA, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.239,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.26,
+        "Renta Fija Largo Plazo": -0.054,
+        "Renta Fija Internacional": -0.001,
+        "Renta Fija Mixta": 0.009,
+        "Renta Variable Mixta": 0.007,
+        "Renta Variable Nacional": -0.001,
+        "Renta Variable Internacional": -0.004,
+        "Rentabilidad Objetivo": -0.015,
+        "Globales": 0.056,
+        "Retorno Absoluto": -0.029,
+        "Inversión Libre": 0.012
+      }
+    },
+    {
+      "name": "MEDIOLANUM GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.192,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": 0.156,
+        "Renta Fija Internacional": 0.004,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Internacional": 0.032
+      }
+    },
+    {
+      "name": "G.I.I.C. FINECO, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.187,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.026,
+        "Renta Fija Largo Plazo": 0.037,
+        "Renta Fija Mixta": -0.003,
+        "Renta Variable Mixta": 0.063,
+        "Renta Variable Internacional": 0.018,
+        "Globales": 0.097
       }
     },
     {
       "name": "COBAS ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.132,
+      "total_net_bn": 0.181,
       "flows_by_category": {
-        "Renta Fija Mixta": 0.038,
-        "Renta Variable Internacional": 0.086,
-        "Inversión Libre": 0.007
+        "Renta Fija Mixta": 0.052,
+        "Renta Variable Internacional": 0.116,
+        "Inversión Libre": 0.013
       }
     },
     {
       "name": "ANDBANK WEALTH MANAGEMENT, SGIIC, S.A.U.",
-      "total_net_bn": 0.119,
+      "total_net_bn": 0.155,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.0,
-        "Renta Fija Largo Plazo": 0.002,
-        "Renta Fija Internacional": 0.002,
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Largo Plazo": 0.004,
+        "Renta Fija Internacional": 0.0,
         "Renta Fija Mixta": 0.003,
-        "Renta Variable Mixta": 0.017,
+        "Renta Variable Mixta": 0.018,
         "Renta Variable Nacional": 0.0,
-        "Renta Variable Internacional": 0.06,
-        "Globales": 0.018,
-        "Retorno Absoluto": -0.0,
-        "Inversión Libre": 0.017
-      }
-    },
-    {
-      "name": "TREA ASSET MANAGEMENT S.G.I.I.C., S.A.",
-      "total_net_bn": 0.11,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.248,
-        "Renta Fija Largo Plazo": 0.071,
-        "Renta Fija Internacional": -0.084,
-        "Renta Variable Mixta": 0.001,
-        "Renta Variable Internacional": -0.004,
-        "Rentabilidad Objetivo": 0.117,
-        "Globales": -0.002,
-        "Retorno Absoluto": -0.018,
-        "Garantizados": -0.218
+        "Renta Variable Internacional": 0.075,
+        "Globales": 0.034,
+        "Retorno Absoluto": 0.0,
+        "Inversión Libre": 0.019
       }
     },
     {
       "name": "SINGULAR ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.095,
+      "total_net_bn": 0.144,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.016,
-        "Renta Fija Largo Plazo": -0.008,
-        "Renta Fija Internacional": 0.013,
-        "Renta Fija Mixta": 0.002,
-        "Renta Variable Mixta": 0.003,
-        "Renta Variable Internacional": 0.012,
-        "Globales": 0.078,
+        "Renta Fija Corto Plazo": -0.017,
+        "Renta Fija Largo Plazo": 0.008,
+        "Renta Fija Internacional": 0.012,
+        "Renta Fija Mixta": 0.003,
+        "Renta Variable Mixta": 0.002,
+        "Renta Variable Internacional": 0.023,
+        "Globales": 0.102,
         "Retorno Absoluto": 0.004,
-        "Inversión Libre": 0.007
+        "Inversión Libre": 0.006
       }
     },
     {
       "name": "MAGALLANES VALUE INVESTORS, S.A., SGIIC",
-      "total_net_bn": 0.085,
+      "total_net_bn": 0.097,
       "flows_by_category": {
-        "Renta Variable Internacional": 0.085,
+        "Renta Variable Internacional": 0.097,
         "Inversión Libre": -0.0
       }
     },
     {
       "name": "DEUTSCHE WEALTH MANAGEMENT SGIIC, S.A.",
-      "total_net_bn": 0.081,
+      "total_net_bn": 0.092,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.038,
-        "Renta Fija Mixta": 0.021,
-        "Renta Variable Mixta": 0.012,
-        "Renta Variable Internacional": 0.011
+        "Renta Fija Corto Plazo": 0.042,
+        "Renta Fija Mixta": 0.02,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Internacional": 0.026
+      }
+    },
+    {
+      "name": "TREA ASSET MANAGEMENT S.G.I.I.C., S.A.",
+      "total_net_bn": 0.086,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.273,
+        "Renta Fija Largo Plazo": 0.048,
+        "Renta Fija Internacional": -0.099,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": -0.005,
+        "Rentabilidad Objetivo": 0.112,
+        "Globales": -0.003,
+        "Retorno Absoluto": -0.022,
+        "Garantizados": -0.219
       }
     },
     {
       "name": "GESALCALA, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.036,
+      "total_net_bn": 0.046,
       "flows_by_category": {
         "Renta Fija Largo Plazo": -0.0,
         "Renta Fija Internacional": 0.0,
         "Renta Fija Mixta": 0.0,
         "Renta Variable Mixta": -0.0,
-        "Renta Variable Internacional": 0.009,
-        "Globales": 0.021,
-        "Retorno Absoluto": -0.0,
-        "Inversión Libre": 0.007
+        "Renta Variable Internacional": 0.014,
+        "Globales": 0.024,
+        "Retorno Absoluto": -0.001,
+        "Inversión Libre": 0.009
+      }
+    },
+    {
+      "name": "GRUPO CATALANA OCCIDENTE GESTION DE ACTIVOS, S.A., SGIIC",
+      "total_net_bn": 0.046,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.012,
+        "Renta Fija Largo Plazo": 0.006,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.007,
+        "Renta Variable Nacional": -0.002,
+        "Renta Variable Internacional": 0.02
+      }
+    },
+    {
+      "name": "TRESSIS GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.043,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.011,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Variable Mixta": -0.003,
+        "Renta Variable Internacional": 0.011,
+        "Globales": 0.027,
+        "Inversión Libre": 0.0
       }
     },
     {
       "name": "CBNK GESTION DE ACTIVOS, S.G.I.I.C., S.A.U",
-      "total_net_bn": 0.036,
+      "total_net_bn": 0.04,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.028,
-        "Renta Fija Largo Plazo": 0.009,
+        "Renta Fija Corto Plazo": 0.036,
+        "Renta Fija Largo Plazo": 0.005,
         "Renta Fija Internacional": 0.0,
-        "Renta Fija Mixta": -0.0,
+        "Renta Fija Mixta": -0.001,
         "Renta Variable Mixta": 0.0,
         "Renta Variable Nacional": -0.001,
-        "Renta Variable Internacional": -0.0
+        "Renta Variable Internacional": 0.0
+      }
+    },
+    {
+      "name": "ARQUIGEST, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.04,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.013,
+        "Renta Fija Internacional": -0.005,
+        "Renta Fija Mixta": -0.001,
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Internacional": 0.0,
+        "Rentabilidad Objetivo": 0.032,
+        "Garantizados": -0.0
+      }
+    },
+    {
+      "name": "SANTA LUCIA ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.04,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.04,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Fija Internacional": 0.001,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Nacional": -0.002,
+        "Renta Variable Internacional": 0.004,
+        "Retorno Absoluto": -0.004
       }
     },
     {
       "name": "GESCONSULT, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.035,
+      "total_net_bn": 0.036,
       "flows_by_category": {
         "Renta Fija Corto Plazo": 0.037,
         "Renta Fija Largo Plazo": -0.001,
         "Renta Fija Mixta": -0.0,
         "Renta Variable Mixta": 0.0,
         "Renta Variable Nacional": -0.0,
-        "Renta Variable Internacional": -0.0
-      }
-    },
-    {
-      "name": "GRUPO CATALANA OCCIDENTE GESTION DE ACTIVOS, S.A., SGIIC",
-      "total_net_bn": 0.035,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.013,
-        "Renta Fija Largo Plazo": 0.008,
-        "Renta Fija Mixta": 0.002,
-        "Renta Variable Mixta": 0.005,
-        "Renta Variable Nacional": -0.004,
-        "Renta Variable Internacional": 0.012
-      }
-    },
-    {
-      "name": "TRESSIS GESTION, S.G.I.I.C., S.A.",
-      "total_net_bn": 0.034,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.008,
-        "Renta Fija Largo Plazo": -0.001,
-        "Renta Variable Mixta": -0.002,
-        "Renta Variable Internacional": 0.007,
-        "Globales": 0.022,
-        "Inversión Libre": 0.0
-      }
-    },
-    {
-      "name": "SANTA LUCIA ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.031,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.031,
-        "Renta Fija Largo Plazo": -0.002,
-        "Renta Fija Internacional": 0.001,
-        "Renta Fija Mixta": 0.001,
-        "Renta Variable Mixta": 0.0,
-        "Renta Variable Nacional": -0.001,
-        "Renta Variable Internacional": 0.004,
-        "Retorno Absoluto": -0.004
+        "Renta Variable Internacional": -0.001
       }
     },
     {
       "name": "GESIURIS ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.03,
+      "total_net_bn": 0.028,
       "flows_by_category": {
         "Renta Fija Corto Plazo": 0.001,
         "Renta Fija Largo Plazo": -0.0,
@@ -3737,96 +3892,88 @@
       }
     },
     {
-      "name": "CAJA INGENIEROS GESTION, S.G.I.I.C., S.A.",
+      "name": "GVC GAESCO GESTIÓN, SGIIC, S.A.",
       "total_net_bn": 0.024,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.031,
-        "Renta Fija Largo Plazo": -0.001,
-        "Renta Fija Internacional": 0.007,
-        "Renta Fija Mixta": -0.003,
-        "Renta Variable Mixta": -0.005,
-        "Renta Variable Internacional": -0.009,
-        "Retorno Absoluto": 0.004
-      }
-    },
-    {
-      "name": "ARQUIGEST, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.023,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.009,
-        "Renta Fija Internacional": -0.004,
-        "Renta Fija Mixta": -0.0,
-        "Renta Variable Mixta": 0.001,
-        "Renta Variable Internacional": -0.0,
-        "Rentabilidad Objetivo": 0.019,
-        "Garantizados": -0.0
-      }
-    },
-    {
-      "name": "GESPROFIT, S.A., S.G.I.I.C.",
-      "total_net_bn": 0.018,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.007,
-        "Renta Variable Mixta": 0.01,
-        "Renta Variable Internacional": 0.001
-      }
-    },
-    {
-      "name": "MIRALTA ASSET MANAGEMENT SGIIC, SAU",
-      "total_net_bn": 0.009,
-      "flows_by_category": {
-        "Renta Variable Mixta": 0.0,
-        "Renta Variable Internacional": 0.007,
-        "Inversión Libre": 0.002
-      }
-    },
-    {
-      "name": "GVC GAESCO GESTIÓN, SGIIC, S.A.",
-      "total_net_bn": 0.008,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.014,
-        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Corto Plazo": -0.009,
+        "Renta Fija Largo Plazo": 0.005,
         "Renta Fija Internacional": 0.003,
         "Renta Fija Mixta": 0.004,
-        "Renta Variable Mixta": 0.003,
+        "Renta Variable Mixta": 0.005,
         "Renta Variable Nacional": 0.001,
-        "Renta Variable Internacional": 0.004,
-        "Globales": 0.004,
+        "Renta Variable Internacional": 0.008,
+        "Globales": 0.006,
         "Retorno Absoluto": 0.001
       }
     },
     {
-      "name": "SASSOLA PARTNERS, SGIIC, S.A.",
-      "total_net_bn": 0.008,
+      "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
+      "total_net_bn": 0.024,
       "flows_by_category": {
-        "Renta Variable Mixta": 0.008
+        "Renta Fija Corto Plazo": 0.012,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Fija Internacional": -0.001,
+        "Renta Fija Mixta": 0.007,
+        "Renta Variable Mixta": 0.016,
+        "Renta Variable Nacional": 0.001,
+        "Renta Variable Internacional": -0.107,
+        "Globales": 0.015,
+        "Garantizados": 0.082,
+        "Inversión Libre": 0.0
       }
     },
     {
-      "name": "CAIXABANK ASSET MANAGEMENT SGIIC, S.A.",
-      "total_net_bn": 0.007,
+      "name": "GESPROFIT, S.A., S.G.I.I.C.",
+      "total_net_bn": 0.019,
       "flows_by_category": {
-        "Monetarios": -0.839,
-        "Renta Fija Corto Plazo": 0.645,
-        "Renta Fija Largo Plazo": -1.283,
-        "Renta Fija Internacional": 0.381,
-        "Renta Fija Mixta": 0.661,
-        "Renta Variable Mixta": 0.005,
-        "Renta Variable Nacional": 0.015,
-        "Renta Variable Internacional": 0.341,
-        "Globales": 0.232,
-        "Retorno Absoluto": 0.058,
-        "Garantizados": -0.026,
-        "Fondos Índice": -0.183
+        "Renta Fija Corto Plazo": 0.006,
+        "Renta Variable Mixta": 0.011,
+        "Renta Variable Internacional": 0.001
+      }
+    },
+    {
+      "name": "CAJA INGENIEROS GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.017,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.032,
+        "Renta Fija Largo Plazo": -0.004,
+        "Renta Fija Internacional": 0.015,
+        "Renta Fija Mixta": -0.009,
+        "Renta Variable Mixta": -0.006,
+        "Renta Variable Internacional": -0.016,
+        "Retorno Absoluto": 0.004
+      }
+    },
+    {
+      "name": "MIRALTA ASSET MANAGEMENT SGIIC, SAU",
+      "total_net_bn": 0.012,
+      "flows_by_category": {
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": 0.009,
+        "Inversión Libre": 0.002
       }
     },
     {
       "name": "WELCOME ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.006,
+      "total_net_bn": 0.011,
       "flows_by_category": {
-        "Renta Fija Mixta": 0.004,
+        "Renta Fija Mixta": 0.006,
         "Renta Variable Mixta": 0.001,
-        "Globales": 0.002
+        "Globales": 0.003
+      }
+    },
+    {
+      "name": "SASSOLA PARTNERS, SGIIC, S.A.",
+      "total_net_bn": 0.01,
+      "flows_by_category": {
+        "Renta Variable Mixta": 0.01
+      }
+    },
+    {
+      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
+      "total_net_bn": 0.007,
+      "flows_by_category": {
+        "Globales": 0.007
       }
     },
     {
@@ -3840,76 +3987,56 @@
       }
     },
     {
-      "name": "PANZA CAPITAL, SGIIC, S.A.",
+      "name": "MARKET PORTFOLIO ASSET MANAGEMENT, S.G.I.I.C., S.A.",
       "total_net_bn": 0.006,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.003,
-        "Renta Variable Internacional": 0.003
-      }
-    },
-    {
-      "name": "MARKET PORTFOLIO ASSET MANAGEMENT, S.G.I.I.C., S.A.",
-      "total_net_bn": 0.005,
-      "flows_by_category": {
-        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Largo Plazo": -0.001,
         "Renta Fija Internacional": -0.0,
-        "Renta Variable Internacional": 0.006
-      }
-    },
-    {
-      "name": "OLEA GESTION DE ACTIVOS, SGIIC, S.A.",
-      "total_net_bn": 0.005,
-      "flows_by_category": {
-        "Globales": 0.005
+        "Renta Variable Internacional": 0.007
       }
     },
     {
       "name": "SOLVENTIS S.G.I.I.C., S.A.",
-      "total_net_bn": 0.004,
+      "total_net_bn": 0.006,
       "flows_by_category": {
         "Renta Fija Corto Plazo": -0.003,
         "Renta Fija Largo Plazo": 0.0,
-        "Renta Fija Internacional": -0.0,
+        "Renta Fija Internacional": -0.001,
         "Renta Fija Mixta": 0.002,
         "Renta Variable Mixta": 0.002,
-        "Renta Variable Internacional": 0.005,
-        "Globales": 0.014,
+        "Renta Variable Internacional": 0.006,
+        "Globales": 0.015,
         "Retorno Absoluto": -0.015,
-        "Inversión Libre": -0.0
+        "Inversión Libre": -0.001
       }
     },
     {
-      "name": "BESTINVER GESTION, S.A., S.G.I.I.C.",
+      "name": "PANZA CAPITAL, SGIIC, S.A.",
       "total_net_bn": 0.003,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.024,
-        "Renta Fija Largo Plazo": 0.0,
-        "Renta Fija Mixta": 0.01,
-        "Renta Variable Mixta": 0.003,
-        "Renta Variable Internacional": -0.021,
-        "Inversión Libre": -0.012
+        "Renta Fija Corto Plazo": 0.002,
+        "Renta Variable Internacional": 0.001
+      }
+    },
+    {
+      "name": "GESINTER, S.G.I.I.C., S.A.",
+      "total_net_bn": 0.0,
+      "flows_by_category": {
+        "Renta Variable Mixta": 0.001,
+        "Renta Variable Internacional": 0.0,
+        "Globales": 0.0,
+        "Inversión Libre": -0.001
       }
     },
     {
       "name": "AFI INVERSIONES GLOBALES, SGIIC, S.A.",
-      "total_net_bn": 0.002,
+      "total_net_bn": 0.0,
       "flows_by_category": {
         "Renta Fija Corto Plazo": 0.001,
         "Renta Fija Largo Plazo": 0.0,
-        "Renta Variable Mixta": -0.0,
+        "Renta Variable Mixta": 0.0,
         "Renta Variable Internacional": 0.0,
-        "Globales": 0.0
-      }
-    },
-    {
-      "name": "WELZIA MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": 0.0,
-      "flows_by_category": {
-        "Renta Fija Mixta": 0.002,
-        "Renta Variable Mixta": -0.0,
-        "Renta Variable Internacional": -0.0,
-        "Globales": -0.001,
-        "Retorno Absoluto": -0.001
+        "Globales": -0.002
       }
     },
     {
@@ -3920,13 +4047,14 @@
       }
     },
     {
-      "name": "GESINTER, S.G.I.I.C., S.A.",
+      "name": "WELZIA MANAGEMENT, SGIIC, S.A.",
       "total_net_bn": -0.0,
       "flows_by_category": {
-        "Renta Variable Mixta": 0.0,
+        "Renta Fija Mixta": 0.002,
+        "Renta Variable Mixta": -0.0,
         "Renta Variable Internacional": 0.0,
-        "Globales": 0.0,
-        "Inversión Libre": -0.001
+        "Globales": -0.001,
+        "Retorno Absoluto": -0.001
       }
     },
     {
@@ -3934,31 +4062,6 @@
       "total_net_bn": -0.0,
       "flows_by_category": {
         "Globales": -0.0
-      }
-    },
-    {
-      "name": "INVERSIS GESTIÓN, S.A., SGIIC",
-      "total_net_bn": -0.001,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.004,
-        "Renta Fija Largo Plazo": -0.002,
-        "Renta Fija Internacional": 0.003,
-        "Renta Fija Mixta": 0.01,
-        "Renta Variable Mixta": 0.003,
-        "Renta Variable Internacional": -0.029,
-        "Globales": 0.006,
-        "Retorno Absoluto": 0.002
-      }
-    },
-    {
-      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
-      "total_net_bn": -0.002,
-      "flows_by_category": {
-        "Renta Fija Largo Plazo": -0.001,
-        "Renta Fija Mixta": 0.0,
-        "Renta Variable Mixta": 0.0,
-        "Renta Variable Internacional": -0.0,
-        "Globales": -0.001
       }
     },
     {
@@ -3971,8 +4074,47 @@
       }
     },
     {
+      "name": "INTERMONEY GESTION, S.G.I.I.C., S.A.",
+      "total_net_bn": -0.003,
+      "flows_by_category": {
+        "Renta Fija Largo Plazo": -0.0,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": -0.0,
+        "Globales": -0.002
+      }
+    },
+    {
+      "name": "AMUNDI IBERIA, SGIIC, S.A.",
+      "total_net_bn": -0.003,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.001,
+        "Renta Fija Largo Plazo": -0.001,
+        "Renta Fija Mixta": -0.018,
+        "Renta Variable Mixta": -0.02,
+        "Renta Variable Internacional": 0.056,
+        "Globales": -0.002,
+        "Retorno Absoluto": -0.005,
+        "Fondos Índice": -0.013
+      }
+    },
+    {
+      "name": "INVERSIS GESTIÓN, S.A., SGIIC",
+      "total_net_bn": -0.003,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.006,
+        "Renta Fija Largo Plazo": -0.002,
+        "Renta Fija Internacional": 0.003,
+        "Renta Fija Mixta": 0.007,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Internacional": -0.031,
+        "Globales": 0.007,
+        "Retorno Absoluto": 0.003
+      }
+    },
+    {
       "name": "METAGESTION, S.A., SGIIC",
-      "total_net_bn": -0.005,
+      "total_net_bn": -0.006,
       "flows_by_category": {
         "Renta Variable Nacional": -0.001,
         "Renta Variable Internacional": -0.002,
@@ -3980,154 +4122,136 @@
       }
     },
     {
-      "name": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
-      "total_net_bn": -0.011,
+      "name": "BESTINVER GESTION, S.A., S.G.I.I.C.",
+      "total_net_bn": -0.016,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.013,
-        "Renta Fija Internacional": -0.004,
-        "Renta Fija Mixta": 0.0,
-        "Renta Variable Mixta": 0.007,
-        "Renta Variable Internacional": 0.001,
-        "Globales": -0.001
+        "Renta Fija Corto Plazo": 0.014,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Mixta": 0.005,
+        "Renta Variable Mixta": 0.004,
+        "Renta Variable Internacional": -0.021,
+        "Inversión Libre": -0.018
+      }
+    },
+    {
+      "name": "ABANTE ASESORES GESTION, SGIIC, S.A.",
+      "total_net_bn": -0.017,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": -0.05,
+        "Renta Fija Largo Plazo": 0.0,
+        "Renta Fija Mixta": -0.018,
+        "Renta Variable Mixta": 0.0,
+        "Renta Variable Internacional": 0.058,
+        "Globales": -0.008,
+        "Retorno Absoluto": 0.0
       }
     },
     {
       "name": "FONDITEL GESTION, SGIIC, SA",
-      "total_net_bn": -0.013,
+      "total_net_bn": -0.018,
       "flows_by_category": {
         "Renta Fija Corto Plazo": 0.0,
         "Renta Fija Largo Plazo": -0.0,
-        "Renta Fija Mixta": -0.0,
-        "Renta Variable Mixta": -0.014,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": -0.019,
         "Renta Variable Nacional": 0.0,
         "Renta Variable Internacional": -0.0
       }
     },
     {
-      "name": "SANTANDER ALTERNATIVE INVESTMENTS, SGIIC, S.A.U.",
-      "total_net_bn": -0.014,
-      "flows_by_category": {
-        "Inversión Libre": -0.014
-      }
-    },
-    {
-      "name": "ABANTE ASESORES GESTION, SGIIC, S.A.",
+      "name": "UBS WEALTH MANAGEMENT, S.G.I.I.C., S.A.",
       "total_net_bn": -0.021,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.05,
-        "Renta Fija Largo Plazo": -0.001,
-        "Renta Fija Mixta": -0.014,
-        "Renta Variable Mixta": 0.002,
-        "Renta Variable Internacional": 0.047,
-        "Globales": -0.005,
-        "Retorno Absoluto": 0.0
+        "Renta Fija Corto Plazo": -0.023,
+        "Renta Fija Internacional": -0.005,
+        "Renta Fija Mixta": 0.0,
+        "Renta Variable Mixta": 0.008,
+        "Renta Variable Internacional": 0.001,
+        "Globales": -0.002
       }
     },
     {
       "name": "ATL 12 CAPITAL GESTION S.G.I.I.C, S.A.",
-      "total_net_bn": -0.022,
+      "total_net_bn": -0.027,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.014,
+        "Renta Fija Corto Plazo": -0.019,
         "Renta Fija Largo Plazo": -0.02,
-        "Renta Fija Internacional": 0.014,
+        "Renta Fija Internacional": 0.012,
         "Renta Fija Mixta": -0.002,
-        "Renta Variable Mixta": -0.002,
+        "Renta Variable Mixta": -0.001,
         "Renta Variable Internacional": 0.002,
         "Globales": 0.001
       }
     },
     {
-      "name": "AMUNDI IBERIA, SGIIC, S.A.",
+      "name": "SANTANDER ALTERNATIVE INVESTMENTS, SGIIC, S.A.U.",
       "total_net_bn": -0.03,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.0,
-        "Renta Fija Largo Plazo": -0.0,
-        "Renta Fija Mixta": -0.016,
-        "Renta Variable Mixta": -0.018,
-        "Renta Variable Internacional": 0.037,
-        "Globales": -0.002,
-        "Retorno Absoluto": -0.004,
-        "Fondos Índice": -0.027
+        "Inversión Libre": -0.03
       }
     },
     {
       "name": "DUNAS CAPITAL ASSET MANAGEMENT S.G.I.I.C., S.A.",
-      "total_net_bn": -0.032,
+      "total_net_bn": -0.037,
       "flows_by_category": {
-        "Retorno Absoluto": -0.024,
+        "Retorno Absoluto": -0.029,
         "Fondos Índice": -0.008
       }
     },
     {
-      "name": "MAPFRE ASSET MANAGEMENT, SGIIC, S.A.",
-      "total_net_bn": -0.034,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.015,
-        "Renta Fija Largo Plazo": -0.003,
-        "Renta Fija Internacional": -0.001,
-        "Renta Fija Mixta": 0.007,
-        "Renta Variable Mixta": 0.012,
-        "Renta Variable Nacional": -0.001,
-        "Renta Variable Internacional": -0.098,
-        "Globales": 0.009,
-        "Garantizados": 0.024,
-        "Inversión Libre": 0.0
-      }
-    },
-    {
       "name": "EDM GESTION, SOCIEDAD ANONIMA, S.G.I.I.C.",
-      "total_net_bn": -0.046,
+      "total_net_bn": -0.083,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.006,
-        "Renta Fija Largo Plazo": 0.003,
-        "Renta Fija Mixta": 0.0,
-        "Renta Variable Internacional": -0.025,
-        "Rentabilidad Objetivo": -0.001,
-        "Globales": -0.016
-      }
-    },
-    {
-      "name": "SABADELL ASSET MANAGEMENT, S.A., S.G.I.I.C.",
-      "total_net_bn": -0.119,
-      "flows_by_category": {
-        "Renta Fija Corto Plazo": 0.191,
-        "Renta Fija Largo Plazo": -0.025,
-        "Renta Fija Internacional": -0.001,
-        "Renta Fija Mixta": 0.014,
-        "Renta Variable Mixta": 0.004,
-        "Renta Variable Nacional": -0.002,
-        "Renta Variable Internacional": -0.027,
-        "Globales": -0.068,
-        "Retorno Absoluto": 0.005,
-        "Garantizados": -0.21
+        "Renta Fija Corto Plazo": -0.015,
+        "Renta Fija Largo Plazo": -0.015,
+        "Renta Fija Mixta": -0.0,
+        "Renta Variable Internacional": -0.026,
+        "Rentabilidad Objetivo": -0.009,
+        "Globales": -0.018
       }
     },
     {
       "name": "MARCH ASSET MANAGEMENT, S.G.I.I.C., S.A.U.",
-      "total_net_bn": -0.121,
+      "total_net_bn": -0.166,
       "flows_by_category": {
-        "Renta Fija Corto Plazo": -0.066,
-        "Renta Fija Largo Plazo": -0.031,
+        "Renta Fija Corto Plazo": -0.076,
+        "Renta Fija Largo Plazo": -0.049,
         "Renta Fija Internacional": -0.001,
         "Renta Fija Mixta": 0.008,
         "Renta Variable Mixta": 0.003,
-        "Renta Variable Internacional": -0.0,
-        "Garantizados": -0.033
+        "Renta Variable Internacional": 0.001,
+        "Garantizados": -0.052
+      }
+    },
+    {
+      "name": "SABADELL ASSET MANAGEMENT, S.A., S.G.I.I.C.",
+      "total_net_bn": -0.17,
+      "flows_by_category": {
+        "Renta Fija Corto Plazo": 0.209,
+        "Renta Fija Largo Plazo": -0.215,
+        "Renta Fija Internacional": -0.0,
+        "Renta Fija Mixta": 0.217,
+        "Renta Variable Mixta": 0.019,
+        "Renta Variable Nacional": -0.002,
+        "Renta Variable Internacional": 0.01,
+        "Globales": -0.149,
+        "Retorno Absoluto": 0.007,
+        "Garantizados": -0.265
       }
     },
     {
       "name": "MUTUACTIVOS, S.A., S.G.I.I.C.",
-      "total_net_bn": -0.541,
+      "total_net_bn": -0.481,
       "flows_by_category": {
-        "Monetarios": -0.025,
-        "Renta Fija Corto Plazo": -0.117,
-        "Renta Fija Largo Plazo": -0.06,
-        "Renta Fija Mixta": -0.382,
-        "Renta Variable Mixta": 0.015,
+        "Monetarios": 0.028,
+        "Renta Fija Corto Plazo": -0.114,
+        "Renta Fija Largo Plazo": -0.055,
+        "Renta Fija Mixta": -0.387,
+        "Renta Variable Mixta": -0.009,
         "Renta Variable Nacional": -0.011,
-        "Renta Variable Internacional": -0.007,
-        "Rentabilidad Objetivo": -0.05,
-        "Globales": 0.103,
+        "Renta Variable Internacional": -0.004,
+        "Rentabilidad Objetivo": -0.093,
+        "Globales": 0.17,
         "Inversión Libre": -0.007
       }
     }
@@ -4268,6 +4392,11 @@
         "date": "2026-03",
         "net": 0.025,
         "cumulative": 12.55
+      },
+      {
+        "date": "2026-04",
+        "net": 0.31,
+        "cumulative": 12.86
       }
     ],
     "RF Euro CP": [
@@ -4405,6 +4534,11 @@
         "date": "2026-03",
         "net": 0.908,
         "cumulative": 35.228
+      },
+      {
+        "date": "2026-04",
+        "net": -2.329,
+        "cumulative": 32.899
       }
     ],
     "RF Euro LP": [
@@ -4542,6 +4676,11 @@
         "date": "2026-03",
         "net": -0.363,
         "cumulative": 16.504
+      },
+      {
+        "date": "2026-04",
+        "net": 1.759,
+        "cumulative": 18.263
       }
     ],
     "RF Mixta Euro": [
@@ -4679,6 +4818,11 @@
         "date": "2026-03",
         "net": 0.013,
         "cumulative": 11.369
+      },
+      {
+        "date": "2026-04",
+        "net": -0.127,
+        "cumulative": 11.242
       }
     ],
     "RV Mixta Euro": [
@@ -4816,6 +4960,11 @@
         "date": "2026-03",
         "net": -0.006,
         "cumulative": -0.143
+      },
+      {
+        "date": "2026-04",
+        "net": -0.002,
+        "cumulative": -0.145
       }
     ],
     "RV Nacional": [
@@ -4953,6 +5102,11 @@
         "date": "2026-03",
         "net": -0.115,
         "cumulative": -1.122
+      },
+      {
+        "date": "2026-04",
+        "net": 0.023,
+        "cumulative": -1.099
       }
     ],
     "RF Internacional": [
@@ -5090,6 +5244,11 @@
         "date": "2026-03",
         "net": -0.214,
         "cumulative": 5.719
+      },
+      {
+        "date": "2026-04",
+        "net": 0.765,
+        "cumulative": 6.484
       }
     ],
     "RF Mixta Internacional": [
@@ -5227,6 +5386,11 @@
         "date": "2026-03",
         "net": -0.118,
         "cumulative": -1.726
+      },
+      {
+        "date": "2026-04",
+        "net": 0.088,
+        "cumulative": -1.638
       }
     ],
     "RV Mixta Internacional": [
@@ -5364,6 +5528,11 @@
         "date": "2026-03",
         "net": -0.16,
         "cumulative": 0.097
+      },
+      {
+        "date": "2026-04",
+        "net": 0.053,
+        "cumulative": 0.15
       }
     ],
     "RV Euro Resto": [
@@ -5501,6 +5670,11 @@
         "date": "2026-03",
         "net": -0.012,
         "cumulative": 0.045
+      },
+      {
+        "date": "2026-04",
+        "net": 0.035,
+        "cumulative": 0.08
       }
     ],
     "RV Intl Europa": [
@@ -5638,6 +5812,11 @@
         "date": "2026-03",
         "net": 0.985,
         "cumulative": 1.582
+      },
+      {
+        "date": "2026-04",
+        "net": 0.144,
+        "cumulative": 1.726
       }
     ],
     "RV Intl EEUU": [
@@ -5775,6 +5954,11 @@
         "date": "2026-03",
         "net": -0.123,
         "cumulative": -0.952
+      },
+      {
+        "date": "2026-04",
+        "net": 0.136,
+        "cumulative": -0.816
       }
     ],
     "RV Intl Japón": [
@@ -5912,6 +6096,11 @@
         "date": "2026-03",
         "net": -0.007,
         "cumulative": -0.005
+      },
+      {
+        "date": "2026-04",
+        "net": 0.02,
+        "cumulative": 0.015
       }
     ],
     "RV Intl Emergentes": [
@@ -6049,6 +6238,11 @@
         "date": "2026-03",
         "net": -0.053,
         "cumulative": 1.025
+      },
+      {
+        "date": "2026-04",
+        "net": -0.021,
+        "cumulative": 1.004
       }
     ],
     "RV Intl Resto": [
@@ -6186,6 +6380,11 @@
         "date": "2026-03",
         "net": -0.196,
         "cumulative": -0.748
+      },
+      {
+        "date": "2026-04",
+        "net": 0.241,
+        "cumulative": -0.507
       }
     ],
     "Globales": [
@@ -6323,6 +6522,11 @@
         "date": "2026-03",
         "net": -0.396,
         "cumulative": -6.34
+      },
+      {
+        "date": "2026-04",
+        "net": 0.034,
+        "cumulative": -6.306
       }
     ],
     "Garantizados RF": [
@@ -6460,6 +6664,11 @@
         "date": "2026-03",
         "net": 0.022,
         "cumulative": -3.296
+      },
+      {
+        "date": "2026-04",
+        "net": 0.071,
+        "cumulative": -3.225
       }
     ],
     "Garantizados RV": [
@@ -6597,6 +6806,11 @@
         "date": "2026-03",
         "net": -0.128,
         "cumulative": -3.17
+      },
+      {
+        "date": "2026-04",
+        "net": -0.024,
+        "cumulative": -3.194
       }
     ],
     "Garantía parcial": [
@@ -6791,6 +7005,11 @@
         "date": "2026-03",
         "net": -0.098,
         "cumulative": 1.998
+      },
+      {
+        "date": "2026-04",
+        "net": 0.002,
+        "cumulative": 2.0
       }
     ],
     "Fondos Índice": [
@@ -6928,6 +7147,11 @@
         "date": "2026-03",
         "net": -0.096,
         "cumulative": -0.983
+      },
+      {
+        "date": "2026-04",
+        "net": 0.044,
+        "cumulative": -0.939
       }
     ],
     "Objetivo Rentabilidad": [
@@ -7065,6 +7289,11 @@
         "date": "2026-03",
         "net": -0.513,
         "cumulative": -3.972
+      },
+      {
+        "date": "2026-04",
+        "net": 0.371,
+        "cumulative": -3.601
       }
     ],
     "FIL": [
@@ -7202,6 +7431,11 @@
         "date": "2026-03",
         "net": 0.056,
         "cumulative": 0.515
+      },
+      {
+        "date": "2026-04",
+        "net": -0.017,
+        "cumulative": 0.498
       }
     ],
     "Hedge Funds": [
@@ -7339,6 +7573,11 @@
         "date": "2026-03",
         "net": 0.0,
         "cumulative": -0.023
+      },
+      {
+        "date": "2026-04",
+        "net": 0.01,
+        "cumulative": -0.013
       }
     ]
   }
