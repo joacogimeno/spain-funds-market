@@ -23,6 +23,7 @@ export const CATEGORY_COLORS: Record<string, string> = {
   'Objetivo Rentabilidad': '#a3a3a3',
   'FIL': '#71717a',
   'Hedge Funds': '#525252',
+  'SICAV': '#f472b6',
 };
 
 export const GESTORA_TYPE_COLORS: Record<string, string> = {

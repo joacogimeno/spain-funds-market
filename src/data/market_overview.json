@@ -1,11 +1,11 @@
 {
   "kpis": {
-    "total_aum_bn": 465.5,
-    "total_investors": 18599779,
-    "total_funds": 3350,
-    "monthly_net_flows_bn": 1.58,
-    "yoy_growth_pct": 13.9,
-    "latest_date": "2026-04"
+    "total_aum_bn": 478.1,
+    "total_investors": 19634678,
+    "total_funds": 3400,
+    "monthly_net_flows_bn": -1.74,
+    "yoy_growth_pct": 9.3,
+    "latest_date": "2026-09"
   },
   "monthly_aum": [
     {
@@ -543,6 +543,101 @@
       "Objetivo Rentabilidad": 18.448,
       "Globales": 63.082,
       "Internacional": 147.299
+    },
+    {
+      "date": "2026-05",
+      "year": 2026,
+      "month": 5,
+      "total_aum_bn": 475.2,
+      "Monetarios": 24.062,
+      "RF Euro CP": 80.854,
+      "RF Euro LP": 82.981,
+      "RF Mixta Euro": 21.335,
+      "RV Mixta Euro": 0.807,
+      "RV Nacional": 3.943,
+      "Garantizados RF": 4.392,
+      "Garantizados RV": 1.536,
+      "Retorno Absoluto": 9.641,
+      "Fondos Índice": 7.958,
+      "Objetivo Rentabilidad": 18.585,
+      "Globales": 64.513,
+      "Internacional": 154.598
+    },
+    {
+      "date": "2026-06",
+      "year": 2026,
+      "month": 6,
+      "total_aum_bn": 479.34,
+      "Monetarios": 23.738,
+      "RF Euro CP": 82.356,
+      "RF Euro LP": 83.872,
+      "RF Mixta Euro": 21.379,
+      "RV Mixta Euro": 0.812,
+      "RV Nacional": 4.091,
+      "Garantizados RF": 3.795,
+      "Garantizados RV": 1.394,
+      "Retorno Absoluto": 9.698,
+      "Fondos Índice": 7.605,
+      "Objetivo Rentabilidad": 18.351,
+      "Globales": 65.669,
+      "Internacional": 156.583
+    },
+    {
+      "date": "2026-07",
+      "year": 2026,
+      "month": 7,
+      "total_aum_bn": 478.07,
+      "Monetarios": 23.541,
+      "RF Euro CP": 81.927,
+      "RF Euro LP": 80.99,
+      "RF Mixta Euro": 21.398,
+      "RV Mixta Euro": 0.802,
+      "RV Nacional": 4.159,
+      "Garantizados RF": 3.742,
+      "Garantizados RV": 1.371,
+      "Retorno Absoluto": 9.743,
+      "Fondos Índice": 7.622,
+      "Objetivo Rentabilidad": 18.879,
+      "Globales": 65.51,
+      "Internacional": 158.384
+    },
+    {
+      "date": "2026-08",
+      "year": 2026,
+      "month": 8,
+      "total_aum_bn": 482.13,
+      "Monetarios": 23.633,
+      "RF Euro CP": 82.271,
+      "RF Euro LP": 80.941,
+      "RF Mixta Euro": 21.242,
+      "RV Mixta Euro": 0.806,
+      "RV Nacional": 4.2,
+      "Garantizados RF": 3.772,
+      "Garantizados RV": 1.322,
+      "Retorno Absoluto": 9.811,
+      "Fondos Índice": 7.75,
+      "Objetivo Rentabilidad": 18.998,
+      "Globales": 66.283,
+      "Internacional": 161.101
+    },
+    {
+      "date": "2026-09",
+      "year": 2026,
+      "month": 9,
+      "total_aum_bn": 478.09,
+      "Monetarios": 21.928,
+      "RF Euro CP": 83.189,
+      "RF Euro LP": 79.472,
+      "RF Mixta Euro": 21.131,
+      "RV Mixta Euro": 0.794,
+      "RV Nacional": 4.101,
+      "Garantizados RF": 3.736,
+      "Garantizados RV": 1.187,
+      "Retorno Absoluto": 9.748,
+      "Fondos Índice": 7.733,
+      "Objetivo Rentabilidad": 18.86,
+      "Globales": 66.094,
+      "Internacional": 160.114
     }
   ],
   "annual_aum": [
@@ -1049,6 +1144,26 @@
     {
       "date": "2026-04",
       "total": 18599779.0
+    },
+    {
+      "date": "2026-05",
+      "total": 18873102.0
+    },
+    {
+      "date": "2026-06",
+      "total": 19041915.0
+    },
+    {
+      "date": "2026-07",
+      "total": 19270269.0
+    },
+    {
+      "date": "2026-08",
+      "total": 19526323.0
+    },
+    {
+      "date": "2026-09",
+      "total": 19634678.0
     }
   ],
   "monthly_funds": [
@@ -1163,146 +1278,166 @@
     {
       "date": "2026-04",
       "total": 3350.0
+    },
+    {
+      "date": "2026-05",
+      "total": 3359.0
+    },
+    {
+      "date": "2026-06",
+      "total": 3357.0
+    },
+    {
+      "date": "2026-07",
+      "total": 3412.0
+    },
+    {
+      "date": "2026-08",
+      "total": 3394.0
+    },
+    {
+      "date": "2026-09",
+      "total": 3400.0
     }
   ],
   "latest_flows": [
     {
       "category": "Monetarios",
-      "subs": 1.685,
-      "redemptions": 1.375,
-      "net": 0.31
+      "subs": 1.128,
+      "redemptions": 2.863,
+      "net": -1.735
     },
     {
       "category": "RF Euro CP",
-      "subs": 3.437,
-      "redemptions": 5.766,
-      "net": -2.329
+      "subs": 4.351,
+      "redemptions": 3.458,
+      "net": 0.893
     },
     {
       "category": "RF Euro LP",
-      "subs": 3.748,
-      "redemptions": 1.989,
-      "net": 1.759
+      "subs": 2.486,
+      "redemptions": 3.165,
+      "net": -0.679
     },
     {
       "category": "RF Mixta Euro",
-      "subs": 0.388,
-      "redemptions": 0.516,
-      "net": -0.127
+      "subs": 1.001,
+      "redemptions": 0.979,
+      "net": 0.022
     },
     {
       "category": "RV Mixta Euro",
       "subs": 0.003,
-      "redemptions": 0.005,
-      "net": -0.002
+      "redemptions": 0.003,
+      "net": -0.0
     },
     {
       "category": "RV Nacional",
-      "subs": 0.105,
-      "redemptions": 0.082,
-      "net": 0.023
+      "subs": 0.072,
+      "redemptions": 0.081,
+      "net": -0.009
     },
     {
       "category": "RF Internacional",
-      "subs": 1.246,
-      "redemptions": 0.482,
-      "net": 0.765
+      "subs": 0.561,
+      "redemptions": 1.102,
+      "net": -0.54
     },
     {
       "category": "RF Mixta Internacional",
-      "subs": 0.687,
-      "redemptions": 0.599,
-      "net": 0.088
+      "subs": 0.584,
+      "redemptions": 0.461,
+      "net": 0.123
     },
     {
       "category": "RV Mixta Internacional",
-      "subs": 0.392,
-      "redemptions": 0.339,
-      "net": 0.053
+      "subs": 0.593,
+      "redemptions": 0.424,
+      "net": 0.169
     },
     {
       "category": "RV Euro Resto",
       "subs": 0.133,
-      "redemptions": 0.098,
-      "net": 0.035
+      "redemptions": 0.066,
+      "net": 0.067
     },
     {
       "category": "RV Intl Europa",
-      "subs": 0.284,
-      "redemptions": 0.14,
-      "net": 0.144
+      "subs": 0.233,
+      "redemptions": 0.259,
+      "net": -0.026
     },
     {
       "category": "RV Intl EEUU",
-      "subs": 0.378,
-      "redemptions": 0.242,
-      "net": 0.136
+      "subs": 0.655,
+      "redemptions": 0.315,
+      "net": 0.34
     },
     {
       "category": "RV Intl Japón",
-      "subs": 0.044,
-      "redemptions": 0.023,
-      "net": 0.02
+      "subs": 0.023,
+      "redemptions": 0.1,
+      "net": -0.078
     },
     {
       "category": "RV Intl Emergentes",
-      "subs": 0.097,
-      "redemptions": 0.118,
-      "net": -0.021
+      "subs": 0.13,
+      "redemptions": 0.685,
+      "net": -0.555
     },
     {
       "category": "RV Intl Resto",
-      "subs": 0.695,
-      "redemptions": 0.453,
-      "net": 0.241
+      "subs": 0.67,
+      "redemptions": 0.407,
+      "net": 0.263
     },
     {
       "category": "Globales",
-      "subs": 0.911,
-      "redemptions": 0.877,
-      "net": 0.034
+      "subs": 1.238,
+      "redemptions": 0.944,
+      "net": 0.294
     },
     {
       "category": "Garantizados RF",
-      "subs": 0.147,
-      "redemptions": 0.076,
-      "net": 0.071
+      "subs": 0.047,
+      "redemptions": 0.072,
+      "net": -0.025
     },
     {
       "category": "Garantizados RV",
-      "subs": 0.008,
-      "redemptions": 0.032,
-      "net": -0.024
+      "subs": 0.0,
+      "redemptions": 0.133,
+      "net": -0.133
     },
     {
       "category": "Retorno Absoluto",
-      "subs": 0.135,
-      "redemptions": 0.133,
-      "net": 0.002
+      "subs": 0.186,
+      "redemptions": 0.161,
+      "net": 0.024
     },
     {
       "category": "Fondos Índice",
-      "subs": 0.202,
-      "redemptions": 0.158,
-      "net": 0.044
+      "subs": 0.14,
+      "redemptions": 0.106,
+      "net": 0.034
     },
     {
       "category": "Objetivo Rentabilidad",
-      "subs": 0.741,
-      "redemptions": 0.371,
-      "net": 0.371
+      "subs": 0.462,
+      "redemptions": 0.64,
+      "net": -0.177
     },
     {
       "category": "FIL",
-      "subs": 0.023,
-      "redemptions": 0.039,
-      "net": -0.017
+      "subs": 0.039,
+      "redemptions": 0.058,
+      "net": -0.02
     },
     {
       "category": "Hedge Funds",
-      "subs": 0.01,
+      "subs": 0.004,
       "redemptions": 0.0,
-      "net": 0.01
+      "net": 0.004
     }
   ],
   "aum_bridge": [
@@ -1584,14 +1719,64 @@
       "cum_flows": 63.38,
       "cum_market": 49.94,
       "gap": false
+    },
+    {
+      "date": "2026-05",
+      "aum": 475.2,
+      "delta": 9.68,
+      "flows": 1.865,
+      "market": 7.815,
+      "cum_flows": 65.245,
+      "cum_market": 57.755,
+      "gap": false
+    },
+    {
+      "date": "2026-06",
+      "aum": 479.34,
+      "delta": 4.14,
+      "flows": 1.904,
+      "market": 2.236,
+      "cum_flows": 67.149,
+      "cum_market": 59.991,
+      "gap": false
+    },
+    {
+      "date": "2026-07",
+      "aum": 478.07,
+      "delta": -1.27,
+      "flows": 0.316,
+      "market": -1.586,
+      "cum_flows": 67.465,
+      "cum_market": 58.405,
+      "gap": false
+    },
+    {
+      "date": "2026-08",
+      "aum": 482.13,
+      "delta": 4.06,
+      "flows": 1.415,
+      "market": 2.645,
+      "cum_flows": 68.88,
+      "cum_market": 61.05,
+      "gap": false
+    },
+    {
+      "date": "2026-09",
+      "aum": 478.09,
+      "delta": -4.04,
+      "flows": -1.743,
+      "market": -2.297,
+      "cum_flows": 67.137,
+      "cum_market": 58.753,
+      "gap": false
     }
   ],
   "aum_bridge_summary": {
-    "total_aum_change_bn": 113.32,
-    "total_flows_bn": 63.38,
-    "total_market_bn": 49.94,
-    "flows_pct": 55.9,
-    "market_pct": 44.1,
-    "period": "2024-01 to 2026-04"
+    "total_aum_change_bn": 125.89,
+    "total_flows_bn": 67.14,
+    "total_market_bn": 58.75,
+    "flows_pct": 53.3,
+    "market_pct": 46.7,
+    "period": "2024-01 to 2026-09"
   }
 }

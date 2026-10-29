@@ -68,9 +68,9 @@ export default function FeeAnalysis() {
           subtitle={`${summary.total_gestoras} gestoras`}
         />
         <KpiCard
-          title="Avg TER"
+          title="Avg TER (12m)"
           value={`${(summary.avg_ter * 100).toFixed(0)} bps`}
-          subtitle={`Median: ${(summary.median_ter * 100).toFixed(0)} bps`}
+          subtitle={`Median: ${(summary.median_ter * 100).toFixed(0)} bps · trailing 4 quarters`}
         />
         <KpiCard
           title="Avg Mgmt Fee"
@@ -108,7 +108,7 @@ export default function FeeAnalysis() {
           {/* TER Distribution Histogram */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
             <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-              <SectionHeader title="TER Distribution (% Expenses / Avg AUM)" source={`CNMV Anexo A2.2 — ${summary.date}`} />
+              <SectionHeader title="TER Distribution (12m, % Expenses / Avg AUM)" source={`CNMV FONDTRIM — trailing 4 quarters to ${summary.date}`} />
               <ResponsiveContainer width="100%" height={280}>
                 <BarChart data={ter_histogram} margin={CHART_MARGIN}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -144,7 +144,7 @@ export default function FeeAnalysis() {
 
           {/* Fee by Category — Median TER bar chart */}
           <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-            <SectionHeader title="Median TER by Fund Category" source="CNMV Anexo A2.2 — fund-level aggregation" />
+            <SectionHeader title="Median TER by Fund Category (12m)" source="CNMV FONDTRIM (TER) + Anexo A2.2 (category) — fund-level aggregation" />
             <ResponsiveContainer width="100%" height={400}>
               <BarChart data={catByTer} layout="vertical" margin={{ ...CHART_MARGIN, left: 140 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -324,9 +324,11 @@ export default function FeeAnalysis() {
 function FundFeeExplorer({ categoryFilter }: { categoryFilter: string }) {
   const [search, setSearch] = useState('');
   const [gestoraFilter, setGestoraFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState<'' | 'FI' | 'SICAV'>('');
 
   const filtered = useMemo(() => {
     let result = funds as Array<Record<string, unknown>>;
+    if (typeFilter) result = result.filter(f => f.fund_type === typeFilter);
     if (categoryFilter) result = result.filter(f => f.category === categoryFilter);
     if (gestoraFilter) result = result.filter(f => f.gestora === gestoraFilter);
     if (search) {
@@ -338,16 +340,21 @@ function FundFeeExplorer({ categoryFilter }: { categoryFilter: string }) {
       );
     }
     return result;
-  }, [categoryFilter, gestoraFilter, search]);
+  }, [categoryFilter, gestoraFilter, typeFilter, search]);
 
   return (
     <>
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Fund Fee Explorer" source={`CNMV Anexo A2.2 — ${summary.date} | ${summary.total_classes} share classes`} />
+        <SectionHeader title="Fund & SICAV Fee Explorer" source={`CNMV Anexo A2.2 (FI) + SOCPATRIMDISVAR / SOCTRIM (SICAV) — ${summary.date} | ${funds.length.toLocaleString()} share classes / SICAV series`} />
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
           <input type="text" placeholder="Search fund, ISIN, or gestora..."
             value={search} onChange={e => setSearch(e.target.value)}
             style={{ flex: 1, minWidth: 200 }} />
+          <select value={typeFilter} onChange={e => setTypeFilter(e.target.value as '' | 'FI' | 'SICAV')}>
+            <option value="">FI + SICAV</option>
+            <option value="FI">FI only</option>
+            <option value="SICAV">SICAV only</option>
+          </select>
           <select value={gestoraFilter} onChange={e => setGestoraFilter(e.target.value)}>
             <option value="">All Gestoras ({gestoras.length})</option>
             {(gestoras as string[]).map(g => (
@@ -368,6 +375,12 @@ function FundFeeExplorer({ categoryFilter }: { categoryFilter: string }) {
             { key: 'fund_name', label: 'Fund', format: (v: unknown) => {
               const s = String(v); return s.length > 40 ? s.slice(0, 38) + '...' : s;
             }},
+            { key: 'fund_type', label: 'Type', width: 44, format: (v: unknown) => (
+              <span style={{ fontSize: 9, padding: '1px 4px', borderRadius: 3, fontWeight: 600,
+                background: v === 'SICAV' ? '#8b5cf620' : '#3b82f620', color: v === 'SICAV' ? '#a78bfa' : '#60a5fa' }}>
+                {String(v ?? 'FI')}
+              </span>
+            )},
             { key: 'share_class', label: 'Class', width: 50 },
             { key: 'category', label: 'Category', format: (v: unknown) => (
               <span style={{ fontSize: 9, padding: '1px 4px', borderRadius: 3, background: '#2a2a3a', color: '#8888a0' }}>

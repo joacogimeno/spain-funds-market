@@ -1,6 +1,9 @@
 """Transform CNMV fee data into cnmv_fees.json for the Fee Analysis dashboard."""
 import os
+from collections import Counter
 from ..parsers.cnmv_fees import parse_cnmv_fees
+from ..parsers.cnmv_registry import parse_cnmv_registry
+from ..parsers.cnmv_sicav import parse_cnmv_sicav_full
 from ..config import DATA_DIR, find_cnmv_file
 
 
@@ -27,6 +30,8 @@ def build_cnmv_fees():
     if not records:
         return {}
 
+    depo_by_isin = {r['isin']: r['depositario'] for r in parse_cnmv_registry(cnmv_dir)}
+
     # Build fund-level list (all share classes)
     funds = []
     for r in records:
@@ -47,6 +52,44 @@ def build_cnmv_fees():
             'redemp_fee_max': r['redemp_fee_max'],
             'redemp_fee_min': r['redemp_fee_min'],
             'depositary_fee': r['depositary_fee'],
+            'depositario': depo_by_isin.get(r['isin'], ''),
+            'fund_type': 'FI',
+        })
+
+    # SICAVs (CNMV quarterly XML) — appended to `funds` so gestora-level views
+    # (Prospect Analysis, Inversis market scan) see the full FI + SICAV book.
+    # The FI-only market statistics below (category/TER/histograms) are unaffected.
+    sicav = parse_cnmv_sicav_full(cnmv_dir)
+    sicav_records = sicav['records'] if sicav else []
+    # Use the FI Anexo short group name for the same gestora so FI and SICAV rows
+    # of one manager share a `grupo` label.
+    fi_grupo = {}
+    for g, grp in Counter((r['gestora'], r['grupo']) for r in records):
+        fi_grupo.setdefault(g, grp)
+    for r in sicav_records:
+        funds.append({
+            'isin': r['isin'],
+            'fund_name': r['fund_name'],
+            'gestora': r['gestora'] or '(Self-managed SICAV)',
+            'grupo': fi_grupo.get(r['gestora']) or r['grupo'],
+            'category': 'SICAV',
+            'share_class': r['share_class'] or r['compartimento'],
+            'patrimonio_m': round(r['patrimonio_k'] / 1000, 2),
+            'investors': r['investors'],
+            'ter': r['ter'],
+            'mgmt_fee_aum': r['mgmt_fee_aum'],
+            'mgmt_fee_returns': None,
+            'sub_fee_max': None,
+            'sub_fee_min': None,
+            'redemp_fee_max': None,
+            'redemp_fee_min': None,
+            'depositary_fee': r['depositary_fee'],
+            'depositario': r['depositario'],
+            'fund_type': 'SICAV',
+            'registro': r['registro'],
+            'vocacion': r['vocacion'],
+            'dep_fee_basis': r['dep_fee_basis'],
+            'return_ytd': r['return_ytd'],
         })
 
     # Category statistics — aggregate at fund level (sum AUM across all classes)
@@ -129,6 +172,31 @@ def build_cnmv_fees():
     # Sort gestora stats by total AUM descending
     gestora_stats.sort(key=lambda x: x['total_aum_m'], reverse=True)
 
+    # Gestora stats across FI + SICAV (for AUM rank / peers in Prospect Analysis)
+    all_g = {}
+    for f in funds:
+        g = all_g.setdefault(f['gestora'], {
+            'gestora': f['gestora'], 'count': 0, 'fi_funds': set(), 'sicavs': set(),
+            'fi_aum_m': 0.0, 'sicav_aum_m': 0.0,
+        })
+        g['count'] += 1
+        if f['fund_type'] == 'SICAV':
+            g['sicavs'].add(f['fund_name'])
+            g['sicav_aum_m'] += f['patrimonio_m']
+        else:
+            g['fi_funds'].add(f['fund_name'])
+            g['fi_aum_m'] += f['patrimonio_m']
+    gestora_stats_all = sorted([{
+        'gestora': g['gestora'],
+        'count': g['count'],
+        'funds': len(g['fi_funds']) + len(g['sicavs']),
+        'fi_funds': len(g['fi_funds']),
+        'sicavs': len(g['sicavs']),
+        'fi_aum_m': round(g['fi_aum_m'], 1),
+        'sicav_aum_m': round(g['sicav_aum_m'], 1),
+        'total_aum_m': round(g['fi_aum_m'] + g['sicav_aum_m'], 1),
+    } for g in all_g.values()], key=lambda x: -x['total_aum_m'])
+
     # Fee vs size scatter data (fund-level, only funds with both TER and AUM)
     fee_vs_size = []
     for r in fund_level.values():
@@ -171,12 +239,19 @@ def build_cnmv_fees():
         'median_ter': _median(all_ters),
         'avg_mgmt_fee': _avg(all_mgmt),
         'date': cnmv_date,
+        'ter_basis': 'Trailing 12 months (sum of last 4 quarterly ratios, CNMV FONDTRIM)',
+        'sicav_count': len({r['registro'] for r in sicav_records}),
+        'sicav_aum_bn': round(sum(r['patrimonio_k'] for r in sicav_records) / 1_000_000, 2),
+        'sicav_period': sicav['period'] if sicav else None,
+        'sicav_fee_fy_label': sicav['fy_label'] if sicav else None,
+        'sicav_fee_ytd_label': sicav['ytd_label'] if sicav else None,
     }
 
     return {
         'funds': funds,
         'category_stats': category_stats,
         'gestora_stats': gestora_stats,
+        'gestora_stats_all': gestora_stats_all,
         'fee_vs_size': fee_vs_size,
         'ter_histogram': ter_histogram,
         'mgmt_histogram': mgmt_histogram,
@@ -184,7 +259,7 @@ def build_cnmv_fees():
         'cheapest': cheapest,
         'summary': summary,
         'categories': sorted(category_groups.keys()),
-        'gestoras': sorted(gestora_groups.keys()),
+        'gestoras': sorted(all_g.keys()),
     }
 
 

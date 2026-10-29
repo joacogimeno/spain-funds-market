@@ -17,11 +17,14 @@ import depoData from '../data/cnmv_depositaria.json';
 interface FundClass {
   isin: string; fund_name: string; gestora: string; grupo: string;
   category: string; share_class: string; patrimonio_m: number;
-  investors: number; ter: number; mgmt_fee_aum: number;
-  depositary_fee: number;
-  mgmt_fee_returns: number; sub_fee_max: number; sub_fee_min: number;
-  redemp_fee_max: number; redemp_fee_min: number;
+  investors: number; ter: number | null; mgmt_fee_aum: number | null;
+  depositary_fee: number | null;
+  mgmt_fee_returns: number | null; sub_fee_max: number | null; sub_fee_min: number | null;
+  redemp_fee_max: number | null; redemp_fee_min: number | null;
+  depositario: string; fund_type: 'FI' | 'SICAV';
+  dep_fee_basis?: 'FY' | 'YTD' | null;
 }
+type Vehicle = 'all' | 'FI' | 'SICAV';
 interface GestoraDepo {
   gestora: string; depositario: string; grupo: string;
   fund_count: number; total_aum_m: number;
@@ -29,15 +32,23 @@ interface GestoraDepo {
   is_captive: boolean; is_inversis: boolean;
 }
 interface GestoraStat {
-  gestora: string; count: number; funds: number;
-  avg_ter: number; avg_mgmt_fee: number; total_aum_m: number;
+  gestora: string; count: number; funds: number; fi_funds: number; sicavs: number;
+  fi_aum_m: number; sicav_aum_m: number; total_aum_m: number;
 }
 
 const allClasses = feesData.funds as FundClass[];
 const gestoraNames = feesData.gestoras as string[];
-const gestoraStats = feesData.gestora_stats as GestoraStat[];
+const gestoraStats = (feesData as unknown as { gestora_stats_all: GestoraStat[] }).gestora_stats_all;
+const gestoraStatsByName = new Map(gestoraStats.map(g => [g.gestora, g]));
 const gestoraDepoRelations = depoData.gestora_depositario as GestoraDepo[];
-const depoSummary = depoData.summary as { inversis_avg_fee: number };
+const feesSummary = feesData.summary as unknown as {
+  date: string; sicav_period: string | null; sicav_fee_fy_label: string | null; sicav_fee_ytd_label: string | null;
+};
+const INVERSIS = 'BANCO INVERSIS, S.A.';
+const fee = (c: FundClass) => c.depositary_fee ?? 0;
+const inVehicle = (c: FundClass, v: Vehicle) => v === 'all' || c.fund_type === v;
+const aumFor = (g: GestoraStat, v: Vehicle) => v === 'FI' ? g.fi_aum_m : v === 'SICAV' ? g.sicav_aum_m : g.total_aum_m;
+const SRC = 'CNMV Anexo A2.2 (FI) + SOCPATRIMDISVAR (SICAV)';
 
 /* ── Helpers ─────────────────────────────────────────────────── */
 
@@ -45,6 +56,7 @@ const rev = (k: number) => k >= 1000 ? `€${(k / 1000).toFixed(2)}M` : `€${k.
 const fmtM = (v: number) => `€${v.toFixed(1)}M`;
 const fmtB = (v: number) => `€${v.toFixed(2)}B`;
 const fmt = (v: number, decimals = 1) => v.toFixed(decimals);
+const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
 function percentile(arr: number[], p: number): number {
   const sorted = [...arr].sort((a, b) => a - b);
@@ -79,7 +91,7 @@ function useCategoryBenchmarks() {
       const gMap = catGestoraFees.get(c.category)!;
       const entry = gMap.get(c.gestora) ?? { aum_m: 0, fee_aum: 0 };
       entry.aum_m += c.patrimonio_m;
-      entry.fee_aum += c.patrimonio_m * c.depositary_fee;
+      entry.fee_aum += c.patrimonio_m * fee(c);
       gMap.set(c.gestora, entry);
     }
 
@@ -109,7 +121,7 @@ function useCategoryBenchmarks() {
 /* ── Computed data for a given gestora ────────────────────────── */
 
 interface ComputedFund {
-  fund: string; category: string;
+  fund: string; category: string; fund_type: 'FI' | 'SICAV'; depositario: string;
   aum_m: number; aum_pct: number; classes: number;
   class_detail: { isin: string; share_class: string; aum_k: number; dep_fee_bps: number; mgmt_fee_pct: number | null }[];
   investors: number; wtd_dep_fee_bps: number; est_dep_rev_k: number;
@@ -137,13 +149,32 @@ interface CategoryFeeComparison {
   aum_pct: number;
 }
 
-function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
+function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[], vehicle: Vehicle) {
   return useMemo(() => {
     if (!gestora) return null;
 
-    // 1. Filter all share classes for this gestora
-    const classes = allClasses.filter(f => f.gestora === gestora);
+    // 1. Filter all share classes / SICAV series for this gestora
+    const gestoraClasses = allClasses.filter(f => f.gestora === gestora);
+    const classes = gestoraClasses.filter(f => inVehicle(f, vehicle));
     if (classes.length === 0) return null;
+
+    // Depositaries used, by vehicle (a gestora can bank its FI and SICAVs differently)
+    const depoMix = (rows: FundClass[]) => {
+      const m = new Map<string, number>();
+      for (const c of rows) m.set(c.depositario || 'Unknown', (m.get(c.depositario || 'Unknown') ?? 0) + c.patrimonio_m);
+      return [...m.entries()].map(([depositario, aum_m]) => ({ depositario, aum_m })).sort((a, b) => b.aum_m - a.aum_m);
+    };
+    const depoByVehicle = {
+      FI: depoMix(gestoraClasses.filter(c => c.fund_type === 'FI')),
+      SICAV: depoMix(gestoraClasses.filter(c => c.fund_type === 'SICAV')),
+    };
+    const atInversis = gestoraClasses.filter(c => c.depositario === INVERSIS);
+    const inversisRelationship = {
+      fi_funds: new Set(atInversis.filter(c => c.fund_type === 'FI').map(c => c.fund_name)).size,
+      sicavs: new Set(atInversis.filter(c => c.fund_type === 'SICAV').map(c => c.fund_name)).size,
+      aum_m: atInversis.reduce((s, c) => s + c.patrimonio_m, 0),
+      names: [...new Set(atInversis.map(c => c.fund_name))],
+    };
 
     const grupo = classes[0].grupo;
     const totalAumM = classes.reduce((s, c) => s + c.patrimonio_m, 0);
@@ -164,12 +195,14 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
       const fundAum = fundClasses.reduce((s, c) => s + c.patrimonio_m, 0);
       // Include zero-fee classes in weighted avg — zero fees are real (intragroup pricing), not missing data
       const wtdFee = fundAum > 0
-        ? fundClasses.reduce((s, c) => s + c.patrimonio_m * c.depositary_fee, 0) / fundAum
+        ? fundClasses.reduce((s, c) => s + c.patrimonio_m * fee(c), 0) / fundAum
         : 0;
 
       funds.push({
         fund: fundName,
         category: fundClasses[0].category,
+        fund_type: fundClasses[0].fund_type,
+        depositario: fundClasses[0].depositario,
         aum_m: fundAum,
         aum_pct: totalAumM > 0 ? +(fundAum / totalAumM * 100).toFixed(1) : 0,
         classes: fundClasses.length,
@@ -177,8 +210,8 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
           isin: c.isin,
           share_class: c.share_class,
           aum_k: c.patrimonio_m * 1000,
-          dep_fee_bps: +(c.depositary_fee * 100).toFixed(2),
-          mgmt_fee_pct: c.mgmt_fee_aum > 0 ? c.mgmt_fee_aum : null,
+          dep_fee_bps: +(fee(c) * 100).toFixed(2),
+          mgmt_fee_pct: c.mgmt_fee_aum != null && c.mgmt_fee_aum > 0 ? c.mgmt_fee_aum : null,
         })),
         investors: fundClasses[0].investors, // fund-level, same across classes
         wtd_dep_fee_bps: +(wtdFee * 100).toFixed(2),
@@ -188,20 +221,22 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
     funds.sort((a, b) => b.aum_m - a.aum_m);
 
     // 4. Total stats
-    const totalFunds = funds.length;
+    const totalFunds = funds.filter(f => f.fund_type === 'FI').length;
+    const totalSicavs = funds.filter(f => f.fund_type === 'SICAV').length;
     const totalClasses = classes.length;
     const totalInvestors = funds.reduce((s, f) => s + f.investors, 0);
     const categories = [...new Set(funds.map(f => f.category))];
 
     // Weighted depositary fee across ALL classes (including zero-fee — they represent real intragroup pricing)
     const wtdDepFeePct = totalAumM > 0
-      ? classes.reduce((s, c) => s + c.patrimonio_m * c.depositary_fee, 0) / totalAumM
+      ? classes.reduce((s, c) => s + c.patrimonio_m * fee(c), 0) / totalAumM
       : 0;
     const wtdDepFeeBps = +(wtdDepFeePct * 100).toFixed(2);
     const estCurrentRevK = +(totalAumK * wtdDepFeePct / 100).toFixed(0);
 
-    // AUM rank
-    const sortedByAum = [...gestoraStats].sort((a, b) => b.total_aum_m - a.total_aum_m);
+    // AUM rank (within the selected vehicle)
+    const sortedByAum = [...gestoraStats].filter(g => aumFor(g, vehicle) > 0)
+      .sort((a, b) => aumFor(b, vehicle) - aumFor(a, vehicle));
     const aumRank = sortedByAum.findIndex(g => g.gestora === gestora) + 1;
 
     // Fee percentile (among all gestoras with depositary fee data)
@@ -213,9 +248,8 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
     const mktP50 = allWtdFees.length > 0 ? +percentile(allWtdFees, 50).toFixed(1) : 0;
     const mktP75 = allWtdFees.length > 0 ? +percentile(allWtdFees, 75).toFixed(1) : 0;
 
-    // 5. Current depositary
-    const depoRelation = gestoraDepoRelations.find(g => g.gestora === gestora);
-    const currentDepositario = depoRelation?.depositario ?? 'Unknown';
+    // 5. Current depositary — largest by AUM within the selected vehicle
+    const currentDepositario = depoMix(classes)[0]?.depositario ?? 'Unknown';
 
     // 6. Category breakdown
     const catMap = new Map<string, { aum_m: number; funds: number; classes: number; investors: number; fee_aum: number }>();
@@ -248,7 +282,7 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
     const peerGestoras = sortedByAum.slice(startIdx, endIdx);
 
     const peers: ComputedPeer[] = peerGestoras.map(pg => {
-      const pgClasses = allClasses.filter(c => c.gestora === pg.gestora);
+      const pgClasses = allClasses.filter(c => c.gestora === pg.gestora && inVehicle(c, vehicle));
       const pgFundMap = new Map<string, FundClass[]>();
       for (const c of pgClasses) {
         const arr = pgFundMap.get(c.fund_name) ?? [];
@@ -259,17 +293,17 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
       // Compute weighted fee directly from raw classes (including zeros — real intragroup pricing)
       const pgAumM = pgClasses.reduce((s, c) => s + c.patrimonio_m, 0);
       const pgWtdFee = pgAumM > 0
-        ? (pgClasses.reduce((s, c) => s + c.patrimonio_m * c.depositary_fee, 0) / pgAumM) * 100
+        ? (pgClasses.reduce((s, c) => s + c.patrimonio_m * fee(c), 0) / pgAumM) * 100
         : 0;
       return {
         gestora: pg.gestora,
         gestora_short: pg.gestora.split(',')[0],
-        aum_bn: +(pg.total_aum_m / 1000).toFixed(2),
-        funds: pg.funds,
-        classes: pg.count,
+        aum_bn: +(pgAumM / 1000).toFixed(2),
+        funds: pgFundMap.size,
+        classes: pgClasses.length,
         investors: pgInvestors,
         wtd_dep_fee_bps: +pgWtdFee.toFixed(2),
-        est_dep_rev_k: +(pg.total_aum_m * 1000 * pgWtdFee / 10000).toFixed(0),
+        est_dep_rev_k: +(pgAumM * 1000 * pgWtdFee / 10000).toFixed(0),
         is_selected: pg.gestora === gestora,
       };
     }).sort((a, b) => b.aum_bn - a.aum_bn);
@@ -340,11 +374,12 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
       .reduce((s, c) => s + c.aum_pct, 0);
 
     return {
-      gestora, grupo, currentDepositario,
+      gestora, grupo, currentDepositario, depoByVehicle, inversisRelationship, vehicle,
       gestora_short: gestora.split(',')[0],
       summary: {
         total_aum_bn: totalAumBn,
         total_funds: totalFunds,
+        total_sicavs: totalSicavs,
         total_classes: totalClasses,
         total_investors: totalInvestors,
         total_categories: categories.length,
@@ -355,7 +390,7 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
         fixed_income_pct: fixedIncomePct,
       },
       market_context: {
-        total_gestoras: gestoraStats.length,
+        total_gestoras: sortedByAum.length,
         mkt_dep_fee_p25: mktP25,
         mkt_dep_fee_p50: mktP50,
         mkt_dep_fee_p75: mktP75,
@@ -363,7 +398,7 @@ function useGestoraAnalysis(gestora: string, benchmarks: CategoryBenchmark[]) {
       funds, categories: catBreakdown, peers, scenarios,
       categoryFeeComparison, fairFeeBps, feeGapBps,
     };
-  }, [gestora, benchmarks]);
+  }, [gestora, benchmarks, vehicle]);
 }
 
 /* ── Sub-tab config ──────────────────────────────────────────── */
@@ -386,8 +421,8 @@ function OverviewSection({ d }: { d: AnalysisData }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
       <InsightCard title="Strategic Summary" color="#10b981">
-        <strong>{d.gestora_short}</strong> is Spain's <strong>#{s.aum_rank_spain}</strong> fund manager
-        by AUM (€{s.total_aum_bn.toFixed(1)}B, {s.total_funds} funds, {s.total_investors.toLocaleString()} investors).
+        <strong>{d.gestora_short}</strong> is Spain's <strong>#{s.aum_rank_spain}</strong> {d.vehicle === 'SICAV' ? 'SICAV manager' : d.vehicle === 'FI' ? 'fund manager' : 'manager (FI + SICAV)'}
+        {' '}by AUM (€{s.total_aum_bn.toFixed(2)}B, {s.total_funds} fund{s.total_funds === 1 ? '' : 's'}{s.total_sicavs > 0 ? ` + ${s.total_sicavs} SICAV${s.total_sicavs > 1 ? 's' : ''}` : ''}, {s.total_investors.toLocaleString()} investors).
         Currently custodied at <strong>{d.currentDepositario.split(',')[0]}</strong> — paying <strong>{s.wtd_dep_fee_bps.toFixed(2)} bps</strong> weighted
         ({s.fee_percentile}th percentile, {s.wtd_dep_fee_bps < mc.mkt_dep_fee_p50 ? 'below' : 'above'} the {mc.mkt_dep_fee_p50.toFixed(1)} bps market median).
         Category-adjusted fair fee for this portfolio: <strong style={{ color: d.feeGapBps > 0 ? '#ef4444' : '#10b981' }}>{d.fairFeeBps.toFixed(1)} bps</strong>
@@ -398,7 +433,7 @@ function OverviewSection({ d }: { d: AnalysisData }) {
 
       {/* Category composition bars */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Portfolio Composition by Category" source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title="Portfolio Composition by Category" source={SRC} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 8 }}>
           {d.categories.map(c => (
             <div key={c.category} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -429,7 +464,7 @@ function OverviewSection({ d }: { d: AnalysisData }) {
 
       {/* Category-adjusted fee comparison */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Depositary Fee vs Category Benchmark" source="CNMV A2.2 — category-adjusted" />
+        <SectionHeader title="Depositary Fee vs Category Benchmark" source={`${SRC} — category-adjusted (SICAVs benchmarked against SICAVs)`} />
         <div style={{ marginBottom: 12, fontSize: 12, color: '#8888a0' }}>
           Actual fee vs market median for each fund category. Fair fee for this portfolio mix: <strong style={{ color: d.feeGapBps > 0 ? '#ef4444' : '#10b981' }}>{d.fairFeeBps.toFixed(1)} bps</strong>
           {' '}(gap: <span style={{ color: d.feeGapBps > 0 ? '#ef4444' : '#10b981' }}>{d.feeGapBps > 0 ? '+' : ''}{d.feeGapBps.toFixed(1)} bps</span>)
@@ -480,7 +515,7 @@ function OverviewSection({ d }: { d: AnalysisData }) {
 
       {/* Peer comparison — AUM */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="AUM vs Peers — Similar-Sized Gestoras" source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title="AUM vs Peers — Similar-Sized Gestoras" source={SRC} />
         <ResponsiveContainer width="100%" height={Math.max(200, d.peers.length * 32)}>
           <BarChart data={d.peers} layout="vertical" margin={{ ...CHART_MARGIN, left: 180 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -500,7 +535,7 @@ function OverviewSection({ d }: { d: AnalysisData }) {
 
       {/* Depositary fee vs peers */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Depositary Fee vs Peer Gestoras (bps)" source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title="Depositary Fee vs Peer Gestoras (bps)" source={SRC} />
         <ResponsiveContainer width="100%" height={Math.max(200, d.peers.length * 32)}>
           <BarChart data={d.peers} layout="vertical" margin={{ ...CHART_MARGIN, left: 180 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -527,9 +562,11 @@ function PortfolioSection({ d }: { d: AnalysisData }) {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const fundColumns = [
-    { key: 'fund', label: 'Fund', format: (v: unknown) => {
+    { key: 'fund', label: 'Fund / SICAV', format: (v: unknown) => {
       const s = String(v); return s.length > 42 ? s.slice(0, 40) + '…' : s;
     }},
+    { key: 'fund_type', label: 'Type', format: (v: unknown) => <TypeBadge type={String(v)} /> },
+    { key: 'depositario', label: 'Depositario', format: (v: unknown) => <DepoBadge name={String(v)} /> },
     { key: 'category', label: 'Category', format: (v: unknown) => (
       <span style={{ color: CATEGORY_COLORS[String(v)] || '#8888a0', fontSize: 11 }}>{String(v)}</span>
     )},
@@ -544,14 +581,14 @@ function PortfolioSection({ d }: { d: AnalysisData }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title={`Fund Portfolio — ${d.summary.total_funds} Funds, ${d.summary.total_classes} Share Classes`}
-          source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title={`Portfolio — ${plural(d.summary.total_funds, 'Fund')}${d.summary.total_sicavs ? `, ${plural(d.summary.total_sicavs, 'SICAV')}` : ''}, ${d.summary.total_classes} Share Classes / Series`}
+          source={SRC} />
         <DataTable data={d.funds as unknown as Record<string, unknown>[]} columns={fundColumns} defaultSort="aum_m" />
       </div>
 
       {/* Expandable class-level detail */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Share Class Detail" source="CNMV A2.2 — click a fund to expand" />
+        <SectionHeader title="Share Class Detail" source={`${SRC} — click a fund to expand`} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
           {d.funds.map(f => (
             <div key={f.fund}>
@@ -565,7 +602,7 @@ function PortfolioSection({ d }: { d: AnalysisData }) {
               >
                 <span style={{ fontSize: 11, color: '#555570', width: 14 }}>{expanded === f.fund ? '▼' : '▶'}</span>
                 <span style={{ flex: 1, fontSize: 13, color: '#e8e8f0', fontFamily: "'Outfit', sans-serif" }}>
-                  {f.fund}
+                  {f.fund} <TypeBadge type={f.fund_type} />
                 </span>
                 <span style={{ fontSize: 11, color: CATEGORY_COLORS[f.category] || '#8888a0', width: 160, textAlign: 'right' }}>
                   {f.category}
@@ -622,14 +659,14 @@ function InvestorsSection({ d }: { d: AnalysisData }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
       <InsightCard title="Investor Profile" color="#6366f1">
-        {d.gestora_short} has <strong>{s.total_investors.toLocaleString()} registered fund investors</strong> across {s.total_funds} funds.
+        {d.gestora_short} has <strong>{s.total_investors.toLocaleString()} registered investors</strong> (partícipes + accionistas) across {s.total_funds} funds{s.total_sicavs > 0 ? ` and ${s.total_sicavs} SICAVs` : ''}.
         {topFundsByInvestors.length > 0 && <> The largest fund by investor count is <strong>{topFundsByInvestors[0].fund}</strong> ({topFundsByInvestors[0].investors.toLocaleString()} investors).</>}
         {' '}Fixed income categories account for approximately <strong>{s.fixed_income_pct.toFixed(0)}%</strong> of AUM.
       </InsightCard>
 
       {/* Investors by fund */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Investor Count by Fund" source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title="Investor Count by Fund" source={SRC} />
         <ResponsiveContainer width="100%" height={Math.max(250, topFundsByInvestors.length * 28)}>
           <BarChart data={topFundsByInvestors} layout="vertical" margin={{ ...CHART_MARGIN, left: 260 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -650,7 +687,7 @@ function InvestorsSection({ d }: { d: AnalysisData }) {
 
       {/* Investors by category */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Investors by Category" source="CNMV Estadísticas IIC — Anexo A2.2" />
+        <SectionHeader title="Investors by Category" source={SRC} />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 8 }}>
           {[...d.categories].sort((a, b) => b.investors - a.investors).map(c => {
             const pct = s.total_investors > 0 ? Math.round(c.investors / s.total_investors * 100) : 0;
@@ -693,13 +730,13 @@ function ScenariosSection({ d }: { d: AnalysisData }) {
         at a weighted {s.wtd_dep_fee_bps.toFixed(2)} bps — {s.wtd_dep_fee_bps < mc.mkt_dep_fee_p50 ? 'below' : 'above'} the {mc.mkt_dep_fee_p50.toFixed(1)} bps market median.
         {d.scenarios[2] && <> At market median ({d.scenarios[2].fee_bps} bps), this mandate would generate <strong>{rev(d.scenarios[2].est_annual_rev_k)}/yr</strong> for Inversis —
         a <strong>{d.scenarios[2].delta_vs_current_k > 0 ? '+' : ''}{rev(Math.abs(d.scenarios[2].delta_vs_current_k))}</strong> {d.scenarios[2].delta_vs_current_k > 0 ? 'uplift' : 'reduction'} vs current.</>}
-        {' '}The mandate covers {s.total_funds} funds, {s.total_classes} share classes across {s.total_categories} categories,
+        {' '}The mandate covers {s.total_funds} funds{s.total_sicavs > 0 ? ` and ${s.total_sicavs} SICAVs` : ''}, {s.total_classes} share classes across {s.total_categories} categories,
         with {s.total_investors.toLocaleString()} investors.
       </InsightCard>
 
       {/* Scenario bar chart */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Annual Depositary Revenue Scenarios" source="CNMV A2.2 · Inversis analysis" />
+        <SectionHeader title="Annual Depositary Revenue Scenarios" source={`${SRC} · Inversis analysis`} />
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={d.scenarios} margin={{ ...CHART_MARGIN, bottom: 40 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -758,7 +795,7 @@ function ScenariosSection({ d }: { d: AnalysisData }) {
       {/* Complexity metrics */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
         {[
-          { label: 'Funds to migrate', value: String(s.total_funds), color: '#3b82f6' },
+          { label: 'Funds / SICAVs to migrate', value: `${s.total_funds} / ${s.total_sicavs}`, color: '#3b82f6' },
           { label: 'Share classes', value: String(s.total_classes), color: '#6366f1' },
           { label: 'Categories', value: String(s.total_categories), color: '#8b5cf6' },
           { label: 'Retail investors', value: s.total_investors.toLocaleString(), color: '#10b981' },
@@ -776,6 +813,49 @@ function ScenariosSection({ d }: { d: AnalysisData }) {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+/* ── Small badges + vehicle toggle ───────────────────────────── */
+
+function TypeBadge({ type }: { type: string }) {
+  const sicav = type === 'SICAV';
+  return (
+    <span style={{
+      fontSize: 9, padding: '1px 5px', borderRadius: 3, fontFamily: "'JetBrains Mono', monospace",
+      background: sicav ? '#8b5cf620' : '#3b82f620', color: sicav ? '#a78bfa' : '#60a5fa', fontWeight: 600,
+    }}>{sicav ? 'SICAV' : 'FI'}</span>
+  );
+}
+
+function DepoBadge({ name }: { name: string }) {
+  const inv = name === INVERSIS;
+  const label = name.replace(', S.A.', '').replace(' S.A.', '').replace(', SUCURSAL EN ESPAÑA', ' (ES)');
+  return (
+    <span style={{
+      fontSize: 10, padding: '1px 5px', borderRadius: 3, whiteSpace: 'nowrap',
+      background: inv ? '#10b98120' : '#2a2a3a', color: inv ? '#10b981' : '#8888a0',
+    }}>{label.length > 22 ? label.slice(0, 20) + '…' : label || '—'}</span>
+  );
+}
+
+function VehicleToggle({ value, onChange, stat }: { value: Vehicle; onChange: (v: Vehicle) => void; stat?: GestoraStat }) {
+  const opts: { id: Vehicle; label: string; n?: number }[] = [
+    { id: 'all', label: 'FI + SICAV' },
+    { id: 'FI', label: 'FI only', n: stat?.fi_funds },
+    { id: 'SICAV', label: 'SICAV only', n: stat?.sicavs },
+  ];
+  return (
+    <div style={{ display: 'flex', gap: 2, background: '#0a0a0f', border: '1px solid #2a2a3a', borderRadius: 8, padding: 2 }}>
+      {opts.map(o => (
+        <button key={o.id} onClick={() => onChange(o.id)} style={{
+          padding: '5px 12px', borderRadius: 6, border: 'none', cursor: 'pointer',
+          background: value === o.id ? '#10b98120' : 'transparent',
+          color: value === o.id ? '#10b981' : '#8888a0',
+          fontSize: 12, fontWeight: value === o.id ? 600 : 400, fontFamily: "'Outfit', sans-serif",
+        }}>{o.label}{o.n != null ? ` (${o.n})` : ''}</button>
+      ))}
     </div>
   );
 }
@@ -806,9 +886,11 @@ function GestoraSelector({ value, onChange }: { value: string; onChange: (v: str
         style={{ fontSize: 12, flex: 1, maxWidth: 400 }}
       >
         <option value="">Select a gestora ({gestoraNames.length} available)</option>
-        {filteredGestoras.map(g => (
-          <option key={g} value={g}>{g}</option>
-        ))}
+        {filteredGestoras.map(g => {
+          const st = gestoraStatsByName.get(g);
+          const tag = st ? ` (${st.fi_funds} FI${st.sicavs ? ` · ${st.sicavs} SICAV` : ''})` : '';
+          return <option key={g} value={g}>{g}{tag}</option>;
+        })}
       </select>
     </div>
   );
@@ -819,8 +901,10 @@ function GestoraSelector({ value, onChange }: { value: string; onChange: (v: str
 export default function ProspectAnalysis() {
   const [selectedGestora, setSelectedGestora] = useState('');
   const [subTab, setSubTab] = useState<SubTab>('overview');
+  const [vehicle, setVehicle] = useState<Vehicle>('all');
   const benchmarks = useCategoryBenchmarks();
-  const analysis = useGestoraAnalysis(selectedGestora, benchmarks);
+  const analysis = useGestoraAnalysis(selectedGestora, benchmarks, vehicle);
+  const selectedStat = gestoraStatsByName.get(selectedGestora);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -833,8 +917,16 @@ export default function ProspectAnalysis() {
             </div>
             <div style={{ fontSize: 13, color: '#8888a0', marginTop: 4 }}>
               {analysis
-                ? <>Business opportunity analysis · Current depositary: <strong style={{ color: '#ef4444' }}>{analysis.currentDepositario.split(',')[0]}</strong></>
-                : 'Select a gestora to analyze depositary opportunity'}
+                ? <>Business opportunity analysis · Depositario:{' '}
+                  {(['FI', 'SICAV'] as const).filter(v => analysis.depoByVehicle[v].length > 0).map((v, i) => (
+                    <span key={v}>{i > 0 ? ' · ' : ''}{v}{' '}
+                      {analysis.depoByVehicle[v].map((dm, j) => (
+                        <span key={dm.depositario}>{j > 0 ? ', ' : ''}<strong style={{ color: dm.depositario === INVERSIS ? '#10b981' : '#ef4444' }}>{dm.depositario.split(',')[0]}</strong></span>
+                      ))}
+                    </span>
+                  ))}
+                </>
+                : 'Select a gestora (FI and/or SICAV manager) to analyze the depositary opportunity'}
             </div>
           </div>
           {analysis && (
@@ -843,7 +935,7 @@ export default function ProspectAnalysis() {
               border: '1px solid #10b98140', fontSize: 11, color: '#10b981',
               fontFamily: "'JetBrains Mono', monospace", fontWeight: 600,
             }}>
-              PROSPECT · CNMV Q3 2025
+              PROSPECT · CNMV {feesSummary.date}
             </div>
           )}
         </div>
@@ -854,8 +946,23 @@ export default function ProspectAnalysis() {
           padding: '12px 0', borderBottom: analysis ? '1px solid #2a2a3a' : 'none',
           marginBottom: analysis ? 16 : 0,
         }}>
-          <GestoraSelector value={selectedGestora} onChange={v => { setSelectedGestora(v); setSubTab('overview'); }} />
+          <GestoraSelector value={selectedGestora} onChange={v => { setSelectedGestora(v); setSubTab('overview'); setVehicle('all'); }} />
+          <VehicleToggle value={vehicle} onChange={setVehicle} stat={selectedStat} />
         </div>
+
+        {analysis && analysis.inversisRelationship.aum_m > 0 && (
+          <div style={{
+            marginBottom: 16, padding: '10px 14px', borderRadius: 8, fontSize: 12, lineHeight: 1.5,
+            background: '#10b98112', border: '1px solid #10b98130', color: '#c8c8d8',
+          }}>
+            <strong style={{ color: '#10b981' }}>Existing Inversis relationship:</strong>{' '}
+            {analysis.inversisRelationship.fi_funds > 0 && `${analysis.inversisRelationship.fi_funds} fund${analysis.inversisRelationship.fi_funds > 1 ? 's' : ''}`}
+            {analysis.inversisRelationship.fi_funds > 0 && analysis.inversisRelationship.sicavs > 0 && ' + '}
+            {analysis.inversisRelationship.sicavs > 0 && `${analysis.inversisRelationship.sicavs} SICAV${analysis.inversisRelationship.sicavs > 1 ? 's' : ''}`}
+            {' '}(€{analysis.inversisRelationship.aum_m.toFixed(1)}M) already deposited at Inversis:{' '}
+            <span style={{ color: '#8888a0' }}>{analysis.inversisRelationship.names.slice(0, 6).join(' · ')}{analysis.inversisRelationship.names.length > 6 ? ' …' : ''}</span>
+          </div>
+        )}
 
         {/* KPI row + sub-tabs — only when gestora selected */}
         {analysis && (
@@ -864,12 +971,12 @@ export default function ProspectAnalysis() {
               <KpiCard title={`AUM (${analysis.gestora_short})`}
                 value={fmtB(analysis.summary.total_aum_bn)}
                 subtitle={`#${analysis.summary.aum_rank_spain} gestora in Spain`} />
-              <KpiCard title="Funds / Classes"
-                value={`${analysis.summary.total_funds} / ${analysis.summary.total_classes}`}
-                subtitle={`${analysis.summary.total_categories} asset categories`} />
+              <KpiCard title="Funds / SICAVs"
+                value={`${analysis.summary.total_funds} / ${analysis.summary.total_sicavs}`}
+                subtitle={`${analysis.summary.total_classes} classes · ${analysis.summary.total_categories} categories`} />
               <KpiCard title="Investors"
                 value={analysis.summary.total_investors.toLocaleString()}
-                subtitle="Registered fund investors" />
+                subtitle="Partícipes + accionistas" />
               <KpiCard title="Current Dep. Fee"
                 value={`${fmt(analysis.summary.wtd_dep_fee_bps, 2)} bps`}
                 delta={`${analysis.summary.fee_percentile}th pctl · Median: ${analysis.market_context.mkt_dep_fee_p50} bps`}
@@ -912,10 +1019,17 @@ export default function ProspectAnalysis() {
             Select a Gestora to Begin
           </div>
           <div style={{ fontSize: 13, color: '#8888a0', maxWidth: 500, margin: '0 auto', lineHeight: 1.6 }}>
-            Choose any of the {gestoraNames.length} Spanish fund managers to generate a full
+            Choose any of the {gestoraNames.length} Spanish fund and SICAV managers to generate a full
             depositary opportunity analysis — portfolio composition, fee benchmarking,
             peer comparison, and revenue scenarios.
           </div>
+        </div>
+      )}
+
+      {!analysis && selectedGestora !== '' && (
+        <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 32, textAlign: 'center', fontSize: 13, color: '#8888a0' }}>
+          {selectedGestora.split(',')[0]} has no {vehicle === 'all' ? 'funds or SICAVs' : vehicle === 'FI' ? 'investment funds (FI)' : 'SICAVs'} in the CNMV data.
+          {vehicle !== 'all' && <> <button onClick={() => setVehicle('all')} style={{ marginLeft: 8, background: 'none', border: '1px solid #3a3a4a', borderRadius: 6, color: '#e8e8f0', padding: '4px 10px', cursor: 'pointer' }}>Show all</button></>}
         </div>
       )}
 

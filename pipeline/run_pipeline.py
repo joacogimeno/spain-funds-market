@@ -24,6 +24,7 @@ from pipeline.transformers.cnmv_depositaria import build_cnmv_depositaria
 from pipeline.transformers.banca_march import build_banca_march
 from pipeline.transformers.abanca import build_abanca
 from pipeline.transformers.inversis import build_inversis
+from pipeline.transformers.sicav_market import build_sicav_market
 
 
 def write_json(data, filename):
@@ -63,6 +64,7 @@ def main():
         ("CNMV Fee Analysis", build_cnmv_fees, "cnmv_fees.json"),
         ("CNMV Foreign IICs", build_cnmv_foreign, "cnmv_foreign.json"),
         ("CNMV Depositaría", build_cnmv_depositaria, "cnmv_depositaria.json"),
+        ("SICAV Market",     build_sicav_market,     "sicav.json"),
         ("Banca March Analysis", build_banca_march, "banca_march.json"),
         ("Abanca Opportunity",   build_abanca,      "abanca.json"),
         ("Inversis Analysis",    build_inversis,    "inversis.json"),

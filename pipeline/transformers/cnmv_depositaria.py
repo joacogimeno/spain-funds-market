@@ -212,6 +212,27 @@ def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opp
     return insights_out
 
 
+def _fil_aggregate_aum_k(cnmv_dir):
+    """Sum of the latest-quarter 'Patrimonio' rows (IICIL + IICIICIL) in Cuadro 6.1."""
+    path, _ = find_cnmv_file(cnmv_dir, '3')
+    if not path:
+        return None
+    try:
+        wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
+        rows = list(wb['Cuadro 6.1'].iter_rows(values_only=True))
+        wb.close()
+    except (KeyError, OSError):
+        return None
+    total = 0.0
+    for r in rows:
+        if r and str(r[0] or '').startswith('3. Patrimonio'):
+            # Five quarterly columns follow the label; the fifth is the latest quarter
+            nums = [v for v in r[1:6] if isinstance(v, (int, float))]
+            if nums:
+                total += nums[-1]
+    return total or None
+
+
 def build_cnmv_depositaria():
     """Build depositaría market data from CNMV Anexo A1.1 + A2.2."""
     cnmv_dir = os.path.join(DATA_DIR, 'CNMV Estadisticas')
@@ -230,7 +251,7 @@ def build_cnmv_depositaria():
     # Scrape CNMV per-entity pages for alternativo categories (FIL, FCR/SCR, SICC/FICC,
     # FILPE, FESE). No bulk XML exists for these; AUM is not exposed on the public HTML
     # pages so we track entity counts only and combine with the aggregate FIL AUM
-    # (Cuadro 6.1: IICIL €7.16B + IICIICIL €0.83B = €8.0B Q2 2025).
+    # (Cuadro 6.1 latest quarter: IICIL + IICIICIL patrimonio).
     alt_cache = os.path.join(cnmv_dir, 'cnmv_alternativos_cache.json')
     alternativos_records = parse_cnmv_alternativos(alt_cache, verbose=False)
 
@@ -273,9 +294,9 @@ def build_cnmv_depositaria():
             'fund_type': 'FI',
         })
 
-    # Append SICAV series records (depositary fees aren't published for SICAVs in
-    # the public CNMV feed, so depo_fee/mgmt_fee/ter are left None — they're handled
-    # downstream by the AUM-weighted aggregations which already skip None entries).
+    # Append SICAV series records. Depositary / management fees come from CNMV
+    # SOCPATRIMDISVAR (effective % of average assets — full-year where available,
+    # else annualised YTD); TER is trailing-12m from SOCTRIM. See parsers/cnmv_sicav.py.
     sicav_aum_k = 0.0
     for r in sicav_records:
         sicav_aum_k += r['patrimonio_k']
@@ -283,14 +304,14 @@ def build_cnmv_depositaria():
             'fund_name': r['fund_name'],
             'isin': r['isin'],
             'share_class': r['share_class'],
-            'gestora': r['gestora'],
+            'gestora': r['gestora'] or '(Self-managed SICAV)',
             'depositario': r['depositario'],
             'grupo': r['grupo'],
-            'category': r['category'] or 'SICAV',
-            'depo_fee': None,
+            'category': 'SICAV',
+            'depo_fee': r['depositary_fee'],
             'patrimonio_k': r['patrimonio_k'],
-            'mgmt_fee': None,
-            'ter': None,
+            'mgmt_fee': r['mgmt_fee_aum'],
+            'ter': r['ter'],
             'investors': r['investors'],
             'fund_type': 'SICAV',
         })
@@ -438,6 +459,7 @@ def build_cnmv_depositaria():
             'depo_fee': f['depo_fee'],
             'mgmt_fee': f['mgmt_fee'],
             'ter': f['ter'],
+            'fund_type': f.get('fund_type', 'FI'),
             'is_inversis': INVERSIS_NAME in f['depositario'],
         })
 
@@ -602,8 +624,10 @@ def build_cnmv_depositaria():
     # ── Alternativos: aggregate entity counts per depositary ──────────────
     # AUM is not available per entity (CNMV public pages don't expose it).
     # We expose entity counts and a per-depositary FIL AUM estimate (proportional
-    # split of the €8.0B Cuadro 6.1 aggregate by FIL entity count).
-    FIL_AGGREGATE_AUM_K = 7_989_231  # IICIL €7,156,484k + IICIICIL €832,747k (Q2 2025)
+    # split of the Cuadro 6.1 IICIL + IICIICIL aggregate by FIL entity count).
+    # Latest-quarter IICIL + IICIICIL patrimonio from Cuadro 6.1 (file 3); falls back
+    # to the Q2 2025 figure (IICIL €7,156,484k + IICIICIL €832,747k) if unavailable.
+    FIL_AGGREGATE_AUM_K = _fil_aggregate_aum_k(cnmv_dir) or 7_989_231
     fil_total_entities = sum(1 for r in alternativos_records if r['fund_type'].startswith('FIL'))
 
     alt_by_depo = {}
@@ -641,6 +665,10 @@ def build_cnmv_depositaria():
     alt_lookup = {a['depositario']: a for a in alternativos_stats}
     existing_depos = {ds['depositario'] for ds in depositario_stats}
     published = _load_published_overlay()
+    # FI / SICAV figures from the published ranking only override CNMV when they are at
+    # least as recent; otherwise every depositario stays on the same (newer) CNMV basis.
+    pub_period = ((published or {}).get('_metadata') or {}).get('period') or ''
+    use_pub_fi_sicav = bool(pub_period) and pub_period >= cnmv_date
     for ds in depositario_stats:
         a = alt_lookup.get(ds['depositario'])
         if a:
@@ -652,9 +680,9 @@ def build_cnmv_depositaria():
         ds['fi_aum_bn_cnmv']    = ds['fi_aum_bn']     # preserve CNMV-derived for diff
         ds['sicav_aum_bn_cnmv'] = ds['sicav_aum_bn']
         if pub:
-            if pub.get('fi') is not None:
+            if use_pub_fi_sicav and pub.get('fi') is not None:
                 ds['fi_aum_bn'] = round(pub['fi'] / 1000, 3)
-            if pub.get('sicav') is not None:
+            if use_pub_fi_sicav and pub.get('sicav') is not None:
                 ds['sicav_aum_bn'] = round(pub['sicav'] / 1000, 3)
             if pub.get('pensiones') is not None:
                 ds['pension_aum_bn'] = round(pub['pensiones'] / 1000, 3)

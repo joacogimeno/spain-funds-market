@@ -2,6 +2,7 @@
 import os
 import openpyxl
 from ..config import find_cnmv_file
+from .cnmv_fondtrim import fondtrim_path, parse_fondtrim_ter
 
 
 # Vocación inversora code -> readable category name
@@ -39,10 +40,18 @@ def parse_cnmv_fees(cnmv_dir):
       depositary_fee (%),
       discount_max (%), discount_min (%)
     """
-    filepath, _ = find_cnmv_file(cnmv_dir, 'Anexo')
+    filepath, quarter = find_cnmv_file(cnmv_dir, 'Anexo')
     if filepath is None:
         print(f"  Warning: No CNMV Anexo file found in {cnmv_dir}")
         return []
+
+    # Annual TER from FONDTRIM of the same quarter (A2.2's ratio is not annual)
+    yyyymm = f'{quarter[:4]}{int(quarter[-1]) * 3:02d}'
+    ft_path = fondtrim_path(cnmv_dir, yyyymm)
+    ttm_ter = parse_fondtrim_ter(ft_path) if ft_path else None
+    if ttm_ter is None:
+        print(f"  Warning: FONDTRIM_{yyyymm}.xml missing — TER falls back to Anexo A2.2 "
+              f"(period ratio, not annual)")
 
     wb = openpyxl.load_workbook(filepath, data_only=True)
     ws = wb['A2.2']
@@ -118,7 +127,8 @@ def parse_cnmv_fees(cnmv_dir):
             'vocacion': current_vocacion,
             'category': VOCACION_MAP.get(current_vocacion, current_vocacion),
             'expenses_k': current_expenses,
-            'ter': current_ter,
+            'ter': (ttm_ter.get(isin) if ttm_ter is not None else current_ter),
+            'ter_period_anexo': current_ter,
             'investors': current_investors,
             'share_class': share_class,
             'isin': isin,

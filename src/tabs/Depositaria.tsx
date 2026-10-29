@@ -36,6 +36,9 @@ const DEPO_COLORS: Record<string, string> = {};
   DEPO_COLORS[d] = CHART_COLORS[i % CHART_COLORS.length];
 });
 
+const inversisDepo = (depositario_stats as Array<{ is_inversis: boolean; fi_aum_bn: number; sicav_aum_bn: number }>)
+  .find(d => d.is_inversis);
+
 const INVERSIS_BG = '#10b98112';
 const INVERSIS_BORDER = '#10b98130';
 
@@ -60,7 +63,7 @@ export default function Depositaria() {
         Alternativos (FIL, FCR/SCR, SICC/FICC, FILPE — entity counts from CNMV registry).
         Pensiones / EPSV / true Alternativos AUM overlaid from <strong style={{ color: '#10b981' }}>FundsPeople IX Ranking de Depositaría 2026</strong> where
         published (Cecabank pensiones; BNP Paribas alternativos; Inversis full breakdown). Other entities&apos; pensions/EPSV are not in the public dataset.
-        SICAV depositary fees are not published by CNMV — fee aggregates reflect FI only.
+        Depositary fees: FI from Anexo A2.2; SICAV from CNMV SOCPATRIMDISVAR (fee actually paid, % of average assets) — see the SICAVs tab.
       </div>
 
       {/* KPI Row */}
@@ -89,7 +92,7 @@ export default function Depositaria() {
           value={`\u20AC${((summary as Record<string, unknown>).inversis_combined_aum_bn as number ?? summary.inversis_aum_bn).toFixed(2)}B`}
           delta={`${(summary as Record<string, unknown>).inversis_combined_share_pct ?? summary.inversis_market_share_pct}% combined share`}
           deltaPositive={true}
-          subtitle={`Rank #${(summary as Record<string, unknown>).inversis_combined_rank ?? summary.inversis_rank_aum} \u00b7 FI \u20AC${summary.inversis_aum_bn}B + SICAV \u20AC${((summary as Record<string, unknown>).sicav_aum_bn as number)?.toFixed(2) ?? '0'}B + FIL est \u20AC${((summary as Record<string, unknown>).inversis_alt_fil_aum_bn as number)?.toFixed(2) ?? '0'}B`}
+          subtitle={`Rank #${(summary as Record<string, unknown>).inversis_combined_rank ?? summary.inversis_rank_aum} \u00b7 FI \u20AC${(inversisDepo?.fi_aum_bn ?? 0).toFixed(2)}B + SICAV \u20AC${(inversisDepo?.sicav_aum_bn ?? 0).toFixed(2)}B + FIL est \u20AC${((summary as Record<string, unknown>).inversis_alt_fil_aum_bn as number)?.toFixed(2) ?? '0'}B`}
         />
         <KpiCard
           title="Inversis Clients"

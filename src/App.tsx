@@ -13,6 +13,14 @@ import Depositaria from './tabs/Depositaria';
 import BancaMarch from './tabs/BancaMarch';
 import ProspectAnalysis from './tabs/ProspectAnalysis';
 import Inversis from './tabs/Inversis';
+import Sicav from './tabs/Sicav';
+import marketOverview from './data/market_overview.json';
+import sicavData from './data/sicav.json';
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const monthLabel = (ym: string) => `${MONTHS[Number(ym.slice(5, 7)) - 1]} ${ym.slice(0, 4)}`;
+const inverco = marketOverview.monthly_aum;
+const SOURCE_LINE = `Source: INVERCO monthly data (${monthLabel(inverco[0].date)} — ${monthLabel(inverco[inverco.length - 1].date)}) + CNMV Estadísticas IIC & SICAV XML (${sicavData.summary.period})`;
 
 const TABS = [
   { id: 'monthly', label: 'Monthly Report', component: MonthlyReport },
@@ -23,6 +31,7 @@ const TABS = [
   { id: 'performance', label: 'Performance', component: Performance },
   { id: 'fees', label: 'Fee Analysis', component: FeeAnalysis },
   { id: 'depositaria', label: 'Depositar\u00eda', component: Depositaria },
+  { id: 'sicav',       label: 'SICAVs',      component: Sicav       },
   { id: 'banca_march', label: 'Banca March', component: BancaMarch },
   { id: 'prospects',   label: 'Prospect Analysis', component: ProspectAnalysis },
   { id: 'inversis',    label: 'Inversis',    component: Inversis    },
@@ -209,7 +218,7 @@ export default function App() {
         color: '#555570',
       }}>
         <span>Spain Funds Market Intelligence Dashboard — Internal Use Only</span>
-        <span>Source: INVERCO monthly data (Jan 2024 — Jan 2026) + CNMV Estadisticas IIC (Q3 2025)</span>
+        <span>{SOURCE_LINE}</span>
       </footer>
     </div>
   );
