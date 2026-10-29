@@ -17,6 +17,7 @@ interface MarchAm {
   weighted_fee_bps: number; avg_nonzero_fee_bps: number;
   zero_fee_aum_m: number; zero_fee_aum_pct: number;
   est_annual_rev_k: number; effective_rate_bps: number;
+  fi_aum_bn: number; sicav_aum_bn: number; sicavs: number;
 }
 interface InversisGestion {
   gestora: string; aum_bn: number; funds: number; classes: number;
@@ -42,7 +43,7 @@ interface PeerEntry {
 interface FundEntry {
   fund: string; gestora: string; classes: number; aum_m: number;
   avg_fee_bps: number; est_annual_rev_k: number; is_zero_fee: boolean;
-  shortfall_at_median_k: number;
+  shortfall_at_median_k: number; tipo: 'FI' | 'SICAV';
 }
 interface Scenario {
   name: string; description: string; weighted_fee_bps: number;
@@ -91,6 +92,8 @@ const data = rawData as {
   qualitative_insights: QualInsight[];
   market_benchmarks: MarketBenchmarks;
 };
+
+const BOOK_SRC = `CNMV ${data.date} — Anexo A1.1/A2.2 (FI) + SICAV XML; revenue = reported depositary fee × current AUM`;
 
 // ── Severity colour map ────────────────────────────────────────────────────
 const SEV_COLOR: Record<string, string> = {
@@ -150,21 +153,12 @@ export default function BancaMarch() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
 
-      {/* ── Warning Banner ─────────────────────────────────────────────── */}
+      {/* ── Scope note ─────────────────────────────────────────────────── */}
       <div style={{
-        background: '#f59e0b10', border: '1px solid #f59e0b40', borderRadius: 10,
-        padding: '12px 20px', display: 'flex', gap: 12, alignItems: 'flex-start',
+        background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 8,
+        padding: '8px 14px', fontSize: 11, color: '#8888a0', lineHeight: 1.6,
       }}>
-        <span style={{ fontSize: 18, lineHeight: 1.3 }}>⚠</span>
-        <div>
-          <div style={{ fontSize: 13, fontWeight: 700, color: '#f59e0b', fontFamily: "'Outfit', sans-serif", marginBottom: 3 }}>
-            Ownership Change — August 2026
-          </div>
-          <div style={{ fontSize: 12, color: '#c0a060', lineHeight: 1.6 }}>
-            {data.note} This tab analyses the commercial and pricing implications for
-            Inversis&apos;s depositary relationship with Banca March group entities.
-          </div>
-        </div>
+        <span style={{ color: '#c0c0d0', fontWeight: 600 }}>Scope:</span> {data.note}
       </div>
 
       {/* ── KPI Row ──────────────────────────────────────────────────────── */}
@@ -172,7 +166,7 @@ export default function BancaMarch() {
         <KpiCard
           title="March AM AUM (Inversis)"
           value={`€${march_am.aum_bn.toFixed(2)}B`}
-          subtitle={`${march_am.funds} funds · ${march_am.classes} classes`}
+          subtitle={`FI €${march_am.fi_aum_bn.toFixed(2)}B + ${march_am.sicavs} SICAVs €${march_am.sicav_aum_bn.toFixed(2)}B · ${march_am.classes} classes/series`}
         />
         <KpiCard
           title="Current Weighted Fee"
@@ -196,7 +190,7 @@ export default function BancaMarch() {
         <KpiCard
           title="Revenue vs Market Median"
           value={rev(mCtx.inversis_book_median_bps * march_am.aum_bn * 100 - march_am.est_annual_rev_k)}
-          delta="Potential uplift at 7 bps"
+          delta={`Potential uplift at ${mCtx.inversis_book_median_bps.toFixed(1)} bps`}
           deltaPositive={true}
           subtitle="If raised to book median"
         />
@@ -288,7 +282,7 @@ function OverviewSection({ marchAm, mCtx, statusQuo, qualInsights, peerChartData
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
         <SectionHeader
           title="Weighted Depositary Fee Rate — All Inversis Clients (sorted low→high)"
-          source="inversis_depositary_insights_2025Q3.xlsx — Q3 2025"
+          source={BOOK_SRC}
         />
         <ResponsiveContainer width="100%" height={380}>
           <BarChart data={peerChartData} layout="vertical" margin={{ ...CHART_MARGIN, left: 200 }}>
@@ -355,7 +349,7 @@ function PeersSection({ peers, mCtx, peerChartData }: {
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
         <SectionHeader
           title="Implicit Revenue Shortfall vs Book Median — Inversis Clients"
-          source="inversis_depositary_insights_2025Q3.xlsx | Shortfall = (median bps − wtd fee bps) × AUM"
+          source={`${BOOK_SRC} | Shortfall = (median bps − wtd fee bps) × AUM`}
         />
         <ResponsiveContainer width="100%" height={380}>
           <BarChart
@@ -389,7 +383,7 @@ function PeersSection({ peers, mCtx, peerChartData }: {
 
       {/* Full peer table */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Fee Comparison — All Inversis Depositary Clients" source="inversis_depositary_insights_2025Q3.xlsx" />
+        <SectionHeader title="Fee Comparison — All Inversis Depositary Clients" source={BOOK_SRC} />
         <DataTable
           data={sorted as unknown as Array<Record<string, unknown>>}
           columns={[
@@ -470,7 +464,7 @@ function FundsSection({ funds, mCtx }: { funds: FundEntry[]; mCtx: MarketContext
 
       {/* Bar chart: AUM by fund, colored by zero-fee */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Banca March Funds — AUM and Deposit Fee" source="inversis_depositary_insights_2025Q3.xlsx" />
+        <SectionHeader title="Banca March Funds & SICAVs — AUM and Deposit Fee" source={BOOK_SRC} />
         <ResponsiveContainer width="100%" height={Math.max(300, funds.length * 22)}>
           <BarChart
             data={[...funds].sort((a, b) => b.aum_m - a.aum_m).map(f => ({
@@ -514,7 +508,7 @@ function FundsSection({ funds, mCtx }: { funds: FundEntry[]; mCtx: MarketContext
       </div>
 
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Fund-by-Fund Deposit Fee Detail" source="inversis_depositary_insights_2025Q3.xlsx" />
+        <SectionHeader title="Fund / SICAV Deposit Fee Detail" source={BOOK_SRC} />
         <DataTable
           data={[...funds].sort((a, b) => b.aum_m - a.aum_m) as unknown as Array<Record<string, unknown>>}
           columns={[
@@ -522,6 +516,12 @@ function FundsSection({ funds, mCtx }: { funds: FundEntry[]; mCtx: MarketContext
               const s = String(v);
               return s.length > 40 ? s.slice(0, 38) + '..' : s;
             }},
+            { key: 'tipo', label: 'Type', format: (v: unknown) => (
+              <span style={{ fontSize: 9, padding: '1px 5px', borderRadius: 3, fontWeight: 600,
+                background: v === 'SICAV' ? '#8b5cf620' : '#3b82f620', color: v === 'SICAV' ? '#a78bfa' : '#60a5fa' }}>
+                {String(v ?? 'FI')}
+              </span>
+            )},
             { key: 'gestora', label: 'Gestora', format: (v: unknown) => {
               const s = String(v);
               return s.length > 20 ? s.slice(0, 18) + '..' : s;
@@ -580,7 +580,7 @@ function ScenariosSection({ scenarios, marchAm, mCtx }: {
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
         <SectionHeader
           title="March AM Revenue Scenarios — Annual Depositary Fee Income"
-          source="Based on Q3 2025 AUM; click a bar to see details"
+          source={`Based on CNMV ${data.date} AUM (FI + SICAV); click a bar to see details`}
         />
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={chartData} margin={CHART_MARGIN} barSize={60}>
@@ -743,8 +743,7 @@ function RiskSection({ risk }: { risk: SwitchingRisk }) {
         regulatory complexity ({risk.classes_to_migrate} individual CNMV filings), and the absence of a credible lower-cost
         alternative in the market for a mandate of this size and complexity means that a phased fee increase
         (Scenarios A → B over 18–24 months) is very unlikely to trigger a depositary change.
-        The key risk mitigation is <strong>early communication</strong> — notifying March AM of the repricing
-        rationale in Q1 2026 as part of the Euroclear transition, rather than as a post-acquisition surprise.
+        The key risk mitigation is <strong>early communication</strong> of the repricing rationale and a phased timetable.
       </InsightCard>
     </>
   );
@@ -880,7 +879,7 @@ function MarketBenchmarksSection({
 
       {/* ── Percentile context table ─────────────────────────────────────── */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Market Percentile Context" source="CNMV A2.2 + Inversis Q3-2025" />
+        <SectionHeader title="Market Percentile Context" source={`CNMV A2.2 — ${data.date}`} />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginTop: 8 }}>
           {[
             { label: 'P10', bps: mb.percentiles.p10, note: 'Cheapest decile (incl. bank-internal)' },
@@ -910,9 +909,18 @@ function MarketBenchmarksSection({
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
         <SectionHeader title="Zero-Fee ISINs with AUM — Full Spanish Market (RFECP/M)" source={mb.source} />
         <div style={{ fontSize: 12, color: '#8888a0', marginBottom: 12 }}>
-          Only 2 entities have zero-fee RFECP/M classes with positive AUM. The Mutuafondo entry is a
-          €3.6M solidarity fund (explicitly charitable purpose). All other zero-fee ISINs with real
-          assets belong exclusively to Banca March.
+          {(() => {
+            const withAum = mb.zero_fee_isins_market.filter(z => z.aum_m > 0);
+            const march = withAum.filter(z => z.is_march_am);
+            const others = withAum.filter(z => !z.is_march_am);
+            const groups = new Set(withAum.map(z => z.group));
+            return <>
+              {groups.size} group{groups.size === 1 ? '' : 's'} have zero-fee RFECP/M classes with positive AUM.
+              Banca March accounts for {march.length} of {withAum.length} such ISINs
+              (€{march.reduce((a, z) => a + z.aum_m, 0).toFixed(0)}M of €{withAum.reduce((a, z) => a + z.aum_m, 0).toFixed(0)}M)
+              {others.length > 0 && <>; the rest: {others.map(z => `${z.fund.split(',')[0]} (€${z.aum_m.toFixed(1)}M)`).join(', ')}</>}.
+            </>;
+          })()}
         </div>
         <DataTable
           columns={[

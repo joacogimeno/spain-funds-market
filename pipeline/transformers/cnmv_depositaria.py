@@ -1,8 +1,8 @@
 """Transform CNMV registry + fee data into cnmv_depositaria.json for the Depositaría dashboard.
 
-Also reads inversis_depositary_insights_2025Q3.xlsx for:
-- Full-market depositary AUM ranking (depositary_ranking sheet)
-- Inversis client detail with estimated deposit fee revenue (by_gestora sheet)
+Also builds (parsers/cnmv_book.py, latest CNMV quarter, FI + SICAV):
+- Full-market depositary AUM ranking
+- Inversis client detail with estimated deposit fee revenue
 - Computed qualitative analysis for the Depositar\u00eda tab
 
 Pensiones / EPSV and full-scope Alternativos AUM are NOT in CNMV public feeds.
@@ -17,9 +17,9 @@ from ..parsers.cnmv_registry import parse_cnmv_registry
 from ..parsers.cnmv_fees import parse_cnmv_fees, VOCACION_MAP
 from ..parsers.cnmv_sicav import parse_cnmv_sicav
 from ..parsers.cnmv_alternativos import parse_cnmv_alternativos
+from ..parsers.cnmv_book import build_depositary_book
 from ..config import DATA_DIR, find_cnmv_file
 
-INSIGHTS_FILE = 'inversis_depositary_insights_2025Q3.xlsx'
 PUBLISHED_FILE = os.path.join(DATA_DIR, 'published', 'depositary_published_2025Q4.json')
 
 
@@ -95,14 +95,6 @@ def _median(values):
     return round((s[n // 2 - 1] + s[n // 2]) / 2, 4)
 
 
-def _read_sheet_records(ws):
-    rows = list(ws.iter_rows(values_only=True))
-    if not rows:
-        return []
-    header = [str(c).strip() if c is not None else '' for c in rows[0]]
-    return [{header[i]: row[i] for i in range(min(len(header), len(row)))} for row in rows[1:]]
-
-
 def _sf(v, default=0.0):
     try:
         return float(v) if v is not None else default
@@ -111,57 +103,49 @@ def _sf(v, default=0.0):
 
 
 def _load_insights(cnmv_dir):
-    """Load inversis_depositary_insights_2025Q3.xlsx — returns dict of DataFrames-as-records."""
-    fp = os.path.join(cnmv_dir, INSIGHTS_FILE)
-    if not os.path.exists(fp):
-        return {}
-    wb = openpyxl.load_workbook(fp, data_only=True)
-    result = {}
-    for sheet in ['inversis_isin_detail', 'inversis_by_gestora', 'inversis_by_group',
-                  'inversis_by_fund', 'depositary_ranking']:
-        if sheet in wb.sheetnames:
-            result[sheet] = _read_sheet_records(wb[sheet])
-    wb.close()
-    return result
+    """Inversis depositary book + market ranking rebuilt from the latest CNMV data."""
+    return build_depositary_book(cnmv_dir, INVERSIS_NAME)
 
 
-def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opportunity_targets):
-    """Generate computed qualitative insights for the Depositar\u00eda tab."""
+def _build_qualitative_analysis(insights, depositario_stats, opportunity_targets):
+    """Computed narrative for the Depositaría tab — every figure comes from the current book."""
     gest_records = insights.get('inversis_by_gestora', [])
     grp_records  = insights.get('inversis_by_group', [])
+    rank_records = sorted(insights.get('depositary_ranking', []), key=lambda x: -_sf(x.get('aum_k')))
+    period = insights.get('period', '')
 
+    book_aum_k = sum(_sf(r.get('aum_k')) for r in gest_records)
     total_rev_k = sum(_sf(r.get('est_deposit_fee_rev_k')) for r in gest_records)
-    total_aum_k = _sf(inversis_stats.get('total_aum_bn', 0)) * 1_000_000
-    book_eff_rate_bps = (total_rev_k / total_aum_k * 100 * 100) if total_aum_k > 0 else 0
+    book_eff_rate_bps = (total_rev_k / book_aum_k * 10000) if book_aum_k > 0 else 0
 
-    # Top 2 revenue clients
+    market_aum_k = sum(_sf(r.get('aum_k')) for r in rank_records)
+    inv_rank = next((i + 1 for i, r in enumerate(rank_records)
+                     if INVERSIS_NAME in str(r.get('Entidad Depositaria', ''))), 0)
+    inv_row = next((r for r in rank_records if INVERSIS_NAME in str(r.get('Entidad Depositaria', ''))), {})
+    share = lambda r: _sf(r.get('aum_k')) / market_aum_k * 100 if market_aum_k else 0
+    short = lambda s: str(s).split(',')[0].replace(' S.A.', '')
+    leaders = ' and '.join(f'{short(r["Entidad Depositaria"]).title()} ({share(r):.1f}%)' for r in rank_records[:2])
+
     top_rev = sorted(gest_records, key=lambda r: -_sf(r.get('est_deposit_fee_rev_k')))[:2]
+    top_grp = sorted(grp_records, key=lambda r: -_sf(r.get('aum_k')))[:2]
+    grp_aum_pct = sum(_sf(g.get('aum_k')) for g in top_grp) / book_aum_k * 100 if book_aum_k else 0
+    grp_rev_pct = sum(_sf(g.get('est_deposit_fee_rev_k')) for g in top_grp) / total_rev_k * 100 if total_rev_k else 0
 
-    # Non-captive addressable targets
     nc_targets = [t for t in opportunity_targets if not t.get('is_captive')]
     addressable_aum_bn = sum(t.get('total_aum_m', 0) for t in nc_targets) / 1000
 
-    # Rank by AUM in full market
-    rank_records = insights.get('depositary_ranking', [])
-    total_market_aum_k = sum(_sf(r.get('aum_k')) for r in rank_records)
-    inv_rank = next((i + 1 for i, r in enumerate(
-        sorted(rank_records, key=lambda x: -_sf(x.get('aum_k'))))
-        if 'INVERSIS' in str(r.get('Entidad Depositaria', ''))), 0)
-
-    insights_out = [
+    return [
         {
             'type': 'market_position',
             'severity': 'info',
-            'title': f'Inversis is #{inv_rank} depositary in Spain with {inversis_stats.get("inversis_market_share_pct", 0):.1f}% market share',
+            'title': f'Inversis is the #{inv_rank} depositary in Spain for FI + SICAV ({share(inv_row):.1f}% of assets, CNMV {period})',
             'body': (
-                f'Inversis custodies \u20AC{inversis_stats.get("inversis_aum_bn", 0):.1f}B across '
-                f'{inversis_stats.get("inversis_gestora_count", 0)} gestoras and '
-                f'{inversis_stats.get("inversis_fund_count", 0)} funds (FI + SICAV). '
-                f'The overall depositary market (FI + SICAV, ex-foreign IICs / FIL / FCR / pensions) '
-                f'totals \u20AC{total_market_aum_k/1e6:.0f}B, dominated by Cecabank (44.7%) and CACEIS (19.5%). '
-                f'Inversis\u2019s position is structurally differentiated: it serves independent '
-                f'boutiques and Andorran-origin private banking gestoras that are excluded from '
-                f'captive bank depositaries.'
+                f'Inversis holds \u20AC{book_aum_k/1e6:.1f}B for {len(gest_records)} gestoras — '
+                f'\u20AC{_sf(inv_row.get("fi_aum_k"))/1e6:.1f}B in {int(_sf(inv_row.get("funds")) - _sf(inv_row.get("sicavs")))} investment funds '
+                f'and \u20AC{_sf(inv_row.get("sicav_aum_k"))/1e6:.1f}B in {int(_sf(inv_row.get("sicavs")))} SICAVs. '
+                f'The FI + SICAV depositary market totals \u20AC{market_aum_k/1e6:.0f}B and is led by {leaders}. '
+                f'Inversis is positioned with independent boutiques and private-banking gestoras '
+                f'rather than the large bank-captive books.'
             ),
         },
         {
@@ -169,28 +153,22 @@ def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opp
             'severity': 'info',
             'title': f'Estimated annual depositary fee revenue: \u20AC{total_rev_k/1000:.1f}M at {book_eff_rate_bps:.1f} bps effective rate',
             'body': (
-                f'The Inversis depositary book generates an estimated \u20AC{total_rev_k/1000:.2f}M/yr in depositary fees. '
-                f'The top two fee contributors are '
-                f'{str(top_rev[0].get("Sociedad Gestora","")).split(",")[0] if top_rev else ""} '
-                f'(\u20AC{_sf(top_rev[0].get("est_deposit_fee_rev_k"))/1000:.2f}M) and '
-                f'{str(top_rev[1].get("Sociedad Gestora","")).split(",")[0] if len(top_rev) > 1 else ""} '
-                f'(\u20AC{_sf(top_rev[1].get("est_deposit_fee_rev_k"))/1000:.2f}M), '
-                f'together representing '
-                f'{(_sf(top_rev[0].get("est_deposit_fee_rev_k")) + _sf(top_rev[1].get("est_deposit_fee_rev_k"))) / total_rev_k * 100:.0f}% '
-                f'of total depositary income.'
+                f'Applying each fund\u2019s and SICAV\u2019s CNMV-reported depositary fee to its current assets gives '
+                f'\u20AC{total_rev_k/1000:.2f}M/yr. The two largest fee contributors are '
+                + ' and '.join(f'{short(r["Sociedad Gestora"])} (\u20AC{_sf(r.get("est_deposit_fee_rev_k"))/1000:.2f}M)' for r in top_rev)
+                + f', together {sum(_sf(r.get("est_deposit_fee_rev_k")) for r in top_rev) / total_rev_k * 100 if total_rev_k else 0:.0f}% of the total.'
             ),
         },
         {
             'type': 'concentration_risk',
             'severity': 'medium',
-            'title': 'Client concentration: top 2 groups account for 51% of AUM and revenue',
+            'title': f'Client concentration: top 2 groups hold {grp_aum_pct:.0f}% of AUM and {grp_rev_pct:.0f}% of fee revenue',
             'body': (
-                'Andbank group (\u20AC3.23B, \u20AC2.12M fees) and Banca March group (\u20AC3.77B, \u20AC1.73M fees) '
-                'together represent 57% of AUM under custody. The Banca March relationship will '
-                'transition to arm\'s-length terms upon Euroclear acquisition (August 2026), '
-                'creating both a repricing opportunity and an account retention priority. '
-                'Andbank, as the highest-value third-party client, should be treated as a '
-                'Tier 1 strategic account.'
+                ' and '.join(f'{str(g.get("Grupo Financiero")).title()} group (\u20AC{_sf(g.get("aum_k"))/1e6:.2f}B, '
+                             f'\u20AC{_sf(g.get("est_deposit_fee_rev_k"))/1000:.2f}M fees)' for g in top_grp)
+                + f' together account for {grp_aum_pct:.0f}% of assets under custody and {grp_rev_pct:.0f}% of estimated fees. '
+                'Both should be treated as Tier 1 strategic accounts; pricing on the largest '
+                'book is analysed in the Banca March tab.'
             ),
         },
         {
@@ -200,16 +178,13 @@ def _build_qualitative_analysis(insights, inversis_stats, depositario_stats, opp
             'body': (
                 f'{len(nc_targets)} non-captive gestoras totalling \u20AC{addressable_aum_bn:.0f}B AUM '
                 f'currently use other depositaries. The most valuable non-captive targets include '
-                f'{", ".join(str(t.get("gestora","")).split(",")[0] for t in nc_targets[:3])}. '
-                f'Inversis\u2019s competitive advantage in this segment is its combination of '
-                f'regulatory independence, operational breadth ('
-                f'{inversis_stats.get("inversis_fund_count", 0)} funds across '
-                f'{inversis_stats.get("inversis_gestora_count", 0)} gestoras), '
-                f'and — post-Euroclear — tier-1 group backing without conflicting distribution interests.'
+                f'{", ".join(short(t.get("gestora","")) for t in nc_targets[:3])}. '
+                f'Inversis\u2019s competitive advantage in this segment is its independence from '
+                f'distribution and its operational breadth ({int(_sf(inv_row.get("funds")))} funds and SICAVs across '
+                f'{len(gest_records)} gestoras).'
             ),
         },
     ]
-    return insights_out
 
 
 def _fil_aggregate_aum_k(cnmv_dir):
@@ -579,7 +554,7 @@ def build_cnmv_depositaria():
     all_gestoras = sorted(set(f['gestora'] for f in funds))
     all_categories = sorted(set(f['category'] for f in funds if f['category']))
 
-    # ── Enrich summary + charts from inversis_depositary_insights ──────────
+    # ── Enrich summary + charts from the CNMV-derived depositary book ──────
     # Use the depositary_ranking sheet for true market-wide AUM figures
     rank_records = insights.get('depositary_ranking', [])
     if rank_records:
@@ -601,7 +576,7 @@ def build_cnmv_depositaria():
     else:
         mkt_chart = market_share_chart  # fallback to CNMV-derived chart
 
-    # Inversis gestora-level data from insights (richer than CNMV Anexo alone)
+    # Inversis gestora-level book (FI + SICAV) with estimated fee revenue
     inv_by_gestora = insights.get('inversis_by_gestora', [])
     total_rev_k = sum(_sf(r.get('est_deposit_fee_rev_k')) for r in inv_by_gestora)
     summary['inversis_est_annual_rev_m'] = round(total_rev_k / 1000, 2)
@@ -619,7 +594,11 @@ def build_cnmv_depositaria():
             'weighted_fee_bps': round(_sf(r.get('aum_w_deposit_fee_pct')) * 100, 2),
             'est_annual_rev_k': round(_sf(r.get('est_deposit_fee_rev_k')), 1),
             'is_march': 'MARCH ASSET' in g,
+            'sicavs': int(_sf(r.get('sicavs', 0))),
+            'fi_aum_m': round(_sf(r.get('fi_aum_k')) / 1000, 1),
+            'sicav_aum_m': round(_sf(r.get('sicav_aum_k')) / 1000, 1),
         })
+    summary['book_period'] = insights.get('period')
 
     # ── Alternativos: aggregate entity counts per depositary ──────────────
     # AUM is not available per entity (CNMV public pages don't expose it).
@@ -791,7 +770,7 @@ def build_cnmv_depositaria():
 
     # Qualitative analysis section
     qualitative_analysis = _build_qualitative_analysis(
-        insights, summary, depositario_stats, opportunity_targets)
+        insights, depositario_stats, opportunity_targets)
 
     return {
         'summary': summary,
@@ -799,7 +778,7 @@ def build_cnmv_depositaria():
         'gestora_depositario': gestora_depositario,
         'fund_detail': fund_detail,
         'opportunity_targets': opportunity_targets,
-        'market_share_chart': mkt_chart,            # now from insights depositary_ranking
+        'market_share_chart': mkt_chart,            # CNMV FI + SICAV depositary ranking
         'fee_by_depositario': fee_by_depositario,
         'inversis_by_gestora': inv_by_gestora_out,  # NEW: Inversis client detail with revenue
         'qualitative_analysis': qualitative_analysis,  # NEW: computed qualitative insights

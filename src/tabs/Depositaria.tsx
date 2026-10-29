@@ -39,6 +39,7 @@ const DEPO_COLORS: Record<string, string> = {};
 const inversisDepo = (depositario_stats as Array<{ is_inversis: boolean; fi_aum_bn: number; sicav_aum_bn: number }>)
   .find(d => d.is_inversis);
 
+const BOOK_SRC = `CNMV ${(summary as Record<string, unknown>).book_period ?? summary.date} — Anexo A1.1/A2.2 (FI) + SICAV XML; revenue = reported depositary fee × current AUM`;
 const INVERSIS_BG = '#10b98112';
 const INVERSIS_BORDER = '#10b98130';
 
@@ -265,7 +266,7 @@ export default function Depositaria() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
             {/* Revenue bar by gestora */}
             <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-              <SectionHeader title="Estimated Annual Deposit Fee Revenue by Gestora" source="inversis_depositary_insights_2025Q3.xlsx" />
+              <SectionHeader title="Estimated Annual Deposit Fee Revenue by Gestora" source={BOOK_SRC} />
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart
                   data={[...inversis_by_gestora].sort((a, b) => b.est_annual_rev_k - a.est_annual_rev_k)}
@@ -294,7 +295,7 @@ export default function Depositaria() {
 
             {/* Weighted fee vs AUM scatter */}
             <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-              <SectionHeader title="AUM vs Weighted Deposit Fee Rate (Inversis Book)" source="inversis_depositary_insights_2025Q3.xlsx" />
+              <SectionHeader title="AUM vs Weighted Deposit Fee Rate (Inversis Book)" source={BOOK_SRC} />
               <ResponsiveContainer width="100%" height={400}>
                 <ScatterChart margin={CHART_MARGIN}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#2a2a3a" />
@@ -341,7 +342,7 @@ export default function Depositaria() {
 
           {/* Client Revenue Table */}
           <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24, marginTop: 16 }}>
-            <SectionHeader title="Inversis Client Fee Detail" source="inversis_depositary_insights_2025Q3.xlsx — Q3 2025" />
+            <SectionHeader title="Inversis Client Fee Detail" source={BOOK_SRC} />
             <DataTable
               data={inversis_by_gestora}
               columns={[

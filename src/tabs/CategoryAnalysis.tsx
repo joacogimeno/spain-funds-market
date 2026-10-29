@@ -113,7 +113,7 @@ export default function CategoryAnalysis() {
 
         {/* Annual Stacked Bar */}
         <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-          <SectionHeader title="Annual Category Mix (2015-2025)" source="INVERCO" />
+          <SectionHeader title={`Annual Category Mix (${annual[0].year}-${annual[annual.length - 1].year})`} source="INVERCO — December of each year" />
           <ResponsiveContainer width="100%" height={400}>
             <BarChart data={annual} margin={CHART_MARGIN}>
               <CartesianGrid strokeDasharray="3 3" />

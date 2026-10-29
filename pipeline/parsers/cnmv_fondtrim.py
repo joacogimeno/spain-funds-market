@@ -19,6 +19,18 @@ def fondtrim_path(cnmv_dir, yyyymm):
     return p if os.path.exists(p) else None
 
 
+def parse_fondtrim_investors(path):
+    """Return {ISIN: NumeroParticipes} — class-level investor accounts."""
+    out = {}
+    for clase in ET.parse(path).getroot().iter('Clase'):
+        isin = (clase.findtext('ISIN') or '').strip()
+        try:
+            out[isin] = int(float(clase.findtext('NumeroParticipes') or 0))
+        except ValueError:
+            out[isin] = 0
+    return out
+
+
 def parse_fondtrim_ter(path):
     """Return {ISIN: trailing-12m TER %} from a FONDTRIM file."""
     out = {}

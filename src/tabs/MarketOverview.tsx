@@ -24,6 +24,16 @@ const TOP_CATS = ['RF Euro CP', 'RF Euro LP', 'Internacional', 'Globales', 'Mone
 // Bridge data without first row (no delta)
 const bridgeMonthly = aum_bridge.filter(e => e.delta !== 0);
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const ym = (d: string) => `${MONTHS[Number(d.slice(5, 7)) - 1]} ${d.slice(0, 4)}`;
+const AUM_RANGE = `${ym(monthly_aum[0].date)} — ${ym(monthly_aum[monthly_aum.length - 1].date)}`;
+const ANNUAL_RANGE = `${annual_aum[0].year}-${annual_aum[annual_aum.length - 1].year}`;
+// Flow / market-effect extremes for the insight text
+const flowVals = bridgeMonthly.map(e => e.flows);
+const negFlowMonths = bridgeMonthly.filter(e => e.flows < 0).length;
+const bestMkt = bridgeMonthly.reduce((a, e) => (e.market > a.market ? e : a), bridgeMonthly[0]);
+const worstMkt = bridgeMonthly.reduce((a, e) => (e.market < a.market ? e : a), bridgeMonthly[0]);
+
 export default function MarketOverview() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -56,7 +66,7 @@ export default function MarketOverview() {
 
       {/* Total AUM Evolution */}
       <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-        <SectionHeader title="Total AUM Evolution (Jan 2024 — Jan 2026)" source="INVERCO — PatrimFondosEuro" />
+        <SectionHeader title={`Total AUM Evolution (${AUM_RANGE})`} source="INVERCO — PatrimFondosEuro" />
         <ResponsiveContainer width="100%" height={350}>
           <AreaChart data={monthly_aum} margin={CHART_MARGIN}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -183,7 +193,7 @@ export default function MarketOverview() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
         {/* Annual Bar Chart */}
         <div style={{ background: '#16161f', border: '1px solid #2a2a3a', borderRadius: 12, padding: 24 }}>
-          <SectionHeader title="Annual AUM (2005-2025)" source="INVERCO" />
+          <SectionHeader title={`Annual AUM (${ANNUAL_RANGE})`} source="INVERCO — December of each year" />
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={annual_aum} margin={CHART_MARGIN}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -233,9 +243,9 @@ export default function MarketOverview() {
         The Spanish fund market grew <strong>+{'\u20AC'}{bridge_summary.total_aum_change_bn.toFixed(0)}B</strong> from
         {' '}{bridge_summary.period}. This growth is split roughly evenly: <strong>{'\u20AC'}{bridge_summary.total_flows_bn.toFixed(0)}B
         ({bridge_summary.flows_pct}%) from net investor flows</strong> and <strong>{'\u20AC'}{bridge_summary.total_market_bn.toFixed(0)}B
-        ({bridge_summary.market_pct}%) from market appreciation</strong>. Flows have been consistently positive every
-        single month, providing a reliable growth floor of {'\u20AC'}1-4B/month. Market effects are more volatile —
-        driving months like Mar 2024 (+{'\u20AC'}5.3B) but also dragging in Apr 2024 (-{'\u20AC'}2.7B).
+        ({bridge_summary.market_pct}%) from market appreciation</strong>. Net flows were positive in{' '}
+        {bridgeMonthly.length - negFlowMonths} of {bridgeMonthly.length} months (range {'\u20AC'}{Math.min(...flowVals).toFixed(1)}B to +{'\u20AC'}{Math.max(...flowVals).toFixed(1)}B/month).
+        Market effects are more volatile — from +{'\u20AC'}{bestMkt.market.toFixed(1)}B in {ym(bestMkt.date)} to {'\u20AC'}{worstMkt.market.toFixed(1)}B in {ym(worstMkt.date)}.
       </InsightCard>
     </div>
   );

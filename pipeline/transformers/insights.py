@@ -95,7 +95,7 @@ def build_insights():
     ]
 
     # Inversis positioning metrics — reference Inversis Gestión standalone
-    # (Banca March group removed: Inversis exits Banca March upon Euroclear acquisition Aug 2026)
+    # (Banca March group view intentionally excluded)
     inversis_gest_data = None
     for g in groups:
         if 'INVERSIS' in g.get('name', '').upper() and 'BANCA MARCH' not in g.get('name', '').upper():

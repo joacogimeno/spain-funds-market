@@ -27,6 +27,17 @@ const topFlowCats = Object.entries(cumulative_by_category)
   .slice(0, 8)
   .map(x => x.cat);
 
+// Figures for the insight text
+const cumFinal = Object.entries(cumulative_by_category).map(([cat, points]) => ({
+  cat, final: (points as { cumulative: number }[])[(points as { cumulative: number }[]).length - 1]?.cumulative || 0,
+}));
+const topInflowCats = [...cumFinal].sort((a, b) => b.final - a.final).slice(0, 3);
+const topOutflowCats = [...cumFinal].sort((a, b) => a.final - b.final).filter(c => c.final < 0).slice(0, 2);
+const last12 = monthlyNet.slice(-12);
+const avgNet12 = last12.reduce((a, m) => a + m.net, 0) / (last12.length || 1);
+const negMonths12 = last12.filter(m => m.net < 0).length;
+const flowPeriod = `${monthlyNet[0]?.date} to ${monthlyNet[monthlyNet.length - 1]?.date}`;
+
 // Build cumulative line chart data
 const cumulativeData = monthly.map((m: { date: string }) => {
   const entry: Record<string, unknown> = { date: m.date };
@@ -152,9 +163,10 @@ export default function FundFlows() {
       </div>
 
       <InsightCard title="Flow Analysis" color="#f59e0b">
-        Fixed income categories (RF Euro CP, RF Euro LP, RF Internacional) are capturing the bulk of net flows.
-        Guaranteed funds show sustained outflows, confirming the structural shift. Monthly market-wide net flows
-        have been consistently positive since 2024, averaging <strong>{'\u20AC'}2-4B per month</strong>.
+        Largest cumulative net inflows {flowPeriod}: {topInflowCats.map(c => `${c.cat} (+\u20AC${c.final.toFixed(1)}B)`).join(', ')}.
+        {topOutflowCats.length > 0 && <> Largest outflows: {topOutflowCats.map(c => `${c.cat} (\u20AC${c.final.toFixed(1)}B)`).join(', ')}.</>}
+        {' '}Over the last 12 months market-wide net flows averaged <strong>{'\u20AC'}{avgNet12.toFixed(1)}B per month</strong>
+        {negMonths12 > 0 ? `, with ${negMonths12} month${negMonths12 > 1 ? 's' : ''} of net outflows` : ', with no month of net outflows'}.
       </InsightCard>
     </div>
   );

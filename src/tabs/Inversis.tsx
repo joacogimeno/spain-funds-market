@@ -53,6 +53,7 @@ const d = rawData as {
     by_gestora: ByGestora[]; by_group: ByGroup[]; market_ranking: MarketRankEntry[];
     combined_aum_bn?: number; combined_rank?: number; combined_share_pct?: number;
     fi_aum_bn?: number; sicav_aum_bn?: number; fil_est_aum_bn?: number;
+    alt_aum_bn?: number; alt_is_published?: boolean; pension_aum_bn?: number; epsv_aum_bn?: number;
     fil_entity_count?: number; alt_entity_count?: number; alt_rank?: number;
     combined_market_aum_bn?: number;
   };
@@ -202,23 +203,13 @@ function OverviewSection() {
         <SectionHeader title="Depositary Business" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
           {dep.combined_aum_bn != null ? (
-            (() => {
-              const invPub = (depoData.summary as Record<string, unknown>).inversis_published as
-                | { fi_bn: number; sicav_bn: number; pensiones_bn: number; epsv_bn: number; alternativos_bn: number; total_bn: number }
-                | undefined;
-              const subtitle = invPub
-                ? `FI \u20AC${invPub.fi_bn.toFixed(2)}B + SICAV \u20AC${invPub.sicav_bn.toFixed(2)}B + Alts \u20AC${invPub.alternativos_bn.toFixed(2)}B + Pens \u20AC${invPub.pensiones_bn.toFixed(2)}B + EPSV \u20AC${invPub.epsv_bn.toFixed(2)}B`
-                : `FI \u20AC${(dep.fi_aum_bn ?? 0).toFixed(2)}B + SICAV \u20AC${(dep.sicav_aum_bn ?? 0).toFixed(2)}B + FIL est \u20AC${(dep.fil_est_aum_bn ?? 0).toFixed(2)}B`;
-              return (
-                <KpiCard
-                  title="Depositary AUM (combined)"
-                  value={fmtB(invPub?.total_bn ?? dep.combined_aum_bn)}
-                  subtitle={subtitle}
-                />
-              );
-            })()
+            <KpiCard
+              title="Depositary AUM (combined)"
+              value={fmtB(dep.combined_aum_bn)}
+              subtitle={`FI \u20AC${(dep.fi_aum_bn ?? 0).toFixed(2)}B + SICAV \u20AC${(dep.sicav_aum_bn ?? 0).toFixed(2)}B (CNMV ${d.date}) + Alts${dep.alt_is_published ? '' : ' est'} \u20AC${(dep.alt_aum_bn ?? 0).toFixed(2)}B + Pens \u20AC${(dep.pension_aum_bn ?? 0).toFixed(2)}B + EPSV \u20AC${(dep.epsv_aum_bn ?? 0).toFixed(2)}B (FundsPeople, Dec 2025)`}
+            />
           ) : (
-            <KpiCard title="Depositary AUM" value={fmtB(dep.aum_bn)} subtitle="Banco Inversis book (FI only)" />
+            <KpiCard title="Depositary AUM" value={fmtB(dep.aum_bn)} subtitle="Banco Inversis book (FI + SICAV)" />
           )}
           <KpiCard
             title="Market Share (combined)"
@@ -234,7 +225,7 @@ function OverviewSection() {
             />
           )}
           <KpiCard title="Active Clients"      value={`${dep.gestora_count}`}         subtitle="gestoras in custody (FI+SICAV)" />
-          <KpiCard title="Funds in Custody"    value={`${dep.fund_count}`}            subtitle={`${dep.class_count} share classes (FI)`} />
+          <KpiCard title="Funds in Custody"    value={`${dep.fund_count}`}            subtitle={`${dep.class_count} share classes / series (FI + SICAV)`} />
           <KpiCard title="Est. Revenue"        value={`€${dep.est_annual_rev_m.toFixed(2)}M`} subtitle="annual depositary fees" />
         </div>
       </div>
@@ -289,9 +280,9 @@ function OverviewSection() {
               differentiators that resonate with independent gestoras seeking a non-captive depositary.
             </InsightCard>
             <InsightCard title="Depositary Market — Non-Captive Leader" color="#3b82f6">
-              Inversis is the <strong>#2 depositary by gestoras served</strong> (25 clients) despite being
-              #6 by AUM. This reflects a deliberate focus on independent, mid-size gestoras rather than competing
-              head-on with Cecabank (44.7% share) or CACEIS (19.5%).
+              Inversis is the <strong>#{dep.rank_gestoras} depositary by gestoras served</strong> ({dep.gestora_count} clients) despite being
+              #{dep.rank_aum} by FI + SICAV assets. This reflects a focus on independent, mid-size gestoras rather than competing
+              head-on with {dep.market_ranking.slice(0, 2).map(r => `${r.depositario_short} (${r.market_share_pct.toFixed(1)}% share)`).join(' or ')}.
             </InsightCard>
             <InsightCard title="Fee Positioning" color="#10b981">
               Inversis average fee <strong>{fmtBps(mc.inv_avg_fee_bps)}</strong> sits near market median
@@ -512,8 +503,7 @@ function GestoraSection() {
         <InsightCard title="Dual Entity Structure" color="#f59e0b">
           Inversis operates two distinct legal entities: <strong>Banco Inversis, S.A.</strong> (the depositary /
           custody bank) and <strong>Inversis Gestión, S.A., SGIIC</strong> (the fund management company). Both
-          sit within the same group, historically under Banca March. Following the Euroclear acquisition
-          (Aug 2026), the group structure is evolving.
+          sit within the same group.
         </InsightCard>
       </div>
     </div>

@@ -454,7 +454,7 @@ export default function MonthlyReport() {
         </div>
       </div>
 
-      {/* Inversis Gestión Spotlight — Banca March group removed (Euroclear acquisition Aug 2026) */}
+      {/* Inversis Gestión Spotlight */}
       {inversis.gestora && (
         <div style={{ background: '#d4203015', border: '1px solid #d4203040', borderRadius: 12, padding: 24 }}>
           <SectionHeader title="Inversis Gestión — Monthly Snapshot" source="INVERCO — RKGestoras" />
@@ -472,15 +472,6 @@ export default function MonthlyReport() {
                     : '-'})
                 </span>
               </div>
-            </div>
-            <div style={{
-              padding: '8px 14px', borderRadius: 8,
-              background: '#f59e0b10', border: '1px solid #f59e0b30',
-              fontSize: 11, color: '#f59e0b', maxWidth: 420, lineHeight: 1.5,
-            }}>
-              <strong>Note:</strong> Inversis exits the Banca March group upon Euroclear acquisition (expected Aug 2026).
-              The Banca March group AUM view has been removed from this report.
-              See the <em>Banca March</em> tab for intragroup depositary relationship analysis.
             </div>
           </div>
         </div>

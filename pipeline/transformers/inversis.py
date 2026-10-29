@@ -9,7 +9,6 @@ Also includes:
   - Non-captive opportunity pipeline
   - Competitive positioning radar
 """
-import csv
 import glob
 import json
 import os
@@ -18,11 +17,10 @@ import openpyxl
 
 from ..config import DATA_DIR, OUTPUT_DIR, find_cnmv_file, get_snapshot_folders
 from ..parsers.cnmv_fees import parse_cnmv_fees
+from ..parsers.cnmv_book import build_depositary_book
 from ..parsers.ranking_grupos import parse_ranking_grupos
 
 CNMV_DIR = os.path.join(DATA_DIR, 'CNMV Estadisticas')
-INSIGHTS_XL = os.path.join(CNMV_DIR, 'inversis_depositary_insights_2025Q3.xlsx')
-CLIENT_CSV   = os.path.join(CNMV_DIR, 'inversis_client_fees_2025Q3.csv')
 
 INVERSIS_DEPOSITARIO = 'BANCO INVERSIS, S.A.'
 INVERSIS_GESTORA     = 'INVERSIS GESTIÓN, S.A., SGIIC'
@@ -49,32 +47,9 @@ def _sf(v, default=0.0):
         return default
 
 
-def _load_insights_xl():
-    """Load the Inversis insights Excel file into dict of row-lists."""
-    if not os.path.exists(INSIGHTS_XL):
-        return {}
-    wb = openpyxl.load_workbook(INSIGHTS_XL, read_only=True)
-    result = {}
-    for sh in ['inversis_by_gestora', 'inversis_by_group', 'depositary_ranking', 'inversis_isin_detail']:
-        if sh not in wb.sheetnames:
-            continue
-        ws = wb[sh]
-        rows = list(ws.iter_rows(values_only=True))
-        if not rows:
-            continue
-        headers = [str(h).strip() if h is not None else '' for h in rows[0]]
-        result[sh] = [dict(zip(headers, r)) for r in rows[1:] if any(v is not None for v in r)]
-    wb.close()
-    return result
-
-
-def _load_client_csv():
-    """Load inversis_client_fees_2025Q3.csv."""
-    if not os.path.exists(CLIENT_CSV):
-        return []
-    with open(CLIENT_CSV, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        return list(reader)
+def _load_book():
+    """Inversis depositary book + market ranking from the latest CNMV quarter (FI + SICAV)."""
+    return build_depositary_book(CNMV_DIR, INVERSIS_DEPOSITARIO)
 
 
 def _parse_sicav(latest_folder):
@@ -224,9 +199,8 @@ def build_inversis():
     _, cnmv_date = find_cnmv_file(CNMV_DIR, 'Anexo')
     cnmv_date = cnmv_date or 'unknown'
 
-    # ── 1. Load Inversis insights Excel ─────────────────────────────
-    xl = _load_insights_xl()
-    csv_rows = _load_client_csv()
+    # ── 1. Inversis depositary book (CNMV, latest quarter, FI + SICAV) ──
+    xl = _load_book()
 
     # ── 2. Depositary book: by gestora ─────────────────────────────
     by_gestora_xl = xl.get('inversis_by_gestora', [])
@@ -254,6 +228,9 @@ def build_inversis():
             'wtd_fee_bps':   wtd_bps,
             'est_rev_k':     round(rev_k, 1),
             'investors':     int(_sf(r.get('investors', 0))),
+            'sicavs':        int(_sf(r.get('sicavs', 0))),
+            'fi_aum_m':      round(_sf(r.get('fi_aum_k')) / 1000, 1),
+            'sicav_aum_m':   round(_sf(r.get('sicav_aum_k')) / 1000, 1),
         })
 
     by_gestora.sort(key=lambda x: -x['aum_m'])
@@ -281,8 +258,8 @@ def build_inversis():
     inv_rank_g     = None
 
     ranked_by_aum = sorted(dep_ranking_xl, key=lambda r: -_sf(r.get('aum_k')))
-    # Sort by gestora_count for rank by gestoras
-    ranked_by_gest = sorted(dep_ranking_xl, key=lambda r: -_sf(r.get('classes', 0)))
+    # Rank by number of gestoras served
+    ranked_by_gest = sorted(dep_ranking_xl, key=lambda r: -_sf(r.get('gestoras', 0)))
 
     for i, r in enumerate(ranked_by_aum):
         dep   = str(r.get('Entidad Depositaria', '')).strip()
@@ -318,12 +295,9 @@ def build_inversis():
     inv_fund_cnt   = int(_sf(inv_entry.get('funds'))) if inv_entry else 0
     inv_share_pct  = round(inv_aum_k / all_dep_aum * 100, 1) if all_dep_aum else 0
 
-    # Weighted fee across book (from CSV)
-    csv_num = sum(_sf(r.get('aum_bn_eur')) * _sf(r.get('weighted_deposit_fee_bps'))
-                  for r in csv_rows)
-    csv_denom = sum(_sf(r.get('aum_bn_eur')) for r in csv_rows)
-    wtd_fee_bps = round(csv_num / csv_denom, 2) if csv_denom else 0.0
-    est_rev_m   = round(sum(_sf(r.get('estimated_annual_deposit_fee_rev_m_eur')) for r in csv_rows), 2)
+    # AUM-weighted fee and estimated revenue across the whole book
+    wtd_fee_bps = round(total_rev_k / total_aum_k * 10000, 2) if total_aum_k else 0.0
+    est_rev_m   = round(total_rev_k / 1000, 2)
 
     # ── 6. Market fee context — load from cnmv_depositaria.json ────
     # (cnmv_depositaria is always generated before inversis in the pipeline)
@@ -391,22 +365,21 @@ def build_inversis():
                 inv_gest_data = g
                 break
 
-    # From CSV (Inversis Gestión row)
-    inv_csv = next((r for r in csv_rows if 'INVERSIS' in str(r.get('Sociedad Gestora', '')).upper()
-                    and 'BANCA MARCH' not in str(r.get('Sociedad Gestora', '')).upper()), None)
+    # Inversis Gestión as a client of the Inversis depositary book
+    inv_gbook = next((r for r in by_gestora_xl
+                      if 'INVERSIS GESTI' in str(r.get('Sociedad Gestora', '')).upper()), None)
 
     gestora_section = {
         'name':       INVERSIS_GESTORA,
         'aum_bn':     round(inv_gest_data['patrimonio'] / 1_000_000, 3) if inv_gest_data else (
-                          _sf(inv_csv.get('aum_bn_eur')) if inv_csv else None),
+                          round(_sf(inv_gbook.get('aum_k')) / 1e6, 3) if inv_gbook else None),
         'growth_1y':  inv_gest_data.get('var_1y') if inv_gest_data else None,
         'growth_ytd': inv_gest_data.get('var_ytd') if inv_gest_data else None,
-        'fund_count': int(_sf(inv_csv.get('funds'))) if inv_csv else (
+        'fund_count': int(_sf(inv_gbook.get('funds'))) if inv_gbook else (
                           int(inv_gest_data.get('num_isin', 0)) if inv_gest_data else 0),
-        'class_count': int(_sf(inv_csv.get('classes'))) if inv_csv else 0,
-        'fee_bps_paid': round(_sf(inv_csv.get('weighted_deposit_fee_bps')) if inv_csv else 0, 2),
-        'est_rev_k':    round(_sf(inv_csv.get('estimated_annual_deposit_fee_rev_m_eur')) * 1000
-                              if inv_csv else 0, 1),
+        'class_count': int(_sf(inv_gbook.get('classes'))) if inv_gbook else 0,
+        'fee_bps_paid': round(_sf(inv_gbook.get('aum_w_deposit_fee_pct')) * 100, 2) if inv_gbook else 0,
+        'est_rev_k':    round(_sf(inv_gbook.get('est_deposit_fee_rev_k')), 1) if inv_gbook else 0,
         'aum_series':   _build_gestora_series(snapshots),
     }
 
@@ -423,16 +396,20 @@ def build_inversis():
         {'metric': 'Independence', 'inversis': 80, 'market_avg': 40, 'top_peer': 90},
     ]
 
-    # ── 11. Pull combined depositary AUM (FI + SICAV + FIL est) from depositaria ─
-    # `inv_aum_k` above is FI-only (insights Excel). The depositaria.json summary
-    # has the consolidated view that includes SICAV (Q2 2025 XML) and an estimated
-    # FIL AUM (Cuadro 6.1 aggregate split by entity count).
+    # ── 11. Combined depositary AUM — taken as-is from the Depositaría build so both
+    # tabs show the same figure: CNMV FI + SICAV + alternativos (published, else FIL
+    # estimate) + pensiones + EPSV (published).
     inv_dep_row = next(
         (s for s in dep_json.get('depositario_stats', []) if s.get('is_inversis')), {})
     fi_aum_bn      = _sf(inv_dep_row.get('fi_aum_bn', 0))
     sicav_aum_bn   = _sf(inv_dep_row.get('sicav_aum_bn', 0))
     fil_est_aum_bn = _sf(inv_dep_row.get('fil_est_aum_bn', 0))
-    combined_aum_bn = round(fi_aum_bn + sicav_aum_bn + fil_est_aum_bn, 2)
+    alt_aum_bn     = (_sf(inv_dep_row.get('alt_published_aum_bn'))
+                      if inv_dep_row.get('alt_published_aum_bn') is not None else fil_est_aum_bn)
+    pension_aum_bn = _sf(inv_dep_row.get('pension_aum_bn', 0))
+    epsv_aum_bn    = _sf(inv_dep_row.get('epsv_aum_bn', 0))
+    combined_aum_bn = _sf(inv_dep_row.get('combined_aum_bn'),
+                          round(fi_aum_bn + sicav_aum_bn + alt_aum_bn + pension_aum_bn + epsv_aum_bn, 2))
     combined_rank      = _sf(dep_summary.get('inversis_combined_rank'), 0)
     combined_share_pct = _sf(dep_summary.get('inversis_combined_share_pct'), 0)
     combined_market_aum_bn = _sf(dep_summary.get('combined_market_aum_bn'), 0)
@@ -441,7 +418,7 @@ def build_inversis():
     return {
         'date': cnmv_date,
         'depositary': {
-            'aum_bn':           round(inv_aum_k / 1_000_000, 2),  # FI-only (insights Excel)
+            'aum_bn':           round(inv_aum_k / 1_000_000, 2),  # CNMV FI + SICAV book
             'class_count':      inv_class_cnt,
             'fund_count':       inv_fund_cnt,
             'gestora_count':    len(by_gestora),
@@ -460,6 +437,11 @@ def build_inversis():
             'fi_aum_bn':               fi_aum_bn,
             'sicav_aum_bn':            sicav_aum_bn,
             'fil_est_aum_bn':          fil_est_aum_bn,
+            'alt_aum_bn':              alt_aum_bn,
+            'alt_is_published':        inv_dep_row.get('alt_published_aum_bn') is not None,
+            'pension_aum_bn':          pension_aum_bn,
+            'epsv_aum_bn':             epsv_aum_bn,
+            'book_period':             xl.get('period'),
             'fil_entity_count':        int(_sf(inv_dep_row.get('fil_entity_count', 0))),
             'alt_entity_count':        int(_sf(inv_dep_row.get('alt_entity_count', 0))),
             'alt_rank':                int(_sf(dep_summary.get('inversis_alt_rank'), 0)),

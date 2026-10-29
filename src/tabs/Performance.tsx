@@ -6,6 +6,12 @@ import data from '../data/performance.json';
 
 const { heatmap, scatter, monthly } = data;
 
+// Highest 1Y returns vs the fixed-income categories that take most flows (for the insight text)
+const byReturn = [...(scatter as { category: string; return_1y: number | null }[])]
+  .filter(s => s.return_1y != null).sort((a, b) => (b.return_1y ?? 0) - (a.return_1y ?? 0));
+const rfCp = (scatter as { category: string; return_1y: number | null }[]).find(s => s.category === 'RF Euro CP');
+const pct = (v: number | null | undefined) => v == null ? '—' : `${v >= 0 ? '+' : ''}${v.toFixed(1)}%`;
+
 function getReturnColor(v: number | null): string {
   if (v === null || v === undefined) return '#1e1e2a';
   if (v > 20) return '#059669';
@@ -157,8 +163,8 @@ export default function Performance() {
 
       <InsightCard title="Performance Insight" color="#ef4444">
         There's a notable <strong>inverse relationship between flows and returns</strong>. Equity categories
-        (RV Nacional +45.1% 1Y, RV Intl Europa +17.3%) deliver the highest returns but receive modest flows.
-        Meanwhile, fixed income (RF Euro CP +2.1% 1Y) captures the bulk of net inflows. This suggests
+        ({byReturn.slice(0, 2).map(s => `${s.category} ${pct(s.return_1y)} 1Y`).join(', ')}) deliver the highest returns but receive modest flows.
+        Meanwhile, fixed income (RF Euro CP {pct(rfCp?.return_1y)} 1Y) captures the bulk of net inflows. This suggests
         investors are prioritizing capital preservation and yield certainty over total return potential.
       </InsightCard>
     </div>

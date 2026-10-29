@@ -1,36 +1,24 @@
 """Build banca_march.json — Banca March intragroup depositary relationship analysis.
 
-Uses inversis_depositary_insights_2025Q3.xlsx to analyse:
+Uses the Inversis depositary book rebuilt from the latest CNMV quarter (FI + SICAV,
+parsers/cnmv_book.py) to analyse:
 - Current Banca March / March AM depositary fees vs all Inversis clients
 - Revenue shortfall vs market rates (intragroup pricing discount)
-- Scenarios for fee normalisation post-Euroclear acquisition (Aug 2026)
+- Scenarios for fee normalisation
 - Switching risk assessment
 - Market-wide benchmarking vs all Spanish depositaries (CNMV A2.2)
 """
 import os
-import openpyxl
 import pandas as pd
 
 from ..config import DATA_DIR, find_cnmv_file
+from ..parsers.cnmv_book import build_depositary_book
 
 
-MARCH_AM_NAME = 'MARCH ASSET MANAGEMENT, S.G.I.I.C., S.A.U.'
-INVERSIS_GEST_NAME = 'INVERSIS GESTIÓN, S.A., SGIIC'
+# Name prefixes (CNMV changed March AM's legal suffix from S.A.U. to S.A. in 2026)
+MARCH_AM_NAME = 'MARCH ASSET MANAGEMENT'
+INVERSIS_GEST_NAME = 'INVERSIS GESTI'
 BANCA_MARCH_GROUP = 'BANCA MARCH'
-INSIGHTS_FILE = 'inversis_depositary_insights_2025Q3.xlsx'
-
-
-def _read_sheet_as_records(ws, expected_cols):
-    """Read a worksheet with a header row into a list of dicts."""
-    rows = list(ws.iter_rows(values_only=True))
-    if not rows:
-        return []
-    header = [str(c).strip() if c is not None else '' for c in rows[0]]
-    records = []
-    for row in rows[1:]:
-        rec = {header[i]: row[i] for i in range(min(len(header), len(row)))}
-        records.append(rec)
-    return records
 
 
 def _safe_float(v, default=0.0):
@@ -65,7 +53,7 @@ def _build_market_benchmarks(cnmv_dir: str, march_am_bps: float) -> dict:
     - Per-group weighted fee for private bank comparables
     - Market percentile rank for March AM's effective rate
     """
-    anexo_path, _ = find_cnmv_file(cnmv_dir, 'Anexo')
+    anexo_path, anexo_q = find_cnmv_file(cnmv_dir, 'Anexo')
     if anexo_path is None:
         return {}
 
@@ -188,7 +176,7 @@ def _build_market_benchmarks(cnmv_dir: str, march_am_bps: float) -> dict:
 
     return {
         'universe': 'RFECP + M + MCP (all Spanish IICs, all depositaries)',
-        'source': 'CNMV Estadísticas IIC 2025 Q3 Anexo A2.2',
+        'source': f'CNMV Estadísticas IIC {anexo_q} Anexo A2.2',
         'total_isins': int(len(df_liq)),
         'total_aum_bn': round(total_aum / 1e6, 1),
         'march_am_bps': round(march_am_bps, 2),          # overall portfolio weighted rate
@@ -215,21 +203,12 @@ def build_banca_march():
     cnmv_dir = os.path.join(DATA_DIR, 'CNMV Estadisticas')
     _, cnmv_date = find_cnmv_file(cnmv_dir, 'Anexo')
     cnmv_date = cnmv_date or 'unknown'
-    fp = os.path.join(cnmv_dir, INSIGHTS_FILE)
-
-    if not os.path.exists(fp):
-        print(f'  Warning: {fp} not found')
-        return {}
-
-    wb = openpyxl.load_workbook(fp, data_only=True)
-
-    # ── Load sheets ────────────────────────────────────────────────────────
-    isin_records = _read_sheet_as_records(wb['inversis_isin_detail'], [])
-    gest_records = _read_sheet_as_records(wb['inversis_by_gestora'], [])
-    grp_records  = _read_sheet_as_records(wb['inversis_by_group'], [])
-    fund_records = _read_sheet_as_records(wb['inversis_by_fund'], [])
-    rank_records = _read_sheet_as_records(wb['depositary_ranking'], [])
-    wb.close()
+    book = build_depositary_book(cnmv_dir)
+    isin_records = book['inversis_isin_detail']
+    gest_records = book['inversis_by_gestora']
+    grp_records  = book['inversis_by_group']
+    fund_records = book['inversis_by_fund']
+    rank_records = book['depositary_ranking']
 
     # ── Gestora-level slices ───────────────────────────────────────────────
     march_gest = next((r for r in gest_records if MARCH_AM_NAME in str(r.get('Sociedad Gestora', ''))), None)
@@ -263,7 +242,7 @@ def build_banca_march():
     inv_gestion = None
     if inv_gest:
         inv_gestion = {
-            'gestora': INVERSIS_GEST_NAME,
+            'gestora': inv_gest['Sociedad Gestora'],
             'aum_bn': round(_safe_float(inv_gest.get('aum_k')) / 1_000_000, 3),
             'funds': int(_safe_float(inv_gest.get('funds', 0))),
             'classes': int(_safe_float(inv_gest.get('classes', 0))),
@@ -340,6 +319,7 @@ def build_banca_march():
             'avg_fee_bps': round(avg_fee_pct * 100, 2),
             'est_annual_rev_k': round(rev_k, 1),
             'is_zero_fee': avg_fee_pct == 0.0,
+            'tipo': r.get('Tipo', 'FI'),
             'shortfall_at_median_k': round((market_median_bps / 100 - avg_fee_pct) / 100 * aum_k, 1)
                                      if avg_fee_pct < market_median_bps / 100 else 0,
         })
@@ -386,7 +366,7 @@ def build_banca_march():
             'low',
         ),
         _scenario(
-            'Scenario C — Book median (7 bps)',
+            f'Scenario C — Book median ({market_median_bps:.1f} bps)',
             f'Raise to Inversis book median of {market_median_bps:.1f} bps across all gestoras',
             market_median_bps,
             'low_medium',
@@ -424,9 +404,7 @@ def build_banca_march():
             'and systems cut-over — estimated 12-month process at €250-350k one-time cost. '
             'A competitor would need to offer savings >€100k/yr to make the switch rational. '
             'No major Spanish depositary currently targets the March AM segment with '
-            'aggressive pricing; Cecabank and CACEIS focus on larger mandates. '
-            'Post-Euroclear acquisition, Inversis will have enhanced standing as an '
-            'independent tier-1 depositary, further reducing defection risk.'
+            'aggressive pricing; Cecabank and CACEIS focus on larger mandates.'
         ),
     }
 
@@ -439,16 +417,21 @@ def build_banca_march():
     scen_a_delta_k = scen_a['delta_vs_status_quo_k'] if scen_a else 0
     scen_b_delta_k = scen_b['delta_vs_status_quo_k'] if scen_b else 0
 
+    fee_rank_low = sorted((p for p in peer_comparison if p['aum_m'] > 0), key=lambda p: p['weighted_fee_bps'])
+    march_fee_pos = next((i + 1 for i, p in enumerate(fee_rank_low) if p['is_march_am']), 0)
+    zero_fee_names = [f['fund'].split(',')[0] for f in zero_fee_funds if f['is_zero_fee']][:2]
     qualitative_insights = [
         {
             'type': 'pricing_gap',
             'severity': 'high',
-            'title': 'March AM pays the lowest effective depositary fee of all Inversis clients',
+            'title': ('March AM pays the lowest effective depositary fee of all Inversis clients'
+                      if march_fee_pos == 1 else
+                      f'March AM pays the #{march_fee_pos} lowest effective depositary fee of {len(fee_rank_low)} Inversis clients'),
             'body': (
                 f'March AM\'s AUM-weighted depositary fee is {march_w_bps:.2f} bps — '
                 f'{market_median_bps - march_w_bps:.1f} bps below the Inversis book median of {market_median_bps:.1f} bps. '
                 f'It is ranked #{march_rank_in_book} out of {len(peer_comparison)} gestoras by AUM '
-                f'but last by weighted fee rate. '
+                f'and #{march_fee_pos} lowest by weighted fee rate. '
                 f'Andbank WM, the closest peer by AUM (€{_safe_float(andbank_gest.get("aum_k"))/1e6:.1f}B), '
                 f'pays {andbank_bps:.2f} bps — {andbank_bps - march_w_bps:.1f} bps more than March AM.'
             ),
@@ -460,10 +443,9 @@ def build_banca_march():
             'body': (
                 f'An estimated €{march_zero_fee_aum_k/1000:.0f}M of March AM\'s €{march_total_aum_k/1e6:.1f}B AUM '
                 f'under Inversis custody is charged 0 bps — almost certainly reflecting an '
-                f'intragroup arrangement (primarily MARCH PAGARÉS and short-term RF funds). '
+                f'intragroup arrangement (largest: {" and ".join(zero_fee_names) or "n/a"}). '
                 f'This single item foregoes c.€{march_zero_fee_aum_k * market_median_bps / 100 / 100:.0f}K/yr '
-                f'at market rates ({market_median_bps:.0f} bps). Post-Euroclear completion, '
-                f'this pricing will have no intragroup justification.'
+                f'at the Inversis book median ({market_median_bps:.1f} bps).'
             ),
         },
         {
@@ -477,19 +459,6 @@ def build_banca_march():
                 f'A phased approach (Scenario A first, then B) over 18–24 months minimises '
                 f'commercial disruption and is below the threshold that would trigger a '
                 f'cost/benefit review by March AM.'
-            ),
-        },
-        {
-            'type': 'timing',
-            'severity': 'medium',
-            'title': 'August 2026 Euroclear acquisition is the natural repricing trigger',
-            'body': (
-                'The ownership change from Banca March to Euroclear removes the intragroup '
-                'basis for preferential pricing. At that point, the March AM relationship '
-                'becomes a standard third-party commercial arrangement. Inversis should '
-                'initiate fee renegotiation in Q1 2026 — before the close — framing it as '
-                'transition to arm\'s-length terms. Early communication protects the '
-                'relationship better than a post-close surprise.'
             ),
         },
         {
@@ -515,10 +484,14 @@ def build_banca_march():
     # ── Summary ────────────────────────────────────────────────────────────
     return {
         'date': cnmv_date,
-        'note': 'Inversis exits Banca March group upon Euroclear acquisition (expected Aug 2026). '
-                'All intragroup pricing then becomes arm\'s-length commercial pricing.',
+        'note': (f'Banca March group gestoras (March AM, Inversis Gestión) — investment funds and '
+                 f'SICAVs deposited at Inversis, CNMV {cnmv_date}. Fees are the depositary rates '
+                 f'reported to CNMV; revenue = rate × current AUM.'),
         'march_am': {
-            'gestora': MARCH_AM_NAME,
+            'gestora': march_gest['Sociedad Gestora'],
+            'fi_aum_bn': round(_safe_float(march_gest.get('fi_aum_k')) / 1_000_000, 3),
+            'sicav_aum_bn': round(_safe_float(march_gest.get('sicav_aum_k')) / 1_000_000, 3),
+            'sicavs': int(_safe_float(march_gest.get('sicavs', 0))),
             'gestora_short': 'March Asset Management',
             'aum_bn': round(march_total_aum_k / 1_000_000, 3),
             'funds': march_funds,
